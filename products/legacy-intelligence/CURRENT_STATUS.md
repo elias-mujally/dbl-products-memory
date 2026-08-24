@@ -4,9 +4,9 @@
 
 ## الحالة
 
-**BUILD IN PROGRESS — Hardened read-only intelligence foundation + stable V1 application boundary merged**
+**BUILD IN PROGRESS — Real connector foundation merged; next gate is the first actual legacy ERP/accounting integration**
 
-تم الانتقال من مرحلة الدراسة والتخطيط إلى التنفيذ الفعلي، ثم تقوية الأساس الهندسي، ثم إضافة طبقات الذكاء المحلي والاستعلام الآمن، والآن إضافة الحد التطبيقي الرسمي الذي ستستهلكه واجهة Windows والتقارير وطبقة AI المستقبلية بدل الوصول المباشر إلى التخزين أو المحركات الداخلية.
+تم الانتقال من mock-only connector behavior إلى أساس هندسي حقيقي لأول تكامل legacy: acceptance/certification harness صار يميز بوضوح بين smoke validation والقبول الكامل، وتم بناء Reference SQLite connector read-only/batched لإثبات mechanics القراءة والمapping والـsnapshot consistency والأداء قبل اختيار أول ERP سوقي فعلي.
 
 مستودع البناء:
 
@@ -16,167 +16,87 @@
 
 ### 1. Foundation Hardening Round 2
 
-تم إنهاء وتقوية الأساس الهندسي لـV1 ثم دمج PR #5 إلى `main` باستخدام Squash Merge.
-
 - PR: `#5 — Foundation Hardening Round 2`
 - Merge commit: `ab3db09c5afebaea1db741087af146c9771b32cc`
 
-أهم ما أصبح ثابتًا بعد هذه الجولة:
-
-- canonical decimal representation صار strict.
-- batch imports أصبحت bounded.
-- Runtime connector validation أصبح فعليًا.
-- migration drift/checksum أصبح ميكانيكيًا.
-- staging لديها crash recovery/cleanup.
-- SQLite الحالية موثقة كـsingle-writer desktop store.
-- CI تعتمد locked `npm ci` مع build + strict typecheck + tests على Ubuntu وWindows.
-
----
+أهم ما ثبت: strict canonical decimals، bounded imports، runtime connector validation، migration drift/checksum، staging recovery، SQLite single-writer desktop semantics، وCI locked على Ubuntu/Windows.
 
 ### 2. Persistent Audit + Deterministic Insight Foundation
-
-تم بناء ودمج PR #6 إلى `main` بعد مراجعة معمارية وإصلاحات إضافية.
 
 - PR: `#6 — Persistent Audit + Deterministic Insight Foundation`
 - Merge commit: `1db738aae59c8b61e95cac99975d9864ab306947`
 
-ما أصبح منفذًا:
-
-- Persistent SQLite Audit Sink.
-- Runtime audit validation.
-- Audit migrations + checksum/drift detection.
-- Defensive audit reads and resource cleanup.
-- Deterministic Insight Engine يعمل بدون AI/Internet.
-- قواعد أولية: Low Stock / Outstanding Receivables / Sales Summary.
-- Presentation-neutral insight output.
-- Exact decimal arithmetic وعدم خلط العملات.
-- Streaming `SnapshotReader` من SQLite.
-
-المسار المثبت بالاختبارات:
-
-`Multi-batch Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Deterministic Insight Engine`
-
----
+أصبح موجودًا Persistent Audit، Streaming SnapshotReader، Deterministic Insight Engine، exact decimal arithmetic، وعدم خلط العملات.
 
 ### 3. Local Query Foundation
-
-تم بناء ومراجعة وتقوية ثم دمج PR #7 إلى `main` باستخدام Squash Merge.
 
 - PR: `#7 — V1 local query foundation: typed plans, safe filters, snapshot-bound cursors`
 - Merge commit: `54301b5ea3e0756b9935e6a3df31f954118c1c10`
 
-أهم Query invariants:
-
-- Typed `QueryPlan 1.0.0`.
-- Supported entities في V1: Product / Customer / Sale.
-- Closed-world Runtime Validation.
-- لا Free-form SQL أو generic expressions.
-- Money comparisons مرتبطة بالعملة ولا implicit FX.
-- Exact decimal arithmetic مشتركة من Core.
-- Cursor مرتبطة بـconnector + snapshot + entity + query fingerprint + last ID.
-- Pagination بدون OFFSET.
-- Default page size 50 / hard max 200.
-- Hard max 20 filters.
-- Query execution streaming فوق `SnapshotReader`.
-
-آخر CI مرجعية قبل الدمج: Run #155 نجحت على Ubuntu وWindows.
-
----
+أصبح موجودًا Typed QueryPlan، closed-world validation، no free-form SQL، currency-safe filters، streaming execution، وsnapshot-bound keyset pagination.
 
 ### 4. V1 Application Service Boundary
 
-تم بناء PR #8 ثم إجراء مراجعة نقدية ما قبل الدمج. المراجعة أعادت PR إلى Draft رغم CI خضراء بعد اكتشاف مشاكل في snapshot consistency وruntime connector isolation وInsight provenance. تم إصلاحها من الجذر، إعادة الاختبار، ثم دمج PR #8 إلى `main` باستخدام Squash Merge.
-
 - PR: `#8 — V1 application service boundary above query and insights`
 - Merge commit: `4d2e8fa59914c371c21b2176663dda38e39fd67f`
-- Final verified CI before merge: Run `#173` على Ubuntu وWindows.
+- Final verified CI: Run `#173` على Ubuntu وWindows.
 
-#### لماذا هذه الطبقة مهمة؟
+`@dbl/application-service` أصبح الحد الرسمي read-only للطبقات العليا، مع pinned read scopes، runtime connector isolation، وexplicit connector/snapshot provenance.
 
-أصبحت `@dbl/application-service` هي **الحد الرسمي read-only** الذي يجب أن تستهلكه الطبقات العليا مستقبلًا:
+المسار الرسمي:
 
 `UI / Reports / future AI Planner -> Application Service -> pinned Read Scope -> Query/Insight Engines -> SnapshotReader -> LocalStore`
 
-الهدف هو منع واجهة المستخدم والتقارير وAI من الاقتران المباشر بـSQLite أو `SnapshotReader` أو تفاصيل المحركات الداخلية.
+### 5. V1 Real Connector Foundation + SQL Reference Adapter
 
-#### Pinned Application Read Scope
+تم بناء PR #9، إجراء مراجعة نقدية، إرجاعه إلى hardening، إغلاق الملاحظات الحرجة، إعادة CI على المنصتين، ثم دمجه إلى `main` باستخدام Squash Merge.
 
-الدخول للقراءة أصبح عبر:
+- PR: `#9 — V1 real connector foundation and SQL reference adapter`
+- Merge commit: `5028dc48db331574168c2658afee2c8206913a52`
+- Final verified CI before merge: Run `#192`
+- Verified PR head: `0d26680b207297491f4ea52eb7661c6ecbbb31b6`
 
-`openReadScope({ connectorId })`
+#### ما أضافه هذا الـmilestone
 
-ويتم تثبيت آخر committed snapshot **مرة واحدة** عند فتح الـscope، ثم تحتفظ الـscope بنفس `SnapshotReader` طوال عمرها.
+- `@dbl/connector-test-kit` كـvalidation/acceptance harness للـreal connectors.
+- نتيجة صريحة: `accepted` / `smoke-passed` / `rejected`.
+- `ok=true` محجوز للقبول exhaustive فقط؛ capped smoke validation لا يمكن أن تتنكر كقبول كامل.
+- Observed capability evidence، مع representative-fixture certification اختياري عبر `requireObservedDeclaredCapabilities=true`.
+- فحوص API compatibility، read-only declaration، batched mode، SQL kind، health، canonical batches، sequence continuity، provenance، capability contradictions، وlifecycle close behavior.
+- `@dbl/connector-reference-sqlite` كـreference connector حقيقي ضد legacy schema غير canonical (`items / clients / invoices / invoice_lines`).
+- فتح SQLite بـ`readonly: true` و`fileMustExist: true` مع `query_only` defense in depth.
+- `testConnection()` lifecycle-neutral: اتصال read-only مؤقت يُغلق دائمًا بدل الاحتفاظ بـsource DB handle.
+- Keyset paging بدل OFFSET.
+- Canonical decimal/timestamp normalization وأخطاء mapping صريحة.
+- Read snapshot مثبتة طوال stream في SQLite، مع concurrent WAL write coverage.
+- Early stream cancellation cleanup + restart coverage.
+- إزالة N+1 من invoice lines: تحميل خطوط صفحة الفواتير batch-wise مع bounded parameter chunking.
+- End-to-end proof:
 
-هذا يضمن:
+`Legacy SQL -> Connector -> ImportOrchestrator -> DBL SQLite -> Application Service -> Query + Deterministic Insights`
 
-- pagination لا تقفز إلى snapshot أحدث إذا حدث Import في المنتصف.
-- multi-query reports ترى نفس الصورة الزمنية للبيانات.
-- Query وInsights داخل نفس scope تشترك في نفس provenance.
-- Scope جديدة فقط هي التي ترى snapshot أحدث.
+#### Critical review findings التي أغلقت قبل الدمج
 
-تم اختبار سيناريو مهم end-to-end: صفحة أولى من snapshot، ثم Import أحدث، ثم الصفحة الثانية من نفس scope تستمر على snapshot الأصلية بلا رفض أو خلط.
-
-#### Runtime Connector Isolation
-
-لم يعد الاعتماد على TypeScript وحده لمنع connector مبهمة.
-
-Application boundary تتعامل مع input كـ`unknown` وتطبق closed-world runtime validation:
-
-- request يجب أن تكون plain object.
-- `connectorId` مطلوبة.
-- non-empty بعد trimming.
-- bounded.
-- unknown fields مرفوضة.
-- accessor/non-plain inputs مرفوضة.
-- لا يتم تمرير connector غير محددة إلى التخزين.
-
-وبذلك لا يمكن لـUI أو JavaScript أو AI تجاوز العزل بتمرير `undefined` ثم السقوط إلى سلوك "latest snapshot from any connector".
-
-#### Explicit Provenance
-
-Query results وApplication-level insight envelopes تحمل provenance صريحة:
-
-- `connectorId`.
-- `snapshotId`.
-
-كما تتحقق Application Service من provenance التي تعيدها Query Engine مقابل الـpinned scope وتفشل صراحة عند أي mismatch.
-
-Core `Insight` بقي presentation/domain-neutral؛ provenance أضيفت في application envelope بدل تلويث نموذج الـInsight الأساسي.
-
-#### Runtime Immutability
-
-تم تجميد scope/context/source وInsight envelopes Runtime لمنع upper layers من تعديل pinned provenance بالخطأ بعد الإنشاء.
-
-#### قرار تخزيني مهم
-
-لم تتم إضافة arbitrary historical snapshot lookup إلى `LocalStore` في V1. بدل ذلك يتم تثبيت `SnapshotReader` المفتوحة بالفعل داخل الـRead Scope. هذا يحل consistency الحالية دون توسيع storage API قبل وجود use case حقيقي لـpersisted/cross-process scope tokens.
-
-#### ما بقي خارج Scope عمدًا
-
-PR #8 لا تضيف:
-
-- UI rendering.
-- report rendering/export.
-- AI prompts/planning.
-- write actions.
-- permissions/approval execution.
-- connector-specific behavior.
-- persisted/cross-process read-scope tokens.
+1. Partial smoke validation لم تعد تعيد acceptance.
+2. Health probes لم تعد تحتفظ بملف قاعدة المصدر مفتوحًا.
+3. SQLite snapshot isolation موثقة ومختبرة كـdatabase-specific behavior وليست portable SQL guarantee.
+4. N+1 query shape لخطوط الفواتير أزيلت.
+5. Capability declarations أصبح لها observed evidence وstrict representative certification mode.
 
 #### التحقق النهائي
 
-CI Run #173 نجحت على Ubuntu وWindows وشملت:
+CI Run #192 نجحت على نفس PR head على Ubuntu وWindows:
 
-- locked `npm ci` ✅
+- locked dependency install ✅
 - Ubuntu critical vulnerability audit ✅
-- runtime build including `@dbl/application-service` ✅
+- runtime build ✅
 - strict TypeScript typecheck ✅
 - all tests ✅
-- pagination remains valid after intervening newer import ✅
-- multi-query scope remains on one snapshot ✅
-- malformed/ambiguous runtime requests rejected ✅
-- connector isolation verified ✅
-- explicit insight provenance verified ✅
+- Windows-sensitive health-handle release test ✅
+- 405-invoice multi-chunk line-loading test ✅
+- concurrent source snapshot isolation test ✅
+- early stream cancellation cleanup test ✅
+- strict representative connector acceptance test ✅
 
 ## ما أصبح موجودًا فعليًا الآن في `main`
 
@@ -190,44 +110,40 @@ CI Run #173 نجحت على Ubuntu وWindows وشملت:
 8. Deterministic Insight Engine.
 9. Local Query Engine.
 10. Shared exact decimal arithmetic.
-11. **V1 Application Service Boundary.**
-12. **Pinned Application Read Scopes.**
-13. **Runtime connector isolation at the application boundary.**
-14. **Explicit query/insight provenance at the application layer.**
-15. Cross-platform CI على Ubuntu وWindows.
+11. V1 Application Service Boundary.
+12. Pinned Application Read Scopes.
+13. Runtime connector isolation at application boundary.
+14. Explicit query/insight provenance at application layer.
+15. Real Connector Acceptance/Certification Test Kit.
+16. Read-only batched Reference SQLite Legacy Connector.
+17. Proven SQL-to-canonical mapping path for Products / Inventory / Customers / Sales fixture data.
+18. Proven end-to-end real SQL reference path into Application Service / Query / Insights.
+19. Cross-platform CI على Ubuntu وWindows.
 
 ## الهدف التنفيذي الحالي لـV1
 
-نواصل بناء أول نسخة Demo-ready مع الحفاظ على Scope ضيق:
+الخطوة التالية ليست بناء abstraction عامة جديدة. الخطوة التالية هي اختيار **أول legacy ERP/accounting system حقيقي في السوق** والحصول على schema sample أو sanitized local database، ثم بناء system-specific connector اعتمادًا على evidence الفعلي.
 
-- تطبيق Windows محلي.
-- Offline-first.
-- Read-only في V1.
-- Connector واحد حقيقي فقط في البداية.
-- دعم Products / Inventory / Customers / Sales.
-- واجهة عربية بسيطة لاحقًا فوق `Application Service` فقط.
-- Query/Search فوق البيانات الفعلية.
-- Basic reports.
-- Deterministic insights.
-- لا Voice في V1.
-- لا WhatsApp في V1.
-- لا Write Actions في V1.
-- لا Multi-industry implementation في V1.
+بوابة القبول لأول market connector:
 
-## قاعدة السلامة
+- source schema/version معروفان ومثبتان؛
+- read-only credentials/session/mode enforced بواسطة قاعدة المصدر حيث يمكن؛
+- field-level mapping موثق بالدليل؛
+- Products / Inventory / Customers / Sales المطلوبة مثبتة على بيانات ممثلة؛
+- database-specific snapshot/isolation behavior موثق ومختبر؛
+- representative-dataset performance test، وعدم نسخ accidental N+1 shapes؛
+- exhaustive acceptance عبر connector test kit؛
+- end-to-end import إلى DBL SQLite ثم Query/Insights/Application Service؛
+- Windows close/restart behavior مثبت؛
+- لا source mutations مطلوبة لتشغيل V1 الطبيعي.
 
-الـLLM لا ينفذ SQL حر على قاعدة العميل ولا يكتب في ERP في V1.
+بعد ذلك يستمر الوصول إلى Demo-ready عبر Basic Reporting، Arabic query/search experience، Windows UI shell، packaging/installability، وdemo على النظام الحقيقي.
 
-المسار المستهدف للـAI مستقبلًا:
-
-`User Text -> Intent/Query Planner -> Runtime-validated QueryPlan -> Application Read Scope -> LocalQueryExecutor -> SnapshotReader -> Result -> Answer`
-
-الـAI يمكنه ترجمة intent إلى QueryPlan، لكن authority تبقى للـvalidator/executor deterministic.
-
-## Invariants لا يجب كسرها في الخطوات القادمة
+## Invariants لا يجب كسرها
 
 - no free-form SQL.
 - read-only first.
+- database-enforced read-only حيث يدعم المصدر ذلك.
 - closed-world runtime validation.
 - currency-safe financial semantics.
 - streaming/bounded-memory behavior.
@@ -236,13 +152,20 @@ CI Run #173 نجحت على Ubuntu وWindows وشملت:
 - explicit connector/snapshot provenance.
 - strict package/runtime boundaries.
 - upper layers do not bypass Application Service for normal reads.
+- smoke validation is not connector acceptance.
+- SQL isolation assumptions are database-specific and must be proven per connector.
+- implement first, abstract second.
 
 ## تحسينات مؤجلة غير مانعة حاليًا
 
-- Predicate/seek pushdown لتحسين deep pagination وcontains-search على البيانات الضخمة.
-- Signed/opaque cursors عندما تخرج cursors عبر API غير موثوق.
-- LAN / multi-process storage semantics تحتاج تصميمًا جديدًا؛ SQLite الحالية لا تعتبر multi-process foundation.
+- Generic mapping DSL / universal SQL dialect layer.
+- Automatic schema inspector.
+- AI semantic mapping.
+- Predicate/seek pushdown لتحسين deep pagination والبحث الواسع.
+- Signed/opaque cursors عند عبور حدود API غير موثوقة.
 - Persisted/cross-process read-scope tokens عند ظهور use case فعلي.
+- LAN/multi-process storage semantics تحتاج تصميمًا جديدًا؛ SQLite الحالية ليست multi-process foundation.
+- Write actions / controlled Agent execution ليست ضمن V1 read-only الحالية.
 
 ## الفصل بين المستودعات
 
@@ -258,6 +181,6 @@ CI Run #173 نجحت على Ubuntu وWindows وشملت:
 
 ## Milestone التالي
 
-**Continue V1 above the merged Application Service boundary.**
+**First actual market legacy ERP/accounting connector.**
 
-أي UI أو Reporting أو AI Planner قادم يجب أن يبنى فوق هذا الحد بدل إنشاء مسارات قراءة موازية تتجاوز invariants التي تم تثبيتها.
+لا نبني generic connector architecture قبل هذه الخطوة. نأخذ النظام الحقيقي، نوثق schema وisolation وmapping، ننفذ adapter خاصًا به، ثم نمرره عبر gate الذي أثبته PR #9.
