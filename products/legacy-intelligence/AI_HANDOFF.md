@@ -73,34 +73,22 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 - audit migrations + checksum/drift detection.
 - defensive audit reads and resource cleanup.
 - Deterministic Insight Engine يعمل بدون AI/Internet.
-- قواعد أولية مثل Low Stock / Outstanding Receivables / Sales Summary.
+- Low Stock / Outstanding Receivables / Sales Summary.
 - presentation-neutral insight output.
 - exact decimal arithmetic وعدم خلط العملات.
 - Streaming `SnapshotReader` من SQLite.
-
-المسار المثبت بالاختبارات:
-
-`Multi-batch Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Deterministic Insight Engine`
 
 ### Milestone 3 — Local Query Foundation
 
 - PR #7 merged using Squash Merge.
 - Merge commit: `54301b5ea3e0756b9935e6a3df31f954118c1c10`
 
-هذه الطبقة هي boundary الاستعلام المحلي الرسمية فوق `SnapshotReader`.
-
-المسار الحالي:
-
-`Legacy ERP -> Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Query Engine / Insight Engine`
-
 أهم Query invariants:
 
 - `QueryPlan 1.0.0` فقط حاليًا.
-- لا free-form SQL.
-- لا generic expressions.
+- لا free-form SQL أو generic expressions.
 - Closed-world runtime validation.
-- unknown keys تفشل closed بدل التجاهل.
-- Money filters تربط amount + currency كوحدة واحدة.
+- Money filters تربط amount + currency.
 - لا implicit FX comparisons.
 - exact decimal comparisons من Core المشترك.
 - canonical UTC timestamps.
@@ -112,15 +100,52 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 - Query execution streaming فوق `SnapshotReader`.
 - AI مستقبلاً يترجم intent إلى QueryPlan فقط؛ validator/executor deterministic هو authority.
 
-آخر CI مرجعية قبل دمج PR #7:
+### Milestone 4 — V1 Application Service Boundary
 
-Run #155 passed on Ubuntu and Windows:
+- PR #8 merged using Squash Merge.
+- Merge commit: `4d2e8fa59914c371c21b2176663dda38e39fd67f`
+- Final verified CI: Run #173 passed on Ubuntu and Windows.
+
+هذه الطبقة أصبحت الحد الرسمي للقراءة الذي يجب أن تستخدمه UI / Reports / future AI Planner.
+
+المسار الحالي:
+
+`Legacy ERP -> Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Query/Insight Engines -> Application Service -> UI/Reports/AI`
+
+وبصيغة dependency direction من الأعلى للأسفل:
+
+`UI / Reports / future AI Planner -> Application Service -> pinned Read Scope -> Query/Insight Engines -> SnapshotReader -> LocalStore`
+
+أهم Application Service invariants:
+
+- upper layers لا تصل مباشرة إلى SQLite أو engine internals في مسار القراءة الطبيعي.
+- القراءة تبدأ عبر `openReadScope({ connectorId })`.
+- الـscope تثبت committed snapshot واحدة عند الفتح وتحتفظ بنفس `SnapshotReader` طوال عمرها.
+- pagination داخل scope لا تتغير إذا وصل Import أحدث.
+- multi-query reports داخل scope ترى نفس snapshot.
+- runtime connector isolation لا يعتمد على TypeScript وحده.
+- application requests تعامل كـ`unknown` وتخضع closed-world validation.
+- missing/empty/ambiguous/unknown-field connector requests تفشل قبل storage.
+- Query provenance تتحقق مقابل pinned scope.
+- Application-level insight envelopes تحمل `connectorId + snapshotId` صراحة.
+- scope/context/source/insight envelopes frozen Runtime لمنع mutation العرضي للـprovenance.
+- لم نضف arbitrary historical snapshot lookup إلى LocalStore؛ V1 تمسك القارئ المفتوح نفسه بدل توسيع التخزين بلا use case.
+
+اختبارات حرجة مثبتة:
+
+- page 1 -> newer import -> page 2 من نفس scope تستمر على snapshot الأصلية.
+- عدة queries في نفس scope تبقى على snapshot واحدة.
+- malformed runtime requests مرفوضة.
+- connector isolation مثبتة.
+- insight provenance صريحة ومختبرة.
+
+CI #173:
 
 - locked `npm ci` ✅
-- runtime build ✅
-- strict TypeScript typecheck ✅
-- tests ✅
 - Ubuntu critical vulnerability audit ✅
+- runtime build including application service ✅
+- strict TypeScript typecheck ✅
+- all tests ✅
 
 ## ما أصبح موجودًا فعليًا في `main`
 
@@ -134,7 +159,11 @@ Run #155 passed on Ubuntu and Windows:
 8. Deterministic Insight Engine.
 9. Local Query Engine.
 10. Shared exact decimal arithmetic.
-11. Cross-platform CI on Ubuntu + Windows.
+11. V1 Application Service Boundary.
+12. Pinned Application Read Scopes.
+13. Runtime connector isolation at application boundary.
+14. Explicit query/insight provenance at application layer.
+15. Cross-platform CI on Ubuntu + Windows.
 
 ## قاعدة مهمة لأي AI أو مطور يكمل العمل
 
@@ -148,7 +177,11 @@ Run #155 passed on Ubuntu and Windows:
 - currency-safe semantics.
 - bounded-memory/streaming behavior.
 - snapshot-bound pagination.
+- pinned read-scope consistency.
+- explicit connector/snapshot provenance.
 - deterministic validation/execution authority.
+- strict package/runtime boundaries.
+- normal upper-layer reads must go through Application Service.
 
 أي توسع مثل LAN، multi-process، write actions أو multi-industry يجب أن يضيف تصميمًا مناسبًا بدل افتراض أن قيود V1 الحالية تغطيه.
 
@@ -157,6 +190,7 @@ Run #155 passed on Ubuntu and Windows:
 - Predicate/seek pushdown لتحسين deep pagination والبحث الواسع على قواعد ضخمة.
 - Signed/opaque cursors فقط عندما تعبر cursor حدود API غير موثوقة.
 - LAN/multi-process semantics تحتاج storage design جديدًا؛ SQLite الحالية ليست multi-process foundation.
+- Persisted/cross-process read-scope tokens عند ظهور use case فعلي.
 
 ## أوضاع التشغيل المستهدفة
 
@@ -172,7 +206,7 @@ Run #155 passed on Ubuntu and Windows:
 
 ## التسلسل المقترح
 
-V1: أول Connector حقيقي + Canonical Model + Local read-only intelligence + query/search/reporting foundations.
+V1: أول Connector حقيقي + Canonical Model + Local read-only intelligence + query/search/reporting foundations + stable Application Service boundary.
 
 V2: فصل mapping عن connector.
 
@@ -190,6 +224,10 @@ Controlled actions وOffline Agent تأتي بعد إثبات الأساس Read-
 
 لا تدّعِ أن Capability منفذة لمجرد وجودها في الرؤية أو الRoadmap. تحقق من مستودع الكود أولًا.
 
-آخر نقطة تنفيذية موثقة:
+**آخر نقطة تنفيذية موثقة:**
 
-**PR #7 Local Query Foundation merged successfully on 2026-08-24 at commit `54301b5ea3e0756b9935e6a3df31f954118c1c10`. Continue V1 from this `main`.**
+PR #8 `V1 application service boundary above query and insights` تم دمجها بنجاح في `main` بتاريخ 2026-08-24 عند commit:
+
+`4d2e8fa59914c371c21b2176663dda38e39fd67f`
+
+ابدأ أي عمل V1 لاحق من هذا `main`، وابنِ UI / Reports / AI Planner فوق Application Service بدل تجاوزها.
