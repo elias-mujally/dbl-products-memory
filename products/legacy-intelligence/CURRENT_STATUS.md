@@ -4,9 +4,9 @@
 
 ## الحالة
 
-**BUILD IN PROGRESS — Hardened read-only intelligence foundation + local query layer merged**
+**BUILD IN PROGRESS — Hardened read-only intelligence foundation + stable V1 application boundary merged**
 
-تم الانتقال من مرحلة الدراسة والتخطيط إلى التنفيذ الفعلي، ثم تقوية الأساس الهندسي، ثم إضافة أول طبقات الذكاء المحلي والاستعلام الآمن فوق بيانات الأنظمة القديمة.
+تم الانتقال من مرحلة الدراسة والتخطيط إلى التنفيذ الفعلي، ثم تقوية الأساس الهندسي، ثم إضافة طبقات الذكاء المحلي والاستعلام الآمن، والآن إضافة الحد التطبيقي الرسمي الذي ستستهلكه واجهة Windows والتقارير وطبقة AI المستقبلية بدل الوصول المباشر إلى التخزين أو المحركات الداخلية.
 
 مستودع البناء:
 
@@ -40,43 +40,19 @@
 - PR: `#6 — Persistent Audit + Deterministic Insight Foundation`
 - Merge commit: `1db738aae59c8b61e95cac99975d9864ab306947`
 
-أهم ما تم إدخاله:
+ما أصبح منفذًا:
 
-#### Persistent Audit
+- Persistent SQLite Audit Sink.
+- Runtime audit validation.
+- Audit migrations + checksum/drift detection.
+- Defensive audit reads and resource cleanup.
+- Deterministic Insight Engine يعمل بدون AI/Internet.
+- قواعد أولية: Low Stock / Outstanding Receivables / Sales Summary.
+- Presentation-neutral insight output.
+- Exact decimal arithmetic وعدم خلط العملات.
+- Streaming `SnapshotReader` من SQLite.
 
-- SQLite-backed Audit Sink دائم.
-- Runtime validation لأحداث التدقيق.
-- Audit migrations مع checksum/drift detection.
-- defensive read path للأحداث المخزنة.
-- Resource cleanup صحيح عند فشل initialization/migration.
-- تكامل فعلي مع Import Orchestrator.
-
-#### Deterministic Insight Engine
-
-أول طبقة ذكاء محلية تعمل بدون AI وبدون إنترنت.
-
-القدرات الأولية تشمل قواعد deterministic مثل:
-
-- Low Stock.
-- Outstanding Receivables.
-- Sales Summary.
-
-قرارات مهمة:
-
-- الـInsight Engine presentation-neutral ولا يحتوي نصوص UI/لغة إنجليزية ثابتة.
-- الحسابات المالية تستخدم exact decimal arithmetic.
-- لا يتم خلط العملات.
-- الـInsight Engine يعتمد Streaming عبر `SnapshotReader` بدل materializing snapshot كاملة.
-
-#### Streaming SnapshotReader
-
-تم تثبيت مسار قراءة streaming من SQLite:
-
-`SQLite -> SnapshotReader -> Insight Engine`
-
-ويستطيع قراءة Products / Customers / Sales بترتيب canonical بدون تحميل كامل تاريخ العميل في الذاكرة.
-
-تم اختبار المسار end-to-end:
+المسار المثبت بالاختبارات:
 
 `Multi-batch Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Deterministic Insight Engine`
 
@@ -89,110 +65,122 @@
 - PR: `#7 — V1 local query foundation: typed plans, safe filters, snapshot-bound cursors`
 - Merge commit: `54301b5ea3e0756b9935e6a3df31f954118c1c10`
 
-هذه الطبقة أصبحت الحدود الرسمية للاستعلام المحلي الآمن فوق البيانات الملتزمة.
+أهم Query invariants:
 
-المسار المعماري الحالي:
-
-`Legacy ERP -> Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Query Engine / Insight Engine`
-
-#### QueryPlan v1
-
-- Typed QueryPlan.
+- Typed `QueryPlan 1.0.0`.
 - Supported entities في V1: Product / Customer / Sale.
-- Closed set of filters.
-- لا Free-form SQL.
-- لا generic expressions.
-- لا arbitrary sorting في V1.
-- لا OFFSET pagination.
+- Closed-world Runtime Validation.
+- لا Free-form SQL أو generic expressions.
+- Money comparisons مرتبطة بالعملة ولا implicit FX.
+- Exact decimal arithmetic مشتركة من Core.
+- Cursor مرتبطة بـconnector + snapshot + entity + query fingerprint + last ID.
+- Pagination بدون OFFSET.
+- Default page size 50 / hard max 200.
+- Hard max 20 filters.
+- Query execution streaming فوق `SnapshotReader`.
 
-#### Closed-world Runtime Validation
+آخر CI مرجعية قبل الدمج: Run #155 نجحت على Ubuntu وWindows.
 
-أي input مجهول يتم رفضه، بما في ذلك unknown keys على:
+---
 
-- QueryPlan.
-- Filter.
-- Page.
-- Cursor.
-- nested Money objects.
+### 4. V1 Application Service Boundary
 
-الهدف: أي input قادم مستقبلًا من UI أو AI يعتبر untrusted حتى يجتاز validator deterministic.
+تم بناء PR #8 ثم إجراء مراجعة نقدية ما قبل الدمج. المراجعة أعادت PR إلى Draft رغم CI خضراء بعد اكتشاف مشاكل في snapshot consistency وruntime connector isolation وInsight provenance. تم إصلاحها من الجذر، إعادة الاختبار، ثم دمج PR #8 إلى `main` باستخدام Squash Merge.
 
-#### Money-safe query semantics
+- PR: `#8 — V1 application service boundary above query and insights`
+- Merge commit: `4d2e8fa59914c371c21b2176663dda38e39fd67f`
+- Final verified CI before merge: Run `#173` على Ubuntu وWindows.
 
-المقارنات المالية أصبحت Currency-bound.
+#### لماذا هذه الطبقة مهمة؟
 
-لا يجوز مقارنة مبلغ وحده بدون عملته.
+أصبحت `@dbl/application-service` هي **الحد الرسمي read-only** الذي يجب أن تستهلكه الطبقات العليا مستقبلًا:
 
-مثال صحيح:
+`UI / Reports / future AI Planner -> Application Service -> pinned Read Scope -> Query/Insight Engines -> SnapshotReader -> LocalStore`
 
-`{ amount: "100", currency: "USD" }`
+الهدف هو منع واجهة المستخدم والتقارير وAI من الاقتران المباشر بـSQLite أو `SnapshotReader` أو تفاصيل المحركات الداخلية.
 
-وبالتالي لا يمكن خلط 100 USD و100 YER و100 SAR في مقارنة واحدة دون تحويل صريح خارج هذه الطبقة.
+#### Pinned Application Read Scope
 
-#### Exact Query Protocol Gate
+الدخول للقراءة أصبح عبر:
 
-الإصدار المدعوم حاليًا:
+`openReadScope({ connectorId })`
 
-`QueryPlan 1.0.0`
+ويتم تثبيت آخر committed snapshot **مرة واحدة** عند فتح الـscope، ثم تحتفظ الـscope بنفس `SnapshotReader` طوال عمرها.
 
-أي إصدار مستقبلي مثل `1.1.0` يُرفض حتى تتم إضافة دعمه عمدًا.
+هذا يضمن:
 
-#### Safe cursor pagination
+- pagination لا تقفز إلى snapshot أحدث إذا حدث Import في المنتصف.
+- multi-query reports ترى نفس الصورة الزمنية للبيانات.
+- Query وInsights داخل نفس scope تشترك في نفس provenance.
+- Scope جديدة فقط هي التي ترى snapshot أحدث.
 
-الـCursor مرتبطة بـ:
+تم اختبار سيناريو مهم end-to-end: صفحة أولى من snapshot، ثم Import أحدث، ثم الصفحة الثانية من نفس scope تستمر على snapshot الأصلية بلا رفض أو خلط.
 
-- connectorId.
-- snapshotId.
-- entity.
-- canonical query-plan fingerprint.
-- last returned entity ID.
+#### Runtime Connector Isolation
 
-الـCursor لا يمكن إعادة استخدامها مع Snapshot أو Query Plan مختلفة دون رفض صريح.
+لم يعد الاعتماد على TypeScript وحده لمنع connector مبهمة.
 
-V1 cursors تعتبر internal local-process contract. التوقيع/opaque external tokens يؤجل حتى تعبر cursors حدود API غير موثوقة.
+Application boundary تتعامل مع input كـ`unknown` وتطبق closed-world runtime validation:
 
-#### Bounded query execution
+- request يجب أن تكون plain object.
+- `connectorId` مطلوبة.
+- non-empty بعد trimming.
+- bounded.
+- unknown fields مرفوضة.
+- accessor/non-plain inputs مرفوضة.
+- لا يتم تمرير connector غير محددة إلى التخزين.
 
-- Default page size: 50.
-- Hard maximum page size: 200.
-- Hard maximum filters: 20.
-- Text filters محدودة الطول.
-- executor يعتمد streaming.
-- Sale list pages تعيد Sale summaries فقط ولا materialize `lines[]` داخل الصفحة.
+وبذلك لا يمكن لـUI أو JavaScript أو AI تجاوز العزل بتمرير `undefined` ثم السقوط إلى سلوك "latest snapshot from any connector".
 
-#### Shared exact decimal arithmetic
+#### Explicit Provenance
 
-تم نقل exact decimal arithmetic إلى Core ليستخدمها كل من:
+Query results وApplication-level insight envelopes تحمل provenance صريحة:
 
-- Insight Engine.
-- Query Engine.
+- `connectorId`.
+- `snapshotId`.
 
-وذلك لمنع اختلاف semantics المالية بين أجزاء المنتج.
+كما تتحقق Application Service من provenance التي تعيدها Query Engine مقابل الـpinned scope وتفشل صراحة عند أي mismatch.
 
-#### CI verification
+Core `Insight` بقي presentation/domain-neutral؛ provenance أضيفت في application envelope بدل تلويث نموذج الـInsight الأساسي.
 
-آخر CI قبل دمج PR #7 كانت Run #155 ونجحت على Ubuntu وWindows:
+#### Runtime Immutability
 
-### Ubuntu
-- `npm ci` ✅
-- critical vulnerability audit ✅
-- runtime build ✅
+تم تجميد scope/context/source وInsight envelopes Runtime لمنع upper layers من تعديل pinned provenance بالخطأ بعد الإنشاء.
+
+#### قرار تخزيني مهم
+
+لم تتم إضافة arbitrary historical snapshot lookup إلى `LocalStore` في V1. بدل ذلك يتم تثبيت `SnapshotReader` المفتوحة بالفعل داخل الـRead Scope. هذا يحل consistency الحالية دون توسيع storage API قبل وجود use case حقيقي لـpersisted/cross-process scope tokens.
+
+#### ما بقي خارج Scope عمدًا
+
+PR #8 لا تضيف:
+
+- UI rendering.
+- report rendering/export.
+- AI prompts/planning.
+- write actions.
+- permissions/approval execution.
+- connector-specific behavior.
+- persisted/cross-process read-scope tokens.
+
+#### التحقق النهائي
+
+CI Run #173 نجحت على Ubuntu وWindows وشملت:
+
+- locked `npm ci` ✅
+- Ubuntu critical vulnerability audit ✅
+- runtime build including `@dbl/application-service` ✅
 - strict TypeScript typecheck ✅
-- tests ✅
+- all tests ✅
+- pagination remains valid after intervening newer import ✅
+- multi-query scope remains on one snapshot ✅
+- malformed/ambiguous runtime requests rejected ✅
+- connector isolation verified ✅
+- explicit insight provenance verified ✅
 
-### Windows
-- `npm ci` ✅
-- runtime build ✅
-- strict TypeScript typecheck ✅
-- tests ✅
+## ما أصبح موجودًا فعليًا الآن في `main`
 
-## ما أصبح موجودًا فعليًا الآن
-
-المنتج لم يعد مجرد Foundation فقط.
-
-داخل `main` توجد حاليًا طبقات فعلية تشمل:
-
-1. Core contracts + canonical model.
+1. Core contracts + Canonical Model.
 2. Connector contract + mock connector.
 3. Import Orchestrator.
 4. Durable local SQLite storage.
@@ -202,7 +190,11 @@ V1 cursors تعتبر internal local-process contract. التوقيع/opaque ext
 8. Deterministic Insight Engine.
 9. Local Query Engine.
 10. Shared exact decimal arithmetic.
-11. Cross-platform CI على Ubuntu وWindows.
+11. **V1 Application Service Boundary.**
+12. **Pinned Application Read Scopes.**
+13. **Runtime connector isolation at the application boundary.**
+14. **Explicit query/insight provenance at the application layer.**
+15. Cross-platform CI على Ubuntu وWindows.
 
 ## الهدف التنفيذي الحالي لـV1
 
@@ -213,7 +205,7 @@ V1 cursors تعتبر internal local-process contract. التوقيع/opaque ext
 - Read-only في V1.
 - Connector واحد حقيقي فقط في البداية.
 - دعم Products / Inventory / Customers / Sales.
-- واجهة عربية بسيطة لاحقًا فوق الأساس الحالي.
+- واجهة عربية بسيطة لاحقًا فوق `Application Service` فقط.
 - Query/Search فوق البيانات الفعلية.
 - Basic reports.
 - Deterministic insights.
@@ -226,17 +218,31 @@ V1 cursors تعتبر internal local-process contract. التوقيع/opaque ext
 
 الـLLM لا ينفذ SQL حر على قاعدة العميل ولا يكتب في ERP في V1.
 
-المسار المستهدف الآن أصبح أكثر تحديدًا:
+المسار المستهدف للـAI مستقبلًا:
 
-`User Text -> Intent/Query Planner -> Runtime-validated QueryPlan -> LocalQueryExecutor -> SnapshotReader -> Result -> Answer`
+`User Text -> Intent/Query Planner -> Runtime-validated QueryPlan -> Application Read Scope -> LocalQueryExecutor -> SnapshotReader -> Result -> Answer`
 
-الـAI مستقبلًا يمكنه ترجمة intent إلى QueryPlan، لكن authority تبقى للـvalidator/executor deterministic.
+الـAI يمكنه ترجمة intent إلى QueryPlan، لكن authority تبقى للـvalidator/executor deterministic.
+
+## Invariants لا يجب كسرها في الخطوات القادمة
+
+- no free-form SQL.
+- read-only first.
+- closed-world runtime validation.
+- currency-safe financial semantics.
+- streaming/bounded-memory behavior.
+- snapshot-bound pagination.
+- pinned read-scope consistency.
+- explicit connector/snapshot provenance.
+- strict package/runtime boundaries.
+- upper layers do not bypass Application Service for normal reads.
 
 ## تحسينات مؤجلة غير مانعة حاليًا
 
 - Predicate/seek pushdown لتحسين deep pagination وcontains-search على البيانات الضخمة.
 - Signed/opaque cursors عندما تخرج cursors عبر API غير موثوق.
 - LAN / multi-process storage semantics تحتاج تصميمًا جديدًا؛ SQLite الحالية لا تعتبر multi-process foundation.
+- Persisted/cross-process read-scope tokens عند ظهور use case فعلي.
 
 ## الفصل بين المستودعات
 
@@ -252,13 +258,6 @@ V1 cursors تعتبر internal local-process contract. التوقيع/opaque ext
 
 ## Milestone التالي
 
-**Continue V1 on top of the merged local query + deterministic intelligence foundation.**
+**Continue V1 above the merged Application Service boundary.**
 
-الأولوية هي التقدم الوظيفي المنضبط بدون كسر invariants المحسومة، خصوصًا:
-
-- no free-form SQL.
-- read-only first.
-- closed-world query validation.
-- currency-safe financial semantics.
-- streaming/bounded-memory behavior.
-- strict package/runtime boundaries.
+أي UI أو Reporting أو AI Planner قادم يجب أن يبنى فوق هذا الحد بدل إنشاء مسارات قراءة موازية تتجاوز invariants التي تم تثبيتها.
