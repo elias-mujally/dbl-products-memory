@@ -42,32 +42,121 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 
 ## الحالة الهندسية الحالية — 2026-08-24
 
-مستودع البناء هو:
+مستودع البناء:
 
 `elias-mujally/dbl-legacy-intelligence`
 
-تم الانتهاء من **Foundation Hardening Round 2** ودمج PR #5 إلى `main` بعد نجاح المراجعة والـCI على Ubuntu وWindows.
+### Milestone 1 — Foundation Hardening Round 2
 
-Merge commit المرجعي:
+- PR #5 merged.
+- Merge commit: `ab3db09c5afebaea1db741087af146c9771b32cc`
 
-`ab3db09c5afebaea1db741087af146c9771b32cc`
+أهم invariants:
 
-أهم invariants التي أصبحت مثبتة بالكود والاختبارات:
+- strict canonical decimals.
+- bounded batch imports.
+- runtime connector validation.
+- mechanical migration drift detection.
+- staging crash recovery.
+- SQLite الحالية single-writer desktop store.
+- locked CI على Ubuntu وWindows.
 
-- canonical decimal representation صار strict.
-- batch imports أصبحت bounded.
-- Connector shape/capabilities يتم التحقق منها Runtime.
-- Connector API versioning يستخدم semantic compatibility بدل literal-only typing.
-- migration drift/checksum أصبح ميكانيكيًا.
-- staging لديها crash recovery/cleanup.
-- SQLite في المرحلة الحالية **single-writer desktop store**؛ لا تعتبر semantics الحالية multi-process أو LAN-safe تلقائيًا.
-- CI تعتمد locked `npm ci` وتتحقق من build + strict typecheck + tests على Ubuntu وWindows.
+### Milestone 2 — Persistent Audit + Deterministic Insights
 
-لا يوجد blocker معماري معروف حاليًا يمنع مواصلة V1 فوق هذا الأساس ضمن scope المرحلة الحالية.
+- PR #6 merged.
+- Merge commit: `1db738aae59c8b61e95cac99975d9864ab306947`
+
+ما أصبح منفذًا:
+
+- persistent SQLite Audit Sink.
+- runtime audit validation.
+- audit migrations + checksum/drift detection.
+- defensive audit reads and resource cleanup.
+- Deterministic Insight Engine يعمل بدون AI/Internet.
+- قواعد أولية مثل Low Stock / Outstanding Receivables / Sales Summary.
+- presentation-neutral insight output.
+- exact decimal arithmetic وعدم خلط العملات.
+- Streaming `SnapshotReader` من SQLite.
+
+المسار المثبت بالاختبارات:
+
+`Multi-batch Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Deterministic Insight Engine`
+
+### Milestone 3 — Local Query Foundation
+
+- PR #7 merged using Squash Merge.
+- Merge commit: `54301b5ea3e0756b9935e6a3df31f954118c1c10`
+
+هذه الطبقة هي boundary الاستعلام المحلي الرسمية فوق `SnapshotReader`.
+
+المسار الحالي:
+
+`Legacy ERP -> Connector -> Import Orchestrator -> SQLite -> SnapshotReader -> Query Engine / Insight Engine`
+
+أهم Query invariants:
+
+- `QueryPlan 1.0.0` فقط حاليًا.
+- لا free-form SQL.
+- لا generic expressions.
+- Closed-world runtime validation.
+- unknown keys تفشل closed بدل التجاهل.
+- Money filters تربط amount + currency كوحدة واحدة.
+- لا implicit FX comparisons.
+- exact decimal comparisons من Core المشترك.
+- canonical UTC timestamps.
+- pagination بدون OFFSET.
+- cursors مرتبطة بـconnector + snapshot + entity + query fingerprint + last ID.
+- page size bounded: default 50 / max 200.
+- max 20 filters.
+- Sale list queries تعيد summaries ولا تحمل `lines[]` في الصفحة.
+- Query execution streaming فوق `SnapshotReader`.
+- AI مستقبلاً يترجم intent إلى QueryPlan فقط؛ validator/executor deterministic هو authority.
+
+آخر CI مرجعية قبل دمج PR #7:
+
+Run #155 passed on Ubuntu and Windows:
+
+- locked `npm ci` ✅
+- runtime build ✅
+- strict TypeScript typecheck ✅
+- tests ✅
+- Ubuntu critical vulnerability audit ✅
+
+## ما أصبح موجودًا فعليًا في `main`
+
+1. Core contracts + Canonical Model.
+2. Mock/connector contracts.
+3. Import Orchestrator.
+4. Durable SQLite local storage.
+5. Bounded/staged imports + recovery.
+6. Persistent Audit.
+7. Streaming SnapshotReader.
+8. Deterministic Insight Engine.
+9. Local Query Engine.
+10. Shared exact decimal arithmetic.
+11. Cross-platform CI on Ubuntu + Windows.
 
 ## قاعدة مهمة لأي AI أو مطور يكمل العمل
 
-لا تعِد فتح invariants المحسومة أعلاه أو تضعفها لتسهيل Feature جديدة إلا إذا ظهر دليل تقني واضح يستوجب تغيير القرار. أي توسع مثل LAN، multi-process، write actions أو multi-industry يجب أن يضيف تصميمًا مناسبًا بدل افتراض أن قيود V1 الحالية تغطيه.
+لا تعِد فتح invariants المحسومة أعلاه أو تضعفها لتسهيل Feature جديدة إلا إذا ظهر دليل تقني واضح يستوجب تغيير القرار.
+
+خصوصًا لا تُدخل أي Feature بطريقة تكسر:
+
+- no free-form SQL.
+- read-only-first.
+- closed-world validation.
+- currency-safe semantics.
+- bounded-memory/streaming behavior.
+- snapshot-bound pagination.
+- deterministic validation/execution authority.
+
+أي توسع مثل LAN، multi-process، write actions أو multi-industry يجب أن يضيف تصميمًا مناسبًا بدل افتراض أن قيود V1 الحالية تغطيه.
+
+## حدود مؤجلة عمدًا وليست Bugs حالية
+
+- Predicate/seek pushdown لتحسين deep pagination والبحث الواسع على قواعد ضخمة.
+- Signed/opaque cursors فقط عندما تعبر cursor حدود API غير موثوقة.
+- LAN/multi-process semantics تحتاج storage design جديدًا؛ SQLite الحالية ليست multi-process foundation.
 
 ## أوضاع التشغيل المستهدفة
 
@@ -77,13 +166,13 @@ Merge commit المرجعي:
 
 ## الفصل بين البناء والذاكرة
 
-مستودع البناء الحالي هو `elias-mujally/dbl-legacy-intelligence`، بينما هذا المستودع `elias-mujally/dbl-products-memory` هو المرجع الاستراتيجي وذاكرة المنتج.
+مستودع البناء الحالي هو `elias-mujally/dbl-legacy-intelligence`، بينما `elias-mujally/dbl-products-memory` هو المرجع الاستراتيجي وذاكرة المنتج.
 
 لا تنقل الرؤية أو القرارات الاستراتيجية إلى مستودع البناء إلا إذا أصبحت متطلبات تنفيذية فعلية. وبالمقابل، milestones التنفيذية المهمة يجب تلخيصها هنا بعد التحقق منها حتى لا تضيع حالة المشروع بين الجلسات.
 
 ## التسلسل المقترح
 
-V1: أول Connector يدوي + Canonical Model أولي + Local read-only intelligence.
+V1: أول Connector حقيقي + Canonical Model + Local read-only intelligence + query/search/reporting foundations.
 
 V2: فصل mapping عن connector.
 
@@ -101,4 +190,6 @@ Controlled actions وOffline Agent تأتي بعد إثبات الأساس Read-
 
 لا تدّعِ أن Capability منفذة لمجرد وجودها في الرؤية أو الRoadmap. تحقق من مستودع الكود أولًا.
 
-آخر نقطة تنفيذية موثقة: **Foundation Hardening Round 2 merged successfully on 2026-08-24; continue V1 implementation from the hardened `main`.**
+آخر نقطة تنفيذية موثقة:
+
+**PR #7 Local Query Foundation merged successfully on 2026-08-24 at commit `54301b5ea3e0756b9935e6a3df31f954118c1c10`. Continue V1 from this `main`.**
