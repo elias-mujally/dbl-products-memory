@@ -7,17 +7,18 @@
 ## اقرأ أولًا
 
 1. `README.md`
-2. `VISION.md`
-3. `ROADMAP.md`
-4. `MARKET_STUDY_2026-08-21.md`
-5. `MULTI_INDUSTRY_VISION_2026-08-21.md`
-6. `DECISIONS.md`
+2. `CURRENT_STATUS.md`
+3. `VISION.md`
+4. `ROADMAP.md`
+5. `MARKET_STUDY_2026-08-21.md`
+6. `MULTI_INDUSTRY_VISION_2026-08-21.md`
+7. `DECISIONS.md`
 
 ## الوصف الحالي
 
-DBL يدرس بناء **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء وتشغيل محلية فوق ERP/POS/Accounting/Custom Systems القديمة، تعمل بدون اعتماد دائم على الإنترنت، وتتحول تدريجيًا من Read-only intelligence إلى controlled actions ثم automation.
+DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء وتشغيل محلية فوق ERP/POS/Accounting/Custom Systems القديمة، تعمل بدون اعتماد دائم على الإنترنت، وتتحول تدريجيًا من Read-only intelligence إلى controlled actions ثم automation.
 
-الرؤية الآن تتضمن Agent برمجي deterministic يعمل Offline حتى بدون AI. في هذا الوضع يستخدم العميل أوامر جاهزة ذات Parameters قابلة للتعديل مثل الكمية والتاريخ والفرع والمورد والمخزن والمنتج وصيغة التقرير ووجهة الطباعة.
+الرؤية تتضمن Agent برمجي deterministic يعمل Offline حتى بدون AI. في هذا الوضع يستخدم العميل أوامر جاهزة ذات Parameters قابلة للتعديل مثل الكمية والتاريخ والفرع والمورد والمخزن والمنتج وصيغة التقرير ووجهة الطباعة.
 
 ## المبادئ الثابتة
 
@@ -39,15 +40,46 @@ DBL يدرس بناء **Local-First Legacy ERP Intelligence Layer**: طبقة ذ
 - Connector knowledge وCanonical Business Model وSchema Intelligence هي أصول دفاعية مستقبلية.
 - الرؤية متعددة القطاعات، لكن الـMVP رأسي وضيق.
 
+## الحالة الهندسية الحالية — 2026-08-24
+
+مستودع البناء هو:
+
+`elias-mujally/dbl-legacy-intelligence`
+
+تم الانتهاء من **Foundation Hardening Round 2** ودمج PR #5 إلى `main` بعد نجاح المراجعة والـCI على Ubuntu وWindows.
+
+Merge commit المرجعي:
+
+`ab3db09c5afebaea1db741087af146c9771b32cc`
+
+أهم invariants التي أصبحت مثبتة بالكود والاختبارات:
+
+- canonical decimal representation صار strict.
+- batch imports أصبحت bounded.
+- Connector shape/capabilities يتم التحقق منها Runtime.
+- Connector API versioning يستخدم semantic compatibility بدل literal-only typing.
+- migration drift/checksum أصبح ميكانيكيًا.
+- staging لديها crash recovery/cleanup.
+- SQLite في المرحلة الحالية **single-writer desktop store**؛ لا تعتبر semantics الحالية multi-process أو LAN-safe تلقائيًا.
+- CI تعتمد locked `npm ci` وتتحقق من build + strict typecheck + tests على Ubuntu وWindows.
+
+لا يوجد blocker معماري معروف حاليًا يمنع مواصلة V1 فوق هذا الأساس ضمن scope المرحلة الحالية.
+
+## قاعدة مهمة لأي AI أو مطور يكمل العمل
+
+لا تعِد فتح invariants المحسومة أعلاه أو تضعفها لتسهيل Feature جديدة إلا إذا ظهر دليل تقني واضح يستوجب تغيير القرار. أي توسع مثل LAN، multi-process، write actions أو multi-industry يجب أن يضيف تصميمًا مناسبًا بدل افتراض أن قيود V1 الحالية تغطيه.
+
 ## أوضاع التشغيل المستهدفة
 
 1. Offline Basic: deterministic intelligence + Agent commands، بدون AI.
 2. Offline Intelligent: Local AI + deterministic Agent.
 3. Hybrid: Local Core + Agent + Cloud اختياري.
 
-## الحالة الحالية
+## الفصل بين البناء والذاكرة
 
-مستودع البناء الحالي هو `elias-mujally/dbl-legacy-intelligence`، بينما هذا المستودع `dbl-product-memory` هو المرجع الاستراتيجي والذاكرة الخاصة بالمنتج. لا تنقل الرؤية أو القرارات الاستراتيجية إلى مستودع البناء إلا إذا أصبحت متطلبات تنفيذية فعلية.
+مستودع البناء الحالي هو `elias-mujally/dbl-legacy-intelligence`، بينما هذا المستودع `elias-mujally/dbl-products-memory` هو المرجع الاستراتيجي وذاكرة المنتج.
+
+لا تنقل الرؤية أو القرارات الاستراتيجية إلى مستودع البناء إلا إذا أصبحت متطلبات تنفيذية فعلية. وبالمقابل، milestones التنفيذية المهمة يجب تلخيصها هنا بعد التحقق منها حتى لا تضيع حالة المشروع بين الجلسات.
 
 ## التسلسل المقترح
 
@@ -65,6 +97,8 @@ V6: Industry Packs وتجربة شبه عامة على أنظمة وقطاعات
 
 Controlled actions وOffline Agent تأتي بعد إثبات الأساس Read-only، ولا يجب أن توسع نطاق V1 قبل أوانه.
 
-## تحذير
+## التحذير التنفيذي
 
-لا تدّعِ أن أي Capability منفذة قبل التحقق من مستودع الكود الخاص بالمنتج.
+لا تدّعِ أن Capability منفذة لمجرد وجودها في الرؤية أو الRoadmap. تحقق من مستودع الكود أولًا.
+
+آخر نقطة تنفيذية موثقة: **Foundation Hardening Round 2 merged successfully on 2026-08-24; continue V1 implementation from the hardened `main`.**
