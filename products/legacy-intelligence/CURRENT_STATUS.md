@@ -1,53 +1,91 @@
 # Legacy Intelligence — Current Status
 
-آخر تحديث: **2026-08-22**
+آخر تحديث: **2026-08-24**
 
 ## الحالة
 
-**BUILD STARTED — V1 kickoff**
+**BUILD IN PROGRESS — Foundation hardening completed and merged**
 
-تم الانتقال رسميًا من مرحلة الدراسة والتخطيط إلى مرحلة التنفيذ.
+تم الانتقال رسميًا من مرحلة الدراسة والتخطيط إلى التنفيذ، ثم بناء وتقوية الأساس الهندسي لـV1 قبل التوسع في الميزات.
 
-## الهدف التنفيذي الحالي
+## Milestone المنجز — 2026-08-24
 
-بناء أول نسخة Demo-ready من المنتج خلال V1، مع Scope ضيق:
-
-- تطبيق Windows محلي.
-- Offline-first.
-- Read-only.
-- Connector واحد فقط في البداية.
-- Canonical Business Model أولي.
-- دعم Products / Inventory / Customers / Sales.
-- واجهة عربية بسيطة.
-- Query/Search بلغة طبيعية فوق البيانات الفعلية.
-- Basic reports.
-- لا Voice.
-- لا WhatsApp.
-- لا Write Actions في V1.
-- لا Multi-industry implementation في V1.
-
-## أول قرار هندسي قبل الكود
-
-نحتاج مستودع كود مستقل للمنتج. الاسم المقترح:
+تم إنهاء **Foundation Hardening Round 2** في مستودع البناء:
 
 `elias-mujally/dbl-legacy-intelligence`
 
-Product Memory يبقى منفصلًا في:
+ثم تمت مراجعة الإصلاحات مراجعة مركزة إضافية ونجحت CI النهائية على Ubuntu وWindows قبل الدمج.
 
-`elias-mujally/dbl-product-memory/products/legacy-intelligence/`
+تم دمج PR #5 إلى `main` بنجاح باستخدام Squash Merge.
 
-## أول مسار بناء
+- PR: `#5 — Foundation Hardening Round 2`
+- Merge commit: `ab3db09c5afebaea1db741087af146c9771b32cc`
+- الحالة بعد الدمج: لا يوجد blocker معماري معروف يمنع البناء فوق الأساس الحالي في نطاق المرحلة الحالية.
 
-1. إنشاء repository مستقل.
-2. Scaffold لتطبيق Windows local-first.
-3. تعريف boundaries واضحة بين Desktop UI / Core / Connectors / Canonical Model / AI.
-4. بناء Demo ERP dataset أولي إذا لم يتوفر ERP حقيقي في أول يوم.
-5. بناء أول read-only SQL connector.
-6. ربط Products / Inventory / Customers / Sales بالـCanonical Model.
-7. إضافة deterministic query layer.
-8. إضافة AI intent parsing كطبقة اختيارية فوق query layer، وليس كمصدر حقيقة.
-9. بناء واجهة عربية demo-ready.
-10. اختبار Offline behavior والنتائج على بيانات حقيقية أو شبه حقيقية.
+## ما تم تقويته وإغلاقه
+
+تم إغلاق ست نقاط هندسية رئيسية بالكود والاختبارات:
+
+1. **Canonical decimal contract**
+   - تشديد التمثيل canonical للأرقام العشرية.
+   - رفض تمثيلات غير canonical مثل `10.10` و`-0` حيث لا يسمح العقد بها.
+
+2. **Bounded batch imports**
+   - فرض حدود واضحة على عمليات batch لمنع مدخلات غير محدودة أو سلوكيات ذاكرة خطرة.
+
+3. **Runtime connector validation**
+   - التحقق الفعلي من شكل وقدرات الـConnector وقت التشغيل بدل الثقة في metadata أو TypeScript فقط.
+   - دعم Semantic Versioning المتوافق للـConnector API بدل ربط النوع بقيمة literal واحدة.
+
+4. **Mechanical migration checksum / drift detection**
+   - جعل تغير ملفات migrations ينعكس ميكانيكيًا على checksum بدل الاعتماد على تحديث يدوي قابل للنسيان.
+
+5. **Crash recovery for staging**
+   - إضافة تنظيف/استعادة لحالات staging المتروكة بعد crash أو restart.
+   - تم توثيق invariant أن SQLite الحالية مصممة كـsingle-writer desktop store في هذه المرحلة.
+   - أي توسع مستقبلي إلى LAN أو multi-process يجب ألا يفترض أن semantics الحالية كافية دون تصميم جديد مناسب.
+
+6. **Deterministic read-only CI/build discipline**
+   - إزالة خطوة npm global غير الضرورية التي سببت تعطل Windows runner.
+   - الاعتماد على locked install عبر `npm ci`.
+   - الحفاظ على build/typecheck/tests كحواجز قبل الدمج.
+
+## نتيجة التحقق
+
+الجولة النهائية قبل الدمج نجحت على:
+
+### Ubuntu
+- `npm ci` ✅
+- فحص الثغرات الحرجة ✅
+- build ✅
+- strict TypeScript typecheck ✅
+- tests ✅
+
+### Windows
+- `npm ci` ✅
+- build ✅
+- strict TypeScript typecheck ✅
+- tests ✅
+
+النتيجة: **Foundation Hardening Round 2 passed and merged.**
+
+## الهدف التنفيذي الحالي لـV1
+
+نواصل بناء أول نسخة Demo-ready مع الحفاظ على Scope ضيق:
+
+- تطبيق Windows محلي.
+- Offline-first.
+- Read-only في V1.
+- Connector واحد فقط في البداية.
+- Canonical Business Model أولي.
+- دعم Products / Inventory / Customers / Sales.
+- واجهة عربية بسيطة لاحقًا فوق الأساس.
+- Query/Search فوق البيانات الفعلية.
+- Basic reports.
+- لا Voice في V1.
+- لا WhatsApp في V1.
+- لا Write Actions في V1.
+- لا Multi-industry implementation في V1.
 
 ## قاعدة السلامة
 
@@ -57,12 +95,20 @@ Product Memory يبقى منفصلًا في:
 
 `User Query -> Intent/Query Plan -> Validated Read Operation -> Connector -> Canonical Result -> Answer`
 
-## حالة المستودع
+## الفصل بين المستودعات
 
-حتى 2026-08-22 لا يوجد repository مستقل للمنتج ضمن GitHub connector المتاح. موصل GitHub الحالي يستطيع العمل على مستودعات قائمة لكنه لا يوفّر إنشاء Repository جديد من الصفر.
+مستودع البناء:
 
-بمجرد إنشاء المستودع الفارغ، يبدأ implementation commit الأول مباشرة.
+`elias-mujally/dbl-legacy-intelligence`
+
+ذاكرة المنتج والقرارات الاستراتيجية:
+
+`elias-mujally/dbl-products-memory/products/legacy-intelligence/`
+
+يجب إبقاء ذاكرة المنتج منفصلة عن كود التنفيذ، وتسجيل milestones والقرارات المهمة هنا بعد التحقق من مستودع البناء.
 
 ## Milestone التالي
 
-**Repository initialized + V1 architecture scaffold committed.**
+**Continue V1 implementation on top of the hardened foundation without reopening solved invariants unless new evidence requires it.**
+
+الأولوية الآن هي التقدم الوظيفي المنضبط فوق الأساس الحالي، مع الحفاظ على حدود Core / Connectors / Canonical Model / Storage / AI واضحة وقابلة للتوسع.
