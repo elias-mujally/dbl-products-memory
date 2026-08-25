@@ -1,18 +1,16 @@
 # Legacy Intelligence — Roadmap
 
-آخر مزامنة مع مستودع البناء: **2026-08-24**
+آخر مزامنة مع مستودع البناء: **2026-08-25**
 
 ## المرحلة الحالية
 
-**V1 BUILD IN PROGRESS — first actual market connector is the next gate.**
-
-تم دمج خمس milestones هندسية رئيسية في `main` داخل `elias-mujally/dbl-legacy-intelligence`.
+**V1 BUILD IN PROGRESS — Motakamel Plus Evidence Acquisition is the next active gate.**
 
 آخر نقطة تنفيذية موثقة:
 
-- PR #9 — V1 Real Connector Foundation + SQL Reference Adapter.
-- Squash merge commit: `5028dc48db331574168c2658afee2c8206913a52`.
-- Final verified CI: Run #192 passed on Ubuntu and Windows.
+- PR #10 — Close canonical validation against silent field loss.
+- Squash merge commit: `95bf225e1523e0fd0f72cdf3da8393df18d635cc`.
+- Final verified PR CI: Run #194 passed on Ubuntu and Windows.
 
 ## V1 — First real system / demo-ready
 
@@ -31,6 +29,8 @@
 - [x] Runtime connector validation.
 - [x] Mechanical migration checksum/drift detection.
 - [x] SQLite V1 semantics موثقة كـsingle-writer desktop store.
+- [x] Exact-key closed-world validation على persisted canonical objects.
+- [x] Unknown canonical fields fail with stable `UNKNOWN_CANONICAL_FIELD` بدل silent loss.
 
 #### Audit / Deterministic Intelligence
 
@@ -38,7 +38,7 @@
 - [x] Runtime audit validation.
 - [x] Streaming SnapshotReader.
 - [x] Deterministic Insight Engine يعمل بدون AI/Internet.
-- [x] Low Stock / Outstanding Receivables / Sales Summary.
+- [x] Low Stock / Outstanding Receivables / Sales Summary foundation.
 - [x] Shared exact decimal arithmetic.
 - [x] Currency-safe financial semantics.
 
@@ -46,7 +46,7 @@
 
 - [x] Typed `QueryPlan 1.0.0`.
 - [x] Product / Customer / Sale query support.
-- [x] Closed-world runtime validation.
+- [x] Closed-world query validation.
 - [x] No free-form SQL.
 - [x] Bounded filters and page sizes.
 - [x] Streaming query execution.
@@ -65,21 +65,30 @@
 
 #### Real Connector Foundation
 
-- [x] `@dbl/connector-test-kit` real-connector validation/acceptance harness.
+- [x] `@dbl/connector-test-kit` real-connector contract validation/acceptance harness.
 - [x] Explicit `accepted` / `smoke-passed` / `rejected` semantics.
-- [x] Smoke runs cannot produce full acceptance.
+- [x] Smoke runs cannot produce full contract acceptance.
 - [x] Observed capability evidence.
 - [x] Strict representative-fixture capability certification option.
 - [x] Read-only batched Reference SQLite Legacy Connector.
-- [x] `readonly + fileMustExist + query_only` source protection for reference SQLite.
-- [x] Lifecycle-neutral health probe with no retained source handle.
+- [x] `readonly + fileMustExist + query_only` protection for reference SQLite.
+- [x] Lifecycle-neutral health probe.
 - [x] Keyset source paging.
 - [x] SQL legacy mapping proof for Products / Inventory / Customers / Sales fixture data.
 - [x] Pinned SQLite read snapshot with concurrent-write coverage.
 - [x] Early stream cancellation cleanup/restart coverage.
 - [x] Invoice-line batch loading with bounded chunking instead of N+1 per invoice.
-- [x] End-to-end real SQL reference path through Import -> DBL SQLite -> Application Service -> Query/Insights.
+- [x] End-to-end reference path through Import -> DBL SQLite -> Application Service -> Query/Insights.
 - [x] Database-specific isolation rule documented: no portable SQL snapshot assumption.
+
+#### Independent Architecture Review / Remediation
+
+- [x] Independent package-by-package architecture red-team review completed.
+- [x] Verdict: targeted fixes, not re-architecture.
+- [x] Product/structural correctness distinguished from business semantic correctness.
+- [x] Phase 0 reduced to one actual defect only.
+- [x] PR #10 merged to close silent canonical field loss.
+- [x] No generic abstractions added during remediation.
 
 #### Engineering Quality
 
@@ -88,31 +97,111 @@
 - [x] Strict TypeScript typecheck.
 - [x] Automated tests.
 - [x] Cross-platform CI on Ubuntu and Windows.
-- [x] Final PR #9 CI Run #192 green on both platforms.
+- [x] PR #9 CI #192 green on both platforms.
+- [x] PR #10 CI #194 green on both platforms.
 
-### ما تبقى للوصول إلى V1 demo-ready ⏳
+### First Connector Target ✅
 
-#### Next immediate gate: first actual market connector
+- [x] Primary target selected: **YemenSoft Motakamel Plus ERP**.
+- [x] Decision remains conditional on obtaining valid evidence for an exact product/version/schema.
+- [x] Do not build generic `YemenSoftConnector`.
+- [x] Do not treat AlMuhaseb1/Access schema as a substitute for Motakamel Plus.
 
-- [ ] اختيار أول legacy ERP/accounting system حقيقي.
-- [ ] الحصول على schema sample أو sanitized local database.
-- [ ] تحديد exact source schema/version.
-- [ ] توثيق field-level mapping بالدليل الحقيقي.
-- [ ] تثبيت Products / Inventory / Customers / Sales المطلوبة على representative data.
-- [ ] تحديد واختبار database-enforced read-only credentials/session/mode.
-- [ ] توثيق واختبار snapshot/isolation semantics الخاصة بمحرك قاعدة النظام.
-- [ ] تنفيذ system-specific connector، بدون generic abstraction مبكر.
-- [ ] Exhaustive acceptance/certification عبر connector test kit.
-- [ ] Representative-dataset performance test وعدم وجود accidental N+1 shapes.
-- [ ] End-to-end import إلى DBL SQLite ثم Query/Insights/Application Service.
-- [ ] Windows close/restart behavior على connector الحقيقي.
+### Next immediate gate: Motakamel Plus Evidence Acquisition ⏳
 
-#### Demo surface بعد/بالتوازي مع ثبات connector الحقيقي
+Before connector coding, produce:
+
+- [ ] System and Version Profile.
+- [ ] Read-only Access & Isolation Record.
+- [ ] Source Schema Inventory.
+- [ ] Mapping Evidence Table.
+- [ ] Reconciliation Baseline.
+- [ ] Unsupported / Unresolved Semantics List.
+- [ ] Dataset Size & Performance Profile.
+- [ ] Exact V1 Connector Scope Decision.
+
+Evidence acquisition should determine:
+
+- [ ] Exact installer/product version/build.
+- [ ] SQL Server version/edition/instance/database.
+- [ ] Compatibility level + collation + authentication mode.
+- [ ] DB-enforced read-only principal/grants/session options.
+- [ ] snapshot/isolation behavior under concurrent writes.
+- [ ] tables/columns/types/nullability.
+- [ ] PK/FK/indexes/views/computed fields.
+- [ ] Products / Inventory / Customers / Sales relationships.
+- [ ] branch/warehouse/currency/UOM structures if actually present.
+- [ ] document status/type dictionaries.
+- [ ] returns/cancellations/sign conventions.
+- [ ] local/fiscal timezone semantics.
+- [ ] source row counts and representative totals.
+- [ ] official reports/golden records for reconciliation.
+- [ ] largest tables, DB size, history range, invoice-line distribution, representative query durations.
+
+### Evidence-driven Foundation Changes ⏳
+
+Only after Motakamel evidence:
+
+- [ ] Add smallest necessary Canonical Model delta, if any.
+- [ ] Define deterministic source timezone policy.
+- [ ] Define Motakamel-specific snapshot identity strategy.
+- [ ] Define page/chunk sizes from observed indexes/data.
+- [ ] Adjust Query/Insight semantics only where source evidence requires it.
+- [ ] Add optimized query path only if measurements prove the current path insufficient.
+
+Do **not** pre-add warehouse/status/returns/tax/UOM/branch fields just because they are common ERP concepts.
+
+### MotakamelPlusConnector Implementation ⏳
+
+Connector is not done until:
+
+- [ ] Supported product/schema version is explicit.
+- [ ] Read-only enforcement is proven outside connector metadata.
+- [ ] SQL Server-specific isolation behavior is tested under concurrent writes.
+- [ ] Every emitted canonical field has mapping evidence.
+- [ ] Unresolved critical semantics = zero.
+- [ ] Contract conformance succeeds exhaustively.
+- [ ] Reconciliation counts/totals match or every difference is explicitly justified.
+- [ ] Unsupported cases fail or are excluded explicitly.
+- [ ] Import -> SQLite -> Application Service -> Query/Insights succeeds end-to-end.
+- [ ] Cancellation/cleanup/restart behavior is proven.
+- [ ] Windows handle lifecycle is proven.
+- [ ] Representative runtime/memory stays within agreed budgets.
+- [ ] No accidental N+1/unbounded child allocation.
+- [ ] No source mutation required for normal V1 operation.
+
+### Connector Readiness model
+
+For the first market connector, distinguish conceptually:
+
+1. **Contract Conformance** — generic test-kit level.
+2. **Semantic Reconciliation** — system/version/dataset-specific evidence.
+3. **Operational Qualification** — permissions, isolation, cancellation, Windows lifecycle, performance/resource behavior.
+
+Do not create three generic packages/APIs just to mirror these labels.
+
+### Before First Pilot ⏳
+
+- [ ] Clarify test-kit/report terminology so contract `accepted` is not mistaken for production-ready.
+- [ ] Completed semantic reconciliation.
+- [ ] Cancellation/deadline behavior for long operations.
+- [ ] UI responsiveness/non-blocking verification.
+- [ ] Snapshot retention/disk policy OR disable unbounded recurring imports.
+- [ ] Storage schema-too-new fail-fast guard.
+- [ ] Local cache/config/audit backup/restore procedure.
+- [ ] Secure credentials/config handling.
+- [ ] Packaging + clean-machine install verification.
+- [ ] Recovery after interrupted import/restart.
+- [ ] Representative performance qualification.
+- [ ] Required business questions proven correct on Motakamel data.
+- [ ] Branch/release protection appropriate for pilot/release.
+
+### Demo surface بعد ثبات connector الحقيقي
 
 - [ ] Basic Reporting فوق Application Service.
 - [ ] Arabic query/search experience فوق Application Service.
 - [ ] Local Windows application shell / UI بسيطة قابلة للعرض.
-- [ ] End-to-end demo على بيانات/نظام legacy حقيقي.
+- [ ] End-to-end demo على Motakamel/legacy data حقيقية.
 - [ ] Packaging/installability للعرض المحلي على Windows.
 - [ ] مراجعة V1 كاملة قبل إعلان Demo-ready.
 
@@ -126,9 +215,12 @@
 - لا unrestricted write actions.
 - لا Multi-industry implementation.
 - لا LAN/multi-process assumption فوق SQLite الحالية.
-- لا Generic SQL Schema Inspector أو AI semantic mapping قبل evidence من النظام الأول.
+- لا Generic SQL Schema Inspector.
+- لا Universal SQL Connector.
+- لا AI semantic mapping قبل evidence من النظام الأول.
+- لا Generic Mapping DSL قبل repeated integration evidence.
 
-### المسار المعماري الذي يجب البناء فوقه
+### المسار المعماري الرسمي
 
 `UI / Reports / future AI Planner -> Application Service -> pinned Read Scope -> Query/Insight Engines -> SnapshotReader -> LocalStore`
 
@@ -138,50 +230,46 @@
 
 ## V2 — Mapping Separation
 
-**الحالة: NOT STARTED — intentionally deferred until evidence from first real market integration.**
+**NOT STARTED — intentionally deferred until evidence from first real market integration.**
 
-- فصل schema mapping عن connector implementation بعد رؤية ما يتكرر فعليًا.
-- جعل mapping artifact قابلًا للاختبار وإعادة الاستخدام.
-- تحسين compatibility/version handling.
+- فصل mapping فقط بعد رؤية ما يتكرر فعليًا.
+- جعل mapping artifacts قابلة للاختبار وإعادة الاستخدام عند وجود evidence.
+- compatibility/version handling مبني على أكثر من installation/version.
 
 ## V3 — Generic SQL Schema Inspector
 
-**الحالة: NOT STARTED.**
+**NOT STARTED.**
 
-- اكتشاف tables / columns / relationships / data types.
-- metadata collection آمن.
+- tables / columns / relationships / data types.
+- safe metadata collection.
 - connector diagnostics.
-- يبنى فوق المعرفة المكتسبة من V1/V2.
+- لا يبدأ قبل المعرفة المكتسبة من V1/V2.
 
 ## V4 — AI-assisted Semantic Mapping
 
-**الحالة: NOT STARTED.**
+**NOT STARTED.**
 
-- اقتراح معنى الجداول والحقول.
-- confidence scores.
-- human confirmation.
-- AI يقترح، deterministic validation/human confirmation يحكمان الاعتماد.
+- semantic suggestions.
+- confidence/human confirmation.
+- deterministic validation remains authoritative.
 
 ## V5 — Capability Detection
 
-**الحالة: NOT STARTED.**
+**NOT STARTED.**
 
 - Business Capability Map.
-- اكتشاف القدرات حسب schema الموثق.
-- تفعيل الأدوات المناسبة فقط.
+- capability activation from proven schema/semantics.
 
 ## V6 — Industry Packs
 
-**الحالة: NOT STARTED.**
+**NOT STARTED.**
 
-- Industry-specific actions, analytics, views, rules.
-- Core sector-agnostic قدر الإمكان، والتخصص في packs المبنية على evidence.
+- Industry-specific actions/analytics/views/rules.
+- Core sector-agnostic قدر الإمكان، specialization evidence-driven.
 
 ## ما بعد إثبات Read-only Foundation
 
-Controlled Actions وOffline Agent جزء من الرؤية، لكنهما ليسا سببًا لتوسيع V1 الآن.
-
-المسار المستقبلي:
+Controlled Actions وOffline Agent جزء من الرؤية لاحقًا:
 
 `Typed Action -> Validation -> Permission/Policy -> Preview -> Approval -> Deterministic Execution -> Audit`
 
@@ -191,6 +279,4 @@ AI لا يصبح execution authority.
 
 **Implement first, abstract second.**
 
-الـReference SQLite connector ليس أول market connector ولا يعني أن V1 انتهت. وظيفته إثبات mechanics/gates. الآن يجب أخذ نظام حقيقي وتطبيق هذه القواعد عليه، ثم فقط استخراج abstraction عندما يظهر تكرار حقيقي.
-
-ولا نهدم invariants التي تم دفع ثمنها بالمراجعات والاختبارات فقط لتسريع Feature مرئية.
+الخطوة التالية ليست cleanup ولا platform expansion. هي الحصول على Motakamel evidence حقيقية، ثم جعل أول Connector صحيحًا دلاليًا وتشغيليًا قبل استخراج أي abstraction عامة.
