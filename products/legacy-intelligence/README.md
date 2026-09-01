@@ -4,6 +4,8 @@
 
 آخر مزامنة مع مستودع البناء: **2026-08-25**
 
+آخر تحديث بحثي/مخبري: **2026-09-01**
+
 ## الحالة
 
 **V1 BUILD IN PROGRESS — hardened read-only foundation merged; first actual market connector evidence acquisition is now the active gate.**
@@ -26,11 +28,12 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 2. `CURRENT_STATUS.md` — الحالة التنفيذية والميلستونات الحالية.
 3. `ARCHITECTURE_REVIEW_2026-08-25.md` — خلاصة المراجعة المعمارية المستقلة وخطة remediation المقبولة.
 4. `FIRST_CONNECTOR_TARGET_2026-08-25.md` — قرار First Connector Target وخطة Evidence Acquisition.
-5. `VISION.md` — الرؤية طويلة المدى.
-6. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
-7. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
-8. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
-9. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
+5. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
+6. `VISION.md` — الرؤية طويلة المدى.
+7. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
+8. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
+9. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
+10. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
 
 ## الفكرة في سطر واحد
 
@@ -43,6 +46,8 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 الهدف السوقي الأول المختار حاليًا هو **YemenSoft Motakamel Plus ERP**، بشرط evidence acquisition ناجحة على إصدار/Schema حقيقي محدد.
 
 لا نبني `YemenSoftConnector` عامًا ولا نفترض تشابه كل الإصدارات. أول adapter يجب أن يكون system/version-specific بناءً على schema/sample/sanitized database حقيقية.
+
+**AlMuhaseb1 مسار مختبري موازٍ لاختبار acquisition boundaries على نظام legacy حقيقي، وليس بديلًا عن Motakamel Plus كـPrimary First Connector Target.** نتيجة Proof-of-Path الحالية له هي `B — PARTIALLY PROVEN`: خمسة domains منظمة مثبتة، بينما Sales Lines وSales Return Lines ما زالتا محجوبتين بفشل runtime في مسار Crystal detail reports. راجع `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` قبل أي متابعة لهذا المسار.
 
 ## ما تم بناؤه فعليًا حتى الآن
 
@@ -102,6 +107,8 @@ Dependency direction للطبقات العليا:
 المراجعة المستقلة لم توصِ بإعادة المعمارية. الحكم كان **Needs targeted fixes**.
 
 أهم استنتاج: foundation قوية في **contract/structural correctness**، لكن نجاح أول connector الحقيقي سيتطلب إضافة **semantic evidence + reconciliation + operational qualification** قبل اعتبار connector جاهزًا للـPilot.
+
+مختبر AlMuhaseb1 أكد هذا الدرس عمليًا: نجاح الوصول إلى headers أو تشغيل التقارير لا يساوي connector readiness إذا بقي line-level semantics أو source isolation غير مثبتين.
 
 لا نحول هذا الآن إلى framework عام. لأول Motakamel connector ننتج artifacts خاصة بالنظام/version ثم نستخرج abstraction فقط بعد evidence متكرر.
 
