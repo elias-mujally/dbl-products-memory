@@ -32,7 +32,7 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 - Connector knowledge وbusiness semantics أصول دفاعية مستقبلية.
 - الرؤية متعددة القطاعات، لكن V1 رأسي وضيق.
 
-## الحالة الهندسية الحالية — 2026-08-25
+## الحالة الهندسية الحالية — 2026-09-02
 
 مستودع البناء:
 
@@ -131,6 +131,16 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 
 لم يتم بناء connector بعد.
 
+تم الحصول على `EFA6_EDU` التعليمية الحقيقية وتثبيتها في VM معزولة. تم إثبات:
+
+- `GL.exe` build `8.03.0812` وSQL Server 2014 Express instance `YsEDU`؛
+- قواعد `Multi_Lang` و`DbRepDes` و`EFA12026` و`EFAARC10`؛
+- المسار pre-login: `GL.exe → YsEDU → FMMA → Multi_Lang`؛
+- إكمال provisioning عبر `Maintenance Create` الرسمي ونجاح الوصول إلى شاشة الدخول؛
+- `FMMA` هو SQL login عالي الصلاحية وليس connector identity مقبولة مفترضة.
+
+لم يثبت استخدام `EFA12026` قبل الدخول، ولم يبدأ Source Schema Inventory أو Golden Dataset. راجع `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md`.
+
 القواعد:
 
 - لا تبن `YemenSoftConnector` عامًا.
@@ -139,7 +149,7 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 - استهدف product/version/schema محددًا من evidence حقيقي.
 - SQL Server موثق للعائلة، لكن exact engine/version/configuration للتركيب المستهدف يجب إثباته ميدانيًا.
 
-تمت مراسلة YemenSoft لطلب Gold Plus Educational download لأن الرابط العام كان معطوبًا.
+مشكلة التنزيل ومراسلة YemenSoft سياق تاريخي؛ ليست blocker حاليًا بعد الحصول على الحزمة الحقيقية.
 
 Artifact `AlMuhaseb1` من YemenSoft تم فحصه فقط كـecosystem evidence وظهر فيه Access `.mdb`. لا يُستخدم كبديل لـMotakamel Plus schema.
 
@@ -155,6 +165,17 @@ Artifact `AlMuhaseb1` من YemenSoft تم فحصه فقط كـecosystem evidence
 6. Unsupported/Unresolved Semantics List.
 7. Dataset Size & Performance Profile.
 8. Exact V1 Connector Scope Decision.
+
+حالة البوابات في 2026-09-02:
+
+- System and Version Profile: `PARTIAL`؛ pre-login baseline مكتمل، والـmodules/customization/schema version غير محسومة.
+- Read-only Access & Isolation Record: `PARTIAL`؛ المختبر معزول، لكن هوية read-only المستقلة لم تُثبت.
+- Source Schema Inventory: `NOT STARTED`.
+- Mapping Evidence Table: `NOT STARTED`.
+- Reconciliation Baseline: `NOT STARTED`.
+- Unsupported/Unresolved Semantics List: `PARTIAL`.
+- Dataset Size & Performance Profile: `PARTIAL`.
+- Exact V1 Connector Scope Decision: `PARTIAL`.
 
 Semantic evidence يجب أن يغطي حسب المصدر الفعلي:
 
@@ -208,4 +229,6 @@ Semantic evidence يجب أن يغطي حسب المصدر الفعلي:
 
 تحقق دائمًا من مستودع البناء قبل اعتبار Product Memory دليلًا على implementation state.
 
-**آخر نقطة تنفيذية موثقة:** PR #10 merged via Squash Merge at `95bf225e1523e0fd0f72cdf3da8393df18d635cc`. الخطوة التالية هي Motakamel Plus Evidence Acquisition، وليس generic abstraction جديدة.
+**آخر نقطة بناء موثقة:** PR #10 merged via Squash Merge at `95bf225e1523e0fd0f72cdf3da8393df18d635cc`.
+
+**آخر نقطة evidence موثقة:** Motakamel Plus installation/provisioning/launch وpre-login baseline مثبتة في `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md`. الخطوة التالية الوحيدة هي **Read-only Access & Isolation Record** بهوية SQL منفصلة قليلة الصلاحيات في disposable VM، وليس schema mapping أو generic abstraction.

@@ -4,11 +4,11 @@
 
 آخر مزامنة مع مستودع البناء: **2026-08-25**
 
-آخر تحديث بحثي/مخبري: **2026-09-01**
+آخر تحديث بحثي/مخبري: **2026-09-02**
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — hardened read-only foundation merged; first actual market connector evidence acquisition is now the active gate.**
+**V1 BUILD IN PROGRESS — real Motakamel Plus installation/provisioning and pre-login baseline proven; connector evidence gates remain incomplete.**
 
 مستودع التنفيذ:
 
@@ -28,12 +28,13 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 2. `CURRENT_STATUS.md` — الحالة التنفيذية والميلستونات الحالية.
 3. `ARCHITECTURE_REVIEW_2026-08-25.md` — خلاصة المراجعة المعمارية المستقلة وخطة remediation المقبولة.
 4. `FIRST_CONNECTOR_TARGET_2026-08-25.md` — قرار First Connector Target وخطة Evidence Acquisition.
-5. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
-6. `VISION.md` — الرؤية طويلة المدى.
-7. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
-8. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
-9. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
-10. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
+5. `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md` — أول Motakamel حقيقي: النسخة/SQL/المختبر/provisioning/pre-login/gate status.
+6. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
+7. `VISION.md` — الرؤية طويلة المدى.
+8. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
+9. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
+10. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
+11. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
 
 ## الفكرة في سطر واحد
 
@@ -46,6 +47,8 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 الهدف السوقي الأول المختار حاليًا هو **YemenSoft Motakamel Plus ERP**، بشرط evidence acquisition ناجحة على إصدار/Schema حقيقي محدد.
 
 لا نبني `YemenSoftConnector` عامًا ولا نفترض تشابه كل الإصدارات. أول adapter يجب أن يكون system/version-specific بناءً على schema/sample/sanitized database حقيقية.
+
+تم الآن الوصول إلى نسخة `EFA6_EDU` حقيقية وتثبيتها في مختبر مستقل، وإثبات SQL Server `YSEDU` وdatabase topology ومسار provisioning ونجاح شاشة الدخول. هذه نتيجة access/system-profile وليست connector readiness: Read-only Access، Schema Inventory، Mapping، Reconciliation، Performance، والـexact V1 scope ما زالت غير مكتملة.
 
 **AlMuhaseb1 مسار مختبري موازٍ لاختبار acquisition boundaries على نظام legacy حقيقي، وليس بديلًا عن Motakamel Plus كـPrimary First Connector Target.** نتيجة Proof-of-Path الحالية له هي `B — PARTIALLY PROVEN`: خمسة domains منظمة مثبتة، بينما Sales Lines وSales Return Lines ما زالتا محجوبتين بفشل runtime في مسار Crystal detail reports. راجع `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` قبل أي متابعة لهذا المسار.
 

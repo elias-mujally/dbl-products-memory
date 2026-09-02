@@ -1,10 +1,10 @@
 # Legacy Intelligence — Roadmap
 
-آخر مزامنة مع مستودع البناء: **2026-08-25**
+آخر مزامنة مع حالة المنتج والأدلة: **2026-09-02**
 
 ## المرحلة الحالية
 
-**V1 BUILD IN PROGRESS — Motakamel Plus Evidence Acquisition is the next active gate.**
+**V1 BUILD IN PROGRESS — Motakamel Plus Evidence Acquisition is active; installation, provisioning, launch, and pre-login baseline are proven.**
 
 آخر نقطة تنفيذية موثقة:
 
@@ -106,19 +106,23 @@
 - [x] Decision remains conditional on obtaining valid evidence for an exact product/version/schema.
 - [x] Do not build generic `YemenSoftConnector`.
 - [x] Do not treat AlMuhaseb1/Access schema as a substitute for Motakamel Plus.
+- [x] Real `EFA6_EDU` educational package obtained and installed in an isolated Windows VM.
+- [x] Official provisioning reproduced and completed; Motakamel reaches its normal login screen.
+- [x] Pre-login path `GL.exe → YsEDU → FMMA → Multi_Lang` proven.
+- [x] `FMMA` rejected as an assumed connector identity because it is a privileged `sysadmin`/`dbcreator` login.
 
 ### Next immediate gate: Motakamel Plus Evidence Acquisition ⏳
 
 Before connector coding, produce:
 
-- [ ] System and Version Profile.
-- [ ] Read-only Access & Isolation Record.
+- [ ] System and Version Profile — `PARTIAL`: product/install/OS/SQL/pre-login profile proven; modules, customization, and schema version unresolved.
+- [ ] Read-only Access & Isolation Record — `PARTIAL`: disposable isolation proven; separate least-privilege read-only identity and DB enforcement not yet proven.
 - [ ] Source Schema Inventory.
 - [ ] Mapping Evidence Table.
 - [ ] Reconciliation Baseline.
-- [ ] Unsupported / Unresolved Semantics List.
-- [ ] Dataset Size & Performance Profile.
-- [ ] Exact V1 Connector Scope Decision.
+- [ ] Unsupported / Unresolved Semantics List — `PARTIAL`.
+- [ ] Dataset Size & Performance Profile — `PARTIAL`: engine/database baseline only.
+- [ ] Exact V1 Connector Scope Decision — `PARTIAL`: target retained; exact supported semantics unresolved.
 
 Evidence acquisition should determine:
 
@@ -279,4 +283,4 @@ AI لا يصبح execution authority.
 
 **Implement first, abstract second.**
 
-الخطوة التالية ليست cleanup ولا platform expansion. هي الحصول على Motakamel evidence حقيقية، ثم جعل أول Connector صحيحًا دلاليًا وتشغيليًا قبل استخراج أي abstraction عامة.
+الخطوة التالية الوحيدة هي إكمال **Read-only Access & Isolation Record** في disposable Motakamel VM بهوية SQL منفصلة بأقل الصلاحيات. لا يبدأ schema mapping أو connector coding أو abstraction عامة قبل إغلاق هذا الـgate.

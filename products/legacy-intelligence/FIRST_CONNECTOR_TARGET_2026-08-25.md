@@ -49,6 +49,17 @@
 
 ## Current Evidence Acquisition status
 
+### Superseding direct evidence — 2026-09-02
+
+- تم الحصول على حزمة `EFA6_EDU` التعليمية الحقيقية وتثبيتها في VM Windows معزولة.
+- تم إثبات `GL.exe` build `8.03.0812`، SQL Server 2014 Express instance `YsEDU`، وقواعد `Multi_Lang` و`DbRepDes` و`EFA12026` و`EFAARC10`.
+- أكمل مسار `Maintenance Create` الرسمي provisioning المفقود، ونجح Motakamel في الوصول إلى شاشة الدخول.
+- تم إثبات pre-login path: `GL.exe → YsEDU → FMMA → Multi_Lang`. لم يثبت استخدام `EFA12026` قبل الدخول.
+- connector readiness ما زالت **غير متحققة**؛ لم يبدأ Source Schema Inventory أو Golden Dataset، ولم يُثبت read-only connector identity.
+- التفاصيل: `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md`.
+
+القسمان التاليان يوثقان عائق الحصول التاريخي، وليس الحالة الحالية.
+
 ### Official download problem
 
 تم العثور على Gold Plus Educational/Beta package في موقع YemenSoft، لكن download mechanism العام لم يعمل فعليًا.
@@ -211,6 +222,4 @@ These remain post-evidence abstractions.
 
 ## Next action
 
-Obtain an official Motakamel Plus installer/demo/schema/sample/sanitized DB or read-only installation access.
-
-Then build the evidence artifacts above **before** writing production connector mapping code.
+أكمل **Read-only Access & Isolation Record** في disposable Motakamel VM checkpoint: أنشئ هوية SQL منفصلة بأقل الصلاحيات، وأثبت database-enforced read-only وsource isolation. لا تستخدم `FMMA` كهوية connector، ولا تلمس الـHost، ولا تبدأ schema mapping حتى يُغلق هذا الـgate.

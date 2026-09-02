@@ -1,10 +1,10 @@
 # Legacy Intelligence — Current Status
 
-آخر تحديث: **2026-08-25**
+آخر تحديث: **2026-09-02**
 
 ## الحالة
 
-**BUILD IN PROGRESS — targeted foundation remediation merged; Motakamel Plus evidence acquisition is the active next gate.**
+**BUILD IN PROGRESS — Motakamel Plus Evidence Acquisition is active; installation, official provisioning, launch, and the pre-login architecture baseline are proven, but connector evidence gates remain incomplete.**
 
 مستودع البناء:
 
@@ -119,14 +119,23 @@
 ما ثبت سوقيًا/تقنيًا حتى الآن:
 
 - Motakamel Plus مناسب جدًا لـProducts / Inventory / Customers / Sales.
-- YemenSoft توثق استخدام MS SQL Server لعائلة Motakamel Plus.
-- لا يوجد schema رسمي عام لدينا حتى الآن.
+- تم الحصول على حزمة `EFA6_EDU` التعليمية الحقيقية وتثبيتها في مختبر Windows معزول وقابل للتخلص.
+- تم إثبات SQL Server 2014 Express instance `YsEDU` وقواعد `Multi_Lang` و`DbRepDes` و`EFA12026` و`EFAARC10`.
+- تم إثبات مسار pre-login: `GL.exe → YsEDU → FMMA → Multi_Lang`، من دون ادعاء أن `EFA12026` تُستخدم قبل الدخول.
+- لا يوجد schema رسمي عام لدينا، ولم يبدأ Source Schema Inventory بعد.
 - لا نفترض أسماء الجداول أو semantics.
 - لا نبني `YemenSoftConnector` عام.
 
-تمت مراسلة YemenSoft رسميًا لطلب رابط مباشر للنسخة التعليمية Gold Plus بعد تعطل تنزيل الموقع.
+مسار التنزيل القديم ومراسلة YemenSoft أصبحا سياقًا تاريخيًا وليسا blocker حاليًا. `AlMuhaseb1` يبقى acquisition/evidence lab فقط، وليس بديلًا لـMotakamel Plus أو مصدرًا لـschema الخاصة به.
 
-كما تم فحص artifact قديم من YemenSoft (`AlMuhaseb1`) وأثبت وجود قاعدة Access `.mdb` في ذلك المنتج القديم؛ يستخدم فقط كـlegacy ecosystem evidence وليس كـschema بديل لـMotakamel Plus.
+## Motakamel Plus evidence milestone — 2026-09-02
+
+- `GL.exe` build `8.03.0812` ومسار التثبيت `C:\EFA` مثبتان.
+- فشل provisioning الأول أعيد إنتاجه في VM نظيفة؛ المسار الرسمي `Maintenance Create` أكمل `FMMA` وأنشأ `EFAARC10` مع mutations مرجعية موثقة.
+- تم إثبات نجاح التشغيل والوصول إلى شاشة الدخول.
+- `FMMA` SQL login ممكّن وعضو `sysadmin` و`dbcreator`؛ لا يوجد database principal مستقل له في `EFA12026`، وسلوك `dbo` مفسّر بعضوية `sysadmin`.
+- **DBL must not assume FMMA is an appropriate connector identity.**
+- التفاصيل وتصنيف الأدلة في `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md`.
 
 ## Artifacts المطلوبة قبل Motakamel connector coding
 
@@ -226,6 +235,6 @@ Mapping/Reconciliation يجب أن يثبت، حسب ما يوجد فعليًا 
 
 ## Milestone التالي
 
-**Motakamel Plus Evidence Acquisition.**
+**Read-only Access & Isolation Record.**
 
-ابدأ من system/version حقيقي، اجمع schema/sample/sanitized DB، ثم عدّل foundation فقط بالدليل، وبعدها ابنِ `MotakamelPlusConnector` system-specific.
+أنشئ واختبر هوية SQL منفصلة بأقل الصلاحيات في disposable Motakamel VM checkpoint، وأثبت database-enforced read-only وsource isolation. لا تستخدم `FMMA`، ولا تلمس الـHost، ولا تبدأ schema mapping قبل إغلاق هذا الـgate.
