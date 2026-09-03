@@ -1,6 +1,6 @@
 # Legacy Intelligence — Current Status
 
-آخر تحديث: **2026-09-02**
+آخر تحديث: **2026-09-03**
 
 ## الحالة
 
@@ -137,6 +137,16 @@
 - **DBL must not assume FMMA is an appropriate connector identity.**
 - التفاصيل وتصنيف الأدلة في `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md`.
 
+### Access and frozen-backup qualification — reviewed 2026-09-03
+
+- هوية SQL مستقلة ذات CONNECT وobject-level SELECT نجحت في القراءات المحددة دون FMMA؛ منع CONTROL SERVER مثبت بفحوص الصلاحية الفعلية الآمنة. هذا ليس allowlist كاملة لـV1.
+- live READ COMMITTED أظهر blocking وغياب transaction-wide repeatability؛ لم تتغير RCSI/SNAPSHOT options على المصدر.
+- **BACKUP-RESTORE SNAPSHOT QUALIFIED** داخل المختبر لقاعدة EFA12026 واحدة: COPY_ONLY+CHECKSUM، restore إلى DB/files مستقلة، READ_ONLY، ثلاث قراءات متطابقة مع تغيّر المصدر الاصطناعي بعد backup.
+- المسار أصبح مرشحًا حقيقيًا لـoffline/fallback acquisition باستخدام backup يوفره العميل/DBA ونسخة قراءة يجهزها مسؤول مستقل؛ ليس قرارًا بأن DBL سينفذ backup/restore بصلاحيات مرتفعة عند العميل.
+- Read-only Access & Isolation يبقى **PARTIAL**: حدود قواعد V1، الأداء التمثيلي، فصل الصلاحيات والتشغيل لم تكتمل. رُصدت91 dependency rows ذات database name دون حسم أهدافها أو ضرورتها لـV1.
+- Source Schema Inventory وMapping وBusiness Reconciliation تبقى **NOT STARTED**. البيانات الاصطناعية لهذا الاختبار ليست Motakamel Golden Dataset.
+- لا Connector implementation ولا Canonical Model change. Motakamel Plus يبقى Primary First Connector Target، وAlMuhaseb1 مختبر أدلة فقط.
+
 ## Artifacts المطلوبة قبل Motakamel connector coding
 
 1. System and Version Profile.
@@ -235,6 +245,6 @@ Mapping/Reconciliation يجب أن يثبت، حسب ما يوجد فعليًا 
 
 ## Milestone التالي
 
-**Read-only Access & Isolation Record.**
+**Targeted V1 Database Boundary Qualification.**
 
-أنشئ واختبر هوية SQL منفصلة بأقل الصلاحيات في disposable Motakamel VM checkpoint، وأثبت database-enforced read-only وsource isolation. لا تستخدم `FMMA`، ولا تلمس الـHost، ولا تبدأ schema mapping قبل إغلاق هذا الـgate.
+على disposable restored read-only copy، احسم هل القراءات المرشحة لـV1 تبقى داخل EFA12026، مع فحص الإحالات المسماة إلى قواعد أخرى قبل اختيار single-/multi-database acquisition boundary. هذه خطوة مقترحة وليست منفذة؛ لا mapping ولا Connector coding.
