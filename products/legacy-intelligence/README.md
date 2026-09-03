@@ -8,7 +8,7 @@
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — real Motakamel Plus installation/provisioning and pre-login baseline proven; connector evidence gates remain incomplete.**
+**V1 BUILD IN PROGRESS — Motakamel Plus read-only acquisition and frozen-snapshot evidence are substantially proven; targeted Golden Dataset is the current blocker before implementation-safe schema/mapping work.**
 
 مستودع التنفيذ:
 
@@ -24,19 +24,20 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 ## ابدأ من هنا
 
-آخر قرار معماري: [Minimum V1 Semantic Scope](MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md). `Multi_Lang` OPTIONAL للنطاق الأدنى؛ **DATABASE BOUNDARY STILL REQUIRES GOLDEN DATASET**. هذه ليست connector readiness ولا تغييرًا للـCanonical Model.
+آخر checkpoint شامل: [Motakamel Plus V1 Evidence Progress Checkpoint](MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md). آخر قرار دلالي: [Minimum V1 Semantic Scope](MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md). `EFA12026` REQUIRED، و`Multi_Lang` OPTIONAL للنطاق الأدنى الحالي، والقرار ما زال **DATABASE BOUNDARY STILL REQUIRES GOLDEN DATASET**. هذه ليست connector readiness ولا تغييرًا للـCanonical Model.
 
 1. `AI_HANDOFF.md` — أسرع نقطة لفهم أين توقف البناء وما الذي لا يجب كسره.
 2. `CURRENT_STATUS.md` — الحالة التنفيذية والميلستونات الحالية.
-3. `ARCHITECTURE_REVIEW_2026-08-25.md` — خلاصة المراجعة المعمارية المستقلة وخطة remediation المقبولة.
-4. `FIRST_CONNECTOR_TARGET_2026-08-25.md` — قرار First Connector Target وخطة Evidence Acquisition.
-5. `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md` — أول Motakamel حقيقي: النسخة/SQL/المختبر/provisioning/pre-login/gate status.
-6. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
-7. `VISION.md` — الرؤية طويلة المدى.
-8. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
-9. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
-10. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
-11. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
+3. `MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md` — checkpoint شامل لأدلة Motakamel الحالية: provisioning، least-privilege read، CONTROL SERVER denial، frozen backup snapshot، database boundary، والـGolden Dataset blocker.
+4. `ARCHITECTURE_REVIEW_2026-08-25.md` — خلاصة المراجعة المعمارية المستقلة وخطة remediation المقبولة.
+5. `FIRST_CONNECTOR_TARGET_2026-08-25.md` — قرار First Connector Target وخطة Evidence Acquisition.
+6. `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md` — أول Motakamel حقيقي: النسخة/SQL/المختبر/provisioning/pre-login/gate status.
+7. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
+8. `VISION.md` — الرؤية طويلة المدى.
+9. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
+10. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
+11. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
+12. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
 
 ## الفكرة في سطر واحد
 
@@ -50,7 +51,7 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 لا نبني `YemenSoftConnector` عامًا ولا نفترض تشابه كل الإصدارات. أول adapter يجب أن يكون system/version-specific بناءً على schema/sample/sanitized database حقيقية.
 
-تم الآن الوصول إلى نسخة `EFA6_EDU` حقيقية وتثبيتها في مختبر مستقل، وإثبات SQL Server `YSEDU` وdatabase topology ومسار provisioning ونجاح شاشة الدخول. هذه نتيجة access/system-profile وليست connector readiness: Read-only Access، Schema Inventory، Mapping، Reconciliation، Performance، والـexact V1 scope ما زالت غير مكتملة.
+تم الآن الوصول إلى نسخة `EFA6_EDU` حقيقية وتثبيتها في مختبر مستقل، وإثبات SQL Server `YSEDU` وdatabase topology ومسار provisioning ونجاح شاشة الدخول. كما ثبتت قراءة least-privilege مستقلة، ومنع `CONTROL SERVER`، وتقنية frozen single-database snapshot من backup متحقق منه. `EFA12026` هي القاعدة الوحيدة المثبتة REQUIRED حاليًا، بينما `Multi_Lang` و`DbRepDes` و`EFAARC10` ليست متطلبات مثبتة للنطاق الأدنى. ما زال Golden Dataset مطلوبًا لإثبات populated business semantics وكفاية `EFA12026` وحدها قبل connector readiness.
 
 **AlMuhaseb1 مسار مختبري موازٍ لاختبار acquisition boundaries على نظام legacy حقيقي، وليس بديلًا عن Motakamel Plus كـPrimary First Connector Target.** نتيجة Proof-of-Path الحالية له هي `B — PARTIALLY PROVEN`: خمسة domains منظمة مثبتة، بينما Sales Lines وSales Return Lines ما زالتا محجوبتين بفشل runtime في مسار Crystal detail reports. راجع `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` قبل أي متابعة لهذا المسار.
 
