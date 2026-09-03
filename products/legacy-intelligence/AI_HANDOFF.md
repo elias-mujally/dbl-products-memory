@@ -32,7 +32,7 @@ DBL يبني **Local-First Legacy ERP Intelligence Layer**: طبقة ذكاء و
 - Connector knowledge وbusiness semantics أصول دفاعية مستقبلية.
 - الرؤية متعددة القطاعات، لكن V1 رأسي وضيق.
 
-## الحالة الهندسية الحالية — 2026-09-02
+## الحالة الهندسية الحالية — 2026-09-03
 
 مستودع البناء:
 
@@ -166,10 +166,10 @@ Artifact `AlMuhaseb1` من YemenSoft تم فحصه فقط كـecosystem evidence
 7. Dataset Size & Performance Profile.
 8. Exact V1 Connector Scope Decision.
 
-حالة البوابات في 2026-09-02:
+حالة البوابات — محدّثة في 2026-09-03؛ راجع `MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md`:
 
 - System and Version Profile: `PARTIAL`؛ pre-login baseline مكتمل، والـmodules/customization/schema version غير محسومة.
-- Read-only Access & Isolation Record: `PARTIAL`؛ المختبر معزول، لكن هوية read-only المستقلة لم تُثبت.
+- Read-only Access & Isolation Record: `PARTIAL`؛ هوية مستقلة ذات CONNECT/object SELECT ومنع CONTROL SERVER وsingle-DB frozen-backup technique مثبتة. حدود V1 الدلالية والأداء/التشغيل لم تكتمل؛ لا FMMA كهوية DBL.
 - Source Schema Inventory: `NOT STARTED`.
 - Mapping Evidence Table: `NOT STARTED`.
 - Reconciliation Baseline: `NOT STARTED`.
@@ -231,4 +231,4 @@ Semantic evidence يجب أن يغطي حسب المصدر الفعلي:
 
 **آخر نقطة بناء موثقة:** PR #10 merged via Squash Merge at `95bf225e1523e0fd0f72cdf3da8393df18d635cc`.
 
-**آخر نقطة evidence موثقة:** Motakamel Plus installation/provisioning/launch وpre-login baseline مثبتة في `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md`. الخطوة التالية الوحيدة هي **Read-only Access & Isolation Record** بهوية SQL منفصلة قليلة الصلاحيات في disposable VM، وليس schema mapping أو generic abstraction.
+**آخر نقطة evidence/قرار موثقة:** `MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md`. القرار **DATABASE BOUNDARY STILL REQUIRES GOLDEN DATASET**. EFA12026 REQUIRED؛ Multi_Lang OPTIONAL للحد الأدنى فقط، لا globally unnecessary ولا EFA-only sufficiency proven. أبق raw payment-key discriminators، ولا تشترط full translated payment enum. **Bills.Bill_Type != journal.doc_type dictionary unless independently proven**. الخطوة التالية الوحيدة المقترحة **Motakamel V1 Targeted Golden Dataset Qualification** داخل المختبر، بعد إذن إدخال البيانات؛ لم تبدأ Golden Dataset أو Schema Inventory/Mapping الكامل. لا Connector/Canonical Model change.

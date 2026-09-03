@@ -143,11 +143,15 @@
 - live READ COMMITTED أظهر blocking وغياب transaction-wide repeatability؛ لم تتغير RCSI/SNAPSHOT options على المصدر.
 - **BACKUP-RESTORE SNAPSHOT QUALIFIED** داخل المختبر لقاعدة EFA12026 واحدة: COPY_ONLY+CHECKSUM، restore إلى DB/files مستقلة، READ_ONLY، ثلاث قراءات متطابقة مع تغيّر المصدر الاصطناعي بعد backup.
 - المسار أصبح مرشحًا حقيقيًا لـoffline/fallback acquisition باستخدام backup يوفره العميل/DBA ونسخة قراءة يجهزها مسؤول مستقل؛ ليس قرارًا بأن DBL سينفذ backup/restore بصلاحيات مرتفعة عند العميل.
-- Read-only Access & Isolation يبقى **PARTIAL**: حدود قواعد V1، الأداء التمثيلي، فصل الصلاحيات والتشغيل لم تكتمل. رُصدت91 dependency rows ذات database name دون حسم أهدافها أو ضرورتها لـV1.
+- Read-only Access & Isolation يبقى **PARTIAL**: حدود قواعد V1 الدلالية، الأداء التمثيلي وفصل صلاحيات التشغيل لم تكتمل. حُللت لاحقًا91 dependency rows إلى63 HMS مشروطة،22 master helpers،3 Multi_Lang و3 XML-alias artifacts؛ لا تعني ضرورة أخذ كل القواعد.
 - Source Schema Inventory وMapping وBusiness Reconciliation تبقى **NOT STARTED**. البيانات الاصطناعية لهذا الاختبار ليست Motakamel Golden Dataset.
 - لا Connector implementation ولا Canonical Model change. Motakamel Plus يبقى Primary First Connector Target، وAlMuhaseb1 مختبر أدلة فقط.
 
 ## Artifacts المطلوبة قبل Motakamel connector coding
+
+آخر قرار نطاق — 2026-09-03: **DATABASE BOUNDARY STILL REQUIRES GOLDEN DATASET**. `EFA12026` REQUIRED و`Multi_Lang` OPTIONAL للحد الأدنى الحالي فقط، وكذلك `DbRepDes` و`EFAARC10` OPTIONAL. لا يوجد required semantic decoder ثبت اعتماده الحتمي على S_FLAGS؛ full payment labels ليست شرطًا، لكن raw payment codes قد تكون جزءًا من هوية/ربط السجلات ويجب الحفاظ عليها عند الحاجة. هذا تضييق للنطاق لا إثبات لكفاية EFA12026 الكاملة ولا إكمال لأي gate.
+
+راجِع `MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md`: عشرة مفاهيم دلالية لازمة، وثماني مجموعات features غير مطلوبة، وأربع مجموعات flags غير محسومة. كل end-to-end business proof ما زال يحتاج بيانات مضبوطة؛ لا شراء/تصنيع/HR/GL export مضافًا. **Bills.Bill_Type != journal.doc_type dictionary unless independently proven**.
 
 1. System and Version Profile.
 2. Read-only Access & Isolation Record.
@@ -245,6 +249,6 @@ Mapping/Reconciliation يجب أن يثبت، حسب ما يوجد فعليًا 
 
 ## Milestone التالي
 
-**Targeted V1 Database Boundary Qualification.**
+**Motakamel V1 Targeted Golden Dataset Qualification.**
 
-على disposable restored read-only copy، احسم هل القراءات المرشحة لـV1 تبقى داخل EFA12026، مع فحص الإحالات المسماة إلى قواعد أخرى قبل اختيار single-/multi-database acquisition boundary. هذه خطوة مقترحة وليست منفذة؛ لا mapping ولا Connector coding.
+الـDatabase Boundary والـFocused Flag Lookup ثم Required Semantic Codes Scope أُنجزت كفحوص محدودة؛ لا نعيدها. الخطوة المقترحة الوحيدة هي إثبات المفاهيم المطلوبة بسجلات GUI رسمية داخل المختبر وقراءة مستقلة من snapshot لـEFA فقط. لم تبدأ Golden Dataset أو full Schema Inventory أو Mapping؛ يلزم إذن قبل إدخال أي بيانات، ولا Connector coding أو Canonical Model change.

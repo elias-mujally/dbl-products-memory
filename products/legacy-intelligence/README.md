@@ -4,7 +4,7 @@
 
 آخر مزامنة مع مستودع البناء: **2026-08-25**
 
-آخر تحديث بحثي/مخبري: **2026-09-02**
+آخر تحديث بحثي/مخبري: **2026-09-03**
 
 ## الحالة
 
@@ -23,6 +23,8 @@
 PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary: unknown canonical fields لم تعد تمر validation ثم تختفي بصمت أثناء SQLite persistence/fingerprinting.
 
 ## ابدأ من هنا
+
+آخر قرار معماري: [Minimum V1 Semantic Scope](MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md). `Multi_Lang` OPTIONAL للنطاق الأدنى؛ **DATABASE BOUNDARY STILL REQUIRES GOLDEN DATASET**. هذه ليست connector readiness ولا تغييرًا للـCanonical Model.
 
 1. `AI_HANDOFF.md` — أسرع نقطة لفهم أين توقف البناء وما الذي لا يجب كسره.
 2. `CURRENT_STATUS.md` — الحالة التنفيذية والميلستونات الحالية.
