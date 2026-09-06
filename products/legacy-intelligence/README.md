@@ -8,7 +8,7 @@
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. The engineering foundation remains valid, but educational Account Numbering is no longer on the critical path. The next major proof is representative authorized Motakamel data + a real pilot use case, followed by targeted mapping, a narrow connector, minimal UI, and supervised pilot.**
+**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot Learning Contract #001 is now locked as the first product hypothesis: Purchase Attention + Item Intelligence. The next major proof is representative authorized Motakamel data for the purchasing/inventory slice, followed by targeted semantic mapping, reconciliation, a narrow connector, minimal UI, and supervised pilot. Educational Account Numbering remains off the critical path.**
 
 مستودع التنفيذ:
 
@@ -24,23 +24,26 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 ## ابدأ من هنا
 
-أحدث قرار استراتيجي: [Independent Full Product Review — 2026-09-06](INDEPENDENT_FULL_PRODUCT_REVIEW_2026-09-06.md). الحكم هو **CONTINUE WITH CORRECTIONS**: لا rewrite ولا تغيير جذري للمعمارية، لكن مسار تهيئة الـERP التعليمي توقف كـcritical path. نحتفظ بكل أدلة Motakamel الحالية، ونحوّل الإثبات التالي إلى representative authorized data + real user/use case. Account Numbering يبقى unresolved وليس blocker تلقائيًا للـConnector.
+أحدث قرار منتج: [Pilot Learning Contract #001 — Purchase Attention + Item Intelligence](PILOT_LEARNING_CONTRACT_001_PURCHASE_ATTENTION_ITEM_INTELLIGENCE_2026-09-06.md). هذا هو أول pilot hypothesis ملموس مشتق من workflow شراء حقيقي: DBL يساعد المستخدم أولًا في معرفة الأصناف التي تستحق المراجعة، ثم يجمع Item Intelligence في مكان واحد بدل التنقل بين شاشات ERP متعددة. لا يقرر الشراء تلقائيًا ولا يختار المورد أو كمية الطلب بدل الإنسان.
 
-آخر checkpoint أدلة قبل المراجعة: [Motakamel Plus V1 Evidence Progress Checkpoint](MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md). آخر قرار دلالي سابق: [Minimum V1 Semantic Scope](MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md). `EFA12026` REQUIRED، و`Multi_Lang` OPTIONAL للنطاق الأدنى الحالي. لا تزال connector readiness غير معلنة.
+المراجعة الاستراتيجية المرجعية: [Independent Full Product Review — 2026-09-06](INDEPENDENT_FULL_PRODUCT_REVIEW_2026-09-06.md). الحكم هو **CONTINUE WITH CORRECTIONS**: لا rewrite ولا تغيير جذري للمعمارية، لكن مسار تهيئة الـERP التعليمي توقف كـcritical path. نحتفظ بكل أدلة Motakamel الحالية، ونحوّل الإثبات التالي إلى representative authorized data + real user/use case. Account Numbering يبقى unresolved وليس blocker تلقائيًا للـConnector.
 
-1. `INDEPENDENT_FULL_PRODUCT_REVIEW_2026-09-06.md` — أحدث checkpoint استراتيجي وتقني: verdict، findings، إيقاف Account Numbering كمسار حرج، وخمس حركات نحو أول pilot.
-2. `AI_HANDOFF.md` — أسرع نقطة لفهم أين توقف البناء وما الذي لا يجب كسره.
-3. `CURRENT_STATUS.md` — الحالة التنفيذية والميلستونات الحالية.
-4. `MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md` — checkpoint شامل لأدلة Motakamel: provisioning، least-privilege read، CONTROL SERVER denial، frozen backup snapshot، database boundary، والـGolden Dataset blocker التاريخي.
-5. `ARCHITECTURE_REVIEW_2026-08-25.md` — خلاصة المراجعة المعمارية المستقلة السابقة وخطة remediation المقبولة.
-6. `FIRST_CONNECTOR_TARGET_2026-08-25.md` — قرار First Connector Target وخطة Evidence Acquisition.
-7. `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md` — أول Motakamel حقيقي: النسخة/SQL/المختبر/provisioning/pre-login/gate status.
-8. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
-9. `VISION.md` — الرؤية طويلة المدى.
-10. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
-11. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
-12. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
-13. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
+آخر checkpoint أدلة قبل المراجعة: [Motakamel Plus V1 Evidence Progress Checkpoint](MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md). آخر قرار دلالي سابق: [Minimum V1 Semantic Scope](MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md). `EFA12026` REQUIRED، و`Multi_Lang` OPTIONAL للنطاق الأدنى السابق. لا تزال connector readiness غير معلنة.
+
+1. `PILOT_LEARNING_CONTRACT_001_PURCHASE_ATTENTION_ITEM_INTELLIGENCE_2026-09-06.md` — **Current execution anchor**: المشكلة، المستخدم، Purchase Attention، Item Intelligence، حدود V1، success measures، وMotakamel evidence المطلوب.
+2. `INDEPENDENT_FULL_PRODUCT_REVIEW_2026-09-06.md` — checkpoint استراتيجي وتقني: verdict، findings، إيقاف Account Numbering كمسار حرج، وخمس حركات نحو أول pilot.
+3. `AI_HANDOFF.md` — أسرع نقطة لفهم أين توقف البناء وما الذي لا يجب كسره.
+4. `CURRENT_STATUS.md` — الحالة التنفيذية والميلستونات الحالية.
+5. `MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md` — checkpoint شامل لأدلة Motakamel: provisioning، least-privilege read، CONTROL SERVER denial، frozen backup snapshot، database boundary، والـGolden Dataset blocker التاريخي.
+6. `ARCHITECTURE_REVIEW_2026-08-25.md` — خلاصة المراجعة المعمارية المستقلة السابقة وخطة remediation المقبولة.
+7. `FIRST_CONNECTOR_TARGET_2026-08-25.md` — قرار First Connector Target وخطة Evidence Acquisition.
+8. `MOTAKAMEL_PLUS_EVIDENCE_MILESTONE_2026-09-02.md` — أول Motakamel حقيقي: النسخة/SQL/المختبر/provisioning/pre-login/gate status.
+9. `ALMUHASEB1_LAB_PROGRESS_2026-09-01.md` — سجل مختبر AlMuhaseb1: Golden Dataset، Hyper-V isolation، A/B Proof-of-Path، والـline-level blocker الحالي.
+10. `VISION.md` — الرؤية طويلة المدى.
+11. `ROADMAP.md` — ما تم وما تبقى من V1 ثم V2–V6.
+12. `MARKET_STUDY_2026-08-21.md` — الدراسة السوقية المرجعية السابقة.
+13. `MULTI_INDUSTRY_VISION_2026-08-21.md` — الرؤية متعددة القطاعات.
+14. `DECISIONS.md` — القرارات الاستراتيجية والمعمارية المقبولة.
 
 ## الفكرة في سطر واحد
 
@@ -133,16 +136,18 @@ Dependency direction للطبقات العليا:
 - Local Windows application.
 - Offline-first.
 - Read-only connector لنظام حقيقي واحد في البداية.
-- Pilot slice ضيقة حول سؤال عمل فعلي، مرشحة لتشمل Sales / Returns / line drill-down + Customer/Product context، وInventory فقط إذا ثبتت semantics المطلوبة.
-- Arabic query/search experience.
-- Basic reports / reconciliation / provenance.
+- **First pilot slice: Purchase Attention + Item Intelligence** حول سؤال عمل فعلي، وليس Sales Dashboard مفترضًا.
+- Item context مرشح ليشمل inventory، previous purchase quantity + subsequent movement، bonus، movement profile، supplier history، وexisting purchase-order context فقط بعد إثبات semantics.
+- DBL يبرز ما يستحق الانتباه ويشرح السبب، والإنسان يتخذ قرار الشراء.
+- Arabic query/search experience لاحقًا ضمن الواجهة المناسبة.
+- Basic reconciliation / provenance.
 - Deterministic insights بعد إثبات semantics.
 
-غير داخل V1 حاليًا: Voice، WhatsApp، unrestricted write actions، multi-industry implementation، LAN/multi-process semantics، Generic Schema Inspector، Universal SQL Connector، generic mapping DSL، full GL ما لم يثبت pilot الحاجة إليه.
+غير داخل V1 الحالي: autonomous purchasing، automatic supplier selection، automatic order quantity prescription، Voice، WhatsApp، unrestricted write actions، multi-industry implementation، LAN/multi-process semantics، Generic Schema Inspector، Universal SQL Connector، generic mapping DSL، full GL ما لم يثبت pilot الحاجة إليه.
 
 ## المسار التنفيذي المفضل الآن
 
-`Real User / Use Case -> Representative Authorized Motakamel Data -> Targeted Schema + Mapping Evidence -> Minimal Evidence-Driven Canonical Corrections + P1 Trust Fixes -> Narrow Motakamel Connector -> Minimal UI -> Supervised Pilot`
+`Pilot Learning Contract #001 -> Representative Authorized Motakamel Data -> Targeted Purchasing/Inventory Schema Evidence -> Semantic Mapping + Reconciliation -> Minimal Evidence-Driven Canonical Corrections + P1 Trust Fixes -> Narrow Motakamel Connector -> Minimal Purchase Attention + Item Intelligence UI -> Supervised Pilot`
 
 لا نستخدم عدد connectors كمقياس نجاح. الـmoat المحتمل هو تراكم mapping knowledge، semantic fixtures/tests، compatibility profiles، reconciliation knowledge، version/schema drift knowledge، وoperational troubleshooting الذي يخفض تكلفة onboarding والدعم.
 
