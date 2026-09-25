@@ -4,11 +4,11 @@
 
 آخر مزامنة مع مستودع البناء: **2026-08-25**
 
-آخر تحديث بحثي/استراتيجي: **2026-09-06**
+آخر تحديث بحثي/مخبري: **2026-09-25**
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot Learning Contract #001 is now locked as the first product hypothesis: Purchase Attention + Item Intelligence. The next major proof is representative authorized Motakamel data for the purchasing/inventory slice, followed by targeted semantic mapping, reconciliation, a narrow connector, minimal UI, and supervised pilot. Educational Account Numbering remains off the critical path.**
+**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A exists in the educational Motakamel lab; Windows 11 Computer Use is qualified for Stage A only. Stage B Motakamel/SQL installation is blocked by host D: capacity. No Motakamel connector or customer pilot is qualified.**
 
 مستودع التنفيذ:
 
@@ -24,9 +24,13 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 ## ابدأ من هنا
 
-أحدث قرار منتج: [Pilot Learning Contract #001 — Purchase Attention + Item Intelligence](PILOT_LEARNING_CONTRACT_001_PURCHASE_ATTENTION_ITEM_INTELLIGENCE_2026-09-06.md). هذا هو أول pilot hypothesis ملموس مشتق من workflow شراء حقيقي: DBL يساعد المستخدم أولًا في معرفة الأصناف التي تستحق المراجعة، ثم يجمع Item Intelligence في مكان واحد بدل التنقل بين شاشات ERP متعددة. لا يقرر الشراء تلقائيًا ولا يختار المورد أو كمية الطلب بدل الإنسان.
+**أحدث حالة مثبتة:** [Legacy Intelligence Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md). يميز بين Item A المثبت عبر الواجهة، استكشاف S0b الجزئي، تأهيل Windows 11 Computer Use Stage A فقط، ومشكلة مساحة Stage B. لا يستنتج نجاح Motakamel على Windows 11.
 
-المراجعة الاستراتيجية المرجعية: [Independent Full Product Review — 2026-09-06](INDEPENDENT_FULL_PRODUCT_REVIEW_2026-09-06.md). الحكم هو **CONTINUE WITH CORRECTIONS**: لا rewrite ولا تغيير جذري للمعمارية، لكن مسار تهيئة الـERP التعليمي توقف كـcritical path. نحتفظ بكل أدلة Motakamel الحالية، ونحوّل الإثبات التالي إلى representative authorized data + real user/use case. Account Numbering يبقى unresolved وليس blocker تلقائيًا للـConnector.
+**الاستراتيجية التنفيذية الأحدث:** [Controlled Dataset → Design Partner Strategy](CONTROLLED_DATASET_TO_DESIGN_PARTNER_STRATEGY_2026-09-10.md) و[Controlled Motakamel Dataset #001 plan](CONTROLLED_MOTAKAMEL_DATASET_001_PLAN_2026-09-10.md). الدليل التعليمي قد يؤهل قدرة محدودة بمستوى LAB-PROVEN بعد مصالحتها؛ بيانات الشريك الواقعية مطلوبة لمستوى PARTNER-VALIDATED، ثم تجربة مستخدم تشغيلية لمستوى PILOT-QUALIFIED.
+
+عقد تعلّم الـpilot: [Pilot Learning Contract #001 — Purchase Attention + Item Intelligence](PILOT_LEARNING_CONTRACT_001_PURCHASE_ATTENTION_ITEM_INTELLIGENCE_2026-09-06.md). هذه فرضية قيمة سوقية لا تثبتها بيانات المختبر وحدها: DBL يساعد المستخدم في مراجعة الأصناف وجمع معلوماتها، ولا يقرر الشراء أو المورد أو كمية الطلب بدل الإنسان.
+
+المراجعة الاستراتيجية المرجعية: [Independent Full Product Review — 2026-09-06](INDEPENDENT_FULL_PRODUCT_REVIEW_2026-09-06.md). الحكم هو **CONTINUE WITH CORRECTIONS**: لا rewrite ولا تغيير جذري للمعمارية. قرار 10 سبتمبر اللاحق يسمح ببيانات تعليمية مضبوطة للتنفيذ المخبري المحدود قبل بيانات الشريك، دون خفض معيار التأهيل الواقعي. Account Numbering يبقى unresolved وليس blocker تلقائيًا للـConnector.
 
 آخر checkpoint أدلة قبل المراجعة: [Motakamel Plus V1 Evidence Progress Checkpoint](MOTAKAMEL_PLUS_PROGRESS_CHECKPOINT_2026-09-03.md). آخر قرار دلالي سابق: [Minimum V1 Semantic Scope](MOTAKAMEL_PLUS_V1_SEMANTIC_SCOPE_2026-09-03.md). `EFA12026` REQUIRED، و`Multi_Lang` OPTIONAL للنطاق الأدنى السابق. لا تزال connector readiness غير معلنة.
 
@@ -55,11 +59,11 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 الهدف السوقي الأول المختار حاليًا هو **YemenSoft Motakamel Plus ERP**، بشرط evidence acquisition ناجحة على إصدار/Schema حقيقي محدد.
 
-لا نبني `YemenSoftConnector` عامًا ولا نفترض تشابه كل الإصدارات. أول adapter يجب أن يكون system/version-specific بناءً على schema/sample/sanitized database حقيقية.
+لا نبني `YemenSoftConnector` عامًا ولا نفترض تشابه كل الإصدارات. أول adapter يكون خاصًا بنظام/إصدار محدد، ولا يطبّق إلا القدرات التي ثبتت دلالاتها بمختبر مضبوط ومصالحة مناسبة. البيانات الواقعية المصرح بها مطلوبة لاحقًا للتحقق لدى الشريك، لا لبدء أول قدرة مخبرية.
 
 تم الوصول إلى نسخة `EFA6_EDU` حقيقية وتثبيتها في مختبر مستقل، وإثبات SQL Server `YSEDU` وdatabase topology ومسار provisioning ونجاح شاشة الدخول. كما ثبتت قراءة least-privilege مستقلة، ومنع `CONTROL SERVER`، وتقنية frozen single-database snapshot من backup متحقق منه. `EFA12026` هي القاعدة الوحيدة المثبتة REQUIRED حاليًا، بينما `Multi_Lang` و`DbRepDes` و`EFAARC10` ليست متطلبات مثبتة للنطاق الأدنى.
 
-محاولات Golden Dataset على النسخة التعليمية كشفت أن إنشاء Customer يتطلب Account، وأن قاعدة التعليم كانت فارغة من دليل الحسابات حتى provisioning رسمي أنشأ 225 صفًا في `Account` و225 صفًا في `Account_Cur_Detail`. لاحقًا أصبح مسار إنشاء Customer متوقفًا عند قاعدة ترقيم sub-account غير المثبتة. بعد المراجعة المستقلة في 2026-09-06، **لن نستمر في Account Numbering باعتباره critical path**. سنبحث بدلًا من ذلك عن populated authorized Motakamel evidence وخبير/مستخدم قادر على تفسير الحالات الفعلية.
+محاولات Golden Dataset على النسخة التعليمية كشفت أن إنشاء Customer يتطلب Account، وأن قاعدة التعليم كانت فارغة من دليل الحسابات حتى provisioning رسمي أنشأ 225 صفًا في `Account` و225 صفًا في `Account_Cur_Detail`. لاحقًا توقف مسار Customer عند قاعدة ترقيم sub-account غير المثبتة. بعد المراجعة المستقلة، **لا يُعاد Account Numbering إلى المسار الحرج**. استراتيجية 10 سبتمبر تبدأ بأدلة مخبرية مضبوطة للقدرات المستقلة، ثم تتحقق من تمثيلها وقيمتها ببيانات شريك مصرّح بها وخبير/مستخدم يفسر الحالات الفعلية.
 
 **AlMuhaseb1 مسار مختبري موازٍ لاختبار acquisition boundaries على نظام legacy حقيقي، وليس بديلًا عن Motakamel Plus كـPrimary First Connector Target.** نتيجة Proof-of-Path الحالية له هي `B — PARTIALLY PROVEN`: خمسة domains منظمة مثبتة، بينما Sales Lines وSales Return Lines ما زالتا محجوبتين بفشل runtime في مسار Crystal detail reports. لا يُستأنف كمسار منتج موازٍ دون سبب تجاري/تقني واضح.
 
@@ -123,11 +127,11 @@ Dependency direction للطبقات العليا:
 
 المراجعات المستقلة لم توصِ بإعادة المعمارية. أحدث الحكم هو **CONTINUE WITH CORRECTIONS**.
 
-الـfoundation قوية في contract/structural correctness، لكن أول connector الحقيقي يتطلب **representative semantic evidence + reconciliation + operational qualification + user value validation**.
+الـfoundation قوية في contract/structural correctness. يمكن تنفيذ قدرة Motakamel مخبرية ضيقة بعد إثبات معناها ومصالحتها منفردة؛ أما تأهيلها للاستخدام مع شريك وpilot موثوق فيتطلب **representative semantic evidence + reconciliation + operational qualification + user value validation**.
 
 لا نحول هذا إلى framework عام. لأول Motakamel connector ننتج artifacts خاصة بالنظام/version/pilot slice، ثم نستخرج abstraction فقط بعد evidence متكرر.
 
-صرامة التحقيق لا تُخفض، لكن مصدر الدليل يتغير: populated authorized data أفضل الآن من الاستمرار في تهيئة ERP تعليمي فارغ.
+صرامة التحقيق لا تُخفض: الحد الأدنى من بيانات المختبر الرسمية يخدم إثبات القدرة، والبيانات الواقعية المصرح بها تخدم التحقق لدى الشريك. لا نهيئ ERP كاملًا فقط لفتح اعتماد خارج شريحة المختبر المختارة.
 
 ## V1 الحالي باختصار
 
@@ -147,7 +151,9 @@ Dependency direction للطبقات العليا:
 
 ## المسار التنفيذي المفضل الآن
 
-`Pilot Learning Contract #001 -> Representative Authorized Motakamel Data -> Targeted Purchasing/Inventory Schema Evidence -> Semantic Mapping + Reconciliation -> Minimal Evidence-Driven Canonical Corrections + P1 Trust Fixes -> Narrow Motakamel Connector -> Minimal Purchase Attention + Item Intelligence UI -> Supervised Pilot`
+`Stage-B storage gate -> preserved W11 Stage A -> W11 Motakamel/SQL installation -> direct GL.exe Computer Use qualification -> resume bounded controlled evidence -> per-capability LAB-PROVEN mapping/reconciliation -> narrow Motakamel connector + focused UI -> Design Partner representative validation -> supervised pilot`
+
+Stage B وS2 لم يبدآ. بدأ S0b كاستكشاف محدود ثم توقف قبل اكتماله؛ لذلك لا يُعلن تأهيل حركة واردة أو Purchase Attention. البيانات الواقعية ليست شرطًا لكل سطر كود مخبري، لكنها شرط لتأهيل الشريك والـpilot. لا يُحذف مختبر قديم لمجرد ضغط المساحة دون إثبات حفظ أدلته وقرار مستقل.
 
 لا نستخدم عدد connectors كمقياس نجاح. الـmoat المحتمل هو تراكم mapping knowledge، semantic fixtures/tests، compatibility profiles، reconciliation knowledge، version/schema drift knowledge، وoperational troubleshooting الذي يخفض تكلفة onboarding والدعم.
 
