@@ -26,6 +26,8 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 **أحدث حالة مثبتة:** [Legacy Intelligence Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md). يميز بين Item A المثبت عبر الواجهة، استكشاف S0b الجزئي، تأهيل Windows 11 Computer Use Stage A فقط، ومشكلة مساحة Stage B. لا يستنتج نجاح Motakamel على Windows 11.
 
+**تأهيل تقاعد مختبر Windows 10 Agent Lab:** [Computer Use and Retirement Evidence — 2026-09-25](MOTAKAMEL_W10_AGENT_LAB_RETIREMENT_EVIDENCE_2026-09-25.md). المساحة المحتملة كافية حسابيًا، لكن قرار التقاعد معلّق حتى يُفحص ما إذا كانت سجلات/إعدادات تشخيصية فريدة بقيت داخل الضيف؛ لم تُحذف أي VM.
+
 **الاستراتيجية التنفيذية الأحدث:** [Controlled Dataset → Design Partner Strategy](CONTROLLED_DATASET_TO_DESIGN_PARTNER_STRATEGY_2026-09-10.md) و[Controlled Motakamel Dataset #001 plan](CONTROLLED_MOTAKAMEL_DATASET_001_PLAN_2026-09-10.md). الدليل التعليمي قد يؤهل قدرة محدودة بمستوى LAB-PROVEN بعد مصالحتها؛ بيانات الشريك الواقعية مطلوبة لمستوى PARTNER-VALIDATED، ثم تجربة مستخدم تشغيلية لمستوى PILOT-QUALIFIED.
 
 عقد تعلّم الـpilot: [Pilot Learning Contract #001 — Purchase Attention + Item Intelligence](PILOT_LEARNING_CONTRACT_001_PURCHASE_ATTENTION_ITEM_INTELLIGENCE_2026-09-06.md). هذه فرضية قيمة سوقية لا تثبتها بيانات المختبر وحدها: DBL يساعد المستخدم في مراجعة الأصناف وجمع معلوماتها، ولا يقرر الشراء أو المورد أو كمية الطلب بدل الإنسان.
