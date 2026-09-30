@@ -4,11 +4,11 @@
 
 آخر مزامنة مع مستودع البناء: **2026-08-25**
 
-آخر تحديث بحثي/مخبري: **2026-09-25**
+آخر تحديث بحثي/مخبري: **2026-09-30**
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A exists in the educational Motakamel lab; Windows 11 Computer Use is qualified for Stage A only. Stage B Motakamel/SQL installation is blocked by host D: capacity. No Motakamel connector or customer pilot is qualified.**
+**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. Windows 11 Computer Use is qualified for Stage A only. Stage B was attempted; SQL Database Engine installation failed at the reported PowerShell 2.0 prerequisite. Its diagnostic state is checkpointed; external raw-log preservation is incomplete. No direct GL.exe Computer Use, Motakamel connector or customer pilot is qualified.**
 
 مستودع التنفيذ:
 
@@ -24,9 +24,9 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 ## ابدأ من هنا
 
-**أحدث حالة مثبتة:** [Legacy Intelligence Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md). يميز بين Item A المثبت عبر الواجهة، استكشاف S0b الجزئي، تأهيل Windows 11 Computer Use Stage A فقط، ومشكلة مساحة Stage B. لا يستنتج نجاح Motakamel على Windows 11.
+**أحدث حالة مثبتة:** [W11 Stage-B Installation Blocker and Preservation — 2026-09-30](MOTAKAMEL_W11_STAGE_B_INSTALLATION_BLOCKER_2026-09-30.md). يميز بين تثبيت ملفات Motakamel وفشل SQL، ويحفظ checkpoint التشخيصي مع حدود مصدر الأدلة وعدم اكتمال إخراج السجلات الأصلية. [Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md) يبقى مرجعًا تاريخيًا لـItem A وS0b الجزئي وStage A؛ عبارات storage-blocked/not-started فيه ليست الحالة الحالية.
 
-**تأهيل تقاعد مختبر Windows 10 Agent Lab:** [Computer Use and Retirement Evidence — 2026-09-25](MOTAKAMEL_W10_AGENT_LAB_RETIREMENT_EVIDENCE_2026-09-25.md). المساحة المحتملة كافية حسابيًا، لكن قرار التقاعد معلّق حتى يُفحص ما إذا كانت سجلات/إعدادات تشخيصية فريدة بقيت داخل الضيف؛ لم تُحذف أي VM.
+**تقاعد مختبر Windows 10 Agent Lab:** [Computer Use and Retirement Evidence](MOTAKAMEL_W10_AGENT_LAB_RETIREMENT_EVIDENCE_2026-09-25.md). نُفّذ بترخيص مستقل في 2026-09-28 واستُعيدت 37.175022 GiB؛ حُفظت النتائج وحدود إعادة الإنتاج، وليس كامل حالته القديمة. مختبرا Reference وAlMuhaseb1 باقيان محفوظين.
 
 **الاستراتيجية التنفيذية الأحدث:** [Controlled Dataset → Design Partner Strategy](CONTROLLED_DATASET_TO_DESIGN_PARTNER_STRATEGY_2026-09-10.md) و[Controlled Motakamel Dataset #001 plan](CONTROLLED_MOTAKAMEL_DATASET_001_PLAN_2026-09-10.md). الدليل التعليمي قد يؤهل قدرة محدودة بمستوى LAB-PROVEN بعد مصالحتها؛ بيانات الشريك الواقعية مطلوبة لمستوى PARTNER-VALIDATED، ثم تجربة مستخدم تشغيلية لمستوى PILOT-QUALIFIED.
 
@@ -153,9 +153,9 @@ Dependency direction للطبقات العليا:
 
 ## المسار التنفيذي المفضل الآن
 
-`Stage-B storage gate -> preserved W11 Stage A -> W11 Motakamel/SQL installation -> direct GL.exe Computer Use qualification -> resume bounded controlled evidence -> per-capability LAB-PROVEN mapping/reconciliation -> narrow Motakamel connector + focused UI -> Design Partner representative validation -> supervised pilot`
+`checkpointed Stage-B SQL failure -> complete external source-log preservation -> supported Motakamel deployment compatibility decision -> separately authorized deployment -> direct GL.exe Computer Use qualification -> resume bounded controlled evidence -> per-capability LAB-PROVEN mapping/reconciliation -> narrow Motakamel connector + focused UI -> Design Partner representative validation -> supervised pilot`
 
-Stage B وS2 لم يبدآ. بدأ S0b كاستكشاف محدود ثم توقف قبل اكتماله؛ لذلك لا يُعلن تأهيل حركة واردة أو Purchase Attention. البيانات الواقعية ليست شرطًا لكل سطر كود مخبري، لكنها شرط لتأهيل الشريك والـpilot. لا يُحذف مختبر قديم لمجرد ضغط المساحة دون إثبات حفظ أدلته وقرار مستقل.
+بدأ Stage B وتوقف عند فشل تثبيت SQL؛ لا إعادة تثبيت أو workaround أو Maintenance Create معتمد الآن. S2 لم يبدأ، وS0b جزئي كما كان؛ لا يُعلن تأهيل حركة واردة أو Purchase Attention. البيانات الواقعية ليست شرطًا لكل سطر كود مخبري، لكنها شرط لتأهيل الشريك والـpilot. لا يُحذف مختبر قديم لمجرد ضغط المساحة دون إثبات حفظ أدلته وقرار مستقل.
 
 لا نستخدم عدد connectors كمقياس نجاح. الـmoat المحتمل هو تراكم mapping knowledge، semantic fixtures/tests، compatibility profiles، reconciliation knowledge، version/schema drift knowledge، وoperational troubleshooting الذي يخفض تكلفة onboarding والدعم.
 
