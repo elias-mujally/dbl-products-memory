@@ -94,6 +94,23 @@ One Standard checkpoint was then created and re-queried after Hyper-V registrati
 
 The original setup logs remain **inside the preserved guest disk state only**. This document durably preserves the reported boundary, error text, log paths, host metadata and explicit provenance outside the VM. It is **not** an external raw-log archive or a standalone VM backup; recovery still requires the retained parent chain. Exporting redacted source logs and verifying their hashes remains open. No restore/rollback was performed.
 
+### Follow-up external export attempt — 2026-09-30
+
+The ordinary permitted escalated shell still reported `AdminToken=False`. A narrowly scoped UAC-launched process was used instead, without changing group membership, UAC, execution policy, Hyper-V permissions or VM configuration. Windows PowerShell 5.1's effective policy was `Restricted`; its first launch ended without an export result. The official bundled PowerShell runtime, already used by the command tool with its existing `RemoteSigned` policy, then executed the guarded script with a real Administrator token. No `Bypass`/policy override was used.
+
+The script verified the exact Off VM/B1 IDs and source parent chain, mounted the **B1 failure-state layer** with `-ReadOnly -NoDriveLetter`, and verified `Get-Disk.IsReadOnly=True`. It could not access the expected setup-log directory. A separate bounded read-only volume inspection established the cause: guest Windows partition 3 (84,737,523,712 bytes) returned **`BitLocker.LockStatus=Locked`**; its filesystem was not exposed while locked. The disk itself was online, GPT and read-only. Thus mount privilege was successfully supplied, but the remaining export blocker is the **locked offline guest volume**, not lack of an SQL instance or a failure to mount the VHD.
+
+Both elevated operations detached the disk in their cleanup path; `Get-VHD.Attached=False` was rechecked. All three surviving DBL VMs remained Off; Reference Lab remained network-disconnected. No recovery key, password or key-protector material was requested/read, and no unlock, decryption, mount-point assignment, VM boot, SQL action or security change was attempted. **Zero source logs were exported**; preservation remains PARTIAL.
+
+The host-only operational results are retained under investigation-workspace `outputs/w11-stage-b-sql-evidence-20260930/`:
+
+| Artifact | SHA-256 | Meaning |
+|---|---|---|
+| `export-result.json` | `1A5E1ED875A483459DEFEB8D645F536893CF5BE59799438684B8BB31DDBB829C` | Read-only mount succeeded; expected source directory unavailable; empty exported-log list; disk detached |
+| `volume-inspection-result.json` | `3CEDAF90E653F0841CAB68F855F31C6871BDF33417E85735CD24DEC4159C9F85` | Read-only disk/partition metadata and locked BitLocker state; disk detached |
+
+These are diagnostic-result hashes, **not SQL-log hashes**. The guarded scripts export only bounded, credential-filtered error excerpts if accessible; no full raw-log archive or standalone VM export was created.
+
 ## Post-preservation storage and integrity
 
 All paths below share the root:
@@ -120,4 +137,4 @@ Measured after B1: W11 directory file-length sum **71,185,801,493 bytes / 66.296
 
 **Stage A qualified; Stage B installation blocked; direct Motakamel Computer Use unresolved; evidence preservation partial.** Motakamel remains the Primary First Connector Target; AlMuhaseb1 remains an evidence lab, not a replacement. No architectural/connector/evidence gate is promoted by this installation result.
 
-**Next:** complete a credential-free, redacted source-log export through a supported execution context with the required virtual-disk mount privilege, or a separately authorized in-guest export. Do not erase/revert the diagnostic checkpoint. After preservation, obtain a supported deployment compatibility decision from YemenSoft before selecting any alternate Windows/SQL combination. No unsupported repair, automatic permission change or switch to a different database engine is authorized by this record.
+**Next:** obtain authorization for a bounded boot of W11 only, normal manual Windows authentication, and an in-guest export of targeted credential-filtered source-log evidence, followed by transfer outside the VM and graceful shutdown. Do not request recovery keys or try offline BitLocker unlocking; do not erase/revert the diagnostic checkpoint. After preservation, obtain a supported deployment compatibility decision from YemenSoft before selecting any alternate Windows/SQL combination. No unsupported repair, automatic permission change or switch to a different database engine is authorized by this record.
