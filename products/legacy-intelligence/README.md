@@ -8,7 +8,7 @@
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. The current development target is the existing physical-host Windows 11 Motakamel installation, explicitly designated by the user for DBL experimentation. Its active EFA12026 baseline and new COPY_ONLY/CHECKSUM backup are established and SQL-verified; physical backup size and SHA-256 are documented from the user's manual administrative read. Direct GL enumeration/activation/capture work, but mouse/keyboard effects remain unresolved: HOST DEVELOPMENT ENVIRONMENT NOT READY. The historical W11 Agent Lab installer failure is outside the critical path; no repair is authorized. No Motakamel connector or customer pilot is qualified.**
+**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. The current development target is the existing physical-host Windows 11 Motakamel installation, explicitly designated by the user for DBL experimentation. Its active EFA12026 baseline and new COPY_ONLY/CHECKSUM backup are established and SQL-verified; physical backup size and SHA-256 are documented from the user's manual administrative read. Following an authorized normal direct launch and manual authentication, GL/inv are Medium and direct inventory-window mouse/keyboard effects are proven: HOST DEVELOPMENT ENVIRONMENT READY at this bounded backup/input gate. A Reports transient-surface capture crop error remains unresolved; this is not qualification of every ERP surface or authorization for mutations. The historical W11 Agent Lab installer failure is outside the critical path; no repair is authorized. No Motakamel connector or customer pilot is qualified.**
 
 مستودع التنفيذ:
 
@@ -24,7 +24,7 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 ## ابدأ من هنا
 
-**أحدث حالة مثبتة:** [Host W11 Motakamel Baseline / Backup / Partial Computer Use — 2026-10-06](MOTAKAMEL_HOST_W11_BASELINE_2026-10-06.md). المضيف Windows 11 23H2 يشغّل GL.exe 8.03.0812 وSQL Server 2014 SP3 Express x86؛ التشغيل الفعلي لا يثبت الدعم الرسمي. قاعدة المضيف ليست Controlled Dataset الخاصة بالمختبر المرجعي. النسخة الاحتياطية الجديدة متحققة لدى SQL، لكن بصمتها وتأهيل الإدخال ما زالا معلّقين؛ لا توجد جاهزية لتعديل بيانات ERP بعد.
+**أحدث حالة مثبتة:** [Host W11 Motakamel Baseline / Backup / Bounded Direct Input Qualified — 2026-10-06](MOTAKAMEL_HOST_W11_BASELINE_2026-10-06.md). المضيف Windows 11 23H2 يشغّل GL.exe 8.03.0812 وSQL Server 2014 SP3 Express x86؛ التشغيل الفعلي لا يثبت الدعم الرسمي. قاعدة المضيف ليست Controlled Dataset الخاصة بالمختبر المرجعي. النسخة الاحتياطية وبصمتها موثقتان، وتأهيل الماوس والكيبورد المحدود داخل inv نجح بعد التشغيل العادي بمستوى Medium دون تعديل أمني. بقي خطأ التقاط قائمة التقارير غير محسوم؛ اكتملت بوابة النسخة الاحتياطية/الإدخال فقط، وأي اكتشاف تالٍ أو تعديل ERP يحتاج تفويضًا منفصلًا.
 
 **سجل تاريخي خارج المسار الحرج الحالي:** [W11 Stage-B Installation Blocker and Preservation — 2026-09-30](MOTAKAMEL_W11_STAGE_B_INSTALLATION_BLOCKER_2026-09-30.md). يميز بين تثبيت ملفات Motakamel وفشل SQL، ويحفظ checkpoint التشخيصي مع حدود مصدر الأدلة وعدم اكتمال إخراج السجلات الأصلية. [Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md) يبقى مرجعًا تاريخيًا لـItem A وS0b الجزئي وStage A؛ عبارات storage-blocked/not-started فيه ليست الحالة الحالية.
 

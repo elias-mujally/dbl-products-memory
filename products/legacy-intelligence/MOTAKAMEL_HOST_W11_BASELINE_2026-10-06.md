@@ -1,6 +1,6 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
-**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works. The read-only diagnosis isolated the original High-integrity GL/inv versus Medium-integrity Computer Use boundary. Following explicit approval, a direct normal launch through Explorer reached GL's login screen at **Medium / Elevated=false** (PID 30180). Manual authentication, normal post-login operation, inv integrity and Motakamel mouse/keyboard qualification remain pending. No shortcut/security/configuration change was made; only the authorized application runtime launch context changed. The pre-mutation SQL backup gate remains complete as documented below. No ERP business mutation or controlled dataset creation occurred.
+**Latest result: `HOST W11 MOTAKAMEL COMPUTER USE QUALIFIED` for the bounded direct-input test.** After the authorized direct normal launch and manual authentication/module opening, GL and inv were both **Medium / Elevated=false** before input. Sky mouse input visibly maximized the inventory window; Alt+F4 visibly opened its exit-confirmation dialog, which was cancelled by Sky mouse input. The backup and bounded input gates are complete; this is not qualification of every ERP screen or business workflow. A Reports transient-surface capture failed with `window crop is outside captured monitor`; its cause remains unresolved although dashboard/dialog capture subsequently succeeded. No shortcut/security/configuration change, SQL operation, ERP business mutation or controlled dataset creation occurred.
 
 ## Execution decision and protected boundary
 
@@ -177,7 +177,7 @@ Both have LinkFlags 0x000060DB, including RunAsUser / SLDF_RUNAS_USER bit 0x0000
 
 No Motakamel input was repeated during this autonomous diagnosis. No SQL, ERP record operation, Windows/security setting change, service action, VM action or controlled-dataset work occurred. **ROOT-CAUSE BOUNDARY IDENTIFIED — RESOLUTION UNVERIFIED.** Computer Use remains partially qualified and the development environment remains NOT READY.
 
-### Authorized normal launch — login hand-off pending
+### Authorized normal launch — historical login hand-off
 
 This later evidence supersedes the preceding diagnostic-stage statement that the resolution proposal had not yet been executed, without claiming a completed fix or input qualification.
 
@@ -191,6 +191,23 @@ Fresh Sky enumeration returned GL window **985220**, title `.`. Its original cap
 
 **NORMAL GL LAUNCH AT MEDIUM: PROVEN to the login-screen boundary only.** This removes the original GL integrity mismatch at that point, without proving successful authentication, database access, module operation, inv integrity or general application functionality at Medium. Original shortcuts, UAC, ACLs, compatibility, registry, services, SQL and application configuration remain untouched. No SQL, ERP business operation, VM action or controlled-dataset step was performed. Readiness remains NOT READY pending the remaining observations and tests.
 
+### Post-authentication Medium-integrity direct-input qualification
+
+This is the latest evidence, superseding the pending hand-off/input statements above. The user reported completing the manual step. Fresh Sky enumeration showed GL `Main Menu`, window **10751170**, and the inventory dashboard, window **7668528**, owned by `process:C:\EFA\inv.exe`. Manual authentication and manual module opening are not counted as automated input evidence.
+
+Before any Motakamel test, read-only token inspection returned GL PID **30180** and inv PID **66628**, both owner DESKTOP-8QRQT7R\user, session **23**, **Medium / RID 8192**, Elevated=false, UIAccess=false. Post-test inspection reconfirmed both tokens; current Computer Use PIDs **5480** and **9864** were also Medium, non-elevated, UIAccess=false in that session. Normal operation is observed through the authenticated inventory-dashboard boundary, not all application/database functions.
+
+All GUI actions used the Computer Use skill's supported `node_repl -> @oai/sky`, with fresh returned window objects and observations. No VMConnect/RdpViewer, alternate input stack, automatic elevation or authentication automation was used.
+
+1. **Mouse: PROVEN.** The initial inventory capture was **567 x 576**. A screenshot-derived left double-click at **(247,20)** in the title bar maximized that same inventory window; the immediate new capture showed its dashboard at **1920 x 1020**. This is an independent visible mouse effect, not merely activation or a successful API return.
+2. A single Reports-header click at **(1419,46)** was followed by `encode latest capture frame failed: window crop is outside captured monitor`. One fresh window-selection/activation capture recovery returned the same error, without repeating the click. A text-only state was then available and exposed Reports ribbon controls. No report or business-data form was invoked. Hidden controls can appear in that tree, so it alone does not prove a visibly expanded menu. One Escape was sent; dashboard screenshot capture subsequently succeeded. This sequence does not independently qualify Escape or establish the capture error's cause.
+3. One **Alt+Space** produced no observable transition and is explicitly **not** keyboard proof.
+4. **Keyboard: PROVEN.** From a fresh dashboard capture with no data-entry form open, one **Alt+F4** produced a new inv-owned dialog, window **9047452**, title `نـظـام الــمـــخـــــازن`. Its fresh **282 x 183** capture visibly asked `هل تريد الخروج من البرنامج؟`, with OK and Cancel controls. This new dialog establishes delivery and application response, not actual program closure. A screenshot-derived left click at **(213,156)** on **إلغاء الأمر** cancelled the exit; a fresh **1920 x 1020** capture showed the inventory dashboard again. No exit confirmation, business text, Save or ERP action was submitted.
+
+**Evidence-led conclusion:** removing the original runtime High/Medium mismatch through an ordinary direct launch enabled bounded input effects in inv without security/configuration changes. This supports the diagnosed UIPI boundary. It does not prove original shortcuts may be edited safely, that elevation is never needed, or that every Motakamel component/workflow works at Medium. GL is confirmed Medium and its main screen is available; these input effects were demonstrated in inv, not separately in GL.
+
+**Remaining capture limitation:** the Reports transient-surface crop error is unresolved. Dashboard and exit-dialog capture work; a future workflow must observe its own current surface and stop on failed/mismatched capture rather than reuse coordinates. No monitor, scaling, compatibility or security setting was changed to address it. No complete dataset reread/SQL reconciliation was performed during this follow-up; the clean dataset/backup facts remain the previously documented baseline, not a new query result. No ERP record action was performed.
+
 ## Deployment support and readiness
 
 This is **working in this environment**, not an officially supported SQL Server 2014 / Windows 11 combination. Microsoft's compatibility table explicitly marks SQL Server 2014 on Windows 11 not supported. Vendor support for this exact deployment remains unverified:
@@ -198,9 +215,9 @@ https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/install/windo
 
 No Windows/SQL/Motakamel upgrade, repair, PowerShell 2.0 reinstatement or vendor compatibility workaround is implied or authorized by the host development decision.
 
-**HOST W11 MOTAKAMEL DEVELOPMENT ENVIRONMENT PARTIALLY QUALIFIED — NOT READY.** The new database backup is SQL-verified and its filesystem length/SHA-256 are now documented from the user's manual administrative read. Independent mouse and keyboard visible-effect qualification remains pending. Do not start controlled ERP mutation.
+**HOST W11 MOTAKAMEL DEVELOPMENT ENVIRONMENT READY at the bounded backup + direct-input gate.** The new database backup is SQL-verified and its filesystem length/SHA-256 are documented from the user's manual administrative read. Independent inventory-window mouse and keyboard effects are now proven at Medium. This readiness does not qualify all capture surfaces, business/accounting semantics, the SQL/Windows vendor-support combination, a connector, Controlled Dataset prerequisites or a customer pilot. The Reports crop limitation remains unresolved.
 
-Safest next action: manual authentication in the already-open Medium-integrity GL instance, then manual opening of Inventory Management if needed to observe inv. Verify fresh GL/inv integrity before harmless supported menu mouse/keyboard tests under the existing bounded authorization. If either process is High or normal operation fails, stop without configuration changes. No further backup fingerprint collection is pending; do not recreate the backup or weaken host security to obtain READY.
+Safest next action: STOP this input-qualification task. Obtain separate authorization for bounded official-UI prerequisite/evidence discovery against the clean physical-host dataset before any controlled record creation. Re-observe each required form/menu; if a capture fails or operation requires elevation/configuration changes, stop rather than weaken security or extrapolate this input test. Do not recreate the backup merely to repeat the completed fingerprint gate.
 
 Once those gates are proved, the intended direction is to resume Pilot #001 controlled evidence work through the official Motakamel UI under separate authorization. This task does NOT complete S0b, start S2/S3, migrate Reference data, create Unit/Group/Item A, or advance connector implementation/customer-pilot qualification.
 
