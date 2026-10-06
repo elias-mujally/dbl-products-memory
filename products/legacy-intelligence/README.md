@@ -4,11 +4,11 @@
 
 آخر مزامنة مع مستودع البناء: **2026-08-25**
 
-آخر تحديث بحثي/مخبري: **2026-09-30**
+آخر تحديث بحثي/مخبري: **2026-10-06**
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. Windows 11 Computer Use is qualified for Stage A only. Stage B was attempted; SQL Database Engine installation failed at the reported PowerShell 2.0 prerequisite. Its diagnostic state is checkpointed; external raw-log preservation is incomplete. No direct GL.exe Computer Use, Motakamel connector or customer pilot is qualified.**
+**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. The current development target is the existing physical-host Windows 11 Motakamel installation, explicitly designated by the user for DBL experimentation. Its active EFA12026 baseline and new COPY_ONLY/CHECKSUM backup are established and SQL-verified; backup SHA-256 remains pending. Direct GL enumeration/activation/capture work, but mouse/keyboard effects remain unresolved: HOST DEVELOPMENT ENVIRONMENT NOT READY. The historical W11 Agent Lab installer failure is outside the critical path; no repair is authorized. No Motakamel connector or customer pilot is qualified.**
 
 مستودع التنفيذ:
 
@@ -24,7 +24,9 @@ PR #10 أغلق defect حقيقيًا في الـclosed-world canonical boundary
 
 ## ابدأ من هنا
 
-**أحدث حالة مثبتة:** [W11 Stage-B Installation Blocker and Preservation — 2026-09-30](MOTAKAMEL_W11_STAGE_B_INSTALLATION_BLOCKER_2026-09-30.md). يميز بين تثبيت ملفات Motakamel وفشل SQL، ويحفظ checkpoint التشخيصي مع حدود مصدر الأدلة وعدم اكتمال إخراج السجلات الأصلية. [Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md) يبقى مرجعًا تاريخيًا لـItem A وS0b الجزئي وStage A؛ عبارات storage-blocked/not-started فيه ليست الحالة الحالية.
+**أحدث حالة مثبتة:** [Host W11 Motakamel Baseline / Backup / Partial Computer Use — 2026-10-06](MOTAKAMEL_HOST_W11_BASELINE_2026-10-06.md). المضيف Windows 11 23H2 يشغّل GL.exe 8.03.0812 وSQL Server 2014 SP3 Express x86؛ التشغيل الفعلي لا يثبت الدعم الرسمي. قاعدة المضيف ليست Controlled Dataset الخاصة بالمختبر المرجعي. النسخة الاحتياطية الجديدة متحققة لدى SQL، لكن بصمتها وتأهيل الإدخال ما زالا معلّقين؛ لا توجد جاهزية لتعديل بيانات ERP بعد.
+
+**سجل تاريخي خارج المسار الحرج الحالي:** [W11 Stage-B Installation Blocker and Preservation — 2026-09-30](MOTAKAMEL_W11_STAGE_B_INSTALLATION_BLOCKER_2026-09-30.md). يميز بين تثبيت ملفات Motakamel وفشل SQL، ويحفظ checkpoint التشخيصي مع حدود مصدر الأدلة وعدم اكتمال إخراج السجلات الأصلية. [Progress Checkpoint — 2026-09-25](LEGACY_INTELLIGENCE_PROGRESS_CHECKPOINT_2026-09-25.md) يبقى مرجعًا تاريخيًا لـItem A وS0b الجزئي وStage A؛ عبارات storage-blocked/not-started فيه ليست الحالة الحالية.
 
 **تقاعد مختبر Windows 10 Agent Lab:** [Computer Use and Retirement Evidence](MOTAKAMEL_W10_AGENT_LAB_RETIREMENT_EVIDENCE_2026-09-25.md). نُفّذ بترخيص مستقل في 2026-09-28 واستُعيدت 37.175022 GiB؛ حُفظت النتائج وحدود إعادة الإنتاج، وليس كامل حالته القديمة. مختبرا Reference وAlMuhaseb1 باقيان محفوظين.
 
