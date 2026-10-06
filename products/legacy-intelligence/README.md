@@ -8,7 +8,7 @@
 
 ## الحالة
 
-**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. The current development target is the existing physical-host Windows 11 Motakamel installation, explicitly designated by the user for DBL experimentation. Its active EFA12026 baseline and new COPY_ONLY/CHECKSUM backup are established and SQL-verified; backup SHA-256 remains pending. Direct GL enumeration/activation/capture work, but mouse/keyboard effects remain unresolved: HOST DEVELOPMENT ENVIRONMENT NOT READY. The historical W11 Agent Lab installer failure is outside the critical path; no repair is authorized. No Motakamel connector or customer pilot is qualified.**
+**V1 BUILD IN PROGRESS — CONTINUE WITH CORRECTIONS. Pilot #001 remains Purchase Attention + Item Intelligence. Controlled Item A remains preserved in the Reference Lab. The current development target is the existing physical-host Windows 11 Motakamel installation, explicitly designated by the user for DBL experimentation. Its active EFA12026 baseline and new COPY_ONLY/CHECKSUM backup are established and SQL-verified; physical backup size and SHA-256 are documented from the user's manual administrative read. Direct GL enumeration/activation/capture work, but mouse/keyboard effects remain unresolved: HOST DEVELOPMENT ENVIRONMENT NOT READY. The historical W11 Agent Lab installer failure is outside the critical path; no repair is authorized. No Motakamel connector or customer pilot is qualified.**
 
 مستودع التنفيذ:
 

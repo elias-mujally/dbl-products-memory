@@ -1,6 +1,6 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
-**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works; mouse and keyboard delivery remain unresolved. A new official SQL backup was created and verified by SQL Server, but filesystem size and SHA-256 collection require a privileged read of that existing file. No ERP business mutation or controlled dataset creation occurred.
+**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works; mouse and keyboard delivery remain unresolved. A new official SQL backup was created and verified by SQL Server; the user subsequently supplied its physical file size and SHA-256 from a manual administrative read. No ERP business mutation or controlled dataset creation occurred.
 
 ## Execution decision and protected boundary
 
@@ -98,11 +98,13 @@ C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.YSEDU\MSSQL\Backup\DBL_HOST_
 | database_backup_lsn | 39000001251000162 |
 | differential_base_lsn before / after | 39000001251000162 / 39000001251000162 — unchanged |
 | RESTORE VERIFYONLY | Completed with CHECKSUM and STOP_ON_ERROR; SQL returned: The backup set on file 1 is valid. |
-| Physical filesystem bytes | PENDING — ordinary-user and sandbox file reads denied. SQL backup_size is not substituted for filesystem length. |
-| SHA-256 | PENDING — manual administrative file read requested; no ACL change permitted or performed. |
+| Physical filesystem bytes | 22,663,168 bytes — user-supplied Get-Item output from the requested manual administrative read; distinct from SQL backup_size. |
+| SHA-256 | 2821DDAA854FBC3EA0FFC015F933654D02BC03C952044C586A275B719A391722 — user-supplied Get-FileHash SHA256 output for the same exact path. |
 | Isolated restore | NOT PERFORMED; no new database or database overwrite authorized. |
 
 Backup succeeded and verification succeeded; the combined command subsequently returned nonzero because filesystem Get-Item was denied. Do NOT misclassify this as backup failure or create another backup blindly.
+
+Follow-up: a fresh read-only RESTORE VERIFYONLY WITH CHECKSUM, STOP_ON_ERROR again returned `The backup set on file 1 is valid.` with exit code 0. The user then reported that the original PowerShell token's Administrator-role test returned False. After the requested manual Run as administrator procedure, the user supplied Get-Item/Get-FileHash results above. These filesystem results are user-provided evidence, not an independently collected agent hash. No backup recreation, ACL/ownership change or execution-policy change was performed. The prior access denial is resolved for the manual administrative read; broader token/ACL behavior was not audited.
 
 Microsoft documents COPY_ONLY as not affecting the differential base. VERIFYONLY checks backup readability/completeness/checksums but does not establish full restored database/application correctness:
 
@@ -129,9 +131,9 @@ https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/install/windo
 
 No Windows/SQL/Motakamel upgrade, repair, PowerShell 2.0 reinstatement or vendor compatibility workaround is implied or authorized by the host development decision.
 
-**HOST W11 MOTAKAMEL DEVELOPMENT ENVIRONMENT PARTIALLY QUALIFIED — NOT READY.** The new database backup is SQL-verified, but its SHA-256/filesystem length remains pending; independent mouse and keyboard visible-effect qualification remains pending. Do not start controlled ERP mutation.
+**HOST W11 MOTAKAMEL DEVELOPMENT ENVIRONMENT PARTIALLY QUALIFIED — NOT READY.** The new database backup is SQL-verified and its filesystem length/SHA-256 are now documented from the user's manual administrative read. Independent mouse and keyboard visible-effect qualification remains pending. Do not start controlled ERP mutation.
 
-Safest next actions: obtain the existing backup's filesystem length and SHA-256 via manual administrative read without changing ACLs; then separately authorize a bounded input-only follow-up using a clearly responsive reversible menu target. Do not recreate the backup or troubleshoot broader host security speculatively.
+Safest next action: separately authorize a bounded input-only follow-up using a clearly responsive reversible menu target. No further backup fingerprint collection is pending. Do not recreate the backup or troubleshoot broader host security speculatively.
 
 Once those gates are proved, the intended direction is to resume Pilot #001 controlled evidence work through the official Motakamel UI under separate authorization. This task does NOT complete S0b, start S2/S3, migrate Reference data, create Unit/Group/Item A, or advance connector implementation/customer-pilot qualification.
 
