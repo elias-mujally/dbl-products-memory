@@ -1,6 +1,6 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
-**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works; mouse and keyboard delivery remain unresolved. A new official SQL backup was created and verified by SQL Server; the user subsequently supplied its physical file size and SHA-256 from a manual administrative read. No ERP business mutation or controlled dataset creation occurred.
+**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works. The subsequent read-only diagnosis isolated a documented input-integrity boundary: Motakamel GL/inv run elevated at High integrity, while the Computer Use processes run at Medium with UIAccess=false. Mouse and keyboard both work in an Explorer control. Motakamel input qualification and a normal-integrity relaunch remain UNVERIFIED; no elevation/security/launch-setting change was made. The pre-mutation SQL backup gate remains complete as documented below. No ERP business mutation or controlled dataset creation occurred.
 
 ## Execution decision and protected boundary
 
@@ -25,7 +25,7 @@ The prior Windows 11 Agent Lab installation failure is outside the current criti
 | Historical comparison | Exact version/hash match with supplied reference; not evidence that database contents match any lab. |
 | Visible UI branding | M+ Professional ERP; Trial Version; Gold Version; V6.0; Ver. 6 E-Invoice 18-01-2026 |
 | Current UI context | Financial year 2026; activity 1; branch 1; authenticated Main Menu |
-| Component file metadata | inv.exe 8.03.0304; Sale.exe 8.03.2063; GL_New.exe 5.03.0723. These components were not launched or otherwise qualified. |
+| Component file metadata | inv.exe 8.03.0304; Sale.exe 8.03.2063; GL_New.exe 5.03.0723. Initially not launched or qualified by the agent; the user later opened inv.exe manually, as distinguished below. |
 | Initial host free space | C: 40,302,235,648 bytes; D: 17,562,300,416 bytes. Point-in-time measurements, not fixed reserves. |
 
 Opening GL via Sky timed out without proving launch. The user then opened Motakamel normally and completed authentication manually. The main UI was captured directly afterwards. Normal operation in this environment is proven at this boundary, not autonomous launch/authentication.
@@ -124,6 +124,59 @@ Fresh returned GL identity: `process:C:\EFA\GL.exe`, window 1377924, Main Menu. 
 
 **HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED.** Activation/capture do not qualify input. The input cause/semantics are not established by this bounded test; do not infer elevation/session mismatch or non-working application solely from lack of these two visible effects.
 
+### Subsequent manual-known-good state and bounded follow-up
+
+The user, not Computer Use, successfully opened Inventory Management. Fresh Sky enumeration returned two separate top-level targets:
+
+- `process:C:\EFA\GL.exe`, window 1377924, `Main Menu`.
+- `process:C:\EFA\inv.exe`, window 265464, inventory system / branch 1 / user 1 Adm / year 2026. The correctly captured dashboard visibly showed Inventory Management and Stocktaking. It was not simply changed content within the GL target. Internal child/MDI structure was not independently established.
+
+An initial inventory capture had inventory metadata but displayed Codex; no input was based on that mismatch. Fresh selection, activation and a new capture produced the matching inventory dashboard. In that known-good state, one F10 action and then one screenshot-derived click on Reports at (1419,46), each followed by a two-second wait and fresh observation, produced no visible transition. Neither channel qualified. No data-entry form, business field, transaction or SQL was used. This manual opening is not automated-input evidence.
+
+### Autonomous read-only diagnosis — 2026-10-06
+
+Current bundled Computer Use skill, guidance, API and confirmation documentation were read before experimenting. All GUI operations used supported `node_repl -> @oai/sky`. PowerShell was used only for read-only process/token/launch-metadata inspection, not UI automation, input injection or application launch. No helper was manually spawned and no application was elevated.
+
+**A/B control: both input channels PROVEN in the current interactive session.** A supported attempt to launch Notepad ended with `Computer Use app approval timed out`; no Notepad launch or input was inferred. Instead, the already-open Explorer window 592016 was activated and captured. One fresh-screenshot coordinate click at (931,112) opened its More menu. One Escape action closed that menu, confirmed again after a two-second animation-settling wait. No menu command or personal file was opened, no text/file was created, and the menu was left closed. This control rejects a global mouse/keyboard delivery failure in that session; it does not qualify Motakamel.
+
+Read-only token inspection at 2026-10-06T19:15:55.0200470+03:00 returned:
+
+| Process | PID | Owner | Session | Integrity / RID | Elevated | Elevation type | UIAccess |
+|---|---:|---|---:|---|---|---|---|
+| GL.exe | 64148 | DESKTOP-8QRQT7R\user | 23 | High / 12288 | true | 2 — Full | false |
+| inv.exe | 66260 | DESKTOP-8QRQT7R\user | 23 | High / 12288 | true | 2 — Full | false |
+| codex-computer-use.exe | 13260 | DESKTOP-8QRQT7R\user | 23 | Medium / 8192 | false | 3 — Limited | false |
+| codex-computer-use.exe child | 10080 | DESKTOP-8QRQT7R\user | 23 | Medium / 8192 | false | 3 — Limited | false |
+| explorer.exe control | 31804 | DESKTOP-8QRQT7R\user | 23 | Medium / 8192 | false | 3 — Limited | false |
+
+The inspected accessible Codex/ChatGPT processes were also Medium / Limited / UIAccess=false in session 23. Some other process reads were denied; these denials were not generalized to the relevant successfully read targets. The diagnostic shell itself used CodexSandboxOffline at Medium; it was not confused with the ordinary-user Computer Use helper. Targeted outside-sandbox reads used the supported ordinary-user execution context, without Run as administrator or changing a target token.
+
+Supported CIM process metadata additionally showed: GL parent PID 31804 (Explorer); inv parent PID 64148 (GL); Computer Use PID 13260 parent PID 49984 (ChatGPT), with child PID 10080. Thus a different user or different session is not the established boundary between the control, helper and Motakamel. Both GL and inv were WOW64. The helper/control reported per-monitor DPI awareness, while GL/inv reported DPI-unaware; this difference alone cannot explain keyboard failure, and no scaling correction was attempted.
+
+Read-only Win32 window/foreground queries from the restricted diagnostic shell could not see the interactive handles (foreground zero / IsWindow=false). They do not establish missing Motakamel windows or a Sky session mismatch. No window-class, exact foreground/focus or child-hierarchy claim is derived from those unavailable queries. No custom input or cross-process injection was performed.
+
+**Established technical boundary: lower-integrity Computer Use input -> elevated High-integrity Motakamel (UIPI).** The bundled skill documents use of SendInput and UI Automation. Microsoft documents that SendInput cannot inject input into a higher-integrity application, and that UIPI blocks lower-privilege automation of elevated applications without the appropriate trusted UIAccess context. Both helper tokens lack UIAccess. This is an evidence-backed explanation of the observed asymmetric control/application behavior, not an assertion that all old/VB6 applications are unsupported. No same-integrity counterfactual or successful Motakamel input has yet been performed, so removal of this blocker may expose another issue and does not establish READY.
+
+Official sources:
+
+- https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendinput
+- https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-only-elevate-uiaccess-applications-that-are-installed-in-secure-locations
+
+Targeted launch-policy inspection found no GL/inv values in the interactive user's or machine's inspected AppCompatFlags\Layers keys. PE resource inspection as data returned no embedded manifests, and adjacent GL.exe.manifest / inv.exe.manifest files were absent; no manifest was added and no binary was executed or modified by this inspection. This does not prove that the application functions correctly without administrative privileges.
+
+Both existing shortcuts target C:\EFA\GL.exe with working directory C:\EFA\ and empty arguments:
+
+- C:\Users\Public\Desktop\المتكامل.lnk
+- C:\ProgramData\Microsoft\Windows\Start Menu\Programs\المتكامل\المتكامل.lnk
+
+Both have LinkFlags 0x000060DB, including RunAsUser / SLDF_RUNAS_USER bit 0x00002000. This is a concrete launch-policy finding consistent with the observed elevated GL process, not proof of its functional need for elevation. The exact shortcut used in the current human launch was not independently traced. Shortcut flags were read only; neither shortcut was saved or changed.
+
+- https://learn.microsoft.com/en-us/windows/win32/api/shlobj_core/ne-shlobj_core-shell_link_data_flags
+
+**Resolution proposal, NOT executed:** after separate approval, gracefully close only Motakamel and attempt an ordinary-user, direct launch of C:\EFA\GL.exe without the elevation-marked shortcuts. Do not edit shortcuts, compatibility settings, registry, UAC, ACLs, binaries or services, and do not elevate Codex/Sky or add UIAccess. Authentication remains manual. Before any test, verify fresh GL/inv tokens are Medium, observe the normal main/module screen, then prove one harmless menu mouse effect and one keyboard effect. If normal launch still requires elevation, fails, or exposes permissions/configuration problems, stop; do not repair or bypass them. Rollback is normal closure of the test instance and return to the untouched original launch path. Startup/functionality at Medium remains unverified. This changes the application's runtime elevation context and therefore requires explicit approval under the diagnostic task boundary.
+
+No Motakamel input was repeated during this autonomous diagnosis. No SQL, ERP record operation, Windows/security setting change, service action, VM action or controlled-dataset work occurred. **ROOT-CAUSE BOUNDARY IDENTIFIED — RESOLUTION UNVERIFIED.** Computer Use remains partially qualified and the development environment remains NOT READY.
+
 ## Deployment support and readiness
 
 This is **working in this environment**, not an officially supported SQL Server 2014 / Windows 11 combination. Microsoft's compatibility table explicitly marks SQL Server 2014 on Windows 11 not supported. Vendor support for this exact deployment remains unverified:
@@ -133,7 +186,7 @@ No Windows/SQL/Motakamel upgrade, repair, PowerShell 2.0 reinstatement or vendor
 
 **HOST W11 MOTAKAMEL DEVELOPMENT ENVIRONMENT PARTIALLY QUALIFIED — NOT READY.** The new database backup is SQL-verified and its filesystem length/SHA-256 are now documented from the user's manual administrative read. Independent mouse and keyboard visible-effect qualification remains pending. Do not start controlled ERP mutation.
 
-Safest next action: separately authorize a bounded input-only follow-up using a clearly responsive reversible menu target. No further backup fingerprint collection is pending. Do not recreate the backup or troubleshoot broader host security speculatively.
+Safest next action: separately authorize the scoped normal-integrity relaunch experiment described above, without editing the original shortcuts or security/configuration. Verify fresh process integrity before a harmless menu input test. No further backup fingerprint collection is pending; do not recreate the backup or weaken host security to obtain READY.
 
 Once those gates are proved, the intended direction is to resume Pilot #001 controlled evidence work through the official Motakamel UI under separate authorization. This task does NOT complete S0b, start S2/S3, migrate Reference data, create Unit/Group/Item A, or advance connector implementation/customer-pilot qualification.
 
