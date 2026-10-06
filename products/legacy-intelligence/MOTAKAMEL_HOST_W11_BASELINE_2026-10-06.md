@@ -1,6 +1,6 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
-**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works. The subsequent read-only diagnosis isolated a documented input-integrity boundary: Motakamel GL/inv run elevated at High integrity, while the Computer Use processes run at Medium with UIAccess=false. Mouse and keyboard both work in an Explorer control. Motakamel input qualification and a normal-integrity relaunch remain UNVERIFIED; no elevation/security/launch-setting change was made. The pre-mutation SQL backup gate remains complete as documented below. No ERP business mutation or controlled dataset creation occurred.
+**Result: `HOST W11 MOTAKAMEL COMPUTER USE PARTIALLY QUALIFIED`. Development environment readiness is NOT established.** Direct observation works. The read-only diagnosis isolated the original High-integrity GL/inv versus Medium-integrity Computer Use boundary. Following explicit approval, a direct normal launch through Explorer reached GL's login screen at **Medium / Elevated=false** (PID 30180). Manual authentication, normal post-login operation, inv integrity and Motakamel mouse/keyboard qualification remain pending. No shortcut/security/configuration change was made; only the authorized application runtime launch context changed. The pre-mutation SQL backup gate remains complete as documented below. No ERP business mutation or controlled dataset creation occurred.
 
 ## Execution decision and protected boundary
 
@@ -177,6 +177,20 @@ Both have LinkFlags 0x000060DB, including RunAsUser / SLDF_RUNAS_USER bit 0x0000
 
 No Motakamel input was repeated during this autonomous diagnosis. No SQL, ERP record operation, Windows/security setting change, service action, VM action or controlled-dataset work occurred. **ROOT-CAUSE BOUNDARY IDENTIFIED — RESOLUTION UNVERIFIED.** Computer Use remains partially qualified and the development environment remains NOT READY.
 
+### Authorized normal launch — login hand-off pending
+
+This later evidence supersedes the preceding diagnostic-stage statement that the resolution proposal had not yet been executed, without claiming a completed fix or input qualification.
+
+The user explicitly authorized normal closure and a direct ordinary launch, with no shortcut/UAC/ACL/compatibility/security changes. One supported Alt+F4 action in the old inventory window produced no visible closure; read-only inspection still showed GL/inv at High. No force termination or alternate input stack was used. The user then reported closing both windows manually; fresh process inspection and Sky enumeration found neither GL nor inv before the new launch.
+
+One `sky.launch_app({app:'C:\\EFA\\GL.exe'})` request ended with `computer-use request timed out: launch_app`; subsequent inspection found no GL/inv process or target window. It was not repeated. The supported Explorer UI was then used to navigate to C:\EFA and open the existing C:\EFA\GL.exe path normally from the address bar. This was an existing application file launch, not a terminal command, shortcut launch or Run as administrator action. No application files or launch properties were edited.
+
+Fresh read-only process/token inspection, before any Motakamel input, returned GL PID **30180**, owner DESKTOP-8QRQT7R\user, session **23**, integrity **Medium / RID 8192**, **Elevated=false**, UIAccess=false. Current Computer Use PIDs 47484 and 56820 were also Medium, non-elevated, UIAccess=false in session 23. inv was not running and its new-launch integrity is therefore NOT established.
+
+Fresh Sky enumeration returned GL window **985220**, title `.`. Its original capture visibly showed the Motakamel login screen. No authentication controls, password, remembered-login setting or login submission were automated. The user was asked to authenticate manually. No mouse/keyboard qualification test was attempted inside Motakamel at this point.
+
+**NORMAL GL LAUNCH AT MEDIUM: PROVEN to the login-screen boundary only.** This removes the original GL integrity mismatch at that point, without proving successful authentication, database access, module operation, inv integrity or general application functionality at Medium. Original shortcuts, UAC, ACLs, compatibility, registry, services, SQL and application configuration remain untouched. No SQL, ERP business operation, VM action or controlled-dataset step was performed. Readiness remains NOT READY pending the remaining observations and tests.
+
 ## Deployment support and readiness
 
 This is **working in this environment**, not an officially supported SQL Server 2014 / Windows 11 combination. Microsoft's compatibility table explicitly marks SQL Server 2014 on Windows 11 not supported. Vendor support for this exact deployment remains unverified:
@@ -186,7 +200,7 @@ No Windows/SQL/Motakamel upgrade, repair, PowerShell 2.0 reinstatement or vendor
 
 **HOST W11 MOTAKAMEL DEVELOPMENT ENVIRONMENT PARTIALLY QUALIFIED — NOT READY.** The new database backup is SQL-verified and its filesystem length/SHA-256 are now documented from the user's manual administrative read. Independent mouse and keyboard visible-effect qualification remains pending. Do not start controlled ERP mutation.
 
-Safest next action: separately authorize the scoped normal-integrity relaunch experiment described above, without editing the original shortcuts or security/configuration. Verify fresh process integrity before a harmless menu input test. No further backup fingerprint collection is pending; do not recreate the backup or weaken host security to obtain READY.
+Safest next action: manual authentication in the already-open Medium-integrity GL instance, then manual opening of Inventory Management if needed to observe inv. Verify fresh GL/inv integrity before harmless supported menu mouse/keyboard tests under the existing bounded authorization. If either process is High or normal operation fails, stop without configuration changes. No further backup fingerprint collection is pending; do not recreate the backup or weaken host security to obtain READY.
 
 Once those gates are proved, the intended direction is to resume Pilot #001 controlled evidence work through the official Motakamel UI under separate authorization. This task does NOT complete S0b, start S2/S3, migrate Reference data, create Unit/Group/Item A, or advance connector implementation/customer-pilot qualification.
 
