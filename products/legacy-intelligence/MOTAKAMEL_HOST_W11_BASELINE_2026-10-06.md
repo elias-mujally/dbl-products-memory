@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest prerequisite discovery: blocked at the missing inventory account.** Official installed Group help explicitly requires that account and matching inventory/account currencies. At 2026-10-06T20:24:02+03:00, a fresh SELECT tied the current GL/inv sessions to EFA12026 and returned zero Account and Account_Cur_Detail rows. No provisioning or record creation was attempted. The bounded Computer Use and backup results below remain valid; they do not qualify Host S0a/S1 prerequisites.
+
 **Latest result: `HOST W11 MOTAKAMEL COMPUTER USE QUALIFIED` for the bounded direct-input test.** After the authorized direct normal launch and manual authentication/module opening, GL and inv were both **Medium / Elevated=false** before input. Sky mouse input visibly maximized the inventory window; Alt+F4 visibly opened its exit-confirmation dialog, which was cancelled by Sky mouse input. The backup and bounded input gates are complete; this is not qualification of every ERP screen or business workflow. A Reports transient-surface capture failed with `window crop is outside captured monitor`; its cause remains unresolved although dashboard/dialog capture subsequently succeeded. No shortcut/security/configuration change, SQL operation, ERP business mutation or controlled dataset creation occurred.
 
 ## Execution decision and protected boundary
@@ -220,6 +222,49 @@ No Windows/SQL/Motakamel upgrade, repair, PowerShell 2.0 reinstatement or vendor
 Safest next action: STOP this input-qualification task. Obtain separate authorization for bounded official-UI prerequisite/evidence discovery against the clean physical-host dataset before any controlled record creation. Re-observe each required form/menu; if a capture fails or operation requires elevation/configuration changes, stop rather than weaken security or extrapolate this input test. Do not recreate the backup merely to repeat the completed fingerprint gate.
 
 Once those gates are proved, the intended direction is to resume Pilot #001 controlled evidence work through the official Motakamel UI under separate authorization. This task does NOT complete S0b, start S2/S3, migrate Reference data, create Unit/Group/Item A, or advance connector implementation/customer-pilot qualification.
+
+## Host prerequisite discovery — official UI, no save
+
+The user separately authorized prerequisite discovery only, with an explicit stop at the first unmet prerequisite. The current Product Memory context was reread before UI actions. The build checkout was inspected read-only (local HEAD 0fb18e982e90ae09b5e68f306c406ee97a7f29ff); no new remote-main/CI qualification is claimed. GL PID 30180 and inv PID 66628 were reconfirmed Medium, non-elevated, session 23 before UI work.
+
+### Observed official paths and evidence strength
+
+All paths begin at **إدارة المخزون والجرد**. Forms were opened in unchanged view mode; Add/Edit/Save/Delete were never used and no business values were entered.
+
+| Form | Observed path | Documented minimum / dependency | What remains unproved |
+|---|---|---|---|
+| Unit | تهيئة النظام → الوحدات المخزنية (form: الوحدات) | Normal unit procedure describes الرمز and الاسم. Dimension/weight fields are conditional on using that system. No normal-unit account link is documented or visible. | Actual save-time code/name validation; Host acceptance of UA / DBL_UNIT_A. |
+| Group | المدخلات → بيانات المجموعات | Number and Arabic name are described; foreign name is explicitly optional. Inventory account is explicitly mandatory in installed official help; its currency must match inventory currency. | Runtime Save validation of number/name and other account links; Host inventory currency was not investigated after the account blocker. |
+| Item | المدخلات → بيانات الأصناف | Help explicitly says Groups must be coded before Items. Describes group, item number, Arabic name and unit/package. Numbering depends on Group's include-group-number / automatic-number options; manual numbering is documented when both are off. Blank item type is documented as commodity; foreign name is explicitly optional. | Host acceptance of the reference identifier; actual saved defaults/mandatory fields; current Group numbering policy (no Group was selected or created by this task). |
+
+Installed official help was read through F1/HTML Help UI, not by extracting application archives: `C:\EFA\EFAHELP.chm`, Unit `/3106.htm`, Group `/3201.htm`, Item `/3202.htm`. It labels itself version 5 while the observed inventory dashboard labels version 6.1; this is installed official documentation corroborating visible fields, **not proof of current binary Save validation**.
+
+Group `/3201.htm` explicitly states inventory-account use is mandatory and its currency must equal inventory currency. Reusing one account for multiple groups is documented. Visible additional links were sales, COGS, sales return, allowed discount, purchase return, supply/purchase-return difference, free-quantity purchases, earned discount, disassembly difference, prior-year sales return and prior-year COGS. Their minimum-save necessity remains **UNRESOLVED UNTIL SAVE-TIME VALIDATION**; no visibility-based mandatory claim or investigation beyond the first missing prerequisite was made.
+
+Item `/3202.htm` documents a single unit with package 1 or more; for multiple units the primary unit is the smallest, and other package quantities are expressed relative to it. Reference package 1 is therefore a documented possible value, **not an observed Host automatic default**. GTIN/local code/analytical group/drug metadata/prices/costs were left untouched; their minimum-save necessity was not inferred from visibility.
+
+### First unmet prerequisite, freshly checked
+
+A narrow, authorized read-only query used Windows integrated authentication against `.\YSEDU`. The sandbox connection first failed with `Failed to generate SSPI context`; the approved outside-sandbox diagnostic query then succeeded without any permission or configuration change. This execution context was for discovery, not qualification of a future least-privilege connector identity.
+
+Current SQL sessions matched host DESKTOP-8QRQT7R and both application PIDs: GL/Motakamel 30180 and inv/Inventory System 66628 each had an EFA12026 session. Other observed sessions used Multi_Lang / DbRepDes. Exact count at **2026-10-06T20:24:02.5629652+03:00**:
+
+| Database / table | Rows |
+|---|---:|
+| EFA12026 / dbo.Account | 0 |
+| EFA12026 / dbo.Account_Cur_Detail | 0 |
+
+Thus **no existing inventory account is available in this active Host business database**. Combined with the official mandatory-account statement, this is the first unmet prerequisite for the proposed Unit → Group → Item sequence. No F9 account selector was tested in Add mode, no save-time validation was triggered, and no subsequent prerequisite/configuration was investigated. No account currency match is claimed on Host.
+
+Reference Lab had reusable account 1141010001 / المخزون with SAR and saved Unit UA, Group 001 and Item DBL_P001_ITEM_A. Those values are **reference targets only** here: UA / DBL_UNIT_A; 001 / DBL_GROUP_A; DBL_P001_ITEM_A / DBL_ITEM_A; primary package 1. They were neither entered nor accepted on Host. A suitable inventory account is required by the documented Group workflow; **Account Numbering, an entire chart template, and the specific way of obtaining that account are NOT established requirements**. No provisioning was performed or authorized by discovery.
+
+### Operational capture boundary and final state
+
+An expanded temporary ribbon surface reproduced `window crop is outside captured monitor`. Fresh text-only observation succeeded, but UIA clicks on freshly returned Unit indexes failed as unavailable in cached app state; no blind action was inferred. Escape returned to a capturable dashboard. A screenshot-derived double-click pinned/expanded the application's own ribbon, after which Unit/Item/Group forms could be captured and opened by fresh screenshot-derived clicks. This was presentation-only, with no Windows/monitor/scaling/security change and no claimed general capture fix. Some help-close inputs had no immediately observed closure; fresh targeting and Escape ultimately closed HTML Help. All three forms were exited unchanged, leaving the inventory dashboard with the ribbon expanded and the window restored.
+
+**Conclusion: Host prerequisite discovery is partially qualified, blocked at the missing inventory account.** Mandatory account dependency is documented and absence is freshly proven; other minimum-save rules remain untested. No ERP record was created, changed, saved, deleted, posted or approved. No VM, account, Account Numbering, chart template, provisioning, SQL write, service or security configuration was modified. S0b remains historically partial in Reference; Host S0a/S1 creation and S2/S3 were not started. No connector/Canonical Model expansion or customer/pilot qualification follows from this evidence.
+
+**Narrowest next action:** obtain a separate decision/authorization for an official Motakamel operator/vendor-supported way to make one suitable inventory account available, with currency compatibility subsequently checked. Do not automatically provision a whole chart or reopen Account Numbering. Resolve that external prerequisite before authorizing Unit → Group → Item creation; no speculative setup is implied.
 
 ## Repository handling
 
