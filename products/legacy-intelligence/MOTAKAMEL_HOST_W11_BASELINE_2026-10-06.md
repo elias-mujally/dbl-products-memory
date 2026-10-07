@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest child-only result — 2026-10-07: DIRECT CHILD SAVE / INDEPENDENT UI RELOAD / SAR BINDING PASSED; GROUP PICKER VISIBILITY AND CODE SELECTION PROVEN, COMPLETE ELIGIBILITY UNRESOLVED.** One authorized Save persisted 97070101 / DBL_TEST_CHILD_20261007 directly under 970701, subsidiary type 2, derived rank 2 and inherited Balance Sheet. SAR has a persisted active/default currency row. The unsaved Group inventory-account picker offered this child and returned its code, but the account name remained blank and Tab did not visibly move focus; no validation message appeared. Per the first-unexplained-behavior stop rule, no repair/retry or Group Save followed. Cancel was confirmed. Final SELECT at 07:35:51+03:00: Account=2, Account_Cur_Detail=1, i_group/Measure/item_detail=0. Earlier child-not-attempted / zero-currency-link statements below are historical. This is not Group Save, accounting correctness, global minimum hierarchy, canonical mapping or pilot qualification. Details are in the dated child section below.
+
 **Latest root-only result — 2026-10-07: ROOT SAVE / INDEPENDENT UI RELOAD / KEYED SQL VERIFICATION PASSED for 970701 / DBL_TEST_MAIN_20261007.** The user approved Balance Sheet and one new Save attempt only, with no child continuation. Report changed blank → الميزانية العمومية; no other immediate visible field-value change was observed. One Save persisted parent 0, main type 1, rank 1 and `A_Report=Balance Sheet`. Final SELECT at 07:11:36+03:00: Account=1, Account_Cur_Detail=0, Group/Unit/Item=0, child=0. Credit nature persisted as Dr=false without a nature click; this is not accounting-design approval. No activated SAR currency link, direct-child Save or Group eligibility is proved. Acc_Sort was NULL in the immediate post-Save read and 1 after UI reload; the internal cause is unresolved. The preceding blank-report blocker/proposal and clean-account counts are historical, superseded only within this bounded root test. Details are in the dated root-only section below. STOP before Child.
 
 **Latest report-field discovery — 2026-10-07: balance-sheet choice is justified as a PROPOSAL for the bounded test, not selected or saved.** Current UI still offers profit/loss and balance sheet. Installed official version-5 help documents balance-sheet carry-forward versus profit/loss period-end closing. Preserved Reference rows independently show `A_Report=Balance Sheet` for inventory account 1141010001 and all five ancestors. Host report-related SQL definitions distinguish these stored report strings. Report inheritance, automatic classification/nature effects, subsequent Save requirements and Group eligibility remain UNRESOLVED. The existing root draft remains intact with report blank; no Save retry or child action occurred. Final SELECT at 06:40:40+03:00 kept Account/Account_Cur_Detail/Group/Unit/Item counts at zero. Details are in the dated report-field discovery section below.
@@ -594,6 +596,67 @@ Final scoped counts: **Account=1, Account_Cur_Detail=0, i_group=0, Measure=0, it
 - **Inventory Group eligibility: UNRESOLVED / NOT ATTEMPTED.** No Group form/picker/save occurred.
 
 No Unit/Group/Item, S0b/S1/S2/S3, direct/manual SQL business write, backup/restore, chart template, Account Numbering, import, initialization, VM/security/service/permission or Windows setting change occurred. Official application persistence of the authorized root is the intended mutation, not a claim of no database changes. The crop error did not recur; no general capture fix is claimed. No globally minimal hierarchy, LAB-PROVEN canonical mapping, PARTNER-VALIDATED or PILOT-QUALIFIED product capability is inferred. The root was left selected in view mode, not an unsaved draft. **Safest next action: review these root/default/currency limits and obtain separate authorization before any Child Add/Save. STOP.**
+
+## Host approved direct-child Save, SAR binding and unsaved Group picker — 2026-10-07
+
+The user accepted Root Save as PASSED and explicitly deferred investigating/correcting its Dr=false and Acc_Sort observations. Only child **97070101 / DBL_TEST_CHILD_20261007** was authorized, with parent 970701, subsidiary type 2, app-derived rank, justified/inherited Balance Sheet and official SAR activation. One Save only; no third level or guessed accounting fields. Group Add/picker was conditional on verified Child/SAR success and explicitly prohibited Group Save. All 12 mandatory context documents and the Computer Use skill/guidance/API/confirmations were reread. Build checkout remained clean at local HEAD 0fb18e982e90ae09b5e68f306c406ee97a7f29ff; no remote-main/CI or implementation qualification is implied.
+
+### Pre-check and CURRENT-UI PROVEN draft behavior
+
+SELECT-only at **07:24:54.5526915+03:00** confirmed DESKTOP-8QRQT7R\YSEDU / EFA12026 / database ID 7, Account=1, Account_Cur_Detail=0 and Group/Unit/Item=0. Root identity/parent/type/rank/report matched the accepted result; child code/name was absent. Current GL 30180, inv 66628 and General Ledger 47216/62836 again matched EFA12026 sessions. No Root Dr/Acc_Sort investigation or corrective action occurred. The accepted baseline backup + RestoreProof was reused; no additional backup/restore/checkpoint.
+
+All native UI used **node_repl → @oai/sky**, fresh returned windows and matching observations, never VMConnect or a shell input stack. Official route: **إدارة الحسابات → المدخلات → دليل الحسابات → إضافة**, existing GL_New.exe window 95554874. Maximizing the app was presentation-only.
+
+- Fresh Add cleared parent, number, names, type, rank and report; credit was visibly selected, SAR activation unchecked, limits blank. No nature action was sent.
+- Setting **Parent=970701**, then **Tab**, automatically produced **Rank=2**, **الميزانية العمومية** and linked-category display **1-أخرى**. This is current observed report propagation in this exact parent case, not a universal inheritance rule or a deliberate linkage assignment. Rank/report were not manually filled.
+- Entered the exact approved number/name. Selected the displayed **2 فرعي** row and applied it with Tab. Foreign name, group, classification, cash-flow type, analysis and limits remained blank; stop/TDS were not toggled.
+- One click activated **SAR / Saudi Riyal** in the official grid. A subsequent matching capture with the pointer away showed its blue check. Complete pre-Save capture confirmed parent 970701, code/name, type 2, rank 2, Balance Sheet and SAR; no guessed semantic field was entered.
+
+### One Save, independent reload and keyed persistence
+
+One Save click at **(1885,393)** returned the chart to view mode (Save/Cancel disabled); no Save validation dialog appeared. The first post-Save SELECT at **07:30:18.7467904+03:00** returned the child and its SAR row, Account=2, Account_Cur_Detail=1, i_group=0. Raw SQL creation time: **2026-10-07 07:29:44.230**.
+
+The chart alone was closed, reopened from the official Inputs ribbon, and the saved child selected from the newly loaded tree under Root. Independent view-mode reload showed the exact child, parent 970701, type 2, rank 2, Balance Sheet and checked SAR, with zero limits and no currency stop. No Edit or second Save occurred.
+
+Final keyed SELECT at **07:35:51.6208038+03:00**, after Group cancellation, corroborated:
+
+| Stored field | Observed value |
+|---|---|
+| a_code / a_name | 97070101 / DBL_TEST_CHILD_20261007 |
+| A_Parent / a_s_m / A_Level / A_Report | 970701 / 2 / 2 / Balance Sheet |
+| Account_Cur_Detail.A_Code / Cur_Code | 97070101 / SAR — exactly one row |
+| Currency Suspend_Cur / Default_Cur / Max_Amt / Min_Amt | false / true / 0 / 0 |
+| a_name_eng; A_Tcyf, A_Tcyl, A_tlyf, A_Tlyl, A_Tyblf, A_Tybll | NULL |
+| ac_type / ClassType / CashFlowType / FC_Code | NULL |
+| cr_limit / dr_limit / lwr_amnt / upr_amnt / AccNote | NULL |
+| ac_close / AccountForCustomer / ap_in_tbal / FinishTransfer / FinishUpdate / UseTDS | false |
+| Dr / TDSType / u_id / Flags_No / Doc_Serial / CrtdBy | false / 1 / 1 / 1 / 2 / 1 |
+| CrtdOn / CrtdByComputer | 2026-10-07 07:29:44.230 (raw SQL) / DESKTOP-8QRQT7R |
+| MdfdBy / MdfdOn / MdfdByComputer / MdfdNo | NULL / NULL / NULL / 0 |
+| Acc_Sort | NULL immediately after Save; 1 in final read — causal explanation deferred |
+
+These are observed automatic persistence values for this child, not accounting approval or globally stable defaults. No nature/Acc_Sort correction or causal investigation was performed. Displayed linked category Other is not a persisted inventory-specialization assignment: ac_type remains NULL. Reads were bounded live SELECTs during paused UI intervals, not an atomic/frozen snapshot or qualified connector acquisition.
+
+### Group picker — selection proven, complete eligibility unresolved; Cancel verified
+
+Official route: **إدارة المخزون والجرد → المدخلات → بيانات المجموعات → إضافة**, existing inv.exe window 7668528. No Group number/name or other account was entered. The **رقم حساب المخزون** field was focused, and F9 opened the official **شاشــــة البحــــث العامه** lookup, window 13635284. Its fresh direct capture displayed exactly the child code **97070101** and **DBL_TEST_CHILD_20261007**; Root was not displayed in this observed result. This is not a complete proof of the selector's filter predicate.
+
+Double-clicking that visible child row closed the lookup and placed **97070101** in the inventory-account field. **Picker visibility and code selection: PROVEN.** The corresponding account-name field remained blank. One Tab was sent for ordinary field-exit behavior; immediate and subsequent observation still showed focus on the inventory-account field and no populated name. No new modal/validation message appeared. The reason and completed acceptance/currency-validation behavior remain **UNRESOLVED**. No additional input or retry attempted to force acceptance; the stop condition was honored.
+
+The child's persisted SAR matches the inventory currency **SAR previously proved in the current Host options UI**. That prior currency observation was not repeated or changed here, and the Group picker did not independently expose a currency column or confirm a completed compatibility validation. Do not equate matching codes plus transferred account number with full Group eligibility or Group Save acceptance.
+
+Cancel **تراجع** opened **هل تريد التراجع عن العملية؟**, fresh inv dialog 97521486. Its observed **نعم** discarded only the unsaved Group draft. Final matching Group capture showed blank fields, Save/Cancel disabled and Add enabled. Final SELECT confirmed **Account=2, Account_Cur_Detail=1, i_group=0, Measure=0, item_detail=0**. No Group was saved; saved Root/Child/SAR remained present.
+
+### Separate classifications and exact next boundary
+
+- **Root Save: PASSED**, accepted prior evidence, not repeated.
+- **Direct Child Save / independent reload / keyed persistence: PASSED** for the exact direct rank-2 subsidiary under the saved rank-1 root.
+- **SAR binding: PASSED**, active/default persisted currency link plus checked reload.
+- **Inventory Group picker visibility and code selection: PROVEN; complete eligibility: PARTIAL / UNRESOLVED** because name/field-exit behavior was not explained and no completed currency validation or Group Save was performed.
+
+This proves the tested two-node Save route, not a globally minimal operational inventory chart. No level 3, chart template, initialization, Excel import, Account Numbering, SQL business writes, Unit/Group/Item Save, S0b/S1/S2/S3, backup/restore, VM, security/permission/service or Windows-setting changes occurred. No historical Reference hierarchy was copied. No LAB-PROVEN canonical mapping, PARTNER-VALIDATED or PILOT-QUALIFIED claim follows.
+
+**Safest next action:** separately authorize narrow non-saving discovery of the selected Group inventory-account field's name/exit-validation behavior for this saved child, using current UI/help and targeted read-only evidence only. Do not adjust account nature/classification/report, create another level, fill unrelated Group prerequisites or attempt Group Save to resolve it. **STOP.**
 
 ## Repository handling
 
