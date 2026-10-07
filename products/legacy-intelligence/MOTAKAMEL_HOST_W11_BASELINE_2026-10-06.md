@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest non-saving warehouse Add discovery — 2026-10-07: DISCOVERY COMPLETE; WAREHOUSE SAVE REQUIREMENTS NOT YET QUALIFIED.** Official Inventory → Inputs → Warehouse Data → Add was inspected without entering identity values or invoking Save. All identity/contact/account/address fields and branch selection were blank; the branch dropdown offered existing `1 -`, not an automatically assigned warehouse or selected branch. Installed official version-5 help explicitly makes location/keeper/phone/fax optional and documents transfer-account purposes, not their current Save mandatory status. Cancel and its confirmation ended Add. Full-row bounded SELECT comparisons at 16:43:44 and 16:49:53+03:00 were identical for the two accounts, SAR link, Unit A, Group A and Item A; `W_DETAIL=0` remained. Controlled Zero stays BLOCKED, S0b PARTIAL, S2/S3 NOT STARTED. A proposed single named test warehouse requires separate identity/Save authorization; no numerical warehouse ID or accounting dependency has been invented. See the dated warehouse section below.
+
 **Latest Host Controlled Zero / S0b discovery — 2026-10-07: CONTROLLED ZERO BLOCKED AT MISSING WAREHOUSE SCOPE; S0b PARTIAL, NO TRANSACTION SAVE.** Accepted S1 masters were not recreated or edited. Item A's stock tab was empty, not an explicit zero. The official stock report exposes zero-item inclusion options, but its warehouse dropdown was empty; live SELECT confirmed `W_DETAIL=0`. At 16:20:04+03:00 the accepted item still had Group 001 / Unit UA / package 1, and keyed item_store/opn_stock/item_mov counts were each 0. This supports absence of matching source rows only, not an authoritative I/U/W zero or a general missing-row rule. Official inventory supply/transfer-receipt and purchase-invoice forms were inspected in view mode. No Add, Save, posting, supplier/warehouse creation or stock movement was attempted. Neither S2-P nor S2-R is qualified to execute; the first blocker is a real, officially defined warehouse. Details and the narrow next discovery are in the dated section below. Earlier S0b-not-started statements are historical; S1 remains accepted, S2/S3 remain NOT STARTED.
 
 **Latest authorized Host bootstrap — 2026-10-07: UNIT A / GROUP A / ITEM A (S1 master creation) SAVE, INDEPENDENT UI RELOAD AND KEYED LIVE SELECT VERIFICATION PASSED.** One official UI Save per master created UA / DBL_UNIT_A, 001 / DBL_GROUP_A with inventory account 97070101, and DBL_P001_ITEM_A / DBL_ITEM_A with Group 001, Unit UA and primary package 1. Final joined read at 15:32:02+03:00 confirmed their persisted relationships in physical Host EFA12026 (database ID 7); counts Account=2, Account_Cur_Detail=1, Measure=1, i_group=1, item_detail=1. Earlier empty-Host-master / Group-Save-untested / authorization-pending statements below are historical. This closes the authorized Host bootstrap through S1 master persistence only, not frozen acquisition, stock semantics, Gate A, a connector, PARTNER-VALIDATED or PILOT-QUALIFIED. No S0b/S2/S3 or inventory transaction was executed. Full defaults, Reference distinctions and stop boundary are in the dated bootstrap section below.
@@ -856,6 +858,67 @@ Final live counts: **Account=2; Account_Cur_Detail=1; Measure=1; i_group=1; item
 Computer Use skill guided fresh target selection, one-action/observation loops and stopping on mismatched captures. Restored narrow windows were maximized through their current title bars only. The purchase temporary ribbon reproduced `window crop is outside captured monitor`; text-only fresh recovery succeeded, but its UIA expand index was unavailable in cached state. Escape followed by a fresh screenshot-derived double-click on the application's own Operations tab pinned the ribbon, after which purchase form capture succeeded. No Windows scaling/monitor/security change or general capture-fix claim. After Help closure, one inventory capture showed Help instead of the intended form; no coordinate action used that mismatched image. The remaining returned Help window was closed normally, then fresh selection/capture recovered inventory. All Help windows were absent from the final checked enumeration. Inventory and purchase forms were left in view mode, not unsaved transaction drafts.
 
 Build checkout read-only verification: clean at **0fb18e982e90ae09b5e68f306c406ee97a7f29ff**; no implementation or Gate A/B/C claim was inferred from Product Memory. S1 stays accepted. **Controlled Zero BLOCKED; Host S0b PARTIAL; S2/S3 NOT STARTED; no PARTNER-VALIDATED/PILOT-QUALIFIED promotion. STOP before any transaction Save.**
+
+## Host non-saving warehouse Add discovery — 2026-10-07
+
+### Authorized scope and current-source verification
+
+The user accepted the missing-Warehouse finding and authorized **Add inspection only**, including safe unsaved lookup interaction, Help, Cancel and read-only source reconciliation. Save was explicitly forbidden even as a validation probe. No identity was typed, flag toggled, branch selected, warehouse/account/supplier created, inbound entered, stock changed, SQL write, backup/restore or S2/S3 action performed. Existing accepted S1 masters were not reopened for discovery or modified.
+
+Before and after SELECT attribution: `DESKTOP-8QRQT7R\YSEDU`, `EFA12026`, database ID **7**, at **2026-10-07 16:43:44.1172239+03:00** and **16:49:53.2166574+03:00**. Counts both times: **W_DETAIL=0; Account=2; Account_Cur_Detail=1; Measure=1; i_group=1; item_detail=1**. Bounded full-row reads returned exactly those two accounts and the single currency/unit/group/item records; comparison excluding observation timestamp was **identical**, not merely equal counts. This proves unchanged inspected records, not an atomic frozen snapshot or an all-table ERP mutation audit.
+
+### CURRENT-UI PROVEN — path, Add and actual defaults
+
+Official path: **Main Menu → إدارة المخزون والجرد → المدخلات → بيانات المخازن → إضافة**. Current window `process:C:\EFA\inv.exe`, ID **7668528**, title branch 1 / user 1 Adm / year 2026 / `بيانات المخازن`. Add enabled Save/Cancel, disabled Add/Search/Edit/Delete; Save was never invoked. The form's complete visible warehouse-data surface was inspected:
+
+| Field / control | Actual fresh Add state | What this establishes |
+|---|---|---|
+| رقم المخزن | Blank, editable, initially focused; no numeric default observed | No generated ID or automatic Warehouse 1 established. |
+| اسم المخزن العربي / الأجنبي | Both blank and editable | No name default; mandatory status not proved by appearance. |
+| تابع للفرع | Blank, enabled selector | Opening once showed existing **`1 -`**. Escape closed it without selecting; no branch binding persisted or default selected. |
+| مكان المخزن / أمين المخزن / تلفون المخزن / رقم الفاكس | Blank editable fields | No person/location/contact prerequisite populated automatically. |
+| حساب وسيط التحويلات المخزنية, with adjacent account-display areas | Blank | No account selected; no current Save requirement or filter eligibility established. This is not the Group inventory-account field. |
+| للتخزين فقط | Unchecked | No internal-consumption restriction selected. |
+| غير قابل للبيع / غير قابل للصرف / مخزن إنتاج | All unchecked | Flags retained untouched. |
+| Unlabelled production-related dropdown beside مخزن إنتاج | Blank, disabled in fresh Add accessibility | Enabling production and its dependent choices was out of scope; no type value assumed. |
+| رقم الموقع العالمي / خط الطول / خط العرض / العنوان بالعربي / العنوان بالأجنبي | All blank | No geographic/address defaults or Save requirements proved. |
+
+No currency selector, standalone keeper/responsible-person master picker, or additional visible transfer-difference-account input was identified on this current surface. That is a bounded UI observation, **not proof that currency or such masters can never be validated elsewhere**. No asterisks or explicit required-field explanation was observed; enabled/blank controls alone do not establish optionality. The separate `طباعة بيانات المخازن` tab is a report surface and was not used as a creation prerequisite.
+
+### HELP-DOCUMENTED — official installed version 5, not current Save proof
+
+F1 from Warehouse Add opened official installed HTML Help **بيانات المخازن**, `C:\EFA\EFAHELP.chm::/3204.htm`, explicitly **المتكامل بلاس الإصدار الخامس**. The page and its end were read through Computer Use, without extraction. It documents:
+
+- Warehouse number is entered as its serial number; Arabic name names the warehouse; foreign name is for establishments needing it. This does not prove current automatic numbering or every Save validation.
+- Branch links a warehouse to an establishment branch; one or more warehouses can belong to a branch, and other branches' warehouses are not shown there. This supports real branch scope, **not Branch 1 = Warehouse 1**.
+- **Location, keeper, phone and fax are explicitly optional and may be skipped.** No mandatory keeper master creation is documented on this page.
+- `للتخزين فقط` is for internally consumed/non-sale materials; it excludes the warehouse from sales invoices while retaining inventory/purchase visibility. Non-sale/non-issue/production flags have their documented restrictions; none was enabled.
+- Transfer intermediary account is affected by **inter-branch stock transfer/receipt**; transfer-difference account relates to cost versus selling-price differences on transfers at selling price. These descriptions **do not make either account a proved mandatory prerequisite for saving one ordinary warehouse**. The help mentions a difference-account field not identified on this current visible Add surface; do not invent a value or conflate it with the existing Group inventory account.
+- Global-location number, longitude/latitude and address describe location/regulatory/additional data. No mandatory currency field, chart template, Account Numbering, stock initialization or broader provisioning is documented here.
+
+The Help predates the current application; described purposes/explicit optional fields are **HELP-DOCUMENTED**, not a successful current minimal warehouse Save. The page's generic Save description was not executed.
+
+### Bounded source metadata — structure, not business requirements
+
+`W_DETAIL` metadata has **W_CODE int NOT NULL** and **Branch_no int NOT NULL** (database default 0); Arabic/foreign names, location, keeper, phone/fax, `W_Acc`, `W_Acc_Diff`, global-location/address fields are nullable. FinishTransfer, locked, MrpWrhs, NoSaleIsAllowed and NoOutComAllowed have database false defaults. The inspected object list includes primary/unique constraints and `FK_W_DETAIL_Account_Acc_Diff`. No currency column appears in this table's inspected columns.
+
+These facts do **not** authorize Branch 0, prove a blank account is accepted by Motakamel Save, establish optional Arabic name, identify all application validation, or assign business semantics to an integer/default. No missing master is inferred merely from a nullable FK or table design. The existing branch option comes from current UI evidence; no Reference warehouse was inspected/copied.
+
+### Required versus optional versus unresolved; smallest next experiment
+
+**Current Save-enforced REQUIRED set: UNRESOLVED.** Save was prohibited and not attempted. Warehouse number/name/branch are the documented identity/scope candidates for a bounded creation experiment, **not a proved minimum accepted set**. Storage requires a numeric W_CODE and a Branch_no, but this is database structure rather than current UI validation. Help explicitly documents location/keeper/phone/fax as optional and foreign name as conditional; account mandatory status and any additional current Save rules remain unresolved. No new missing master prerequisite beyond the real saved Warehouse has been proved; broader chart/initialization/extra-account provisioning is neither shown required nor authorized.
+
+**Proposed identity only:** Arabic-name field **DBL_WAREHOUSE_A**, dedicated to Controlled Dataset #001. Numerical Warehouse ID remains **not assigned/proposed as a system fact**: fresh Add left it blank and Help describes manual serial entry; a new neutral numeric test code must be separately agreed before Save, without copying Reference Warehouse 1. Proposed branch is the actually offered **1 -** of the active Host module, subject to explicit authorization/selection and subsequent persisted binding verification. Leave foreign/contact/location/account/address fields blank and the observed restriction/production flags unchecked only as an approved **test candidate**, not guaranteed Save acceptance. No such name/code/branch was entered in this task.
+
+After separate authorization, the narrowest experiment is **one Warehouse Save attempt** with agreed number, DBL_WAREHOUSE_A and the current existing branch; stop at the first new validation and do not guess an account/keeper or create another master. If saved, independently reload and SELECT-verify exact ID/name/branch/defaults. A single actual warehouse would remove the currently proved missing-W blocker and provide a scope for **retrying** Item A / UA / package 1 Controlled Zero through an official zero-inclusive report. It **does not guarantee** the report includes an unstocked item or yields trusted zero: those report/unit/missing-row semantics remain to be observed. No opening stock or inbound is authorized to force a zero row. S2-P versus S2-R remains undecided and no inbound Save follows automatically.
+
+### Cancel, integrity and stop boundary
+
+Closed only Help normally, observed Warehouse Add afresh, clicked official **تراجع**, read **هل تريد التراجع عن العملية؟**, and confirmed **نعم** for that unsaved draft. Subsequent fresh image showed Add/Search enabled and Save/Cancel disabled, confirming view mode. After-Cancel SELECT comparison above preserved the exact full returned rows for root **970701**, child **97070101**, active/default **SAR** link, **UA / DBL_UNIT_A**, **001 / DBL_GROUP_A**, and **DBL_P001_ITEM_A / DBL_ITEM_A**, including Group/account, Unit and package relationships. **W_DETAIL remains 0.**
+
+Computer Use skill guided fresh observations, mismatch-safe Help selection and one-action loops. A capture requested on inventory during Help display showed Help; no input used that image to act on inventory. Help was selected from fresh enumeration and closed as its own returned window, then absence confirmed. Restored narrow inventory windows were maximized through observed native title bars only. No captured-monitor error occurred in this round and no Windows monitor/scaling/security setting was changed; no general fix is claimed.
+
+**Discovery COMPLETE / no Warehouse created; Controlled Zero BLOCKED; S0b PARTIAL; S2/S3 NOT STARTED.** No SQL writes, business transaction, stock movement, backup/restore, existing-lab action, connector/Canonical implementation, accounting-scope expansion or Gate A/B/C promotion. No PARTNER-VALIDATED or PILOT-QUALIFIED claim. **STOP before any Warehouse Save.**
 
 ## Repository handling
 
