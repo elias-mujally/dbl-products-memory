@@ -1,5 +1,9 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest root-only result — 2026-10-07: ROOT SAVE / INDEPENDENT UI RELOAD / KEYED SQL VERIFICATION PASSED for 970701 / DBL_TEST_MAIN_20261007.** The user approved Balance Sheet and one new Save attempt only, with no child continuation. Report changed blank → الميزانية العمومية; no other immediate visible field-value change was observed. One Save persisted parent 0, main type 1, rank 1 and `A_Report=Balance Sheet`. Final SELECT at 07:11:36+03:00: Account=1, Account_Cur_Detail=0, Group/Unit/Item=0, child=0. Credit nature persisted as Dr=false without a nature click; this is not accounting-design approval. No activated SAR currency link, direct-child Save or Group eligibility is proved. Acc_Sort was NULL in the immediate post-Save read and 1 after UI reload; the internal cause is unresolved. The preceding blank-report blocker/proposal and clean-account counts are historical, superseded only within this bounded root test. Details are in the dated root-only section below. STOP before Child.
+
+**Latest report-field discovery — 2026-10-07: balance-sheet choice is justified as a PROPOSAL for the bounded test, not selected or saved.** Current UI still offers profit/loss and balance sheet. Installed official version-5 help documents balance-sheet carry-forward versus profit/loss period-end closing. Preserved Reference rows independently show `A_Report=Balance Sheet` for inventory account 1141010001 and all five ancestors. Host report-related SQL definitions distinguish these stored report strings. Report inheritance, automatic classification/nature effects, subsequent Save requirements and Group eligibility remain UNRESOLVED. The existing root draft remains intact with report blank; no Save retry or child action occurred. Final SELECT at 06:40:40+03:00 kept Account/Account_Cur_Detail/Group/Unit/Item counts at zero. Details are in the dated report-field discovery section below.
+
 **Latest prerequisite evidence — 2026-10-07: authorized root Save attempted once and BLOCKED by required report selection.** First validation: `ادخل التقرير الذي يجب ان يظهر فيه الحساب`. No report was guessed and no retry, child Add or Group inspection followed. SELECT at 06:21:30+03:00 confirmed Account=0, Account_Cur_Detail=0, i_group=0, Measure=0 and item_detail=0; both approved identities remain absent. Root Save is BLOCKED for this exact unset-report candidate; direct-child Save, persisted SAR binding and Group eligibility remain UNRESOLVED / NOT ATTEMPTED. The accepted baseline backup plus isolated RestoreProof establishes database restore proof, not full ERP rollback. Earlier no-Save / restore-not-performed / authorization-pending statements below are historical, superseded only by the later dated evidence sections. No Host Controlled Dataset or connector qualification follows.
 
 **Latest result: `HOST W11 MOTAKAMEL COMPUTER USE QUALIFIED` for the bounded direct-input test.** After the authorized direct normal launch and manual authentication/module opening, GL and inv were both **Medium / Elevated=false** before input. Sky mouse input visibly maximized the inventory window; Alt+F4 visibly opened its exit-confirmation dialog, which was cancelled by Sky mouse input. The backup and bounded input gates are complete; this is not qualification of every ERP screen or business workflow. A Reports transient-surface capture failed with `window crop is outside captured monitor`; its cause remains unresolved although dashboard/dialog capture subsequently succeeded. No shortcut/security/configuration change, SQL operation, ERP business mutation or controlled dataset creation occurred.
@@ -473,6 +477,123 @@ SELECT-only at **06:21:30+03:00** returned **Account=0, Account_Cur_Detail=0, i_
 No Unit/Group/Item or inventory movement was created. No S0b/S1/S2/S3, SQL business write, Account Numbering, chart template, import, initialization, third account, VM/configuration or security change occurred. SQL was SELECT/catalog evidence only in this experiment. The crop error did not recur; no general capture fix is claimed. These are current Host workflow observations, not LAB-PROVEN canonical mapping, PARTNER-VALIDATED or PILOT-QUALIFIED capability.
 
 **Safest next action:** obtain an explicit justified report choice for the neutral root test and separate approval for another attempt, or separately authorize report-field-only discovery to establish that choice. Do not silently assume balance sheet, assets/current-assets classification or inventory specialization. Preserve the validation evidence; do not retry or expand the hierarchy to evade it. No database rollback was needed or executed because the inspected account/currency tables remained empty. **STOP.**
+
+## Host report-field-only discovery — 2026-10-07
+
+The user authorized narrow discovery only: no report assignment, Save/retry, child, Unit/Group/Item or S0b/S2/S3. All 12 mandatory context documents were reread. Historical sequencing in AI_HANDOFF/CURRENT_STATUS/ROADMAP does not replace the later controlled-dataset strategy or current Host gate. The build working tree remained clean; no implementation claim or architecture change was made. The current Computer Use skill and guidance/API/confirmation documents were read; all UI work used node_repl -> @oai/sky.
+
+### CURRENT-UI PROVEN
+
+Fresh enumeration found the existing validation modal 5113684 and chart window 95554874, both GL_New.exe. The modal still said `ادخل التقرير الذي يجب ان يظهر فيه الحساب`. Its **موافق** button was acknowledged once to dismiss that message, not to save/accept an account. The chart then automatically exposed the report list with exactly two observed choices: **الربح والخساره** and **الميزانية العمومية**. No row was selected. Focusing the existing name field closed the list without changing its text or assigning a report.
+
+The preserved draft still displayed number 970701, name DBL_TEST_MAIN_20261007, parent 0, main type 1, derived rank 1 and local currency SAR. Report, classification, linked category, flow type and analysis remained blank. The nature radio visibly showed credit in these captures; earlier captures varied without a deliberate nature click. This is not a stable default, a report-induced effect or an approved accounting choice. No type/nature/classification was changed in this task. No report-selection dependency was experimentally triggered, because choosing a report was deliberately avoided.
+
+F1 opened the installed chart help. It was read through its UI, scrolled, and closed normally. Final fresh chart capture showed the same unsaved identity and blank report; no Cancel/discard or additional Add occurred. No crop failure was reproduced here; that is not a general fix claim.
+
+### HELP-DOCUMENTED — installed official version 5, not current Save validation
+
+Source: `C:\EFA\EFAHELP.chm::/1801.htm`, الدليل المحاسبي, opened directly by F1 from the draft.
+
+| Report | Meaning documented by Motakamel |
+|---|---|
+| ميزانية عمومية | For balance-sheet accounts, with assets/liabilities as examples; their balances carry to the new accounting period as opening balances. |
+| أرباح وخسائر | For profit/loss accounts, with expenses/revenues as examples; these accounts close at financial-period end into profit/loss. |
+
+Thus report is not merely an arbitrary screen label. The help connects it to annual reporting and carry-forward/closing treatment. Those operations were not executed or independently reconciled on Host.
+
+The same help describes principal/subsidiary type separately from report, and does not state that either type uniquely determines one report. It documents inheritance for **الحساب مرتبط** specialization: linking a main account propagates that link to descendants. That sentence is NOT report-inheritance documentation. No explicit rule for report inheritance, automatic debit/credit selection or required classification/flow type was found in the relevant chart instructions. The help's financial nature wording must not be conflated with the separate debit/credit radio or ClassType field. No claim that omitted fields are optional at current Save is made.
+
+### Current Host read-only metadata/logic
+
+SELECT/catalog inspection at 06:38:58+03:00 used existing integrated Windows authentication against DESKTOP-8QRQT7R\YSEDU / EFA12026, without changing permissions, settings or data. Account.A_Report is nullable nvarchar(40), while a_s_m, Dr, ClassType and CashFlowType are separate columns. Nullable storage does not override the observed required-report client validation. No Account CHECK constraint was returned.
+
+Definitions were read, NOT executed, for the report-specific function and three report views:
+
+- `dbo.Get_Account_Rep_Type` reads this account's A_Report: literal `Balance Sheet` maps to return 1; its ELSE maps to 2, commented Expenses And Revenues. It does not read the parent, classification or Dr. The broad ELSE is not evidence that a blank/unknown report is a valid Save choice.
+- `GetProfitAndLoss_Mob`, `GetProfitAndLossDetails_Mob` and `V_Acc_MonthBalanceChart` explicitly filter `A_Report='Profit And Loss'` and subsidiary discriminator `a_s_m=2`. This corroborates distinct persisted report classification and type filters in these specific outputs, not every report or Group selector.
+
+The mapping between current Arabic UI selection and stored strings has not been demonstrated by a Host Save. No posting/closing procedure, financial operation or SQL business write was executed. No broad module/schema investigation followed.
+
+### REFERENCE-LAB HISTORICAL — actual preserved rows, no live VM action
+
+Read-only evidence: workspace `outputs/motakamel-chart-template-provisioning-01/POST-TEMPLATE-capture.json`, captured 2026-09-04T07:15:03.5178295+03:00 from DESKTOP-NTPS04J\YSEDU / EFA12026, database GUID DDC085C5-A048-4844-9668-759A63E630C5. Observer was DBLlab, not FMMA; artifact records read-only observer/no SQL writes. Fresh artifact SHA-256 matched the previously recorded hash: `12F07A6B98451E19712EFDE32FB1B9E66C73664C7A535A67CCB704CEA1BA1693`. Account projection was capped at 100 rows; all six needed records were present and the chain was followed by stored A_Parent, not number-prefix guessing.
+
+| Account | Stored name | Parent | Level | a_s_m | A_Report |
+|---|---|---|---:|---:|---|
+| 1141010001 | المخزون | 114101 | 6 | 2 | Balance Sheet |
+| 114101 | المخزون العام | 1141 | 5 | 1 | Balance Sheet |
+| 1141 | المخزون السلعي | 114 | 4 | 1 | Balance Sheet |
+| 114 | المخزون | 11 | 3 | 1 | Balance Sheet |
+| 11 | الاصول المتداولة | 1 | 2 | 1 | Balance Sheet |
+| 1 | الاصول | 0 | 1 | 1 | Balance Sheet |
+
+All six rows have Dr=true and ClassType/CashFlowType/ac_type=null. This is evidence of the official historical template's stored inventory-route choices, not proof of manual Add requirements, automatic inheritance, Host optional fields or an obligatory six-level structure. The earlier template report also reconciled another balance-sheet subsidiary's UI label with stored `Balance Sheet`; the inventory row itself is the bounded historical SQL projection above. No VM was started, connected or modified; no historical account structure was copied into Host.
+
+### ACCOUNTING INFERENCE, recommendation and UNRESOLVED
+
+General accounting knowledge that inventory is an asset is not the sole basis for the decision. **Propose الميزانية العمومية for the neutral root test** because Motakamel's installed documentation explains its balance-carrying semantics, the official Reference inventory route stores Balance Sheet at the operational account AND every ancestor, and current Host definitions retain a distinct report classification. This is sufficient justification for a separately approved discriminating TEST choice, not production chart design, proof that Group requires this report, or a claim that profit/loss is rejected by its selector. The approved TEST identities remain unchanged; no assets name/code or additional level is introduced.
+
+Still UNRESOLVED: current report inheritance to a direct child; report-selection effects on classification/type/nature; subsequent mandatory Save fields; root/direct-child save acceptance; SAR persistence; and Group eligibility. Historical null classification values and separate SQL fields do not prove that choosing report leaves every current UI field unchanged. A future separately authorized attempt should capture the actual before/after selection and stop at any newly exposed prerequisite or first validation, without guessing classification/nature/linkage or adding levels. No child follows unless root Save/reload/verification succeeds under its own approval.
+
+Final SELECT at **06:40:40+03:00** returned **Account=0, Account_Cur_Detail=0, i_group=0, Measure=0, item_detail=0**; both approved codes were absent. Existing GL/inv/General Ledger PIDs again matched EFA12026 sessions. This is bounded no-persistence evidence, not a global atomic database fingerprint. The draft remains open with report blank. **REPORT CHOICE JUSTIFIED FOR PROPOSAL — SAVE / INHERITANCE / GROUP ACCEPTANCE UNRESOLVED. STOP before report selection or Save.**
+
+## Host approved Balance Sheet root-only Save and reload — 2026-10-07
+
+This later section supersedes the earlier report proposal / unset-report rejection only for the exact authorized root. The user approved choosing Balance Sheet in the preserved draft, documenting its immediate effects, and attempting Save once. Child was expressly withheld even on success. All 12 mandatory Product Memory documents and current Computer Use skill/guidance/API/confirmations were reread. The build checkout remained clean at local HEAD 0fb18e982e90ae09b5e68f306c406ee97a7f29ff; no new implementation, remote-main or CI claim follows.
+
+### Pre-check and BEFORE → AFTER report selection
+
+SELECT-only at **07:07:26+03:00** verified DESKTOP-8QRQT7R\YSEDU / EFA12026 / database ID 7, Account=0, Account_Cur_Detail=0 and i_group=0, with neither approved code/name present. Current Motakamel PID 30180, Inventory System PID 66628 and General Ledger PIDs 47216 / 62836 matched EFA12026 sessions; support-database sessions remained separate. The experiment-relevant baseline had not materially changed. The accepted baseline backup + RestoreProof boundary was reused without additional backup, restore or checkpoint.
+
+Fresh Sky enumeration selected existing GL_New.exe chart window **95554874**. The intact draft was observed, then its window was maximized to expose all fields (presentation only). All native UI actions used node_repl → @oai/sky, fresh returned window objects and current screenshots; no VMConnect input, application launch, elevation or Windows configuration change occurred.
+
+| Field | BEFORE | AFTER applying report selection |
+|---|---|---|
+| Account number / Arabic name | 970701 / DBL_TEST_MAIN_20261007 | Unchanged |
+| Parent / principal-subsidiary type / derived rank | 0 / 1 رئيسي / 1 | Unchanged |
+| Report | Blank | الميزانية العمومية |
+| Foreign name / group / linked category / flow type / classification / analysis / limits | Visually blank | Remained visually blank |
+| Nature | Credit selected | Credit remained selected; no nature action |
+| Principal local currency / currency activation | SAR displayed; grid child disabled and activation unchecked | Unchanged |
+| TDS / account stop | Unchecked; account stop disabled | Unchanged |
+
+The report field was clicked at (459,432), then the freshly displayed **الميزانية العمومية** row at (463,470). The immediate observation showed that row highlighted while the custom list remained open. One **Tab**, not Enter/Save, applied the displayed report and moved focus. No other immediate visible value change or new blocking requirement appeared. This is one observed before/after case, not a general absence-of-side-effects, report-inheritance or nature-default rule. No classification, nature, flow or linked category was filled or corrected.
+
+### One Save, independent reload and exact persistence
+
+One fresh-screenshot **حفظ** click at **(1885,394)** returned the form to view mode: Save/Cancel disabled, Add/Search/Edit/Delete enabled, and the account tree populated. No validation or completion dialog appeared in the observed response; Save was not repeated. The immediate keyed SELECT at **07:10:00+03:00** returned one Account row, zero Account_Cur_Detail rows and no child, Group, Unit or Item.
+
+For independent UI reload, the chart form alone was closed via its inner close control; the accounting dashboard remained open. **دليل الحسابات** was reopened from the official Inputs ribbon. After the tree populated, the saved **970701 / DBL_TEST_MAIN_20261007** entry was selected in view mode, without Add/Edit. The reloaded UI displayed parent 0, type 1, rank 1, الميزانية العمومية and credit nature; the foreign name, classification, flow and analysis remained blank. It displayed linked category **1-أخرى**, although SQL ac_type was NULL. This display is not evidence that an inventory specialization or a stored linkage was assigned. The SAR grid row was still unchecked; no activated currency was inferred from mere availability.
+
+Final SELECT-only at **07:11:36.2751184+03:00**, after that reload, confirmed the same database and exact row:
+
+| Stored field | Observed value |
+|---|---|
+| a_code / a_name | 970701 / DBL_TEST_MAIN_20261007 |
+| A_Parent / a_s_m / A_Level | 0 / 1 / 1 |
+| A_Report | Balance Sheet |
+| Dr | false — consistent with the untouched credit radio |
+| a_name_eng; A_Tcyf, A_Tcyl, A_tlyf, A_Tlyl, A_Tyblf, A_Tybll | NULL |
+| ac_type / ClassType / CashFlowType / FC_Code | NULL |
+| cr_limit / dr_limit / lwr_amnt / upr_amnt / AccNote | NULL |
+| ac_close / AccountForCustomer / ap_in_tbal / FinishTransfer / FinishUpdate / UseTDS | false |
+| TDSType / u_id / Flags_No / Doc_Serial / CrtdBy | 1 |
+| CrtdOn / CrtdByComputer | 2026-10-07 07:09:25.577 (raw SQL time) / DESKTOP-8QRQT7R |
+| MdfdBy / MdfdOn / MdfdByComputer / MdfdNo | NULL / NULL / NULL / 0 |
+| Acc_Sort | NULL in immediate post-Save SELECT → 1 in final post-reload SELECT |
+
+**Acc_Sort caveat:** this changed between two reads around official view-mode reload. No manual field edit, second Save or agent SQL write was sent; no causal trace identifies which internal application operation populated it. Do not claim Acc_Sort=1 was an original Save default or that view-mode navigation causes no storage effects. No corrective write or further investigation was performed. Other inspected Account values matched those reads; the UI audit display showed creation at 07:09:26, recorded separately from raw SQL time rather than silently normalized.
+
+Final scoped counts: **Account=1, Account_Cur_Detail=0, i_group=0, Measure=0, item_detail=0**; the approved child code/name returned zero rows. There are no persisted account-currency rows in this database. The displayed principal SAR is therefore not proof of an activated Account_Cur_Detail binding, and subsidiary SAR behavior remains untested after Save. These are bounded live reads during paused UI intervals, not a frozen snapshot, full-database fingerprint or connector qualification.
+
+### Separate qualification and stop boundary
+
+- **Root Save / reload / keyed persistence: PASSED**, for the exact approved parent-0/main/rank-1/Balance-Sheet candidate. No additional classification/flow/linkage entry was required by this one successful Save; this does not prove global field optionality or production accounting correctness.
+- **Direct Child Save: UNRESOLVED / NOT ATTEMPTED.** No child Add was opened, and no third level or copied Reference hierarchy was introduced.
+- **SAR binding: principal local-currency display PROVEN; activated persisted currency-link / subsidiary SAR binding UNRESOLVED.** Account_Cur_Detail=0.
+- **Inventory Group eligibility: UNRESOLVED / NOT ATTEMPTED.** No Group form/picker/save occurred.
+
+No Unit/Group/Item, S0b/S1/S2/S3, direct/manual SQL business write, backup/restore, chart template, Account Numbering, import, initialization, VM/security/service/permission or Windows setting change occurred. Official application persistence of the authorized root is the intended mutation, not a claim of no database changes. The crop error did not recur; no general capture fix is claimed. No globally minimal hierarchy, LAB-PROVEN canonical mapping, PARTNER-VALIDATED or PILOT-QUALIFIED product capability is inferred. The root was left selected in view mode, not an unsaved draft. **Safest next action: review these root/default/currency limits and obtain separate authorization before any Child Add/Save. STOP.**
 
 ## Repository handling
 
