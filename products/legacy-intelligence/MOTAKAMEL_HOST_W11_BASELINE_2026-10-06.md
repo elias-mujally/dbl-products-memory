@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest authorized Host bootstrap — 2026-10-07: UNIT A / GROUP A / ITEM A (S1 master creation) SAVE, INDEPENDENT UI RELOAD AND KEYED LIVE SELECT VERIFICATION PASSED.** One official UI Save per master created UA / DBL_UNIT_A, 001 / DBL_GROUP_A with inventory account 97070101, and DBL_P001_ITEM_A / DBL_ITEM_A with Group 001, Unit UA and primary package 1. Final joined read at 15:32:02+03:00 confirmed their persisted relationships in physical Host EFA12026 (database ID 7); counts Account=2, Account_Cur_Detail=1, Measure=1, i_group=1, item_detail=1. Earlier empty-Host-master / Group-Save-untested / authorization-pending statements below are historical. This closes the authorized Host bootstrap through S1 master persistence only, not frozen acquisition, stock semantics, Gate A, a connector, PARTNER-VALIDATED or PILOT-QUALIFIED. No S0b/S2/S3 or inventory transaction was executed. Full defaults, Reference distinctions and stop boundary are in the dated bootstrap section below.
+
 **Latest unsaved Group discovery — 2026-10-07: INVENTORY GROUP ELIGIBILITY PASSED at the picker/name-resolution/normal-field-exit boundary only.** F9 and a double-click selected existing child 97070101. Clicking the empty Arabic Group-name field then populated DBL_TEST_CHILD_20261007 in the paired account-name display; a subsequent observation confirmed focus moved from inventory-account ID 41 to Group-name ID 60. No validation or account-property change was needed. Cancel was confirmed; final SELECT at 07:51:52+03:00 kept Account=2, Account_Cur_Detail=1 and i_group/Measure/item_detail=0, with the two account projections and active/default SAR link unchanged. This supersedes the preceding name/exit UNRESOLVED statement, not Group Save, full currency-validation internals, global minimum hierarchy or accounting correctness. Details are in the dated Group-discovery section below.
 
 **Latest child-only result — 2026-10-07: DIRECT CHILD SAVE / INDEPENDENT UI RELOAD / SAR BINDING PASSED; GROUP PICKER VISIBILITY AND CODE SELECTION PROVEN, COMPLETE ELIGIBILITY UNRESOLVED.** One authorized Save persisted 97070101 / DBL_TEST_CHILD_20261007 directly under 970701, subsidiary type 2, derived rank 2 and inherited Balance Sheet. SAR has a persisted active/default currency row. The unsaved Group inventory-account picker offered this child and returned its code, but the account name remained blank and Tab did not visibly move focus; no validation message appeared. Per the first-unexplained-behavior stop rule, no repair/retry or Group Save followed. Cancel was confirmed. Final SELECT at 07:35:51+03:00: Account=2, Account_Cur_Detail=1, i_group/Measure/item_detail=0. Earlier child-not-attempted / zero-currency-link statements below are historical. This is not Group Save, accounting correctness, global minimum hierarchy, canonical mapping or pilot qualification. Details are in the dated child section below.
@@ -696,6 +698,103 @@ No Group/Unit/Item was saved, no account/currency record was changed by an autho
 
 **Narrowest next action:** review this closed picker gate and obtain separate bounded authorization before any official Unit/Group/Item creation. Group Save rules remain untested and require their own first-validation stop rule; do not infer permission to start them from this discovery. **STOP.**
 
+## Host Controlled Dataset bootstrap through Item A / S1 — 2026-10-07
+
+The user accepted Inventory Group eligibility PASSED and authorized only sequential official UI creation: Unit A, then Group A after Unit verification, then Item A after both prerequisites were verified. Each master had one Save; any new unknown validation required stopping without guesses. All 12 mandatory Product Memory documents and the Computer Use instructions were reread before UI work. Build checkout remained clean at **0fb18e982e90ae09b5e68f306c406ee97a7f29ff**, including the final local check; no implementation or remote CI claim follows.
+
+### Pre-check, source and recovery boundary
+
+SELECT-only at **08:38:06+03:00** matched physical Host **DESKTOP-8QRQT7R\YSEDU / EFA12026 / database ID 7**, current GL 30180 / inv 66628 / GL_New 47216 and 62836 sessions, and counts **Account=2, Account_Cur_Detail=1, Measure=0, i_group=0, item_detail=0, item_mov=0**. The approved accounts and active/default SAR link remained the prerequisite; no further accounts discovery or Dr/Acc_Sort investigation occurred. The previously accepted baseline backup plus DATABASE RESTORE PROOF PASSED remains the database recovery evidence, not a new post-S1 backup or full ERP rollback. No extra backup, restore or Hyper-V checkpoint was created.
+
+All native inputs used **node_repl → @oai/sky**, selected returned inv.exe window **7668528**, and fresh matching observations. A later tool-session reset lost the JavaScript binding: one intended Group-tab action returned **sky is not defined** before any input. The supported import/list/get/activate workflow recovered the existing draft, without another Add or Save. Its initially restored window was maximized via title-bar double-click for presentation only. No Windows configuration or monitor setting changed; no general cure for the older capture-crop error is claimed.
+
+### Unit A — one Save and independent verification
+
+Official path: **إدارة المخزون والجرد → تهيئة النظام → الوحدات المخزنية → الوحدات → إضافة**.
+
+Fresh Add exposed two blank fields only, **الرمز** and **الاسم**. Entered **UA** and **DBL_UNIT_A**; no additional setup value was supplied. The name edit's accessibility label said رمز الـISO although the visible form label was الاسم; this was treated as a UIA label mismatch, not an additional ISO-code requirement. Tab did not immediately show departure from the code field; a matching click/focus observation selected the name field before typing.
+
+One Save returned the form to view mode without a validation dialog. Closed only this form and reopened Units from its official ribbon route; independently loaded UA / DBL_UNIT_A appeared in view mode. SELECT after reload at **08:41:24+03:00**, corroborated again at **15:23:19.8396086+03:00**, returned exactly:
+
+| Stored column | Value |
+|---|---|
+| Measure_Code / Measure | UA / DBL_UNIT_A |
+| Measure_type / Units_linked / Measure_Code_S | 0 / false / NULL |
+
+The last three values were stored by Motakamel without agent assignment. These are this saved row's observed values, not universal unit defaults.
+
+### Group A — one Save, SAR prerequisite and independent reload
+
+Official path: **إدارة المخزون والجرد → المدخلات → بيانات المجموعات → إضافة**.
+
+Entered **001 / DBL_GROUP_A** and selected existing inventory account **97070101 / DBL_TEST_CHILD_20261007** through F9 → official general lookup → double-click. Natural departure by clicking the Group-name field resolved the paired account name, without validation. Foreign name and all other account fields stayed blank. The setup tab was inspected without toggling options: group-code inclusion, automatic item numbering (disabled), group discount, VAT, restaurant linkage and VAT-inclusive sale/purchase options were visibly unchecked. No Reference settings were copied.
+
+Literal type_text for numeric Group code 001 initially returned without error but left the field blank in subsequent observations; supported set_value on the freshly observed code edit populated 001. This is bounded interaction evidence, not an identified keyboard/root-cause defect. Group name was also set through its observed editable UI control.
+
+One Save on **تهيئة المجموعة** returned to view mode without validation. Closed the form, reopened **بيانات المجموعات**, and used its official **الأخير** navigation to independently load the saved Group in view mode: 001, DBL_GROUP_A, 97070101 and DBL_TEST_CHILD_20261007 were visible. No Edit or second Save was used.
+
+SELECT at **15:23:19.8396086+03:00** returned the complete saved i_group row. Exact entered and automatic values:
+
+| Value | Stored columns |
+|---|---|
+| 001 / DBL_GROUP_A / 97070101 | g_code / g_a_name / g_a_code |
+| empty string | g_e_name |
+| 1 / 0 | cst_type / G_Disc |
+| false | FinishTransfer, FinishUpdate, GenerateItemNo, ICodeWithGrp, PriceVAT, PriceVATPrch, Tax_item |
+| NULL | CarryingAcc, free_qty_acc, g_cst_code, g_dif_rtn_purch, g_dsc_code, g_pr_code, g_py_code, g_py_cst_code, g_sadjs_code, g_sl_code, g_sr_code, Grp_disc, ItemLen, PromotionACC, SeparateType, Serial_Start, serial_Type, Vndr_dsc_code, Separate_Diff_acc, Method_No, Tax_No, Agency_Code, DiscRsnNo, VatExNo_Zero, VatExNo_Exempt, Tax_item_per |
+
+There is **no currency column in the observed i_group schema**. Do not invent a persisted Group SAR field: compatibility evidence is the prior current inventory-options SAR observation, the freshly corroborated **Account_Cur_Detail A_Code=97070101 / Cur_Code=SAR / Suspend_Cur=false / Default_Cur=true / Max_Amt=0 / Min_Amt=0**, and accepted selection plus successful Group Save. No separate currency-success dialog or complete internal validation predicate is claimed. A read-only query initially used invalid column Acc_No and failed; actual catalog columns were read and the corrected SELECT used A_Code. No SQL write or permission change occurred.
+
+### Item A / S1 — one Save and independent UI reload
+
+Official path: **إدارة المخزون والجرد → المدخلات → بيانات الأصناف → إضافة**.
+
+Fresh Add had blank group/code/names/type/unit/package inputs, an initial grid package **0**, the first grid row's **وحدة رئيسية** automatically checked, and added-date **07/10/26** supplied by Motakamel. No price, cost, balance, quantity, tax, barcode, supplier or secondary unit was supplied.
+
+- Set Group **001**; leaving that field displayed **DBL_GROUP_A**.
+- Entered **DBL_P001_ITEM_A** and Arabic-name-field **DBL_ITEM_A**. Foreign name remained blank.
+- Opened the current unit dropdown and selected its actual **UA** entry, already verified as DBL_UNIT_A.
+- Set the observed **العبوة** edit to approved **1**. The set_value call reported **wait for accessibility set value: timed out waiting on channel**; the next fresh observation proved both UIA Value=1 and visible 1. It was **not retried**. Leaving the field populated exactly the first grid row **UA / package 1 / primary checked**. No additional grid row was filled.
+- Item type remained visually blank; no type was guessed from Reference help. All approved identity/link/package values and the primary row were visible before Save.
+
+One Save returned the form to view mode without validation. Closed only Item form, reopened **بيانات الأصناف** from the official ribbon, observed the new blank view buffer, then invoked **الأخير** once. Independent reload displayed exact code/name, Group 001 / DBL_GROUP_A, Unit UA, package 1 and the checked primary-unit row. The grid's price displayed 0 after reload; the agent had not entered it. No second Save, Edit or correction occurred. The saved Item is left displayed in view mode.
+
+Full keyed live SELECT at **15:30:03.1681908+03:00** returned the following exact item_detail values, grouped without assigning unsupported business meanings:
+
+| Value | Stored columns |
+|---|---|
+| DBL_P001_ITEM_A / DBL_ITEM_A / 001 / UA | i_code / i_a_name / g_code / i_measure |
+| 1 | i_size, i_c_type, p_size, ItmPrdctType |
+| string 0 | p_code, reprs_code |
+| 0 | CarryingFee, CBM, fre_prc, GrossMargin, imp_Item_value, item_fract, itm_disc, itm_disc2, itm_type, MaxPricePer, MinPricePer, Tax_item_Per, Tax_item_Value, CSTWithoutCFormVal, CSTWithCFormVal, comm_per, UseQrWise, ItmStndrdCost, AvailableQty, MedicalType |
+| false | AssembledItems, blocked, disc, expr_date, FinishTransfer, FinishUpdate, fract, fre_qty, Imp_item, stopped_1, Tax_item, stopped, CSTWithoutCFormUse, CSTWithCFormUse, PriceVAT, UseStations, UseReprs, NotDisrbutBurdns, NotDistrbutDscnt, UsePrdcItm, UseRstrntItm, UseLabItm, UsedItm, PriceVatPrch, UseSN, UseFas, UseBatchNo, UseFood, ItmPrdctFlg, UseAttchdSpecifictions, UseBalance |
+| empty string | i_desc, i_e_name, manfc_no, Itm_Mnfctr_Cntry, Itm_Brand, Itm_Quality, Itm_Scale, RegNo |
+| single space | free_txt1, free_txt2, free_txt3, free_txt4 |
+| 2026-10-07 00:00:00 | Itm_Add_Date |
+| NULL | cost_rate, ExportBill, i_cur_cost, i_mqty, i_mxqty, i_name, i_rol, i_volum, Item_Get, itm_volm, Qty_Order, s_g_code, size_name, Taxno2, free_txt5, SciCode, Scin_Code, AltrntvScncGrpNo, ScncSubGrpNo, AltrntvGrpNo, AltrntvGrpPriority, I_codeCommrc, IG_ClassNo, i_desc2, Measure_Desc, GTIN, GPC_Code_S, Measure_Code_S, LocalCode, DiscRsnNo, VatExNo_Zero, VatExNo_Exempt, ExpireFormat |
+
+**IPicturePath** contained a literal dot, a long run of spaces and the visible form placeholder **صـــــورة الـــصــــنــــف**. No image was uploaded or path assigned by the agent; this observed placeholder is not proof of a usable image file. The table records the saved values, not universal defaults or semantic approval of undocumented numeric codes. In particular AvailableQty=0, cost placeholders and the movement count below are **not reconciled zero-stock/valuation evidence**.
+
+The keyed item_detail_Dtl row was **I_Code=DBL_P001_ITEM_A, Branch_No=1, i_cost_Brnch=0, i_cwtavg_Brnch=0**, created by Motakamel without manual branch-cost assignment. These are observed persistence effects, not financial/accounting correctness or a separate movement.
+
+### Final reconciliation, Reference comparison and stop boundary
+
+After independent Item UI reload, joined SELECT at **15:32:02.6960909+03:00** against the same Host source returned exactly one observed relation:
+
+| Item | Arabic name | Group / name | Inventory account | Unit / name | Package |
+|---|---|---|---|---|---|
+| DBL_P001_ITEM_A | DBL_ITEM_A | 001 / DBL_GROUP_A | 97070101 | UA / DBL_UNIT_A | 1 |
+
+Final counts: **Account=2, Account_Cur_Detail=1, Measure=1, i_group=1, item_detail=1, item_mov=0**. The count was recorded as a bounded table observation, not a stock-report reconciliation. Reads were SELECT-only during paused UI intervals, not an atomic/frozen snapshot, qualified least-privilege connector acquisition or complete mutation audit across every ERP table.
+
+**Separate classifications:** Unit A Save/reload/persistence PASSED; Group A Save/reload/inventory-account persistence PASSED with active/default matching SAR prerequisite; Item A / S1 official master creation, independent reload and basic keyed relationships PASSED. This is the written Host evidence checkpoint, **not** a new backup or VM checkpoint.
+
+Reference Lab historically saved the same authorized Unit/Group/Item identities and primary package 1. Host now has its **own newly created records**, not migrated Reference rows. The material distinction is Host inventory account **97070101 under 970701**, not Reference **1141010001** or its copied hierarchy/provisioned chart. Host automatic defaults above were observed here, not copied or asserted equivalent to unexamined Reference defaults. No financial semantics of the neutral TEST accounts, global minimum chart, canonical mapping or product qualification follows.
+
+No direct SQL business writes, additional accounts, Account Numbering, chart template, initialization, connector implementation, purchase/inbound/stock movement, S0b/S2/S3, optional Windows update, activation, host security change or existing-lab action was performed. Pilot #001 remains Purchase Attention + Item Intelligence; S0b remains historically partial in Reference and was not begun on Host. Gate A frozen acquisition/reader/semantic reconciliation remains unqualified here; Gate B/C, PARTNER-VALIDATED and PILOT-QUALIFIED are not advanced by this master-only test.
+
+**Narrowest next action:** review this persisted Host S1 evidence checkpoint and obtain a separate bounded authorization for the next plan gate. Do not start S0b, S2/S3, inventory transactions, connector coding or additional master creation automatically. **STOP after S1.**
+
 ## Repository handling
 
-The unrelated untracked `products/legacy-intelligence/research/.vscode/` directory was preserved and must remain unstaged. Explicit staging is limited to this evidence note and the README entry linking the current host decision. Backup binaries, database rows, credentials and unrelated files are not committed.
+The unrelated untracked `products/legacy-intelligence/research/.vscode/` directory was preserved and must remain unstaged. Explicit staging is limited to this evidence note and the README entry linking the current host decision. The authorized test identities and bounded observed values are documented here; backup binaries, database export files, credentials and unrelated files are not committed.
