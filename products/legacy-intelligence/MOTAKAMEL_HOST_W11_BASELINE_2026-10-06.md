@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest authorized Warehouse A Save and scoped-zero attempt — 2026-10-07: WAREHOUSE SAVE + INDEPENDENT UI RELOAD PASSED; EXPLICIT SCOPED REPORT ZERO PROVEN; OVERALL CONTROLLED ZERO PARTIAL PENDING SOURCE-SIDE-EFFECT REVIEW.** Exactly one official Save persisted approved `001 / DBL_WAREHOUSE_A`, officially selected branch 1 and transfer intermediary 97070102 with resolved name/SAR; Motakamel normalized the warehouse number to numeric 1. Independent reopening/search/reload and live SELECT confirmed it. The official stock preview, filtered to exact Item A, Warehouse A from/to, UA and unit level 1, displayed DBL_ITEM_A / UA / package 1 and explicit whole-unit quantity 0. However keyed item_mov changed from 0 before preview to 1 afterwards: the single row has zero quantities/costs, warehouse/branch 1, UA, p_size 1, doc_type 11 and doc_no 0. No transaction Add/Save or direct SQL write was issued. Its creator/mechanism and doc_type semantics remain UNRESOLVED; do not assert that the report is side-effect-free, that a business receipt exists, or that the zero is contradicted by nonzero movement. Overall Controlled Zero is conservatively PARTIAL until this source change is reviewed; no further GUI action followed its detection. S1 remains accepted, S0b PARTIAL and S2/S3 NOT STARTED. The former missing-warehouse blocker is superseded, not silently rewritten; details below.
+
 **Latest authorized transfer-account experiment — 2026-10-07: ACCOUNT SAVE / INDEPENDENT UI RELOAD / SAR BINDING PASSED; Transfer Intermediary Account Candidate = QUALIFIED FOR WAREHOUSE SELECTOR.** Exactly one official Save created `97070102 / DBL_TEST_TRANSFER_INTERMEDIARY_20261007` under 970701, subsidiary type 2, officially derived rank 2 and inherited Balance Sheet, with active/default SAR. A reopened chart independently loaded the saved record. In unsaved Warehouse Add, F9 offered the new child; double-click returned its code. Tab alone did not resolve the name or leave the field; one ordinary click on the empty Arabic warehouse-name field resolved the full account name and SAR and moved focus, without validation. Add was cancelled and confirmed. Final SELECT at 17:59:38+03:00: W_DETAIL=0, Account=3, Account_Cur_Detail=2, Unit/Group/Item=1 each. Protected full rows stayed unchanged except root Acc_Sort 2→3 observed after chart reopening, without a manual root edit; cause unresolved. No Warehouse Save or stock transaction occurred. Earlier account-choice-not-qualified statements are historical where superseded. Warehouse Save remains untested with this account; Controlled Zero BLOCKED, S0b PARTIAL, S2/S3 NOT STARTED. See the dated transfer-account section below.
 
 **Latest non-saving Warehouse account discovery — 2026-10-07: VALIDATION FIELD IDENTIFIED; TRANSFER-INTERMEDIARY ROLE HELP-DOCUMENTED; ACCOUNT CHOICE NOT QUALIFIED.** Dismissing the prior validation returned focus to warehouse edit ID 26, visibly the code field labelled `حساب وسيط التحويلات المخزنية`. F9 from that unchanged focus opened the official account lookup; it showed only existing child `97070101 / DBL_TEST_CHILD_20261007`, not root 970701. No row was accepted and the picker was cancelled with the code still blank. Installed version-5 Help explicitly distinguishes the transfer intermediary from the inventory account and describes opposite debit/credit effects on transfer/receipt. It does not state required nature/classification/currency or justify reusing the Group inventory account. Full filter rules and Save acceptance remain UNRESOLVED. Warehouse Add was cancelled and confirmed; protected complete bounded rows/counts at 17:29:37 and 17:34:42+03:00 were identical, `W_DETAIL=0`. The earlier open-draft statement is historical; the form is now in view mode. No Save, account/master change or stock transaction occurred. Controlled Zero stays BLOCKED, S0b PARTIAL, S2/S3 NOT STARTED. See the dated account-discovery section below for the separate-role recommendation and next approval boundary.
@@ -1043,6 +1045,73 @@ Final counts at **17:59:38+03:00**: **W_DETAIL=0; Account=3; Account_Cur_Detail=
 Computer Use skill constrained returned-window targeting, one-action/fresh-observation loops, focus checks and exactly one account Save. Some immediate observations were stale/null; observation-only refreshes resolved these without blind repeated inputs. No crop error occurred in this round, and no Windows scaling/security/ACL/UAC change or general capture fix is claimed. No build implementation, connector/Canonical expansion, Account Numbering, Chart Template, initialization, existing-lab operation or Gate A/B/C advancement occurred.
 
 **S1 stays accepted; Controlled Zero stays BLOCKED at missing saved warehouse; S0b PARTIAL; S2/S3 NOT STARTED.** No PARTNER-VALIDATED/PILOT-QUALIFIED promotion. Narrow next proposal, **not executed**: separately authorize one Warehouse A Save using already approved 001 / DBL_WAREHOUSE_A, officially selected branch 1 and this now-qualified transfer selector candidate, keeping other defaults and stopping at first new validation. Successful Warehouse Save/reload would still precede a separate Controlled Zero qualification; do not create a transaction or infer 0→37 readiness. **STOP.**
+
+## Host Warehouse A single Save, independent reload and scoped-zero attempt — 2026-10-07
+
+### Authorization, pre-check and exactly one Warehouse Save
+
+The user accepted 97070102 as qualified for the transfer-intermediary selector and authorized one Warehouse Save, followed only by reload/SELECT and a scoped Controlled Zero attempt. At **20:18:35+03:00**, live read-only evidence attributed the source to **DESKTOP-8QRQT7R\YSEDU / EFA12026 / database ID 7**, with W_DETAIL=0, Account=3, Account_Cur_Detail=2 and Measure/i_group/item_detail=1 each; keyed Item A item_mov=0. Protected identities/defaults were consistent with the preceding accepted checkpoint. No new backup/Restore was performed.
+
+Computer Use continued the approved official **Inventory → Inputs → Warehouse Data → Add** form. Input of number 001 required careful outcome reconciliation: literal type_text did not visibly populate the number; supported accessibility set_value reported `Error: wait for accessibility set value: timed out waiting on channel`. The subsequent observation-only refresh showed **001**, so the operation was not blindly repeated. This timeout was an input-tool observation issue, not a Save validation. Arabic name **DBL_WAREHOUSE_A** was visibly entered; the actual **1 -** branch row was selected from the dropdown. F9 offered the approved transfer child; double-click selected **97070102**. One normal mouse exit to the warehouse-name field resolved the full **DBL_TEST_TRANSFER_INTERMEDIARY_20261007** and **SAR** displays. All other visible fields stayed blank and all special flags unchecked. No Windows/security/configuration adjustment was used.
+
+Exactly **one** click on official **حفظ** was issued in this experiment. No new validation appeared; the form returned to disabled/view fields with Add/Edit enabled and Save disabled. Its warehouse number became **1**, not literal 001. This is observed ERP normalization, not an agent-assigned replacement identity. Save acceptance alone was not treated as persistence proof.
+
+### Independent UI reload and persisted Warehouse defaults
+
+The saved form was exited using its official خروج toolbar, reopened through Inputs → Warehouse Data and searched using بحث. The independent search returned **1 / DBL_WAREHOUSE_A**. Double-click reloaded that persisted row in view mode, showing branch **1 -**, intermediary **97070102**, full account name and **SAR**, with the same blank/default fields. No Edit, copy/add or second Save occurred.
+
+Live SELECT at **20:28:23+03:00** confirmed:
+
+| Persisted field | Actual value |
+|---|---|
+| W_CODE / w_a_name | 1 / DBL_WAREHOUSE_A |
+| Branch_no / W_Acc | 1 / 97070102 |
+| W_e_name, w_loc, wh_keepr, w_phone, w_fax | empty strings |
+| GLN, Longitude, Latitude, AddressL, AddressF | empty strings |
+| FinishTransfer, locked, MrpWrhs, NoSaleIsAllowed, NoOutComAllowed | false |
+| PrinterForStore, W_Acc_Diff, WrhsPrdctType | NULL |
+
+The source row has no separate warehouse currency column in this returned projection; **SAR was resolved in UI and separately proven as the intermediary account's active/default Account_Cur_Detail binding**, not invented as a W_DETAIL value. Group 001 remains linked to inventory account **97070101**, distinct from warehouse intermediary 97070102. Counts were W_DETAIL=1, Account=3, currencies=2 and Unit/Group/Item=1 each. **Warehouse A Save + Reload = PASSED** for this exact approved candidate; this does not qualify transfer posting/accounting correctness or all possible warehouse configurations.
+
+### Official scoped report: explicit zero, not absence-of-rows inference
+
+Path: **Inventory → Reports → Stock / المخزون**, form **تـقـريــر المخزون**. The already-open report's warehouse dropdown initially remained empty after the master Save. It was closed normally and reopened from the official Reports ribbon; the new dropdown then offered **1 -DBL_WAREHOUSE_A**. No synthetic warehouse number was typed into a blank selector.
+
+Parameters visibly established before preview:
+
+- Date **07/10/26**; branch from/to **1 -** (current disabled defaults).
+- Item from/to **DBL_P001_ITEM_A**, entered into the two actual report filters; other unrelated ranges left blank.
+- Warehouse from/to **1 -DBL_WAREHOUSE_A**, each selected from the actual dropdown.
+- Unit **UA**, chosen from the actual list.
+- Initially **المخزون مع اظهار الاصناف الصفرية** enabled the checkbox **مع الأصناف التي ليس لها تخزين و لا أي حركة مخزنية**; that checkbox was selected.
+- Selecting **مع إظهار الكميات بعبواتها** automatically changed the report mode back to **عرض الكمية المتوفرة**, disabled other zero modes and displayed package-report controls. The agent did not silently treat the earlier mode as still selected.
+- Package report totals defaulted to **حسب الوحدة**; the official **مستوى الوحدة رقم =** option was selected and its number entered as **1**. This records the actual report parameter, not a universal semantic mapping of level and package.
+
+The official طباعة action opened **Crystal Preview**, not a physical-print submission. No printer/export/save action followed. Preview title was **المخزون حتى تاريخ 2026/10/07**, one page at 100%, headed **حسب الوحدة**. Its single visible row showed branch **1**, name **DBL_ITEM_A**, unit **UA**, package column **1**, and **الكمية كاملة بكل وحدة = 0**. Remaining-unit quantity was blank, **not asserted to be a separate explicit zero**. The narrow item-code column clipped the long identifier; exact identity attribution relies on the recorded exact from/to filter plus the single matching persisted master, not a claim that its full code was visible in the preview. Warehouse restriction is proven in the before-preview filters, not printed as a warehouse column. **Explicit scoped report zero = PROVEN** within these recorded limits.
+
+### Unexpected source change and conservative stop
+
+Post-preview SELECT at **20:40:37+03:00** returned keyed **item_store=0, opn_stock=0, item_mov=1**, whereas the pre-check and post-Warehouse/pre-report read had item_mov=0. A bounded SELECT of the one new row at **20:41:17+03:00** established:
+
+| Row evidence | Actual value |
+|---|---|
+| i_code / ii_code | DBL_P001_ITEM_A / DBL_P001_ITEM_A |
+| w_code / Branch_no / m_measure / Measure_Code / p_size | 1 / 1 / UA / UA / 1 |
+| i_qty, inout_qty, p_qty, si_qty, inout_sqty | 0 each |
+| free_qty, free_sqty, inout_fqty, inout_sfqty, Pf_qty | 0 each |
+| open_stock, open_Fstock, sopen_stock, sub_op_Fstk | 0 each |
+| i_cost / stk_cost / i_rate | 0 each |
+| doc_type / doc_no / record_no / serial_no | 11 / 0 / 0 / 1 |
+| i_date / gr_flag / PKDoc / PKTransDocType | 2026-10-07 / true / 0-0-0-0-1 / 0 |
+| Vendor_No / Customer_No | NULL / NULL |
+
+The timing brackets the source change between the pre-report read and post-preview read; **it does not independently prove who created it or that the preview alone caused it**. The row has no nonzero quantity contradicting the displayed zero. It must not be labelled a purchase/receipt or discarded as harmless from doc_type/column names alone. No transaction Add/Save, stock-posting command or direct SQL business write was issued by the agent. Equally, **the observed database state was not entirely unchanged**, so no claim of a side-effect-free report or item_mov=0 baseline is permitted. No row was deleted, altered or restored, and no additional GUI input followed detection.
+
+The eight complete bounded protected records (three accounts, two account-currency links, Unit, Group and Item) compared exactly equal between 20:18:35 and 20:40:37, including previously noted Acc_Sort values. Warehouse alone was intentionally created; the additional zero-quantity item_mov row is separately disclosed. This is point-in-time bounded evidence, not an atomic snapshot or all-table audit.
+
+**Controlled Zero = PARTIAL overall**, despite the explicit scoped UI zero being PROVEN, pending review of the unexplained source-row side effect. The missing saved-warehouse prerequisite is now resolved. **S1 remains accepted; S0b remains PARTIAL; S2/S3 NOT STARTED; no 0→37 transaction occurred or was qualified.** No connector, canonical-field expansion, Gate A/B/C advancement, PARTNER-VALIDATED or PILOT-QUALIFIED claim follows.
+
+Narrowest next proposal, **not executed**: separately authorize read-only interpretation of this single zero-quantity row and the official report's no-storage-item behavior to decide whether it is a synthetic/report-support row and whether the controlled-zero gate can be accepted with this disclosed state. Preserve the row/evidence; do not retry reports randomly, create movement, repair SQL or start inbound to resolve uncertainty. The preview remains visible. **STOP.**
 
 ## Repository handling
 
