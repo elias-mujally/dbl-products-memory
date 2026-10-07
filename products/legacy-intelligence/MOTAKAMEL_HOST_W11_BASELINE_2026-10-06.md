@@ -1,6 +1,6 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
-**Latest prerequisite discovery: minimum account hierarchy remains UNRESOLVED without current workflow validation.** Inventory currency SAR and the individual-account entry point were observed, but no account exists and no account was saved. The later bounded hierarchy investigation below distinguishes a help-informed root-main / direct-subsidiary hypothesis from a currently qualified structure. At 2026-10-06T22:28:33+03:00, SELECT returned Account=0, Account_Cur_Detail=0 and i_group=0. No provisioning or record creation was attempted. The bounded Computer Use and backup results below remain valid; they do not qualify Host S0a/S1 prerequisites.
+**Latest prerequisite evidence — 2026-10-07: authorized root Save attempted once and BLOCKED by required report selection.** First validation: `ادخل التقرير الذي يجب ان يظهر فيه الحساب`. No report was guessed and no retry, child Add or Group inspection followed. SELECT at 06:21:30+03:00 confirmed Account=0, Account_Cur_Detail=0, i_group=0, Measure=0 and item_detail=0; both approved identities remain absent. Root Save is BLOCKED for this exact unset-report candidate; direct-child Save, persisted SAR binding and Group eligibility remain UNRESOLVED / NOT ATTEMPTED. The accepted baseline backup plus isolated RestoreProof establishes database restore proof, not full ERP rollback. Earlier no-Save / restore-not-performed / authorization-pending statements below are historical, superseded only by the later dated evidence sections. No Host Controlled Dataset or connector qualification follows.
 
 **Latest result: `HOST W11 MOTAKAMEL COMPUTER USE QUALIFIED` for the bounded direct-input test.** After the authorized direct normal launch and manual authentication/module opening, GL and inv were both **Medium / Elevated=false** before input. Sky mouse input visibly maximized the inventory window; Alt+F4 visibly opened its exit-confirmation dialog, which was cancelled by Sky mouse input. The backup and bounded input gates are complete; this is not qualification of every ERP screen or business workflow. A Reports transient-surface capture failed with `window crop is outside captured monitor`; its cause remains unresolved although dashboard/dialog capture subsequently succeeded. No shortcut/security/configuration change, SQL operation, ERP business mutation or controlled dataset creation occurred.
 
@@ -102,7 +102,7 @@ C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.YSEDU\MSSQL\Backup\DBL_HOST_
 | RESTORE VERIFYONLY | Completed with CHECKSUM and STOP_ON_ERROR; SQL returned: The backup set on file 1 is valid. |
 | Physical filesystem bytes | 22,663,168 bytes — user-supplied Get-Item output from the requested manual administrative read; distinct from SQL backup_size. |
 | SHA-256 | 2821DDAA854FBC3EA0FFC015F933654D02BC03C952044C586A275B719A391722 — user-supplied Get-FileHash SHA256 output for the same exact path. |
-| Isolated restore | NOT PERFORMED; no new database or database overwrite authorized. |
+| Isolated restore at this original backup stage | NOT PERFORMED then; later separately authorized RestoreProof succeeded, as recorded below. No source overwrite. |
 
 Backup succeeded and verification succeeded; the combined command subsequently returned nonzero because filesystem Get-Item was denied. Do NOT misclassify this as backup failure or create another backup blindly.
 
@@ -362,6 +362,117 @@ The narrowest next evidence step is separately authorized **unsaved Add-form ins
 5. Inspect/select the saved candidate in the Group Inventory Account picker on an unsaved temporary form, then cancel without saving a Group. Visibility/selection would qualify that picker behavior only; it would not prove Group Save or later inventory/accounting correctness. Restore the independent test boundary under its separate authorization.
 
 This experiment distinguishes a supported direct-child route from a forced deeper/restricted route without creating a full chart. Success would prove the tested small structure in that profile, not global minimality, production accounting correctness or every possible selector filter. No Unit/Group/Item, S0b/S1/S2/S3, template/import/initialization, account option, SQL write or ERP mutation was performed. **DISCOVERY COMPLETE — MINIMUM VALID HIERARCHY / SAVE AND PICKER ACCEPTANCE UNRESOLVED. STOP before mutation.**
+
+## Host non-saving Add inspection — 2026-10-07
+
+The user expressly authorized Add-form inspection, temporary cancellable values only where needed, and Cancel followed by read-only zero-count verification. All 12 required project-context documents were refreshed before native UI work. The build checkout was clean; no implementation change or new connector/Canonical Model decision was made.
+
+### CURRENT-UI PROVEN — draft behavior, not Save qualification
+
+Official path: **إدارة الحسابات → المدخلات → دليل الحسابات → إضافة**. Fresh Sky enumeration selected the existing GL_New.exe window 95554874; no new accounting process was launched. The application was maximized for presentation only, not by changing Windows display/security settings. Add was entered once.
+
+| Field/control | Observed behavior in this unsaved Add |
+|---|---|
+| Parent/main reference | Initially blank in Add, unlike the historical empty-view display of 1. The only typed test text was `0` here. Tab generated rank 1 without a validation dialog. No existing parent can be tested while Account=0. |
+| Account number; Arabic/foreign names | Blank; no number/name was typed or generated. A click on the visible right-hand ellipsis next to the number produced no observed lookup/value; its full semantics and number-entry/format rules remain unresolved. |
+| Rank | Initially blank; after parent 0/Tab it was 1. Accessibility exposed the rank edit without a settable flag, unlike the parent/name fields. No rank was manually changed. |
+| **نوع الحساب** | Current popup explicitly shows **1 رئيسي / 2 فرعي**. Each was temporarily highlighted then left with Tab; stable accessibility values 1 and later 2 corroborated selection. Parent remained 0/rank 1 even with subsidiary in the unsaved draft; this is NOT acceptance of a one-node operational root or direct saved child. |
+| Principal currency | After principal selection a separate read-only **العملة: SAR** control appeared, and the grid child pane was reported disabled. This is current principal-draft currency evidence, not a persisted currency link. |
+| Subsidiary currency | The separate principal-currency control disappeared; the SAR / Saudi Riyal activation checkbox could be checked. A fresh screenshot with the pointer moved off the cell showed its blue check. Limits remained blank; currency stop remained unchecked. No Account_Cur_Detail row was saved. |
+| Report | A custom list offered **الربح والخسارة** and **الميزانية العمومية**. No report choice was deliberately assigned. Escape did not reliably dismiss this custom list; focusing another visible control did. |
+| Group | Opened as a blank dropdown with no named choice visible. A transient numeric 1 appeared during browsing; no valid saved group or required membership is inferred. |
+| Linked-account control labelled الحساب | Its list included other/assets/salaries/cash-flow/banks/customers/suppliers/inventory-groups/intermediate-accounts/payment-channels categories. No category was deliberately chosen as inventory-account semantics. |
+| Separate نوع combo | Offered **1 تشغيلي / 2 استثماري / 3 تمويلي**. These are distinct from principal/subsidiary; no saved flow-type meaning is inferred. |
+| تصنيف | Visible choices included fixed/current assets, shares, cash cover, fixed/current liabilities, sales and sales cost. Only the visible portion was inspected, not every scrolled entry; no classification was deliberately assigned. |
+| التحليل | Visible enabled combo in Add; one arrow click did not expose a readable option list. Available values and any requirement remain unresolved. |
+| Nature / stop / TDS | Initial Add displayed debit selected, TDS unchecked and account stop unchecked. After browsing, credit was visibly selected; no debit/credit radio was clicked, and the exact causal control event is unresolved. These later draft changes are not initial defaults or approved accounting semantics. Stop enablement varied with principal/subsidiary state; the parent group and child accessibility flags were not entirely consistent. No stop/TDS toggle was made. |
+| Save / Cancel / other surfaces | Save and تراجع enabled in Add; Add/Search/Edit/Delete disabled. Template/Excel controls were visible but never invoked. No Save/Accept or save shortcut was used. |
+
+**Material correction to the earlier evidence:** the view-mode inference that the separate account-type lookup must not be identified with principal/subsidiary was not established by that view. Current Add proves that this very lookup offers principal/subsidiary. The preceding `account_types=0` table observation therefore must not be used to infer absence of these UI choices or a missing mandatory type dictionary. Earlier sections are historical observations, superseded here where inconsistent.
+
+Opening ordinary combos displayed numeric first entries and, during some immediate captures, temporarily blanked other fields; subsequent observations were used before conclusions. Those effects were not promoted into a stable default-value or causal mapping claim. No account names/numbers were needed, so none were entered. No field-marker or non-saving action established the complete mandatory Save-field list. The red currency heading alone is not a Save-validation result. No current validation dialog rejected parent 0/type selection; no Save validation was elicited.
+
+### Cancellation and read-only reconciliation
+
+Cancel **تراجع** opened **هل تريد التراجع**. The first attempted confirmation using the parent-window screenshot did not dismiss the separately owned modal; it brought/restored the disabled parent to the foreground. A fresh enumeration identified dialog 4263268. Its initial capture was occluded; activating that returned dialog produced a matching capture/tree, then its visible **نعم** button discarded the unsaved draft. This was not deletion of a saved record. The final fresh chart state had blank draft values and disabled Save/Cancel, with Add/Search enabled.
+
+SELECT-only checks against Host `.\YSEDU` / EFA12026 returned:
+
+| Observation, local +03:00 | Account | Account_Cur_Detail |
+|---|---:|---:|
+| 2026-10-07 05:34:32, before Add | 0 | 0 |
+| 2026-10-07 05:40:31, after confirmed Cancel | 0 | 0 |
+
+No account/currency record exists as a result of this inspection. No Group/Unit/Item form was opened in this follow-up, no Controlled Dataset work or S0b/S2/S3 began, and no options/template/import/initialization/Account Numbering or SQL write occurred. The crop error did not recur here; that is not a general fix claim. No VM/security/permission/configuration change was made.
+
+### HELP-DOCUMENTED / REFERENCE-LAB HISTORICAL / UNRESOLVED
+
+The previously read version-5 help documents root-main parent 0, existing parent for descendants, derived child rank, principal local currency and at least one enabled subsidiary currency. Today's unsaved root/rank/type/currency behavior supports parts of that description, not its Save rules. Reference's saved level-6 account and hierarchy remain historical only; no Reference number or structure was entered.
+
+Still UNRESOLVED: actual root Save acceptance and mandatory fields; direct subsidiary Save under a saved rank-1 root; derived child rank (expected 2 from help, not observed); accepted account-number format/number-control behavior; report/classification/flow/nature requirements; root currency-link persistence; and the Group inventory-account selector's eligibility rules. A full chart, fixed rank 6 and Account Numbering are not proven prerequisites. Draft subsidiary at parent 0 does not prove a one-node alternative. **No smallest SAVED valid hierarchy has been proved.**
+
+### Historical next discriminating mutation proposal — unexecuted at inspection time
+
+The user's requested two-node candidate can be predeclared with **neutral TEST identities**, not operational inventory semantics:
+
+| Planned record | Proposed code, not yet format-qualified | Arabic name | Parent / type / currency |
+|---|---|---|---|
+| Test root | 970701 | DBL_TEST_MAIN_20261007 | 0; 1 رئيسي; form-derived rank (1 observed in draft); SAR as displayed by principal form |
+| Test direct child, only after root save/reload succeeds | 97070101 | DBL_TEST_CHILD_20261007 | saved 970701 directly; 2 فرعي; leave derived rank untouched; activate SAR only |
+
+Foreign names, group, report, linked category, flow type, classification, analysis, limits and stop/TDS remain unset/unchanged where the new form allows it. Initial nature/defaults must be freshly recorded before any Save, not copied from the altered cancelled draft. No accounting classification is invented to force acceptance. If identity entry or a non-saving validation rejects the declared values, stop before Save; do not adjust numbers speculatively. If a mandatory semantic choice is exposed before saving, obtain a separate exact decision rather than guessing. These proposed codes/names are test labels, not a new chart/naming architecture or approved production inventory-account classification.
+
+Before the first Save: obtain separate explicit approval for the exact two records and their recorded complete forms, and qualify recovery. The current physical Host is protected, and the existing COPY_ONLY/CHECKSUM backup's VERIFYONLY success is not a demonstrated restore/application rollback. Prefer a separately authorized independent working copy with the same profile and an actually tested restoration path. An in-place alternative needs a fresh verified backup plus separately authorized isolated restore/application verification and a pre-agreed restoration boundary; neither is performed now. Automatic UI deletion of child/root is not promised as complete rollback because deletion constraints/audit side effects have not been qualified. Any restoration remains separately authorized, never an automatic SQL business edit or security change.
+
+If recovery/approval gates are met, attempt Save **once per declared record**, root first; reload and verify code/name/parent/type/rank/currency before proceeding. Capture the exact **first** validation and stop, with no guessed field, retry, third level, template or configuration change. Reconcile the two saved logical records and their actual currency links read-only; do not assume exactly two currency-detail rows before observing the principal's persistence behavior.
+
+Only after both records exist, separately approve an **unsaved** Group Add/picker inspection: candidate code must be visible and selectable in Inventory Account and expose SAR compatibility; then Cancel, verify Group count unchanged. No Group Save, Unit/Item or S0b/S2/S3. Picker selection qualifies that behavior only, not Group Save, a globally minimal hierarchy, accounting correctness or purchase/inbound semantics. A first blocker ends the experiment rather than causing deeper hierarchy creation. **STOP before first Save and request approval for the recovery/experiment boundary.**
+
+## Host database RestoreProof — 2026-10-07
+
+Following separate authorization, the existing backup above was restored at **05:55:37+03:00** to **DBL_HOST_W11_EFA12026_RestoreProof_20261007**, database ID **9**, with independent MDF/LDF under the existing SQL DATA directory. Logical files EFA12026 / EFA12026_log were moved to `DBL_HOST_W11_EFA12026_RestoreProof_20261007.mdf` / `DBL_HOST_W11_EFA12026_RestoreProof_20261007_log.ldf`. FILE=1, CHECKSUM, STOP_ON_ERROR, RECOVERY and MOVE were used; no REPLACE, source overwrite, REPAIR, permission or security change. SQL reported successful restoration of 2757 pages (2752 data / 5 log). Source EFA12026, ID 7, stayed ONLINE on C:\EFA\EFA12026.mdf / .ldf; no shared physical path was found.
+
+Full `DBCC CHECKDB` at **05:56:08+03:00**, without repair or PHYSICAL_ONLY, reported **0 allocation errors and 0 consistency errors** for the proof database. Bounded comparisons showed 516 user tables, 194 views and 188 procedures in each database, and zero Account, Account_Cur_Detail, Measure, i_group, item_detail and item_mov rows in both. This is not full row/byte equivalence proof. Final metadata at 05:56:44 showed the proof ONLINE with two independent files, no active user session on it, and msdb restore_history_id **4**, backup_set_id **1011**, replace=false, recovery=true. It was left in place; no cleanup/drop was authorized.
+
+**DATABASE RESTORE PROOF PASSED — ERP ROLLBACK NOT YET QUALIFIED.** No application connection to the proof database, support-database restoration, whole-host recovery or UI rollback was tested. The physical backup SHA-256 remains the previously supplied manual administrative result, not a fresh agent filesystem hash. The user explicitly accepted this bounded database recovery evidence for the following experiment; the older fresh-backup/full-application-recovery proposal is not an additional automatic gate for this accepted scope. Actual source restoration would still require separate authorization.
+
+## Host authorized two-account experiment — first validation stop — 2026-10-07
+
+The user approved root **970701 / DBL_TEST_MAIN_20261007**, then conditional direct child **97070101 / DBL_TEST_CHILD_20261007**, with no third level, guessed accounting choice or retry. All 12 mandatory Product Memory documents and current Computer Use guidance/API/confirmations were refreshed. The build checkout remained clean at local HEAD 0fb18e982e90ae09b5e68f306c406ee97a7f29ff; no new implementation/remote-CI claim is made.
+
+### Pre-mutation verification and accepted recovery boundary
+
+SELECT-only at **06:18:56+03:00** confirmed physical Host **DESKTOP-8QRQT7R\YSEDU / EFA12026 / database_id 7**, ONLINE, the same source paths, **Account=0, Account_Cur_Detail=0, i_group=0**, and zero matches for the two codes. Zero Account rows also excludes either approved name. Current GL PID **30180**, inv PID **66628**, and General Ledger PIDs **47216 / 62836**, all in session 23, each matched current EFA12026 application SQL sessions. Support sessions remained distinct. Backup set 1011 retained COPY_ONLY/CHECKSUM and UUID e6d6c875-12c6-4824-865b-687247ad8050; isolated RestoreProof ID 9 and restore history 4 remained present/ONLINE.
+
+No material change was observed in the experiment-relevant baseline. This was a bounded pre-check, not a fingerprint of every setting/table or an atomic live snapshot. Per the user's instruction, the accepted baseline backup + RestoreProof was reused; no redundant backup, checkpoint or restore was performed.
+
+### CURRENT-UI PROVEN — one root attempt, not a saved account
+
+Official path: **إدارة الحسابات → المدخلات → دليل الحسابات → إضافة**. Fresh enumeration selected existing GL_New.exe window **95554874**. It was activated and maximized for presentation only; matching fresh captures preceded each input. Add was entered once. No app launch/elevation or Windows setting change occurred.
+
+- Parent **0** followed by Tab generated read-only rank **1**.
+- Manual number entry displayed **970701**. The first/top name field displayed **DBL_TEST_MAIN_20261007**; second/foreign name stayed blank. This proves draft input only, not accepted number format/persistence.
+- Lookup **1 رئيسي** was selected and applied with Tab. Accessibility confirmed type 1 / parent 0 / rank 1. The principal form displayed read-only local currency **SAR**, with currency-grid child disabled.
+- Report, group, linked category, flow type, classification, analysis and limits remained visually blank; no report choice was assigned. TDS/account stop were not toggled. Fresh Add initially showed credit selected; later captures after principal-type application showed debit selected without an explicit nature click. These are not a stable initial-default rule or accounting-design approval; exact internal cause was not investigated.
+- The automatically exposed report popup showed profit/loss and balance-sheet choices. Focusing the name area dismissed it without assigning a report. The complete pre-Save capture showed the approved identity, parent/type/rank/SAR and blank report.
+- **One** screenshot-derived Save click at **(1885,394)** opened GL_New dialog **5113684**, title **نـظـام الـمــحاسـبة الـمــالية**. Direct fresh capture/accessibility agreed on **`ادخل التقرير الذي يجب ان يظهر فيه الحساب`**.
+
+Report selection is therefore required for this current root Save candidate. This does not establish the correct report, every later mandatory field, direct-child acceptance or number-format acceptance. The message was not dismissed; no additional input, semantic selection or Save retry followed. The unsaved root draft and first-validation dialog were left visible. No child or Group form was opened.
+
+### Post-validation reconciliation and separate classifications
+
+SELECT-only at **06:21:30+03:00** returned **Account=0, Account_Cur_Detail=0, i_group=0, Measure=0, item_detail=0**. Queries by both exact codes and both exact names in a_name/a_name_eng returned zero rows; currency-link queries for both codes also returned zero rows. No Account or Account_Cur_Detail row was persisted by this rejected Save. No successful record existed to reload.
+
+| Claim | Result | Limit |
+|---|---|---|
+| Root Save | **BLOCKED — required report validation** | Exact blank-report candidate rejected on first attempt; not proof that root parent 0 is unsupported. |
+| Direct Child Save | **UNRESOLVED / NOT ATTEMPTED** | Saved/reloaded/verified root prerequisite was not met. |
+| SAR binding | **UNRESOLVED for persistence** | Principal draft displays SAR; earlier subsidiary draft activation was observed, but zero currency links exist. |
+| Inventory Group eligibility | **UNRESOLVED / NOT ATTEMPTED** | No saved child to test. Group count remains 0; no Group Add/Save. |
+
+No Unit/Group/Item or inventory movement was created. No S0b/S1/S2/S3, SQL business write, Account Numbering, chart template, import, initialization, third account, VM/configuration or security change occurred. SQL was SELECT/catalog evidence only in this experiment. The crop error did not recur; no general capture fix is claimed. These are current Host workflow observations, not LAB-PROVEN canonical mapping, PARTNER-VALIDATED or PILOT-QUALIFIED capability.
+
+**Safest next action:** obtain an explicit justified report choice for the neutral root test and separate approval for another attempt, or separately authorize report-field-only discovery to establish that choice. Do not silently assume balance sheet, assets/current-assets classification or inventory specialization. Preserve the validation evidence; do not retry or expand the hierarchy to evade it. No database rollback was needed or executed because the inspected account/currency tables remained empty. **STOP.**
 
 ## Repository handling
 
