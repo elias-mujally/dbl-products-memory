@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest narrow zero-row review — 2026-10-07: B) CONTROLLED ZERO = PARTIAL.** SELECT-only review captured all 73 fields of the sole item_mov row, unchanged at 20:55:08–21:00:07+03:00. Its contribution to the inspected local available-quantity calculation is 0; no related document was found in 18 exactly counted business header/detail/request/journal tables. However doc_types=11 (invoice approval) and the separate PKTransDocType=0 (opening stock) dictionary labels do not establish this row's role. Producer, insertion time and report causality remain UNRESOLVED. No GUI/report regeneration occurred because safe side-effect-free reread was not established. Warehouse Save/reload PASSED and S1 accepted remain; S0b PARTIAL; S2/S3 NOT STARTED. Details below.
+
 **Latest authorized Warehouse A Save and scoped-zero attempt — 2026-10-07: WAREHOUSE SAVE + INDEPENDENT UI RELOAD PASSED; EXPLICIT SCOPED REPORT ZERO PROVEN; OVERALL CONTROLLED ZERO PARTIAL PENDING SOURCE-SIDE-EFFECT REVIEW.** Exactly one official Save persisted approved `001 / DBL_WAREHOUSE_A`, officially selected branch 1 and transfer intermediary 97070102 with resolved name/SAR; Motakamel normalized the warehouse number to numeric 1. Independent reopening/search/reload and live SELECT confirmed it. The official stock preview, filtered to exact Item A, Warehouse A from/to, UA and unit level 1, displayed DBL_ITEM_A / UA / package 1 and explicit whole-unit quantity 0. However keyed item_mov changed from 0 before preview to 1 afterwards: the single row has zero quantities/costs, warehouse/branch 1, UA, p_size 1, doc_type 11 and doc_no 0. No transaction Add/Save or direct SQL write was issued. Its creator/mechanism and doc_type semantics remain UNRESOLVED; do not assert that the report is side-effect-free, that a business receipt exists, or that the zero is contradicted by nonzero movement. Overall Controlled Zero is conservatively PARTIAL until this source change is reviewed; no further GUI action followed its detection. S1 remains accepted, S0b PARTIAL and S2/S3 NOT STARTED. The former missing-warehouse blocker is superseded, not silently rewritten; details below.
 
 **Latest authorized transfer-account experiment — 2026-10-07: ACCOUNT SAVE / INDEPENDENT UI RELOAD / SAR BINDING PASSED; Transfer Intermediary Account Candidate = QUALIFIED FOR WAREHOUSE SELECTOR.** Exactly one official Save created `97070102 / DBL_TEST_TRANSFER_INTERMEDIARY_20261007` under 970701, subsidiary type 2, officially derived rank 2 and inherited Balance Sheet, with active/default SAR. A reopened chart independently loaded the saved record. In unsaved Warehouse Add, F9 offered the new child; double-click returned its code. Tab alone did not resolve the name or leave the field; one ordinary click on the empty Arabic warehouse-name field resolved the full account name and SAR and moved focus, without validation. Add was cancelled and confirmed. Final SELECT at 17:59:38+03:00: W_DETAIL=0, Account=3, Account_Cur_Detail=2, Unit/Group/Item=1 each. Protected full rows stayed unchanged except root Acc_Sort 2→3 observed after chart reopening, without a manual root edit; cause unresolved. No Warehouse Save or stock transaction occurred. Earlier account-choice-not-qualified statements are historical where superseded. Warehouse Save remains untested with this account; Controlled Zero BLOCKED, S0b PARTIAL, S2/S3 NOT STARTED. See the dated transfer-account section below.
@@ -1112,6 +1114,68 @@ The eight complete bounded protected records (three accounts, two account-curren
 **Controlled Zero = PARTIAL overall**, despite the explicit scoped UI zero being PROVEN, pending review of the unexplained source-row side effect. The missing saved-warehouse prerequisite is now resolved. **S1 remains accepted; S0b remains PARTIAL; S2/S3 NOT STARTED; no 0→37 transaction occurred or was qualified.** No connector, canonical-field expansion, Gate A/B/C advancement, PARTNER-VALIDATED or PILOT-QUALIFIED claim follows.
 
 Narrowest next proposal, **not executed**: separately authorize read-only interpretation of this single zero-quantity row and the official report's no-storage-item behavior to decide whether it is a synthetic/report-support row and whether the controlled-zero gate can be accepted with this disclosed state. Preserve the row/evidence; do not retry reports randomly, create movement, repair SQL or start inbound to resolve uncertainty. The preview remains visible. **STOP.**
+
+## Host narrow read-only review of the zero item_mov row — 2026-10-07
+
+### Full current row and stability
+
+The user accepted Warehouse A Save + Reload = PASSED, retained Controlled Zero = PARTIAL, and authorized only this bounded read-only source/definition review. One report reread was optional only if safe and without Save. **No GUI action or report regeneration occurred.** The preceding scoped official preview is retained as earlier UI evidence, not relabelled as a fresh live observation. No SQL writes, stored-procedure execution, inbound, S2/S3, master changes, deletion, backup or Restore.
+
+At **20:55:08.6853094+03:00**, SELECT attributed the source to **DESKTOP-8QRQT7R\YSEDU / EFA12026 / database ID 7** and captured **every one of the current item_mov row's 73 columns**, preserving NULL/zero/empty distinctions. The full second row at **21:00:07.5166681+03:00** compared exactly equal, including GUID and every field. Local complete evidence artifact, outside Product Memory: `outputs/host-motakamel-zero-row-review-20261007/READ_ONLY_EVIDENCE.json` under the task workspace. It contains both full observations, attribution/times, counts, projections, dictionary rows, inspected definitions and limitations; no database/backup binary or credential is committed.
+
+Canonical row SHA-256: **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**. Method: all object keys sorted using JavaScript default sort, JSON.stringify, UTF-8 without BOM. This is a client evidence fingerprint, not a raw SQL physical-row hash or atomic snapshot.
+
+| Identifiers / scope | Current values |
+|---|---|
+| UKeyID | 83158763-eb4b-4f49-b244-84e419d373e7 |
+| i_code / ii_code / p_code | DBL_P001_ITEM_A each |
+| w_code / Branch_no / m_measure / Measure_Code / p_size | 1 / 1 / UA / UA / 1 |
+| doc_type / doc_no / record_no / serial_no | 11 / 0 / 0 / 1 |
+| PKDoc / PKTransDocType / PKSubDocType | 0-0-0-0-1 / 0 / 0 |
+| i_date / expr_date / Mnfctr_Date | 2026-10-07 00:00:00 / 1900-01-01 00:00:00 / NULL |
+| Vendor_No / Customer_No / CmndID | NULL each |
+| gr_flag / FinishTransfer / G_Code_Tmp / I_Size_Tmp | true / false / 001 / 1 |
+
+All returned ordinary/sub/free/pack/opening quantity fields and i_cost/stk_cost/i_rate remain **0**. Field names alone were not promoted into universal inbound/outbound/balance meanings.
+
+### Locally defined quantity effect, not event classification
+
+The inspected **dbo.FindAvQty** definition's branch/warehouse path sums inout_qty + inout_fqty and inout_sqty + inout_sfqty, with item/package/expiry/batch handling. Current Item A has i_size=1, p_code=0, p_size=1 and expiry/batch use false. Its **Item_Detail_Units** row binds I_Code/P_Code to Item A, Measure_Code=UA, I_Size=1, Unit_Level=1. Only after verifying the function definition contains read-only SELECT logic, SELECT invoked `dbo.FindAvQty(1,N'DBL_P001_ITEM_A',1,N'',NULL,NULL)`; result **0** at 21:00:07.
+
+At **20:58:50.7393024+03:00**, a direct exact-scope projection found one row for branch 1 / warehouse 1 / UA / package 1 and each sum of **inout_qty, inout_sqty, inout_fqty, inout_sfqty = 0**. The row has no nonzero contribution to this inspected local available-quantity computation; its business class and the preview's exact query path are still unproven. No general missing-row/connector extraction rule follows.
+
+**CheckQtyNoMinus**, the observed AFTER Insert/Update trigger, calls FindAvQty and raises a negative-quantity error under its condition; its inspected definition does not insert the row. **AvQty_Item_Mov** aggregates into **AV_QURY**, using item_mov for one report type and item_store for another. It contains INSERT into AV_QURY, not item_mov, and was **read, never executed**. Presence alone does not establish use by this preview. Targeted read-only installed inv.exe string search for literal item_mov inserts/doc_type=11 predicates returned no matches; this cannot exclude dynamically assembled code. No decompilation/patching or application execution was used for that search.
+
+### Distinct dictionaries and missing binding
+
+Current local rows:
+
+- **doc_types.doc_type=11:** Arabic **إعتماد فاتورة**, English NULL.
+- **TransDocType.PKTransDocType=0:** Arabic **مخزون الافتتاح**, English **Open Qty  s**, language rows 0–3. No selected PKTransDocType=11 row was returned.
+
+Neither description is assigned to the movement's business role. No item_mov FK to either dictionary or document header was found; its observed FKs bind item_detail, Item_Detail_Units, Measure and branch masters. The targeted SQL-module search did not establish the binding of doc_types to item_mov.doc_type=11 or this zero-row insertion path. **Get_Group_Amt_Bills** has an unrelated **@Type_Group=11** context; that value is not this row's doc_type definition. The earlier Bills.Bill_Type versus journal.doc_type namespace distinction remains intact.
+
+### Related documents, chronology and preserved masters
+
+Exact **COUNT_BIG**, not merely partition metadata, returned **0** in each of these 18 checked business tables:
+
+`Bills, Bill_detail, RT_BILLS, rt_Bill_detail, gr_note, gr_detail, rtnincm_note, rtnincm_det, Good_Trans_M, Good_Transfer, stk_adjustment, stk_adjustment_det, journal, Journal_Master, IncmRqustMstr, IncmRqustDtl, IncomRqustMstr, IncomRqustDtl`.
+
+The request spelling variants were checked separately, not treated as aliases. **opn_stock=0; item_store=0; total item_mov=1**. None of the empty checked tables can contain a header/detail matching this row's identifiers or a new related transaction. This is **no related business document found in the checked scope**, not a whole-ERP audit or proof against undocumented relationships.
+
+Users_Logs queries returned no selected-table row in the relevant post-20:18 interval and no match for this UKeyID; audit completeness was not established. No producer/timestamp inference is made from missing logs.
+
+Earlier post-Warehouse/pre-report **20:28:23** count was 0, post-preview **20:40:37** count was 1, and this review **20:55:08–21:00:07** stayed 1 with a fully equal row. The observed schema has i_date/expr_date/Mnfctr_Date but no insertion timestamp. **Midnight i_date and a NEWID-default GUID are not insertion clocks.** The time bracket does not establish preview-only causality.
+
+Nine complete protected records (Warehouse, three accounts, two SAR links, Unit, Group and Item) exactly matched their prior **20:40:37** full rows after key-sorted JSON comparison. Counts remain W_DETAIL=1, Account=3, Account_Cur_Detail=2 and Measure/i_group/item_detail=1 each. Paused-UI live SELECTs are not atomic/frozen acquisition or qualified least-privilege connector reads.
+
+### Decision and deliberate non-rerun
+
+**B) Controlled Zero = PARTIAL.** The earlier explicit scoped UI zero is noncontradicted by the current row quantities and local quantity function. No nonzero stock/business state was found in the checked scope; BLOCKED on that ground is not justified. However the precise doc_type=11 role and potential report insertion behavior remain **UNRESOLVED**, so PASSED is not claimed.
+
+The optional single reread was not performed because the preceding possible persistent report effect is still unexplained; safe side-effect-free regeneration is not established. No fresh preview, before/after-rerun comparison or repeatability proof is fabricated. This does not claim every report writes data.
+
+**Warehouse Save/reload PASSED; S1 accepted; S0b PARTIAL; S2/S3 NOT STARTED.** No Gate A/B/C, connector/canonical, PARTNER-VALIDATED or PILOT-QUALIFIED promotion. Narrow remaining evidence concerns the exact local report/initialization insertion path or authoritative binding for item_mov.doc_type=11. Further runtime/report experiment requires separately bounded authorization acknowledging the unresolved possible source effect. Preserve the row; cleanup or inbound is not a diagnostic substitute. **STOP.**
 
 ## Repository handling
 
