@@ -1444,6 +1444,34 @@ Cashbox remains blocked at unproven account-selector eligibility/full Save confi
 
 **Do not repeatedly ask the user to find this known route, retry clicks indefinitely, or create a Supplier-linked account/change permissions to force opening.** The next proposed scope is a bounded **read-only investigation of official Supplier launch/help prerequisites and available relevant diagnostics**, before any Add/Save trial. Such a scope must preserve current accounts/security and explicitly stop if it would require configuration or provisioning. **STOP: cause unresolved; no automatic fix authorized.**
 
+## Host bounded Supplier root-cause stop and payment-route recommendation — 2026-10-08
+
+Accepted **e315fc9**; user allowed at most **one further Supplier opening attempt**, bounded read-only process/window/log/installed-help investigation, a comparison with another Purchase input, then stop if no small proven remedy. **Final: `Supplier UI = BLOCKED — ROOT CAUSE UNRESOLVED`.** No repair/provisioning was attempted or inferred as required.
+
+### One timed attempt, windows/processes and explicit coverage limits
+
+The sole further Supplier action was official **`Control_L+j`** on fresh Purchase **136168 / Prch.exe**, **14:18:09.339 → 14:18:09.460+03:00** (tool timestamps UTC 11:18:09). Current screenshot/accessibility retained existing Purchase Invoice/dashboard surfaces; no Supplier child/master, error dialog or new available top-level target appeared. Final enumeration still had no Supplier target. This checks windows exposed by Computer Use, **not an exhaustive native inventory of invisible/non-enumerable windows**, so a hidden implementation object is not conclusively excluded. No second Supplier attempt.
+
+Read-only process snapshots at **14:17:28.7376813** and **14:19:07.3421773+03:00** showed the same seven EFA process IDs: Admin 62628, GL 30180, GL_New 47216/62836/76252, inv 66628, Prch 70136. **No persistent new EFA process observed.** A 35-second Get-Process polling window ended **14:18:03.9261282**, BEFORE the actual attempt because of orchestration delay; it observed unrelated git/conhost processes, not new EFA processes. It is **not a transient-process trace covering the launch** and cannot rule out a very short-lived process at 14:18:09. The failure to cover the attempt is retained, not repaired by violating the user's one-attempt cap.
+
+### Logs, installed-file/help boundary and comparison
+
+Application log query **14:18:07 → 14:19:07.5907999+03:00** returned **NoMatchingEventsFound** for the entire bounded interval, not merely no matching crash name. Application readability was established in the preceding diagnostic. No related error/validation was seen in GUI. This does not exclude handled/silent exceptions, application guards, other logs or unlogged dependency failures.
+
+Top-level installed EFA inventory found the two official Help CHMs and ConfigWin7.xml, no top-level .log; this is not a recursive/application-wide log absence claim. A narrow technical-name read of **Prch.exe** did not identify a Supplier form or separate executable/dependency. **No missing DLL/OCX, responsible module, permission, license, initialization or saved-account prerequisite was proven.** Existing Explorer showed EFAHELP.chm selected, but Enter did not expose a new Help window; no Supplier-specific topic was read and no Help opening retry/decompile/install was used to extend the scope. Earlier v5 mapping Help is not Supplier master documentation. Do not infer that the installed files/documentation lack a Supplier topic or component merely because this bounded pass did not obtain it.
+
+Comparison used official **`Control_L+w` once**, without Add: **بيانات التوريد** opened visibly, then a stable tree/title confirmed that child in view mode with Save disabled. No download-data/search/report/save. Therefore **not all Purchase input-opening routes are failing**; it is not proof that Supplier is the only failing screen. Immediate metadata was asynchronous; the final stable state, not stale title alone, supports the comparison.
+
+### Preservation and route decision — stop, not Save qualification
+
+SELECT-only **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7**, **14:16:56.5734298 → 14:22:14.8209065+03:00**: Cashboxes/Suppliers/Banks=0; Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1. All **nine full master rows** and all **73 zero-movement fields** matched before/after, and the movement matched preserved baseline fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**. No same-database/whole-table or whole-database business audit beyond this scope is claimed.
+
+Artifact **`outputs/host-motakamel-supplier-bounded-rootcause-20261008/READ_ONLY_EVIDENCE.json`**; earlier evidence untouched. No Add/Save, master or business-field changes, Supplier/Cashbox/account creation, SQL writes, stock report/movement, settings/permissions, reinstall/DLL/OCX registration, backup/Restore, S2/S3 or connector/Gate/pilot promotion.
+
+**Recommendation: return to Cashbox**, not extend Supplier repair. Medium confidence in this relative next route, **not a claim Cashbox is Save-ready or absolutely the fewest mutations**: its actual Add editor is available; dedicated subsidiary cash-account/SAR requirements are documented and current linked category **4 — نقدية بالصندوق** is an existing bounded hypothesis. Its exact account-selector rule and complete Save configuration still require a separately authorized narrow qualification; **no 97070103 creation or specialization change is authorized here**. S2-R still needs a justified credit/payment account, is not shown to bypass the payment-reference blocker, and would prove inventory movement rather than purchase semantics. Cashbox preserves preferred **S2-P / Pilot #001** without another unresolved Supplier launch dependency.
+
+**S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL nonblocking for discovery; S2/S3 NOT STARTED. STOP at the user's unresolved-root-cause rule.** No further Supplier diagnosis or automatic fix proposed in this round.
+
 ## Repository handling
 
 The unrelated untracked `products/legacy-intelligence/research/.vscode/` directory was preserved and must remain unstaged. Explicit staging is limited to this evidence note and the README entry linking the current host decision. The authorized test identities and bounded observed values are documented here; backup binaries, database export files, credentials and unrelated files are not committed.
