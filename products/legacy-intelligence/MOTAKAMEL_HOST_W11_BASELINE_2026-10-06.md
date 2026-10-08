@@ -1472,6 +1472,36 @@ Artifact **`outputs/host-motakamel-supplier-bounded-rootcause-20261008/READ_ONLY
 
 **S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL nonblocking for discovery; S2/S3 NOT STARTED. STOP at the user's unresolved-root-cause rule.** No further Supplier diagnosis or automatic fix proposed in this round.
 
+## Host bounded Cashbox account-eligibility investigation — 2026-10-08
+
+Accepted **0a36338**. **Supplier UI = BLOCKED — ROOT CAUSE UNRESOLVED**, now temporarily frozen by explicit user decision; no Supplier launch/diagnosis this round. One bounded read-only Cashbox eligibility investigation only, no account specialization changes or new **97070103**. **Final: CASHBOX ACCOUNT F9 ELIGIBILITY = UNRESOLVED.**
+
+### Current Help and existing accounts — documented versus observed
+
+Computer Use freshly opened installed official **v5** Help from chart/Cashbox F1: **EFAHELP.chm::/1801.htm** and **/1803.htm**. Chart Help documents that **الحساب مرتبط** assigns an account to a designated task/system/screen; main-account linkage propagates to descendants, and subsidiaries require at least one activated currency. Cashbox Help describes F9 selecting subsidiary chart accounts and cash-account balances by currency. **Neither inspected text explicitly identifies option 4 as this F9's necessary/sufficient condition.** The accepted actual label **4 — نقدية بالصندوق** is a candidate specialization, not a proven predicate merely by its existence; no option was selected/changed here.
+
+Both saved children were selected in chart view only, not Edit. Stable subsequent accessibility states bound the correct names to linked display **1-أخرى**: **97070101 / DBL_TEST_CHILD_20261007**, **97070102 / DBL_TEST_TRANSFER_INTERMEDIARY_20261007**. Immediate stale metadata after selection was not accepted. SELECT confirms both **parent 970701 / type 2 / rank 2 / Balance Sheet / ac_close=false**, **Account.ac_type=NULL / ClassType=NULL**, and active/default **SAR**. Thus subsidiary + SAR does not establish sufficiency for the current selector. UI **1-أخرى** alongside NULL storage is not proof of a numeric 1/4-to-column mapping.
+
+### One F9 observation and bounded local logic — no identified exclusion rule
+
+An identity-free Cashbox Add draft was opened for inspection only; account remained blank. **One F9 at 15:22:28.300 → 15:22:28.430+03:00**, actual picker **2496384**, showed empty account rows, disabled **1- الفعال**, blank code/name/type search values. No value accepted. Picker cancelled, then draft cancelled through actual **2168456 / هل تريد التراجع → نعم**; final Add enabled, Save/Cancel disabled and draft number/account/name blank. An initial indexed Add was rejected as unavailable before delivery; fresh screenshot coordinate action opened Add once. No account Add/Edit or Save action.
+
+Read-only catalog: **ac_type** nullable nvarchar without default; **ClassType** separate smallint. Only directly relevant **GetCash / GetPrivAccountCash** definitions returned by the bounded cash/account filter. GetCash joins already saved cashboxes, Account and currency rows and requires subsidiary/not closed; **it is not proven to implement Add F9**, nor does it establish role 4. One recent-query-cache reading after F9 found no matching Account statement under that query's bounded filters, not proof the application did not query SQL. A single installed **GL_New.exe** printable-string pass in Unicode/ASCII for cash/ac_type SQL fragments yielded no matches; no disassembly/decompile/hooking, trace setup or broader reverse engineering followed.
+
+| Evidence class | Result |
+|---|---|
+| HELP-DOCUMENTED | Cashbox references its subsidiary chart account; account currency binding; specialization serves designated screens. Not a verified complete current selector/Save predicate. |
+| PROBABLE, NOT PROVEN | Cash specialization **4 — نقدية بالصندوق** may account for exclusion of current **1-أخرى** children. Confidence moderate in relevance, insufficient to assert necessity/sufficiency or identified cause. |
+| NO PROOF FOUND / UNRESOLVED | Actual F9 SQL/filter; option-4 storage mapping; additional Nature/Classification/rank/currency/used-account/permission rules. Absence of proof does not prove their absence. |
+
+**No fully qualified dedicated-account proposal is promoted from this unresolved rule.** A role-4 mutation experiment would require a separate explicit decision and exact values/restoration boundary; none was authorized/executed here. Do not reinterpret 97070101/97070102 as cash accounts or silently specialize the parent. **Stop this investigation rather than opening a wider reverse-engineering loop.**
+
+### Preservation, precision disclosure and retained gates
+
+Integrated Windows observer **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7**: first read **15:18:09.3325758**, final accurate read **15:28:39.1099273+03:00**. Counts remain Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1; **Cashboxes/Suppliers/Banks=0**. All **nine complete master rows and 73 movement fields in the final full-precision read match accepted preceding evidence**; retained movement fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**. Initial local formatter dropped fractional seconds from three Account CrtdOn values; corrected final read preserves them and was compared to the prior exact source evidence using invariant date normalization. Do not claim the initial same-turn pair was full-precision proof or reconstruct its missing fractions. No whole-database audit claimed.
+
+Local artifact **outputs/host-motakamel-cashbox-eligibility-20261008/READ_ONLY_EVIDENCE.json** and SELECT-only reader retained; prior baseline artifacts unchanged. Initial sandbox authentication failed SSPI; reads used the existing ordinary-user integrated context outside sandbox, without credential/security modifications. No Account/Cashbox/Purchase Save, new master, account change, SQL business writes, stock report/movement, backup/Restore, Windows/Motakamel settings, S2/S3 or connector/Gate/pilot promotion. **S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL; Supplier frozen. STOP.**
+
 ## Repository handling
 
 The unrelated untracked `products/legacy-intelligence/research/.vscode/` directory was preserved and must remain unstaged. Explicit staging is limited to this evidence note and the README entry linking the current host decision. The authorized test identities and bounded observed values are documented here; backup binaries, database export files, credentials and unrelated files are not committed.
