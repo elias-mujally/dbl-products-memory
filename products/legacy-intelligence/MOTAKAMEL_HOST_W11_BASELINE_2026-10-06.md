@@ -1418,6 +1418,32 @@ Integrated-authentication **SELECT only** on **DESKTOP-8QRQT7R\YSEDU / EFA12026 
 
 New local artifact: **`outputs/host-motakamel-supplier-continuation-20261008/READ_ONLY_EVIDENCE.json`**; earlier decision/Cashbox/zero artifacts preserved. No Add/Save attempt in any editor, account specialization/record edit, Purchase Save, stock report, transaction, SQL write, backup/Restore, S2/S3 or connector/Gate/pilot promotion. **STOP: Supplier Add discovery remains incomplete, with manual target opening required rather than invented requirements.**
 
+## Host official Supplier route opening diagnostic — 2026-10-08
+
+The user identified **القائمة → المدخلات → بيانات الموردين**, but reported no effect when clicked. This bounded diagnostic retained all prior no-Save/no-security/no-provisioning boundaries. Starting PM commit **9943feb**. **S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL; S2/S3 NOT STARTED.**
+
+### CURRENT-UI PROVEN: official route and observed no-open result
+
+In Purchase **136168 / process:C:\EFA\Prch.exe**, current **682×557** screenshots captured normally. Clicking **القائمة**, then the **left arrow** of **المدخلات**, expanded an actual submenu with **بيانات الموردين / Ctrl+J**, بيانات التوريد / Ctrl+W, بيانات الأصناف, الحسابات and بيانات العملاء. This materially corrects the earlier navigation gap: clicking the Inputs category label had selected its ribbon, while the arrow exposes the submenu. **The route exists on this Host**, independently of the similarly named supplier report `avend.rpt` and the supplier/item mapping screen. Earlier unsuccessful navigation remains historical, not proof the route is absent.
+
+One image-grounded click on **بيانات الموردين** closed the menu; no Supplier master or error/validation dialog appeared. A stable follow-up screenshot/accessibility showed only the existing Purchase Invoice/dashboard child surfaces, not a Supplier editor. Then **one `Control_L+j`** using the shortcut displayed in the actual menu produced no observed Supplier window/dialog either. Fresh and final top-level enumerations showed no new Supplier target. Purchase remained in existing **فاتورة مشتروات فورية** view mode with Save disabled. No Add, business-field entry or Save occurred. Immediate post-click accessibility still exposed old menu nodes; the stable subsequent observation, not those stale nodes, supports the no-form result. No additional opening retries were made.
+
+**Supplier route = PROVEN; Supplier opening = BLOCKED in these tests; cause = UNRESOLVED; Supplier Add/defaults/account/currency/branch/Save qualification = NOT REACHED.** The two observed actions are not proof that every launch mechanism fails or that the command was internally dispatched to a particular module. No account specialization, missing master prerequisite, license, permission or installation defect is established.
+
+### Bounded read-only diagnostics and source preservation
+
+Application log read was independently confirmed accessible. Inspection for recent **1000/1001/1026** events matching Prch.exe / C:\EFA / GL_New.exe in the preceding 15-minute window found no matches. This does not exclude handled/silent exceptions, other logs or an application guard. A filtered local EXE inventory returned Admin.exe, GL_New.exe, GL.exe and Prch.exe; no expected launch target/dependency was proven, so filenames are **not a missing-module diagnosis**. No binary was launched/modified or permissions changed through this check.
+
+SELECT-only on **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7** at **14:08:35.7333744+03:00**: Cashboxes=0, Suppliers=0, Banks=0; Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1. All **nine complete protected master rows** matched the prior complete **06:40:11.0093091+03:00** evidence; all **73 movement fields** matched that read and the preserved canonical baseline, fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**. This is a current versus prior bounded comparison, **not a new same-turn pre/post pair or whole-database audit**.
+
+New local artifact **`outputs/host-motakamel-supplier-route-diagnostic-20261008/READ_ONLY_EVIDENCE.json`** preserves findings/current source rows without image payloads. Earlier artifacts untouched. No supplier/cashbox/account/transaction Save, account specialization, Purchase/report generation, stock movement, SQL writes, backup/Restore, installation/restart/security change, S2/S3, connector/Canonical or Gate/pilot promotion.
+
+### Retained decision and next boundary
+
+Cashbox remains blocked at unproven account-selector eligibility/full Save configuration; Supplier is now blocked at **opening its proven official master route**, not at an unknown location. Neither is qualified or shown to require fewer mutations. Confidence is high in the route/no-form observations, low in underlying cause and relative provisioning cost.
+
+**Do not repeatedly ask the user to find this known route, retry clicks indefinitely, or create a Supplier-linked account/change permissions to force opening.** The next proposed scope is a bounded **read-only investigation of official Supplier launch/help prerequisites and available relevant diagnostics**, before any Add/Save trial. Such a scope must preserve current accounts/security and explicitly stop if it would require configuration or provisioning. **STOP: cause unresolved; no automatic fix authorized.**
+
 ## Repository handling
 
 The unrelated untracked `products/legacy-intelligence/research/.vscode/` directory was preserved and must remain unstaged. Explicit staging is limited to this evidence note and the README entry linking the current host decision. The authorized test identities and bounded observed values are documented here; backup binaries, database export files, credentials and unrelated files are not committed.
