@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Current authorized cash-account trial — 2026-10-08: Account Save / independent Reload / SAR binding PASSED; Cash Account Selector Eligibility = PASSED at the picker/code/name/normal-field-exit boundary only.** One official Save created `97070103 — DBL_TEST_CASH_ACCOUNT_20261007`, parent 970701, subsidiary 2, derived rank 2, inherited Balance Sheet, linked allocation `4 — نقدية بالصندوق` (`Flags_No=4`), active/default SAR. Choosing 4 showed no other visible field change or additional requirement. Cashbox F9 offered this account, double-click returned code/name and Tab left normally without validation. **Cashbox financial currency grid remained empty: SAR is source/account-binding proven, NOT a displayed Cashbox currency or full Cashbox Save proof. Allocation 4 alone is NOT proven necessary/sufficient or causal.** Cashbox Add cancelled; Cashboxes/Suppliers/Banks=0. Eight of nine old protected master rows and all 73 movement fields unchanged; root Acc_Sort 3→4 observed after chart reopening without manual root edit, cause unresolved. S0b PARTIAL / BOTH BLOCKED at the remaining payment-master/workflow gate; Controlled Zero PARTIAL; Supplier frozen; S2/S3 NOT STARTED. Details in the dated trial section below. Older empty-F9/no-97070103 statements are historical where superseded; do not resume their completed Discovery.
+
 **Latest bounded Cashbox/Supplier decision investigation — 2026-10-08: DECISION UNRESOLVED; SUPPLIER ADD INSPECTION INCOMPLETE.** Cashbox F9 remains empty with blank search filters. Current chart UI explicitly offers linked specialization `4 — نقدية بالصندوق` and `7 — موردين`; installed official v5 Help documents specialization for designated systems/screens and inheritance from the main account. This is a stronger cash-filter hypothesis, NOT proof of the actual F9 predicate or authority to change existing accounts. A blank chart Add was inspected without identity, temporarily set to subsidiary / supplier linkage, then officially cancelled; no Supplier editor appeared from selection/Tab alone. Supplier master Add/defaults/Save rules were not reached. The final Purchase menu capture and one fresh-window recovery both failed with `window crop is outside captured monitor`; GUI input stopped. No workflow is proven shorter or executable. Safest next single bounded test: complete the requested non-saving Supplier Add inspection after manual window restoration / official master opening, not create another account first. At 05:34:14–06:12:12+03:00 Cashboxes/Suppliers/Banks remained 0; all nine protected complete rows and the 73-field zero-row fingerprint were unchanged. S0b PARTIAL / BOTH BLOCKED; S2-P preferred; Controlled Zero PARTIAL; S2/S3 NOT STARTED. Details below; no Save, SQL write or stock report.
 
 **Latest non-saving Cashbox discovery — 2026-10-07: ACCOUNT ROLE DOCUMENTED, CASHBOX SAVE / ACCOUNT-SELECTOR ELIGIBILITY UNRESOLVED.** Official Accounting → Inputs → Cashboxes → Add proposed draft number 1; account/name/foreign name/sequence stayed blank, all type/POS/stop flags unchecked, currency/balance grid empty. Installed version-5 Help binds a cashbox to its own subsidiary chart account and documents account-level currencies/balances. However the current active-account F9 lookup was empty despite the two existing subsidiary SAR accounts. No account was accepted or created; the exact exclusion rule was not identified, and GetCash's source definition is NOT proof of the Add selector's implementation. No nature/classification/linkage choice or complete Save requirements are qualified. Cancel was confirmed on the actual dialog and the final form had Add enabled / Save disabled. At 22:45:18–22:59:53+03:00 Cashboxes/Suppliers/Banks remained 0; all nine protected complete rows and the zero item's 73-field fingerprint were unchanged. Cashbox A + one dedicated cash-account is a conditional proposal, not a proven sufficient/shortest S2-P path; Supplier A cost remains UNRESOLVED without expanding its discovery. S0b PARTIAL, BOTH BLOCKED, S2-P preferred; Controlled Zero PARTIAL remains nonblocking for the authorized discovery only. No Save, stock report, S2/S3, SQL writes or account/master changes. Details and the next narrow question below.
@@ -1501,6 +1503,60 @@ Read-only catalog: **ac_type** nullable nvarchar without default; **ClassType** 
 Integrated Windows observer **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7**: first read **15:18:09.3325758**, final accurate read **15:28:39.1099273+03:00**. Counts remain Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1; **Cashboxes/Suppliers/Banks=0**. All **nine complete master rows and 73 movement fields in the final full-precision read match accepted preceding evidence**; retained movement fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**. Initial local formatter dropped fractional seconds from three Account CrtdOn values; corrected final read preserves them and was compared to the prior exact source evidence using invariant date normalization. Do not claim the initial same-turn pair was full-precision proof or reconstruct its missing fractions. No whole-database audit claimed.
 
 Local artifact **outputs/host-motakamel-cashbox-eligibility-20261008/READ_ONLY_EVIDENCE.json** and SELECT-only reader retained; prior baseline artifacts unchanged. Initial sandbox authentication failed SSPI; reads used the existing ordinary-user integrated context outside sandbox, without credential/security modifications. No Account/Cashbox/Purchase Save, new master, account change, SQL business writes, stock report/movement, backup/Restore, Windows/Motakamel settings, S2/S3 or connector/Gate/pilot promotion. **S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL; Supplier frozen. STOP.**
+
+## Host authorized single cash-account trial and unsaved Cashbox selector — 2026-10-08
+
+### Scope and pre-mutation evidence
+
+Accepted starting checkpoint **540c223**. The user authorized exactly one account to test allocation 4, then Cashbox Add/F9 without Cashbox Save. Previous rule Discovery was closed and Supplier remained frozen. This is a controlled master-data experiment, not an inbound transaction or proof of accounting suitability.
+
+SELECT-only integrated observer **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7**, **16:07:45.4050633+03:00**, confirmed 97070103 absent; Account=3, Account_Cur_Detail=2, Warehouse/Unit/Group/Item=1 each, keyed item_mov=1, Cashboxes/Suppliers/Banks=0. The existing corrected SELECT reader was extended only to include the approved new identity; no SQL write, backup or Restore.
+
+### CURRENT-UI PROVEN: approved draft, allocation comparison and one Save
+
+Official **إدارة الحسابات → المدخلات → دليل الحسابات → إضافة**, fresh GL_New.exe window **95554874**, year 2026 / branch 1 / Adm. Add was delivered once. The initially narrow window clipped the right-hand editor while the accessibility tree exposed it; ordinary native maximization made the complete editor visible without Windows/DPI/security changes. Asynchronous focus/state was reconciled by new observations, not repeated Save or blind typing. One stale ribbon-element index during later reopening was rejected as unavailable; refreshed screenshot navigation recovered it.
+
+Entered only approved number **97070103**, Arabic-name field **DBL_TEST_CASH_ACCOUNT_20261007**, parent **970701**, type **2 — فرعي**. Motakamel derived rank **2** and displayed inherited **الميزانية العمومية / Balance Sheet**. Foreign name, group/classification, cash flow and financial-analysis fields remained blank; existing default credit nature, TDS/stop settings and limits were not manually changed.
+
+**BEFORE → AFTER allocation:** `الحساب مرتبط` changed **1-أخرى → 4-نقدية بالصندوق** using its actual dropdown. Number/name/parent/type/rank/report, blank other classifications/flow/analysis/foreign name and credit-nature/stop/TDS defaults showed no other visible change; no new control or validation appeared. This is an observed form comparison, not proof of hidden business logic. SAR was activated through the official grid checkbox; no other currency or limits were entered.
+
+**Exactly one Save**, with no validation or retry, created the account. Initial post-Save SELECT **16:21:28.1526319+03:00** confirmed persistence and SAR default binding. The saved chart tab was closed, reopened from Inputs → Chart of Accounts, and the new tree row selected independently: code/name/parent/type/rank/report/allocation/SAR reloaded correctly, Save/Edit mode not entered. Post-reload SELECT was observed at **16:24:35.6133531+03:00**.
+
+| Saved field | Verified value |
+|---|---|
+| a_code / a_name | 97070103 / DBL_TEST_CASH_ACCOUNT_20261007 |
+| A_Parent / a_s_m / A_Level | 970701 / 2 / 2 |
+| A_Report / Flags_No | Balance Sheet / 4; current UI displays 4-نقدية بالصندوق |
+| Currency row | SAR; Suspend_Cur=false; Default_Cur=true; Max_Amt=0; Min_Amt=0 |
+| ac_type / ClassType / CashFlowType / FC_Code / A_T* | NULL; no guessed property filled |
+| Dr / ac_close / UseTDS / TDSType | false / false / false / 1; unchanged visible defaults, no new nature interpretation |
+| AccountForCustomer / ap_in_tbal / FinishTransfer / FinishUpdate | false |
+| a_name_eng / limits / AccNote | NULL |
+| Doc_Serial / CrtdBy / CrtdOn | 4 / 1 / 2026-10-08T16:21:00.823 |
+| MdfdBy / MdfdOn / MdfdNo | NULL / NULL / 0 |
+| Acc_Sort | NULL immediately after Save → 3 after chart reopening |
+
+Root **970701 Acc_Sort 3→4** was observed after reopening, not in the initial post-Save read. No manual parent edit occurred; cause remains unresolved. Existing children 97070101/97070102 and their currency links remained fully unchanged. Do not claim all old Account fields unchanged or start an unrelated sort/nature investigation.
+
+### CURRENT-UI PROVEN: selector acceptance; currency-display limit
+
+Official **Inputs → Cashboxes → Add** proposed draft number **1**, not a saved final Cashbox ID. No Cashbox identity/type/sequence or financial-grid values were entered. One F9 from the account field opened actual lookup **6032498 / شاشــــة البحــــث العامه** with active filter fixed and code/name/type searches blank. It displayed one row **97070103 — DBL_TEST_CASH_ACCOUNT_20261007**; prior role-1 children and root were not offered in this observed result.
+
+Double-clicking only the new row returned its code and adjacent name display. Accessibility confirmed the complete name even though the long visible display was clipped. **Tab moved to the empty Cashbox-name editor (ID 2), without validation**, establishing normal acceptance/departure.
+
+**Cash Account Selector Eligibility = PASSED** specifically for visible F9 candidate → official selection → code/name resolution → normal departure. **SAR account binding = PASSED** independently by chart reload and source. **Cashbox currency display = UNRESOLVED/NOT PROVEN:** the financial grid stayed empty after selection and normal exit. No currency was fabricated or manually inserted. This does not qualify Cashbox Save, its complete mandatory fields, payment reference acceptance in Purchase, financial posting suitability, or Qty 37.
+
+The new allocation/display and stored Flags_No=4 are verified together; this strengthens the hypothesis but **does not prove allocation 4 alone caused inclusion or is a necessary/sufficient global F9 rule**. No controlled toggle, actual predicate trace or further account was authorized/performed. ac_type remained NULL, so do not misidentify it as this observed storage mapping.
+
+### Cancellation and bounded preservation
+
+Cashbox draft cancelled **تراجع → actual dialog 6096500 / هل تريد التراجع → نعم**. Final UI: number/account/name cleared, Add enabled, Save/Cancel disabled. No Cashbox Save was sent.
+
+Final SELECT **16:30:31.7728357+03:00**: Account=4, Account_Cur_Detail=3; Warehouse/Unit/Group/Item=1 each; keyed item_mov=1; **Cashboxes/Suppliers/Banks=0**. Same-turn full-precision complete-row comparison preserves **eight of nine old masters exactly**, with only root Acc_Sort noted above; all new account/currency fields remain stable after reload/Cancel. All **73 movement fields** equal both this turn's pre-read and the accepted preceding `READ_ONLY_EVIDENCE.json` zero row. Retained fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165** is preserved by field equality, not claimed newly recomputed. No whole-database audit or absence of every possible business side effect is inferred from this bounded check.
+
+Local full evidence: **outputs/host-motakamel-cash-account-trial-20261008/EXPERIMENT_EVIDENCE.json** plus SELECT-only **Read-CashAccountTrial.ps1**, with before/after-save/after-independent-reload/final snapshots and accessibility states. Original screenshots remain native conversation evidence; no screenshot payload saved/reencoded. Prior evidence/fingerprint artifacts untouched; database files/credentials not committed.
+
+**S0b PARTIAL / BOTH BLOCKED remains at full payment-master and workflow qualification, no longer at this account's selector acceptance. Controlled Zero PARTIAL; Supplier frozen; S2/S3 NOT STARTED.** S2-P remains preferred, not executable/qualified. Safest next proposal is a separately approved bounded Cashbox step addressing its remaining currency-display/minimum-Save evidence; no new account or Supplier investigation needed merely to repeat F9. No Cashbox/Purchase Save, SQL writes, stock report/movement, other master edit, backup/Restore, Windows/security changes, connector/Canonical expansion or Gate/PARTNER/PILOT promotion. **STOP.**
 
 ## Repository handling
 
