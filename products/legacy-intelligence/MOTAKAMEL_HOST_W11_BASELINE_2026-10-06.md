@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Current S3 debit-account qualification — 2026-10-09: Debit Account Semantics = PARTIAL; Debit Account Eligibility = BLOCKED at the conditional creation gate; S3 Draft Eligibility = PARTIAL.** Installed issue Help defines the debit destination charged issued-item value, with several ordinary-issue purposes rather than one universally mandatory expense role. Chart Help assigns expenses/revenues to Profit And Loss; current view and SELECT show the only existing main **970701** and all three children report **Balance Sheet**. No evidence qualifies this main as an expense parent, the candidate's nature/classification or a mixed-report descendant route. **97070104 / DBL_TEST_ISSUE_EXPENSE_20261009 was NOT created; no Add/Edit/Save or new issue draft was opened.** This is not a failed Save/lookup or proof that a new main is technically mandatory. Separate hierarchy/accounting decision is required before expanding beyond one conditional account. Final protected rows/counts remain identical, S2 remains intact, stock37. No existing role reused, posting, SQL business write or new master/configuration action. Details below; STOP before account or S3 Save.
+
 **Current non-saving S3 discovery — 2026-10-08, Cancel/source verification completed 2026-10-09: S3 Candidate = ordinary inventory issue; S3 Draft Eligibility = PARTIAL.** Official Inventory → Operations → Issue orders → Inventory issue → Add accepted Item A / Warehouse1 / UA / Qty5, displayed package1 and automatically valued the line at100 ×5 =500 in the inventory-currency cost column. No account/currency was selected and no Save occurred. Installed v5 Help describes the main account as the debit destination for issued-item value; existing inventory/transfer/cash roles are not qualified for reuse merely because their three children appear in F9. The draft was officially cancelled; bounded complete source rows/counts, the S2 document and scoped quantity37 match the fresh pre-discovery oracle. **S3 discovery started; S3 execution NOT STARTED; 32 is a future expectation, not an observed balance.** Next narrow gate is the appropriate issue-debit counterpart and its currency, not immediate Save. Controlled Zero remains PARTIAL; S2-P remains PASSED — LAB-PROVEN; no additional master, posting, stock-report generation, SQL write or architecture/gate promotion. Earlier S3-NOT-STARTED statements below remain historical for discovery, but still apply to execution. See the dated S3 section below.
 
 **Current authorized S2-P single-Save checkpoint — 2026-10-08: PURCHASE SAVE + INDEPENDENT RELOAD = PASSED; SCOPED INBOUND / CURRENT STOCK 37 = PASSED within this approved Host test.** One official immediate cash-purchase Save created invoice **1 / PKDoc 1-44-1-0-1**, Item **DBL_P001_ITEM_A**, **Warehouse 1 / Branch 1 / UA / package 1 / Qty 37 / cost 100 SAR / amount 3700 SAR / rates 1 / Cashbox 1**. Official First navigation independently reloaded it; a fresh correctly scoped stock preview displayed **37**, agreeing with the saved +37 movement and inspected FindAvQty result. Accounting rows linked to the same event exist, but final GL posting/accounting correctness is not qualified. All 11 protected masters, Cashbox/GetCash and the 73-field historical zero row remain identical; bounded rows/counts did not change across the single report preview. **S2-P executed and reconciled for this one positive case; S0b qualified only for this exact route/values, not all workflows. Controlled Zero remains PARTIAL, Supplier frozen, S3 NOT STARTED.** No second Save, manual posting, cleanup, SQL business write, backup/Restore or connector work. Earlier S2-NOT-STARTED/future-Save statements below are historical where superseded. See the dated checkpoint below; no capability implementation Gate A/B/C or partner/pilot promotion follows automatically.
@@ -1864,6 +1866,66 @@ These are **sequential live SELECT / bounded comparisons**, not an atomic databa
 Local artifact **outputs/host-motakamel-s3-issue-discovery-20261008/READ_ONLY_EVIDENCE.json**, SHA256 **83C73240BFAE62755D429D0DA6FA00B54C9A74E8AD5ED45FEDF7F8565869000C**, retains full before/after bounded source observations, identity/equality checks and separated visual/Help claims. Previously reviewed SELECT-only PurchaseDraft and S2Purchase readers were reused. Image payloads, database binaries or credentials are not committed.
 
 **S2-P PASSED — LAB-PROVEN remains accepted; Controlled Zero PARTIAL unchanged; S3 discovery PARTIAL, execution NOT STARTED; Supplier frozen.** No S2 modification/re-Save, direct SQL business write, master creation/change, independent posting, settings/security change, backup/Restore, connector/Canonical expansion or Gate A/B/C / PARTNER-VALIDATED / PILOT-QUALIFIED promotion. **STOP before any S3 Save.**
+
+## Host S3 debit-account semantics and conditional creation gate — 2026-10-09
+
+### Authority and evidence-class boundary
+
+The user accepted **5934a49** and conditionally permitted one independent **97070104 / DBL_TEST_ISSUE_EXPENSE_20261009 / SAR** only if its expense role, nature/classification/report and official Save path were justified. A new unqualified main/hierarchy requires a separate decision. No automatic parent970701, existing inventory/cash/transfer reuse, S3 Save, S2 change or SQL business write was authorized. The conditional gate was **not satisfied**, so this round stayed read-only: no account Add/Edit, no identity input, no account Save and no fresh issue Add. Phase C was not reached; no draft required cancellation.
+
+The current README/Host evidence and pilot/strategy/plan context preserve Pilot #001, primary Motakamel target, controlled quantities and the LAB/PARTNER/PILOT distinctions. Older AI_HANDOFF/CURRENT_STATUS/ROADMAP execution statements are historical where newer controlled Host evidence supersedes them. No build-state claim, architecture/Canonical change or code investigation was needed for this account-only question.
+
+### HELP-DOCUMENTED: debit destination is not one universal expense type
+
+Official F1 from the existing inventory issue **view**, window7668528, opened installed **C:\EFA\EFAHELP.chm::/3303.htm**, labelled **Motakamel Plus v5**. Current native Help describes:
+
+- **رقم الحساب** identifies the account charged the issued items' value and represents the **debit side**; account name resolves after identification.
+- Issue currency is selected from currencies already linked to that account in the chart. Foreign-currency conversion is conditional; no FX setup/change is authorized.
+- Use cases include production materials, non-sale stationery/spares, employee issues, zakat and conditional sale-stage flows. It does **not** mandate a single expense/cost/custody classification for every ordinary issue.
+- Other client/supplier/cost-center/issue-method requirements are conditional on selected role/configuration; their existence does not authorize a customer/supplier chain or classify this test as sale/consumption.
+
+Thus the **debit-destination role is documented**. A current generic debit event is not sufficient to decide the economic classification of the intended trial, or the new account's normal Dr/Cr nature. No broad general-accounting inference was substituted for Motakamel proof.
+
+Official chart F1 from view **GL_New.exe / 95554874** opened **C:\EFA\EFAHELP.chm::/1801.htm — الدليل المحاسبي**, also v5. Native Help distinguishes:
+
+| Documented chart concept | Meaning and limit |
+|---|---|
+| Operational type | Users transact on subsidiary accounts; main levels aggregate automatically. It does not prove a new candidate's current Save eligibility |
+| Parent/rank | First-level main uses parent0; other accounts identify an existing main; rank derives from parent's rank. No standalone parent0 subsidiary route is qualified |
+| Profit And Loss | Expenses/revenues are examples; balances close at period end into profit/loss |
+| Balance Sheet | Assets/liabilities are examples; balances carry into a new period |
+| Specialization/linkage | A main's **الحساب مرتبط** linkage propagates to descendants; this is **not explicit report-inheritance documentation** |
+| Currency | Activate at least one subsidiary currency via the official grid; multiple currencies allowed; main accounts use the entity's local currency. Limits are documented optional; no new limits/currency configured |
+
+The pages inspected provide no exact Dr/ClassType/linkage value that can be safely filled for this candidate, no permission to mix an expense child into this particular Balance Sheet main, and no current acceptance proof for that hierarchy. These are older installed instructions, not a current Save validation or demonstrated closing/posting result. No chart template/initialization/Account Numbering was invoked.
+
+### CURRENT-UI / SOURCE PROVEN and the stop decision
+
+Only view navigation was used: native maximization, saved chart tab and selection of existing **970701** from the tree; Help opened/read/closed normally. Current view showed **970701 / DBL_TEST_MAIN_20261007 / parent0 / main1 / rank1 / الميزانية العمومية**, credit radio and unchecked SAR grid activation. No nature/report/linkage/currency was edited. Three existing children were visible in the tree, not selected as issue destinations.
+
+Current complete SELECT rows confirm **four Accounts only**, the main and three children; all **A_Report=Balance Sheet / Dr=false / ClassType=NULL**. Children have parent970701, subsidiary2/rank2 and their previously qualified active/default SAR links. Main/first two children have Flags_No1; cash child has4. Those captured raw values are not new expense nature/classification rules. Candidate number/name is absent; no existing Profit-And-Loss/expense main was found among all four current Accounts. Main has no Account_Cur_Detail row, distinct from the subsidiary SAR links.
+
+**Important limit:** this does not prove Motakamel rejects a Profit-And-Loss child under a Balance Sheet parent, or that a new root is technically mandatory. No forbidden Save was used to test either. The current main's reporting class, automatic ancestor roll-up documented in Help, and lack of an approved expense hierarchy mean **its accounting suitability is not established**. Reusing it or overriding a child's report would be an unsupported design choice, not completion of the conditional authorization.
+
+| Required classification | Result | Exact boundary |
+|---|---|---|
+| Debit Account Semantics | **PARTIAL** | Debit-destination and currency source HELP-DOCUMENTED; specific expense/cost/custody nature and candidate classification/parent unresolved |
+| Debit Account Eligibility | **BLOCKED** | Conditional creation gate not met; not a Save rejection, F9 exclusion or invalid candidate number |
+| S3 Draft Eligibility | **PARTIAL** | Accepted prior Item/Warehouse/UA/package1/Qty5/automatic500 evidence remains; new account/SAR selection not tested |
+
+The candidate remains **a proposal only**. No allocation, Nature, Classification, Cash Flow, linked account, parent/report override or new main identity was invented. A debit journal side does not on its own determine the account's normal-balance radio. SAR's availability in the chart does not prove a new candidate has a persisted link.
+
+**One next recommendation:** obtain a narrow explicit expense-purpose/hierarchy decision and qualify the smallest official **Profit-And-Loss expense route without saving first**, including whether a separate main is actually necessary. If a new main is needed, its identity/scope needs separate approval before creating it; this round's one-account authority does not silently expand to two. Do not modify main970701 or reuse97070101/02/03 to evade the gate. STOP before account or issue Save; no unconditional new-root requirement is asserted.
+
+### Read-only preservation checkpoint
+
+Fresh pre-inspection SELECT: **2026-10-09 00:40:53.595182+03:00**. After native Help/view inspection: **00:45:27.365253**, S2/current-stock read **00:45:34.3092127+03:00**. Identity remained **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID7**. Complete protected snapshot rows excluding observation time and all **21 monitored table counts** match exactly before/after; Account4 / Account_Cur_Detail3 / Warehouse1 / Unit1 / Group1 / Item1 / Cashbox1 / Suppliers0 / Banks0.
+
+Current complete bounded Bills/Bill_detail, gr_note/gr_detail, journal/Journal_Master, item_store/opn_stock rows also match the preceding accepted S3-discovery source checkpoint, as do inspected FindAvQty definition/parameters, scoped quantity and movement totals. **Invoice1 / PKDoc1-44-1-0-1** remains intact; journal2/master1 and both Item A movements are unchanged. **Available quantity remains37, Branch1 / Item A / Warehouse1, UA/package1 separately bound.** No issue movement, new accounting movement or protected-record change was observed. No stock report was regenerated. These are sequential live bounded reads, not an atomic/exhaustive database audit or implementation acquisition-gate proof.
+
+Local **outputs/host-motakamel-s3-debit-account-qualification-20261009/READ_ONLY_EVIDENCE.json**, SHA256 **9D3BD5E23B2DF1BB1CDE029A1B4DA88D3032E04FB473162E2E867C8AD8AC1C93**, retains current before/after rows, current S2/stock results, comparison outcomes and separately labelled Help/UI/decision limits. No image payload, database binary or credential is committed.
+
+**S2-P PASSED — LAB-PROVEN; Controlled Zero PARTIAL; S3 execution NOT STARTED; expected32 remains future; Supplier frozen.** No account/issue Save, existing account edit, S2 modification, independent posting, stock-report generation, SQL business write, new master, backup/Restore or settings/security change. No connector/Canonical expansion, Gate A/B/C or PARTNER/PILOT promotion. **STOP at the conditional account-creation gate.**
 
 ## Repository handling
 
