@@ -1387,6 +1387,37 @@ SELECT on **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7**, at **05:34:14.4228054 
 
 Local evidence: `outputs/host-motakamel-payment-decision-20261008/READ_ONLY_EVIDENCE.json` (full before/after protected source rows, bounded metadata, findings/limitations; no screenshot payloads). Prior zero-row and Cashbox artifacts were not overwritten. No account/cashbox/supplier/invoice Save, SQL writes, stock report, stock movement, backup/Restore, S2/S3, connector/Canonical expansion or Gate/PARTNER/PILOT promotion. **STOP with the decision investigation partially blocked, not falsely completed.**
 
+## Host bounded Supplier discovery continuation — 2026-10-08
+
+Accepted starting checkpoint: **05b2be9**. This continuation authorized only ordinary window recovery and non-saving Supplier Add discovery. No Cashbox/Supplier route is adopted; **S0b PARTIAL / BOTH BLOCKED, Controlled Zero PARTIAL, S2/S3 NOT STARTED** remain unchanged. The preceding investigation was not repeated and account specialization was not changed.
+
+### CURRENT-UI PROVEN: usable Purchase capture, not a crop root-cause finding
+
+Fresh enumeration returned Purchase **136168 / process:C:\EFA\Prch.exe**. Rehydration/activation succeeded. Accessibility-only initially returned null; the subsequent screenshot successfully displayed the same Purchase window at **682×557**, already non-maximized. No resize input, Windows/DPI/permission/security change or compatibility change was performed. The earlier crop failure did not recur in these observations; why the layout/capture differed is **UNRESOLVED**, not a diagnosed or permanent fix.
+
+An indexed click on the current menu element timed out with **`wait for accessibility element target: timed out waiting on channel`**. Fresh enumeration/rehydration/activation and capture succeeded; one coordinate retry based on that new image opened **القائمة**. Its **المدخلات** category returned the Inputs ribbon, showing **بيانات التوريد**, not a Supplier master editor. No stale coordinates were used, no repeated blind input or additional accounting/module discovery was performed.
+
+### HELP-DOCUMENTED: mapping screen is not Supplier master creation
+
+F1 on the current mapping screen opened actual HTML Help window **526928**, installed official **v5** topic **`C:\EFA\EFAHELP.chm::/4202.htm` / بيانات التوريد**. The topic describes linking an item with suppliers, or items with a supplier, for repeated purchasing and price comparison. It documents existing supplier/item selection, currency and price in this mapping screen. It does **not** establish a Supplier master creation route or current Supplier Add account/branch/currency/mandatory-field defaults. Its instructions to Add/Save were read as documentation only; neither was executed. Help was left open; no draft was created, so no Supplier Cancel was needed or claimed.
+
+**Supplier master Add was NOT reached.** No current Supplier default, mandatory account, currency, branch dependency, or complete minimum Save configuration was inferred from the mapping form or earlier nullable V_detail foreign-key metadata. There is no evidence that a chart Save, initialization or permission change is required to reach it.
+
+### Decision remains unresolved; one bounded next action
+
+| Route | First remaining blocker | Readiness |
+|---|---|---|
+| Cashbox / cash S2-P | Existing empty account selector's eligibility and full Save configuration | Unchanged, not qualified; no new cash/account investigation |
+| Supplier / credit S2-P | Official Supplier master Add not yet observed | Account/default/master dependencies unresolved; not shown simpler or harder |
+
+**Neither route is closer to a controlled Save on newly established evidence.** Confidence is high in capture/mapping-screen identity and preservation, low in comparative mutation cost. The narrow supported next action is for the user to **open the official Supplier master manually without Save**, then complete this same authorized non-saving Add inspection. Do not replace it with account specialization changes, guessed provisioning, another discovery scope or an automatic Save trial.
+
+### Bounded source verification and retained artifact
+
+Integrated-authentication **SELECT only** on **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7** at **06:36:59.7345329 → 06:40:11.0093091+03:00**: Cashboxes=0, Suppliers=0, Banks=0; Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1. All **nine complete protected master rows** matched before/after. All **73 fields** of the zero movement matched both reads and the preserved canonical baseline, fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**. This is bounded paused-UI/live evidence, not an atomic or whole-database audit.
+
+New local artifact: **`outputs/host-motakamel-supplier-continuation-20261008/READ_ONLY_EVIDENCE.json`**; earlier decision/Cashbox/zero artifacts preserved. No Add/Save attempt in any editor, account specialization/record edit, Purchase Save, stock report, transaction, SQL write, backup/Restore, S2/S3 or connector/Gate/pilot promotion. **STOP: Supplier Add discovery remains incomplete, with manual target opening required rather than invented requirements.**
+
 ## Repository handling
 
 The unrelated untracked `products/legacy-intelligence/research/.vscode/` directory was preserved and must remain unstaged. Explicit staging is limited to this evidence note and the README entry linking the current host decision. The authorized test identities and bounded observed values are documented here; backup binaries, database export files, credentials and unrelated files are not committed.
