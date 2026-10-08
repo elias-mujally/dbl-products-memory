@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest non-saving Cashbox discovery — 2026-10-07: ACCOUNT ROLE DOCUMENTED, CASHBOX SAVE / ACCOUNT-SELECTOR ELIGIBILITY UNRESOLVED.** Official Accounting → Inputs → Cashboxes → Add proposed draft number 1; account/name/foreign name/sequence stayed blank, all type/POS/stop flags unchecked, currency/balance grid empty. Installed version-5 Help binds a cashbox to its own subsidiary chart account and documents account-level currencies/balances. However the current active-account F9 lookup was empty despite the two existing subsidiary SAR accounts. No account was accepted or created; the exact exclusion rule was not identified, and GetCash's source definition is NOT proof of the Add selector's implementation. No nature/classification/linkage choice or complete Save requirements are qualified. Cancel was confirmed on the actual dialog and the final form had Add enabled / Save disabled. At 22:45:18–22:59:53+03:00 Cashboxes/Suppliers/Banks remained 0; all nine protected complete rows and the zero item's 73-field fingerprint were unchanged. Cashbox A + one dedicated cash-account is a conditional proposal, not a proven sufficient/shortest S2-P path; Supplier A cost remains UNRESOLVED without expanding its discovery. S0b PARTIAL, BOTH BLOCKED, S2-P preferred; Controlled Zero PARTIAL remains nonblocking for the authorized discovery only. No Save, stock report, S2/S3, SQL writes or account/master changes. Details and the next narrow question below.
+
 **Latest S0b non-saving route comparison — 2026-10-07: BOTH BLOCKED at the payment-side reference / justified credit account, not at zero-row provenance.** The user retained Controlled Zero = PARTIAL, accepted the unexplained zero row as noncontradictory and explicitly allowed S0b discovery without further doc_type=11 investigation. Purchase Add offers cash/cheque/cheque+cash/credit; cashbox and credit-supplier lookups are empty. SELECT confirms cashboxes/banks/suppliers each 0. Supply Add offers saved Warehouse A after the old cached form is reopened, but its account lookup contains only the two existing neutral TEST children, not an approved payment-side account. Installed official version-5 Supply Help defines that account as the credit side, not the Group inventory account or Warehouse transfer intermediary. No account was accepted and no inbound Save attempted. Supply type is empty but HELP-DOCUMENTED optional, not a fabricated blocker. All drafts were officially cancelled. At 22:14:07+03:00 all nine protected full rows and the zero row's 73-field fingerprint matched the preceding baseline; 18 checked business tables remained empty. S0b remains PARTIAL; S2/S3 NOT STARTED. Prefer S2-P after bounded discovery of its payment master; neither route is executable now. Details and the next approval boundary are below. Earlier zero-provenance investigation proposals are superseded by this explicit user direction, not by a new provenance finding.
 
 **Latest narrow zero-row review — 2026-10-07: B) CONTROLLED ZERO = PARTIAL.** SELECT-only review captured all 73 fields of the sole item_mov row, unchanged at 20:55:08–21:00:07+03:00. Its contribution to the inspected local available-quantity calculation is 0; no related document was found in 18 exactly counted business header/detail/request/journal tables. However doc_types=11 (invoice approval) and the separate PKTransDocType=0 (opening stock) dictionary labels do not establish this row's role. Producer, insertion time and report causality remain UNRESOLVED. No GUI/report regeneration occurred because safe side-effect-free reread was not established. Warehouse Save/reload PASSED and S1 accepted remain; S0b PARTIAL; S2/S3 NOT STARTED. Details below.
@@ -1244,6 +1246,84 @@ Operational disclosure: an unlabelled Purchase ellipsis opened an empty purchase
 Final SELECT at **2026-10-07 22:14:07.7419073+03:00** confirmed Warehouse=1, Account=3, Account_Cur_Detail=2, Measure=1, i_group=1, item_detail=1; **V_detail=0, cash_in_hand=0, cash_at_bank=0**. The nine complete bounded protected rows compared exactly equal to the preceding 21:00:07 observations using key-sorted JSON. The sole Item A movement row still has **all 73 fields exactly equal** to the retained canonical baseline, hence the same fingerprint; this is a comparison only, not further interpretation of doc_type/provenance. **All 18 previously checked business header/detail/request/journal tables stayed at exact count 0; opn_stock/item_store=0; total item_mov=1.** This is bounded, paused-UI, point-in-time evidence, not an atomic/whole-ERP audit or proof that every possible table is unchanged.
 
 No master creation/change, SQL write, stock report rerun, zero-row edit/delete, backup/Restore, S2/S3 or connector work occurred. Product Memory changes record this material S0b evidence and explicit user decision only. **STOP before any transaction Save or automatic prerequisite provision.**
+
+## Host non-saving Cashbox Add discovery — 2026-10-07
+
+### Authority, context and evidence package
+
+The user accepted BOTH BLOCKED at payment/account prerequisites, retained S2-P as preferred and Controlled Zero = PARTIAL as nonblocking for S0b discovery. This task inspected **only** the Cashbox Add form and related official Help/source metadata. No Save was permitted even to provoke validation; no Supplier Add, Purchase Save, account creation or stock-report regeneration was permitted.
+
+Current official path: **إدارة الحسابات → المدخلات → الصناديق → إضافة**, in `C:\EFA\GL_New.exe`, window 95554874, financial year 2026 / branch 1 / user Adm. The Inputs cashbox ribbon opened the form; its window was maximized operationally to expose the complete balance grid, without changing Windows settings. Product decisions/plans were refreshed; this is not implementation work, and no capability is promoted from Product Memory intent to verified build behavior.
+
+Local bounded evidence: `outputs/host-motakamel-cashbox-discovery-20261007/READ_ONLY_EVIDENCE.json`, SHA-256 **33C3E9CD64E41FAE66C1A94A3F1B2705FB15280FC44001CBCE137FAB016865F0**. Raw bounded before/after rows and Help text are retained outside Product Memory, not committed database exports or image payloads. The prior zero-row evidence packet and canonical baseline were not changed.
+
+### CURRENT-UI PROVEN: Add fields and defaults
+
+| Field / surface | Observed Add state | Qualification limit |
+|---|---|---|
+| رقم الصندوق | **1**, assigned to the unsaved draft after Add; blank again after Cancel | Not a persisted/generated final identifier or approval to create Cashbox 1 |
+| رقم حساب الصندوق + adjacent name display | Blank | F9 inspected; no code/name selected or final binding tested |
+| اسم الصندوق / الاسم الأجنبي | Blank; enabled on later stable Add observation | No name validation or automatic name inheritance tested |
+| رقم التسلسل | Blank | Help explains receipt/payment sequence groups; current Save mandatory/default behavior unresolved |
+| صندوق نقطة بيع | Unchecked | No POS use requested |
+| النوع: قبض / صرف / بيع وشراء | All unchecked | No flag toggled; do not equate بيع وشراء with mandatory ordinary purchasing permission |
+| إيقاف / تاريخ الإيقاف / سبب الإيقاف | Unchecked / blank date mask / blank reason; date disabled while not stopped | No stop configuration changed |
+| البيانات المالية grid | Five empty display rows; headers include account, currency code, repeated limit/balance labels and suspended checkbox; no SAR populated | Empty grid is not an account balance or proven currency activation; unlabeled repeated columns not assigned guessed meanings |
+| Branch / separate currency / responsible person / location / supplier / bank / cost-center selector | No such control observed on the complete Add surface | UI absence does not prove no hidden Save rule; context branch 1 is not a saved cashbox Branch_no |
+
+Save became enabled and Add disabled. The first immediate accessibility response retained stale disabled field states; a later stable observation showed editable fields and draft number 1. No temporary test name/code, sequence, flag or balance was entered. The account-box screenshot's narrow caret is not an entered account value: its accessibility value remained empty.
+
+### HELP-DOCUMENTED: the cash account and currency role
+
+F1 opened installed official **version-5** Help at `C:\EFA\EFAHELP.chm::/1803.htm` (**تعريف الصناديق**). Its documentation is not a current Save acceptance test:
+
+- Cashboxes are prepared after the chart and used for depositing/disbursing cash in receipts/payments and other operations; each box links to its **own chart account**.
+- Account code is selected using F9; the documented list contains **subsidiary accounts**, not main accounts.
+- The account name becomes the default cashbox name and can be renamed. This propagation was not exercised because no candidate was offered/selected.
+- Sequence groups govern receipt/payment voucher numbering across boxes; the examples are explanations, not approved test values or evidence that blank sequence saves on this build.
+- POS flag makes a box available to POS. Receipt/payment/buy-and-sell flags are documented for **remittance/currency exchange**, not proof that the buy-and-sell flag is required for an inventory purchase invoice.
+- The bottom grid shows **cash-account balances per currency**; minimum currency limits come from the chart account. This supports account-level SAR binding, not a separate cashbox FX setup.
+
+The already recorded Purchase Help says available invoice currencies follow the selected cashbox/bank/supplier account. Taken together these document the proposed SAR account → cashbox → invoice-currency path. It has not been tested with a saved cashbox, so current purchase SAR/rate/default behavior remains unresolved. No Help statement inspected established a mandatory debit/credit nature, classification, report, rank number beyond subsidiary, special linked-account category, new branch/currency master or opening cash balance for this form.
+
+### CURRENT-UI PROVEN: account selector is empty; exact eligibility unresolved
+
+From the blank **رقم حساب الصندوق** field, F9 opened actual lookup window **918952 / شاشــــة البحــــث العامه**. It showed disabled status **1- الفعال**, empty search fields and columns **رقم الحساب / الاسم / نوع الحساب**, with **no rows**. Neither 97070101 nor 97070102 was offered; no row was accepted. The lookup was cancelled and the account code/name remained blank.
+
+Both existing children are known subsidiary/type 2/rank 2, with active/default SAR and not stopped, but are dedicated to Group inventory and Warehouse transfer respectively. Their absence here is a material difference from the earlier Group/Warehouse/Supply lookups. It does **not** prove which extra condition excludes them: linkage/specialization, existing role usage, permissions, another filter or a UI issue remain alternatives, not identified causes. Do not automatically reuse either account, change ac_type/nature/classification, or assume a new identical child will be offered.
+
+No current Cashbox Save validation was solicited. Therefore **the complete minimum saveable cashbox configuration is NOT proven**, and no literal Save-error requirement is invented. Cashbox number + its subsidiary account/name and account-supported SAR are documented candidate prerequisites; sequence and any hidden validation remain unresolved.
+
+### Bounded SQL STRUCTURAL EVIDENCE, not business semantics by names
+
+Observer used the existing supported ordinary-user integrated-authentication context for SELECT/catalog reads of Host `DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7`; FMMA was not the observer. Read evidence is paused-UI/live point-in-time, not an atomic snapshot or connector acquisition qualification.
+
+- `cash_in_hand.cash_ac` is NOT NULL and has `FK_cash_in_hand_Account` to Account.a_code; cash_no is NOT NULL. This corroborates the Help's account reference structurally, not UI Save rules or a valid financial role by itself.
+- `Branch_no` is NOT NULL with catalog default 0. No branch chooser appeared in Add; **actual future saved branch cannot be inferred as 1 or 0** from context/default alone.
+- sr_no and cashbox names are nullable; type/POS/stop flags have catalog false defaults. Nullable columns do not prove optional UI Save fields, and no table currency column appeared in the inspected definition.
+- Read-only definition **GetCash** joins cash_in_hand to Account and Account_Cur_Detail, projects Cur_Code and filters **A_S_M=2 / ac_close=0**. This establishes that this local view relates cashboxes to subsidiary account/currency rows. It is **NOT proven to be the Add F9 lookup**, and cannot explain that lookup's empty result or establish purchase Save eligibility.
+- Definition **GetPrivAccountCash** relates an already saved cashbox/bank account to branch/group account permissions; its group-1 early return is source logic only, not a finding that the current UI user's permissions are the blocker. No permissions changed.
+- Two bounded attempts to observe recently cached application Account SQL returned no matching text. Only the two directly relevant definitions above were read; unrelated posting procedures were not executed/read to broaden this task. Exact selector filter remains UNRESOLVED.
+
+### Cost comparison and narrow next proposal — no mutation authority
+
+**Cash route:** a dedicated justified subsidiary cash account with officially active SAR plus one named cashbox is the smallest *candidate* master-data path evidenced so far. Proposed neutral identity only: **97070103 — DBL_TEST_CASH_ACCOUNT_20261007** (absent among the unchanged three accounts), and label **DBL_CASHBOX_A**. Neither is created/approved by this discovery; no cashbox final number or sequence is preassigned. Parent/report/nature/classification/linkage/eligibility for this new role must not be copied blindly from the two prior test children.
+
+Before proposing its Save, the narrow unresolved question is **why this Cashbox account selector offers no existing subsidiary SAR account, and what exact official property makes a dedicated cash account selectable**. Resolve that specific rule without changing current accounts; if it cannot be resolved non-saving, propose one separately authorized discriminating experiment with exact values and stop before its Save, rather than guessing a cash specialization or configuring broad ERP setup.
+
+**Supplier/credit route:** existing evidence only proves the credit Supplier lookup empty and V_detail=0, with payment/currency linked to its reference. Supplier Add/save/account requirements were NOT investigated here. Consequently Supplier A is **not proven shorter**, nor is the cash route proven globally shortest. Comparison **UNRESOLVED**; S2-P remains preferred for purchase semantics, not qualified for execution.
+
+Even a future saved cashbox/account pair would only address the named payment reference if the Purchase picker accepts it and resolves SAR. Invoice warehouse/currency/rate, Item A purchase-unit/package/quantity eligibility, cost/tax/mandatory fields, document status and stock-effective completion still require their bounded proof. No claim that Cashbox A alone closes all S0b or produces 0→37; S2-P versus S2-R semantics remain distinct.
+
+### Cancellation, source preservation and operational limits
+
+Cashbox Add was cancelled via **تراجع → هل تريد التراجع → نعم**, ultimately targeting actual modal **4065022**. Final observation showed **Add enabled / Save disabled / Cancel disabled**, draft number/account/name blank. No Save/Accept, account/cashbox/supplier creation, purchase action, report generation, stock movement, SQL write, backup/Restore or S2/S3 occurred.
+
+Operational disclosure: the key intended to close Help was followed by the parent's **هل تريد الخروج من البرنامج ..** dialog; it was declined, not approved. No business field changed and no application exit was accepted. Some interim captures showed Help or the parent instead of the named target; these were not treated as semantic proof. One indexed cancel action was rejected as unavailable in the cached state. The first parent-coordinate Cashbox Cancel confirmation did not end Add; it was not claimed successful. Selecting/activating the actual Cancel dialog and clicking its observed Yes button then ended Add, confirmed by enabled/disabled controls. These are capture/targeting observations, not a diagnosed Windows or ERP cause; no Windows/security/compatibility settings changed.
+
+Full-row SELECT at **22:45:18.3767594 → 22:59:53.4964358+03:00**: `cash_in_hand=0 / V_detail=0 / cash_at_bank=0`; Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1. All **nine protected full rows** matched before/after and the previous 22:14:07 evidence. The sole movement row retained all **73 fields** and fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**, identical to the preserved canonical baseline. No further doc_type/provenance investigation or zero promotion was attempted. No new all-table/18-business-table audit is claimed from this narrower query.
+
+**Final: Cashbox discovery PARTIAL; account role HELP-DOCUMENTED, complete Save requirements and selector rule UNRESOLVED. S0b PARTIAL / BOTH BLOCKED; S2-P preferred; Controlled Zero PARTIAL, not a blocker for this discovery by explicit user decision. S2/S3 NOT STARTED. STOP before any new account/cashbox/transaction Save.** No Gate A/B/C, connector, PARTNER-VALIDATED or PILOT-QUALIFIED promotion.
 
 ## Repository handling
 
