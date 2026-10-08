@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Latest bounded Cashbox/Supplier decision investigation — 2026-10-08: DECISION UNRESOLVED; SUPPLIER ADD INSPECTION INCOMPLETE.** Cashbox F9 remains empty with blank search filters. Current chart UI explicitly offers linked specialization `4 — نقدية بالصندوق` and `7 — موردين`; installed official v5 Help documents specialization for designated systems/screens and inheritance from the main account. This is a stronger cash-filter hypothesis, NOT proof of the actual F9 predicate or authority to change existing accounts. A blank chart Add was inspected without identity, temporarily set to subsidiary / supplier linkage, then officially cancelled; no Supplier editor appeared from selection/Tab alone. Supplier master Add/defaults/Save rules were not reached. The final Purchase menu capture and one fresh-window recovery both failed with `window crop is outside captured monitor`; GUI input stopped. No workflow is proven shorter or executable. Safest next single bounded test: complete the requested non-saving Supplier Add inspection after manual window restoration / official master opening, not create another account first. At 05:34:14–06:12:12+03:00 Cashboxes/Suppliers/Banks remained 0; all nine protected complete rows and the 73-field zero-row fingerprint were unchanged. S0b PARTIAL / BOTH BLOCKED; S2-P preferred; Controlled Zero PARTIAL; S2/S3 NOT STARTED. Details below; no Save, SQL write or stock report.
+
 **Latest non-saving Cashbox discovery — 2026-10-07: ACCOUNT ROLE DOCUMENTED, CASHBOX SAVE / ACCOUNT-SELECTOR ELIGIBILITY UNRESOLVED.** Official Accounting → Inputs → Cashboxes → Add proposed draft number 1; account/name/foreign name/sequence stayed blank, all type/POS/stop flags unchecked, currency/balance grid empty. Installed version-5 Help binds a cashbox to its own subsidiary chart account and documents account-level currencies/balances. However the current active-account F9 lookup was empty despite the two existing subsidiary SAR accounts. No account was accepted or created; the exact exclusion rule was not identified, and GetCash's source definition is NOT proof of the Add selector's implementation. No nature/classification/linkage choice or complete Save requirements are qualified. Cancel was confirmed on the actual dialog and the final form had Add enabled / Save disabled. At 22:45:18–22:59:53+03:00 Cashboxes/Suppliers/Banks remained 0; all nine protected complete rows and the zero item's 73-field fingerprint were unchanged. Cashbox A + one dedicated cash-account is a conditional proposal, not a proven sufficient/shortest S2-P path; Supplier A cost remains UNRESOLVED without expanding its discovery. S0b PARTIAL, BOTH BLOCKED, S2-P preferred; Controlled Zero PARTIAL remains nonblocking for the authorized discovery only. No Save, stock report, S2/S3, SQL writes or account/master changes. Details and the next narrow question below.
 
 **Latest S0b non-saving route comparison — 2026-10-07: BOTH BLOCKED at the payment-side reference / justified credit account, not at zero-row provenance.** The user retained Controlled Zero = PARTIAL, accepted the unexplained zero row as noncontradictory and explicitly allowed S0b discovery without further doc_type=11 investigation. Purchase Add offers cash/cheque/cheque+cash/credit; cashbox and credit-supplier lookups are empty. SELECT confirms cashboxes/banks/suppliers each 0. Supply Add offers saved Warehouse A after the old cached form is reopened, but its account lookup contains only the two existing neutral TEST children, not an approved payment-side account. Installed official version-5 Supply Help defines that account as the credit side, not the Group inventory account or Warehouse transfer intermediary. No account was accepted and no inbound Save attempted. Supply type is empty but HELP-DOCUMENTED optional, not a fabricated blocker. All drafts were officially cancelled. At 22:14:07+03:00 all nine protected full rows and the zero row's 73-field fingerprint matched the preceding baseline; 18 checked business tables remained empty. S0b remains PARTIAL; S2/S3 NOT STARTED. Prefer S2-P after bounded discovery of its payment master; neither route is executable now. Details and the next approval boundary are below. Earlier zero-provenance investigation proposals are superseded by this explicit user direction, not by a new provenance finding.
@@ -1324,6 +1326,66 @@ Operational disclosure: the key intended to close Help was followed by the paren
 Full-row SELECT at **22:45:18.3767594 → 22:59:53.4964358+03:00**: `cash_in_hand=0 / V_detail=0 / cash_at_bank=0`; Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1, keyed item_mov=1. All **nine protected full rows** matched before/after and the previous 22:14:07 evidence. The sole movement row retained all **73 fields** and fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165**, identical to the preserved canonical baseline. No further doc_type/provenance investigation or zero promotion was attempted. No new all-table/18-business-table audit is claimed from this narrower query.
 
 **Final: Cashbox discovery PARTIAL; account role HELP-DOCUMENTED, complete Save requirements and selector rule UNRESOLVED. S0b PARTIAL / BOTH BLOCKED; S2-P preferred; Controlled Zero PARTIAL, not a blocker for this discovery by explicit user decision. S2/S3 NOT STARTED. STOP before any new account/cashbox/transaction Save.** No Gate A/B/C, connector, PARTNER-VALIDATED or PILOT-QUALIFIED promotion.
+
+## Host bounded Cashbox versus Supplier decision investigation — 2026-10-08
+
+### Scope and retained gates
+
+Starting evidence accepted by the user: **c663f21** (Cashbox discovery). This was a decision investigation, not permission to provision any account/payment master. **S0b PARTIAL / BOTH BLOCKED, S2-P preferred, Controlled Zero PARTIAL nonblocking for this discovery only, S2/S3 NOT STARTED** remain unchanged. Existing TEST inventory / transfer accounts were not reused or altered; **97070103 was not created**.
+
+### Cashbox — CURRENT-UI PROVEN / HELP-DOCUMENTED / UNRESOLVED
+
+- Current Cashbox Add account F9 opened actual search window **4655178**: active status fixed at **1- الفعال**, code/name/type search boxes blank, no account rows. No account accepted. Cashbox draft cancelled through actual confirmation **1379220**; final Add enabled / Save disabled.
+- Fresh installed official **v5** chart Help, `C:\EFA\EFAHELP.chm::/1801.htm`, documents **الحساب مرتبط** as assigning an account to a designated task/system/screen (including cashboxes/banks/customer/intermediary examples). Linkage on a main account propagates to descendants. At least one currency must be activated for a subsidiary account. This is Help documentation, not a current Save or actual selector predicate.
+- A **new blank, identity-free, non-saving chart draft**, not an edit to an existing account, exposed the actual linked-account list: **4 — نقدية بالصندوق**, **7 — موردين** (and other options). Type **2 — فرعي** and option **7 — موردين** were temporarily selected solely to observe whether the Supplier master opens. A Tab did not expose a Supplier editor. No account number/name/parent/report/currency was supplied, no Save/Accept attempted, and no approved identity was copied into it. This does NOT prove that a prior Save is required.
+- Chart draft officially cancelled using actual confirmation **11534960**; final chart observation had Add enabled, Save disabled and the same three-node account tree.
+- Earlier notes' broad English paraphrase of the linked control is supplemented by these exact current labels. The existing saved `Account.ac_type=NULL` values do **not** establish any numeric mapping of these UI choices into that source column; no such mapping is promoted.
+- **Specialization is a plausible, newly better-documented explanation for the empty cash selector, not ROOT CAUSE IDENTIFIED.** No current F9 query/filter was captured. No nature/classification/rank/currency-only rule, used-account exclusion or permission cause is established.
+- Narrow read-only module inspection returned **GetCash**: it joins already saved cash_in_hand rows to Account and Account_Cur_Detail, filtering subsidiary / not closed. It is still **NOT proven to implement Cashbox Add F9**. No posting function/procedure was executed. Subsidiary + SAR is not proven sufficient; appearance alone would not prove financial suitability.
+
+### Supplier — bounded inspection incomplete, no invented Save requirements
+
+**Supplier master Add was NOT opened. Its fields/defaults/complete Save rules and relative mutation cost remain UNRESOLVED.**
+
+Official menus inspected on the current Host:
+- Purchase **المدخلات → بيانات التوريد** opened a supplier/item mapping form (supplier/item code, names, units/package/reference fields), **not** the Supplier master. It stayed in view mode: no Add, download-data query, print or Save.
+- The already known Purchase Reports **بيانات الموردين → avend.rpt** is a report, not a creation editor; it was not regenerated here.
+- Inspected accounting/purchase/system ribbon lists did not establish a Supplier master route. This limited unsuccessful navigation is **not evidence the route does not exist**, nor evidence that initialization, a security change or account Save is mandatory.
+- Current chart option **7 — موردين** identifies an explicit account specialization, but selection/Tab in an empty draft did not by itself prove the master-creation workflow.
+- Purchase toolbar **F4** opened an item-search dialog, not Supplier data. It was closed with Escape without executing search, choosing an item or generating a stock report.
+
+Bounded SQL **STRUCTURAL EVIDENCE**: `dbo.V_detail` has 69 inspected columns; `v_code` is NOT NULL; nullable `v_a_code` references Account.a_code. The source also exposes contact/tax/address/credit-limit/payment-reference fields and catalog defaults. These are metadata, **not proof of required/optional UI inputs or supplier accounting semantics**. No supplier rows were present to verify actual saved defaults. No claim of a mandatory dedicated supplier account, nature, report, new branch, tax master or initialization follows from this metadata alone.
+
+### Operational stop and single recommendation
+
+After the final click to inspect the full Purchase menu, capture failed:
+
+```text
+encode latest capture frame failed: window crop is outside captured monitor
+```
+
+A fresh returned Purchase window was rehydrated and activated; one capture retry failed identically. **GUI input stopped**, with no blind coordinate/action retry or Windows display/security/compatibility change. Some earlier captures were asynchronous; no mismatched image was promoted to business proof. Maximizing the existing accounting/purchase windows was an operational layout action only; one indexed chart-list click was rejected as outside the smaller window bounds before delivery. Selecting Accounting from Main Menu opened an extra GL_New dashboard; opening System displayed Admin's dashboard/basic-reference ribbon only, not an initialization/security operation. These openings do not mean any master or setting was saved.
+
+| Candidate | First unresolved blocker | Proven cost / readiness |
+|---|---|---|
+| Cashbox / cash Purchase | Current Add account selector eligibility, potentially linked cash specialization | Dedicated cash account + cashbox is only a candidate; exact role/filter and full Save configuration unproven |
+| Supplier / credit Purchase | Official Supplier master Add not reached; current defaults/account/save requirements unobserved | No evidence Supplier is simpler; nullable source FK cannot substitute for UI qualification |
+
+**No workflow winner is proven.** Do not mark Cashbox or Supplier QUALIFIABLE, and do not create more master data merely to fill this evidentiary gap.
+
+**One safest next bounded test:** after the user restores/repositions the Purchase window and opens the official **Supplier master** manually without saving, complete the already requested **non-saving Supplier Add inspection**, record account/default/required-field evidence, and Cancel. This is completion of path B, not a third discovery scope. It can change the decision without creating a cash-specialized test account; no `97070103` Save experiment is authorized or recommended before that comparison is available. Confidence is **high** in the preservation/observed labels, **low** in relative workflow cost or a cash-filter cause. A future role-4 discriminating account experiment remains a hypothesis requiring separate exact approval, not the next executed step.
+
+### Source preservation and evidence artifact
+
+SELECT on **DESKTOP-8QRQT7R\YSEDU / EFA12026 / DB_ID 7**, at **05:34:14.4228054 → 06:12:12.984127+03:00**:
+
+- Cashboxes=0, Suppliers=0, Banks=0.
+- Warehouse=1, Account=3, Account_Cur_Detail=2, Unit=1, Group=1, Item=1; keyed item_mov=1.
+- All **nine protected complete master rows** unchanged against pre-investigation and accepted preceding evidence.
+- Zero movement's **73 fields** unchanged and identical to the preserved canonical baseline; fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165** retained.
+- No new 18-business-table or whole-database audit is claimed. The first final SELECT output was truncated by the output budget; a repeat SELECT returned complete verification evidence. Neither query writes data.
+
+Local evidence: `outputs/host-motakamel-payment-decision-20261008/READ_ONLY_EVIDENCE.json` (full before/after protected source rows, bounded metadata, findings/limitations; no screenshot payloads). Prior zero-row and Cashbox artifacts were not overwritten. No account/cashbox/supplier/invoice Save, SQL writes, stock report, stock movement, backup/Restore, S2/S3, connector/Canonical expansion or Gate/PARTNER/PILOT promotion. **STOP with the decision investigation partially blocked, not falsely completed.**
 
 ## Repository handling
 
