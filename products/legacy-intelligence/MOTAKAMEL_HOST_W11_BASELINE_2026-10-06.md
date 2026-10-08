@@ -1,5 +1,7 @@
 # Host Windows 11 Motakamel development baseline — 2026-10-06
 
+**Current authorized Cashbox A single Save — 2026-10-08: SAVE PERSISTENCE PASSED; INDEPENDENT UI RELOAD BLOCKED pending manual read-only assistance.** Exactly one official Save created auto-number **1 / DBL_CASHBOX_A**, linked by F9 to **97070103 / DBL_TEST_CASH_ACCOUNT_20261007**. No validation appeared; blank sequence was accepted in this experiment. Saved GetCash returns SAR through the existing Account_Cur_Detail relationship, but the financial grid stayed empty immediately after Save and independent reload has not yet been verified. **Cashbox Save + Reload = BLOCKED (reload only); Cashbox SAR = PARTIAL (source relationship verified, reloaded UI unresolved); Purchase Payment Eligibility = NOT TESTED.** All 11 protected master rows and all 73 movement fields remained identical; Cashboxes=1, Suppliers/Banks=0. No further Save or transaction is authorized. Earlier Phase-B-not-attempted / Cashboxes=0 statements are historical where superseded, not current. See the single-Save checkpoint below; STOP pending manual reload, without creating the record again.
+
 **Current Cashbox A conditional currency gate — 2026-10-08: PHASE A PARTIAL; PHASE B SAVE NOT ATTEMPTED.** The accepted cash-account selector qualification at 351b0c3 remains PASSED. One official Cashbox Add proposed number 1; F9 selected 97070103 and resolved its name, with normal Tab exit. The financial grid stayed empty. Fresh installed v5 Help describes it as cash-account balances per currency, not a separate currency-activation editor. One currency-cell click, one F9 and one right-click exposed no currency editor/picker/context menu; no currency or opening balance was typed. SELECT/catalog GetCash defines a saved-cashbox relationship to Account_Cur_Detail; the account's active/default SAR is separately verified, not a current saved GetCash result. This is NOT proof of the current Add grid or post-Save behavior. The exact empty-grid explanation and a current official Cashbox-currency setup/display procedure remain unresolved; blank sequence Save behavior also remains untested. The user's conditional Save boundary was not met, so no Save was attempted and DBL_CASHBOX_A was not entered. Cancel confirmed on the actual modal; final Cashboxes/Suppliers/Banks=0, all 11 protected master rows and 73 movement fields unchanged. S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL; Supplier frozen; S2/S3 NOT STARTED. Details in the dated currency-gate section below; do not repeat the completed account-eligibility investigation or create another account.
 
 **Current authorized cash-account trial — 2026-10-08: Account Save / independent Reload / SAR binding PASSED; Cash Account Selector Eligibility = PASSED at the picker/code/name/normal-field-exit boundary only.** One official Save created `97070103 — DBL_TEST_CASH_ACCOUNT_20261007`, parent 970701, subsidiary 2, derived rank 2, inherited Balance Sheet, linked allocation `4 — نقدية بالصندوق` (`Flags_No=4`), active/default SAR. Choosing 4 showed no other visible field change or additional requirement. Cashbox F9 offered this account, double-click returned code/name and Tab left normally without validation. **Cashbox financial currency grid remained empty: SAR is source/account-binding proven, NOT a displayed Cashbox currency or full Cashbox Save proof. Allocation 4 alone is NOT proven necessary/sufficient or causal.** Cashbox Add cancelled; Cashboxes/Suppliers/Banks=0. Eight of nine old protected master rows and all 73 movement fields unchanged; root Acc_Sort 3→4 observed after chart reopening without manual root edit, cause unresolved. S0b PARTIAL / BOTH BLOCKED at the remaining payment-master/workflow gate; Controlled Zero PARTIAL; Supplier frozen; S2/S3 NOT STARTED. Details in the dated trial section below. Older empty-F9/no-97070103 statements are historical where superseded; do not resume their completed Discovery.
@@ -1601,6 +1603,51 @@ Final SELECT **16:54:54.8587148+03:00** matched baseline counts and **all 11 pro
 Full local evidence **outputs/host-motakamel-cashbox-currency-gate-20261008/PHASE_A_EVIDENCE.json** retains pre/during/final source rows, bounded catalog definitions, nine accessibility states and phase/cancellation boundaries; no image payload or database binary is stored there. Existing SELECT-only **outputs/host-motakamel-cash-account-trial-20261008/Read-CashAccountTrial.ps1** was reused unchanged; previous evidence artifacts untouched.
 
 **S0b PARTIAL / BOTH BLOCKED; Controlled Zero PARTIAL; Supplier frozen; S2/S3 NOT STARTED.** No Cashbox/Account/Purchase Save, direct SQL writes, stock report/movement, other master change, backup/Restore, connector/Canonical expansion or Gate/PARTNER/PILOT promotion. **STOP before Save and request separate direction for the unresolved currency/display boundary.**
+
+## Host Cashbox A authorized single Save and reload checkpoint — 2026-10-08
+
+### Authorization and pre-Save boundary
+
+User explicitly accepted the proposal after **784be97** and authorized one Save with auto-number 1 only if still proposed, Arabic name DBL_CASHBOX_A, F9 account 97070103, no manual currency-grid entry, no opening balance and other observed defaults untouched. This supersedes the previous conditional no-Save boundary only for this one experiment, not Purchase or another master.
+
+SELECT at **18:32:05.1750787+03:00** confirmed physical Host **DESKTOP-8QRQT7R\YSEDU / EFA12026 / database ID 7**, Cashboxes/Suppliers/Banks=0, four accounts, three currency links, and one Warehouse/Unit/Group/Item/keyed movement each. All 11 protected complete master rows and the 73-field movement matched the accepted prior source evidence before input.
+
+Current Computer Use selected freshly enumerated GL_New cashbox window **95554874**. Native maximization was used for presentation only. Official Accounting → Inputs → Cashboxes → Add proposed **1**. F9 picker **4916874** visibly offered **97070103 / DBL_TEST_CASH_ACCOUNT_20261007**; double-click resolved the number/full paired name and normal Tab moved to Arabic name. Entered DBL_CASHBOX_A once. Fresh pre-Save screenshot/accessibility verified all three identities. Foreign name and sequence stayed blank; POS, receipt, payment, buy/sell and stop unchecked; stop date/reason blank; five-row financial grid empty. No currency/limit/opening balance was typed.
+
+### One Save and source persistence
+
+Exactly **one** click on official Save. No validation dialog appeared. A stable subsequent observation showed identity values in disabled form controls with Add/Search/Edit enabled and Save disabled. SELECT at **18:36:57.3446826+03:00** confirmed one new cash_in_hand row:
+
+| Field | Persisted value |
+|---|---|
+| cash_no / Cash_AName / cash_ac | 1 / DBL_CASHBOX_A / 97070103 |
+| Branch_no | 1, system-persisted; no manual branch input on this form |
+| Cash_EName / Stop_Reason | Empty strings |
+| sr_no / cst_cntr / min_lmt / User_Id / Stop_Date | NULL |
+| Point_cash / Cash_Payment / Cash_Recive / Cash_Exch / Cash_Status | false |
+| FinishTransfer / FinishUpdate | false |
+
+The **saved** GetCash SELECT returned cash_no 1, cash_ac 97070103, the account's full name, **Cur_Code SAR** and **USR_ID 1**. Its ISNULL projection of cashbox User_Id explains the view's 1 while the actual cashbox User_Id is NULL; they are not the same stored field. Existing account SAR remains active/default with Max_Amt/Min_Amt 0 and unchanged full source row. This is a verified account-based currency relationship, **not a separately created Cashbox currency row or a Purchase predicate**. Immediate post-Save grid remained empty; SAR did not visibly populate then.
+
+No opening balance was entered. The inspected cash_in_hand schema has no balance column; **journal=0 / Journal_Master=0** at the later bounded read. Account-currency limits are not opening balances. This does not establish every possible financial balance source or authorize creating an opening journal to fill the grid.
+
+### Independent reload limit and operational stop
+
+Closed the saved Cashboxes MDI tab (not Motakamel itself), reopened it from the official Inputs button and invoked Search. The official popup showed number **1**, but the column labelled cashbox name displayed **DBL_TEST_CASH_ACCOUNT_20261007** (the account name), rather than the stored Cash_AName. No cause is asserted. Two coordinate row-selection attempts unexpectedly restored the parent window instead of loading the record. One native maximization/re-show of Search was used, without Windows/DPI/security changes. The popup was not exposed as a separate returned list_windows/list_apps target in these observations. **No independent loaded Cashbox record or post-reload SAR grid is proven.** Input stopped; user was asked to open number 1 manually through Search without Add/Edit/Save and leave it visible. This is an operational reload blocker, **not evidence that Save failed**; never repeat Save to compensate.
+
+Current classifications:
+
+- **Cashbox Save + Reload = BLOCKED**, solely at independent UI reload; Save/source persistence PASSED.
+- **Cashbox SAR = PARTIAL**: saved source relationship VERIFIED, reloaded financial-grid display UNRESOLVED.
+- **Purchase Payment Eligibility = NOT TESTED**. No Purchase form/action or transaction Save occurred.
+
+### Preservation and next boundary
+
+Final SELECT **18:43:13.5592117+03:00**: Cashboxes=1, Suppliers/Banks=0; four accounts/three currencies and Warehouse/Unit/Group/Item=1 each unchanged. **All 11 protected full master rows matched**, including Acc_Sort; all **73 movement fields matched**. Retained fingerprint **DC1991445F7FB86D40C47D28BDA492C30F550D999D94014C0A427443F1BB2165** is preserved by complete field equality, not claimed recomputed. Bounded reads are point-in-time, not an atomic/whole-ERP audit. The only demonstrated persistent new master is Cashbox A; no account-currency change was needed.
+
+Local evidence: **outputs/host-motakamel-cashbox-save-20261008/SAVE_EVIDENCE.json** with pre/post/final SELECT snapshots, full protected comparisons, non-image accessibility metadata and explicit unresolved reload boundary; **Read-CashboxSave.ps1** contains only SELECT/catalog verification. Previous baseline artifacts are untouched. No screenshot payload or database binary is retained here.
+
+**S0b remains PARTIAL**; neither inbound workflow is qualified to execute. The former absence of a saved Cashbox is superseded, but the current purchase-payment/workflow gate is NOT PASSED. Controlled Zero remains PARTIAL; Supplier frozen; S2/S3 NOT STARTED. No direct SQL writes, Purchase/inbound Save, stock report/movement, other master change, backup/Restore, connector implementation, Canonical expansion or Gate/PARTNER/PILOT promotion. **Safest next action: manual independent reload of saved Cashbox 1, then read-only UI/source verification only. STOP before any additional mutation.**
 
 ## Repository handling
 
