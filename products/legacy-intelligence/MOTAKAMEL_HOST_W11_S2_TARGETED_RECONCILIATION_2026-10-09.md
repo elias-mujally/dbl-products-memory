@@ -1,5 +1,7 @@
 # Host W11 — S2 Targeted A/B Evidence & Reconciliation — 2026-10-09
 
+**Later separately authorized qualification:** the [post-S2 frozen-stage/independent-reader gate](MOTAKAMEL_HOST_W11_POST_S2_FROZEN_READER_QUALIFICATION_2026-10-09.md) subsequently PASSED for the exact selected case. The live-read acquisition gap and proposal below are historical for this round, not a still-unperformed backup claim. Next programming decision is READY FOR IMPLEMENTATION for the existing-contract **Item A identity-only** increment; useful scoped inventory/purchase contract, numeric/runtime decisions and all broader semantic limits below remain separate. No implementation, S3 or Gate B/C/partner/pilot promotion followed.
+
 ## Decision and bounded claim
 
 **EVIDENCE GAP — implementation Gate A is not passed by these live observations.** The positive S2 case remains **PASSED — LAB-PROVEN**. S3 is explicitly **FROZEN / ACCOUNTING-BLOCKED**; no expense account, further chart discovery or issue is needed for the first narrower item/inventory/inbound capability. Controlled Zero remains **PARTIAL**, accepted as non-blocking for this case; its historical row provenance was not reopened.
