@@ -2,11 +2,13 @@
 
 هذا المجلد هو الذاكرة المرجعية لمبادرة **Local-First Legacy ERP Intelligence Layer** داخل DBL.
 
-آخر مزامنة مع مستودع البناء: **2026-08-25**
+آخر مراجعة مع مستودع البناء: **2026-10-09 — PR #11 مفتوح وغير مدموج؛ main=95bf225**
 
 آخر تحديث بحثي/مخبري: **2026-10-09**
 
 ## الحالة
+
+**أحدث تنفيذ — Motakamel Connector Slice #001 / Item Identity فقط (2026-10-09): IMPLEMENTED + FIXTURE-TESTED END-TO-END؛ LIVE SQL NOT TESTED.** [النتائج الفعلية وحدودها](MOTAKAMEL_CONNECTOR_SLICE_001_ITEM_IDENTITY_IMPLEMENTATION_2026-10-09.md). [PR #11](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/11) مفتوح للمراجعة دون Merge، head=`6787696` وbuild main=`95bf225`. Adapter خاص بقاعدة post-S2 الثابتة والقارئ المستقل؛ `i_code/i_a_name → Product.id/name` عبر المسار القائم Connector→Import→SQLite→SnapshotReader→Application Service، دون Canonical change أو مخزون/شراء/S3. `npm run verify` نجح محليًا: **154 passed / 1 live skipped**، منها57 اختبارًا للحزمة. سر القارئ غير متاح ولم يُدوّر؛ لم تُفتح جلسة SQL حية أو يُغيّر ERP/SQL/Windows. **CI Windows: PASSED؛ CI Linux: FAILED عند dependency critical audit قبل البناء/الاختبارات؛ overall CI غير أخضر**. تنبيهات critical في Vitest/Tinypool موجودة أصلًا، وسلسلة SQL الجديدة لها moderate؛ لا ادعاء جاهزية Merge/production أو ترقية عامة تلقائية. source proof LAB-PROVEN محفوظ، لكنه مختلف عن fixture-tested implementation؛ لا Gate B/C أو PARTNER/PILOT promotion. أضيق خطوة تالية مراجعةPR وحدود credentials/transport/replay والبوابة الأمنية. S3 مجمّد ACCOUNTING-BLOCKED، Controlled Zero PARTIAL. عبارات «لا برمجة» أدناه تاريخية بالنسبة إلى هذه الشريحة فقط.
 
 **أحدث Gate A — post-S2 Frozen Snapshot + Independent Reader (2026-10-09): الثلاثة PASSED — LAB-PROVEN ضمن الحالة المحددة.** [النسخة والصلاحيات واختبارات الرفض والمصالحة وحدودها](MOTAKAMEL_HOST_W11_POST_S2_FROZEN_READER_QUALIFICATION_2026-10-09.md). نسخة COPY_ONLY/CHECKSUM جديدة ومستعادة مستقلًا باسم `DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009` /ID10 أصبحت READ_ONLY؛ قارئ `DBL_HOST_W11_S2_Reader_20261009` بلا أدوار إدارية قرأ 9 جداول محددة ودالة الرصيد scalar بإذن EXECUTE عليها وحدها. القراءات المتكررة وبعد reconnect متطابقة: Item A/W1/UA/package1، شراء1-44-1-0-1، 37×100 SAR=3700، حركة+37 ورصيد37؛ المصدر والسجلات المفحوصة والعدادات21 لم تتغير. رُفضت الكتابة وقراءة المصدر/RestoreProof وAccount خارج allowlist؛ DDL رُفض بسبب READ_ONLY مع غياب إذنه الفعلي. **READY FOR IMPLEMENTATION لهوية Item A فقط بالعقد الحالي**؛ عقد inventory/purchase والنطاق والسياسة العددية/P1 تبقى قرارًا منفصلًا، لا Purchase-as-Sale أو تعميم. كلمة مرور القارئ بقيت في الذاكرة ولم تُسلّم/تُحفظ؛ الاستخدام اللاحق يحتاج تدويرًا وحقنًا آمنًا من مسؤول إعداد، لا صلاحيات admin داخل Connector. S3 مجمّد ACCOUNTING-BLOCKED؛ Controlled Zero PARTIAL؛ لا Gate B/C أو PARTNER/PILOT promotion. لا برمجة أو ERP Save؛ تفاصيل عارضي الإعداد دون تكرار backup/restore موثقة. STOP.
 
