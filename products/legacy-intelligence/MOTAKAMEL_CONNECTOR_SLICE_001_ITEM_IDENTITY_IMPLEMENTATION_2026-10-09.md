@@ -2,6 +2,13 @@
 
 **Status: IMPLEMENTED / FIXTURE-TESTED END-TO-END; LIVE NODE SQL INTEGRATION NOT TESTED.**
 
+**Subsequent independent review, same head: REVISE — NOT READY TO MERGE.**
+[Review findings and narrow repair plan](MOTAKAMEL_CONNECTOR_SLICE_001_PR11_INDEPENDENT_REVIEW_2026-10-09.md)
+reproduce a fresh-process snapshot identity/capturedAt conflict and confirm the inherited critical-audit blocker.
+The disclosed cross-process replay limitation below is now a P1 integration defect, not an accepted completion gate.
+Combined cleanup error masking and the blanket concurrency claim are P2 findings. No repairs or merge were performed.
+The implementation/source-proof results below remain historical evidence, not merge approval.
+
 Review [build PR #11](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/11), **OPEN, non-draft, not merged**.
 Head **67876966c0683eb954e8eedba908701fa4656ebf** on `codex/motakamel-item-identity`;
 build `origin/main` remains **95bf225e1523e0fd0f72cdf3da8393df18d635cc**.
