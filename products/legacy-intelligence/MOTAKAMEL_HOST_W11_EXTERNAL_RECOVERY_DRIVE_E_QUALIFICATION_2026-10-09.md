@@ -2,7 +2,7 @@
 
 Date: **2026-10-09**. Accepted baseline: Product Memory **067a921**, [elevated known-path inventory](MOTAKAMEL_HOST_W11_ELEVATED_RECOVERY_INVENTORY_2026-10-09.md#6-operator-returned-elevated-inventory--2236-update).
 
-**Decision: BLOCKED for a qualified protected recovery destination.** Physical independence and capacity **PASSED**; E: is suitable in principle as external storage for the observed scope. Protection remains **UNRESOLVED**, and the future capture method must account for exFAT metadata limitations. This is not a capacity failure or a finding that the device is defective. No copying is authorized by this result.
+**Decision: BLOCKED for a qualified protected recovery destination.** Physical independence and capacity **PASSED**; E: is suitable in principle as external storage for the observed scope. The operator's follow-up establishes **BitLocker FullyDecrypted / Protection Off / 0% / Unlocked**; no alternative protection method is qualified. The future capture method must also account for exFAT metadata limitations. This is not a capacity failure or a finding that the device is defective. No copying or encryption change is authorized by this result.
 
 ## 1. Authority and fresh device evidence
 
@@ -43,7 +43,17 @@ GiB uses bytes / 1,073,741,824.
 
 One `Get-BitLockerVolume -MountPoint E:` failed with **Microsoft.Management.Infrastructure.CimException: Access denied** under the non-elevated token. No bypass, repeated status probing under that token, key-protector enumeration or recovery-key extraction followed.
 
-**BitLocker encryption/protection/lock status = UNRESOLVED**, not disabled. Other protection mechanisms are neither established nor excluded. Historical C:/D: protection observations do not apply to E:.
+**Initial agent-only result: UNRESOLVED**, not disabled merely because access was denied. The operator subsequently returned the requested status for E:; this supersedes that uncertainty:
+
+```text
+MountPoint           : E:
+VolumeStatus         : FullyDecrypted
+ProtectionStatus     : Off
+EncryptionPercentage : 0
+LockStatus           : Unlocked
+```
+
+**Current accepted BitLocker evidence: volume fully decrypted, protection off, 0% encrypted, unlocked.** This is operator-provided output, not a successful elevated agent probe. No observation timestamp, operator identity or elevation metadata accompanied this follow-up; these are not invented. It establishes BitLocker status at the operator's check, not absence of all third-party/hardware/container protection. No such alternative was demonstrated. Historical C:/D: protection observations do not apply to E:.
 
 Microsoft's [filesystem comparison](https://learn.microsoft.com/en-us/windows/win32/fileio/filesystem-functionality-comparison) documents that exFAT lacks NTFS ACL/owner tracking, named streams and metadata journaling. A future plain-file copy must not be described as preserving those properties. Filesystem-level encryption is distinct from volume/container protection; exFAT alone does not prove absence of BitLocker.
 
@@ -59,19 +69,19 @@ The accepted recovery gate requires protection for potentially sensitive system/
 | Physically separate from C:/D: | **PASSED** |
 | Observed scope +20% fits | **PASSED** |
 | Provider health / filesystem | **Healthy / OK; exFAT**, not integrity-tested |
-| Protection | **UNRESOLVED — status read denied** |
+| Protection | **BitLocker status KNOWN — FullyDecrypted / Off / 0% / Unlocked** from operator output; alternative protected capture NOT QUALIFIED |
 | Effective write/copy integrity/restorability | **NOT TESTED**, deliberately outside scope |
 | Preliminary storage suitability | **YES for observed scope**, subject to protection and capture-method qualification |
 | Protected recovery destination | **BLOCKED**, not fully qualified |
 
-Smallest next non-changing operator step: in an authorized administrative Windows PowerShell session, return only these status fields, not key protectors or passwords:
+The requested read-only status handoff has been completed by the operator; do not repeat it merely because the agent's token cannot read BitLocker:
 
 ```powershell
 Get-BitLockerVolume -MountPoint E: |
     Select-Object MountPoint,VolumeStatus,ProtectionStatus,EncryptionPercentage,LockStatus
 ```
 
-Read-only handoff only; no ACL/UAC/encryption change. If still unreadable, return the error and stop. Then agree on protection/custody and capture method, complete recovery scope and its budget. Actual capture remains separately authorized; no write test is implicitly proposed.
+**Smallest next step is an owner decision on protection/custody and the capture method**, not further drive discovery. A narrowly designed encrypted recovery archive/image on existing E: is a candidate that avoids whole-drive encryption or formatting and can account for required metadata. Its tooling, key custody and restore procedure must be qualified before any creation/copy; it is not yet an implemented or accepted solution. Alternatively, the owner may expressly accept a defined unencrypted laboratory-custody risk; no such acceptance is inferred from returning the status output. Any BitLocker enablement would require its own explicit authorization and is not the default next action. Complete recovery scope/budget and actual capture remain separate gates. No write test or host mutation is implicitly proposed.
 
 **Separate overall recovery gaps:** current complete SQL catalog/outlying paths, frozen READ_ONLY/grants, active transactions and adequate independent recovery capture/restore proof remain unresolved from the accepted inventory. External storage does not resolve these or make shutdown safe. No SQL connection or new database-state proof occurred.
 
