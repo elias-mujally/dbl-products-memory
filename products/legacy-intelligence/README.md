@@ -2,11 +2,13 @@
 
 هذا المجلد هو الذاكرة المرجعية لمبادرة **Local-First Legacy ERP Intelligence Layer** داخل DBL.
 
-آخر مراجعة مع مستودع البناء: **2026-10-09 — PR #11 مفتوح وغير مدموج؛ main=95bf225**
+آخر مراجعة مع مستودع البناء: **2026-10-09 — PR #11 مدموج؛ main=8c22f7b**
 
 آخر تحديث بحثي/مخبري: **2026-10-09**
 
 ## الحالة
+
+**PR #11 مدموج بأمان (2026-10-09)؛ Live SQL Qualification = NOT TESTED.** [نتيجة الدمج وخطة الاتصال الحي المحدودة](MOTAKAMEL_CONNECTOR_SLICE_001_PR11_MERGE_AND_LIVE_SQL_PLAN_2026-10-09.md). الرأس المعتمد `3fd128d` لم يتغير؛ Linux/Windows CI ناجحان، لا تعارض أو مراجعة حظر أحدث. تم الدمج العادي مع تثبيت الرأس دون force/admin bypass إلى `8c22f7b2a1dc251928adc9c7590b551dffddbd5e` والتحقق من `main` البعيد ومن تطابق المحتوى. لم تُعرض Required Checks؛ API حماية الفرع غير متاح بخطة المستودع، دون تجاوز للقيود. الخطة تغطي secret injection وTLS/Node trust وnamed-instance/Tedious ثم المسار القائم حتى Application Service وreplay. سر القارئ لم يُسلّم سابقًا، والنقل/الشهادة لم يتأهلا؛ لا اتصال حي أو تعديل SQL/Windows/ERP منفذ. الاختبار الحي الحالي smoke للاتصال/هوية الصنف فقط؛ تأهيل المسار الكامل يحتاج harness محدودًا لاحقًا. S3 يبقى ACCOUNTING-BLOCKED، ولا Inventory/Purchase أو Canonical expansion؛ `.vscode` خارج commit. حالات PR غير المدموجة التالية سجلات تاريخية.
 
 **المراجعة المستقلة النهائية لـPR #11 (2026-10-09): APPROVE FOR MERGE عند `3fd128d` فقط؛ R1/R2/R3/R4 = VERIFIED.** [تقرير التحقق النهائي وحدود القرار](MOTAKAMEL_CONNECTOR_SLICE_001_PR11_FINAL_VERIFICATION_2026-10-09.md). لا عيوب P0/P1/P2 جديدة مثبتة؛ إعادة مستقلة لفحص الأنواع والاختبارات **187 passed / 1 live skipped**، واختبار restart عبر ثلاث عمليات وSQLite دائمة، وفحوص سلبية إضافية للمحتوى والتوقيت وcleanup. CI Linux/Windows ناجح عند الرأس نفسه وبوابة critical audit الأصلية ناجحة دون تخفيف. تبقى ثلاثة تنبيهات moderate في سلسلة sprintf-js دون مسار استغلال مثبت ضمن الاستدعاءات المفحوصة، ولا ادعاء أمان مطلق. cached streams المتوازية لا تعني دعم SQLite imports متزامنة؛ الاستيراد متسلسل ضمن العقد القائم. **LIVE SQL NOT TESTED**؛ لا ترقية PARTNER/PILOT ولا Inventory/Purchase أو S3. لم يُنفّذ Merge أو إصلاح كود؛ الإذن تقني للدمج وليس تنفيذًا له. التقارير التالية تاريخية بالنسبة لهذا القرار؛ `.vscode` مستبعدة.
 
