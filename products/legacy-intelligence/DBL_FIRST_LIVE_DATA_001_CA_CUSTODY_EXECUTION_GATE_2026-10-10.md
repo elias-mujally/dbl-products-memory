@@ -6,7 +6,7 @@ Date: 2026-10-10, Asia/Aden (+03:00). Supersedes the custody-approval hold in `9
 
 **LAB-ONLY SINGLE-HOST CA EXCEPTION = OWNER APPROVED.** No new offline issuing workstation or second recovery-medium prerequisite. The owner expressly accepts unlocked-key exposure on this lab host and the single E: copy's loss risk. This does not waive TLS, Firewall, reader identity/permissions or bounded maintenance limits.
 
-**Agent CA custody API/storage preflight = PASSED. Actual operator issuance attempt = BLOCKED IN PREFLIGHT AFTER FAILED RUNTIME LAUNCH. CA/PFX/re-import and FIRST LIVE DATA #001 = NOT TESTED.** No key, certificate, E: file or SQL change was created by this round. No automatic retry.
+**Agent CA custody API/storage preflight = PASSED. First operator attempt stopped before key creation; owner has since confirmed runtime7.6.5 and the corrected interactive handoff is READY / RESULT PENDING. CA/PFX/re-import and FIRST LIVE DATA #001 = NOT TESTED.** No key, certificate, E: file or SQL change has been observed. No unattended retry.
 
 The encrypted-recovery-archive project remains PAUSED; accepted historical S2 fallback is not reopened. S2 LAB-PROVEN and S3 ACCOUNTING-BLOCKED unchanged.
 
@@ -52,7 +52,19 @@ Failed qualified-runtime launch is directly evidenced. Rejection in the original
 
 Independent follow-up read confirmed the same on-disk sanitized JSON, no E: custody directory, the correctly spelled qualified runtime executable present, YSEDU still Running/Auto/PID5072, Browser still Stopped/Disabled/PID0 and no LocalMachine/My certificate entries returned. No rerun, E: write, key creation or service change. The failed local `CA_CUSTODY_RESULT.json` is retained; the helper deliberately requires a fresh evidence target, so **do not merely repeat it**. After the owner confirms the correct runtime, preserve this failed artifact before a separately reviewed invocation. No replacement of a PFX or key, no arbitrary new CA identity or expanded investigation.
 
-**Current STOP: correct operator runtime launch first; issuance has not started. No leaf, SQL connection/import or host setting change. This is an execution handoff, not a new PKI/recovery design.** `.vscode` excluded.
+## Corrected runtime handoff — owner confirmed7.6.5
+
+The owner supplied `7.6.5` from the exact executable version-only command. Preserve the earlier failure as historical, not an unresolved runtime-path blocker.
+
+The original sanitized result was moved **within the exact task output directory**, without replacement/deletion, to `CA_CUSTODY_RESULT_PREFLIGHT_STOP_20261010_204514.json`; SHA256 before/after equals **08BD7A060AF73ADEEDC41D1C894BED154D2B6A340A992E5FA6ED234E7567D057**. Decision/time/phase and all no-key/no-mutation flags were verified before that move. No E: change. The real custody directory remains absent; this is not a second CA identity or a key replacement.
+
+Fresh no-key/no-write preflight at20:51:31.5892895+03 passed. A public launcher was tested through Windows PowerShell into the exact PowerShell7 executable using only `-PreflightOnly`; actual result at20:52:13.1310288+03 again passed, with KeyCreated/EWrites/SqlChanged=false. This qualifies the path/argument handoff, not hidden input or cryptographic execution.
+
+The launcher then received an explicit interactive branch: one **visible, user-operated, non-RunAs** child console via Start-Process/WindowStyle Normal, no redirected input/output, no captured password prompt, no SQL change. Native arguments contain only encoded **public source**, not any password/key; this is quote-safe dispatch, not execution-policy or TLS bypass. The child checks the immutable custody-helper hash again. The parent only reports console process launch, never custody success. An interactive result has not yet been supplied. No agent-created interactive console was started by the validation calls.
+
+Local launcher: `outputs/host-first-live-data-001-20261010/Start-LabCaCustody001.ps1`, SHA256 **7DB230D56144B81B1DE34E0812E68214035D34A938E23354D23B65A3945C05A3**; [retained source](research/DBL_LAB_CA_CUSTODY_001_LAUNCHER_2026-10-10.ps1), newline-normalized text equivalent. Syntax parsed. The original custody helper/hash remains unchanged. A single hash-pinned invocation was handed to the owner; no automatic retry or weaker requirement.
+
+Fresh service observation after preparation: YSEDU Running/Auto/PID5072; Browser Stopped/Disabled/PID0. No leaf, SQL connection/import or host setting change. **Current handoff: await the sanitized actual child-console result; do not infer CA/PFX success from the launch or preflight.** `.vscode` excluded.
 
 ## Primary API basis
 
