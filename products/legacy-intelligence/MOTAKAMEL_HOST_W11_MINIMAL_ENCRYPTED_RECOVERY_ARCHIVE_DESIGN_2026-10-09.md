@@ -4,7 +4,9 @@ Date: **2026-10-09**. Accepted baseline: **37da337**, [E: qualification/protecti
 
 **2026-10-10 follow-up:** [synthetic qualification](MOTAKAMEL_HOST_W11_SYNTHETIC_ARCHIVE_QUALIFICATION_2026-10-10.md) passed installed-GPG byte provenance, AES256/OCB, synthetic FD0 transport and NTFS content/path round-trip with tamper/truncation rejection. The original NOT TESTED statements below are historical for those bounded tests only. Real Pinentry/security-metadata/SQL recovery/E: capture remain NOT TESTED; execution NO-GO and separate outage/capture gates remain unchanged. No real laboratory archive was created.
 
-**DESIGN COMPLETE — EXECUTION NO-GO until the remaining gates below.** This is a one-time laboratory preservation plan before YSEDU certificate maintenance, not a backup product or PKI project. No archive, staging directory, key, passphrase, SQL copy, test ciphertext or restore was created. No SQL interruption or Windows/security/network change occurred. S2 remains LAB-PROVEN; S3 frozen/accounting-blocked; live connector NOT TESTED.
+**Later 2026-10-10 complementary safety gate:** [final qualification and one bounded capture procedure](MOTAKAMEL_HOST_W11_FINAL_RECOVERY_CAPTURE_SAFETY_QUALIFICATION_2026-10-10.md) passed native Pinentry, scoped security metadata and TAR rejection/quarantine tests. READY FOR SEPARATELY AUTHORIZED BOUNDED CAPTURE within its explicit limits; no further general design gate recommended. Actual capture/SQL restore/certificate work remain NOT EXECUTED; exact scope/custody/outage acceptance and separate stop/capture/start authorization remain necessary.
+
+**Original design checkpoint: DESIGN COMPLETE — EXECUTION NO-GO until the remaining gates below.** This is a one-time laboratory preservation plan before YSEDU certificate maintenance, not a backup product or PKI project. No archive, staging directory, key, passphrase, SQL copy, test ciphertext or restore was created in that design turn. No SQL interruption or Windows/security/network change occurred. S2 remains LAB-PROVEN; S3 frozen/accounting-blocked; live connector NOT TESTED.
 
 ## 1. Selected technique and actual tool evidence
 

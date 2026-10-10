@@ -2,7 +2,9 @@
 
 Date: **2026-10-10**, DESKTOP-8QRQT7R. Accepted design: Product Memory **3e44b95**, [minimal encrypted archive design](MOTAKAMEL_HOST_W11_MINIMAL_ENCRYPTED_RECOVERY_ARCHIVE_DESIGN_2026-10-09.md). Authorization: synthetic files, encryption/decryption, isolated NTFS extraction and bounded synthetic cleanup only.
 
-**SYNTHETIC QUALIFIED — content/path round-trip, AES-256/OCB and test-only FD0 password transport.** This is **not RECOVERY READY**, a SQL restore proof, approval to stop SQL, or permission for certificate work. Real recovery Pinentry, security-metadata round-trip and real E: capture remain separate gates. S2 stays LAB-PROVEN; S3 accounting-blocked/frozen; live connector NOT TESTED. No product scope/architecture changed.
+**Later 2026-10-10 complementary gate:** [Final recovery capture safety qualification](MOTAKAMEL_HOST_W11_FINAL_RECOVERY_CAPTURE_SAFETY_QUALIFICATION_2026-10-10.md) passed actual native Pinentry, bounded owner/DACL/audit-SACL/NTFS manifest replay, twelve malicious TAR rejection cases and authenticated quarantine. The NOT TESTED statements below are historical for those bounded tests only. Custom integrity-label/other unsupported metadata and real SQL/E: capture/restore remain unqualified. The concrete next step is separately authorized bounded real capture, not automatic shutdown or certificate work.
+
+**Original result: SYNTHETIC QUALIFIED — content/path round-trip, AES-256/OCB and test-only FD0 password transport.** This is **not RECOVERY READY**, a SQL restore proof, approval to stop SQL, or permission for certificate work. Real recovery Pinentry, security-metadata round-trip and real E: capture remained separate gates at this original checkpoint. S2 stays LAB-PROVEN; S3 accounting-blocked/frozen; live connector NOT TESTED. No product scope/architecture changed.
 
 ## 1. Installed tools and source qualification
 

@@ -1,0 +1,295 @@
+{
+  "Decision": "FINAL_RECOVERY_CAPTURE_SAFETY_SYNTHETIC_QUALIFIED",
+  "Scope": "Dummy files only; not an actual SQL archive or restore",
+  "Metadata": {
+    "At": "2026-10-10T06:13:10.1125459+03:00",
+    "Metadata": "PASSED_BOUNDED_CURRENT_USER",
+    "RoundTrip": [
+      {
+        "Path": "payload/inherited.txt",
+        "OwnerDaclAttributesUtcHashes": "MATCH",
+        "OwnerSid": "S-1-5-21-1392130399-112342285-2566684314-1001",
+        "Protected": false
+      },
+      {
+        "Path": "payload/data.bin",
+        "OwnerDaclAttributesUtcHashes": "MATCH",
+        "OwnerSid": "S-1-5-21-1392130399-112342285-2566684314-1001",
+        "Protected": true
+      },
+      {
+        "Path": "payload",
+        "OwnerDaclAttributesUtcHashes": "MATCH",
+        "OwnerSid": "S-1-5-21-1392130399-112342285-2566684314-1001",
+        "Protected": false
+      },
+      {
+        "Path": ".",
+        "OwnerDaclAttributesUtcHashes": "MATCH",
+        "OwnerSid": "S-1-5-21-1392130399-112342285-2566684314-1001",
+        "Protected": true
+      }
+    ],
+    "Sacl": "BLOCKED_CURRENT_TOKEN_NO_SACL_READ",
+    "ArbitraryOwner": "NOT_QUALIFIED_WITH_CURRENT_TOKEN",
+    "TarNegatives": [
+      {
+        "Case": "traversal",
+        "Rejected": "TRAVERSAL_OR_WINDOWS_ALIAS",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "0C43C4775D1FCF75D6C8A1E6B7454A0C0D72BDEFF668CFB639403E7FFD55E9FC"
+      },
+      {
+        "Case": "late-traversal",
+        "Rejected": "TRAVERSAL_OR_WINDOWS_ALIAS",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "3D027C27CB7D28E9CFD2076045E93AFE3C806622DE40C09B09A827575488C2A3"
+      },
+      {
+        "Case": "absolute-posix",
+        "Rejected": "ABSOLUTE_OR_WINDOWS_NAMESPACE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "57BBCEE30E924C19433852E7CE604621A14FED51455678A95AA18B2E73FC343D"
+      },
+      {
+        "Case": "absolute-windows",
+        "Rejected": "ABSOLUTE_OR_WINDOWS_NAMESPACE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "559A6FBBB091729F3A3C77A751E6328D9539C4EDA901CCBEB849E6DA5276C01C"
+      },
+      {
+        "Case": "drive-relative",
+        "Rejected": "ABSOLUTE_OR_WINDOWS_NAMESPACE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "ABB923E5B60DB77AA0D268D654E9A063C464772B1FD1E7E6DCBC96B6E83EBFB0"
+      },
+      {
+        "Case": "unc",
+        "Rejected": "ABSOLUTE_OR_WINDOWS_NAMESPACE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "2F006562CECF1170FD211A4F62634F5AB9577BE430EBF12B7C1AEF28B4BE5463"
+      },
+      {
+        "Case": "backslash",
+        "Rejected": "ABSOLUTE_OR_WINDOWS_NAMESPACE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "F2076D6BC71E60F5EE1757BA75813C10FD1D77C5FF799DEFF55F5D8889E917AE"
+      },
+      {
+        "Case": "symlink",
+        "Rejected": "FORBIDDEN_LINK_OR_TYPE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "29D0581027EA338407D3E397764B80FC7D7C3B5289E1DBEDF866B9A363BE91F5"
+      },
+      {
+        "Case": "hardlink",
+        "Rejected": "FORBIDDEN_LINK_OR_TYPE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "AA4C10FD75836581A96AC00BF83780F9B8DEBA1613D01F7CED13B2FBF5A74EFB"
+      },
+      {
+        "Case": "duplicate",
+        "Rejected": "DUPLICATE_OR_CASE_ALIAS",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "F6D855B9CCF86923BE2EA9C22DEB626183F69B617775DEE0426F138F706AD5CE"
+      },
+      {
+        "Case": "case-alias",
+        "Rejected": "DUPLICATE_OR_CASE_ALIAS",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "87FFBC5946CCD9F84F9F5D66A00D5B9789B3DD662E0C20577F1276612AF16050"
+      },
+      {
+        "Case": "ads",
+        "Rejected": "ABSOLUTE_OR_WINDOWS_NAMESPACE",
+        "ExtractInvocations": 0,
+        "DestinationEntries": 0,
+        "SHA256": "E11971671934C7F6DAA23E2ABE4C95B849BB136E1488A495D84C2C4982974D3C"
+      }
+    ],
+    "Allowed": [
+      "payload/",
+      "payload/data.bin",
+      "payload/inherited.txt",
+      "metadata/",
+      "metadata/manifest.json"
+    ],
+    "PackageHash": "554B683DAA0F83A138A2B32AD0FD2D708FCD237533D01F0C97B06DEFD3535586",
+    "PackageBytes": 139776
+  },
+  "Interactive": {
+    "Decision": "INTERACTIVE_AND_QUARANTINE_QUALIFIED",
+    "Mode": "native Pinentry ask; no passphrase transport in harness",
+    "At": "2026-10-10T06:13:46.9676975+03:00",
+    "EncryptionExit": 0,
+    "EncryptionStatus": [
+      "[GNUPG:] PINENTRY_LAUNCHED 808 w32 1.3.2-unknown - dumb - - 197609/197609 0",
+      "[GNUPG:] PINENTRY_LAUNCHED 809 w32 1.3.2-unknown - dumb - - 197609/197609 0",
+      "[GNUPG:] PINENTRY_LAUNCHED 810 w32 1.3.2-unknown - dumb - - 197609/197609 0",
+      "[GNUPG:] BEGIN_ENCRYPTION 0 9 2",
+      "[GNUPG:] END_ENCRYPTION"
+    ],
+    "DecryptionExit": 0,
+    "DecryptionStatus": [
+      "[GNUPG:] PINENTRY_LAUNCHED 1753 w32 1.3.2-unknown - dumb - - 197609/197609 0",
+      "[GNUPG:] DECRYPTION_INFO 0 9 2",
+      "[GNUPG:] DECRYPTION_OKAY",
+      "[GNUPG:] GOODMDC"
+    ],
+    "NegativeExit": 2,
+    "NegativeStatus": [
+      "[GNUPG:] PINENTRY_LAUNCHED 1665 w32 1.3.2-unknown - dumb - - 197609/197609 0",
+      "[GNUPG:] DECRYPTION_INFO 0 9 2",
+      "[GNUPG:] ERROR aead_checktag 16777226",
+      "[GNUPG:] BADMDC",
+      "[GNUPG:] DECRYPTION_FAILED",
+      "[GNUPG:] FAILURE gpg-exit 33554433"
+    ],
+    "NegativePartialBytes": 139703,
+    "NegativeExtractInvocations": 0,
+    "FailedPendingPromoted": false,
+    "PositiveAuthentication": "EXIT0_PLUS_DECRYPTION_OKAY_ALGO9_2_HASH_MEMBERS_BEFORE_PROMOTION_AND_EXTRACTION",
+    "CompletedAt": "2026-10-10T06:15:02.8335998+03:00",
+    "AgentCleanup": "SCOPED_STOPPED"
+  },
+  "OperatorElevatedMetadata": {
+    "Decision": "ARBITRARY_OWNER_DACL_AUDIT_SACL_SYNTHETIC_PASSED",
+    "At": "2026-10-10T06:26:40.5004092+03:00",
+    "Elevated": true,
+    "OwnerBefore": "S-1-5-32-544",
+    "OwnerAfter": "S-1-5-18",
+    "AuditRuleCount": 1,
+    "FullSddlEqual": true,
+    "SHA256": "9C1EB50D9AD2F4B590A3AD510F56272236B475193BF6C169C199171991A41EA2",
+    "MachinePolicyChange": false,
+    "SqlOrErpRead": false,
+    "FixtureRoot": "C:\\Users\\user\\Documents\\Codex\\FRCSQ-20261010-7e3821a9\\elevated-metadata",
+    "MandatoryIntegrityLabelCustomReplay": "NOT_TESTED"
+  },
+  "OperatorManifest": {
+    "Scope": "synthetic-only same-host",
+    "SourceName": "dummy-source.txt",
+    "TargetName": "dummy-restored.txt",
+    "Owner": "S-1-5-18",
+    "Sddl": "O:SYG:BAD:PAI(A;;FA;;;SY)(A;;FA;;;BA)(A;;FA;;;S-1-5-21-1392130399-112342285-2566684314-1001)S:AI(AU;SAFA;FR;;;S-1-5-21-1392130399-112342285-2566684314-1001)",
+    "AuditRuleCount": 1,
+    "Bytes": 34,
+    "SHA256": "9C1EB50D9AD2F4B590A3AD510F56272236B475193BF6C169C199171991A41EA2"
+  },
+  "ExtractedManifestReplay": {
+    "Decision": "AUTHENTICATED_TAR_MANIFEST_NTFS_REPLAY_PASSED",
+    "At": "2026-10-10T06:38:23.941124+03:00",
+    "ManifestFrom": "authenticated-extraction/metadata/manifest.json",
+    "Records": [
+      {
+        "Path": "payload/inherited.txt",
+        "DaclOwnerInheritanceAttributesCreationWriteUtc": "MATCH",
+        "RecordedAccessUtc": "2026-10-03T07:08:09Z",
+        "ObservedAccessUtc": "2026-10-03T07:08:09Z",
+        "AccessExactAtCheck": true,
+        "AccessGuarantee": "Recorded and applied; subsequent reads may change it; no filesystem-policy change"
+      },
+      {
+        "Path": "payload/data.bin",
+        "DaclOwnerInheritanceAttributesCreationWriteUtc": "MATCH",
+        "RecordedAccessUtc": "2026-10-03T07:08:09Z",
+        "ObservedAccessUtc": "2026-10-03T07:08:09Z",
+        "AccessExactAtCheck": true,
+        "AccessGuarantee": "Recorded and applied; subsequent reads may change it; no filesystem-policy change"
+      },
+      {
+        "Path": "payload",
+        "DaclOwnerInheritanceAttributesCreationWriteUtc": "MATCH",
+        "RecordedAccessUtc": "2026-10-10T03:13:09.5603501Z",
+        "ObservedAccessUtc": "2026-10-10T03:13:09.5603501Z",
+        "AccessExactAtCheck": true,
+        "AccessGuarantee": "Recorded and applied; subsequent reads may change it; no filesystem-policy change"
+      },
+      {
+        "Path": ".",
+        "DaclOwnerInheritanceAttributesCreationWriteUtc": "MATCH",
+        "RecordedAccessUtc": "2026-10-10T03:13:09.5603501Z",
+        "ObservedAccessUtc": "2026-10-10T03:13:09.5603501Z",
+        "AccessExactAtCheck": true,
+        "AccessGuarantee": "Recorded and applied; subsequent reads may change it; no filesystem-policy change"
+      }
+    ],
+    "OwnerScope": "current user; arbitrary SID tested separately only"
+  },
+  "CapacityAt": "2026-10-10T06:40:45.1127475+03:00",
+  "Volumes": [
+    {
+      "DriveLetter": "D",
+      "FileSystem": "NTFS",
+      "HealthStatus": "Healthy",
+      "Size": 261900726272,
+      "SizeRemaining": 17562300416
+    },
+    {
+      "DriveLetter": "E",
+      "FileSystem": "exFAT",
+      "HealthStatus": "Healthy",
+      "Size": 251647754240,
+      "SizeRemaining": 139640832000
+    },
+    {
+      "DriveLetter": "C",
+      "FileSystem": "NTFS",
+      "HealthStatus": "Healthy",
+      "Size": 249365000192,
+      "SizeRemaining": 39870500864
+    }
+  ],
+  "Partitions": [
+    {
+      "DriveLetter": "C",
+      "DiskNumber": 0,
+      "PartitionNumber": 3
+    },
+    {
+      "DriveLetter": "D",
+      "DiskNumber": 0,
+      "PartitionNumber": 4
+    },
+    {
+      "DriveLetter": "E",
+      "DiskNumber": 1,
+      "PartitionNumber": 1
+    }
+  ],
+  "LocalHelperHashes": [
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\FRCSQ-20261010-7e3821a9\\Qualify.ps1",
+      "Hash": "C6D97BA9FC9FAA261FB6468CE9E57DFD2A6DDCC226B645346E1388140347B967"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\FRCSQ-20261010-7e3821a9\\Qualify-ElevatedMetadata.ps1",
+      "Hash": "33F68310CF6B32B060A1F8561A2644B23F444467527E51B93F3D1C2A91FA0635"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\FRCSQ-20261010-7e3821a9\\Verify-ExtractedManifest.ps1",
+      "Hash": "CBC2A28AC8A653103B361BC6A602DD3D594B8D9D6D6370857032C389D3375BA7"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\FRCSQ-20261010-7e3821a9\\Complete-ElevatedManifestReplay.ps1",
+      "Hash": "14F25E7C1F812AFADA12DC4B911CD05B9A4F2F505E9B0440E8273A5AB0F91D4E"
+    }
+  ],
+  "SqlOrErpContentsRead": false,
+  "EWritten": false,
+  "SqlServiceChanged": false,
+  "MachinePolicyChanged": false,
+  "CustomMandatoryIntegrityLabelReplay": "NOT_TESTED",
+  "ActualSqlArchiveRestore": "NOT_TESTED"
+}
