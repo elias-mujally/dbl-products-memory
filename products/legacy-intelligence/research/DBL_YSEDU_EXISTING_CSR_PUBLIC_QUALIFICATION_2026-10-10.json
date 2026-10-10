@@ -1,0 +1,33 @@
+{
+  "Decision": "EXISTING_CSR_NATIVE_AND_MEMORY_PROFILE_TESTS_PASSED",
+  "ObservedAt": "2026-10-10T22:38:21.4040691+03:00",
+  "NativePublicPositive": 1,
+  "MemoryPositive": 1,
+  "Negatives": 19,
+  "NativeDerSHA256": "A1BE601581E3B647D3DAAF231524B71C78A2F874342CDB5FCB4CBD987577F273",
+  "OriginalArtifactsUnchanged": "READ_ONLY",
+  "ExistingPrivateKeyAccessed": false,
+  "MachineKeyCreated": false,
+  "CertificateStoreChanged": false,
+  "SqlChanged": false,
+  "ExtraExtensions": "Validated enrollment metadata only; never forwarded to SQL leaf",
+  "ResumePublicOnly": {
+    "Decision": "EXISTING_CSR_RESUME_PUBLIC_PREFLIGHT_PASSED",
+    "ObservedAt": "2026-10-10T22:39:53.0605535+03:00",
+    "OriginalEvidencePins": "PASSED",
+    "PublicProfile": "PASSED",
+    "ExistingPrivateKeyAccessed": false,
+    "NativeKeyCreation": false,
+    "SqlChanged": false,
+    "ResultWritten": false
+  },
+  "LauncherCheckOnly": {
+    "Decision": "EXISTING_CSR_RESUME_LAUNCHER_PINS_PASSED",
+    "Elevated": false,
+    "ChildLaunched": false,
+    "PrivateKeyOpened": false,
+    "NativeKeyCreation": false
+  },
+  "AdministrativePendingKeyQualification": "NOT_TESTED_PENDING_OPERATOR",
+  "FirstLiveData": "NOT_TESTED"
+}
