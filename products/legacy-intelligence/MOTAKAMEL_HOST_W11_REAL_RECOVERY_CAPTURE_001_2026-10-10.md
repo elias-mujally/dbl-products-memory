@@ -2,7 +2,32 @@
 
 Date: 2026-10-10. Prior qualified procedure: Product Memory `cab9540`.
 
-## Decision
+## Resumption — 2026-10-10
+
+**Current decision: BLOCKED BEFORE SHUTDOWN — DECODER COPY NOT YET RETAINED.** This supersedes the missing-secret reason at checkpoint `527edf0`, without changing the accepted capture procedure or repeating successful synthetic tests.
+
+The owner confirmed a newly generated strong random recovery secret, available through a password manager from another device and also recorded on external paper. **Independent secret custody = OWNER-CONFIRMED**; its value and entropy were intentionally not observed or requested. Do not ask the owner to regenerate or disclose it.
+
+The owner first identified E: for decoder retention, then explicitly clarified: **«سأضعها لاحقا ولم انسخها بعد»**. Therefore **Independent Decoder Retention = NOT READY**, not a verified existing copy. E: can hold the public qualified decoder distribution independently of Disk0; co-location with the encrypted archive remains within the already accepted single-external-copy risk. No additional off-E copy is silently imposed as a new gate.
+
+At **2026-10-10T16:42:02.2366841+03:00**, the ordinary agent token was `DESKTOP-8QRQT7R\user`, Elevated=false. Installed GPG, TAR and native Pinentry still matched all three published hashes below. `MSSQL$YSEDU` returned Running / Automatic. E: was again Disk1, distinct from C:/D: Disk0, exFAT/Healthy, with139,640,832,000 free bytes. C: NTFS had35,925,835,776 free bytes at the storage refresh. Space does not qualify a retained decoder or a real archive.
+
+A single top-level E: name/metadata listing located no obvious decoder package. No personal directory was traversed or personal file read. This listing alone did not prove absence; the owner's explicit clarification establishes that the intended decoder copy has not yet been made.
+
+Known qualified decoder package from the accepted synthetic evidence:
+
+- Full distribution: `Git-2.54.0-64-bit.tar.bz2`, **116,824,890 bytes**; retain the distribution and its dependencies, not only unsigned `gpg.exe`.
+- Qualified package SHA-256: `E1819CEE60D09793DDE322CDB1170E03663C41CD9265CF45246219FC5E6AEECD`.
+- Recorded official asset: `https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.tar.bz2`.
+- Installed qualified GPG member SHA-256: `A5140C85353E8399DA8D6BD7E3741524CD76A4E69BE88AF12042B1C9EF022984`.
+
+These package/source values come from the already qualified report, not a new download or an independently tested recovery workstation in this turn. The prior public asset was processed in memory only; it was not a retained decoder copy. Retain the public digest and the qualified decoding/validation instructions with the tools, anchored separately in Product Memory.
+
+Next step is owner placement of that distribution/instructions at an exact E: path for read-only hash qualification, or explicit permission for a narrowly scoped public-tool download into a new E: folder with no installation/overwrite. No public-tool write to E: was assumed from authorization to write the encrypted real-data archive. Only after decoder retention passes may the remaining security/settings/private-stage gates and the already authorized capture sequence proceed.
+
+No Pinentry, ERP closure, SQL stop/start, real-data staging/copy, cryptographic execution, source ACL modification, E: write or cleanup occurred in this resumption. Real archive location/SHA remain none; SQL RESTORE NOT TESTED. The 23-file metadata evidence below is the prior operator preflight, not a newly repeated administrative run. No unchanged-live-source-bytes claim is made. S3 remains frozen and Live Connector NOT TESTED. **STOP before outage.**
+
+## Previous checkpoint 527edf0 — Decision
 
 **OWNER AUTHORIZATION ACCEPTED — BLOCKED BEFORE SHUTDOWN / REAL CAPTURE NOT STARTED.**
 
