@@ -1,0 +1,129 @@
+{
+  "Decision": "SECURITY_METADATA_PREFLIGHT_BLOCKED",
+  "Task": "SECURITY_METADATA_ACCESS_DIAGNOSIS_001",
+  "ObservedAt": "2026-10-10T19:07:20.5437400+03:00",
+  "Host": "DESKTOP-8QRQT7R",
+  "Identity": "DESKTOP-8QRQT7R\\user",
+  "ProcessId": 29760,
+  "ProcessPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "PowerShellVersion": "5.1.22621.6133",
+  "ProcessTokenBefore": {
+    "Elevated": true,
+    "SecurityPresent": true,
+    "SecurityEnabled": false,
+    "BackupEnabled": false,
+    "RestoreEnabled": false,
+    "ThreadTokenPresent": false,
+    "SecurityAttributes": 0,
+    "ElevationType": 2
+  },
+  "ProcessTokenDuring": {
+    "Elevated": true,
+    "SecurityPresent": true,
+    "SecurityEnabled": true,
+    "BackupEnabled": false,
+    "RestoreEnabled": false,
+    "ThreadTokenPresent": false,
+    "SecurityAttributes": 2,
+    "ElevationType": 2
+  },
+  "ProcessTokenAfter": {
+    "Elevated": true,
+    "SecurityPresent": true,
+    "SecurityEnabled": false,
+    "BackupEnabled": false,
+    "RestoreEnabled": false,
+    "ThreadTokenPresent": false,
+    "SecurityAttributes": 0,
+    "ElevationType": 2
+  },
+  "PrivilegeRestoredAndObserved": true,
+  "OriginalFirstFailure": {
+    "Path": "C:\\",
+    "Method": "GetNamedSecurityInfoW",
+    "Stage": "QueryDescriptor",
+    "SecurityInformation": "0x00010000",
+    "DesiredAccess": "0x01020000",
+    "Win32": 5,
+    "Reason": "Exception calling \"Descriptor\" with \"1\" argument(s): \"Full descriptor read failed; Win32=5\"",
+    "DescriptorReturned": false,
+    "TokenAtFailure": {
+      "Elevated": true,
+      "SecurityPresent": true,
+      "SecurityEnabled": true,
+      "BackupEnabled": false,
+      "RestoreEnabled": false,
+      "ThreadTokenPresent": false,
+      "SecurityAttributes": 2,
+      "ElevationType": 2
+    }
+  },
+  "BoundedComparisons": [
+    {
+      "Path": "C:\\",
+      "Method": "GetNamedSecurityInfoW",
+      "Stage": "DescriptorConversion",
+      "SecurityInformation": "0x00000007",
+      "DesiredAccess": "0x00020000",
+      "Win32": 0,
+      "Reason": null,
+      "DescriptorReturned": true
+    },
+    {
+      "Path": "C:\\",
+      "Method": "GetNamedSecurityInfoW",
+      "Stage": "DescriptorConversion",
+      "SecurityInformation": "0x00000008",
+      "DesiredAccess": "0x01000000",
+      "Win32": 0,
+      "Reason": null,
+      "DescriptorReturned": true
+    },
+    {
+      "Path": "C:\\",
+      "Method": "CreateFileW -> GetSecurityInfo",
+      "Stage": "QueryDescriptor",
+      "SecurityInformation": "0x00010000",
+      "DesiredAccess": "0x01020000",
+      "Win32": 5,
+      "Reason": "Exception calling \"Descriptor\" with \"1\" argument(s): \"Full descriptor read failed; Win32=5\"",
+      "DescriptorReturned": false
+    }
+  ],
+  "ReaderUsed": "OriginalNamedBackup",
+  "FailurePath": "C:\\",
+  "FailureStage": "FullDescriptorRead",
+  "Reason": "STOP: full handle-based BACKUP read failed; no weaker fallback",
+  "PrivilegeRestoreFailure": null,
+  "BackupQueryRequiredAccess": "0x01020000",
+  "PersistentCount": 23,
+  "SecurityRecordCount": 0,
+  "Records": [],
+  "ServiceStatus": "Running",
+  "SourceContentsRead": false,
+  "SourceSecurityChanged": false,
+  "SqlStopped": false,
+  "EWrites": false,
+  "RealCaptureStarted": false,
+  "RawSecurityDescriptorsPublished": false,
+  "Pending": [
+    "Exact settings/evidence allowlist",
+    "Private NTFS root ACL",
+    "ERP closure",
+    "Final pre-stop refresh",
+    "Real capture excluded from this task"
+  ],
+  "EvidenceCustody": {
+    "Origin": "Owner-supplied administrative PowerShell JSON; not an independently witnessed privileged run",
+    "AttachmentSHA256": "3109040097ED692A21F46D3958AA3FDF244AEF68D1FE2978F28A94C33544D780",
+    "ExecutedLocalHelperSHA256Rechecked": "341513816E3FBF2B2DD99D97A2E583A55C9BF8D22BD87FF83B28AA016C836556",
+    "IdentitySidOmittedFromPublishedCopy": true,
+    "SourceContentsIncluded": false
+  },
+  "IndependentNonElevatedServiceCheck": {
+    "ObservedAt": "2026-10-10T19:09:38.0314272+03:00",
+    "Name": "MSSQL$YSEDU",
+    "Status": "Running",
+    "ServiceChangedByTask": false
+  }
+}

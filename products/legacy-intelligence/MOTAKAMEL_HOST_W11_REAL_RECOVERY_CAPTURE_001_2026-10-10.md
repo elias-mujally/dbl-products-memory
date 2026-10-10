@@ -2,6 +2,10 @@
 
 Date: 2026-10-10. Prior qualified procedure: Product Memory `cab9540`.
 
+## Current diagnosis follow-up — 19:07 +03:00
+
+[Security Metadata Access Diagnosis #001](MOTAKAMEL_HOST_W11_SECURITY_METADATA_ACCESS_DIAGNOSIS_001_2026-10-10.md) now identifies the first failed object as `C:\`, with an elevated token and SeSecurityPrivilege observed enabled at the query and restored afterward. Separate basic/SACL queries succeeded; both full BACKUP named and correctly opened handle queries failed with Win32=5 at QueryDescriptor. The underlying full-request cause remains UNRESOLVED, not a proven SQL-file ACL problem. Security gate BLOCKED, real capture NOT STARTED, decoder retention PASSED; no source/ACL/service change or weaker fallback. SQL was still Running at the independent19:09+03 read. The earlier17:08 missing-path observation below is historical and is superseded only on path/token diagnostics, not on capture qualification.
+
 ## Decoder retention completed — 2026-10-10
 
 **Recovery Decoder Retention #001 = PASSED. Recovery Capture #001 = BLOCKED BEFORE SHUTDOWN / NOT STARTED — full security-descriptor read denied at the operator gate.** This supersedes the decoder-not-retained state at `b8ca570`, without changing the capture procedure or rerunning successful synthetic qualification.

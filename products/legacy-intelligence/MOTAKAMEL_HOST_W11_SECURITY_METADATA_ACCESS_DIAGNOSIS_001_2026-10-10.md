@@ -5,10 +5,40 @@ Owner scope: bounded read-only diagnosis and a safe read-method correction test 
 
 ## Current decision
 
-**OPERATOR EXECUTION PENDING — SECURITY METADATA GATE REMAINS BLOCKED.**
-No successful protected-object read, root cause, corrected gate or recovery capture is claimed from preparation tests.
+**BOUNDED DIAGNOSIS ROUND COMPLETE — SECURITY METADATA GATE REMAINS BLOCKED; FULL-REQUEST ROOT CAUSE UNRESOLVED.** The first denied object and failure phase are now known. The bounded full handle-based correction was tested and failed, so no qualified full-reader correction or recovery capture is claimed.
 
-The prior operator failure was `GetNamedSecurityInfoW` requested through `Descriptor`, with `BACKUP_SECURITY_INFORMATION=0x00010000`, Win32=5 and CompletedRecords=0. It omitted the failing path and effective privilege observations. Source code constructs a sorted list of the approved 23 files and their parents, so a parent can be first; this ordering is a hypothesis until the instrumented operator observation. Do not name a SQL file or C: root as the proven denied object yet.
+## Operator result — 19:07 +03:00
+
+The owner returned [diagnostic JSON](research/SECURITY_METADATA_ACCESS_DIAGNOSIS_001_RESULT_2026-10-10.json), observed **2026-10-10T19:07:20.5437400+03:00**, from `DESKTOP-8QRQT7R\\user`, PID29760, `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`, version5.1.22621.6133. This is operator-supplied administrative evidence, not an independently witnessed privileged run. The executed local helper still matched SHA256 `341513816E3FBF2B2DD99D97A2E583A55C9BF8D22BD87FF83B28AA016C836556` when rechecked. The submitted attachment SHA256 is `3109040097ED692A21F46D3958AA3FDF244AEF68D1FE2978F28A94C33544D780`; its machine-specific user SID is omitted from the published JSON, explicitly recorded as an omission. No raw descriptor or SQL content is retained.
+
+| Observation | Actual result |
+|---|---|
+| First denied object | `C:\` — approved parent-directory scope, not an identified SQL file |
+| Original operation | `GetNamedSecurityInfoW`, SE_FILE_OBJECT1, BACKUP_SECURITY_INFORMATION0x00010000 |
+| Original failure phase/code | QueryDescriptor / Win32=5; no descriptor returned |
+| Process elevation | true before, during and after; TokenElevationType2 (full) |
+| SeSecurityPrivilege | present throughout; disabled0 → enabled2 at query/failure → disabled0 after restoration |
+| Other token observations | No thread token; SeBackup/SeRestore remained disabled; their presence is not established by the boolean enabled fields |
+| Named Owner/Group/DACL request0x7 | Win32=0; self-relative descriptor returned |
+| Named SACL request0x8 | Win32=0; self-relative descriptor returned |
+| Full handle-based request0x10000 | Win32=5 at GetSecurityInfo QueryDescriptor; no descriptor returned |
+| Full scope qualification | 23 persistent paths admitted by preflight; SecurityRecordCount0; Records empty |
+
+The handle trial progressed past OpenSecurityHandle to QueryDescriptor. Given the inspected code, `CreateFileW` therefore succeeded with READ_CONTROL|ACCESS_SYSTEM_SECURITY0x01020000, OPEN_EXISTING, share7 and flags0x02200000; the subsequent full `GetSecurityInfo` request failed. This is not an open-handle denial or a successful corrected full read. The two partial controls returned descriptors but their contents, SACL presence/count and full preservation properties were not published or qualified; success must not be converted into a full security gate pass.
+
+`PrivilegeRestoredAndObserved=true`, `PrivilegeRestoreFailure=null`, and the before/after enabled/default bits agree. The raw SeSecurity attributes were0/2/0. This proves the observed transition/restoration in this operator process, not a global privilege audit. `ServiceStatus=Running`, SourceContentsRead/SourceSecurityChanged/SqlStopped/EWrites/RealCaptureStarted allfalse. An independent non-elevated service read at **2026-10-10T19:09:38.0314272+03:00** also returned Running; it does not establish SQL transaction or database integrity state.
+
+### Diagnosis and limits
+
+Confirmed: the original failure is reproducible at the C: root under an elevated, non-impersonating token with SeSecurityPrivilege enabled. Basic descriptor and SACL-only reads succeed on the same object. Opening a handle with both documented query rights succeeds, yet the complete BACKUP request fails through both named and handle APIs. Missing elevation, failure to enable SeSecurityPrivilege, a general inability to query SACL, and use of a zero-access handle for this corrected query are not supported explanations for this observed failure.
+
+The failure is localized to the full BACKUP request in this tested configuration; its deeper cause (flag/API behavior, an additional full-descriptor component/access condition, or another platform constraint) remains **UNRESOLVED**. Do not infer from the disabled backup privilege that enabling it is the proven cure. Do not diagnose corrupt SQL files, change the C: ACL, take ownership, add account rights or bypass UAC.
+
+No safe complete correction was established: switching to an appropriately opened handle did not solve the full read. A possible narrowly scoped next candidate is explicit querying of every applicable descriptor component instead of the BACKUP aggregate flag, while retaining owner/group/DACL/audit SACL and applicable label/resource/scope/trust/filter components, inheritance/control flags, exact coverage and lossless preservation checks. This is a **proposal only**, not a tested fix or a claim that mask0xF/concatenating the two successful partial reads captures all parts. Supported flags, required rights, completeness and unsupported-component rejection must be qualified before replacing the full reader. No additional candidate, privilege expansion, repeated protected read or preservation fallback was executed after this round's STOP.
+
+## Historical preparation at a5b0dc8
+
+At c85dc70, the prior operator failure was `GetNamedSecurityInfoW` requested through `Descriptor`, with `BACKUP_SECURITY_INFORMATION=0x00010000`, Win32=5 and CompletedRecords=0. It omitted the failing path and effective privilege observations. The sorted parent-directory hypothesis was unresolved at preparation; the operator result above now identifies C:\ as the first failed object. It still does not identify a failed SQL file.
 
 ## Evidence collected without elevation
 
@@ -20,7 +50,7 @@ The native `QuerySecurityAccessMask(0x10000)` returned `0x01020000` in both runt
 
 ## One bounded operator round
 
-Executed local helper proposed:
+Local helper subsequently executed by the owner:
 `outputs/host-real-recovery-capture-001-20261010/Diagnose-Capture001SecurityAccess.ps1`
 
 SHA-256 before operator handoff:
@@ -41,4 +71,4 @@ There is no bounded retry loop on a failed object, no DACL-only fallback, no add
 
 ## Completion boundary
 
-Waiting for the owner's JSON/error from the fresh administrative session. The new runtime result must be recorded before upgrading security qualification or calling diagnosis complete. Real capture remains NOT STARTED and is excluded from this task. No SQL stop/start, database content read/copy, E: write, crypto/backup test rerun, TLS/network/CA or ERP action occurred.
+The owner result is now recorded above. The bounded round ended at its full-read STOP; the gate remains BLOCKED and the deeper cause unresolved. The C: root failure prevents qualification of later approved paths; absence of their records is not evidence of failure or success on those files. Real capture remains NOT STARTED and is excluded from this task. No SQL stop/start, database content read/copy, E: write, crypto/backup test rerun, source ACL/ownership/policy or TLS/network/CA/ERP change occurred. Decoder retention and prior synthetic qualification are unaffected. STOP.
