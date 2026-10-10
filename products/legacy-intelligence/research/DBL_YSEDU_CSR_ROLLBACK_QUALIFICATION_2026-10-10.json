@@ -1,0 +1,13 @@
+{
+  "Decision": "YSEDU_CSR_AND_ROLLBACK_PURE_TESTS_PASSED",
+  "ObservedAt": "2026-10-10T22:14:47.2039803+03:00",
+  "RollbackScopeVectors": 16,
+  "CsrPositive": 1,
+  "CsrNegatives": 8,
+  "FixtureKeyScope": "Process memory only",
+  "MachineKeyCreated": false,
+  "CertificateStoreChanged": false,
+  "SqlStopped": false,
+  "RollbackApplyTested": false,
+  "AdministrativeNativeInspection": "Deferred to operator CSR preflight before key creation"
+}
