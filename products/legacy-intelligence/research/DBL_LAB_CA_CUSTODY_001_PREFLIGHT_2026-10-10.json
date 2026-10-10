@@ -1,0 +1,17 @@
+{
+  "Decision": "CA_CUSTODY_API_PREFLIGHT_PASSED",
+  "ObservedAt": "2026-10-10T20:40:45.5805102+03:00",
+  "Runtime": "7.6.5",
+  "Framework": ".NET 10.0.11",
+  "RuntimeSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "EphemeralCreate": "CngKey.Create(RSA,null,explicit-parameters)",
+  "EncryptedExport": "PbeParameters AES256 SHA256 200000",
+  "EphemeralLoad": "EphemeralKeySet only",
+  "ExternalDestinationIndependent": true,
+  "KeyCreated": false,
+  "EWrites": false,
+  "SqlChanged": false,
+  "EvidenceForm": "Structured transcription of actual no-key/no-write preflight output",
+  "CryptographicExecution": "PENDING_OWNER_INTERACTIVE_EXECUTION",
+  "PublicSyntheticParserCheck": "PBES2 AES256 accepted; AES128 variant rejected; no key created"
+}
