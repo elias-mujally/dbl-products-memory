@@ -1,0 +1,104 @@
+{
+  "EvidenceType": "Structured transcription of actual read-only tool outputs; not SQL acquisition",
+  "Task": "DBL_FIRST_LIVE_DATA_001",
+  "HostObservation": {
+    "ObservedAt": "2026-10-10T20:01:12.7040952+03:00",
+    "Host": "DESKTOP-8QRQT7R",
+    "Operator": "DESKTOP-8QRQT7R\\user",
+    "Elevated": false,
+    "InstanceMap": "MSSQL12.YSEDU",
+    "SQL": {
+      "Name": "MSSQL$YSEDU",
+      "State": "Running",
+      "StartMode": "Auto",
+      "ProcessId": 5072,
+      "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Binn\\sqlservr.exe\" -sYSEDU",
+      "StartName": "LocalSystem"
+    },
+    "Browser": {
+      "Name": "SQLBrowser",
+      "State": "Stopped",
+      "StartMode": "Disabled",
+      "ProcessId": 0
+    },
+    "TCP": {
+      "Enabled": 0,
+      "ListenOnAllIPs": 1,
+      "DynamicPorts": "0",
+      "FixedPort": ""
+    },
+    "SQLListeners": [],
+    "UDP1434Endpoints": [],
+    "CertificateBinding": "",
+    "ForceEncryption": 0,
+    "MachineMyCertificates": [],
+    "ReaderSecretAvailableToThisProcess": false,
+    "LiveOptInPresent": false,
+    "TLSOverrideVariablePresent": false,
+    "SourceQueryAttempted": false,
+    "HostChanged": false
+  },
+  "RuntimeObservation": {
+    "ObservedAt": "2026-10-10T17:02:50.823Z",
+    "Node": "v22.23.2",
+    "OpenSSL": "3.5.7",
+    "Platform": "win32",
+    "Arch": "x64",
+    "LockVersion": 3,
+    "InstalledVersionMatches": 153,
+    "MissingRequired": [],
+    "MissingOptionalCount": 60,
+    "Mismatches": [],
+    "KeyDependencies": [
+      {
+        "package": "mssql",
+        "installed": "12.7.4",
+        "locked": "12.7.4"
+      },
+      {
+        "package": "tedious",
+        "installed": "20.3.3",
+        "locked": "20.3.3"
+      },
+      {
+        "package": "better-sqlite3",
+        "installed": "11.8.1",
+        "locked": "11.8.1"
+      },
+      {
+        "package": "typescript",
+        "installed": "5.9.2",
+        "locked": "5.9.2"
+      },
+      {
+        "package": "vitest",
+        "installed": "4.1.11",
+        "locked": "4.1.11"
+      }
+    ],
+    "ModulesLoaded": [
+      "@dbl/connector-motakamel-plus",
+      "@dbl/import-orchestrator",
+      "@dbl/storage-sqlite",
+      "@dbl/application-service"
+    ],
+    "DefaultTLSMin": "TLSv1.2",
+    "ExclusiveCASetterAvailable": true,
+    "SQLConnectionAttempted": false,
+    "SQLiteOpened": false,
+    "FixtureInjected": false
+  },
+  "Build": {
+    "RemoteMain": "8c22f7b2a1dc251928adc9c7590b551dffddbd5e",
+    "LocalHead": "3fd128d2b49f439f24fe19fa7e3cc1c2e8d12e6e",
+    "LocalBranch": "codex/motakamel-item-identity",
+    "TrackedTreeDifference": [],
+    "WorktreeClean": true,
+    "SourceChanged": false
+  },
+  "Decision": "FIRST_LIVE_DATA_001_BLOCKED_BEFORE_SQL_CONNECTION",
+  "RecoveryQualification": "PAUSED_BY_OWNER; historical evidence preserved",
+  "LiveAcquisition": "NOT_TESTED",
+  "LiveImportToSQLite": "NOT_TESTED",
+  "CurrentFrozenDatabaseAndReaderState": "NOT_QUERIED"
+}
