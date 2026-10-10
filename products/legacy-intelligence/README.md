@@ -4,9 +4,11 @@
 
 آخر مراجعة مع مستودع البناء: **2026-10-09 — PR #11 مدموج؛ main=8c22f7b**
 
-آخر تحديث بحثي/مخبري: **2026-10-09**
+آخر تحديث بحثي/مخبري: **2026-10-10**
 
 ## الحالة
+
+**Synthetic Archive Qualification (2026-10-10): SYNTHETIC QUALIFIED ضمن content/path + AES256/OCB + test-only FD0 transport فقط؛ real recovery/certificate execution ما زال NO-GO.** [النتائج القابلة لإعادة الاختبار والتنظيف والحدود](MOTAKAMEL_HOST_W11_SYNTHETIC_ARCHIVE_QUALIFICATION_2026-10-10.md). gpg2.4.9 مطابق بايتًا لعضو التوزيع الرسمي Git2.54.0 بعد تحقق SHA256 الكامل للتوزيع عبر HTTPS؛ ليس توقيعًا offline أو تدقيق كل DLL. TAR/فك التشفير/NTFS restore اجتازت8 ملفات وهمية تشمل أسماء عربية وصينية و257MiB؛ actual status9/2 يثبت AES256/OCB. رُفضت كلمة خاطئة وbit-tamper وtail-truncation؛ فشل authentication قد يترك plaintext جزئيًا، فلا استخراج قبل نجاح كامل. كلمة الاختبار العشوائية عبر pipe لا argv/env/file/Git، ليست كلمة الاسترجاع الحقيقية ولا تأهيل Pinentry. حُذف مجلد الاختبار المحدد فقط بعد إعادة بصمات28 ملفًا؛ الأدلة والبرنامج الوهمي محفوظان، E:/SQL/ERP/services/settings لم تُمس. ACL/SACL/real Pinentry/>4GiB/real recovery ما زالت NOT TESTED، ولا تفويض outage/capture تلقائي. فقرة التصميم التالية تاريخية حيث تصف synthetic encrypt/decrypt/source provenance بأنها غير مختبرة؛ بقية بواباتها باقية. `.vscode` خارج commit؛ STOP.
 
 **Minimal Encrypted Recovery Archive Design (2026-10-09): DESIGN COMPLETE؛ EXECUTION NO-GO قبل بوابات التأهيل/التفويض.** [التقنية وخطوات النسخ والتحقق والاسترجاع والحدود](MOTAKAMEL_HOST_W11_MINIMAL_ENCRYPTED_RECOVERY_ARCHIVE_DESIGN_2026-10-09.md). اختيار TAR + **GnuPG2.4.9/AES256-OCB AEAD** الموجود ضمن Git2.54.0، لا ZIP password أو أداة نسخ/PKI جديدة. TAR3.7.7 ومكونات Pinentry موجودة؛ فعلية encrypt/decrypt/hidden-entry/metadata round-trip **NOT TESTED**، وgpg.exe غير موقّع Authenticode فمصدر التوزيع يحتاج اعتمادًا؛ البصمة المحلية ليست authenticity proof. الخطة: private NTFS staging بعد stop طبيعي مستقل التفويض، manifest للمسارات/SHA/SDDL/SIDs/settings داخل ciphertext على E:، decrypt كامل موثَّق إلى NTFS quarantine ثم hashes/completeness دون overwrite/attach. icacls/save ليس owner/SACL backup، وexFAT لا يُفترض أنه يحفظ ACL. يلزم custodian/secret recovery مستقل، synthetic tests قبل outage، scope/growth budget وقبول catalog/transactions/plaintext-staging limits، ثم تفويض stop/capture/abort-start؛ **لا archive أو SQL/Windows/E: mutation نُفّذت**. حماية الوجهة/SQL restore proof لم تتأهلا بالتّصميم؛ `.vscode` خارج commit؛ STOP.
 

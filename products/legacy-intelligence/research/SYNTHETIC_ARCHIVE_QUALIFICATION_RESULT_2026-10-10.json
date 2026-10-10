@@ -1,0 +1,151 @@
+{
+  "Decision": "SYNTHETIC QUALIFIED",
+  "StartedAt": "2026-10-10T05:44:34.8147919+03:00",
+  "CompletedAt": "2026-10-10T05:45:04.6896688+03:00",
+  "Root": "C:\\Users\\user\\Documents\\Codex\\SAQ-20261010-b6f1a72c",
+  "Filesystem": "NTFS",
+  "PasswordTransport": "32 random bytes base64; anonymous redirected stdin FD0; never argv/env/file; loopback for synthetic only",
+  "ActualDecryptionStatus": [
+    "[GNUPG:] DECRYPTION_INFO 0 9 2",
+    "[GNUPG:] DECRYPTION_OKAY",
+    "[GNUPG:] GOODMDC"
+  ],
+  "EncryptionStatus": [
+    "[GNUPG:] BEGIN_ENCRYPTION 0 9 2",
+    "[GNUPG:] END_ENCRYPTION"
+  ],
+  "PayloadFiles": [
+    {
+      "Path": "ascii.txt",
+      "Bytes": 20,
+      "SHA256": "EEE4CB0E7CC529576F93F9894614A36123A8453EA6067C367AC7F62F5E4F717E"
+    },
+    {
+      "Path": "empty.bin",
+      "Bytes": 0,
+      "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "Path": "segment_1234567890_1/segment_1234567890_2/segment_1234567890_3/segment_1234567890_4/segment_1234567890_5/segment_1234567890_6/long-path-file.txt",
+      "Bytes": 14,
+      "SHA256": "34687D23E9D43918EBF9C8C84CB0B2F5C177178540757CC7EBAC60D96D6553F2"
+    },
+    {
+      "Path": "space folder/test file.txt",
+      "Bytes": 17,
+      "SHA256": "BD845D12FD2313689A1D7B4ABC60C5F08FEBA5A914C0E29C6D6832C46F387522"
+    },
+    {
+      "Path": "synthetic-sql-size-257MiB.bin",
+      "Bytes": 269484032,
+      "SHA256": "432A8AE9B02F04F4E852D911869BA82641C8DBB59FD5FD43BBCBDE8C89CDB913"
+    },
+    {
+      "Path": "unicode/بيانات تجريبية.txt",
+      "Bytes": 38,
+      "SHA256": "861C60AE18A6DB9DD1F02DC889C884556DC421577B1A1F30585B1F983221EDCA"
+    },
+    {
+      "Path": "unicode/测试.bin",
+      "Bytes": 7,
+      "SHA256": "7BB6463B30F9E301FED333CDF8960CA9497B602CCD8EEB46AE42693FDEA15A4D"
+    }
+  ],
+  "SourceMembers": [
+    {
+      "Path": "metadata/manifest.json",
+      "Bytes": 1180,
+      "SHA256": "FDA8D1CF121BD88D783939A6A09EC1CB4FB1C052A105AA2F98003CAF8406F226"
+    },
+    {
+      "Path": "payload/ascii.txt",
+      "Bytes": 20,
+      "SHA256": "EEE4CB0E7CC529576F93F9894614A36123A8453EA6067C367AC7F62F5E4F717E"
+    },
+    {
+      "Path": "payload/empty.bin",
+      "Bytes": 0,
+      "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "Path": "payload/segment_1234567890_1/segment_1234567890_2/segment_1234567890_3/segment_1234567890_4/segment_1234567890_5/segment_1234567890_6/long-path-file.txt",
+      "Bytes": 14,
+      "SHA256": "34687D23E9D43918EBF9C8C84CB0B2F5C177178540757CC7EBAC60D96D6553F2"
+    },
+    {
+      "Path": "payload/space folder/test file.txt",
+      "Bytes": 17,
+      "SHA256": "BD845D12FD2313689A1D7B4ABC60C5F08FEBA5A914C0E29C6D6832C46F387522"
+    },
+    {
+      "Path": "payload/synthetic-sql-size-257MiB.bin",
+      "Bytes": 269484032,
+      "SHA256": "432A8AE9B02F04F4E852D911869BA82641C8DBB59FD5FD43BBCBDE8C89CDB913"
+    },
+    {
+      "Path": "payload/unicode/بيانات تجريبية.txt",
+      "Bytes": 38,
+      "SHA256": "861C60AE18A6DB9DD1F02DC889C884556DC421577B1A1F30585B1F983221EDCA"
+    },
+    {
+      "Path": "payload/unicode/测试.bin",
+      "Bytes": 7,
+      "SHA256": "7BB6463B30F9E301FED333CDF8960CA9497B602CCD8EEB46AE42693FDEA15A4D"
+    }
+  ],
+  "TarBytes": 269500416,
+  "CiphertextBytes": 269530378,
+  "TarSHA256": "5B5C81288DF79ECE9241A64082C3222E63F041F6648ADE1C364C0E8EB9D1B862",
+  "CiphertextSHA256": "FA4DB11739BCB62D318C6ED4FA534E2412708E175AACCD16DEE5BCFB33A058D9",
+  "MaxSourcePathChars": 211.0,
+  "NegativeTests": [
+    {
+      "Case": "wrong-password",
+      "Exit": 2,
+      "Status": [
+        "[GNUPG:] ERROR symkey_decrypt.maybe_error 11_BAD_PASSPHRASE",
+        "[GNUPG:] ERROR symkey_decrypt.maybe_error 11_BAD_PASSPHRASE",
+        "[GNUPG:] DECRYPTION_FAILED",
+        "[GNUPG:] FAILURE gpg-exit 33554433"
+      ],
+      "PartialPlaintextBytes": 0,
+      "Extracted": false
+    },
+    {
+      "Case": "tampered-body",
+      "Exit": 2,
+      "Status": [
+        "[GNUPG:] DECRYPTION_INFO 0 9 2",
+        "[GNUPG:] ERROR aead_checktag 16777226",
+        "[GNUPG:] BADMDC",
+        "[GNUPG:] DECRYPTION_FAILED",
+        "[GNUPG:] FAILURE gpg-exit 33554433"
+      ],
+      "PartialPlaintextBytes": 138412010,
+      "Extracted": false
+    },
+    {
+      "Case": "truncated-tail",
+      "Exit": 2,
+      "Status": [
+        "[GNUPG:] DECRYPTION_INFO 0 9 2",
+        "[GNUPG:] ERROR aead_checktag 16777226",
+        "[GNUPG:] BADMDC",
+        "[GNUPG:] DECRYPTION_FAILED",
+        "[GNUPG:] FAILURE gpg-exit 33554433"
+      ],
+      "PartialPlaintextBytes": 269500343,
+      "Extracted": false
+    }
+  ],
+  "AgentRestartBeforeDecrypt": true,
+  "TarPathsAndRestoredFiles": "EXACT MATCH",
+  "TarMemberVerifier": "Independent System.Formats.Tar.TarReader, not locale-dependent tar -t text",
+  "NativeTarTextListingUnicode": "DISPLAY LOSS; not an authoritative Unicode validator",
+  "PinentryRealRecovery": "NOT TESTED",
+  "Over4GiB": "NOT TESTED",
+  "ACLReplay": "NOT TESTED",
+  "Edrive": "NOT TOUCHED",
+  "ERP_SQL": "NOT READ OR CHANGED",
+  "AgentCleanup": "SCOPED GPG-AGENT STOPPED"
+}

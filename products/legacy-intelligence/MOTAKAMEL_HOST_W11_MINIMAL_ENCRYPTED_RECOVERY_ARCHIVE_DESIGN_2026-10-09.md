@@ -2,6 +2,8 @@
 
 Date: **2026-10-09**. Accepted baseline: **37da337**, [E: qualification/protection](MOTAKAMEL_HOST_W11_EXTERNAL_RECOVERY_DRIVE_E_QUALIFICATION_2026-10-09.md), [elevated known-path inventory](MOTAKAMEL_HOST_W11_ELEVATED_RECOVERY_INVENTORY_2026-10-09.md#6-operator-returned-elevated-inventory--2236-update), and [certificate recovery/rollback gate](MOTAKAMEL_HOST_W11_YSEDU_CERTIFICATE_IMPLEMENTATION_READINESS_RECOVERY_GATE_2026-10-09.md).
 
+**2026-10-10 follow-up:** [synthetic qualification](MOTAKAMEL_HOST_W11_SYNTHETIC_ARCHIVE_QUALIFICATION_2026-10-10.md) passed installed-GPG byte provenance, AES256/OCB, synthetic FD0 transport and NTFS content/path round-trip with tamper/truncation rejection. The original NOT TESTED statements below are historical for those bounded tests only. Real Pinentry/security-metadata/SQL recovery/E: capture remain NOT TESTED; execution NO-GO and separate outage/capture gates remain unchanged. No real laboratory archive was created.
+
 **DESIGN COMPLETE — EXECUTION NO-GO until the remaining gates below.** This is a one-time laboratory preservation plan before YSEDU certificate maintenance, not a backup product or PKI project. No archive, staging directory, key, passphrase, SQL copy, test ciphertext or restore was created. No SQL interruption or Windows/security/network change occurred. S2 remains LAB-PROVEN; S3 frozen/accounting-blocked; live connector NOT TESTED.
 
 ## 1. Selected technique and actual tool evidence
