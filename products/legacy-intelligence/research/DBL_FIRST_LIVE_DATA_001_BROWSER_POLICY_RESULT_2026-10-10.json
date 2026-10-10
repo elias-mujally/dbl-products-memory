@@ -1,0 +1,79 @@
+{
+  "Decision": "BROWSER_FIREWALL_POLICY_STATIC_QUALIFICATION_PASSED",
+  "ObservedAt": "2026-10-10T20:20:45.0647508+03:00",
+  "Host": "DESKTOP-8QRQT7R",
+  "Operator": "DESKTOP-8QRQT7R\\user",
+  "Elevated": true,
+  "ProcessId": 91020,
+  "EffectiveInboundAllowRulesInspected": 261,
+  "MissingFilterJoins": [],
+  "PotentialBrowserUDP1434AllowRules": [],
+  "FirewallProfiles": [
+    {
+      "Name": "Domain",
+      "Enabled": 1,
+      "DefaultInboundAction": 4,
+      "DefaultOutboundAction": 2,
+      "AllowInboundRules": 1,
+      "AllowLocalFirewallRules": 1
+    },
+    {
+      "Name": "Private",
+      "Enabled": 1,
+      "DefaultInboundAction": 4,
+      "DefaultOutboundAction": 2,
+      "AllowInboundRules": 1,
+      "AllowLocalFirewallRules": 1
+    },
+    {
+      "Name": "Public",
+      "Enabled": 1,
+      "DefaultInboundAction": 4,
+      "DefaultOutboundAction": 2,
+      "AllowInboundRules": 1,
+      "AllowLocalFirewallRules": 1
+    }
+  ],
+  "NetworkProfiles": [
+    {
+      "InterfaceAlias": "‏‏شبكة Wi-Fi",
+      "InterfaceIndex": 15,
+      "NetworkCategory": 0,
+      "IPv4Connectivity": 4,
+      "IPv6Connectivity": 1
+    }
+  ],
+  "BrowserExecutable": "C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Shared\\sqlbrowser.exe",
+  "BrowserSignatureStatus": "Valid",
+  "BrowserSigner": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+  "Browser": {
+    "Name": "SQLBrowser",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "ProcessId": 0,
+    "StartName": "NT AUTHORITY\\LOCALSERVICE",
+    "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Shared\\sqlbrowser.exe\""
+  },
+  "YSEDU": {
+    "Name": "MSSQL$YSEDU",
+    "State": "Running",
+    "StartMode": "Auto",
+    "ProcessId": 5072,
+    "StartName": "LocalSystem",
+    "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Binn\\sqlservr.exe\" -sYSEDU"
+  },
+  "SQLInstanceMap": [
+    {
+      "Name": "YSEDU",
+      "Value": "MSSQL12.YSEDU"
+    }
+  ],
+  "ExperimentalClients": [],
+  "UDP1434Endpoints": [],
+  "Limit": "Static Windows Firewall rule/profiles only; not packet reachability proof, not a Browser loopback bind, not permission to change settings",
+  "FirewallChanged": false,
+  "BrowserStarted": false,
+  "SqlStopped": false,
+  "CertificateCreated": false,
+  "SQLConnection": false
+}
