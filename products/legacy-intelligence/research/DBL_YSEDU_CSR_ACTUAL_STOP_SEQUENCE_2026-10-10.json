@@ -1,0 +1,32 @@
+{
+  "Task": "YSEDU_CSR_001_READONLY_STOP_DIAGNOSIS",
+  "OriginalAttemptAt": "2026-10-10T22:27:48.0392016+03:00",
+  "OriginalFailureAt": "2026-10-10T22:27:49.1396359+03:00",
+  "OriginalFailurePhase": "PublicCsrSignatureAndExtensions",
+  "OriginalAttemptConsumed": true,
+  "OriginalMachineKeyMayExist": true,
+  "SubsequentOperatorResultAt": "2026-10-10T22:28:30.7452864+03:00",
+  "SubsequentPhase": "Identity",
+  "SubsequentInvocationAttemptConsumed": false,
+  "AttemptSHA256": "471BC62AA9572EB4F55D756CF2B95F4C0FA41F5AF4059418314BBC5716160BAE",
+  "OriginalResultSHA256": "770F09AA9B3844482081AA4879CEDCB73BFF0D112FE725FF52100E217ACFE4F0",
+  "CSRFileSHA256": "61B48D26A1AFB37B27ACF0EFDFAA1D90A29B9A39B2F012E0DA7367046E19B889",
+  "OriginalHelperSHA256": "D5C1F979DDA81AAE7868346F5715158BA20516AA6732EE28B6003EBC8DB48451",
+  "IndependentPublicRead": {
+    "PKCS10SignatureVerifiedLoad": true,
+    "Subject": "CN=DESKTOP-8QRQT7R",
+    "ExtensionOids": ["2.5.29.15", "2.5.29.17", "2.5.29.19", "2.5.29.37", "1.2.840.113549.1.9.15", "2.5.29.14"],
+    "OtherRequestAttributeOids": ["1.3.6.1.4.1.311.13.2.3", "1.3.6.1.4.1.311.21.20", "1.3.6.1.4.1.311.13.2.2"],
+    "PinnedValidatorFailure": "STOP: unknown CSR extension",
+    "AllExtensionContentsQualified": false,
+    "ActualPrivateKeyPropertiesQualified": false
+  },
+  "FreshServiceRead": {"MSSQL$YSEDU": "Running", "SQLBrowser": "Stopped"},
+  "AgentNativeCSRRetried": false,
+  "ArtifactsDeletedOrChanged": false,
+  "PrivateKeyAccessedByDiagnosis": false,
+  "CAUnlocked": false,
+  "SqlStopped": false,
+  "FirstLiveData": "NOT_TESTED",
+  "Decision": "STOP_PRESERVE_EXISTING_KEY_AND_CSR_NO_REGENERATION"
+}
