@@ -1,0 +1,14 @@
+{
+  "Decision": "CA_CUSTODY_BLOCKED_STOP",
+  "ObservedAt": "2026-10-10T20:57:06.8070425+03:00",
+  "Phase": "EphemeralCaIssuance",
+  "ExceptionType": "System.Management.Automation.RuntimeException",
+  "InnerExceptionType": null,
+  "CustodyDirectoryCreated": true,
+  "EncryptedPfxWritten": false,
+  "SqlChanged": false,
+  "BrowserChanged": false,
+  "LeafIssued": false,
+  "NoAutomaticRetry": true,
+  "Reason": "Bounded step failed; raw exception/secret material deliberately omitted. Retain artifacts; no SQL interruption."
+}
