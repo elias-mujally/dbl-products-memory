@@ -1,0 +1,12 @@
+{
+  "Decision": "YSEDU_LEAF_MAINTENANCE_PREFLIGHT_BLOCKED_STOP",
+  "ObservedAt": "2026-10-10T21:50:20.6689971+03:00",
+  "Phase": "Identity",
+  "ExceptionType": "System.Management.Automation.RuntimeException",
+  "OriginalSettingsWritten": false,
+  "SqlStopped": false,
+  "HostMutation": false,
+  "SQLConnection": false,
+  "NoAutomaticRetry": true,
+  "Reason": "Bounded read-only gate failed; no raw exception or credential material published"
+}
