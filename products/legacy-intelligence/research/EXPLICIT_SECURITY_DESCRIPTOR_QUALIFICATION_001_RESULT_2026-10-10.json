@@ -1,0 +1,177 @@
+{
+  "Decision": "SECURITY_METADATA_GATE_BLOCKED",
+  "Task": "EXPLICIT_SECURITY_DESCRIPTOR_QUALIFICATION_001",
+  "ObservedAt": "2026-10-10T19:44:25.8991275+03:00",
+  "Host": "DESKTOP-8QRQT7R",
+  "Operator": "DESKTOP-8QRQT7R\\user",
+  "ProcessId": 29760,
+  "PowerShellVersion": "5.1.22621.6133",
+  "NativeReaderSHA256": "76FF48475E26BE7DD01A938BE7E2565D1FF5A0A20956F4D9A03786AFAC847056",
+  "FixtureRoot": "C:\\Users\\user\\Documents\\Codex\\ESDQ-20261010-a42c190d",
+  "EngineVectors": {
+    "Decision": "EXPLICIT_DESCRIPTOR_ENGINE_VECTORS_PASSED",
+    "VectorChecks": 10,
+    "NativeSDDLReference": true,
+    "KnownAuditAndMediumMIC": true,
+    "OrderAndControlNegativeChecks": true,
+    "NullAbsentEmptyDaclAndSaclDistinct": true,
+    "UnsupportedAndTruncationStopped": true,
+    "FilesystemWrite": false,
+    "ProtectedObjectRead": false
+  },
+  "FixturesPassed": false,
+  "FixtureResults": [
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\ESDQ-20261010-a42c190d\\fixture-tree\\protected-source.txt",
+      "CanonicalSHA256": "42BFB6983CA5666AA4D79BC3452EC72EF6269AD007F99019D499EC7ABC594502",
+      "ControlFlags": "0xB014",
+      "DaclState": "PRESENT_READ_OK",
+      "SaclState": "PRESENT_READ_OK",
+      "DaclAceTypes": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "SaclAceTypes": [
+        2,
+        17
+      ],
+      "Components": [
+        {
+          "Mask": 1,
+          "Name": "Owner",
+          "State": "PRESENT_READ_OK",
+          "AceCount": 0
+        },
+        {
+          "Mask": 2,
+          "Name": "Group",
+          "State": "PRESENT_READ_OK",
+          "AceCount": 0
+        },
+        {
+          "Mask": 4,
+          "Name": "DACL",
+          "State": "PRESENT_READ_OK",
+          "AceCount": 4
+        },
+        {
+          "Mask": 504,
+          "Name": "CompleteSACLExplicit",
+          "State": "PRESENT_READ_OK",
+          "AceCount": 2
+        },
+        {
+          "Mask": 8,
+          "Name": "AuditSACL",
+          "State": "PRESENT_COMPONENT_READ_OK",
+          "AceCount": 1
+        },
+        {
+          "Mask": 16,
+          "Name": "IntegrityLabel",
+          "State": "PRESENT_COMPONENT_READ_OK",
+          "AceCount": 1
+        },
+        {
+          "Mask": 32,
+          "Name": "ResourceAttributes",
+          "State": "ABSENT_COMPONENT_READ_OK",
+          "AceCount": 0
+        },
+        {
+          "Mask": 64,
+          "Name": "ScopePolicy",
+          "State": "ABSENT_COMPONENT_READ_OK",
+          "AceCount": 0
+        },
+        {
+          "Mask": 128,
+          "Name": "ProcessTrustLabel",
+          "State": "ABSENT_COMPONENT_READ_OK",
+          "AceCount": 0
+        },
+        {
+          "Mask": 256,
+          "Name": "AccessFilter",
+          "State": "ABSENT_COMPONENT_READ_OK",
+          "AceCount": 0
+        }
+      ],
+      "SourceComparison": "EXPLICIT_HANDLE_AND_INDEPENDENT_FILE_SECURITY_PRE_POST_EQUAL",
+      "AceOrderPreserved": true,
+      "RestoredPath": "C:\\Users\\user\\Documents\\Codex\\ESDQ-20261010-a42c190d\\fixture-tree\\protected-restored.txt",
+      "RestoredCanonicalSHA256": "42BFB6983CA5666AA4D79BC3452EC72EF6269AD007F99019D499EC7ABC594502",
+      "NativeReplayPassed": true
+    }
+  ],
+  "ProcessTokenBefore": {
+    "Elevated": true,
+    "SecurityPresent": true,
+    "SecurityEnabled": false,
+    "BackupEnabled": false,
+    "RestoreEnabled": false,
+    "ThreadTokenPresent": false,
+    "SecurityAttributes": 0,
+    "ElevationType": 2
+  },
+  "ProcessTokenDuringFixtureReplay": {
+    "Elevated": true,
+    "SecurityPresent": true,
+    "SecurityEnabled": true,
+    "BackupEnabled": false,
+    "RestoreEnabled": true,
+    "ThreadTokenPresent": false,
+    "SecurityAttributes": 2,
+    "ElevationType": 2
+  },
+  "ProcessTokenDuringRealRead": null,
+  "ProcessTokenAfter": {
+    "Elevated": true,
+    "SecurityPresent": true,
+    "SecurityEnabled": false,
+    "BackupEnabled": false,
+    "RestoreEnabled": false,
+    "ThreadTokenPresent": false,
+    "SecurityAttributes": 0,
+    "ElevationType": 2
+  },
+  "PrivilegeRestoreFailure": null,
+  "FailurePhase": "FixtureReadAndReplay",
+  "FailurePath": "C:\\Users\\user\\Documents\\Codex\\ESDQ-20261010-a42c190d\\fixture-tree\\inherited-source.txt",
+  "NativeStage": "GetSecurityInfo mask=0x1F8",
+  "NativeCurrentPath": "C:\\Users\\user\\Documents\\Codex\\ESDQ-20261010-a42c190d\\fixture-tree\\inherited-source.txt",
+  "Reason": "Exception calling \"Read\" with \"1\" argument(s): \"STOP: explicit reconstruction/control/ACE-order mismatch\"",
+  "PersistentCount": 0,
+  "ExpectedSecurityRecordCount": 0,
+  "CompletedSecurityRecordCount": 0,
+  "Records": [],
+  "SupportedPresentAceTypes": [
+    0,
+    1,
+    2,
+    17
+  ],
+  "OtherComponents": "Read explicitly; STOP if present without qualified replay",
+  "ResourceManagerControlReplay": "UNSUPPORTED_STOP_IF_PRESENT",
+  "BackupSecurityInformationUsed": false,
+  "FullDescriptorRebuiltAndCompared": false,
+  "SourceSecurityMetadataRead": false,
+  "SourceContentsRead": false,
+  "SourceSecurityChanged": false,
+  "SqlStopped": false,
+  "EWrites": false,
+  "RealCaptureStarted": false,
+  "SQLStatus": "Running",
+  "RawRealSecurityDescriptorsPublished": false,
+  "FixtureCleanup": "NOT_PERFORMED; synthetic only",
+  "Pending": [
+    "Exact settings/local-evidence allowlist",
+    "Private NTFS real stage ACL",
+    "Fresh storage/tool/custody gates",
+    "ERP closure",
+    "Final pre-stop refresh",
+    "Real capture excluded from this task"
+  ]
+}
