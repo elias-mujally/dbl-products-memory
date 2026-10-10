@@ -1,0 +1,61 @@
+{
+  "Decision": "DECODER_RETENTION_001_PASSED",
+  "ObservedAt": "2026-10-10T16:58:05.9637984+03:00",
+  "Host": "DESKTOP-8QRQT7R",
+  "Folder": "E:\\DBL-Recovery-Tools-001",
+  "SourceUrl": "https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.tar.bz2",
+  "Files": [
+    {
+      "Name": "Git-2.54.0-64-bit.tar.bz2",
+      "Bytes": 116824890,
+      "SHA256": "E1819CEE60D09793DDE322CDB1170E03663C41CD9265CF45246219FC5E6AEECD",
+      "SecondReadMatched": true
+    },
+    {
+      "Name": "RECOVERY-INSTRUCTIONS.md",
+      "Bytes": 7686,
+      "SHA256": "020CF4CA7AE951E73D3DE11AD66F8A289592D39FD02E1ED4EF3BD36D47001700",
+      "SecondReadMatched": true
+    },
+    {
+      "Name": "DECODER-SHA256.txt",
+      "Bytes": 298,
+      "SHA256": "7B6A875EA39955CA39FCBD6FB9EA53379D2C58EB073803BB4B7E4BBFA6A03EF6",
+      "SecondReadMatched": true
+    }
+  ],
+  "DefaultHttpsCertificateValidation": true,
+  "NoInstallation": true,
+  "NoOverwrite": true,
+  "NoDeletion": true,
+  "IndependentSecretCustody": "OWNER_CONFIRMED_PASSWORD_MANAGER_OTHER_DEVICE_AND_EXTERNAL_PAPER",
+  "IndependentWorkstationExecution": "NOT_TESTED",
+  "RealArchive": "NOT_CREATED",
+  "SqlService": {
+    "ObservedAt": "2026-10-10T17:10:34.1960405+03:00",
+    "Name": "MSSQL$YSEDU",
+    "Status": "Running",
+    "StartType": "Automatic",
+    "StoppedByTask": false
+  },
+  "AdministrativeSecurityGate": {
+    "Status": "BLOCKED_FULL_DESCRIPTOR_READ_DENIED",
+    "Helper": "Read-Capture001SecurityMetadata.ps1",
+    "HelperSHA256": "137B49F76BC12505E035CE43D20F67B4D7F00AA3D09B9240E72200E9D5BDB406",
+    "PS7SyntaxAndNativeCompilation": "PASSED",
+    "PS51SyntaxAndNativeCompilation": "PASSED",
+    "NativeCallsDuringCompilation": false,
+    "OperatorResult": {
+      "Decision": "SECURITY_METADATA_PREFLIGHT_BLOCKED",
+      "ObservedAt": "2026-10-10T17:08:05.3396694+03:00",
+      "CompletedRecords": 0,
+      "Reason": "Exception calling \"Descriptor\" with \"1\" argument(s): \"Full descriptor read failed; Win32=5\"",
+      "PrivilegeRestoreFailure": null,
+      "SqlStopped": false,
+      "SourceContentsRead": false,
+      "SourceSecurityChanged": false
+    }
+  },
+  "SecretsRetained": false,
+  "RawSqlDataInReceipt": false
+}

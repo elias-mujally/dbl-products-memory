@@ -2,7 +2,51 @@
 
 Date: 2026-10-10. Prior qualified procedure: Product Memory `cab9540`.
 
-## Resumption — 2026-10-10
+## Decoder retention completed — 2026-10-10
+
+**Recovery Decoder Retention #001 = PASSED. Recovery Capture #001 = BLOCKED BEFORE SHUTDOWN / NOT STARTED — full security-descriptor read denied at the operator gate.** This supersedes the decoder-not-retained state at `b8ca570`, without changing the capture procedure or rerunning successful synthetic qualification.
+
+The owner explicitly authorized creation of the previously nonexistent `E:\DBL-Recovery-Tools-001`, download of the exact qualified official package, public recovery instructions, hash/size verification and rereading. That folder now contains exactly three new authorized files:
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| Git-2.54.0-64-bit.tar.bz2 | 116824890 | E1819CEE60D09793DDE322CDB1170E03663C41CD9265CF45246219FC5E6AEECD |
+| RECOVERY-INSTRUCTIONS.md | 7686 | 020CF4CA7AE951E73D3DE11AD66F8A289592D39FD02E1ED4EF3BD36D47001700 |
+| DECODER-SHA256.txt | 298 | 7B6A875EA39955CA39FCBD6FB9EA53379D2C58EB073803BB4B7E4BBFA6A03EF6 |
+
+At **16:56:33.5618600+03:00**, the HTTPS download completed with the qualified size/hash, then a second full read matched. After writing the public instructions/digest file, all three files were independently hashed twice and both text files were read completely at **16:58:05.9637984+03:00**. No installation, package execution, replacement, deletion or SQL interruption occurred. The package was written with CreateNew in the new empty folder; HTTPS used normal certificate validation, with no trust bypass. No partial-download retry or crypto-test repetition was needed.
+
+The instructions retain the exact package/member digests, private native Pinentry/no-cache decoding profile, whole-message authentication and pending-TAR quarantine, full pre-extraction TAR admission, file/NTFS metadata checks and separately authorized SQL recovery boundaries. They contain no password or real database content. The decoder is independent of source Disk0, but co-located with the future archive on one E: disk, within the accepted single-copy risk. Recovery-workstation execution/SQL restoration remains NOT TESTED.
+
+[Nonsecret retention receipt](research/RECOVERY_DECODER_RETENTION_001_RESULT_2026-10-10.json) independently anchors the three digests. [Retained read-only metadata helper](research/REAL_CAPTURE_001_SECURITY_METADATA_PREFLIGHT_2026-10-10.ps1) prepares the next gate, not a backup framework.
+
+### Remaining pre-shutdown work
+
+At **16:58:47.1855165+03:00**, the agent token remained non-elevated, and `MSSQL$YSEDU` was **Running / Automatic**. Full security metadata/hardlinks therefore require the owner's actual administrative channel; no automatic UAC/elevation or ordinary-token retries of protected reads were attempted.
+
+The new local helper `outputs/host-real-recovery-capture-001-20261010/Read-Capture001SecurityMetadata.ps1`, SHA-256 `137B49F76BC12505E035CE43D20F67B4D7F00AA3D09B9240E72200E9D5BDB406`, passed PowerShell7 and Windows PowerShell5.1 parsing and C# compilation only before operator handoff. No native metadata methods were invoked in those compile checks. The operator subsequently executed it and returned the failed runtime gate below; compilation is not runtime qualification. The retained Git source may undergo newline conversion; verify the executed local digest separately.
+
+The helper first reruns the previously hash-pinned administrative metadata preflight, then reads full descriptors and metadata-only handles for its 23 files and bounded parent chains. It temporarily enables only SeSecurityPrivilege in that operator process and restores its prior state. [Microsoft documents the SACL privilege requirement](https://learn.microsoft.com/en-us/windows/win32/api/aclapi/nf-aclapi-getnamedsecurityinfow) and [BACKUP_SECURITY_INFORMATION as all descriptor parts](https://learn.microsoft.com/en-us/windows/win32/secauthz/security-information). Metadata handle reads use [GetFileInformationByHandle](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileinformationbyhandle), not file-content reads. File link count must be one; label/policy/object/callback/unsupported ACEs or unresolved SIDs STOP rather than being dropped. Returned JSON contains descriptor fingerprints/counts, not raw SDDL or credentials. It changes no source ACL or SQL/Windows policy, writes no E: files, and never stops SQL.
+
+### Operator result — 17:08 STOP
+
+The owner returned **SECURITY_METADATA_PREFLIGHT_BLOCKED**, observed **2026-10-10T17:08:05.3396694+03:00**, with **CompletedRecords=0** and the exact reason:
+
+```text
+Exception calling "Descriptor" with "1" argument(s): "Full descriptor read failed; Win32=5"
+```
+
+The helper then raised its mandatory STOP; `PrivilegeRestoreFailure=null`, `SqlStopped=false`, `SourceContentsRead=false`, `SourceSecurityChanged=false`. No privilege-restoration error was reported; this is not an independent post-process token audit. The failed JSON did not identify the denied path, so it does not prove a particular SQL file has an unreadable SACL or unsupported security attribute. It proves that this full-descriptor acquisition method did not qualify the required scope. Descriptor/root access versus request/privilege behavior remains **UNRESOLVED**, not guessed from the Win32 code alone.
+
+No protected-descriptor retry, fallback to partial DACL-only capture, source ownership/ACL change, added account right, elevation bypass or SQL shutdown followed. The narrow next decision would be an explicitly bounded read-only diagnosis of the failed descriptor request/object and process privilege state; it is not performed in this task. Do not weaken the preservation gate or restart synthetic tests merely to advance.
+
+A non-mutating service-status check at **2026-10-10T17:10:34.1960405+03:00** confirmed `MSSQL$YSEDU` remained **Running / Automatic** after the failed gate. This does not establish current SQL transaction or database state.
+
+Six already identified local recovery-evidence files were boundedly inventoried by size/hash without printing their contents: original network JSON, network rollback script, frozen qualification JSON/script, S2 reconciliation JSON/script; total **218423 bytes**. They were not copied. This is a proposed exact local-artifact subset, not completion of the current settings/registry/service/security allowlist. Required source/parent descriptors are BLOCKED; private NTFS root ACL, exact current configuration/evidence capture, normal ERP closure and final pre-stop refresh remain unexecuted/pending. No private real-data root was created.
+
+The independently retained secret remains owner-confirmed via another-device password manager plus external paper. No Pinentry opened, real SQL contents copied, database archive created, SQL stopped/restarted, or TLS/network/CA/ERP change occurred. E: writes in this round are only the three explicitly authorized public decoder files. **Do not stop SQL until all pending gates pass.**
+
+## Historical resumption at b8ca570 — 2026-10-10
 
 **Current decision: BLOCKED BEFORE SHUTDOWN — DECODER COPY NOT YET RETAINED.** This supersedes the missing-secret reason at checkpoint `527edf0`, without changing the accepted capture procedure or repeating successful synthetic tests.
 
