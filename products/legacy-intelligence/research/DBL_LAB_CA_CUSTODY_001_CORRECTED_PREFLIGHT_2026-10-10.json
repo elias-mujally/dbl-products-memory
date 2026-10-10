@@ -1,0 +1,18 @@
+{
+  "Decision": "CA_CUSTODY_API_PREFLIGHT_PASSED",
+  "ObservedAt": "2026-10-10T21:21:16.0181689+03:00",
+  "Runtime": "7.6.5",
+  "Framework": ".NET 10.0.11",
+  "RuntimeSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "EphemeralCreate": "Typed C# factory / literal CLR null",
+  "TypedNullDispatchQualified": true,
+  "OwnershipOnlyRootQualified": true,
+  "PriorFailuresPreserved": true,
+  "AttemptConsumed": false,
+  "EncryptedExport": "PbeParameters AES256 SHA256 200000",
+  "EphemeralLoad": "EphemeralKeySet only",
+  "ExternalDestinationIndependent": true,
+  "KeyCreated": false,
+  "EWrites": false,
+  "SqlChanged": false
+}

@@ -6,7 +6,7 @@ Date: 2026-10-10, Asia/Aden (+03:00). Supersedes the custody-approval hold in `9
 
 **LAB-ONLY SINGLE-HOST CA EXCEPTION = OWNER APPROVED.** No new offline issuing workstation or second recovery-medium prerequisite. The owner expressly accepts unlocked-key exposure on this lab host and the single E: copy's loss risk. This does not waive TLS, Firewall, reader identity/permissions or bounded maintenance limits.
 
-**CA CUSTODY = BLOCKED / STOP after the actual 20:57 operator attempt.** The runtime/console preflight passed, but issuance did not qualify. A confirmed PowerShell null-to-empty-string binding defect invalidates the intended unnamed-key call. Exact failing assertion and actual key persistence were not recorded; do not infer them from the sanitized phase. E: contains the ownership marker only, not a PFX/public certificate. FIRST LIVE DATA #001 = NOT TESTED. No automatic retry or SQL interruption.
+**Owner approved the narrow correction and ONE new controlled attempt. CORRECTED NO-KEY PREFLIGHT = PASSED; INTERACTIVE ISSUANCE RESULT = PENDING.** The original 20:57 issuance remains failed and preserved. The corrected typed-C# null boundary has been exercised only in its no-key probe. No successful CA/PFX/reimport or live SQL evidence yet; FIRST LIVE DATA #001 = NOT TESTED. E: still has the existing ownership marker only. No automatic retry or SQL interruption.
 
 The encrypted-recovery-archive project remains PAUSED; accepted historical S2 fallback is not reopened. S2 LAB-PROVEN and S3 ACCOUNTING-BLOCKED unchanged.
 
@@ -82,6 +82,26 @@ Follow-up read-only observations:
 **Narrow proposed correction, not executed:** use a typed C# factory that supplies a literal CLR null to CngKey.Create, retains all ephemeral/key-name assertions, and records allowlisted subphase/boolean key-state diagnostics without driver/exception messages or key material. Qualify argument dispatch without creating a key first. Any new issuance is a separately acknowledged single attempt, not an automatic retry: preserve both failures and the existing ownership-only E: folder; do not delete/reset it or invent another CA identity to evade freshness guards. Its safe reuse needs explicit bounded handling before another run. Stop for any persistence evidence or unexplained artifact; no weakening of PFX/TLS requirements.
 
 **Current decision:** no helper/key-generation rerun, no certificate/SQL/network mutation, no live connector test. Obtain owner agreement to the narrow correction and one controlled retry before proceeding. The archive investigation remains PAUSED; this defect does not reopen it. `.vscode` remains excluded.
+
+## Owner-approved correction and one-attempt handoff — 21:20–21:21 +03
+
+Owner replied **yes** to correcting null dispatch, adding secret-safe diagnostics and one controlled issuance attempt, preserving failed evidence without deletion or relaxed security. This is not permission for a retry loop, a second CA identity or SQL mutation at this custody gate.
+
+Created **new corrected source files**; original helper/launcher remain unchanged with their recorded hashes. No failed artifact was moved, replaced or deleted. The corrected helper uses the same CA subject, parameters, E: custody root and private-retention constraints.
+
+- Key creation is called through a small typed C# factory: the private core receives a literal C# null; it rejects a non-null name before any key API. The no-key probe exercises that same core and returns before cryptographic creation. Actual creation retains IsEphemeral and absent-KeyName checks before certificate construction. No persistent-key fallback.
+- Existing E: root is accepted **only** when it is a non-reparse directory containing precisely the non-reparse 82-byte ownership marker with SHA256 `00691F280AEF17DA4F5C00839DFED194597713CDA4241F4FAF93C94EE64E4688`. It is rechecked immediately before key creation. No E: marker rewrite, folder deletion/reset, unknown artifact reuse or alternate CA namespace.
+- Both failure files are required unchanged by their recorded hashes. The corrected result uses a new local `CA_CUSTODY_CORRECTED_RESULT.json`, preserving the previous results in place. Before secret entry, a CreateNew local `CA_CUSTODY_CORRECTED_ATTEMPT.json` consumes the sole approved attempt; any later invocation finds it and stops. Cancellation/failure does not automatically reset it. Preflight never creates that marker/result or invokes key creation.
+- Failure evidence includes only allowlisted phase, exception-type and key-state booleans plus fixed failure codes; no raw exception message, key name, password or private bytes. Key creation/state checking, RSA size, request construction and self-signature now have separate phases. The existing cleanup and accepted memory-erasure limitations are unchanged.
+- AES256/SHA256/200000 PFX validation, MAC/wrong-password check, encrypted private-bag check, CreateNew retention, E: reread, bounded ephemeral reimport and certificate-store comparison are unchanged. AST comparison verified all five existing crypto/retention functions unchanged. This is source-equivalence evidence, not a new completed PFX roundtrip.
+
+Local executable helper: `outputs/host-first-live-data-001-20261010/Invoke-LabCaCustody001-Corrected.ps1`, SHA256 **760198D7DD22638540DBC8906EEE2B1F837BF83354B68E6DCCDDFB2D9DE66B89**. [Retained corrected helper](research/DBL_LAB_CA_CUSTODY_001_CORRECTED_HELPER_2026-10-10.ps1).
+
+Local executable launcher: `outputs/host-first-live-data-001-20261010/Start-LabCaCustody001-Corrected.ps1`, SHA256 **43A7FC43CD29620458420B7D53FDBC331CA9623E5863AB6128B87A963C6C51B4**. [Retained corrected launcher](research/DBL_LAB_CA_CUSTODY_001_CORRECTED_LAUNCHER_2026-10-10.ps1). It checks the corrected helper hash and opens the same visible, non-elevated, user-operated PowerShell7 console. No secret arguments/redirected prompts/RunAs/UAC. Launch success is not custody success.
+
+Syntax checks passed. Direct no-key preflight at21:20:18.8053666+03 passed. The complete launcher path from Windows PowerShell into PowerShell7, **PreflightOnly branch only**, passed at21:21:16.0181689+03: typed-null dispatch/ownership-only root/prior evidence verified, AttemptConsumed=false, KeyCreated/EWrites/SqlChanged=false. [Actual sanitized preflight](research/DBL_LAB_CA_CUSTODY_001_CORRECTED_PREFLIGHT_2026-10-10.json). Subsequent inspection found no corrected attempt or result file and only the unchanged ownership marker on E:. YSEDU Running/Auto/PID5072; Browser Stopped/Disabled/PID0 at this turn's service read.
+
+**Current handoff:** owner runs the hash-pinned corrected launcher once and enters only the independently retained CA password in its hidden console prompt. Return final sanitized JSON, not password/PFX or parent launch message. Keep E: attached. STOP at any failed gate; no agent-triggered real key creation, SQL certificate binding, SQL restart, network change or live connector execution in these validation calls. Issuance/PFX/reimport remain **NOT TESTED** until the actual result is independently checked. `.vscode` excluded.
 
 ## Primary API basis
 
