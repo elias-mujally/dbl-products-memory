@@ -4,7 +4,7 @@ Date: 2026-10-10, Asia/Aden (+03:00). Owner authorization follows Product Memory
 
 ## Current decision
 
-**MAINTENANCE AUTHORIZATION ACCEPTED; EXECUTION HELD BEFORE MUTATION — SINGLE-HOST CA CUSTODY VARIATION NOT YET APPROVED.**
+**MAINTENANCE AUTHORIZATION ACCEPTED; SINGLE-HOST CA EXCEPTION NOW APPROVED AND CA CUSTODY PASSED at21:32+03.** [Current custody result and fresh maintenance handoff](DBL_FIRST_LIVE_DATA_001_CA_CUSTODY_EXECUTION_GATE_2026-10-10.md). Below's approval-hold/issuer statements are historical. SQL leaf/network/service mutations remain unexecuted; fresh administrative original-settings/combined rollback gate is pending before those operations. Do not rerun CA issuance or reopen the paused archive.
 
 **Browser firewall-policy static qualification = PASSED**, from the owner's administrative read-only result. Actual Browser activation, listener scope, SSRP/TCP, certificate issuance/loading and Node live acquisition remain **NOT TESTED**.
 

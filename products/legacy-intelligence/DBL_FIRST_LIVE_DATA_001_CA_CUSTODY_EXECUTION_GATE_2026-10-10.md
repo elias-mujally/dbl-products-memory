@@ -6,7 +6,7 @@ Date: 2026-10-10, Asia/Aden (+03:00). Supersedes the custody-approval hold in `9
 
 **LAB-ONLY SINGLE-HOST CA EXCEPTION = OWNER APPROVED.** No new offline issuing workstation or second recovery-medium prerequisite. The owner expressly accepts unlocked-key exposure on this lab host and the single E: copy's loss risk. This does not waive TLS, Firewall, reader identity/permissions or bounded maintenance limits.
 
-**Owner approved the narrow correction and ONE new controlled attempt. CORRECTED NO-KEY PREFLIGHT = PASSED; INTERACTIVE ISSUANCE RESULT = PENDING.** The original 20:57 issuance remains failed and preserved. The corrected typed-C# null boundary has been exercised only in its no-key probe. No successful CA/PFX/reimport or live SQL evidence yet; FIRST LIVE DATA #001 = NOT TESTED. E: still has the existing ownership marker only. No automatic retry or SQL interruption.
+**CA ENCRYPTED CUSTODY + EPHEMERAL REIMPORT = PASSED at21:32+03; agent external hash/public-artifact verification = PASSED.** The one owner-approved corrected attempt succeeded; its marker prevents another issuance. Earlier failures remain preserved and historical. FIRST LIVE DATA #001 = NOT TESTED: no SQL leaf, binding, TCP/Browser activation, SQL interruption, reader login or import yet. Continue the already authorized maintenance at fresh target-specific original-settings capture; the agent has no administrative Windows token.
 
 The encrypted-recovery-archive project remains PAUSED; accepted historical S2 fallback is not reopened. S2 LAB-PROVEN and S3 ACCOUNTING-BLOCKED unchanged.
 
@@ -102,6 +102,38 @@ Local executable launcher: `outputs/host-first-live-data-001-20261010/Start-LabC
 Syntax checks passed. Direct no-key preflight at21:20:18.8053666+03 passed. The complete launcher path from Windows PowerShell into PowerShell7, **PreflightOnly branch only**, passed at21:21:16.0181689+03: typed-null dispatch/ownership-only root/prior evidence verified, AttemptConsumed=false, KeyCreated/EWrites/SqlChanged=false. [Actual sanitized preflight](research/DBL_LAB_CA_CUSTODY_001_CORRECTED_PREFLIGHT_2026-10-10.json). Subsequent inspection found no corrected attempt or result file and only the unchanged ownership marker on E:. YSEDU Running/Auto/PID5072; Browser Stopped/Disabled/PID0 at this turn's service read.
 
 **Current handoff:** owner runs the hash-pinned corrected launcher once and enters only the independently retained CA password in its hidden console prompt. Return final sanitized JSON, not password/PFX or parent launch message. Keep E: attached. STOP at any failed gate; no agent-triggered real key creation, SQL certificate binding, SQL restart, network change or live connector execution in these validation calls. Issuance/PFX/reimport remain **NOT TESTED** until the actual result is independently checked. `.vscode` excluded.
+
+## Actual corrected CA custody — PASSED at21:32, externally verified21:33–21:39 +03
+
+[Actual sanitized operator result](research/DBL_LAB_CA_CUSTODY_001_PASSED_RESULT_2026-10-10.json) matches on-disk `CA_CUSTODY_CORRECTED_RESULT.json`, whose original byte SHA256 is **FD3FE8A9EC26E1D8305B3062352E53AAC345E8FAADEE6896BA5E3727DDED357C**. The executable corrected helper still has its pinned SHA256. Ten required positive booleans and six negative boundary booleans were independently checked as true/false, not strings.
+
+| Actual public/non-secret evidence | Value |
+| --- | --- |
+| CA subject |CN=DBL Laboratory YSEDU CA 001 - 20261010 |
+| Thumbprint / serial |121CDC9857488ED95F4BC62106D7672BB0DBC6C3 /430E69AD63B20F88 |
+| Lifetime UTC |2026-10-10T18:27:21Z →2028-10-10T18:32:21Z |
+| Public RSA / constraints |3072 bits; critical CA=true/pathLen0, keyCertSign+cRLSign; SKI present |
+| Encrypted retained file |E:\DBL-Lab-CA-YSEDU-001\ca-signing-key.pfx;3499 bytes |
+| PFX SHA256 |7C8FD60E8997AEDDA3C445E900BD5C1F685D9929ABC89BF9E20818354A862E32 |
+| Public DER SHA256 |A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472 |
+| Public PEM SHA256 |5CFE59F6CD9A090A62FC03ACECA6C1A2A2F8DB47569019890D59D7EA9C826D4F |
+| Actual custody checks |PBES2 AES256-CBC/PBKDF2 HMAC-SHA256/200000; SHA256 MAC/200000; wrong-password MAC rejected; encrypted private bag; E: reread equal; ephemeral create+reimport and private-key challenge passed; four store fingerprints unchanged |
+
+Agent follow-up hashed **encrypted** PFX bytes without decryption, loaded public DER/PEM only and verified their common thumbprint and no associated private key. E: contains exactly OWNERSHIP/public DER/public PEM/encrypted PFX, with no observed plaintext key file. No CA password was requested by the agent. [Independent follow-up evidence](research/DBL_LAB_CA_CUSTODY_001_AGENT_VERIFIED_2026-10-10.json). Store fingerprints/key-state checks are execution-helper evidence, not a forensic proof of all memory/pagefile traces. The original20:57 failed key state remains unrecorded; later success does not retroactively resolve it. Accepted single-host/single-E: risks remain.
+
+Fresh operational reads still show YSEDU Running/Auto/LocalSystem/PID5072, Browser Stopped/Disabled/PID0; SQLAgent$YSEDU dependent service Stopped. Shared Memory enabled, Named Pipes/TCP disabled; binding empty, ForceEncryption0, HideInstance0. Current preferred IPv4 includes192.168.56.1/192.168.43.196/172.17.80.1/127.0.0.1. SQL WMI IP4 matches192.168.56.1; its IP12 and IP16 have stale addresses relative to current Wi-Fi/vEthernet. Do not enable those stale bindings or every interface. No address/listener has been selected or changed by this verification.
+
+### Next authorized handoff — fresh administrative original-settings capture
+
+The agent Windows token is non-elevated. Prepare fresh combined forward/rollback targets before machine CSR/store/binding/network/service mutation; old network rollback refuses certificate drift and cannot replace this requirement. This is continuation of the approved maintenance, **not** another CA/archive design or a new outage-risk request. No reader rotation/trust/Firewall expansion is inferred.
+
+Local read-only helper: `outputs/host-first-live-data-001-20261010/Read-YseduLeafMaintenancePreflight001.ps1`, SHA256 **496AD897A22FBD42C3AA835CE57D35406F3353B4A8C11E201BFE647FD7C9B5AE**. [Retained source](research/DBL_YSEDU_LEAF_MAINTENANCE_PREFLIGHT_001_2026-10-10.ps1). PS7 and installed Windows PowerShell5.1.22621.6133 syntax parsed; **no elevated execution result yet**. No claim that parsing qualified administrative reads.
+
+Owner runs it once in an actually administrative Windows PowerShell. It reuses the pinned read-only Browser-policy helper, verifies known CA/public/retention bytes and historical S2 backup, captures YSEDU Registry32 values with presence/kind/raw value, all bounded TCP targets, startup/service recovery settings, SQL WMI protocol properties, dependent services, public machine stores, native tool signatures/hashes, CSP type12, actual local/DNS addresses. It writes only a fresh non-sensitive local `YSEDU_LEAF_MAINTENANCE_ORIGINAL.json` using CreateNew. It does not create/import a key/certificate, request a password, decrypt PFX, change ACL/Root/registry/TCP/Browser/Firewall/service, stop SQL, connect to SQL or write E:.
+
+The original-settings result remains **PENDING**. It is a capture for reviewed reversible operations, not a GO command or proof of zero transactions. Owner's accepted incomplete operational visibility/historical S2 recovery boundary remain explicit. A missing/changed property, service/dependent-client drift, unknown certificate or Browser-policy failure stops before mutation; no UAC bypass/automatic elevation. After its actual result: review exact leaf request/signing and combined rollback, then hand off the authorized machine operation. Leaf RSA2048/SHA256/legacy SChannel/KeySpec1/nonexportable and SAN DNS:DESKTOP-8QRQT7R remain unchanged; no root trust import is bundled. Keep E: attached for authorized signing. **Do not rerun the successful CA custody helper.**
+
+FIRST LIVE DATA remains NOT TESTED, not PARTNER/PILOT qualification. Build tree remains unchanged and matches the merged main tree; no Connector/Canonical/ERP work. `.vscode` excluded. Archive stays PAUSED; S2 LAB-PROVEN and S3 ACCOUNTING-BLOCKED unchanged.
 
 ## Primary API basis
 
