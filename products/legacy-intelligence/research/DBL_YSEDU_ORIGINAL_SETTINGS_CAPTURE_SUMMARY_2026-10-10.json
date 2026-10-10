@@ -1,0 +1,18 @@
+{
+  "Decision": "YSEDU_LEAF_MAINTENANCE_ORIGINAL_CAPTURED_READONLY",
+  "ObservedAt": "2026-10-10T21:58:09.4977492+03:00",
+  "Host": "DESKTOP-8QRQT7R",
+  "Elevated": true,
+  "OriginalSettingsFile": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\outputs\\host-first-live-data-001-20261010\\YSEDU_LEAF_MAINTENANCE_ORIGINAL.json",
+  "OriginalSettingsSHA256": "BB3BF707DCEEDB99396BF2C598B3A0E9BF2E02E83F3FD7AE3A8DB27CF1931BD5",
+  "BrowserPolicy": "BROWSER_FIREWALL_POLICY_STATIC_QUALIFICATION_PASSED",
+  "MachinePersonalCertificateCount": 0,
+  "CertificateOrKeyCreated": false,
+  "RegistryChanged": false,
+  "FirewallChanged": false,
+  "ServiceChanged": false,
+  "SqlStopped": false,
+  "TransactionsVerified": false,
+  "EWrites": false,
+  "Pending": "Review exact forward/rollback targets before machine CSR or service mutation; no shutdown from this helper"
+}

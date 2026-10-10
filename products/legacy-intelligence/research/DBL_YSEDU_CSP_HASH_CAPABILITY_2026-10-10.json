@@ -1,0 +1,10 @@
+{
+  "ObservedAt": "2026-10-10T22:01:08.4072228+03:00",
+  "SchannelSHA256": "HashError=0x80090008",
+  "SchannelSHA1Control": "PASS",
+  "EnhancedRsaAesSHA256": "PASS",
+  "Flag": "CRYPT_VERIFYCONTEXT",
+  "KeyCreated": false,
+  "CertificateCreated": false,
+  "SettingsChanged": false
+}
