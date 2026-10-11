@@ -1,0 +1,10 @@
+{
+  "Index": 0,
+  "BaselineSHA256": "AD11661B54F903EB496A4E963C470DF6D2530D6A244ADC547DDBBB4224F432E0",
+  "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib",
+  "Name": "Certificate",
+  "Before": "",
+  "After": "a51bd253b6083d0114428fcfbad57d008cd102f5",
+  "Kind": "String",
+  "At": "2026-10-11T23:30:08.0795114+03:00"
+}

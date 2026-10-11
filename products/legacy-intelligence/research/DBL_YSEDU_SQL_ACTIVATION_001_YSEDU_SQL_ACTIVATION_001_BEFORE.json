@@ -1,0 +1,912 @@
+{
+  "Task": "YSEDU_SQL_ACTIVATION_001",
+  "At": "2026-10-11T23:30:06.3723850+03:00",
+  "Original": {
+    "Decision": "YSEDU_ROLLBACK_002_RETAINED_CERTIFICATES_INSPECTION_PASSED",
+    "Phase": "Baseline",
+    "ApplyRequested": false,
+    "Operations": 0,
+    "Changes": [],
+    "Registry": [
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib",
+        "Values": [
+          {
+            "Name": "Certificate",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "ForceEncryption",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "HideInstance",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "ExtendedProtection",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp",
+        "Values": [
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "ListenOnAllIPs",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "KeepAlive",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 30000
+          },
+          {
+            "Name": "KeepAliveInterval",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP1",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::be60:5267:2d0f:3e15%8"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP10",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "169.254.156.10"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP11",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::6d6e:42e7:e877:bc94%16"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP12",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "192.168.43.197"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP13",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "::1"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP14",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "127.0.0.1"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP15",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::37c5:5c6b:34c0:b65e%24"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP16",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "172.28.144.1"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP2",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "169.254.172.14"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP3",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::3e70:5763:cb82:b83b%21"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP4",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "192.168.56.1"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP5",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::e49:6403:f967:c206%6"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP6",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "169.254.48.184"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP7",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::b629:46c4:47d7:3710%19"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP8",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "169.254.167.164"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP9",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 1
+          },
+          {
+            "Name": "Enabled",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 0
+          },
+          {
+            "Name": "IpAddress",
+            "Present": true,
+            "Kind": "String",
+            "Value": "fe80::1af7:abb2:5fcb:e3af%11"
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IPAll",
+        "Values": [
+          {
+            "Name": "Active",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          },
+          {
+            "Name": "Enabled",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          },
+          {
+            "Name": "IpAddress",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          },
+          {
+            "Name": "TcpPort",
+            "Present": true,
+            "Kind": "String",
+            "Value": ""
+          },
+          {
+            "Name": "TcpDynamicPorts",
+            "Present": true,
+            "Kind": "String",
+            "Value": "0"
+          }
+        ]
+      },
+      {
+        "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\Parameters",
+        "Values": [
+          {
+            "Name": "SQLArg0",
+            "Present": true,
+            "Kind": "String",
+            "Value": "-dC:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\DATA\\master.mdf"
+          },
+          {
+            "Name": "SQLArg1",
+            "Present": true,
+            "Kind": "String",
+            "Value": "-eC:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Log\\ERRORLOG"
+          },
+          {
+            "Name": "SQLArg2",
+            "Present": true,
+            "Kind": "String",
+            "Value": "-lC:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\DATA\\mastlog.ldf"
+          }
+        ]
+      },
+      {
+        "Path": "SYSTEM\\CurrentControlSet\\Services\\MSSQL$YSEDU",
+        "Values": [
+          {
+            "Name": "Start",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 2
+          },
+          {
+            "Name": "DelayedAutoStart",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          },
+          {
+            "Name": "ImagePath",
+            "Present": true,
+            "Kind": "ExpandString",
+            "Value": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Binn\\sqlservr.exe\" -sYSEDU"
+          },
+          {
+            "Name": "ObjectName",
+            "Present": true,
+            "Kind": "String",
+            "Value": "LocalSystem"
+          },
+          {
+            "Name": "FailureActions",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          },
+          {
+            "Name": "FailureActionsOnNonCrashFailures",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          }
+        ]
+      },
+      {
+        "Path": "SYSTEM\\CurrentControlSet\\Services\\SQLBrowser",
+        "Values": [
+          {
+            "Name": "Start",
+            "Present": true,
+            "Kind": "DWord",
+            "Value": 4
+          },
+          {
+            "Name": "DelayedAutoStart",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          },
+          {
+            "Name": "ImagePath",
+            "Present": true,
+            "Kind": "ExpandString",
+            "Value": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Shared\\sqlbrowser.exe\""
+          },
+          {
+            "Name": "ObjectName",
+            "Present": true,
+            "Kind": "String",
+            "Value": "NT AUTHORITY\\LOCALSERVICE"
+          },
+          {
+            "Name": "FailureActions",
+            "Present": true,
+            "Kind": "Binary",
+            "Value": [
+              128,
+              81,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              20,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              96,
+              234,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              96,
+              234,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              96,
+              234,
+              0,
+              0
+            ]
+          },
+          {
+            "Name": "FailureActionsOnNonCrashFailures",
+            "Present": false,
+            "Kind": null,
+            "Value": null
+          }
+        ]
+      }
+    ],
+    "Stores": [
+      {
+        "Location": "CurrentUser",
+        "Store": "Root",
+        "Count": 50,
+        "Fingerprint": "7A2DFD0056B14697F9C06E2A2B65A174B684ECA846ED964E25C360B8B79605DB"
+      },
+      {
+        "Location": "CurrentUser",
+        "Store": "CA",
+        "Count": 11,
+        "Fingerprint": "6C8183EFE15349B71078ABDBCF3C9273C059CC629700B7C18EE72243EDF10575"
+      },
+      {
+        "Location": "CurrentUser",
+        "Store": "My",
+        "Count": 4,
+        "Fingerprint": "A74CC956D4E8B7A26D3D563CFF2652E2247E8CF1DFA3712199656A6FA15C0E5E"
+      },
+      {
+        "Location": "LocalMachine",
+        "Store": "Root",
+        "Count": 50,
+        "Fingerprint": "7A2DFD0056B14697F9C06E2A2B65A174B684ECA846ED964E25C360B8B79605DB"
+      },
+      {
+        "Location": "LocalMachine",
+        "Store": "CA",
+        "Count": 5,
+        "Fingerprint": "46DC22D9216AA3A7CD322ABD1C535FFBF1266DE432F06B5304EB3A4E481F1F73"
+      },
+      {
+        "Location": "LocalMachine",
+        "Store": "My",
+        "Count": 1,
+        "Fingerprint": "44B973FA0CC5E34175A1B9CC390CC43800A97E2104B3A33CB1934AF23FD89A03"
+      },
+      {
+        "Location": "LocalMachine",
+        "Store": "Request",
+        "Count": 0,
+        "Fingerprint": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    ],
+    "Services": [
+      {
+        "Name": "MSSQL$YSEDU",
+        "State": "Running",
+        "StartMode": "Auto",
+        "ProcessId": 82368,
+        "StartName": "LocalSystem",
+        "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Binn\\sqlservr.exe\" -sYSEDU"
+      },
+      {
+        "Name": "SQLBrowser",
+        "State": "Stopped",
+        "StartMode": "Disabled",
+        "ProcessId": 0,
+        "StartName": "NT AUTHORITY\\LOCALSERVICE",
+        "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Shared\\sqlbrowser.exe\""
+      }
+    ],
+    "Protocols": [
+      {
+        "ProtocolName": "Np",
+        "Enabled": false
+      },
+      {
+        "ProtocolName": "Sm",
+        "Enabled": true
+      },
+      {
+        "ProtocolName": "Tcp",
+        "Enabled": false
+      }
+    ],
+    "RootOrLeafDeleted": false,
+    "KeyOrAclChanged": false,
+    "ServiceCalls": 0,
+    "RuntimePort": 0
+  },
+  "Address": {
+    "Address": "192.168.56.1",
+    "InterfaceIndex": 21,
+    "Adapter": "VirtualBox Host-Only Ethernet Adapter",
+    "State": "Preferred"
+  },
+  "KeyDaclSHA256": "119EE2FB1E288527CD7128D069EC147F2C5E203DB8709B655A0B2A5FDDA2ED82",
+  "ExistingCsp24MachineKeySpec1": true,
+  "ExplicitSystemRead": true,
+  "RawKeyLocatorPublished": false,
+  "CodeTree": "51f15b2a1113fc3742559f7d76dab350fb8bb83c",
+  "LogBeforeBytes": 13208,
+  "Rollback": "Only four journal-owned settings before StartCalls consumed; accepted Root/Leaf/key excluded; after start no second stop or automatic recovery",
+  "Revocation": "UNKNOWN accepted lab gap; not retested",
+  "TransactionsVerified": false,
+  "OwnerAcceptedLabUnfinishedTransactionAndHistoricalRecoveryLimits": true
+}

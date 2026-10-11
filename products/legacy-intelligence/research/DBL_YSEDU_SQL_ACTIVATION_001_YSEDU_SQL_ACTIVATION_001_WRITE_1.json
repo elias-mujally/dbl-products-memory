@@ -1,0 +1,10 @@
+{
+  "Index": 1,
+  "BaselineSHA256": "AD11661B54F903EB496A4E963C470DF6D2530D6A244ADC547DDBBB4224F432E0",
+  "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp",
+  "Name": "ListenOnAllIPs",
+  "Before": 1,
+  "After": 0,
+  "Kind": "DWord",
+  "At": "2026-10-11T23:30:08.0974175+03:00"
+}

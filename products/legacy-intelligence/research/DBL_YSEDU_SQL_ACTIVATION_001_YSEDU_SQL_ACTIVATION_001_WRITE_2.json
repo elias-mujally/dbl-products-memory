@@ -1,0 +1,10 @@
+{
+  "Index": 2,
+  "BaselineSHA256": "AD11661B54F903EB496A4E963C470DF6D2530D6A244ADC547DDBBB4224F432E0",
+  "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP4",
+  "Name": "Enabled",
+  "Before": 0,
+  "After": 1,
+  "Kind": "DWord",
+  "At": "2026-10-11T23:30:08.1082751+03:00"
+}

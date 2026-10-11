@@ -2,6 +2,8 @@
 
 ## Decision and current evidence
 
+**Actual execution verified: YSEDU SQL activation = PASSED; Node TLS / Reader login / FIRST LIVE DATA = NOT TESTED.** Owner-admin result at `2026-10-11T23:30:11.8936751+03:00` matches the local result artifact. One stop and one start were consumed. See [actual execution and reconciliation](#actual-execution-and-reconciliation). The preparation status below is historical, not current.
+
 Owner approved one **new** natural maintenance cycle after accepted Leaf evidence at `7fcc034`. Status: **TOOL QUALIFIED / ADMIN EXECUTION PENDING**. No new stop/start, certificate enrollment, registry change, SQL connection or import has been executed by this preparation. SQL certificate loading and actual TCP port remain **NOT TESTED / UNKNOWN**.
 
 At `2026-10-11T23:24:49.5011124+03:00`, nonadministrative ServiceController reads observed YSEDU Running and SQLBrowser Stopped/Disabled. All new activation baseline/attempt/write/start/result markers were absent. These observations are not the fresh administrative pre-stop gate; the owner console must perform that gate immediately before the authorized stop.
@@ -59,3 +61,47 @@ Helper `-CheckOnly` returned `SQL_ACTIVATION_SOURCE_PINS_PASSED`; launcher `-Che
 | Start-YseduSqlActivation001.ps1 | `490A9F45F488904E6C90ADFDF366772A11901281205D384A302EF4495EB2A74D` |
 
 No `.vscode`, PFX, private key, password, SQL contents or raw key-security descriptor is included. E: and the CA password are not needed: this step uses the already accepted certificates and existing machine key. Archive work remains paused, S3 remains accounting-blocked. Await the actual administrator result; do not record activation or FIRST LIVE DATA as passed from tests.
+
+## Actual execution and reconciliation
+
+The owner executed the pinned launcher from the administrator console. Actual fresh baseline at `23:30:06.372385+03:00` records the preferred VirtualBox host-only address, existing CSP24/machine/KeySpec1 association, explicit SYSTEM read and unchanged qualified key DACL, original services/settings and all seven accepted-certificate store views. It also records the incomplete transaction inventory and owner-accepted historical recovery limits; no new SQL query or recovery claim was made.
+
+The local eight JSON artifacts were inspected. Baseline SHA256 equals the result, stop/start budget marker and all four write-intent references. The one start marker is not a recovery start. Result flags and startup evidence match the owner's returned JSON: stop=1, start=1, four registry-write attempts/four completed writes, original PID82368 → new PID101852, rollback NOT_NEEDED, no failure or cleanup failure, retained CA/Leaf and unchanged key DACL.
+
+| Reconciled fact | Actual evidence |
+| --- | --- |
+| SQL certificate loading | Fresh ERRORLOG `23:30:09.83`: exact `A51BD253B6083D0114428FCFBAD57D008CD102F5` successfully loaded for encryption; no self-generated fallback |
+| Process and readiness | ERRORLOG `23:30:09.20` PID101852; `23:30:09.84` ready for client connections |
+| Qualified current endpoint | `192.168.56.1:52952`, sole TCP listener owned by YSEDU PID101852; dynamic, not SQLBrowser-discovered |
+| Services | YSEDU Running/Auto/LocalSystem in administrative execution; Browser Stopped/Disabled throughout |
+| Existing accepted certificates | Root and Leaf retained; Request remains consumed, no certreq or new enrollment |
+| Prohibited mutations | Report certreq=0; no trust/key ACL/Firewall/ForceEncryption change, no SQL login/data read/import |
+
+Registry before→after reconciliation finds **exactly five scoped deltas**: the four journal-owned writes documented above, plus IP4 TcpDynamicPorts `"0"` → `"52952"` recorded by SQL during startup. IP4 TcpPort remains empty; IPAll dynamic value remains `"0"`; every other captured value matches baseline. No unexpected scoped delta was found. This compares the captured target/value inventory, not an exhaustive audit of all Windows state.
+
+Independent nonadministrative verification at `23:32:15.8171305+03:00` observes YSEDU Running/Automatic, Browser Stopped/Disabled, process101852 named sqlservr, and `netstat -ano -p tcp` showing only `192.168.56.1:52952 LISTENING 101852`. Direct readonly Registry32 reads independently match binding, TCP Enabled1, ListenOnAllIPs0, ForceEncryption0, and IP4 address/dynamic52952/empty fixed port. Direct public certificate reads match both approved DER hashes and Leaf HasPrivateKey=true / public CA HasPrivateKey=false; no private key was opened by this verification.
+
+At `23:33:09.5614504+03:00`, all **four LocalMachine** Root/CA/My/Request fingerprints independently match the owner's administrative baseline. A first comparison of all seven views was invalid for the owner's CurrentUser stores: the verifier runs as `DESKTOP-8QRQT7R\CodexSandboxOffline`, not `DESKTOP-8QRQT7R\user`; sandbox CurrentUser CA/My differ and are **not comparable**. This is not evidence of owner-store mutation. Owner CurrentUser preservation is supported by the qualified administrative helper's post-start gate, not by that sandbox comparison. No store was changed or read permission altered.
+
+Get-NetTCPConnection and independent ERRORLOG content read were Access Denied under the nonadmin verifier; process StartTime was unavailable. Netstat supplied independent listener/PID observation without a connection, while ERRORLOG and executable/start-time qualification rely on the captured owner-admin execution. These limits are explicit; no further elevation, maintenance or probe was attempted.
+
+### Evidence provenance
+
+Original files are preserved in `outputs/host-first-live-data-001-20261010`; public JSON review copies in `research/DBL_YSEDU_SQL_ACTIVATION_001_YSEDU_SQL_ACTIVATION_001_*.json` preserve semantic content (Git line-ending/newline normalization is not claimed byte-identical). Original SHA256:
+
+| Artifact suffix | Original SHA256 |
+| --- | --- |
+| BEFORE | `AD11661B54F903EB496A4E963C470DF6D2530D6A244ADC547DDBBB4224F432E0` |
+| ATTEMPT | `5000D874E3C90F782A4D1A3B0BE01943D7B1827C8C2E2461C1183B5E5DFEB613` |
+| START_ATTEMPT | `7928E782F3469342B1670747850D3320D76081E36A7CC760004A5D2DD971072F` |
+| WRITE_0 | `C69A7BE9406D42CC3ECDAF42A68362D0989C8A751492BC0C15D5A4DA89A130E7` |
+| WRITE_1 | `A815FCF8D0A5B5953317B9C0601DCC68CC39A20464DE3942830010B43982BB53` |
+| WRITE_2 | `06A0C95B176B4955A775080F9E81D08D1BCDEDBF0BBF8AF88803B71D455D6FA6` |
+| WRITE_3 | `DC9E8CFD2FFBA3C2A36901F24BCA52AD0166ACDD705DDF78ADEE587F3FE1A444` |
+| RESULT | `49486668DE19872EB510E9D51C59C7EE91E38570242BCBBC826EF0F42D56CF40` |
+
+### Scope closure and next boundary
+
+**SQL activation PASSED within the authorized lab scope.** The one-cycle budget is consumed; do not rerun this or any historical maintenance helper. Preserve the retained CA/Leaf/key. Historical rollback #002 is still prohibited; the retained-certificate revision cannot apply after the start marker, and further service recovery requires separate approval.
+
+`52952` is the **observed dynamic port for this running PID**, not a configured fixed port or a promise after a future restart. Next separately evaluated step is Node/Tedious direct-port TLS with exact host identity `DESKTOP-8QRQT7R`, pinned public CA and strict validation, followed only if authorized by independent Reader login and the existing Item Identity import path. None was run here. CRL/OCSP remains UNKNOWN, machine-wide Root trust remains owner-approved lab-only, SQL restore remains untested, and frozen database/S2 business contents were not re-read or requalified in this task. STOP.
