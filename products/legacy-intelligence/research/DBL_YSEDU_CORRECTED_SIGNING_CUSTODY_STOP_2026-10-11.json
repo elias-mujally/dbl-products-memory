@@ -1,0 +1,40 @@
+{
+  "Task": "OWNER_AUTHORIZED_CORRECTED_YSEDU_LEAF_SIGNING_ATTEMPT",
+  "Decision": "PRE_EXECUTION_CUSTODY_BLOCKED_STOP",
+  "ObservedAt": "2026-10-11T17:19:33.1200801+03:00",
+  "Authority": "Owner approved one actual signing using corrected helper at 7befe4a, existing CSR/key/CA only; no acceptance, binding, ACL, SQL or network change",
+  "Phase": "ExistingCaCustodyAvailability",
+  "FailedCheck": "ExistingExternalCustodyDriveAvailable",
+  "Observed": {
+    "FileSystemDriveRoots": ["C:\\", "D:\\", "C:\\Users\\user\\AppData\\Local\\Temp\\"],
+    "EAvailable": false,
+    "CustodyPath": "E:\\DBL-Lab-CA-YSEDU-001",
+    "CustodyPathTest": false,
+    "PublicCertificateGetItem": "DriveNotFound: E",
+    "CorrectedHelperSHA256": "C044B259C80FAAC283594666813DC427AC5BCD935627FEDE84055FAD740F5AE7",
+    "SharedSafetySHA256": "88F858C7B854592A5201F06321BEDBA300CB2A3FA5824BD9E23DEFCD23D62D48",
+    "DiagnosticLibrarySHA256": "980064A9487C97F9F8E51F3F8CD7D0B27C308F109A53904316D6057072939BF9",
+    "UnchangedSigningCoreSHA256": "2C024FBAC7312934CC9A10F0107E0E36FEBFD7D69B9E768E31F567E0D4A46139",
+    "SigningAttemptMarkerExists": false,
+    "SigningResultExists": false,
+    "SignedDerExists": false,
+    "SignedPemExists": false,
+    "YSEDU": "Running",
+    "SQLBrowser": "Stopped"
+  },
+  "SigningHelperExecuted": false,
+  "SigningLauncherCreatedOrLaunched": false,
+  "PasswordRequested": false,
+  "CAUnlocked": false,
+  "SigningAttemptConsumed": false,
+  "SigningAttempted": false,
+  "HostMutation": false,
+  "FirstLiveData": "NOT_TESTED",
+  "Limits": [
+    "E is unavailable in the current execution context; physical disconnection versus another availability cause is not diagnosed",
+    "External CA/PFX byte pins cannot be refreshed while the original custody drive is unavailable",
+    "Historical CA/key/interactive qualifications remain preserved, not repeated or upgraded",
+    "No cryptographic signing failure occurred; this is a pre-execution STOP"
+  ],
+  "Next": "Owner reconnects the same custody drive and confirms availability. Reverify existing custody identity and pins before handing off the single authorized corrected signing attempt; no alternate CA, copy, key or signing retry."
+}
