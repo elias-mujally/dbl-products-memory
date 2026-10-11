@@ -1,0 +1,59 @@
+{
+  "Task": "EXISTING_KEY_CAPI_ONLY_003",
+  "Decision": "IMPLEMENTATION_PUBLIC_PREFLIGHT_AND_SYNTHETIC_GUARDS_PASSED_NATIVE_PENDING_OPERATOR",
+  "OwnerAuthorization": "Owner approved one existing-key CAPI-only qualification based on a02d6e1; no SQL stop/network/key mutation",
+  "SyntheticAt": "2026-10-11T07:07:07.3409262+03:00",
+  "SyntheticChecks": 12,
+  "PermissionCases": 512,
+  "PublicPreflightAt": "2026-10-11T07:07:49.4834467+03:00",
+  "PublicPreflight": "PASSED exact preserved artifact and existing public CSR pins; native compilation only",
+  "Launcher": "CheckOnly PASSED; Elevated=false; ChildLaunched=false",
+  "NativeAcquisitionInvoked": false,
+  "Attempt003Exists": false,
+  "Result003Exists": false,
+  "KeyQualification003": "NOT_TESTED",
+  "SQL2014Loading": "NOT_TESTED",
+  "FirstLiveData": "NOT_TESTED",
+  "FreshServices": {
+    "YSEDU": "Running",
+    "SQLBrowser": "Stopped"
+  },
+  "AcquireFlags": 76,
+  "FlagMeaning": [
+    "COMPARE_KEY 4",
+    "NO_HEALING 8",
+    "SILENT 64",
+    "no CACHE/USE_PROV_INFO or NCRYPT flags"
+  ],
+  "NativePropertyQueries": [
+    "PP_PROVTYPE 16",
+    "PP_NAME 4",
+    "PP_KEYSET_TYPE 27",
+    "AT_KEYEXCHANGE 1 via acquisition and CryptGetUserKey",
+    "KP_ALGID 7 = CALG_RSA_KEYX 41984",
+    "KP_KEYLEN 9 = 2048",
+    "KP_PERMISSIONS 6; CRYPT_EXPORT 4 and CRYPT_ARCHIVE 256 must both be absent"
+  ],
+  "Challenge": "One 32-byte random challenge; SHA256 CALG_SHA_256 32780; one 256-byte RSA2048 CryptSignHashW call; PKCS1; reverse native little-endian signature for CSR RSA public VerifyData",
+  "Cleanup": "Hash then user-key handle then caller-owned provider; borrowed provider remains certificate-owned. NCryptFreeObject is cleanup ONLY for an unexpected NCrypt handle, never acquisition or fallback; such a return fails.",
+  "MutationScope": "Only CreateNew local diagnostic attempt/result; no key/certificate/ACL/SQL/network changes; no E access or CA unlock",
+  "Hashes": {
+    "YseduCapiOnly003.cs": "ED81A7F991CAF6F61FC187B0CF254D331184AB64204DDCE15AA0D955180C5308",
+    "Qualify-YseduCapiOnly003.ps1": "0E79DCF570B27DA5ED63DC49745486C0354FCC1B18CF305462431AAA7E27A56F",
+    "Test-YseduCapiOnly003.ps1": "C72B5B11360FFB0910175AE26433B6CA28ACABED73F13CEE97E70D6103515482",
+    "Start-YseduCapiOnly003.ps1": "9873CDE2132BAE1663CE9796CE8FEC73E202A8F96FA94D518873D31FEF8A1AA9"
+  },
+  "Limits": [
+    "Synthetic tests do not prove actual native CSP properties, Win32 API runtime success, ownership behavior in actual acquisition, SQL2014 compatibility or live data",
+    "Historical S2/recovery and paused archive retained; no changes",
+    "Native result required before next bounded existing-CSR leaf signing/profile step; do not issue/accept certificate or stop SQL from this helper"
+  ],
+  "Sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptacquirecertificateprivatekey",
+    "https://learn.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptgetprovparam",
+    "https://learn.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptgetkeyparam",
+    "https://learn.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptsignhashw",
+    "https://learn.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptdestroykey",
+    "https://raw.githubusercontent.com/microsoft/win32metadata/main/generation/WinSDK/RecompiledIdlHeaders/um/wincrypt.h"
+  ]
+}
