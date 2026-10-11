@@ -1,0 +1,52 @@
+{
+  "Decision": "LIVE_PREREQUISITES_PASSED_SECRET_PENDING",
+  "At": "2026-10-11T20:53:15.966Z",
+  "Environment": {
+    "Decision": "CURRENT_LIVE_ENVIRONMENT_READONLY_PASSED",
+    "At": "2026-10-11T23:53:14.9091155+03:00",
+    "Host": "DESKTOP-8QRQT7R",
+    "Service": "MSSQL$YSEDU",
+    "ServiceAccount": "LocalSystem",
+    "Pid": 101852,
+    "Address": "192.168.56.1",
+    "Port": 52952,
+    "Dynamic": true,
+    "Browser": "Stopped/Disabled",
+    "CertificateBinding": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+    "ForceEncryption": 0,
+    "HostMutation": false
+  },
+  "HostnameAddresses": [
+    {
+      "address": "192.168.56.1",
+      "family": 4
+    },
+    {
+      "address": "192.168.43.197",
+      "family": 4
+    },
+    {
+      "address": "172.17.80.1",
+      "family": 4
+    },
+    {
+      "address": "fe80::3e70:5763:cb82:b83b",
+      "family": 6
+    },
+    {
+      "address": "fe80::6d6e:42e7:e877:bc94",
+      "family": 6
+    },
+    {
+      "address": "fe80::e8a3:1b8c:68b:534b",
+      "family": 6
+    }
+  ],
+  "Runtime": "v22.23.2",
+  "CodeTree": "51f15b2a1113fc3742559f7d76dab350fb8bb83c",
+  "TCPReachability": "PASSED_ONE_NO_AUTH_PROBE",
+  "TLS": "NOT_TESTED",
+  "Reader": "NOT_TESTED",
+  "FirstLiveData": "NOT_TESTED",
+  "HostMutation": false
+}

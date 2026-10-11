@@ -1,0 +1,191 @@
+{
+  "Tree": "51f15b2a1113fc3742559f7d76dab350fb8bb83c",
+  "RemoteMain": "aa234dfbeb38ce738718957d739af348406c293a",
+  "BuiltWith": "Node v22.23.2",
+  "Files": [
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\outputs\\host-first-live-data-001-20261010\\Read-FirstLiveEnvironment001.ps1",
+      "SHA256": "A11CBCAB8EF1B189343D8ADCA62AC572F945C9D3EA463B5D4BDC94BCCCF7B78A"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\outputs\\host-first-live-data-001-20261010\\Run-FirstLiveData001.mjs",
+      "SHA256": "4BAFFF5BE383EE0620C6A58E0A8C55E654279B9FAAE1CA4A91FC9B13E57A142B"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\node_modules\\better-sqlite3\\build\\Release\\better_sqlite3.node",
+      "SHA256": "7A2CEE9D8895086D23E19A32299ABC619D4FA1E3D0DC4C842E268D6905F35ECF"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\package-lock.json",
+      "SHA256": "CF1924E1F23C35620BFFC296C2ED7E0DD94ED708FFAE9E88113612138BC17C11"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\application-service\\dist\\index.js",
+      "SHA256": "93209A2A014F141CA2E23A2316F52B063783403C203350074E7089479C9CEBA5"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\application-service\\dist\\service.js",
+      "SHA256": "DAA52A196A513FEBE36BE5139D214A6ADC17AF195B81A91032B5A7EB59090781"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\application-service\\dist\\types.js",
+      "SHA256": "01AE2A5B120382F9A648CED7EE8507493A134F216D100FC61600C6C9738235D2"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\audit-sqlite\\dist\\index.js",
+      "SHA256": "F2054C14D52A96DECE8EA35B696E38C7969F06981D51548A6803AA7003B78CBA"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\audit-sqlite\\dist\\sqlite-audit-sink.js",
+      "SHA256": "ABFDDBB025038D0E377B69EBF49483F607C694F79F8192B64566B0D32869DE76"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\connectors-motakamel-plus\\dist\\acquisition.js",
+      "SHA256": "F34EA702409D408CCDC43426F9FBB53FA56FD51700D7B7A9093312402D086C37"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\connectors-motakamel-plus\\dist\\index.js",
+      "SHA256": "CE8429C0F41A31532052BA250B01627B4C0A21D83AB243F7480F58B37210723E"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\connectors-motakamel-plus\\dist\\mapping.js",
+      "SHA256": "DD9CA5C5267CCF910E69BC14607BBF82F61D4A1148F3F7300A64EF3051C0FF68"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\connectors-motakamel-plus\\dist\\profile.js",
+      "SHA256": "16AA5F17FF5B3EFE184673D903CB9647E62C991885765AAB8B267D46C8B5E223"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\connectors-motakamel-plus\\dist\\source.js",
+      "SHA256": "079DAF059474D8AAC5BEAD58E4137E55C9A5EF17097DAC86B03E2FB35A74A74A"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\connectors-motakamel-plus\\test\\support\\lab-ca-public.pem",
+      "SHA256": "5CFE59F6CD9A090A62FC03ACECA6C1A2A2F8DB47569019890D59D7EA9C826D4F"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\audit.js",
+      "SHA256": "281E2C1569B91851A441F3252FC5C19A39BCFDECE7AAB0009DA66C47A73BE224"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\config.js",
+      "SHA256": "084D89A963DF8EB4E7B36183596AE8785276E8143EFB57C134EC31D465114EE0"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\connector.js",
+      "SHA256": "35A29DC63A59FCAC4DC64725C37AE242AA85C894F9BF1EA8451B260B3574B17B"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\decimal.js",
+      "SHA256": "F820C39F47F80329B7627337D4658CA7C600E0B90A5BEA0560CA29848341284F"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\errors.js",
+      "SHA256": "E353656F816A897F4D3671983AC0BDD0F1726FF1E76ECAC6994580CC566ED3C4"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\extensions.js",
+      "SHA256": "50EC8EC3875518A12726381157A60005A5E9C1078D9AE2FFDFF4F46BA65E95DE"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\index.js",
+      "SHA256": "0D0CEA4F83E7B7F3A12A3B10D70FA8EF0011AECB3ABC03A5457F49E6A909CA25"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\model.js",
+      "SHA256": "41F78169D32894BD2B7DE113689F978D65BFD44F62B8A25B3B93CB6E999A4BAD"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\storage.js",
+      "SHA256": "42D9ADD35181DE5495B3ED412A269351C79F7C9D1966F68F6DE1A772C08E3A44"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\validation.js",
+      "SHA256": "6E40F74C0EA64353B77E1AEADE3FDCA8C7C28D77206B57DEA6DE5DEB6E4B1B4D"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\core\\dist\\version.js",
+      "SHA256": "7638DF4F2640A6876369EF17133627AE8F67A0B520780F300791AD993E9523E9"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\import-orchestrator\\dist\\index.js",
+      "SHA256": "591C010662D2FAC6677D93A07E9CDEE93BB06B12A2B207E4AD5B884DEEE952D7"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\import-orchestrator\\dist\\orchestrator.js",
+      "SHA256": "C3F8F13824992433B52DDE4877C285A086FBA3BADB7194552E1B448D82160ED2"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\import-orchestrator\\dist\\retry.js",
+      "SHA256": "3308783CE70BB3AF46A93C6B9487B30F861CDA878491781237F849CF49F1E6A7"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\import-orchestrator\\dist\\types.js",
+      "SHA256": "01AE2A5B120382F9A648CED7EE8507493A134F216D100FC61600C6C9738235D2"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\insights\\dist\\decimal.js",
+      "SHA256": "FF74412449A63016107815D0BD010A2D5128DA3C1A8C448A9C4AC3A68C8E81E7"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\insights\\dist\\engine.js",
+      "SHA256": "C064DDF962AD860B0C709592FCEC0000A94E9EB5C8294A509A9C3F768F5B34CD"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\insights\\dist\\index.js",
+      "SHA256": "2AA379297AE980B100CE9EA5A1A391CFB0112F896082676336875ADD7E27A414"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\insights\\dist\\rules.js",
+      "SHA256": "62FCEC1DEE34AED0946756937BDF4FEE5875AA598324F7F5AF83A308760225AC"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\insights\\dist\\types.js",
+      "SHA256": "8E609BB71C20B858C77F0E9F90BB1319DB8477B13F9F965F1A1E18524BF50881"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\query-engine\\dist\\executor.js",
+      "SHA256": "A5971400ACA9EA2326FC718B39918A72486A88A20BD258501DD7981754180BC5"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\query-engine\\dist\\fingerprint.js",
+      "SHA256": "EDD7ADC4033DC799E8868EFD9F168DFC1D3E7A4903D40290F4BF8C8F50C36326"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\query-engine\\dist\\index.js",
+      "SHA256": "322C77AEA42648AAD8D3DCE62CB2FFEE1484920D14D3122611CD477FC243CA24"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\query-engine\\dist\\types.js",
+      "SHA256": "01EDF894CA9720441644FF1768289DD2B17799DF3987CCD2FB5FF5A92CB1DD74"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\query-engine\\dist\\validation.js",
+      "SHA256": "31583A43E9B90EDB0ABB7288FFF52F378D718747DDE400A9F8D9F20B51BB2B45"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\storage-sqlite\\dist\\fingerprint.js",
+      "SHA256": "DEE259083A65E1286159B66A1586B488B18B9A33B6AA3AEF9914ACDDBE6177B3"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\storage-sqlite\\dist\\index.js",
+      "SHA256": "526801392A3F2A128CE0DA53BE2626FB39212A4E47CF4F532BAFFCD5EB9261FE"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\storage-sqlite\\dist\\migrations.js",
+      "SHA256": "80252BDF5C1C26776715CFFC16F7E306797418CD65DCE9C6BA3D23ECA02F7504"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\storage-sqlite\\dist\\sqlite-store.js",
+      "SHA256": "BAF133A2C8EF594CFF776C22E85CB227AEAF42944BF0B72A277CC56FDCEAD542"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\dbl-legacy-intelligence\\packages\\storage-sqlite\\dist\\sqlite-write-session.js",
+      "SHA256": "40DBC0CC9E2A6ADD0E90EC029E7162BC52B1CBF1C619CA0DF847CC0743B26257"
+    },
+    {
+      "Path": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\work\\node-v22.23.2-win-x64\\node.exe",
+      "SHA256": "0D0F5E39F9F3D9587BC19F73EAB3C2C9C4903FD02D6DBF9C853DD81B3D95FAD4"
+    }
+  ]
+}
