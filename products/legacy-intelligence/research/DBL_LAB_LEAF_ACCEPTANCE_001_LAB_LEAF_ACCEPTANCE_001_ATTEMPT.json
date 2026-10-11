@@ -1,0 +1,10 @@
+{
+  "At": "2026-10-11T22:53:08.9035928+03:00",
+  "BaselineSHA256": "9C7444280CFA73F77BEB24EE0FF32257387B01299C1357D55078BE7A801B3453",
+  "RootDisposition": "ADD_NEW",
+  "RootAddLimit": 1,
+  "CertreqLimit": 1,
+  "UnknownDoesNotCauseRollbackAlone": true,
+  "SqlMustRemainRunning": true,
+  "PrivateCAUse": false
+}

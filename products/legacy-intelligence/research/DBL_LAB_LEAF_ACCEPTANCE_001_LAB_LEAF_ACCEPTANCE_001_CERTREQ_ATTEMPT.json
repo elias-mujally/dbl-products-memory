@@ -1,0 +1,10 @@
+{
+  "At": "2026-10-11T22:53:10.8620392+03:00",
+  "Command": "certreq -accept -machine",
+  "LeafDER_SHA256": "522C79FD31F0422D3988FB00CC4EF0A51B4042DEED72A435A6519237AC548DFE",
+  "AttemptLimit": 1,
+  "Force": false,
+  "AllowUntrusted": false,
+  "SqlState": "Running",
+  "Revocation": "UNKNOWN"
+}

@@ -1,0 +1,1013 @@
+{
+  "At": "2026-10-11T22:53:08.2752626+03:00",
+  "Owner": "LAB_REVOCATION_POLICY_PLUS_ONE_LEAF_ACCEPTANCE",
+  "Stores": [
+    {
+      "Location": "CurrentUser",
+      "Store": "Root",
+      "Entries": [
+        "0119E81BE9A14CD8E22F40AC118C687ECBA3F4D8:65AF95F4BE86847344634282F941B2E605063EF0C8542F014CA088D182109E4F",
+        "02FAF3E291435468607857694DF5E45B68851868:687FA451382278FFF0C8B11F8D43D576671C6EB2BCEAB413FB83D965D06D2FF2",
+        "0563B8630D62D75ABBC8AB1E4BDFB5A899B24D43:3E9099B5015E8F486C00BCEA9D111EE721FABA355A89BCF1DF69561E3DC6325C",
+        "06F1AA330B927B753A40E68CDF22E34BCBEF3352:CACA93B9D23D2B6FA76E8B8471931E0DF3EC6F63AF3CDBB936C41954A1872326",
+        "07E032E020B72C3F192F0628A2593A19A70F069E:5C58468D55F58E497E743982D2B50010B6D165374ACF83A7D4A32DB768C4408E",
+        "18F7C1FCC3090203FD5BAA2F861A754976C8DD25:5B789987F3C4055B8700941B33783A5F16E0CFF937EA32011FE04779F7635308",
+        "1F24C630CDA418EF2069FFAD4FDD5F463A1B69AA:179FBC148A3DD00FD24EA13458CC43BFA7F59C8182D783A513F6EBEC100C8924",
+        "245C97DF7514E7CF2DF8BE72AE957B9E04741E85:6EF914723F089D2ADAFF98D470A3651CCF1768E559FBDCC0FAAA640AA12E5753",
+        "2796BAE63F1801E277261BA0D77770028F20EEE4:C3846BF24B9E93CA64274C0EC67C1ECC5E024FFCACD2D74019350E81FE546AE4",
+        "2B8F1B57330DBBA2D07A6C51F70EE90DDAB9AD8E:E793C9B02FD8AA13E21C31228ACCB08119643B749C898964B1746D46C3D4CBD2",
+        "31F9FC8BA3805986B721EA7295C65B3A44534274:3FD4BE8BAAD2F26E1BDE06C7584BB720DD1A972D111F5A4999BC44B08FB4960D",
+        "3679CA35668772304D30A5FB873B0FA77BB70D54:2399561127A57125DE8CEFEA610DDF2FA078B5C8067F4E828290BFB860E84B3C",
+        "3B1EFD3A66EA28B16697394703A72CA340A05BD5:DF545BF919A2439C36983B54CDFC903DFA4F37D3996D8D84B4C31EEC6F3C163E",
+        "47BEABC922EAE80E78783462A79F45C254FDE68B:45140B3247EB9CC8C5B4F0D7B53091F73292089E6E5A63E2749DD3ACA9198EDA",
+        "4EB6D578499B1CCF5F581EAD56BE3D9B6744A5E5:9ACFAB7E43C8D880D06B262A94DEEEE4B4659989C3D0CAF19BAF6405E41AB7DF",
+        "4EFC31460C619ECAE59C1BCE2C008036D94C84B8:7B9D553E1C92CB6E8803E137F4F287D4363757F5D44B37D52F9FCA22FB97DF86",
+        "503006091D97D4F5AE39F7CBE7927D7D652D3431:6DC47172E01CBCB0BF62580D895FE2B8AC9AD4F873801E0C10B9C837D21EB177",
+        "53A2B04BCA6BD645E6398A8EC40DD2BF77C3A290:4FA3126D8D3A11D1C4855A4F807CBAD6CF919D3A5A88B03BEA2C6372D93C40C9",
+        "5EEED86FA37C675230642F55C84DDBF67CD33C80:7353B6D6C2D6DA4247773F3F07D075DECB5134212BEAD0928EF1F46115260941",
+        "5FB7EE0633E259DBAD0C4C9AE6D38F1A61C7DC25:7431E5F4C3C1CE4690774F0B61E05440883BA9A01ED00BA6ABD7806ED3B118CF",
+        "6BA0B098E171EF5AADFE4815807710F4BD6F0B28:B085D70B964F191A73E4AF0D54AE7A0E07AAFDAF9B71DD0862138AB7325A24A2",
+        "73A5E64A3BFF8316FF0EDCCC618A906E4EAE4D74:C741F70F4B2A8D88BF2E71C14122EF53EF10EBA0CFA5E64CFA20F418853073E0",
+        "742C3192E607E424EB4549542BE1BBC53E6174E2:E7685634EFACF69ACE939A6B255B7B4FABEF42935B50A265ACB5CB6027E44E70",
+        "7E04DE896A3E666D00E687D33FFAD93BE83D349E:31AD6648F8104138C738F39EA4320133393E3A18CC02296EF97C2AC9EF6731D0",
+        "7F88CD7223F3C813818C994614A89C99FA3B5247:4898B1749717A594A2030F47C83C272BD14BAE3DCEB2EAE382174EF2EC1C75C9",
+        "8094640EB5A7A1CA119C1FDDD59F810263A7FBD1:2CABEAFE37D06CA22ABA7391C0033D25982952C453647349763A3AB5AD6CCF69",
+        "8CF427FD790C3AD166068DE81E57EFBB932272D4:43DF5774B03E7FEF5FE40D931A7BEDF1BB2E6B42738C4E6D3841103D3AA7F339",
+        "8F43288AD272F3103B6FB1428485EA3014C0BCFE:847DF6A78497943F27FC72EB93F9A637320A02B561D0A91B09E87A7807ED7C61",
+        "925A8F8D2C6D04E0665F596AFF22D863E8256F3F:568D6905A2C88708A4B3025190EDCFEDB1974A606A13C6E5290FCB2AE63EDAB5",
+        "92B46C76E13054E104F230517E6E504D43AB10B5:8A5E4881D42F7475E8EC3726FCD5E51884AA04DAA9FA7ADAC8CD26452CF885D4",
+        "999A64C37FF47D9FAB95F14769891460EEC4C3C5:358DF39D764AF9E1B766E9C972DF352EE15CFAC227AF6AD1D70E8E4A6EDCBA02",
+        "A43489159A520F0D93D032CCAF37E7FE20A8B419:F38406E540D7A9D90CB4A9479299640FFB6DF9E224ECC7A01C0D9558D8DAD77D",
+        "A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436:4348A0E9444C78CB265E058D5E8944B4D84F9662BD26DB257F8934A443C70161",
+        "AD7E1C28B064EF8F6003402014C3D0E3370EB58A:1465FA205397B876FAA6F0A9958E5590E40FCC7FAA4FB7C2C8677521FB5FB658",
+        "B1BC968BD4F49D622AA89A81F2150152A41D829C:EBD41040E4BB3EC742C9E381D31EF2A41A48B6685C96E7CEF3C1DF6CD4331C99",
+        "B7AB3308D1EA4477BA1480125A6FBDA936490CBB:85666A562EE0BE5CE925C1D8890A6F76A87EC16D4D7D5F29EA7419CF20123B69",
+        "BE36A4562FB2EE05DBB3D32323ADF445084ED656:6B6C1E01F590F5AFC5FCF85CD0B9396884048659FC2C6D1170D68B045216C3FD",
+        "CABD2A79A1076A31F21D253635CB039D4329A5E8:96BCEC06264976F37460779ACF28C5A7CFE8A3C0AAE11A8FFCEE05C0BDDF08C6",
+        "CDD4EEAE6000AC7F40C3802C171E30148030C072:885DE64C340E3EA70658F01E1145F957FCDA27AABEEA1AB9FAA9FDB0102D4077",
+        "D1CBCA5DB2D52A7F693B674DE5F05A1D0C957DF0:4FF460D54B9C86DABFBCFC5712E0400D2BED3FBC4D4FBDAA86E06ADCD2A9AD7A",
+        "D1EB23A46D17D68FD92564C2F1F1601764D8E349:D7A7A0FB5D7E2731D771E9484EBCDEF71D5F0C3E0A2948782BC83EE0EA699EF4",
+        "D3DD483E2BBF4C05E8AF10F5FA7626CFD3DC3092:B676F2EDDAE8775CD36CB0F63CD1D4603961F49E6265BA013A2F0307B6D0B804",
+        "D4DE20D05E66FC53FE1A50882C78DB2852CAE474:16AF57A9F676B0AB126095AA5EBADEF22AB31119D644AC95CD4B93DBF3F26AEB",
+        "D69B561148F01C77C54578C10926DF5B856976AD:CBB522D7B7F127AD6A0113865BDF1CD4102E7D0759AF635A7CF4720DC963C53B",
+        "DAC9024F54D8F6DF94935FB1732638CA6AD77C13:0687260331A72403D909F105E69BCF0D32E1BD2493FFC6D9206D11BCD6770739",
+        "DDFB16CD4931C973A2037D3FC83A4D7D775D05E4:552F7BDCF1A7AF9E6CE672017F4F12ABF77240C78E761AC203D1D9D20AC89988",
+        "DF3C24F9BFD666761B268073FE06D1CC8D4F82A4:CB3CCBB76031E5E0138F8DD39A23F9DE47FFC35E43C1144CEA27D46A5AB1CB5F",
+        "F40042E2E5F7E8EF8189FED15519AECE42C3BFA2:5367F20C7ADE0E2BCA790915056D086B720C33C1FA2A2661ACF787E3292E1270",
+        "FCEB8D98C83523546C5C8B4509A277C14C585875:D8FE9657243172F416D7C0B56914359BC98D7872740E63F0C3F6E7B64155BFD1"
+      ],
+      "Count": 49,
+      "Fingerprint": "D3FD496E2DE299782B5C5346FC8269C71669075C1F31D85D2FAB20DED7EC6ED9"
+    },
+    {
+      "Location": "CurrentUser",
+      "Store": "CA",
+      "Entries": [
+        "109F1CAED645BB78B3EA2B94C0697C740733031C:5528A0595B3C464D287F85535B9DA59F6F456569A320320D9EC7143B635DBE7E",
+        "1D9D345A1BDFF4D56E62934577BC4C83811FD53C:2A86C22F599553F56246100A4BCD1E2B9D867C8FD93BD70C79A059843EED0639",
+        "7B0F360B775F76C94A12CA48445AA2D2A875701C:46011EDE1C147EB2BC731A539B7C047B7EE93E48B9D3C3BA710CE132BBDFAC6B",
+        "8D57E2B4008BBE461470A69F3492BC5AE362A7A9:5AC82CBE9F28351E85D5262293BCFC8BACABEAD1294F248C1DF17F81CE5AC3CE",
+        "B5EE89E77326AB2BF1775BD99C19A28947FF8184:DDCD1E8A20638D4AAFF7201BB1D56452ACD2C759F1686BDC38F73DD15732BDC2",
+        "D30F05F637E605239C0070D1EA9860D434AC2A94:FE229EFC927F6D77B738896752A21803A59736BAA17BF5BE9A50C72E219CBCD2",
+        "D4FFDB19BA590FFFAA34DB5F4B568706A2978436:870C7A35CEAB3D59979F2C6A524042D404CB71518004350925FB2CED79A999DA",
+        "D559A586669B08F46A30A133F8A9ED3D038E2EA8:00BD2B0EDD8340B1746CC395C0E355B2165853FDB93C52DADDA8228B07002DCE",
+        "DA6D0400641B45AECC595D24E5037AA6BC09C358:AC8EA9F2874FD368A3E778B1A0B165EE898DB9B9687C17EDCDC76908AB58C82C",
+        "EB9204785126C26ADADCBBD44FE2B0C642A71078:5A9D217E71180301A044E4CFBDE431FDF4C1CFC998B1B6343B5A10AA9E4CDE98",
+        "FEE449EE0E3965A5246F000E87FDE2A065FD89D4:8B13DBB25EB339A630C76C810D14B44B552E68DC10A93E82E754DA23F858774A"
+      ],
+      "Count": 11,
+      "Fingerprint": "6C8183EFE15349B71078ABDBCF3C9273C059CC629700B7C18EE72243EDF10575"
+    },
+    {
+      "Location": "CurrentUser",
+      "Store": "My",
+      "Entries": [
+        "2087B65BA82B22626E1D28370C3D5D851719B27B:B5D02E85109BEC450B7C31D482BAEA979E6600D94D90B43BC47F318469075F85",
+        "49CAC722F7CFD49FA75D1C04D4F1789A4808D7F6:AA5B105B69ACB4C697D2C1F3EFA56738E474E60738AC2FE1294CEB3009306555",
+        "BD0EB4A78820D2C8AF3FF6C1FBB0A93343E41170:70AF73BF51F821ED44018A8AFF5636C0831DB5494CDEF6587416556AFB7F2B76",
+        "EA108AF56335549439FD25F2DCC3FD300DA4E902:6653DD8993AA7FF3D9C1F8D6BE4B1D2184356A1B1E5B7E28B03DEC7F77628495"
+      ],
+      "Count": 4,
+      "Fingerprint": "A74CC956D4E8B7A26D3D563CFF2652E2247E8CF1DFA3712199656A6FA15C0E5E"
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "Root",
+      "Entries": [
+        "0119E81BE9A14CD8E22F40AC118C687ECBA3F4D8:65AF95F4BE86847344634282F941B2E605063EF0C8542F014CA088D182109E4F",
+        "02FAF3E291435468607857694DF5E45B68851868:687FA451382278FFF0C8B11F8D43D576671C6EB2BCEAB413FB83D965D06D2FF2",
+        "0563B8630D62D75ABBC8AB1E4BDFB5A899B24D43:3E9099B5015E8F486C00BCEA9D111EE721FABA355A89BCF1DF69561E3DC6325C",
+        "06F1AA330B927B753A40E68CDF22E34BCBEF3352:CACA93B9D23D2B6FA76E8B8471931E0DF3EC6F63AF3CDBB936C41954A1872326",
+        "07E032E020B72C3F192F0628A2593A19A70F069E:5C58468D55F58E497E743982D2B50010B6D165374ACF83A7D4A32DB768C4408E",
+        "18F7C1FCC3090203FD5BAA2F861A754976C8DD25:5B789987F3C4055B8700941B33783A5F16E0CFF937EA32011FE04779F7635308",
+        "1F24C630CDA418EF2069FFAD4FDD5F463A1B69AA:179FBC148A3DD00FD24EA13458CC43BFA7F59C8182D783A513F6EBEC100C8924",
+        "245C97DF7514E7CF2DF8BE72AE957B9E04741E85:6EF914723F089D2ADAFF98D470A3651CCF1768E559FBDCC0FAAA640AA12E5753",
+        "2796BAE63F1801E277261BA0D77770028F20EEE4:C3846BF24B9E93CA64274C0EC67C1ECC5E024FFCACD2D74019350E81FE546AE4",
+        "2B8F1B57330DBBA2D07A6C51F70EE90DDAB9AD8E:E793C9B02FD8AA13E21C31228ACCB08119643B749C898964B1746D46C3D4CBD2",
+        "31F9FC8BA3805986B721EA7295C65B3A44534274:3FD4BE8BAAD2F26E1BDE06C7584BB720DD1A972D111F5A4999BC44B08FB4960D",
+        "3679CA35668772304D30A5FB873B0FA77BB70D54:2399561127A57125DE8CEFEA610DDF2FA078B5C8067F4E828290BFB860E84B3C",
+        "3B1EFD3A66EA28B16697394703A72CA340A05BD5:DF545BF919A2439C36983B54CDFC903DFA4F37D3996D8D84B4C31EEC6F3C163E",
+        "47BEABC922EAE80E78783462A79F45C254FDE68B:45140B3247EB9CC8C5B4F0D7B53091F73292089E6E5A63E2749DD3ACA9198EDA",
+        "4EB6D578499B1CCF5F581EAD56BE3D9B6744A5E5:9ACFAB7E43C8D880D06B262A94DEEEE4B4659989C3D0CAF19BAF6405E41AB7DF",
+        "4EFC31460C619ECAE59C1BCE2C008036D94C84B8:7B9D553E1C92CB6E8803E137F4F287D4363757F5D44B37D52F9FCA22FB97DF86",
+        "503006091D97D4F5AE39F7CBE7927D7D652D3431:6DC47172E01CBCB0BF62580D895FE2B8AC9AD4F873801E0C10B9C837D21EB177",
+        "53A2B04BCA6BD645E6398A8EC40DD2BF77C3A290:4FA3126D8D3A11D1C4855A4F807CBAD6CF919D3A5A88B03BEA2C6372D93C40C9",
+        "5EEED86FA37C675230642F55C84DDBF67CD33C80:7353B6D6C2D6DA4247773F3F07D075DECB5134212BEAD0928EF1F46115260941",
+        "5FB7EE0633E259DBAD0C4C9AE6D38F1A61C7DC25:7431E5F4C3C1CE4690774F0B61E05440883BA9A01ED00BA6ABD7806ED3B118CF",
+        "6BA0B098E171EF5AADFE4815807710F4BD6F0B28:B085D70B964F191A73E4AF0D54AE7A0E07AAFDAF9B71DD0862138AB7325A24A2",
+        "73A5E64A3BFF8316FF0EDCCC618A906E4EAE4D74:C741F70F4B2A8D88BF2E71C14122EF53EF10EBA0CFA5E64CFA20F418853073E0",
+        "742C3192E607E424EB4549542BE1BBC53E6174E2:E7685634EFACF69ACE939A6B255B7B4FABEF42935B50A265ACB5CB6027E44E70",
+        "7E04DE896A3E666D00E687D33FFAD93BE83D349E:31AD6648F8104138C738F39EA4320133393E3A18CC02296EF97C2AC9EF6731D0",
+        "7F88CD7223F3C813818C994614A89C99FA3B5247:4898B1749717A594A2030F47C83C272BD14BAE3DCEB2EAE382174EF2EC1C75C9",
+        "8094640EB5A7A1CA119C1FDDD59F810263A7FBD1:2CABEAFE37D06CA22ABA7391C0033D25982952C453647349763A3AB5AD6CCF69",
+        "8CF427FD790C3AD166068DE81E57EFBB932272D4:43DF5774B03E7FEF5FE40D931A7BEDF1BB2E6B42738C4E6D3841103D3AA7F339",
+        "8F43288AD272F3103B6FB1428485EA3014C0BCFE:847DF6A78497943F27FC72EB93F9A637320A02B561D0A91B09E87A7807ED7C61",
+        "925A8F8D2C6D04E0665F596AFF22D863E8256F3F:568D6905A2C88708A4B3025190EDCFEDB1974A606A13C6E5290FCB2AE63EDAB5",
+        "92B46C76E13054E104F230517E6E504D43AB10B5:8A5E4881D42F7475E8EC3726FCD5E51884AA04DAA9FA7ADAC8CD26452CF885D4",
+        "999A64C37FF47D9FAB95F14769891460EEC4C3C5:358DF39D764AF9E1B766E9C972DF352EE15CFAC227AF6AD1D70E8E4A6EDCBA02",
+        "A43489159A520F0D93D032CCAF37E7FE20A8B419:F38406E540D7A9D90CB4A9479299640FFB6DF9E224ECC7A01C0D9558D8DAD77D",
+        "A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436:4348A0E9444C78CB265E058D5E8944B4D84F9662BD26DB257F8934A443C70161",
+        "AD7E1C28B064EF8F6003402014C3D0E3370EB58A:1465FA205397B876FAA6F0A9958E5590E40FCC7FAA4FB7C2C8677521FB5FB658",
+        "B1BC968BD4F49D622AA89A81F2150152A41D829C:EBD41040E4BB3EC742C9E381D31EF2A41A48B6685C96E7CEF3C1DF6CD4331C99",
+        "B7AB3308D1EA4477BA1480125A6FBDA936490CBB:85666A562EE0BE5CE925C1D8890A6F76A87EC16D4D7D5F29EA7419CF20123B69",
+        "BE36A4562FB2EE05DBB3D32323ADF445084ED656:6B6C1E01F590F5AFC5FCF85CD0B9396884048659FC2C6D1170D68B045216C3FD",
+        "CABD2A79A1076A31F21D253635CB039D4329A5E8:96BCEC06264976F37460779ACF28C5A7CFE8A3C0AAE11A8FFCEE05C0BDDF08C6",
+        "CDD4EEAE6000AC7F40C3802C171E30148030C072:885DE64C340E3EA70658F01E1145F957FCDA27AABEEA1AB9FAA9FDB0102D4077",
+        "D1CBCA5DB2D52A7F693B674DE5F05A1D0C957DF0:4FF460D54B9C86DABFBCFC5712E0400D2BED3FBC4D4FBDAA86E06ADCD2A9AD7A",
+        "D1EB23A46D17D68FD92564C2F1F1601764D8E349:D7A7A0FB5D7E2731D771E9484EBCDEF71D5F0C3E0A2948782BC83EE0EA699EF4",
+        "D3DD483E2BBF4C05E8AF10F5FA7626CFD3DC3092:B676F2EDDAE8775CD36CB0F63CD1D4603961F49E6265BA013A2F0307B6D0B804",
+        "D4DE20D05E66FC53FE1A50882C78DB2852CAE474:16AF57A9F676B0AB126095AA5EBADEF22AB31119D644AC95CD4B93DBF3F26AEB",
+        "D69B561148F01C77C54578C10926DF5B856976AD:CBB522D7B7F127AD6A0113865BDF1CD4102E7D0759AF635A7CF4720DC963C53B",
+        "DAC9024F54D8F6DF94935FB1732638CA6AD77C13:0687260331A72403D909F105E69BCF0D32E1BD2493FFC6D9206D11BCD6770739",
+        "DDFB16CD4931C973A2037D3FC83A4D7D775D05E4:552F7BDCF1A7AF9E6CE672017F4F12ABF77240C78E761AC203D1D9D20AC89988",
+        "DF3C24F9BFD666761B268073FE06D1CC8D4F82A4:CB3CCBB76031E5E0138F8DD39A23F9DE47FFC35E43C1144CEA27D46A5AB1CB5F",
+        "F40042E2E5F7E8EF8189FED15519AECE42C3BFA2:5367F20C7ADE0E2BCA790915056D086B720C33C1FA2A2661ACF787E3292E1270",
+        "FCEB8D98C83523546C5C8B4509A277C14C585875:D8FE9657243172F416D7C0B56914359BC98D7872740E63F0C3F6E7B64155BFD1"
+      ],
+      "Count": 49,
+      "Fingerprint": "D3FD496E2DE299782B5C5346FC8269C71669075C1F31D85D2FAB20DED7EC6ED9"
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "CA",
+      "Entries": [
+        "109F1CAED645BB78B3EA2B94C0697C740733031C:5528A0595B3C464D287F85535B9DA59F6F456569A320320D9EC7143B635DBE7E",
+        "1D9D345A1BDFF4D56E62934577BC4C83811FD53C:2A86C22F599553F56246100A4BCD1E2B9D867C8FD93BD70C79A059843EED0639",
+        "D4FFDB19BA590FFFAA34DB5F4B568706A2978436:870C7A35CEAB3D59979F2C6A524042D404CB71518004350925FB2CED79A999DA",
+        "D559A586669B08F46A30A133F8A9ED3D038E2EA8:00BD2B0EDD8340B1746CC395C0E355B2165853FDB93C52DADDA8228B07002DCE",
+        "FEE449EE0E3965A5246F000E87FDE2A065FD89D4:8B13DBB25EB339A630C76C810D14B44B552E68DC10A93E82E754DA23F858774A"
+      ],
+      "Count": 5,
+      "Fingerprint": "46DC22D9216AA3A7CD322ABD1C535FFBF1266DE432F06B5304EB3A4E481F1F73"
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "My",
+      "Entries": [],
+      "Count": 0,
+      "Fingerprint": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "Request",
+      "Entries": [
+        "079AF9D20802BD4A16B862928194A77BC14B93F4:B9C377C296E1429E568CBA4727CE28DCAC90C19802F25927EC88D2EF0CE4A32F"
+      ],
+      "Count": 1,
+      "Fingerprint": "5184504D78B4C18C499857BCE1088EBFC72979D7709C5C8E7B2E2A7EF04EDC3C"
+    }
+  ],
+  "Services": [
+    {
+      "Name": "MSSQL$YSEDU",
+      "State": "Running",
+      "StartMode": "Auto",
+      "ProcessId": 82368,
+      "StartName": "LocalSystem",
+      "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Binn\\sqlservr.exe\" -sYSEDU"
+    },
+    {
+      "Name": "SQLBrowser",
+      "State": "Stopped",
+      "StartMode": "Disabled",
+      "ProcessId": 0,
+      "StartName": "NT AUTHORITY\\LOCALSERVICE",
+      "PathName": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Shared\\sqlbrowser.exe\""
+    }
+  ],
+  "Registry": [
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib",
+      "Values": [
+        {
+          "Name": "Certificate",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "ForceEncryption",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "HideInstance",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "ExtendedProtection",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp",
+      "Values": [
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "ListenOnAllIPs",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "KeepAlive",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 30000
+        },
+        {
+          "Name": "KeepAliveInterval",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP1",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::be60:5267:2d0f:3e15%8"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP10",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "169.254.156.10"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP11",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::6d6e:42e7:e877:bc94%16"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP12",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "192.168.43.197"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP13",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "::1"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP14",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "127.0.0.1"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP15",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::37c5:5c6b:34c0:b65e%24"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP16",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "172.28.144.1"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP2",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "169.254.172.14"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP3",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::3e70:5763:cb82:b83b%21"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP4",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "192.168.56.1"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP5",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::e49:6403:f967:c206%6"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP6",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "169.254.48.184"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP7",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::b629:46c4:47d7:3710%19"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP8",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "169.254.167.164"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IP9",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 1
+        },
+        {
+          "Name": "Enabled",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 0
+        },
+        {
+          "Name": "IpAddress",
+          "Present": true,
+          "Kind": "String",
+          "Value": "fe80::1af7:abb2:5fcb:e3af%11"
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\SuperSocketNetLib\\Tcp\\IPAll",
+      "Values": [
+        {
+          "Name": "Active",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        },
+        {
+          "Name": "Enabled",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        },
+        {
+          "Name": "IpAddress",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        },
+        {
+          "Name": "TcpPort",
+          "Present": true,
+          "Kind": "String",
+          "Value": ""
+        },
+        {
+          "Name": "TcpDynamicPorts",
+          "Present": true,
+          "Kind": "String",
+          "Value": "0"
+        }
+      ]
+    },
+    {
+      "Path": "SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQLServer\\Parameters",
+      "Values": [
+        {
+          "Name": "SQLArg0",
+          "Present": true,
+          "Kind": "String",
+          "Value": "-dC:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\DATA\\master.mdf"
+        },
+        {
+          "Name": "SQLArg1",
+          "Present": true,
+          "Kind": "String",
+          "Value": "-eC:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Log\\ERRORLOG"
+        },
+        {
+          "Name": "SQLArg2",
+          "Present": true,
+          "Kind": "String",
+          "Value": "-lC:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\DATA\\mastlog.ldf"
+        }
+      ]
+    },
+    {
+      "Path": "SYSTEM\\CurrentControlSet\\Services\\MSSQL$YSEDU",
+      "Values": [
+        {
+          "Name": "Start",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 2
+        },
+        {
+          "Name": "DelayedAutoStart",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        },
+        {
+          "Name": "ImagePath",
+          "Present": true,
+          "Kind": "ExpandString",
+          "Value": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\MSSQL12.YSEDU\\MSSQL\\Binn\\sqlservr.exe\" -sYSEDU"
+        },
+        {
+          "Name": "ObjectName",
+          "Present": true,
+          "Kind": "String",
+          "Value": "LocalSystem"
+        },
+        {
+          "Name": "FailureActions",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        },
+        {
+          "Name": "FailureActionsOnNonCrashFailures",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        }
+      ]
+    },
+    {
+      "Path": "SYSTEM\\CurrentControlSet\\Services\\SQLBrowser",
+      "Values": [
+        {
+          "Name": "Start",
+          "Present": true,
+          "Kind": "DWord",
+          "Value": 4
+        },
+        {
+          "Name": "DelayedAutoStart",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        },
+        {
+          "Name": "ImagePath",
+          "Present": true,
+          "Kind": "ExpandString",
+          "Value": "\"C:\\Program Files (x86)\\Microsoft SQL Server\\90\\Shared\\sqlbrowser.exe\""
+        },
+        {
+          "Name": "ObjectName",
+          "Present": true,
+          "Kind": "String",
+          "Value": "NT AUTHORITY\\LOCALSERVICE"
+        },
+        {
+          "Name": "FailureActions",
+          "Present": true,
+          "Kind": "Binary",
+          "Value": [
+            128,
+            81,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            20,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            96,
+            234,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            96,
+            234,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            96,
+            234,
+            0,
+            0
+          ]
+        },
+        {
+          "Name": "FailureActionsOnNonCrashFailures",
+          "Present": false,
+          "Kind": null,
+          "Value": null
+        }
+      ]
+    }
+  ],
+  "PendingThumbprint": "079AF9D20802BD4A16B862928194A77BC14B93F4",
+  "PendingPublicMatchesCsrAndLeaf": true,
+  "KeyDaclSHA256": "119EE2FB1E288527CD7128D069EC147F2C5E203DB8709B655A0B2A5FDDA2ED82",
+  "KeyProvider": "CSP24",
+  "KeySpec": 1,
+  "MachineKeySet": true,
+  "ExistingProviderContextReleased": true,
+  "RawKeyLocatorPublished": false,
+  "RevocationPolicy": "UNKNOWN accepted as separate lab assurance gap only; actual certreq errors never ignored",
+  "Rollback": "Owned Root context only if seven stores show Root-only delta, key/settings/services unchanged and certreq not running; otherwise defer. No leaf/request/key deletion or request recreation."
+}
