@@ -1,5 +1,11 @@
 # One bounded YSEDU maintenance — pre-stop hold
 
+**Later transport-only amendment:** the owner approved explicit-port adapter support.
+[Direct-port implementation and revised procedure](MOTAKAMEL_DIRECT_PORT_TRANSPORT_2026-10-11.md)
+supersede the Browser dependency/decision below for the direct path only. Browser must
+remain Stopped/Disabled; unavailable discovery is not a rollback trigger there.
+This report remains the historical pre-stop observation; no maintenance is claimed.
+
 Date: 2026-10-11, Asia/Aden +03. Owner execution approval received against901afd0. **MAINTENANCE = NOT STARTED / BLOCKED BEFORE SHUTDOWN. FIRST LIVE DATA #001 = NOT TESTED.** No certificate/service/network/SQL-data changes were made.
 
 ## Fresh checks actually performed

@@ -1,0 +1,89 @@
+{
+  "Task": "OWNER_APPROVED_DIRECT_PORT_TRANSPORT_ONLY",
+  "Date": "2026-10-11",
+  "BuildBase": "8c22f7b2a1dc251928adc9c7590b551dffddbd5e",
+  "BuildHead": "3f7fb6d4c07da3185d1eddda0273b3a55569d83b",
+  "Branch": "codex/motakamel-direct-port",
+  "PullRequest": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/12",
+  "PullRequestState": "OPEN_NOT_MERGED",
+  "RemoteBranchVerified": true,
+  "RemoteMainUnchanged": true,
+  "Runtime": "Node22.23.2 / npm10.9.8",
+  "LocalVerify": {
+    "Command": "npm run verify",
+    "ExitCode": 0,
+    "Build": "PASSED",
+    "Typecheck": "PASSED",
+    "WorkspaceTestsPassed": 227,
+    "AdapterTestsPassed": 130,
+    "SqlTransportConfigTests": 45,
+    "LiveTestsSkipped": 1,
+    "LiveOptInForcedOffForRun": true,
+    "FinalTestRunStartLocal": "2026-10-11T19:37:37+03:00",
+    "FinalTestRunLastWorkspaceStartLocal": "2026-10-11T19:37:53+03:00"
+  },
+  "Audit": {
+    "Command": "npm audit --audit-level=critical",
+    "ExitCode": 0,
+    "ModerateEntries": 2,
+    "RemainingChain": "tedious20.3.3 -> sprintf-js1.1.3",
+    "LockfileChanged": false,
+    "SeverityLowered": false,
+    "InitialRestrictedNetworkRequest": "FAILED_TO_REACH_REGISTRY",
+    "SubsequentAuthorizedRequest": "PASSED"
+  },
+  "Transport": {
+    "Port": "EXPLICIT_INTEGER_1_TO_65535_NO_DEFAULT",
+    "ObservedHostPort": "NOT_YET_QUALIFIED",
+    "InstanceNameInDirectMode": false,
+    "BrowserFallback": false,
+    "Encrypt": true,
+    "TrustServerCertificate": false,
+    "ServerName": "DESKTOP-8QRQT7R",
+    "MinimumTlsVersion": "TLSv1.2",
+    "ExclusiveCaDerSHA256": "A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472",
+    "FrozenDatabase": "DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009",
+    "Reader": "DBL_HOST_W11_S2_Reader_20261009"
+  },
+  "Proof": {
+    "ActualMssqlTediousConfigConstruction": "PASSED_WITHOUT_CONNECTING",
+    "NormalHostnameVerifierCorrectAndWrongNames": "PASSED_PUBLIC_LEAF_ONLY",
+    "ConnectorImportSqliteSnapshotReader": "PASSED_MOCKED_SQL_WIRE",
+    "RealSqlConnection": false,
+    "LiveTlsHandshake": "NOT_TESTED",
+    "Sql2014CertificateLoading": "NOT_TESTED",
+    "FirstLiveData": "NOT_TESTED"
+  },
+  "ServiceReadAtLocal": "2026-10-11T19:39:27.4043563+03:00",
+  "Services": {
+    "MSSQL$YSEDU": "RUNNING_AUTOMATIC",
+    "SQLBrowser": "STOPPED_DISABLED"
+  },
+  "HostMaintenanceExecuted": false,
+  "SqlDataWrites": false,
+  "ErpSave": false,
+  "CertificateKeyTrustAclNetworkFirewallChanges": false,
+  "ReaderCredentialRequested": false,
+  "CanonicalChanged": false,
+  "CiRun": "https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/38156422172",
+  "CiState": "COMPLETED_SUCCESS",
+  "CiHeadVerified": "3f7fb6d4c07da3185d1eddda0273b3a55569d83b",
+  "CiJobs": {
+    "Ubuntu": {
+      "Build": "SUCCESS",
+      "Typecheck": "SUCCESS",
+      "Tests": "SUCCESS",
+      "OriginalCriticalAudit": "SUCCESS",
+      "CompletedAt": "2026-10-11T16:41:22Z"
+    },
+    "Windows": {
+      "Build": "SUCCESS",
+      "Typecheck": "SUCCESS",
+      "Tests": "SUCCESS",
+      "OriginalCriticalAudit": "SKIPPED_BY_UNCHANGED_WORKFLOW",
+      "CompletedAt": "2026-10-11T16:41:57Z"
+    }
+  },
+  "AutoMergeRequest": null,
+  "Stop": "BEFORE_ANY_YSEDU_ACTION"
+}

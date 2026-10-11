@@ -2,11 +2,13 @@
 
 هذا المجلد هو الذاكرة المرجعية لمبادرة **Local-First Legacy ERP Intelligence Layer** داخل DBL.
 
-آخر مراجعة مع مستودع البناء: **2026-10-09 — PR #11 مدموج؛ main=8c22f7b**
+آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #11 مدموج؛ main=8c22f7b؛ PR #12 direct-port عند3f7fb6d مفتوح دون Merge**
 
 آخر تحديث بحثي/مخبري: **2026-10-11**
 
 ## الحالة
+
+**2026-10-11 — DIRECT-PORT TRANSPORT ONLY: تعديل النقل والاختبارات وإجراء الصيانة، دون إجراء على YSEDU.** [الدليل وحدود الاختبارات وتعديل الإجراء](MOTAKAMEL_DIRECT_PORT_TRANSPORT_2026-10-11.md): إعداد `directTcp` يقبل منفذًا صريحًا صحيحًا وCA العامة المثبتة فقط، ويحذف `instanceName` في هذا الوضع، مع TLS صارم والتحقق من `DESKTOP-8QRQT7R` ونفس frozen DB/reader وImport→SQLite→SnapshotReader. Browser يبقى Stopped/Disabled؛ عدم توفر discovery لم يعد سببًا للتراجع عند استخدام المنفذ الصريح. لا تخمين1433 ولا SQL fixed-port؛ يُلتقط المنفذ والـPID والعنوان بعد تفعيل منفصل. اختبارات mock/config فقط، FIRST LIVE DATA NOT TESTED؛ لا service/network/certificate/ACL/SQL changes. بوابات التحميل الفعلي وTLS وcredential ما زالت منفصلة. `.vscode` خارجcommit؛ STOP قبلالصيانة. شرط Browser أدناه تاريخي بالنسبة للمسار المباشر فقط.
 
 **2026-10-11 19:13+03 — One Bounded Maintenance OWNER APPROVED؛ BLOCKED BEFORE SHUTDOWN / NOT STARTED.** [الفحص المحدود وشرط Browser والخطوة العملية المقترحة](DBL_YSEDU_ONE_BOUNDED_MAINTENANCE_2026-10-11.md): بصماتleaf/result/original/rollback مطابقة، YSEDU Running وBrowser Stopped، ومحتوىcheckout الحالي يطابقmerged main بعدfetch. runtime Browser exposure غير مؤهل، وليسfailed test؛ static Firewall PASS السابق لا يثبت نطاقlistener/packet reachability ولا يجيز تعرضًا عابرًا غير محسوم. token الوكيل غيرإداري، ولا fresh administrative preflight فيهذهالجولة. لاSQLstop/start أوaccept/bind/network/ACL/trust/Firewall change؛ الدورة لمتُستهلك، وrollback لميلزم. المقترح الأضيق: تفويضtransport-only explicit port فيadapter الحالي، معBrowserStopped وTLSصارم ونفسمسارImport، دونتخمينport أوimplementationهنا؛ أو تحديدتفويض/قبولتعرضBrowserلتجربةمحدودة. readercredential UNCONFIRMED،FIRST LIVE DATA NOT TESTED. readiness901afd0 تبقىمشروطة لاNETWORKREADY. `.vscode`خارجcommit؛STOPقبلالصيانة.
 
