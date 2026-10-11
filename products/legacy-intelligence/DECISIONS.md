@@ -1,5 +1,9 @@
 # Legacy Intelligence — Decisions
 
+## Bounded laboratory security decision — 2026-10-11
+
+Owner approved [one current YSEDU Leaf acceptance](DBL_LAB_LEAF_ACCEPTANCE_001_2026-10-11.md) on DESKTOP-8QRQT7R with a separately recorded CRL/OCSP UNKNOWN assurance gap. This supersedes the old maintenance helper's positive-revocation retention condition for this experiment only, not product/production TLS policy. Signature, trusted chain, current validity, ServerAuth and hostname validation remain mandatory; no Windows policy change or certreq/TLS validation bypass. One exact public CA addition to LocalMachine Root grants acknowledged machine-wide trust. One ordinary certreq acceptance while SQL runs is authorized; actual execution remains PENDING owner admin handoff. SQL binding/restart/live login/import are not authorized by this decision. UNKNOWN is never PASSED/not-revoked; actual errors and unexplained partial state are STOP, and any later action needs separate approval.
+
 ## Accepted strategic and architectural decisions
 
 1. Do not build a full ERP first.
