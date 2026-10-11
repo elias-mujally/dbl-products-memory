@@ -1,0 +1,36 @@
+{
+  "Task": "OWNER_AUTHORIZED_CORRECTED_YSEDU_LEAF_SIGNING_ATTEMPT",
+  "Decision": "CUSTODY_REVERIFIED_CORRECTED_CONSOLE_STARTED_RESULT_PENDING",
+  "ObservedAt": "2026-10-11T17:30:41.1273536+03:00",
+  "Authority": "Owner explicitly approved one corrected actual signing attempt, then confirmed E reconnection",
+  "Custody": {
+    "Directory": "E:\\DBL-Lab-CA-YSEDU-001",
+    "EntryCount": 4,
+    "ExistingFilePinsMatched": 4,
+    "PublicCertificateSHA256": "A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472",
+    "PublicPemSHA256": "5CFE59F6CD9A090A62FC03ACECA6C1A2A2F8DB47569019890D59D7EA9C826D4F",
+    "EncryptedPfxSHA256": "7C8FD60E8997AEDDA3C445E900BD5C1F685D9929ABC89BF9E20818354A862E32",
+    "OwnershipSHA256": "00691F280AEF17DA4F5C00839DFED194597713CDA4241F4FAF93C94EE64E4688"
+  },
+  "ExistingLocalArtifactPinsMatched": 7,
+  "CorrectedHelperSHA256": "C044B259C80FAAC283594666813DC427AC5BCD935627FEDE84055FAD740F5AE7",
+  "NewLauncher": "Start-YseduLeafSigning002-Corrected.ps1",
+  "NewLauncherSHA256": "2C12EABA3A3038C893A00C4EDD08C584853FA1CEEA7B78F2B7BDE48710218DBD",
+  "LauncherCheckOnly": "CORRECTED_SIGNING_002_LAUNCHER_PINS_AND_PARSE_PASSED",
+  "LaunchResult": {
+    "Decision": "CORRECTED_SIGNING_002_CONSOLE_STARTED_RESULT_PENDING",
+    "ProcessId": 96268
+  },
+  "Handoff": "Visible dedicated NoProfile PowerShell7; same qualified runtime and corrected helper pinned again in child; SigningAuthorized explicitly passed; owner enters existing CA password hidden, never arguments/chat",
+  "AtFollowupRead": {
+    "SigningAttemptMarkerExists": false,
+    "SigningResultExists": false
+  },
+  "ServicesBeforeLaunch": {"YSEDU": "Running", "SQLBrowser": "Stopped"},
+  "PriorSuccessfulCryptoTestsRepeated": false,
+  "SigningHelperEdited": false,
+  "OldLauncherUsed": false,
+  "PreparationNote": "Agent-only hash inventory command initially had a PowerShell pipeline parse error; corrected hash-only command matched all 7 local/4 external pins. No helper/CA/signing execution from that error.",
+  "FirstLiveData": "NOT_TESTED",
+  "Limits": "Console launch is not signing success. Await actual sanitized final child JSON/local evidence; no automated retry, certificate acceptance/binding, ACL, SQL or network changes from this signing step."
+}
