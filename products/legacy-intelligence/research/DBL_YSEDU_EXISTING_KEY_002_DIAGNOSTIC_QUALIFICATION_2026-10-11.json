@@ -1,0 +1,32 @@
+{
+  "Task": "EXISTING_KEY_DIAGNOSTIC_CORRECTION_002",
+  "Decision": "DIAGNOSTICS_SYNTHETIC_QUALIFIED_NATIVE_KEY_PENDING_OPERATOR",
+  "OwnerAuthorization": "2026-10-11 yes to one same-key diagnostic correction and check",
+  "SyntheticAt": "2026-10-11T05:51:30.0299857+03:00",
+  "SyntheticChecks": 10,
+  "Scope": "Shared mutable check state, null distinction, property getter exception code, independent cleanup diagnostics; no native key",
+  "PublicPreflightAt": "2026-10-11T05:51:30.2536484+03:00",
+  "PublicPreflight": "PASSED original byte pins and actual public CSR profile",
+  "LauncherCheckOnly": "PASSED; Elevated=false; ChildLaunched=false",
+  "PrivateKeyOpenAttempted": false,
+  "DiagnosticAttemptMarkerExists": false,
+  "DiagnosticResultExists": false,
+  "NativeKeyQualification": "NOT_TESTED_BY_CORRECTED_HELPER",
+  "SQL": "Running",
+  "Browser": "Stopped",
+  "CAUnlocked": false,
+  "NativeKeyCreation": false,
+  "SqlStopped": false,
+  "FirstLiveData": "NOT_TESTED",
+  "OldArtifacts": "Pinned and unchanged",
+  "Hashes": {
+    "ExistingKeyDiagnostics002.ps1": "980064A9487C97F9F8E51F3F8CD7D0B27C308F109A53904316D6057072939BF9",
+    "Qualify-YseduExistingKey002.ps1": "265A32E1BFC4707F5F30C3F63560D4A77E2D476CCBFE1721935FDDE682D60679",
+    "Test-ExistingKeyDiagnostics002.ps1": "CFF40B3A5146A8A6456681BCF71DA6CFCA4E44C782147A540BE68309E370EB8D",
+    "Start-ExistingKeyDiagnostic002.ps1": "78E1EEC10E0B63B377E0DF6F75A954430AF9C46F412A292711137CFD842F92C6"
+  },
+  "Pending": "One operator manually elevated invocation; STOP before CA signing, acceptance or SQL interruption even if qualified",
+  "Limits": "Synthetic diagnostic tests are not private key, SQL2014 loading, effective SYSTEM access or live connector proof",
+  "PropertyReadPolicy": "Explicit reflection getter propagates failure; nonexportability requires an actual Boolean false, not null/coercion",
+  "FinalRevisionTests": "Strengthened must-throw tests passed; no expected-failure sentinel can make a nonthrowing getter pass"
+}

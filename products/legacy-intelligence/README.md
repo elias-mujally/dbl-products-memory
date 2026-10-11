@@ -4,9 +4,11 @@
 
 آخر مراجعة مع مستودع البناء: **2026-10-09 — PR #11 مدموج؛ main=8c22f7b**
 
-آخر تحديث بحثي/مخبري: **2026-10-10**
+آخر تحديث بحثي/مخبري: **2026-10-11**
 
 ## الحالة
+
+**2026-10-11 — Diagnostic correction #002 = SYNTHETIC QUALIFIED؛ same-key native check = PENDING OPERATOR.** [الأدلة والنطاق](DBL_FIRST_LIVE_DATA_001_CA_CUSTODY_EXECUTION_GATE_2026-10-10.md#decision): بموافقة المالك، أداة جديدة تحفظ shared diagnostic state وتفصل محاولة الفتح عن non-null return والنوع المؤهل، وتسجل فحص كل خاصية قبل قراءتها. نجحت10 اختبارات وهمية تشمل null/property failure/cleanup دون كشف رسائل خام؛ PublicOnly وبصمات launcher نجحت دون مفتاح أو child أو تغييرات SQL. الفشل الحقيقي السابق ما زال غير محسوم؛ هذه ليست إعادة تأهيل للمفتاح أو SQL2014. الفحص الإداري الواحد يحتفظ بجميع شروط CSP24 وعدم التصدير، ويستهلك marker جديدًا قبل فتح المفتاح الحالي فقط؛ لا إنشاء/حذف/تغيير مفتاح أو ACL أو CA signing/acceptance أو SQL stop. YSEDU Running وBrowser Stopped؛ FIRST LIVE DATA NOT TESTED. المصادر والأدلة السابقة محفوظة؛ `.vscode` خارج commit؛ STOP بعد نتيجة الفحص وقبل الصيانة. تعليمات handoff الأقدم أدناه تاريخية.
 
 **2026-10-11 — Existing-key Resume = BLOCKED؛ diagnostic defect CONFIRMED.** [الأدلة وحدودها](DBL_FIRST_LIVE_DATA_001_CA_CUSTODY_EXECUTION_GATE_2026-10-10.md#decision): نتيجة05:28 تسمي فحصًا قديمًا بسبب خلط scope داخل أداة التشخيص، وPrivateKeyOpened=true لا يفحص null. لا سبب مثبت لفشل المفتاح نفسه بعد. قراءة مستقلة لبيانات ارتباط Request فقط أثبتت CSP24/KeySpec1/MachineKeyset وتطابق المفتاح العام مع CSR، دون فتح المفتاح الخاص. عدم التصدير/managed type/challenge/ACL/تحميل SQL ما زالت غير متحققة. لم تُعد الأداة أو يُنشأ مفتاح أو يُغيّر SQL؛ YSEDU Running وBrowser Stopped. الخطوة المقترحة تصحيح diagnostics محدود ثم فحص واحد مفوّض لنفس المفتاح، دون تخفيف الشروط. FIRST LIVE DATA NOT TESTED؛ `.vscode` خارج commit. الحالة السابقة أدناه تاريخية.
 
