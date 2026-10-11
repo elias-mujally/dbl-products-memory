@@ -4,6 +4,16 @@ Date: 2026-10-11, Asia/Aden (+03). Follow-up to a02d6e1; original failures, help
 
 ## Actual decision
 
+**2026-10-11 07:12:59+03 — EXISTING_KEY_CAPI_ONLY_003_QUALIFIED / PASSED within the existing-key scope. FIRST LIVE DATA remains NOT TESTED.** [Actual operator result and independently measured artifact hashes](research/DBL_YSEDU_CAPI_ONLY_003_OPERATOR_QUALIFIED_2026-10-11.json). Agent reread the local result and attempt, checked source/helper/CSR hashes, and did not repeat acquisition. Native acquisition proved actual Enhanced RSA and AES CSP/type24, KeySpec1/AT_KEYEXCHANGE, machine flags32, CALG_RSA_KEYX and RSA2048. One SHA256 challenge verified against the pinned CSR public key. KP_PERMISSIONS=59 (0x3B) lacks both export/archive policy bits; no export was attempted. This is policy qualification, not a guarantee against all privileged extraction.
+
+Association before/after and five certificate-store inventories were unchanged within the operator invocation; original artifacts were reported unchanged. CallerFreeProvider=true; no native or managed cleanup failures were reported. Current helper/native-source/CSR hashes match their pinned bytes. This result does not establish a blanket historical key/security fingerprint. Fresh agent service read at07:16:19+03: YSEDU Running, SQLBrowser Stopped. No new key, CA unlock, leaf issuance/acceptance, SQL stop, ACL, registry, network or E writes in this gate; this follow-up reviewed evidence only.
+
+**Still NOT TESTED:** key DACL suitability, effective SYSTEM access, SQL2014 certificate loading, strict TLS connection and live SQL→DBL import. Reader credentials are not qualified by this gate. Historical #002 really rejected a returned RSACng wrapper; #003 now qualifies the actual native CSP policy without weakening the approved requirement. The reason for managed wrapper selection remains uninvestigated; do not infer key conversion, corruption or replacement.
+
+**Next separate step:** bounded signing/profile qualification of the existing CSR with the existing CA and owner-interactive password custody. No new key/CA, no automatic leaf acceptance or service/network maintenance. STOP now, preserving the consumed #003 marker/result and earlier failures.
+
+## Historical preparation before operator execution
+
 **Synthetic guard tests = PASSED; public preflight = PASSED; native existing-key qualification = PENDING OPERATOR / NOT TESTED. FIRST LIVE DATA NOT TESTED.** [Actual non-sensitive evidence and hashes](research/DBL_YSEDU_CAPI_ONLY_003_PREFLIGHT_2026-10-11.json). No new machine key, native acquisition, certificate signing/acceptance, CA unlock, SQL interruption, ACL/store/network/ERP mutation or E access in this turn. Fresh YSEDU Running / Browser Stopped. Attempt/result #003 absent. Agent token is non-administrative; no automatic elevation or private-key retry attempted.
 
 ## Exact bounded method
