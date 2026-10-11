@@ -1,7 +1,9 @@
 # Motakamel Item Identity — direct-port transport only
 
 **Later P2 correction:** [direct transient-login retries disabled and limits verified](MOTAKAMEL_PR12_P2_TRANSIENT_RETRY_FIX_2026-10-11.md)
-at `84eadfddfd064ada961e36675ceffe24e33f2f3a`, same PR12, not merged. The original
+at `84eadfddfd064ada961e36675ceffe24e33f2f3a`, same PR12. Subsequently owner-authorized
+[merge verified](MOTAKAMEL_PR12_MERGE_VERIFICATION_2026-10-11.md) at
+`aa234dfbeb38ce738718957d739af348406c293a`. The original
 head/tests/CI below are preserved historically. Broad "no retry" wording is qualified:
 direct driver transient-login retries are0, not a guarantee of a single socket.
 

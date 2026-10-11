@@ -2,11 +2,13 @@
 
 هذا المجلد هو الذاكرة المرجعية لمبادرة **Local-First Legacy ERP Intelligence Layer** داخل DBL.
 
-آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #11 مدموج؛ main=8c22f7b؛ PR #12 P2 عند84eadfd مفتوح دون Merge**
+آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #12 مدموج؛ origin/main=aa234df؛ الرأس المعتمد84eadfd محفوظ ضمن الدمج**
 
 آخر تحديث بحثي/مخبري: **2026-10-11**
 
 ## الحالة
+
+**2026-10-11 — PR #12 MERGED بإذن المالك؛ origin/main VERIFIED.** [نتيجة الدمج والأدلة](MOTAKAMEL_PR12_MERGE_VERIFICATION_2026-10-11.md): الرأس مطابق `84eadfddfd064ada961e36675ceffe24e33f2f3a`، وLinux/Windows CI ناجحتان، ولا تعارضات أو مراجعات مانعة أو commits جديدة. دُمج بالطريقة السابقة Merge Commit دونForce/admin/auto-merge؛ SHA النهائي `aa234dfbeb38ce738718957d739af348406c293a`، وشجرةmain مطابقة للرأس المعتمد. تصحيحP2 direct-only والمسارالقديم وTLS والعقود محفوظة. لا صيانةYSEDU أو تثبيتشهادة أو شبكة أوSQLحي؛ FIRST LIVE DATA NOT TESTED. `.vscode` خارجcommit؛ STOP بعدالتوثيق. حالاتPR12 المفتوحة أدناه تاريخية وليست الحالة الحالية.
 
 **2026-10-11 — PR #12 P2: تعطيل Tedious transient-login retry في Direct TCP فقط.** [التصحيح والأدلة وحدود عدم التكرار](MOTAKAMEL_PR12_P2_TRANSIENT_RETRY_FIX_2026-10-11.md): `options.maxRetriesOnTransientErrors=0` يصل إلى Tedious الفعلي؛ المسار القديم دون تغيير وبافتراضي3. اختبارات المعالج الحقيقي وpool حقيقي بموارد وهمية وImportOrchestrator الافتراضي نجحت، مع231 اختبارًا وBuild/Typecheck وaudit الأصلي، وLinux/Windows CI ناجحتين على الرأس الجديد. لا ضمان socket واحد: DNS/استبدال resource/routing قد تولّد اتصالات إضافية دون إثبات replay لـItem SELECT/import. لم تتغير TLS أو Canonical أو الإنتاج في مسارImport. الرأس84eadfd منشور على نفسPR، دونMerge أو صيانة/SQLحي؛ FIRST LIVE DATA NOT TESTED. `.vscode` خارجcommit، STOP بعدالتوثيق.
 

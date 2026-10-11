@@ -1,5 +1,11 @@
 # PR #12 — P2 transient-login retry correction
 
+**Later owner-authorized merge:** PR #12 merged at
+`aa234dfbeb38ce738718957d739af348406c293a` on 2026-10-11.
+[Final merge verification](MOTAKAMEL_PR12_MERGE_VERIFICATION_2026-10-11.md).
+The OPEN/no-merge state below is the historical correction/publication checkpoint;
+its retry limits and live-SQL NOT TESTED boundary still apply.
+
 Date: 2026-10-11, Asia/Aden +03. Owner authorized this limited fix/tests/publication,
 not merge or YSEDU maintenance. **FIRST LIVE DATA #001 = NOT TESTED.**
 
