@@ -1,5 +1,10 @@
 # Motakamel Item Identity — direct-port transport only
 
+**Later P2 correction:** [direct transient-login retries disabled and limits verified](MOTAKAMEL_PR12_P2_TRANSIENT_RETRY_FIX_2026-10-11.md)
+at `84eadfddfd064ada961e36675ceffe24e33f2f3a`, same PR12, not merged. The original
+head/tests/CI below are preserved historically. Broad "no retry" wording is qualified:
+direct driver transient-login retries are0, not a guarantee of a single socket.
+
 Date: 2026-10-11, Asia/Aden +03. Owner explicitly approved adapter transport and
 maintenance-procedure changes only. **NO YSEDU MAINTENANCE / NO LIVE SQL TEST.**
 FIRST LIVE DATA #001 remains **NOT TESTED**. Archive qualification remains paused;
@@ -28,7 +33,9 @@ leaf fixtures are retained only for deterministic tests; the future operator sup
 the separately verified public CA and actual listener port at execution time.
 
 Direct mode sends top-level mssql `port` and **omits `instanceName`**. There is no
-SQLBrowser/SSRP fallback or retry on failure. Fixed server `DESKTOP-8QRQT7R`, frozen
+SQLBrowser/SSRP fallback or adapter-level retry on failure. The P2 follow-up explicitly
+sets direct Tedious transient-login retries to0; other physical connection behaviors
+are documented separately. Fixed server `DESKTOP-8QRQT7R`, frozen
 database `DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009`, reader
 `DBL_HOST_W11_S2_Reader_20261009`, fixed SELECTs, schema/READ_ONLY/permissions guards,
 identity mapping, acquisition/replay and cleanup contracts remain unchanged.

@@ -1,0 +1,69 @@
+{
+  "Task": "PR12_P2_DIRECT_TRANSIENT_RETRY_FIX",
+  "Date": "2026-10-11",
+  "PriorHead": "3f7fb6d4c07da3185d1eddda0273b3a55569d83b",
+  "NewHead": "84eadfddfd064ada961e36675ceffe24e33f2f3a",
+  "PullRequest": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/12",
+  "RemoteFeatureHeadVerified": true,
+  "BuildMainUnchanged": "8c22f7b2a1dc251928adc9c7590b551dffddbd5e",
+  "ProductionChange": "options.maxRetriesOnTransientErrors=0 in direct-only branch",
+  "LegacyOptionAbsent": true,
+  "ActualTediousDirectRetryCount": 0,
+  "ActualTediousLegacyRetryCount": 3,
+  "RealLogin7HandlerInitialErrorClassification": "DIRECT_NON_TRANSIENT_LEGACY_TRANSIENT",
+  "IndependentErrorNumbers": [4060, 10928, 10929, 40197, 40501, 40613],
+  "RealMssqlTarnVirtualResourceTest": "PROBE_THEN_ONE_FAILED_ACQUIRE_NO_RECREATE_FOR_THAT_ACQUIRE",
+  "DefaultImportFailureTest": "ONE_SOURCE_ATTEMPT_NO_IMPORT_RETRY_NO_SNAPSHOT",
+  "RemainingPhysicalBehaviors": [
+    "mssql initial probe then pooled connections",
+    "invalid free-resource replacement and SELECT 1 validation",
+    "Tedious sequential DNS-address fallback",
+    "Tedious server-provided routing"
+  ],
+  "OneSocketAttemptGuarantee": "NOT_ESTABLISHED_NOT_THE_SCOPE_OF_THIS_FIX",
+  "LocalVerify": {
+    "Runtime": "Node22.23.2",
+    "Command": "npm run verify",
+    "ExitCode": 0,
+    "WorkspaceTestsPassed": 231,
+    "AdapterTestsPassed": 134,
+    "TransportTests": 49,
+    "LiveTestsSkipped": 1,
+    "LiveOptInForcedOff": true,
+    "LastWorkspaceTestStartLocal": "2026-10-11T20:04:34+03:00"
+  },
+  "Audit": {
+    "Command": "npm audit --audit-level=critical",
+    "ExitCode": 0,
+    "ModerateEntries": 2,
+    "SeverityChanged": false,
+    "DependenciesChanged": false
+  },
+  "CiRun": "https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/38158174952",
+  "CiState": "COMPLETED_SUCCESS",
+  "CiHead": "84eadfddfd064ada961e36675ceffe24e33f2f3a",
+  "CiJobs": {
+    "Ubuntu": {
+      "Build": "SUCCESS",
+      "Typecheck": "SUCCESS",
+      "Tests": "SUCCESS",
+      "OriginalCriticalAudit": "SUCCESS",
+      "CompletedAt": "2026-10-11T17:06:16Z"
+    },
+    "Windows": {
+      "Build": "SUCCESS",
+      "Typecheck": "SUCCESS",
+      "Tests": "SUCCESS",
+      "OriginalCriticalAudit": "SKIPPED_BY_UNCHANGED_WORKFLOW",
+      "CompletedAt": "2026-10-11T17:07:27Z"
+    }
+  },
+  "AutoMergeRequest": null,
+  "StrictTlsUnchanged": true,
+  "DirectPortAndCanonicalAndImportProductionUnchanged": true,
+  "RealSqlConnection": false,
+  "HostMaintenance": false,
+  "Merged": false,
+  "FirstLiveData": "NOT_TESTED",
+  "Stop": "AFTER_FIX_VERIFICATION_AND_PUBLICATION_BEFORE_MERGE_OR_HOST_ACTIONS"
+}

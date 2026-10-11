@@ -2,11 +2,13 @@
 
 هذا المجلد هو الذاكرة المرجعية لمبادرة **Local-First Legacy ERP Intelligence Layer** داخل DBL.
 
-آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #11 مدموج؛ main=8c22f7b؛ PR #12 direct-port عند3f7fb6d مفتوح دون Merge**
+آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #11 مدموج؛ main=8c22f7b؛ PR #12 P2 عند84eadfd مفتوح دون Merge**
 
 آخر تحديث بحثي/مخبري: **2026-10-11**
 
 ## الحالة
+
+**2026-10-11 — PR #12 P2: تعطيل Tedious transient-login retry في Direct TCP فقط.** [التصحيح والأدلة وحدود عدم التكرار](MOTAKAMEL_PR12_P2_TRANSIENT_RETRY_FIX_2026-10-11.md): `options.maxRetriesOnTransientErrors=0` يصل إلى Tedious الفعلي؛ المسار القديم دون تغيير وبافتراضي3. اختبارات المعالج الحقيقي وpool حقيقي بموارد وهمية وImportOrchestrator الافتراضي نجحت، مع231 اختبارًا وBuild/Typecheck وaudit الأصلي، وLinux/Windows CI ناجحتين على الرأس الجديد. لا ضمان socket واحد: DNS/استبدال resource/routing قد تولّد اتصالات إضافية دون إثبات replay لـItem SELECT/import. لم تتغير TLS أو Canonical أو الإنتاج في مسارImport. الرأس84eadfd منشور على نفسPR، دونMerge أو صيانة/SQLحي؛ FIRST LIVE DATA NOT TESTED. `.vscode` خارجcommit، STOP بعدالتوثيق.
 
 **2026-10-11 — DIRECT-PORT TRANSPORT ONLY: تعديل النقل والاختبارات وإجراء الصيانة، دون إجراء على YSEDU.** [الدليل وحدود الاختبارات وتعديل الإجراء](MOTAKAMEL_DIRECT_PORT_TRANSPORT_2026-10-11.md): إعداد `directTcp` يقبل منفذًا صريحًا صحيحًا وCA العامة المثبتة فقط، ويحذف `instanceName` في هذا الوضع، مع TLS صارم والتحقق من `DESKTOP-8QRQT7R` ونفس frozen DB/reader وImport→SQLite→SnapshotReader. Browser يبقى Stopped/Disabled؛ عدم توفر discovery لم يعد سببًا للتراجع عند استخدام المنفذ الصريح. لا تخمين1433 ولا SQL fixed-port؛ يُلتقط المنفذ والـPID والعنوان بعد تفعيل منفصل. اختبارات mock/config فقط، FIRST LIVE DATA NOT TESTED؛ لا service/network/certificate/ACL/SQL changes. بوابات التحميل الفعلي وTLS وcredential ما زالت منفصلة. `.vscode` خارجcommit؛ STOP قبلالصيانة. شرط Browser أدناه تاريخي بالنسبة للمسار المباشر فقط.
 
