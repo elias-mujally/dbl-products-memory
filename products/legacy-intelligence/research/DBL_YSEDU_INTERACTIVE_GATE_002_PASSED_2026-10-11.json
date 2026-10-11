@@ -1,0 +1,83 @@
+{
+  "Task": "YSEDU_INTERACTIVE_GATE_002_CORRECTION_AND_ACTUAL_PROBE",
+  "Decision": "INTERACTIVE_GATE_002_PASSED_WITHIN_NON_SECRET_SCOPE",
+  "ActualOperatorResult": {
+    "Decision": "INTERACTIVE_GATE_002_PASSED",
+    "ObservedAt": "2026-10-11T17:08:49.9419623+03:00",
+    "Phase": "InteractiveSafety",
+    "LastCheck": "PublicPromptTokenConfirmed",
+    "Readiness": {
+      "InputRedirected": false,
+      "OutputRedirected": false,
+      "PolicyReads": [
+        {
+          "Scope": "HKLM",
+          "Present": false,
+          "ReadSucceeded": true,
+          "Enabled": false
+        },
+        {
+          "Scope": "HKCU",
+          "Present": false,
+          "ReadSucceeded": true,
+          "Enabled": false
+        }
+      ],
+      "PromptProbe": "CONFIRMED",
+      "Passed": true
+    },
+    "PasswordRequested": false,
+    "CAUnlocked": false,
+    "SigningAttempted": false,
+    "SqlChanged": false,
+    "NoAutomaticSigning": true
+  },
+  "LocalResultMatched": true,
+  "LocalResultSHA256": "9DF90CAD43936FEC0AE9CC4F2BDB5E44D7A5F50D066215544C5235AA136652F3",
+  "LocalAttemptSHA256": "580FD9F53F0ECD95CB817FC1B5D5114DD9CC948276BA956B30EEA0F310E35A90",
+  "Correction": {
+    "SharedMutableState": "ExistingKeyDiagnostics002.ps1 pattern reused; no script:check/local-check split",
+    "InteractiveChecks": "Exact code set before console getters, policy reads, public prompt, custody and hidden input",
+    "SafetyGuardsUnchanged": true,
+    "OriginalHelperAndSourcesPreserved": true,
+    "SigningCoreUnchanged": true,
+    "FutureSigningHelperExecuted": false,
+    "FutureSigningHelperDefault": "Explicit SigningAuthorized switch required outside PublicOnly; no current signing authorization inferred"
+  },
+  "Tests": {
+    "At": "2026-10-11T17:06:00.3873499+03:00",
+    "MockedCases": 11,
+    "Passed": true,
+    "ActualRegistryOrPromptRead": false,
+    "SupplementalActualHelperAssertScope": {
+      "At": "2026-10-11T17:10:22+03:00",
+      "Passed": true,
+      "SourceFunctionExtractedViaAST": true,
+      "SigningHelperBodyExecuted": false
+    },
+    "CheckOnlyViaSameScriptBlockInvocation": true,
+    "LauncherCheckOnlyPassed": true
+  },
+  "SourcePins": {
+    "SharedSafety": "88F858C7B854592A5201F06321BEDBA300CB2A3FA5824BD9E23DEFCD23D62D48",
+    "DiagnosticHelper": "2829D7160CCBBBE086F696ABE939FD2DD332AFA211654970FCD731BEC6A09F33",
+    "DiagnosticLauncher": "0B729F70E3ACA53ECC032C9DA8C930EC56304CC2084E2A77B46F3F8D72E39AA6",
+    "MockTests": "5CE6BE02454F0CED6E8B110DDBEAF945197F2981258AC475F466F81C8D84DC0D",
+    "CorrectedFutureSigningHelper": "C044B259C80FAAC283594666813DC427AC5BCD935627FEDE84055FAD740F5AE7",
+    "OriginalSigningHelper": "8C1A2C960F6D93DEDE95841E6508D97BA929904B320C416B32C97E2C4A325484",
+    "UnchangedSigningCore": "2C024FBAC7312934CC9A10F0107E0E36FEBFD7D69B9E768E31F567E0D4A46139"
+  },
+  "FreshServices": {
+    "YSEDU": "Running",
+    "SQLBrowser": "Stopped"
+  },
+  "Limits": [
+    "Current non-secret console/policy/prompt readiness only",
+    "Hidden password entry and CA import/signing NOT TESTED",
+    "Original 07:35 interactive rejecting condition remains UNRESOLVED; cannot infer it from a later positive probe",
+    "Absent two transcription-policy keys is not proof no manual transcript/other recording exists",
+    "No CA/PFX/certificate-store/SQL/network access from diagnostic helper"
+  ],
+  "FirstLiveData": "NOT_TESTED",
+  "Stop": "Do not replay consumed diagnostic or use old signing helper; review actual result before any separately authorized corrected signing attempt."
+}
