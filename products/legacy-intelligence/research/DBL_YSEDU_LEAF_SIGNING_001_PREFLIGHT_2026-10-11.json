@@ -1,0 +1,77 @@
+{
+  "Task": "EXISTING_YSEDU_CSR_LEAF_SIGNING_001_PREPARATION",
+  "Decision": "OWNER_AUTHORIZED_PUBLIC_PREFLIGHT_PASSED_INTERACTIVE_SIGNING_PENDING",
+  "Host": "DESKTOP-8QRQT7R",
+  "PublicGuardTests": {
+    "ObservedAt": "2026-10-11T07:24:31.8873290+03:00",
+    "Checks": 18,
+    "Passed": true,
+    "Scope": "Existing public artifacts and rejection guards only; no test keys created, CA unlock or leaf issued"
+  },
+  "PreparationCorrection": {
+    "InitialObservedAt": "2026-10-11T07:24:32.1614382+03:00",
+    "InitialCheck": "NoReparseAncestors",
+    "ExceptionType": "System.Management.Automation.PropertyNotFoundException",
+    "AttemptConsumed": false,
+    "CAUnlocked": false,
+    "SigningAttempted": false,
+    "Cause": "Parent DirectoryInfo objects do not carry provider-added PSIsContainer in strict mode",
+    "Correction": "Use native DirectoryInfo type to traverse ancestors; reparse rejection remains required"
+  },
+  "PublicPreflight": {
+    "ObservedAt": "2026-10-11T07:24:57.8097583+03:00",
+    "Passed": true,
+    "ExistingCSRAnd003EvidencePinned": true,
+    "ExactExistingCAPublicProfile": true,
+    "PendingCertificatePublicKeyMatchesCSR": true,
+    "LeafValidityDays": 180,
+    "ApprovedExtensionCount": 4,
+    "CAUnlocked": false,
+    "ServerPrivateKeyOpened": false,
+    "NativeKeyCreation": false,
+    "CertificateIssued": false,
+    "CertificateAccepted": false,
+    "SQLStopped": false,
+    "NetworkChanged": false,
+    "ResultWritten": false,
+    "CleanupFailures": []
+  },
+  "LauncherCheckOnly": {
+    "Passed": true,
+    "ChildLaunched": false,
+    "CAUnlocked": false
+  },
+  "Hashes": {
+    "NativeSource": "2C024FBAC7312934CC9A10F0107E0E36FEBFD7D69B9E768E31F567E0D4A46139",
+    "Helper": "8C1A2C960F6D93DEDE95841E6508D97BA929904B320C416B32C97E2C4A325484",
+    "Tests": "73E915846E0942BBB4B817DC51CB661A42A935CC0DC5DA6E0BD4ACDFFD4BDE1F",
+    "Launcher": "EE99D83FA9334F48339A066574CBDA831490BE8EC5CED60534CFCA9A164682B1",
+    "ExistingCSR": "61B48D26A1AFB37B27ACF0EFDFAA1D90A29B9A39B2F012E0DA7367046E19B889",
+    "CAPublicCertificate": "A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472",
+    "CAPublicPEM": "5CFE59F6CD9A090A62FC03ACECA6C1A2A2F8DB47569019890D59D7EA9C826D4F",
+    "EncryptedCAPFX": "7C8FD60E8997AEDDA3C445E900BD5C1F685D9929ABC89BF9E20818354A862E32"
+  },
+  "ExpectedNewPublicArtifacts": [
+    "YSEDU_LEAF_SIGNING_001_ATTEMPT.json",
+    "YSEDU_LEAF_SIGNING_001_RESULT.json",
+    "YSEDU-Leaf-Signed-001.cer",
+    "YSEDU-Leaf-Signed-001.pem"
+  ],
+  "PrivateMaterialDestination": "None new; existing encrypted CA PFX read and imported EphemeralKeySet only; owner password hidden console",
+  "ActualSigning": "PENDING OWNER INTERACTIVE RESULT",
+  "ActualLeafChain": "NOT TESTED",
+  "ChainQualificationScope": "Exact pinned custom root, time/purpose/signature/profile, downloads disabled, NoFlag. Offline revocation NoCheck documented; CRL/OCSP and live TLS NOT TESTED. No Windows trust installation.",
+  "SQL2014Loading": "NOT TESTED",
+  "FirstLiveData": "NOT TESTED",
+  "Archive": "PAUSED",
+  "S3": "ACCOUNTING-BLOCKED",
+  "Prohibited": [
+    "Key creation/replacement/export/deletion",
+    "Server private-key re-acquisition",
+    "CA reissue or persistent private-key store",
+    "Leaf acceptance/binding",
+    "ACL/trust/network changes",
+    "SQL interruption or SQL connection"
+  ],
+  "Stop": "Any signing/profile/chain/import/cleanup/artifact failure: preserve consumed attempt; no automatic retry. On success prepare bounded certificate/network procedure, not execute it in this signing step."
+}
