@@ -1,0 +1,478 @@
+{
+  "Decision": "READONLY_WINDOWS_CHAIN_DIAGNOSIS_COMPLETED",
+  "ObservedAt": "2026-10-11T21:01:32.4269902+03:00",
+  "Host": "DESKTOP-8QRQT7R",
+  "Operator": "DESKTOP-8QRQT7R\\user",
+  "Elevated": false,
+  "PublicPins": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\outputs\\host-first-live-data-001-20261010\\YSEDU-Leaf-Signed-001.cer": "522C79FD31F0422D3988FB00CC4EF0A51B4042DEED72A435A6519237AC548DFE",
+    "E:\\DBL-Lab-CA-YSEDU-001\\ca-public.cer": "A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472"
+  },
+  "Leaf": {
+    "Subject": "CN=DESKTOP-8QRQT7R",
+    "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+    "Thumbprint": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+    "Serial": "3DB285A6755A7F0A4F2B88EBD8DDAC6A",
+    "NotBeforeUtc": "2026-10-11T14:28:03.0000000Z",
+    "NotAfterUtc": "2027-04-09T14:28:03.0000000Z",
+    "ValidNow": true,
+    "RSAKeyBits": 2048,
+    "SignatureOid": "1.2.840.113549.1.1.11",
+    "HasPrivateKey": false,
+    "Extensions": [
+      {
+        "OID": "2.5.29.15",
+        "Critical": true,
+        "RawHex": "030205A0",
+        "Description": "Digital Signature, Key Encipherment (a0)"
+      },
+      {
+        "OID": "2.5.29.17",
+        "Critical": false,
+        "RawHex": "3011820F4445534B544F502D38515251543752",
+        "Description": "DNS Name=DESKTOP-8QRQT7R"
+      },
+      {
+        "OID": "2.5.29.19",
+        "Critical": true,
+        "RawHex": "3000",
+        "Description": "نوع الموضوع=إنهاء الوحدة، قيد طول المسار=بلا"
+      },
+      {
+        "OID": "2.5.29.37",
+        "Critical": false,
+        "RawHex": "300A06082B06010505070301",
+        "Description": "مصادقة الخادم (1.3.6.1.5.5.7.3.1)"
+      }
+    ],
+    "SKIPresent": false,
+    "AKIPresent": false
+  },
+  "CA": {
+    "Subject": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+    "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+    "Thumbprint": "121CDC9857488ED95F4BC62106D7672BB0DBC6C3",
+    "Serial": "430E69AD63B20F88",
+    "NotBeforeUtc": "2026-10-10T18:27:21.0000000Z",
+    "NotAfterUtc": "2028-10-10T18:32:21.0000000Z",
+    "ValidNow": true,
+    "RSAKeyBits": 3072,
+    "SignatureOid": "1.2.840.113549.1.1.11",
+    "HasPrivateKey": false,
+    "Extensions": [
+      {
+        "OID": "2.5.29.19",
+        "Critical": true,
+        "RawHex": "30060101FF020100",
+        "Description": "نوع الموضوع=مرجع مصدق، قيد طول المسار=0"
+      },
+      {
+        "OID": "2.5.29.15",
+        "Critical": true,
+        "RawHex": "03020106",
+        "Description": "Certificate Signing, Off-line CRL Signing, CRL Signing (06)"
+      },
+      {
+        "OID": "2.5.29.14",
+        "Critical": false,
+        "RawHex": "04144C845EF2946D4B594E4F0FE15A2DCC5C6B2E0EC2",
+        "Description": "4c845ef2946d4b594e4f0fe15a2dcc5c6b2e0ec2"
+      }
+    ],
+    "SKIPresent": true,
+    "AKIPresent": false
+  },
+  "LeafSignature": {
+    "Verified": true,
+    "Algorithm": "1.2.840.113549.1.1.11",
+    "IssuerSubjectRawEqual": true
+  },
+  "CaSelfSignature": {
+    "Verified": true,
+    "Algorithm": "1.2.840.113549.1.1.11",
+    "IssuerSubjectRawEqual": true
+  },
+  "StoresBefore": [
+    {
+      "Location": "CurrentUser",
+      "Store": "Root",
+      "ReadSucceeded": true,
+      "CertificateCount": 49,
+      "Fingerprint": "D3FD496E2DE299782B5C5346FC8269C71669075C1F31D85D2FAB20DED7EC6ED9",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": [
+        {
+          "Thumbprint": "FCEB8D98C83523546C5C8B4509A277C14C585875",
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DESKTOP-8QRQT7R"
+        }
+      ]
+    },
+    {
+      "Location": "CurrentUser",
+      "Store": "CA",
+      "ReadSucceeded": true,
+      "CertificateCount": 11,
+      "Fingerprint": "6C8183EFE15349B71078ABDBCF3C9273C059CC629700B7C18EE72243EDF10575",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    },
+    {
+      "Location": "CurrentUser",
+      "Store": "My",
+      "ReadSucceeded": true,
+      "CertificateCount": 4,
+      "Fingerprint": "A74CC956D4E8B7A26D3D563CFF2652E2247E8CF1DFA3712199656A6FA15C0E5E",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "Root",
+      "ReadSucceeded": true,
+      "CertificateCount": 49,
+      "Fingerprint": "D3FD496E2DE299782B5C5346FC8269C71669075C1F31D85D2FAB20DED7EC6ED9",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": [
+        {
+          "Thumbprint": "FCEB8D98C83523546C5C8B4509A277C14C585875",
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DESKTOP-8QRQT7R"
+        }
+      ]
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "CA",
+      "ReadSucceeded": true,
+      "CertificateCount": 5,
+      "Fingerprint": "46DC22D9216AA3A7CD322ABD1C535FFBF1266DE432F06B5304EB3A4E481F1F73",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "My",
+      "ReadSucceeded": true,
+      "CertificateCount": 0,
+      "Fingerprint": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    }
+  ],
+  "StoresAfter": [
+    {
+      "Location": "CurrentUser",
+      "Store": "Root",
+      "ReadSucceeded": true,
+      "CertificateCount": 49,
+      "Fingerprint": "D3FD496E2DE299782B5C5346FC8269C71669075C1F31D85D2FAB20DED7EC6ED9",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": [
+        {
+          "Thumbprint": "FCEB8D98C83523546C5C8B4509A277C14C585875",
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DESKTOP-8QRQT7R"
+        }
+      ]
+    },
+    {
+      "Location": "CurrentUser",
+      "Store": "CA",
+      "ReadSucceeded": true,
+      "CertificateCount": 11,
+      "Fingerprint": "6C8183EFE15349B71078ABDBCF3C9273C059CC629700B7C18EE72243EDF10575",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    },
+    {
+      "Location": "CurrentUser",
+      "Store": "My",
+      "ReadSucceeded": true,
+      "CertificateCount": 4,
+      "Fingerprint": "A74CC956D4E8B7A26D3D563CFF2652E2247E8CF1DFA3712199656A6FA15C0E5E",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "Root",
+      "ReadSucceeded": true,
+      "CertificateCount": 49,
+      "Fingerprint": "D3FD496E2DE299782B5C5346FC8269C71669075C1F31D85D2FAB20DED7EC6ED9",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": [
+        {
+          "Thumbprint": "FCEB8D98C83523546C5C8B4509A277C14C585875",
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DESKTOP-8QRQT7R"
+        }
+      ]
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "CA",
+      "ReadSucceeded": true,
+      "CertificateCount": 5,
+      "Fingerprint": "46DC22D9216AA3A7CD322ABD1C535FFBF1266DE432F06B5304EB3A4E481F1F73",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    },
+    {
+      "Location": "LocalMachine",
+      "Store": "My",
+      "ReadSucceeded": true,
+      "CertificateCount": 0,
+      "Fingerprint": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "ExactCaCount": 0,
+      "ExactLeafCount": 0,
+      "Related": []
+    }
+  ],
+  "SixStoreInventoriesUnchanged": true,
+  "NativeChains": [
+    {
+      "Engine": "HCCE_CURRENT_USER",
+      "AdditionalPublicIssuer": false,
+      "AdditionalStoreIsTrustAnchor": false,
+      "Flags": "0x00002104",
+      "UrlDownloads": false,
+      "RootAutoUpdate": false,
+      "RevocationRequested": false,
+      "ErrorStatus": "0x00010000",
+      "InfoStatus": "0x00000000",
+      "Elements": [
+        {
+          "Chain": 0,
+          "Element": 0,
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Thumbprint": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+          "ErrorStatus": "0x00000000",
+          "InfoStatus": "0x00000004"
+        }
+      ],
+      "BasePolicy": {
+        "Error": "0x800B010A",
+        "ChainIndex": 0,
+        "ElementIndex": -1,
+        "IgnoreFlags": 0,
+        "Hostname": null
+      },
+      "SslPolicy": {
+        "Error": "0x800B0109",
+        "ChainIndex": 0,
+        "ElementIndex": -1,
+        "IgnoreFlags": 0,
+        "Hostname": "DESKTOP-8QRQT7R"
+      }
+    },
+    {
+      "Engine": "HCCE_CURRENT_USER",
+      "AdditionalPublicIssuer": true,
+      "AdditionalStoreIsTrustAnchor": false,
+      "Flags": "0x00002104",
+      "UrlDownloads": false,
+      "RootAutoUpdate": false,
+      "RevocationRequested": false,
+      "ErrorStatus": "0x00000020",
+      "InfoStatus": "0x00000100",
+      "Elements": [
+        {
+          "Chain": 0,
+          "Element": 0,
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Thumbprint": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+          "ErrorStatus": "0x00000000",
+          "InfoStatus": "0x00000104"
+        },
+        {
+          "Chain": 0,
+          "Element": 1,
+          "Subject": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Thumbprint": "121CDC9857488ED95F4BC62106D7672BB0DBC6C3",
+          "ErrorStatus": "0x00000020",
+          "InfoStatus": "0x0000010C"
+        }
+      ],
+      "BasePolicy": {
+        "Error": "0x800B0109",
+        "ChainIndex": 0,
+        "ElementIndex": 1,
+        "IgnoreFlags": 0,
+        "Hostname": null
+      },
+      "SslPolicy": {
+        "Error": "0x800B0109",
+        "ChainIndex": 0,
+        "ElementIndex": 1,
+        "IgnoreFlags": 0,
+        "Hostname": "DESKTOP-8QRQT7R"
+      }
+    },
+    {
+      "Engine": "HCCE_LOCAL_MACHINE",
+      "AdditionalPublicIssuer": false,
+      "AdditionalStoreIsTrustAnchor": false,
+      "Flags": "0x00002104",
+      "UrlDownloads": false,
+      "RootAutoUpdate": false,
+      "RevocationRequested": false,
+      "ErrorStatus": "0x00010000",
+      "InfoStatus": "0x00000000",
+      "Elements": [
+        {
+          "Chain": 0,
+          "Element": 0,
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Thumbprint": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+          "ErrorStatus": "0x00000000",
+          "InfoStatus": "0x00000004"
+        }
+      ],
+      "BasePolicy": {
+        "Error": "0x800B010A",
+        "ChainIndex": 0,
+        "ElementIndex": -1,
+        "IgnoreFlags": 0,
+        "Hostname": null
+      },
+      "SslPolicy": {
+        "Error": "0x800B0109",
+        "ChainIndex": 0,
+        "ElementIndex": -1,
+        "IgnoreFlags": 0,
+        "Hostname": "DESKTOP-8QRQT7R"
+      }
+    },
+    {
+      "Engine": "HCCE_LOCAL_MACHINE",
+      "AdditionalPublicIssuer": true,
+      "AdditionalStoreIsTrustAnchor": false,
+      "Flags": "0x00002104",
+      "UrlDownloads": false,
+      "RootAutoUpdate": false,
+      "RevocationRequested": false,
+      "ErrorStatus": "0x00000020",
+      "InfoStatus": "0x00000100",
+      "Elements": [
+        {
+          "Chain": 0,
+          "Element": 0,
+          "Subject": "CN=DESKTOP-8QRQT7R",
+          "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Thumbprint": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+          "ErrorStatus": "0x00000000",
+          "InfoStatus": "0x00000104"
+        },
+        {
+          "Chain": 0,
+          "Element": 1,
+          "Subject": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+          "Thumbprint": "121CDC9857488ED95F4BC62106D7672BB0DBC6C3",
+          "ErrorStatus": "0x00000020",
+          "InfoStatus": "0x0000010C"
+        }
+      ],
+      "BasePolicy": {
+        "Error": "0x800B0109",
+        "ChainIndex": 0,
+        "ElementIndex": 1,
+        "IgnoreFlags": 0,
+        "Hostname": null
+      },
+      "SslPolicy": {
+        "Error": "0x800B0109",
+        "ChainIndex": 0,
+        "ElementIndex": 1,
+        "IgnoreFlags": 0,
+        "Hostname": "DESKTOP-8QRQT7R"
+      }
+    }
+  ],
+  "CacheOnlyRevocation": {
+    "Engine": "HCCE_LOCAL_MACHINE",
+    "AdditionalPublicIssuer": true,
+    "AdditionalStoreIsTrustAnchor": false,
+    "Flags": "0xC0002104",
+    "UrlDownloads": false,
+    "RootAutoUpdate": false,
+    "RevocationRequested": true,
+    "ErrorStatus": "0x01000060",
+    "InfoStatus": "0x00000100",
+    "Elements": [
+      {
+        "Chain": 0,
+        "Element": 0,
+        "Subject": "CN=DESKTOP-8QRQT7R",
+        "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+        "Thumbprint": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+        "ErrorStatus": "0x01000040",
+        "InfoStatus": "0x00000104"
+      },
+      {
+        "Chain": 0,
+        "Element": 1,
+        "Subject": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+        "Issuer": "CN=DBL Laboratory YSEDU CA 001 - 20261010",
+        "Thumbprint": "121CDC9857488ED95F4BC62106D7672BB0DBC6C3",
+        "ErrorStatus": "0x00000020",
+        "InfoStatus": "0x0000010C"
+      }
+    ],
+    "BasePolicy": {
+      "Error": "0x800B0109",
+      "ChainIndex": 0,
+      "ElementIndex": 1,
+      "IgnoreFlags": 0,
+      "Hostname": null
+    },
+    "SslPolicy": {
+      "Error": "0x800B0109",
+      "ChainIndex": 0,
+      "ElementIndex": 1,
+      "IgnoreFlags": 0,
+      "Hostname": "DESKTOP-8QRQT7R"
+    }
+  },
+  "Services": [
+    {
+      "Name": "MSSQL$YSEDU",
+      "State": "Running",
+      "StartMode": "Auto",
+      "ProcessId": 82368,
+      "StartName": "LocalSystem"
+    },
+    {
+      "Name": "SQLBrowser",
+      "State": "Stopped",
+      "StartMode": "Disabled",
+      "ProcessId": 0,
+      "StartName": "NT AUTHORITY\\LOCALSERVICE"
+    }
+  ],
+  "CertreqInvoked": false,
+  "CertificatesAddedOrRemoved": false,
+  "PrivateKeyOpened": false,
+  "PfxOpened": false,
+  "TrustChanged": false,
+  "ServiceChanged": false,
+  "SQLConnection": false,
+  "FirstLiveData": "NOT_TESTED",
+  "ContextLimit": "Observed owner token and native machine engine; not LocalSystem impersonation or certreq internal-engine tracing"
+}
