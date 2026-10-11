@@ -1,0 +1,77 @@
+{
+  "Task": "EXISTING_KEY_002_OPERATOR_STOP",
+  "Decision": "KEY_QUALIFICATION_BLOCKED_AT_MANAGED_TYPE",
+  "OperatorResult": {
+    "Decision": "EXISTING_KEY_002_BLOCKED_STOP",
+    "ObservedAt": "2026-10-11T06:49:20.0875989+03:00",
+    "Phase": "ExistingPendingKey",
+    "FailedCheck": "LegacyCspRequired",
+    "ExceptionType": "System.Management.Automation.RuntimeException",
+    "AttemptConsumed": true,
+    "DiagnosticState": {
+      "Phase": "ExistingPendingKey",
+      "Check": "LegacyCspRequired",
+      "OpenAttempted": true,
+      "KeyReturnedNonNull": true,
+      "ManagedKeyType": "RSACng",
+      "ProviderType": null,
+      "ProviderName": null,
+      "KeySpec": null,
+      "MachineKeySet": null,
+      "Exportable": null,
+      "RSAKeyBits": null,
+      "ChallengePassed": false,
+      "CleanupFailures": []
+    },
+    "NativeKeyCreation": false,
+    "CAUnlocked": false,
+    "SqlStopped": false,
+    "OriginalArtifactsChanged": false,
+    "NoAutomaticRetry": true,
+    "Reason": "Safe check codes only; preserve original evidence and existing key; STOP before signing or maintenance",
+    "CleanupFailures": []
+  },
+  "LocalResultVerified": true,
+  "LocalResultSHA256": "E9CED7F9BBBFEAA55CAB4FDBCD4AB89B27D13E12423604C45D9E399A852ED3C2",
+  "DiagnosticAttemptSHA256": "FB51CA15E4C76DA293122087B437C6DD817D9C5D4B2969E9E9BE358718028F2C",
+  "OriginalArtifactsVerifiedUnchanged": {
+    "NativeAttempt": "471BC62AA9572EB4F55D756CF2B95F4C0FA41F5AF4059418314BBC5716160BAE",
+    "NativeStopResult": "770F09AA9B3844482081AA4879CEDCB73BFF0D112FE725FF52100E217ACFE4F0",
+    "PublicCSR": "61B48D26A1AFB37B27ACF0EFDFAA1D90A29B9A39B2F012E0DA7367046E19B889"
+  },
+  "FreshServiceObservation": {
+    "YSEDU": "Running",
+    "SQLBrowser": "Stopped"
+  },
+  "Confirmed": [
+    "GetRSAPrivateKey returned a non-null managed RSACng object",
+    "Exact failure LegacyCspRequired; diagnostic marker consumed",
+    "No reported disposal failure",
+    "Provider/key properties, challenge and key DACL were not reached"
+  ],
+  "NotProven": [
+    "Actual provider properties in this invocation",
+    "Nonexportability, machine flag, KeySpec and RSA size in this invocation",
+    "Private-key SHA256 challenge",
+    "Effective SYSTEM access or SQL2014 certificate loading",
+    "Five store fingerprints after opening (final stage not reached)"
+  ],
+  "PriorIndependentAssociationEvidence": {
+    "ObservedAt": "2026-10-11T05:31:11.5812734+03:00",
+    "ProviderType": 24,
+    "KeySpec": 1,
+    "MachineFlag": 32,
+    "Scope": "Stored certificate association only; not repeated and not proof of current native key policy"
+  },
+  "Interpretation": "Managed wrapper rejection is confirmed. Do not infer key conversion/provider replacement, corrupt key or ACL fault from it. The relation to prior CSP association remains unqualified.",
+  "NextProposedOnly": "Seek owner approval for one explicit existing-key CryptoAPI-only qualification, no CNG fallback, no healing, no key creation/import/export/delete or store/ACL/SQL change; verify actual CSP24/KeySpec1/machine/nonexportability/public identity and challenge; STOP on mismatch.",
+  "Sources": {
+    "WindowsAPI": "https://learn.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptacquirecertificateprivatekey",
+    "DotNetTaggedSource": "https://raw.githubusercontent.com/dotnet/runtime/v10.0.11/src/libraries/System.Security.Cryptography/src/System/Security/Cryptography/X509Certificates/CertificatePal.Windows.PrivateKey.cs"
+  },
+  "SourceLimit": "Tagged source supports separate managed factories, not a measured trace of this installed runtime/key. Native acquisition proposal is not implemented or tested.",
+  "CAUnlocked": false,
+  "SqlStopped": false,
+  "AutomaticRetry": false,
+  "FirstLiveData": "NOT_TESTED"
+}
