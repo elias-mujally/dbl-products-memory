@@ -1,0 +1,69 @@
+{
+  "Task": "YSEDU_EXISTING_CSR_LEAF_SIGNING_001_OPERATOR_STOP_REVIEW",
+  "Decision": "BLOCKED_BEFORE_CA_IMPORT_OR_SIGNING",
+  "OperatorResult": {
+    "Decision": "YSEDU_LEAF_SIGNING_BLOCKED_STOP",
+    "ObservedAt": "2026-10-11T07:35:14.8260684+03:00",
+    "Phase": "InteractiveSafety",
+    "FailedCheck": "FiveStoresReadOnly",
+    "SafeNativeCode": null,
+    "ExceptionType": "System.Management.Automation.RuntimeException",
+    "AttemptConsumed": false,
+    "CAUnlocked": false,
+    "SigningAttempted": false,
+    "PublicLeafQualified": false,
+    "NativeKeyCreation": false,
+    "CertificateAccepted": false,
+    "SqlStopped": false,
+    "NetworkChanged": false,
+    "NoAutomaticRetry": true,
+    "Reason": "Bounded signing gate failed; preserve artifacts. No raw exception, password or private material publication.",
+    "CleanupFailures": []
+  },
+  "LocalReview": {
+    "OperatorResultSource": "Owner-supplied JSON; local signing result intentionally absent for failure before consumed marker",
+    "NoHelperRetry": true,
+    "NoExecutableSourceEdited": true,
+    "NoCAUnlockedOrSQLChange": true,
+    "MissingArtifacts": [
+      "YSEDU_LEAF_SIGNING_001_ATTEMPT.json",
+      "YSEDU_LEAF_SIGNING_001_RESULT.json",
+      "YSEDU-Leaf-Signed-001.cer",
+      "YSEDU-Leaf-Signed-001.pem"
+    ],
+    "ServiceObservedAt": "2026-10-11T07:36:15+03:00",
+    "YSEDU": "Running",
+    "SQLBrowser": "Stopped",
+    "UnchangedHashes": {
+      "Helper": "8C1A2C960F6D93DEDE95841E6508D97BA929904B320C416B32C97E2C4A325484",
+      "Launcher": "EE99D83FA9334F48339A066574CBDA831490BE8EC5CED60534CFCA9A164682B1",
+      "SigningSource": "2C024FBAC7312934CC9A10F0107E0E36FEBFD7D69B9E768E31F567E0D4A46139",
+      "ExistingCSR": "61B48D26A1AFB37B27ACF0EFDFAA1D90A29B9A39B2F012E0DA7367046E19B889",
+      "Key003Result": "94B673461344785C58B1D96E366E5666B0D09D9C34DB6E6FF640EBBE8241D4DB",
+      "CAPublic": "A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472",
+      "EncryptedCAPFX": "7C8FD60E8997AEDDA3C445E900BD5C1F685D9929ABC89BF9E20818354A862E32"
+    },
+    "ConfirmedDiagnosticDefect": "Assert-Sign sets script:check while launcher invokes helper in a child ScriptBlock with a local check; catch reads stale local FiveStoresReadOnly.",
+    "PureScopeProbe": {
+      "Phase": "InteractiveSafety",
+      "ReportedCheck": "FiveStoresReadOnly",
+      "ScriptCheck": "InteractiveConsoleRequired",
+      "NoHostMutation": true
+    },
+    "ScopeProbeMeaning": "Confirms reporter defect only, not which interactive-safety condition failed in the owner's execution.",
+    "ActualInteractiveFailingCondition": "UNRESOLVED: console redirection guard, transcription-policy read/assertion, owner custody confirmation, hidden read or password-length assertion cannot be distinguished by supplied result",
+    "CannotConclude": [
+      "Certificate-store read failure",
+      "Wrong CA password or PFX failure",
+      "CA/key corruption",
+      "TLS failure",
+      "SQL shutdown"
+    ],
+    "EvidenceLimits": "PublicOnly deliberately skips interactive safety; 18 public guards do not qualify actual owner console. No final store comparison from a signed-leaf execution.",
+    "NextStep": "Owner approval for narrow diagnostic-state correction and explicit non-sensitive interactive-check codes, retaining all safety guards; qualify in no-secret tests before any fresh authorized signing handoff. Do not retry current helper.",
+    "FirstLiveData": "NOT_TESTED",
+    "PreviousKey003": "QUALIFIED unchanged",
+    "Archive": "PAUSED",
+    "S3": "ACCOUNTING-BLOCKED"
+  }
+}
