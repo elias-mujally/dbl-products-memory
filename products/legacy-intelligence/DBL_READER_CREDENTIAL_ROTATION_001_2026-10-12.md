@@ -97,3 +97,9 @@ Owner declined further attempts of the same clearing/clipboard workflow. The new
 ## Separately authorized public-fixture implementation
 
 Owner authorized the [independent synthetic-only implementation](DBL_READER_CLIPBOARD_FREE_SYNTHETIC_001_2026-10-12.md). Final source passed41 automated checks and a blank owner-context window passed actual display-affinity/session-registration API qualification. Public Bitwarden manual flow is pending in owner console PID90312; no final synthetic success is inferred from launch. No clipboard APIs, SQL connection, actual credential generation, real-helper repinning or real rotation. FIRST LIVE DATA remains NOT TESTED. Preserve artifacts and await owner interaction; no automatic retry or expansion to real credentials.
+
+## Final synthetic handoff verified; real rotation still stopped
+
+After the preserved initial RetrievalMismatch and explicitly owner-requested reopening, final local result at `2026-10-12T14:34:47.4182594+03:00` matches the owner's returned JSON: **SYNTHETIC HANDOFF = PASSED**. Result SHA256 `4F4838C0B1197D47DD20F312D03F423CE972ACC637BA976A613595702EE50D6D`; source identity and all41 automated-check references were verified. Actual display-affinity/session qualification, owner Bitwarden save/close/reopen attestation, exact in-memory retrieval match and cleanup passed. Scope/limits and untested screenshot/real-session/real-duration/vault-recovery behavior are documented in the linked implementation report. No new test or console was run in this final verification.
+
+This is public-fixture evidence only. Reader password NOT GENERATED / NOT CHANGED; no SQL connection, no real-helper source-pin changes or activation; FIRST LIVE DATA remains NOT TESTED. Previous artifacts retained; no clipboard operation or vault/process cleanup by the agent. STOP for separate real-integration approval; do not infer automatic rotation permission from successful synthetic UI qualification.

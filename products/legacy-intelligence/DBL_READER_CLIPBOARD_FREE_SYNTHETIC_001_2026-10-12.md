@@ -1,6 +1,6 @@
 # Clipboard-free handoff synthetic implementation #001
 
-Owner approved synthetic-only implementation of design `2d5ec74`. **Overall SYNTHETIC HANDOFF = PENDING OWNER INTERACTION**, not PASSED at this record. No Reader password was generated/changed, no SQL connection, no FIRST LIVE DATA, no Connector/Canonical/source/TLS change. Old rotation helpers remain unmodified and unactivated.
+Owner approved synthetic-only implementation of design `2d5ec74`. **Overall SYNTHETIC HANDOFF = PASSED within the public-fixture scope**, established by the final owner-dialog result below. Initial preparation and the first failed dialog are preserved as historical evidence. No Reader password was generated/changed, no SQL connection, no FIRST LIVE DATA, no Connector/Canonical/source/TLS change. Old rotation helpers remain unmodified and unactivated.
 
 ## Implemented boundary
 
@@ -39,7 +39,7 @@ Launcher runtime/signature/source/evidence pins and child parsing passed without
 
 Fresh hashes of `Invoke-ReaderRotation001.ps1` (`C686603B...`), `Start-ReaderRotation001.ps1` (`46142F1A...`) and the prior clipboard source (`9C6626E9...`) matched their existing evidence. No new source pin was installed in either real helper. Previous source/results and the pending historical real-rotation evidence were not overwritten.
 
-## Pending and explicit limits
+## Pending at preparation and explicit limits
 
 Await final `READER_CLIPBOARD_FREE_SYNTHETIC_001_RESULT.json` and owner's report. Qualify overall synthetic success only if matching automated evidence, actual dialog affinity/session qualification, owner save/close/reopen attestation, exact manual retrieval match and actual dialog cleanup all pass. No independent vault inspection is performed: matching input plus owner attestation cannot prove where the value came from or independent-device vault recovery.
 
@@ -52,3 +52,37 @@ Owner reported running out of five minutes and explicitly requested reopening wi
 The result was preserved without overwrite or byte change at `READER_CLIPBOARD_FREE_SYNTHETIC_001_MISMATCH_20261012T142503_RESULT.json`, SHA256 `FF3577A29E3EA5D3E653B170FB492148324520D7556F3F5E5E2EB2A21E914321`. The result proves the modal test returned; prior PID90312 still exists only at the final public console prompt and the owner was told to close it normally, not rerun a command or kill a process. No password or SQL action occurred.
 
 Unchanged launcher/source/evidence pins and CheckOnly passed. A fresh synthetic-only console PID105768 was opened at the owner's explicit request after preservation; this is not an automatic failed-write retry. No time limit was extended: owner can prepare Bitwarden before entering the public readiness token, then has five minutes after dialog construction, 90 seconds per reveal and 180 seconds total reveal budget. Expanded instructions distinguish manual transcription into Bitwarden Password, Save, irreversible Saved/hide, closing/reopening the vault item, manually typing its retrieved value into the masked helper input and only then Verify once. No copy/paste, no real credential and no payload sent to chat. New overall result remains **PENDING**, not PASSED. No automated vectors were repeated; no source/helper pins or real rotation integration changed.
+
+## Verified final public-fixture outcome: PASSED
+
+Owner returned `SYNTHETIC_HANDOFF_PASSED` at `2026-10-12T14:34:47.4182594+03:00`. The independently read local `READER_CLIPBOARD_FREE_SYNTHETIC_001_RESULT.json` matches this report; SHA256 **`4F4838C0B1197D47DD20F312D03F423CE972ACC637BA976A613595702EE50D6D`**. A read-only consistency check verified its successful decision, fixed source identity, exact list of41 previously executed automated checks, one submission, required success flags and all no-secret/no-SQL flags. No tests or dialogs were rerun during final verification.
+
+Actual owner dialog: display-affinity API/readback passed; session registration passed; owner save/close/reopen Bitwarden attestation true; in-memory exact retrieval match true; two reveals, one verification; resource cleanup passed; Failure=null. This establishes the public token's handoff and matching manually entered retrieval within the stated owner-attestation limit, not independently inspected Bitwarden contents. The source's Saved phase permanently disables display before matching. There were zero transfer-key/message interceptions in the successful dialog; the preceding failed dialog independently recorded four blocked shortcuts, and the automated fixture tests exercised all four native messages and six shortcut routes without clipboard API calls.
+
+Untested: empirical screenshot exclusion, actual lock/disconnect/suspend, real-duration five-minute wait, independent vault/recovery inspection and real-secret behavior. Timing/lock/suspend tests use the explicit injected-clock/simulated-message evidence above. Two reveals alone do not prove the owner used the Hide button, focus switching or minimize; these specific manual actions were not separately instrumented/attested. Explicit Hide and irreversible Saved states passed automated tests; do not relabel them as independently observed owner actions.
+
+Final source/harness/launcher hashes remain exactly as listed. Real `Invoke-ReaderRotation001.ps1` and `Start-ReaderRotation001.ps1` hashes remained `C686603B6C4D3195D21FC628468CF50582AFB02681D25CCE591D472549E191F3` and `46142F1AAD4B9744BBFC7088BE60B6331F551D2AC60817B94DF8717C9EAC693C`: no repinning or activation. Prior blocked results remain preserved. No vault cleanup/deletion or console/process termination was performed by the agent.
+
+```json
+{
+  "Decision": "SYNTHETIC_HANDOFF_PASSED",
+  "Synthetic": true,
+  "AutomatedChecksPassed": 41,
+  "CaptureProtectionApiAndReadback": true,
+  "OwnerBitwardenSavedClosedReopenedAttestation": true,
+  "InMemoryExactMatch": true,
+  "CleanupPassed": true,
+  "CaptureExclusionScreenshot": "NOT_TESTED",
+  "ActualLockDisconnectSuspend": "NOT_TESTED; simulated messages only",
+  "RealFiveMinuteWait": "NOT_TESTED; injected clock vectors",
+  "IndependentVaultInspection": "NOT_PERFORMED",
+  "ClipboardApisInvoked": false,
+  "PasswordGenerated": false,
+  "PasswordChanged": false,
+  "SQLConnection": false,
+  "RealRotationHelperActivated": false,
+  "FirstLiveData": "NOT_TESTED"
+}
+```
+
+**STOP.** Public-fixture success is not SQL rotation, real-secret custody qualification or FIRST LIVE DATA. Any real adaptation/integration requires separate owner approval accepting temporary visual exposure and maintaining existing SQL/TLS/permission/no-retry gates. No automatic next step and no relaxation of capture/expiry requirements. Remaining risks: protection is not a malicious-software boundary; the helper does not protect Bitwarden's own reveal window; no comprehensive process/managed/GPU-memory erasure or independent vault-recovery claim. `.vscode` is excluded from commit.
