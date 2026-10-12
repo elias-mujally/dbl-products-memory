@@ -34,3 +34,9 @@ CheckOnly compiled the handoff code, rejected malformed handoff input and verifi
 | Start-ReaderRotation001.ps1 | `46142F1AAD4B9744BBFC7088BE60B6331F551D2AC60817B94DF8717C9EAC693C` |
 
 Helpers and future nonsecret `READER_ROTATION_001_*` records are in the existing local `outputs/host-first-live-data-001-20261010` directory. Do not publish any vault/clipboard/password material. CRL/OCSP remains UNKNOWN under the existing explicit laboratory policy. FIRST LIVE DATA is NOT TESTED by this task. Await the owner's result; do not rerun the launcher.
+
+## Owner-requested console reopening
+
+The first console exited at `2026-10-12T12:39:37.6464752+03:00` with `READER_ROTATION_BLOCKED_STOP`, phase `OwnerInteractiveSafety`, code `OwnerReadyAndLivePromptPaused`: the public readiness token was not confirmed. This occurred before the administrative preparation file, secret generation, handoff or any password-change attempt. RotationAttempted/PasswordChanged/AttemptOutcomeUnknown were all false; no cleanup failures. A false result field for permissions qualification is not evidence that permissions changed: the console stopped before its SQL preflight.
+
+Owner explicitly asked to reopen the window after clarification. Prior PID41116 was absent; no BEFORE/ATTEMPT file existed. The nonsecret failure result was moved, without changing bytes or replacing another file, to `READER_ROTATION_001_OWNER_CONFIRMATION_FAILED_20261012T123937.json`, SHA256 `418706BC79B59A761E92DD90EF1F2DA860DD048A9623578E943E6712D4708720`. The unchanged pinned launcher opened owner console PID91516. This is an explicit owner-requested resumption of a pre-secret confirmation failure, not an automatic SQL retry. Actual rotation/handoff/login result remains pending; opening a console proves none of them.
