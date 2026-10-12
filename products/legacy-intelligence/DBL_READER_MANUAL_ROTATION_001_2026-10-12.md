@@ -50,3 +50,9 @@ Files are in the existing local `outputs/host-first-live-data-001-20261010` dire
 ## Remaining limits
 
 Display-affinity is not a security boundary and does not protect Bitwarden or prevent external cameras/local malicious software. No screenshot guarantee, independent vault inspection, real lock/suspend or real-duration test is claimed. Immutable managed/UI strings, process memory and paging cannot be comprehensively erased. Known capture checks do not prove absence of all compromised local software. CRL/OCSP remains UNKNOWN under the explicit accepted laboratory gap, not revocation success or production qualification. Successful rotation is not proof of business import.
+
+## Authorized owner-console launch; outcome pending
+
+Preparation was pushed and verified at `66e20924a6228f21b4e0b468c1ed6af98296925a`. The new hash-pinned launcher then opened one visible local owner console, PID72588, returning `OWNER_MANUAL_ROTATION_CONSOLE_STARTED_RESULT_PENDING`. No secret-bearing argument, clipboard access or SQL change was made by the launcher. Detailed manual Bitwarden instructions and the distinction between public readiness/final-consent tokens and the masked secret field were provided to the owner.
+
+First metadata-only follow-up found the console running and new BEFORE/ATTEMPT/RESULT records all absent, consistent with waiting at public owner readiness. No secret window, vault, clipboard or process memory was inspected. **Actual handoff / rotation / reader-login outcome remains PENDING**, not PASSED; do not launch again. Only the verified final nonsecret result can change this decision. FIRST LIVE DATA remains NOT STARTED.
