@@ -1,0 +1,52 @@
+# Reader credential rotation #001 — clipboard-free real integration
+
+## Authority and current decision
+
+Owner explicitly approved one existing-reader password rotation after the qualified synthetic handoff at `8eb7175`. Target is only `DBL_HOST_W11_S2_Reader_20261009` on `DESKTOP-8QRQT7R\YSEDU`; database is `DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009`. Owner accepted bounded local visual exposure and independently accessible Bitwarden custody. No clipboard or Bitwarden API, service/network/TLS/trust/ACL/policy/grant change, replacement reader or FIRST LIVE DATA is authorized here.
+
+**Preparation qualified; real handoff, password rotation and reader login NOT YET EXECUTED.** A visible owner console must obtain saved-item retrieval equality and final explicit `SAVED_AND_ROTATE` consent before the single SQL write. Preparation success is not rotation success.
+
+## Bounded implementation review
+
+New independent sources preserve all old tools and failed/cancelled artifacts. The old real tool was not repinned or executed. New public records have the prefix `READER_MANUAL_ROTATION_001_`; CreateNew writes and launcher absence checks prevent overwrites/automatic retries. The old password-attempt marker must also be absent.
+
+The qualified UI was adapted to accept the existing generator's candidate instead of its fixed public fixture. No generator, database, vault or persistence code is in the UI. It retains masked default, owner-drawn display without accessible text payload, display-affinity API/readback and session registration, 90-second reveal / 180-second total visibility / five-minute handoff, permanent display-buffer clearing at Saved, one masked exact-match verification, transfer-key/native-message blocking, interruption/cancellation/timeout STOP and resource disposal. Successful manually retrieved input is transferred once as a read-only SecureString for reader login; mutable comparison/display buffers are cleared. Generalization is covered by distinct public candidate tests, not by creating a real credential during qualification.
+
+Before generation: ordinary approved owner SID/STA/local session, unredirected console, known transcription/profiling/secret-log environment checks, actual blank capture API probe and fresh trusted administrative SQL metadata gates. Actual secret display repeats capture checks. After match: dialog disposal must pass, then the public final-consent token, then another unchanged-identity/policy/port prewrite refresh. No secret is entered at a console prompt.
+
+Source comparison against the old approved tool passed: `FreshPreflight`, `PolicyFingerprint`, `Builder`, 36-byte cryptographic RNG/Base64 48-character generator and complexity check, parameterized `sys.sp_password` RPC declarations, reader metadata query and rights assertions are unchanged. One RPC is allowed, with an attempt marker written before invocation; no password-policy/role/grant options or business statements. Strict encryption, hostname validation, no certificate bypass, observed direct port, disabled pooling/retries and separate SqlCredential remain. Unknown runtime exceptions are converted to fixed safe error identifiers, never raw secret-bearing messages. Parameter/resource cleanup is required. Failed or ambiguous write has no automatic retry or reset to an unknown prior password.
+
+## Actual preparation evidence
+
+- Public-only CheckOnly passed **43** state/transfer/resource/shape checks, including different expected candidates and SecureString ownership, plus strict admin/reader connection-builder assertions. No SQL, real generator, real dialog or clipboard call occurred in that mode. Timeout/session negative vectors use injected clocks/messages, not actual elapsed duration/session interruption.
+- Actual owner-context, STA read-only preflight at `2026-10-12T14:50:17.7922715+03:00`: `MANUAL_ROTATION_READONLY_PREFLIGHT_PASSED`. Observed direct port **52952**; trusted integrated SQL identity matched the current approved Windows SID. Frozen database10 ONLINE / READ_ONLY / TRUSTWORTHY=false / chaining=false. Existing reader enabled, SQL_LOGIN, policy and expiration both true, same default database; last modification `2026-10-09T08:17:00.370`. **23 exact historical grants**, no expanded roles or permissions. Known custom SQL capture absent; default trace inventory retained. Actual blank capture-affinity/session registration/readback/release passed. No reader login or credential generation/change in this preflight.
+- Static comparison returned `MANUAL_ADAPTATION_SQL_GENERATOR_BOUNDARIES_UNCHANGED`: three functions, generator, RPC parameter types, reader metadata query and assertion identical. This proves source boundaries, not actual rotation success.
+- New launcher CheckOnly returned `MANUAL_ROTATION_LAUNCHER_PINS_PARSE_PASSED`, no child or credential generation. An initial invocation used the wrong relative directory and never found the file; corrected absolute-path CheckOnly passed. No real attempt was initiated by either check.
+
+Current successful synthetic source/result identities were verified against `8eb7175`; all original reader and synthetic evidence was preserved. No Connector or Canonical modification, business-data read/write or SQL service mutation.
+
+## Local source pins
+
+Files are in the existing local `outputs/host-first-live-data-001-20261010` directory, not secret-bearing project artifacts. Hashes below identify source/public evidence only; **no password-derived hash is computed or published**.
+
+| File | SHA256 |
+| --- | --- |
+| ReaderManualHandoff001.cs | `B0BF5EF737B60CDAC441F32EC3BB8838B33AD238E604FE6D2DA0FBE1B3C69925` |
+| Invoke-ReaderManualRotation001.ps1 | `6367F0325C86D69F8A3DF927FAE63957F43BBB6E44C92DAD1917F333D3C5CFA1` |
+| Start-ReaderManualRotation001.ps1 | `E1A81276DD5F2CBEC7A0E7C3B0470D9D2143B4E78879D008ECCB0D4DA82032BC` |
+| Read-ReaderRotationPreflight001.ps1, unchanged | `8A0582C67E9AD2999961DC0F644016C2F06233E4369B5F55F518B42A56C7716A` |
+| Qualified synthetic source, unchanged | `CE62BD22097D63D42525BBF7E8E9F3D6120175C86CE0E3CCC51D7C6656A00A86` |
+| Qualified synthetic public result, unchanged | `4F4838C0B1197D47DD20F312D03F423CE972ACC637BA976A613595702EE50D6D` |
+
+## Owner execution and STOP points
+
+1. Prepare the real reader's Bitwarden item labelled **Pending / Not Yet Applied**, not the synthetic test item. Close prior synthetic/live prompts normally. Use the local session without recording/sharing/observers. Do not send screenshots, secrets or vault contents.
+2. In the new visible console, type public `READER_ROTATION_READY` only when Bitwarden is ready. Fresh administrative gates run before generation. A failed gate stops.
+3. In the protected handoff, check readiness, Reveal locally, manually type the generated 48 characters into Bitwarden and Save. No copy/paste. Saved permanently hides the source display. Close the editor and reopen the saved item; manually retrieve it into the masked handoff field, attest saved/reopened/independent access, then Verify once. Mismatch/cancellation/expiry/capture/session/cleanup failure means no write and no automatic retry.
+4. After exact match and UI cleanup, type public `SAVED_AND_ROTATE` in the console only if consenting to the one account-only SQL password change. This is a public control token, not the password. Fresh prewrite gates must still pass.
+5. One RPC, post-policy metadata comparison and one strict reader login with metadata-only READ_ONLY/identity/rights verification. No product rows or import. Success requires all three: rotation, handoff, reader login, plus cleanup. On ambiguous/failing result keep the Bitwarden item **Pending**; do not assume its value is effective or retry. On proven success owner may remove Pending / Not Yet Applied.
+6. Publish only the final nonsecret JSON. Agent must verify the locally written result without reading the vault/secret UI and document actual outcomes before STOP. No automatic FIRST LIVE DATA.
+
+## Remaining limits
+
+Display-affinity is not a security boundary and does not protect Bitwarden or prevent external cameras/local malicious software. No screenshot guarantee, independent vault inspection, real lock/suspend or real-duration test is claimed. Immutable managed/UI strings, process memory and paging cannot be comprehensively erased. Known capture checks do not prove absence of all compromised local software. CRL/OCSP remains UNKNOWN under the explicit accepted laboratory gap, not revocation success or production qualification. Successful rotation is not proof of business import.
