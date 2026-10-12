@@ -4,7 +4,7 @@
 
 Owner explicitly approved one existing-reader password rotation after the qualified synthetic handoff at `8eb7175`. Target is only `DBL_HOST_W11_S2_Reader_20261009` on `DESKTOP-8QRQT7R\YSEDU`; database is `DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009`. Owner accepted bounded local visual exposure and independently accessible Bitwarden custody. No clipboard or Bitwarden API, service/network/TLS/trust/ACL/policy/grant change, replacement reader or FIRST LIVE DATA is authorized here.
 
-**Preparation qualified; real handoff, password rotation and reader login NOT YET EXECUTED.** A visible owner console must obtain saved-item retrieval equality and final explicit `SAVED_AND_ROTATE` consent before the single SQL write. Preparation success is not rotation success.
+**Latest actual outcome: BLOCKED on handoff deadline; no password-changing RPC was attempted.** Preparation qualified, but manual saved-item retrieval/final consent/rotation/reader login did not succeed. The preserved launch and preparation evidence below is historical, not a pending retry. Preparation success is not rotation success.
 
 ## Bounded implementation review
 
@@ -56,3 +56,15 @@ Display-affinity is not a security boundary and does not protect Bitwarden or pr
 Preparation was pushed and verified at `66e20924a6228f21b4e0b468c1ed6af98296925a`. The new hash-pinned launcher then opened one visible local owner console, PID72588, returning `OWNER_MANUAL_ROTATION_CONSOLE_STARTED_RESULT_PENDING`. No secret-bearing argument, clipboard access or SQL change was made by the launcher. Detailed manual Bitwarden instructions and the distinction between public readiness/final-consent tokens and the masked secret field were provided to the owner.
 
 First metadata-only follow-up found the console running and new BEFORE/ATTEMPT/RESULT records all absent, consistent with waiting at public owner readiness. No secret window, vault, clipboard or process memory was inspected. **Actual handoff / rotation / reader-login outcome remains PENDING**, not PASSED; do not launch again. Only the verified final nonsecret result can change this decision. FIRST LIVE DATA remains NOT STARTED.
+
+## Actual outcome: owner transfer timed out before SQL
+
+Owner reported that the window closed before finishing manual transcription of the long mixed-character candidate. Local final result independently confirms `READER_MANUAL_ROTATION_BLOCKED_STOP` at `2026-10-12T15:10:35.1311678+03:00`, phase `GenerateAndManualHandoff`, fixed safe code **DeadlineExpired**. Source has a five-minute overall handoff deadline; this is not evidence of a SQL, TLS, Bitwarden or password-policy rejection. Capture API/readback and session registration succeeded, with two reveals and zero verification submissions. Actual generation occurred, but saved-item retrieval equality and final consent did not.
+
+`RotationAttempted=false`, `PasswordChanged=false`, `AttemptOutcomeUnknown=false`; the new ATTEMPT file is absent and console PID72588 is no longer running. No new reader-login check, business-data access/change, service/TLS/trust change, clipboard operation or FIRST LIVE DATA occurred. Any candidate saved or partially entered in Bitwarden is **not the active SQL password**; keep it clearly Pending / Not Yet Applied, do not use it for SQL or disclose it. The tool no longer holds a reusable display and the agent cannot recover that candidate.
+
+`HandoffCleanupPassed=false` is the success-path UI-cleanup flag not reached after the failed match gate; `CleanupFailures=[]` records no resource-disposal error in the final cleanup. Neither field establishes comprehensive erasure of immutable/process-memory artifacts. Likewise the false final policy comparison flag means post-rotation verification was not reached, not proof permissions changed.
+
+Public result SHA256: `2CF97B12D869FBE4131E65E556A4370AA3030D2061B7DD3CF441DC6AE4552DD8`; BEFORE record SHA256: `56C93DECDCF97E93081F47E252B502CCFECC1C1A33DA8918E1F62B586563D81B`. These identify nonsecret result/metadata files, not passwords. All artifacts remain at their original paths without overwrites or deletion; no automatic resumption or SQL diagnostic connection.
+
+**READER ROTATION = NOT PERFORMED; SECURE HANDOFF = BLOCKED; READER LOGIN = NOT TESTED. STOP.** Smallest proposed remedy, not implemented or authorized by this failure report: retain the generator, 48-character candidate, capture/interruption/one-shot gates and SQL logic; extend only overall manual handoff from five to ten minutes and cumulative visibility from three to six minutes (individual Reveal still 90 seconds). This increases potential visual exposure, so obtain explicit owner acceptance, test only affected public timeout vectors, preserve the failed run, and authorize a new pre-write handoff before another generated candidate. Do not silently shorten/change the generator or reopen the unchanged workflow.
