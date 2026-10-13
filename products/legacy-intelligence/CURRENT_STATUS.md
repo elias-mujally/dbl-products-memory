@@ -1,6 +1,10 @@
 # Legacy Intelligence — Current Status
 
-آخر تحديث: **2026-09-03**
+آخر تحديث توجيهي: **2026-10-13**. تفاصيل milestones الأساسية أدناه تاريخية؛ الحالة الأحدث في الفقرة التالية.
+
+## First Business Insights — الحالة الأحدث
+
+**FIRST LIVE DATA #001 = PASSED** عند `1810349` لقراءة هوية الصنف الحقيقي فقط. **INVENTORY READINESS REVIEW = COMPLETED؛ FIRST INVENTORY INSIGHT #001 = NOT TESTED / NOT PASSED.** [الأدلة وخطة الاختبار والموافقات اللازمة](DBL_FIRST_INVENTORY_INSIGHT_001_READINESS_2026-10-13.md). الرصيد التاريخي المتاح37 مؤهل لنطاق الصورة المجمدة؛ صرف5 لم يُحفظ، فلا32 مثبتة. Connector الحالي identity-only/inventory=false؛ التوسيع المحدود والقراءة الجديدة ينتظران تفويضًا. المرحلة التالية Sales & Inventory مؤجلة حتى نجاح Inventory؛ لم تبدأ دراستها التنفيذية. لا SQL حي أو تغيير كود/Canonical/SQLite/صلاحيات/مضيف في هذه المراجعة. STOP.
 
 ## الحالة
 

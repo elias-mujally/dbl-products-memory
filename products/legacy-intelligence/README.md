@@ -4,9 +4,11 @@
 
 آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #12 مدموج؛ origin/main=aa234df؛ الرأس المعتمد84eadfd محفوظ ضمن الدمج**
 
-آخر تحديث بحثي/مخبري: **2026-10-11**
+آخر تحديث بحثي/مخبري: **2026-10-13 — FIRST LIVE DATA passed; First Inventory readiness reviewed only.**
 
 ## الحالة
+
+**الأولوية المعتمدة — First Business Insights (2026-10-13):** [FIRST INVENTORY INSIGHT #001 readiness](DBL_FIRST_INVENTORY_INSIGHT_001_READINESS_2026-10-13.md) أولًا؛ **INVENTORY READINESS REVIEW = COMPLETED**، لا inventory PASSED بعد. الشراء37 محفوظ، صرف5 لم يُحفظ، فلا32 مثبتة. المصدر المرشح رصيد متاح محسوب عبر FindAvQty ضمن الصورة المجمدة/الفرع1/المخزن1/UA/العبوة1، لا جرد مادي أو رصيد اليوم. يلزم تفويض اختبار قراءة مستقل ثم توسعة محدودة مراجعة للـConnector عند الحاجة. **FIRST SALES & INVENTORY INSIGHT #001 مؤجلة** حتى نجاح المرحلة الأولى؛ لا دراسة تنفيذية أو تعديل الآن. [FIRST LIVE DATA عند1810349](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md) PASSED للصنف `DBL_P001_ITEM_A / DBL_ITEM_A` بالهوية فقط، counts1/0/0؛ حالات الانتظار أدناه تاريخية. لا استعلام SQL حي/كود/SQLite/صلاحيات/Host changes في مراجعة الجاهزية. STOP وانتظار موافقة المالك.
 
 **2026-10-11 — FIRST LIVE DATA bounded read OWNER APPROVED؛ PREREQUISITES PASSED / READER SECRET PENDING.** [المسار الفعلي المحدود والأدلة](DBL_FIRST_LIVE_DATA_001_BOUNDED_READ_2026-10-11.md): main treeمؤكد، buildنجح بـNode22.23.2،46pinsوموديولات/SQLitenativeمؤهلة. فحصحديثSC/netstat/registry/publiccertsأكدYSEDU/PID101852/192.168.56.1:52952 وBrowserStopped/Disabled؛ TCPNodeprobeواحدبلااعتمادنجح. التشغيلالمجهز يستخدمAdapterالافتراضي وSQLحقيقيفقط→Import→SQLite→SnapshotReader/Application، ويطلبReaderمخفيًا فينافذةOwnerغيرإدارية عبرstdinفقط؛ لاargv/env/log/secretfile، ولاfixture/replay/sessionFactory. لمتُطلبكلمةولميحدثTLS/login/importبعد؛ FIRST LIVE DATA NOT TESTED. لاConnector/Canonical/SQL/hostchanges؛ UNKNOWNيبقىفجوةإلغاءمختبرية،`.vscode`خارجcommit. انتظارالنتيجةالحقيقيةثمSTOP.
 

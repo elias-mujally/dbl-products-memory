@@ -1,6 +1,13 @@
 # Legacy Intelligence — Roadmap
 
-آخر مزامنة مع حالة المنتج والأدلة: **2026-09-02**
+آخر تحديث توجيهي: **2026-10-13 — First Business Insights sequence approved; inventory readiness review completed, execution not authorized.** تفاصيل خارطة الأساس أدناه تاريخية حيث تختلف مع هذا التسلسل.
+
+## الأولوية التنفيذية المعتمدة — First Business Insights
+
+1. **FIRST INVENTORY INSIGHT #001 أولًا.** [دراسة الجاهزية وخطة الاختبار المحدود](DBL_FIRST_INVENTORY_INSIGHT_001_READINESS_2026-10-13.md): INVENTORY READINESS REVIEW = COMPLETED، لكن FIRST INVENTORY INSIGHT = NOT TESTED / NOT PASSED. شراء37 محفوظ؛ صرف5 مسودة ملغاة، لا رصيد32 مثبت. المصدر المرشح FindAvQty ضمن صورة ما بعدS2/الفرع1/المخزن1/UA/العبوة1؛ يلزم تفويض قراءة مستقل، وتوسيع Connector محدود ومراجَع لاحقًا، مع حفظ معنى الرصيد وprovenance. لا تنفيذ SQL أو كود أو SQLite الآن.
+2. **FIRST SALES & INVENTORY INSIGHT #001 لاحقًا فقط.** لا تبدأ الدراسة التنفيذية أو التعديلات قبل نجاح المرحلة الأولى وتفويض جديد؛ الشراء والصرف غير البيعي ليسا دليل مبيعات.
+
+[FIRST LIVE DATA #001 = PASSED عند1810349](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md) أثبت مسار SQL→Connector→ImportOrchestrator→SQLite→SnapshotReader للصنف الحقيقي بالهوية فقط، دون رصيد مخزون. أعمال S3/الأرشفة وDBL Connect ليست مسارًا جانبيًا لازمًا لهذه الأولوية. STOP وانتظار موافقة المالك.
 
 ## المرحلة الحالية
 
