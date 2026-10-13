@@ -1,5 +1,7 @@
 # FindAvQty administrative metadata attestation #001 — identity gate STOP
 
+**Later separately authorized identity-only diagnosis21:02+03:** [completed with current PASS/PASS/FAIL](DBL_ADMINISTRATIVE_IDENTITY_DIAGNOSIS_001_2026-10-13.md): SID match and sysadmin pass, exact original/effective SQL-name comparison fails. Original acceptance gate remains BLOCKED; no function metadata was read or attestation retried. This later observation resolves the current predicate, not the earlier unrecorded row or the cause of name discrepancy. No automatic relaxation/elevation/Reader follow-up; STOP.
+
 **FUNCTION METADATA ATTESTATION = BLOCKED / NOT PROVEN.** INVENTORY SOURCE QUALIFICATION remains NOT PROVEN; FIRST INVENTORY INSIGHT NOT TESTED. No successful current function attestation or reusable attestation interval exists. This outcome is separate from the earlier [Reader definition visibility failure](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md).
 
 ## Owner boundary and existing access method
