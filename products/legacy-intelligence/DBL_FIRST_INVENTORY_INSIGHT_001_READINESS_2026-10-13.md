@@ -5,6 +5,8 @@ Date: 2026-10-13, Asia/Aden. Owner direction: FIRST INVENTORY INSIGHT first; FIR
 **INVENTORY READINESS REVIEW = COMPLETED.**
 **FIRST INVENTORY INSIGHT #001 = NOT TESTED / NOT PASSED.** This document proposes a later separately authorized test, not permission to execute it. The historical scoped quantity is 37; 32 is not an established balance. No live SQL query, credential request, FIRST LIVE DATA rerun, ERP/UI operation, host change, Connector/Canonical/SQLite edit or implementation test was performed in this review.
 
+**Later owner-approved source qualification:** [preparation stopped before SQL](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md) at a new helper's archived-evidence array parsing defect. No Reader attempt, password request or function call; no automatic correction/retry. Readiness findings remain intact; source qualification is NOT PROVEN.
+
 ## Evidence and implementation actually reviewed
 
 The starting Product Memory head was `18103493b45e80fc22a3c9f96eb0a1dc044a4ff1`. Reviewed [final real import](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md), [Host S1/S2/S3 history](MOTAKAMEL_HOST_W11_BASELINE_2026-10-06.md), [S2 reconciliation](MOTAKAMEL_HOST_W11_S2_TARGETED_RECONCILIATION_2026-10-09.md), [frozen-stage/Reader qualification](MOTAKAMEL_HOST_W11_POST_S2_FROZEN_READER_QUALIFICATION_2026-10-09.md), original controlled-dataset sequencing and current architecture decisions. Earlier pending/blocked statements are historical where later evidence supersedes them, not grounds to repeat successful setup.
