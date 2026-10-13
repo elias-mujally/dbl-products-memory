@@ -1,5 +1,7 @@
 # Inventory Source Qualification #001 — correction qualified; actual Reader metadata STOP
 
+**Later separately authorized administrative attestation20:48+03:** [identity gate BLOCKED before any function metadata](DBL_FINDAVQTY_ADMIN_METADATA_ATTESTATION_001_2026-10-13.md). One approved-route integrated connection and identity SELECT only; no administrative function attestation, Reader rerun, privilege change or guard bypass. Earlier Reader outcome below remains intact. Source qualification is still NOT PROVEN; further identity-only diagnosis requires separate owner permission. STOP.
+
 ## Current final result — first real Reader attempt BLOCKED at function definition
 
 **INVENTORY SOURCE QUALIFICATION = BLOCKED / NOT PROVEN. FIRST INVENTORY INSIGHT = NOT TESTED.** Local helper correction remained OFFLINE QUALIFIED, but that is not source qualification. The owner's returned JSON was matched to the actual local INVENTORY_SOURCE_001_RESULT.json, timestamp2026-10-13T17:38:15.149Z (20:38:15+03), SHA256 `C0809D89CDBF9ED132377480540BF8C5B35335DF872C9C1822A1ED3CF7CA027C`. Corrected runner pin351FC1D4 remained unchanged. Local ATTEMPT timestamp17:38:13.493Z proves the one authorized caller attempt started. The final wrapper reported exit1, no secret persisted/arguments/environment and no retry. [Selective nonsecret evidence](research/DBL_INVENTORY_SOURCE_001_LIVE_REVIEW_2026-10-13.json).
