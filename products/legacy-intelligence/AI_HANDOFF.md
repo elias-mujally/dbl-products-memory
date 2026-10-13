@@ -6,6 +6,8 @@
 
 ## اقرأ أولًا
 
+**أحدث تفويض/نتيجة:** تصحيح Inventory helper بإذن مستقل بعدcd29b69 اجتاز التأهيل المحلي دون SQL، [التفاصيل والبصمات](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md). runner المصحح351FC1D4 وwrapper520B23CD وlauncherDC1D5710 فقط؛ الأول القديمD7F100B4 يبقى محفوظًا ولا يُستخدم. أول محاولة Reader حية مسموحة بعد فحص حديث وإدخال مخفي، لكنها لم تُنفّذ بعد في هذا السجل. لا تدّع PASSED قبل قراءة فعلية ومطابقة؛ metadata invisibility تعني STOP دون grants/admin/function-first أو retry. لا Connector/Canonical/SQLite/import/FIRST LIVE DATA. فقرة STOP السابقة أدناه تاريخية وليست إلغاءً للتفويض الجديد.
+
 **أحدث STOP لتأهيل المصدر:** [Inventory source preparation failure](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md)، قبل SQL بسبب قراءة خاطئة لشكل array في أدلة تعريف الدالة. لا تنفّذ runner المحلي غير المؤهل أو تصلح وتعيد تشغيله تلقائيًا. لا تفسره كفشل Reader metadata أو كرصيد جديد؛ يلزم موافقة التصحيح المحدود ثم أول محاولة Reader.
 
 **توجيه المالك الأحدث (2026-10-13):** اقرأ [FIRST INVENTORY readiness review](DBL_FIRST_INVENTORY_INSIGHT_001_READINESS_2026-10-13.md) و[نجاح FIRST LIVE DATA الحقيقي](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md) قبل استئناف التنفيذ. الجاهزية اكتملت بالمراجعة فقط؛ لا اختبار inventory جديد مصرح به. شراء37 محفوظ، صرف5 مسودة ملغاة، لا تفترض32. Connector الحالي لا يقرأ كمية؛ لا تستأنفS3 أو الأرشفة أو تغيّر Canonical تلقائيًا. Sales & Inventory مؤجلة حتى نجاح Inventory وتفويض جديد. STOP عند طلب تنفيذ خارج مراجعة الأدلة.

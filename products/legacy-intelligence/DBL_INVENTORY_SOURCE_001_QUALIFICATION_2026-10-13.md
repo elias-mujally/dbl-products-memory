@@ -1,6 +1,20 @@
 # Inventory Source Qualification #001 — preparation STOP before SQL
 
-**INVENTORY SOURCE QUALIFICATION = BLOCKED BEFORE SQL / NOT PROVEN.**
+## Later owner-approved bounded correction — offline qualified; first Reader attempt pending
+
+Recorded 2026-10-13 20:29:53+03. Owner separately authorized correcting the array parser after cd29b69 and, only after offline qualification, the first real Reader attempt under the unchanged section3 scope. **HELPER CORRECTION = OFFLINE QUALIFIED. INVENTORY SOURCE QUALIFICATION = NOT PROVEN / LIVE PENDING**, not PASSED. Historical preparation STOP below is retained unchanged as history.
+
+Correction is limited to requiring Metadata.Function to be an array of exactly one nonarray object, ObjectName exactly FindAvQty, nonblank string definition, and the original exact UTF8 hash235E8D7379760735FA7E4F3613CD2F67E822EF974B7C990A3E281665659C2628. Invalid structure gets ARCHIVED_FUNCTION_RECORD_SHAPE; changed definition gets ARCHIVED_FUNCTION_PIN. Original helper preserved separately at its original D7F100B4 hash; no historical evidence changed.
+
+Actual Node syntax check and `check` passed. Positive archived record passed;13 named negative vectors (missing/null/scalar/empty/multiple/null-record/array-record/wrong-name/missing-definition/nonstring/empty/whitespace/hash-change) were rejected with exact safe codes. Seven original movement guards also passed. No SQL connection, secret, business read, function invocation or fixture-as-live claim. Diff review confirms SQL query texts, parameters, scope, transport, Reader guards and one-function-call logic unchanged. Current implementation worktree is clean and the46 qualified build/runtime/evidence pins passed.
+
+New task-local hidden-input wrapper/launcher reuse the prior successful Read-Host AsSecureString and private child stdin design, no clipboard, secret argv/env/file/log or admin identity. Owner console and transcription/debug gates, public pins, fresh environment/DNS/direct-port preflight before input, CreateNew attempt/result artifacts and no prior-run overwrite remain. Both PS parser/pin CheckOnly checks passed without launching or requesting a secret. SQL errors are sanitized; metadata must be visible and hash/dependencies match before business projections; no fallback admin/grant. Pool may establish multiple physical sessions, but caller does not retry or replay the function. Managed password-memory erasure is not guaranteed; CRL/OCSP UNKNOWN is the previously accepted laboratory gap.
+
+Local corrected runner20744 bytes SHA256351FC1D4135D7BE36C7CAAA56473F50D15CB1FBEB2A70923A69449B780C82950; wrapper4983 bytes SHA256520B23CDE6DFCA316A37807F1122E065DD91675E30EEC652C58B3BD199C3BF81; launcher2326 bytes SHA256DC1D57105014C7D35E508D1D80522C6AC2CF1A575E4E492C323CDC23CDBCA6B1. Local correction review JSON is INVENTORY_SOURCE_001_CORRECTION_QUALIFICATION.json, not SQL output. No source/helper/database artifacts or secrets are published here. **Next: one explicitly authorized owner-interactive Reader attempt; stop on any gate failure, especially unavailable definition/dependencies. No import or FIRST INVENTORY INSIGHT implementation.**
+
+## Preserved earlier preparation failure
+
+**INVENTORY SOURCE QUALIFICATION = BLOCKED BEFORE SQL / NOT PROVEN (earlier preparation).**
 **FIRST INVENTORY INSIGHT = NOT TESTED.** This is not a Reader metadata denial, TLS failure or newly observed balance. No password was requested, console launched, SQL connection made, inventory projection read, function invoked, import executed or SQLite file opened. No administrative fallback, grant, host/security/source change or automatic live retry.
 
 ## Authorization and exact boundary
