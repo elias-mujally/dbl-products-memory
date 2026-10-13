@@ -1,6 +1,6 @@
 # First Live Data #001 — bounded live execution
 
-Owner authorization follows SQL activation at `b086af6`. **PREREQUISITES PASSED / OWNER READER SECRET PENDING; FIRST LIVE DATA = NOT TESTED.** No successful SQL/TLS/authentication/import is claimed from these preparation checks.
+Owner authorization follows SQL activation at `b086af6`. Historical preparation was **PREREQUISITES PASSED / OWNER READER SECRET PENDING; FIRST LIVE DATA = NOT TESTED**. It was superseded by the separately authorized October13 execution: **FIRST LIVE DATA #001 = PASSED**; see the [final actual evidence](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md). Preparation checks alone did not prove live success.
 
 ## Verified preparation
 
@@ -42,4 +42,4 @@ Local outputs are `FIRST_LIVE_DATA_001_*` in `outputs/host-first-live-data-001-2
 
 ## October13 separately authorized real SQL import
 
-Reader rotation/handoff/login passed at `01e0386`; owner separately approved FIRST LIVE DATA execution. [Current execution record](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md) verifies unchanged main-tree/build/runner pins and fresh endpoint, preserves the old pre-credential preflight without replacement, and documents the existing hidden-input/strict-reader/production import gates. Actual live outcome is pending, not success; no Connector/Canonical or host changes. Historical pending/blocked statuses above are preparation history, not proof a credential is still missing.
+Reader rotation/handoff/login passed at `01e0386`; owner separately approved FIRST LIVE DATA execution. [Final execution record](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md) independently matches the persisted actual result and local canonical/SQLite/audit hashes. Strict TLS, fixed limited Reader/READ_ONLY guards, actual SQL acquisition, production import and SnapshotReader passed at `2026-10-13T16:04:51.618Z`: exact `DBL_P001_ITEM_A` / `DBL_ITEM_A`, products1/customers0/sales0, one import attempt, no fixture/mock, retry or host/Connector/Canonical implementation changes. All preparation history remains preserved. Revocation UNKNOWN remains the accepted laboratory gap, not success. STOP; no further connection or import.

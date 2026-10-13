@@ -5,7 +5,7 @@ Owner priority shift: pause complex Recovery Capture qualification and preserve 
 
 ## Decision
 
-**FIRST LIVE DATA #001 = BLOCKED BEFORE SQL CONNECTION — NOT PASSED.**
+Historical October10 decision: **FIRST LIVE DATA #001 = BLOCKED BEFORE SQL CONNECTION — NOT PASSED.** The separately authorized October13 run subsequently achieved **FIRST LIVE DATA #001 = PASSED**; see the [final verified execution evidence](DBL_FIRST_LIVE_DATA_001_REAL_SQL_IMPORT_2026-10-13.md). The diagnosis and no-action history below remain unchanged.
 
 No fixture/mock result is substituted for live proof. No SQL authentication, source SELECT, TLS/TDS handshake, new acquisition, SQLite import or SnapshotReader read was attempted. The earliest confirmed blocker is disabled YSEDU TCP with no listener. Named-instance discovery, strict certificate trust and reader-secret handoff are also not ready. Per the owner's STOP rule, no host remedy was applied.
 
