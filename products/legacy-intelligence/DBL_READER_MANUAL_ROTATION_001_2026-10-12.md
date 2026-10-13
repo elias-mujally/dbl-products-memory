@@ -4,7 +4,7 @@
 
 Owner explicitly approved one existing-reader password rotation after the qualified synthetic handoff at `8eb7175`. Target is only `DBL_HOST_W11_S2_Reader_20261009` on `DESKTOP-8QRQT7R\YSEDU`; database is `DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009`. Owner accepted bounded local visual exposure and independently accessible Bitwarden custody. No clipboard or Bitwarden API, service/network/TLS/trust/ACL/policy/grant change, replacement reader or FIRST LIVE DATA is authorized here.
 
-**Latest actual outcome: BLOCKED on handoff deadline; no password-changing RPC was attempted.** Preparation qualified, but manual saved-item retrieval/final consent/rotation/reader login did not succeed. The preserved launch and preparation evidence below is historical, not a pending retry. Preparation success is not rotation success.
+**Latest completed attempt: BLOCKED on handoff deadline; no password-changing RPC was attempted.** On October13 the owner separately approved the proposed timing remedy and a new bounded handoff. Its timing qualification and fresh administrative preparation passed; actual new handoff/rotation/reader login remain pending. Preparation success is not rotation success.
 
 ## Bounded implementation review
 
@@ -68,3 +68,21 @@ Owner reported that the window closed before finishing manual transcription of t
 Public result SHA256: `2CF97B12D869FBE4131E65E556A4370AA3030D2061B7DD3CF441DC6AE4552DD8`; BEFORE record SHA256: `56C93DECDCF97E93081F47E252B502CCFECC1C1A33DA8918E1F62B586563D81B`. These identify nonsecret result/metadata files, not passwords. All artifacts remain at their original paths without overwrites or deletion; no automatic resumption or SQL diagnostic connection.
 
 **READER ROTATION = NOT PERFORMED; SECURE HANDOFF = BLOCKED; READER LOGIN = NOT TESTED. STOP.** Smallest proposed remedy, not implemented or authorized by this failure report: retain the generator, 48-character candidate, capture/interruption/one-shot gates and SQL logic; extend only overall manual handoff from five to ten minutes and cumulative visibility from three to six minutes (individual Reveal still 90 seconds). This increases potential visual exposure, so obtain explicit owner acceptance, test only affected public timeout vectors, preserve the failed run, and authorize a new pre-write handoff before another generated candidate. Do not silently shorten/change the generator or reopen the unchanged workflow.
+
+## October13 owner-approved timing remedy and new run preparation
+
+Owner answered the specific proposed remedy with permission to begin. New local `ReaderManualHandoff002.cs`, `Invoke-ReaderManualRotation002.ps1` and `Start-ReaderManualRotation002.ps1` preserve all001 sources and evidence unchanged. Their002 naming is a fresh pre-write execution record for the same account-only authorization, not authority for a second password write. Old timeout result/before hashes are pinned; old result must prove no attempt/change/ambiguity/final consent or cleanup error, old console must be absent, and every previous password-attempt marker must remain absent. New BEFORE/ATTEMPT/RESULT files use CreateNew and the002 prefix; old files are not moved, deleted or overwritten.
+
+Only production UI changes are the approved cumulative visibility180000->360000ms, overall deadline300000->600000ms and corresponding visible instructions. Individual reveal remains90000ms. Static comparison returned `TIMING_REVISION_PRODUCTION_BOUNDARIES_PASSED`: every other production UI byte, generator, connection/preflight functions and SQL/RPC/post-policy/reader-verification logic are unchanged (except the new public run prefix). Wrapper differences are source/result pins, prior-run/no-write guards and timing-only CheckOnly selection. Neither shortened generator nor clipboard fallback was introduced.
+
+Timing-only public qualification passed **15** assertions: exact constants, before/at90s reveal, remaining three reveals, six-minute cumulative hard cap, permanent Saved clearing at cap, successful match just before ten minutes, no failure at five minutes, deadline at600000ms, Verify cannot extend deadline, delayed overall timer fails and delayed individual tick cannot extend reveal. These use public fixed text/injected clocks, not an actual ten-minute wait, real credential, owner vault or SQL. Unchanged earlier transfer/security vectors were not rerun. Launcher pins/child parse passed without starting a child.
+
+Fresh owner-context STA administrative read-only preparation at `2026-10-13T17:43:01.4982898+03:00` returned `MANUAL_ROTATION_READONLY_PREFLIGHT_PASSED`: observed port52952, trusted integrated identity/current Windows SID match, DB10 ONLINE/READ_ONLY, unchanged enabled SQL Reader policy/expiration/default DB and23 exact historical grants, last reader modification still `2026-10-09T08:17:00.370`. Actual blank capture API/session registration/release passed; known custom SQL capture absent. No candidate generated, password changed, reader login or FIRST LIVE DATA during preparation. Readiness and prewrite gates are refreshed again inside the actual owner execution.
+
+| New local source | SHA256 |
+| --- | --- |
+| ReaderManualHandoff002.cs | `F787212B32DD068F3679235A9A22280B6F1E15EEF1C056AF1F89F2018FAE1396` |
+| Invoke-ReaderManualRotation002.ps1 | `FA6796E5138A9570D6C24B89D074CC69E3D90CC8939CF9257EF2A0865B00FD4C` |
+| Start-ReaderManualRotation002.ps1 | `8BFD587F861E7E2E930D6E9BE282AC3BE1F9A356646C09CB606C8BED80B09F52` |
+
+Owner must start a complete new transcription, not continue the expired candidate. Keep the real Bitwarden item Pending / Not Yet Applied until verified rotation+reader login. Readiness token remains `READER_ROTATION_READY`; final console consent after saved-item equality remains `SAVED_AND_ROTATE`. Do not enter passwords into either console prompt or send screenshots. Ten-minute/longer cumulative display adds the explicitly accepted visual-exposure risk; all other residual limits remain. **Timing preparation PASSED; real002 outcome PENDING.** No automatic retry or FIRST LIVE DATA.

@@ -111,3 +111,7 @@ Owner explicitly authorized integrating the manually qualified handoff and one b
 ## Actual clipboard-free attempt stopped at deadline
 
 The owner reported insufficient time to transcribe the candidate. Verified local result at `2026-10-12T15:10:35.1311678+03:00` is `READER_MANUAL_ROTATION_BLOCKED_STOP`, `GenerateAndManualHandoff / DeadlineExpired`: two reveals, no verification, no final consent, no password-changing RPC/ATTEMPT marker and no ambiguous write. The candidate is not an effective SQL password. Detailed hashes, cleanup-field interpretation and proposed narrowly bounded timing remedy are in the integration report. No retry or source change was made; all evidence retained. **Rotation NOT PERFORMED / Handoff BLOCKED / Reader login NOT TESTED / FIRST LIVE DATA NOT STARTED. STOP for explicit owner direction.**
+
+## October13 explicitly owner-approved timing continuation
+
+Owner approved the proposed10-minute handoff/six-minute cumulative display remedy and a new handoff. The integration report records new independent002 sources,15 public timing checks, static proof of unchanged generator/SQL/security implementation and fresh read-only preparation at17:43:01+03. Old timeout evidence remains pinned and unmoved; prior-write absence gates and fresh CreateNew002 records prevent overwrites or automatic SQL retries. **New real outcome pending; no rotation/reader-login/import success is inferred from preparation or opening a console.**
