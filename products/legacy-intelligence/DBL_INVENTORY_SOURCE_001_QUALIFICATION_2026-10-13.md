@@ -14,6 +14,12 @@ Local corrected runner20744 bytes SHA256351FC1D4135D7BE36C7CAAA56473F50D15CB1FBE
 
 ## Preserved earlier preparation failure
 
+### Owner-interactive handoff actually opened — final live result pending
+
+Corrected qualification was published/remote-verified at1bfa4a73372f826c5b6798dda9bc1aaa16e58681 before launch. The pinned new launcher opened one visible owner PS7 console, PID80748, without elevation or secret arguments. Its current owner preflight at2026-10-13T17:31:57.468Z passed: YSEDU LocalSystem PID101852, sole approved192.168.56.1 direct listener52952 observed dynamically, Browser Stopped/Disabled, exact leaf binding and ForceEncryption0. This current endpoint came from the unchanged read-only helper, not a guessed/hardcoded port.
+
+Read-only artifact checks after launch found OWNER_PREFLIGHT present and no ATTEMPT/RESULT yet. Therefore **the first real SQL attempt has not started; owner hidden input is pending**, not a Reader/TLS failure or live inventory result. Owner instructions: READER_READY only at the public readiness prompt; current Reader password only at Read-Host hidden input; return sanitized final JSON, never password/screenshots. No rerun on STOP. A later live RESULT, if produced, must be reviewed separately before PASSED. No automatic retry or additional business scope.
+
 **INVENTORY SOURCE QUALIFICATION = BLOCKED BEFORE SQL / NOT PROVEN (earlier preparation).**
 **FIRST INVENTORY INSIGHT = NOT TESTED.** This is not a Reader metadata denial, TLS failure or newly observed balance. No password was requested, console launched, SQL connection made, inventory projection read, function invoked, import executed or SQLite file opened. No administrative fallback, grant, host/security/source change or automatic live retry.
 
