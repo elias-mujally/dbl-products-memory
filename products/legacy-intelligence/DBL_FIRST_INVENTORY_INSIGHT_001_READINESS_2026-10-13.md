@@ -5,7 +5,7 @@ Date: 2026-10-13, Asia/Aden. Owner direction: FIRST INVENTORY INSIGHT first; FIR
 **INVENTORY READINESS REVIEW = COMPLETED.**
 **FIRST INVENTORY INSIGHT #001 = NOT TESTED / NOT PASSED.** This document proposes a later separately authorized test, not permission to execute it. The historical scoped quantity is 37; 32 is not an established balance. No live SQL query, credential request, FIRST LIVE DATA rerun, ERP/UI operation, host change, Connector/Canonical/SQLite edit or implementation test was performed in this review.
 
-**Later owner-approved source qualification:** [preparation stopped before SQL](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md) at a new helper's archived-evidence array parsing defect. No Reader attempt, password request or function call; no automatic correction/retry. Readiness findings remain intact; source qualification is NOT PROVEN.
+**Later owner-approved source qualification:** [full sequential evidence](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md): initial pre-SQL preparation STOP at archived array parsing; separately authorized correction passed offline; then the first real Reader attempt connected with strict TLS and passed identity/READ_ONLY/inventory permissions, but stopped at unavailable current function definition (VIEW DEFINITION=0). No business projections or function invocation, dependencies not reached, no new balance/import/SQLite. Source qualification NOT PROVEN; separate read-only administrative metadata attestation would require owner authorization. No automatic retry/grant/fallback. Readiness findings remain intact.
 
 ## Evidence and implementation actually reviewed
 

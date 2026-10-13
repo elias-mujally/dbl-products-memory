@@ -6,6 +6,8 @@
 
 ## اقرأ أولًا
 
+**أحدث نتيجة فعلية نهائية:** [Inventory Source Reader metadata STOP](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md)،20:38+03: TLS وReader/READ_ONLY/SELECT/EXECUTE guards PASSED؛ تعريفFindAvQty غير مرئي وVIEW DEFINITION=0، safe codeREADER_FUNCTION_DEFINITION_UNAVAILABLE. FunctionCalls=0 وBusinessProjectionQueries=0؛ no new balance/import/SQLite، dependencies not reached. التصحيح المحلي ناجح لكن source qualification NOT PROVEN. المحاولة الحية مستهلكة؛ لا تعِد launcher/runner ولا تمس attempt/result أو permissions. إفادة إدارية read-only لتعريف/معاملات/تبعيات الدالة في نفسstage تحتاج موافقة منفصلة، ولا تعني admin acquisition أو إسقاط guard تلقائيًا. كلpending أدناه تاريخي. STOP.
+
 **أحدث تفويض/نتيجة:** تصحيح Inventory helper بإذن مستقل بعدcd29b69 اجتاز التأهيل المحلي دون SQL، [التفاصيل والبصمات](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md). runner المصحح351FC1D4 وwrapper520B23CD وlauncherDC1D5710 فقط؛ الأول القديمD7F100B4 يبقى محفوظًا ولا يُستخدم. أول محاولة Reader حية مسموحة بعد فحص حديث وإدخال مخفي، لكنها لم تُنفّذ بعد في هذا السجل. لا تدّع PASSED قبل قراءة فعلية ومطابقة؛ metadata invisibility تعني STOP دون grants/admin/function-first أو retry. لا Connector/Canonical/SQLite/import/FIRST LIVE DATA. فقرة STOP السابقة أدناه تاريخية وليست إلغاءً للتفويض الجديد.
 
 **أحدث STOP لتأهيل المصدر:** [Inventory source preparation failure](DBL_INVENTORY_SOURCE_001_QUALIFICATION_2026-10-13.md)، قبل SQL بسبب قراءة خاطئة لشكل array في أدلة تعريف الدالة. لا تنفّذ runner المحلي غير المؤهل أو تصلح وتعيد تشغيله تلقائيًا. لا تفسره كفشل Reader metadata أو كرصيد جديد؛ يلزم موافقة التصحيح المحدود ثم أول محاولة Reader.

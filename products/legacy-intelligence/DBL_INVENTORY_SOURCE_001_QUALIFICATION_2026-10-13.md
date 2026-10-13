@@ -1,4 +1,22 @@
-# Inventory Source Qualification #001 — preparation STOP before SQL
+# Inventory Source Qualification #001 — correction qualified; actual Reader metadata STOP
+
+## Current final result — first real Reader attempt BLOCKED at function definition
+
+**INVENTORY SOURCE QUALIFICATION = BLOCKED / NOT PROVEN. FIRST INVENTORY INSIGHT = NOT TESTED.** Local helper correction remained OFFLINE QUALIFIED, but that is not source qualification. The owner's returned JSON was matched to the actual local INVENTORY_SOURCE_001_RESULT.json, timestamp2026-10-13T17:38:15.149Z (20:38:15+03), SHA256 `C0809D89CDBF9ED132377480540BF8C5B35335DF872C9C1822A1ED3CF7CA027C`. Corrected runner pin351FC1D4 remained unchanged. Local ATTEMPT timestamp17:38:13.493Z proves the one authorized caller attempt started. The final wrapper reported exit1, no secret persisted/arguments/environment and no retry. [Selective nonsecret evidence](research/DBL_INVENTORY_SOURCE_001_LIVE_REVIEW_2026-10-13.json).
+
+Actual strict production-driver connection PASSED: approved direct TCP52952, DESKTOP-8QRQT7R hostname, encrypt=true, trustServerCertificate=false, minTLS1.2, pinned-only approved public CA, no instance discovery and zero transient-login retries. Successful connection is not a separately captured cipher/peer-socket transcript or positive revocation proof. Actual source/profile guards established expected SQL2014 server, frozen DB10/name, READ_ONLY, original/effective login and database user equal the limited Reader, no broad/admin/write rights. Additional inventory guards passed SELECT on units/measure/warehouse/movements and object EXECUTE on FindAvQty; broad DATABASE EXECUTE and movement INSERT/UPDATE/DELETE are0. No denial/write probes or privilege changes.
+
+**Specific live blocker:** at FunctionDefinitionIdentity the metadata query returned exactly one visible function object, but DefinitionVisible=false and HAS_PERMS_BY_NAME(...,'VIEW DEFINITION')=0. Safe code `READER_FUNCTION_DEFINITION_UNAVAILABLE`; no raw SQL exception published. This establishes Reader cannot provide the required current definition identity, not an absent function, wrong password or TLS failure. It does not prove the function changed or is encrypted; definition hash comparison and parameter/dependency queries were **not reached**. Archived matching definition alone cannot substitute for current source attestation.
+
+STOP occurred before all business projections: **FunctionCalls=0; BusinessProjectionQueries=0**. No actual new balance was obtained, neither37 nor32. Historical37 remains historical only; the result's Meaning text is the intended claim boundary, not an observation or successful inventory insight. No function invocation, inventory import, SQLite open, Connector/Canonical change, admin fallback or Reader grant. The single live caller attempt is consumed; do not rerun its helper or remove/replace ATTEMPT/RESULT.
+
+Pre/post environment at20:38:13/20:38:14+03 both passed with YSEDU Running/PID101852 and approved192.168.56.1:52952, SQLBrowser Stopped/Disabled, exact certificate binding and unchanged ForceEncryption0. CleanupFailures empty; no host/source/security/permission changes by this operation. No additional SQL operation, environment refresh, secret prompt or helper change was performed during this result review; only preserved nonsecret files were read and Product Memory updated. Accepted lab residuals remain CRL/OCSP UNKNOWN, single-host CA/trust scope and no comprehensive password-memory erasure guarantee.
+
+### Smallest separately authorized next step — not executed
+
+As specified in readiness2da930b section3, request a bounded **read-only administrative metadata attestation** for dbo.FindAvQty in this exact frozen DB: source identity/READ_ONLY, object identity/type, exact current definition SHA256, six parameter types/return type and exact local dependencies. No business reads, function invocation, account/grant change or Reader/admin acquisition fallback. Separately review how that fresh attestation can be bound to the same unchanged stage before authorizing a later Reader attempt; do not silently drop the metadata guard or treat this proposal as approval to modify the helper. No attestation tool/SQL execution or new diagnosis chain was started. **STOP pending owner authorization.**
+
+All pending statements below are preserved historical preparation/handoff snapshots, superseded by this actual result; the offline success and earlier pre-SQL failure remain distinct.
 
 ## Later owner-approved bounded correction — offline qualified; first Reader attempt pending
 
