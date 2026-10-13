@@ -29,3 +29,7 @@ Live test uses the existing production Connector with no replay/mock/fixture/ses
 CreateNew attempt/evidence/SQLite output guards remain. On any actual gate failure, preserve safe code and partial artifacts, close independently, STOP, no host/code/account remedy or repeat. CRL/OCSP remains UNKNOWN under the accepted laboratory policy, not revocation success or production readiness. No SQL restore/backup claim.
 
 Only final actual result and retained local canonical/SQLite/audit/provenance evidence permit **FIRST LIVE DATA #001 = PASSED**. Opening a console or any earlier reader login alone does not. Await owner interaction and final nonsecret result; do not launch again.
+
+## Authorized visible owner console launched
+
+Preparation was pushed and verified at `1d9f7489fda5ab636477e48d46aed8d5398c98db`. The unchanged hash-pinned existing launcher opened one ordinary visible owner console PID103956, returning `OWNER_READER_CONSOLE_STARTED_LIVE_RESULT_PENDING`. Owner was instructed to prepare the newly applied Bitwarden Reader value, type only public `READER_READY` at confirmation, then enter the password only at the hidden secure prompt. No password/argv/environment/clipboard/vault data was accessed by the agent. **Live outcome remains PENDING, not successful**; no second launcher or automatic retry. Final local nonsecret result must be reviewed before any PASSED decision.
