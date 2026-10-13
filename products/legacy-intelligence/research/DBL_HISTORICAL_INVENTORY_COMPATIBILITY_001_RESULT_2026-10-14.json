@@ -1,0 +1,64 @@
+{
+  "Decision": "HISTORICAL_INVENTORY_COMPATIBILITY_GATE_BLOCKED_STOP",
+  "At": "2026-10-13T20:59:17.773Z",
+  "LegacyBuildTree": "51f15b2a1113fc3742559f7d76dab350fb8bb83c",
+  "LegacyModulesHashChecked": 31,
+  "Node": "v22.23.2",
+  "FactSHA256": "0DE22CE4304839AC2D9807A45F448900C598F55177596A374D5A8E230A6FD670",
+  "OriginalEvidenceSHA256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC",
+  "checks": [
+    {
+      "name": "FullFactPayloadPresentInScratchColumn",
+      "status": "PASS",
+      "integrationClaim": false
+    },
+    {
+      "name": "OldInitializeWithUnknownMigration4",
+      "status": "FAIL",
+      "observed": "ACCEPTED_NOT_REJECTED"
+    },
+    {
+      "name": "OldSnapshotReaderMinor2_1",
+      "status": "FAIL",
+      "observed": "RETURNED_ID_NAME_WITHOUT_OBSERVATION"
+    },
+    {
+      "name": "OldBufferedGetLatestMinor2_1",
+      "status": "FAIL",
+      "observed": "RETURNED_ID_NAME_WITHOUT_OBSERVATION"
+    },
+    {
+      "name": "OldSnapshotReaderMajor3_0",
+      "status": "FAIL",
+      "observed": "RETURNED_ID_NAME_WITHOUT_OBSERVATION"
+    },
+    {
+      "name": "OldApplicationQueryMajor3_0",
+      "status": "FAIL",
+      "observed": "RETURNED_ID_NAME_WITHOUT_OBSERVATION"
+    },
+    {
+      "name": "OldBufferedGetLatestMajor3_0",
+      "status": "PASS",
+      "observed": "REJECTED_MAJOR_VERSION_BUT_STREAMING_PATH_STILL_ACCEPTED"
+    }
+  ],
+  "OldReaderObservationLossReproduced": true,
+  "MinorAndMajorBumpSufficient": false,
+  "UnknownMigrationRejected": false,
+  "SQLiteDiagnosticOnly": true,
+  "SQLiteFile": "C:\\Users\\user\\Documents\\Codex\\2026-08-25\\files-pasted-by-the-user-dbl\\outputs\\host-historical-inventory-compatibility-001-20261013\\OLD_READER_COMPATIBILITY_ONLY.sqlite",
+  "FullFactPayloadStoredAsCompatibilityProbeOnly": true,
+  "CanonicalHistoricalMappingImplemented": false,
+  "QuantityOnHandUsed": false,
+  "ProductionSQLiteTouched": false,
+  "PreviousFirstLiveDataSnapshotTouched": false,
+  "ImportOrchestratorCalls": 0,
+  "SQLServerConnections": 0,
+  "ERPStarted": false,
+  "CredentialsRequested": false,
+  "FunctionCalls": 0,
+  "BuildRepositoryChanged": false,
+  "Integration": "NOT_PASSED",
+  "Pending": "STOP; enforceable old-reader storage barrier requires separate design decision; do not continue integration or alter old migration checksums"
+}
