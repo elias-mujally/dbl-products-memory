@@ -4,7 +4,7 @@
 
 Owner explicitly approved one existing-reader password rotation after the qualified synthetic handoff at `8eb7175`. Target is only `DBL_HOST_W11_S2_Reader_20261009` on `DESKTOP-8QRQT7R\YSEDU`; database is `DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009`. Owner accepted bounded local visual exposure and independently accessible Bitwarden custody. No clipboard or Bitwarden API, service/network/TLS/trust/ACL/policy/grant change, replacement reader or FIRST LIVE DATA is authorized here.
 
-**Latest completed attempt: BLOCKED on handoff deadline; no password-changing RPC was attempted.** On October13 the owner separately approved the proposed timing remedy and a new bounded handoff. Its timing qualification and fresh administrative preparation passed; actual new handoff/rotation/reader login remain pending. Preparation success is not rotation success.
+**Final verified outcome: READER ROTATION = PASSED + SECURE HANDOFF = PASSED + READER LOGIN = PASSED.** The successful002 execution completed at `2026-10-13T17:50:59.2410976+03:00`; password change confirmed at `17:50:58.9788113+03:00`. Existing-reader password only; policies/permissions and frozen READ_ONLY state preserved. Prior failed/cancelled attempts remain historical evidence. FIRST LIVE DATA was not started and requires separate owner approval.
 
 ## Bounded implementation review
 
@@ -92,3 +92,28 @@ Owner must start a complete new transcription, not continue the expired candidat
 Preparation was pushed/verified at `94ff553ed86acd2bc0593d0ae76d6e6d3df71fd0`. A concurrent non-overlapping owner roadmap-concept commit was fetched/reviewed and preserved by rebasing the unpushed documentation commit; no force push or future-concept implementation. `.vscode` remains uncommitted.
 
 The pinned002 launcher opened one visible local owner console PID104280 and returned `OWNER_MANUAL_ROTATION_CONSOLE_STARTED_RESULT_PENDING`. Detailed new-candidate instructions and public readiness/final-consent tokens were delivered to the owner. First metadata-only status check found the console running with002 BEFORE/ATTEMPT/RESULT all absent, consistent with waiting at readiness; no password write or generated candidate is evidenced at that checkpoint. No vault/secret UI/process-memory/clipboard inspection. **Actual002 handoff, rotation and reader-login outcome remains PENDING**, not successful. Do not launch again; await final nonsecret result. FIRST LIVE DATA NOT STARTED.
+
+## Final real result verified: all three success gates passed
+
+Owner returned `READER_ROTATION_SECURE_HANDOFF_READER_LOGIN_PASSED`. The agent independently read only the local public002 RESULT, ATTEMPT and BEFORE records, verified their identities and unchanged qualified source pins, and matched the local RESULT to all fields in the owner's returned JSON. No new SQL connection, helper execution, clipboard/vault/secret-window/process-memory inspection or password-generation/rotation attempt was performed during this final evidence review.
+
+BEFORE at `2026-10-13T17:48:19.6247985+03:00` proves fresh approved integrated identity, observed port52952, same enabled SQL Reader with password policy/expiration enabled, frozen READ_ONLY database,23 exact historical grants and absence of known custom SQL capture. The preserved ATTEMPT at `17:50:58.9520542+03:00` records one bounded `sys.sp_password` parameterized RPC, owner saved/retrieved equality and explicit final consent. Qualified code permits only one RPC and zero automatic retries; this is application-path evidence, not an independent SQL audit trace or password disclosure.
+
+Final result at `17:50:59.2410976+03:00` confirms:
+
+- **Rotation:** attempted once, `PasswordChanged=true`, `AttemptOutcomeUnknown=false`, confirmed timestamp `17:50:58.9788113+03:00`. Only the fixed existing Reader was targeted; no new account or other-account/policy/grant update.
+- **Secure handoff:** one reveal, one verification, owner Bitwarden saved/closed/reopened/retrieved attestation and exact in-memory equality, protected capture API/readback/session registration and UI cleanup passed. Final owner consent passed before the write. Saved-item equality establishes the entered value, not independent inspection of the Bitwarden vault or disaster-recovery testing.
+- **Reader login:** actual strict-TLS direct-port login with the newly retrieved SecureString passed. Metadata-only identity, frozen READ_ONLY and least-privilege checks passed. Post-operation policy/role/grant comparison against the exact historical baseline passed. No business rows were read or imported.
+- `CleanupFailures=[]`, `Failure=null`, no clipboard API, no secret in public files/logs/arguments, no password-derived fingerprint published, no source business write, no service/TLS/trust/network change. `FirstLiveDataStarted=false`.
+
+| Preserved nonsecret evidence | SHA256 |
+| --- | --- |
+| READER_MANUAL_ROTATION_002_BEFORE.json | `54BF62A832E1DD74F52A5A00F52131439E72FB2472E3509007C23A094E267B13` |
+| READER_MANUAL_ROTATION_002_ATTEMPT.json | `1B6FFF69D0708F471B6C429C0570EF8A26F5B9C7B524C5980C5A61E75FEC5CE0` |
+| READER_MANUAL_ROTATION_002_RESULT.json | `63686E3FF762DC9E8A17FC36A9F1C492FA84EAADAE6C4BDC69B30C663BA948F1` |
+
+Hashes above identify public metadata/result files only. Neither a password nor any derived password hash was requested, inspected or published. Every old source and previous outcome remains preserved. `.vscode` is excluded from the documentation commit.
+
+Owner may now remove **Pending / Not Yet Applied** from the Bitwarden value saved and matched in this successful002 run only, and label it applied at the confirmed timestamp. Older cancelled/expired candidates are not active SQL passwords. Future authorized FIRST LIVE DATA must request the current saved value through its own hidden prompt; do not paste it into chat, arguments or logs.
+
+Residual risks remain: accepted transient visual exposure, Bitwarden not protected by the helper, no comprehensive process-memory/paging erasure guarantee, no independently proved vault backup recovery, and CRL/OCSP UNKNOWN under the laboratory policy (not revocation success or production qualification). **STOP after documentation. No FIRST LIVE DATA, source-data read/import, further rotation or maintenance is authorized by this result.**

@@ -115,3 +115,9 @@ The owner reported insufficient time to transcribe the candidate. Verified local
 ## October13 explicitly owner-approved timing continuation
 
 Owner approved the proposed10-minute handoff/six-minute cumulative display remedy and a new handoff. The integration report records new independent002 sources,15 public timing checks, static proof of unchanged generator/SQL/security implementation and fresh read-only preparation at17:43:01+03. Old timeout evidence remains pinned and unmoved; prior-write absence gates and fresh CreateNew002 records prevent overwrites or automatic SQL retries. **New real outcome pending; no rotation/reader-login/import success is inferred from preparation or opening a console.**
+
+## Final actual rotation, clipboard-free handoff and Reader login PASSED
+
+The owner's returned JSON matches the preserved local002 result at `2026-10-13T17:50:59.2410976+03:00`: **READER ROTATION = PASSED + SECURE HANDOFF = PASSED + READER LOGIN = PASSED**. One confirmed existing-reader password change at `17:50:58.9788113+03:00`, no ambiguous write, one reveal/verification, owner saved-item retrieval equality and final consent, strict reader login, post-policy/permissions and frozen READ_ONLY checks, and cleanup all passed. No clipboard, secret publication, source business access/write, service/TLS/trust change or FIRST LIVE DATA. Exact nonsecret file hashes, provenance limits and remaining laboratory risks are in the integration report. Final evidence review performed no new SQL connection or rotation.
+
+Only the Bitwarden value matched in this successful run may now be marked applied; all previous expired candidates remain inactive. FIRST LIVE DATA is **NOT STARTED** and needs separate owner approval. Prior evidence preserved; `.vscode` excluded. STOP.
