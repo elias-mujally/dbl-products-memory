@@ -2,6 +2,10 @@
 
 ## الحالة الحالية المزامنة — 2026-10-14
 
+**OUTBOUND EVIDENCE DISCOVERY 001 = COMPLETED؛ المنصرف NOT QUALIFIED في مجموعة الأدلة المفحوصة.** [التقرير والمصفوفة والبصمات](OUTBOUND_EVIDENCE_DISCOVERY_001_REPORT_2026-10-14.md) و[طلب الموافقة التالي المحدود](OUTBOUND_EVIDENCE_DISCOVERY_001_NEXT_APPROVAL_2026-10-14.md): فُحصت 33 ملفًا محليًا؛ طابقت 13 بصمة سابقة و4 بصمات إضافية من manifests القديمة. ظهرت 64 نسخة محفوظة لصفوف الحركات، لكنها تعود لهويتين فقط: صفر و+37. مسودة الصرف 5 أُلغيت بلا Save؛ لا رصيد32 مثبت ولا تفسير للمنصرف المجهول بأنه صفر.
+
+تحقق مستقل من البصمات والحساب ومقارنات S3، دون SQL/ERP أو تنفيذ منتج. التوصية حزمة offline لمستند منصرف محفوظ بالفعل إن وُجد، بتفويض مستقل؛ لا استئناف تشخيصات الحسابات أو إنشاء حدث تلقائيًا. الوارد والرصيد المؤهلان أدناه باقيان. تقرير توثيقي فقط ينتظر مراجعة المالك، ولا يغير main المنتج.
+
 DONE: PR13/14/16/15/17 مدمجة؛ main=415ad8acef5f5754487b83408bad6c9b9c58028e. FIRST HISTORICAL INBOUND MOVEMENT 001 PASSED؛ live inventory qualification تبقى NOT PROVEN، ولا يثبت ذلك اكتمال FIRST INVENTORY INSIGHT بصيغته الحية القديمة.
 
 [الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
