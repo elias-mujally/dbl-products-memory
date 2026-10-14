@@ -1,5 +1,15 @@
 # Legacy Intelligence — Roadmap
 
+## الحالة الحالية المزامنة — 2026-10-14
+
+DONE: historical balance/offline integration وSQLite safety/stabilization وone-event inbound. NEXT المقترحة Outbound Evidence Discovery 001؛ fallback expand inbound إذا لا دليل منصرف مؤهل. Sales/current inventory/generalized ledger/pilot gates باقية NOT QUALIFIED أو PARTIAL؛ ترتيب First Business Insights القديم محفوظ للتاريخ.
+
+[الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
+
+## السياق السابق المحفوظ — historical, superseded where inconsistent
+
+الفقرات التالية تعكس زمن تدوينها، حتى حيث تقول «أحدث» أو «التالي» أو STOP. لا تتجاوز الحالة الحالية أعلاه؛ فشل SQL/identity السابق لم يُعَد تصنيفه.
+
 آخر تحديث توجيهي: **2026-10-13 — First Business Insights sequence approved; inventory readiness review completed, execution not authorized.** تفاصيل خارطة الأساس أدناه تاريخية حيث تختلف مع هذا التسلسل.
 
 ## الأولوية التنفيذية المعتمدة — First Business Insights

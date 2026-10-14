@@ -1,5 +1,7 @@
 # Host W11 — S2 Targeted A/B Evidence & Reconciliation — 2026-10-09
 
+> Historical checkpoint preserved. [Merged state 2026-10-14](MERGED_STATE_2026-10-14.md) and [evidence register](EVIDENCE_REGISTER_2026-10-14.md) supersede earlier implementation/next-step gaps only within the qualified offline case. PR13/14/16/15/17 are merged; one inbound37 is qualified separately from historical balance37. No current stock, outbound, physical count, final GL posting, generalized ledger or live ERP qualification follows. Original failures/results/hashes below remain their original evidence; no raw re-verification or helper execution in this memory update.
+
 **Later separately authorized qualification:** the [post-S2 frozen-stage/independent-reader gate](MOTAKAMEL_HOST_W11_POST_S2_FROZEN_READER_QUALIFICATION_2026-10-09.md) subsequently PASSED for the exact selected case. The live-read acquisition gap and proposal below are historical for this round, not a still-unperformed backup claim. Next programming decision is READY FOR IMPLEMENTATION for the existing-contract **Item A identity-only** increment; useful scoped inventory/purchase contract, numeric/runtime decisions and all broader semantic limits below remain separate. No implementation, S3 or Gate B/C/partner/pilot promotion followed.
 
 ## Decision and bounded claim

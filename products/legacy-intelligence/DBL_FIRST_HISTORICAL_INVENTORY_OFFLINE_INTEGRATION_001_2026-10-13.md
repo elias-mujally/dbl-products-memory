@@ -1,5 +1,7 @@
 # First Historical Inventory Offline Integration #001 — BLOCKED / design decision required
 
+> Historical checkpoint preserved. [Merged state 2026-10-14](MERGED_STATE_2026-10-14.md) and [evidence register](EVIDENCE_REGISTER_2026-10-14.md) supersede earlier implementation/next-step gaps only within the qualified offline case. PR13/14/16/15/17 are merged; one inbound37 is qualified separately from historical balance37. No current stock, outbound, physical count, final GL posting, generalized ledger or live ERP qualification follows. Original failures/results/hashes below remain their original evidence; no raw re-verification or helper execution in this memory update.
+
 **FIRST HISTORICAL INVENTORY OFFLINE INTEGRATION = BLOCKED / NOT PASSED.** توقفت مراجعة التنفيذ عند شرط المالك5: العقود الحالية لا تحفظ حقيقة المخزون التاريخية مكتملة عبر Canonical/SQLite/SnapshotReader، دون اختزالها إلى quantityOnHand عام أو protocol جانبي جديد. لم يبدأ تعديل أو استيراد أو اختبار تكامل. [نجاح historical evidence binding السابق](DBL_HISTORICAL_INVENTORY_EVIDENCE_BINDING_001_2026-10-13.md) عند5374af0 محفوظ، والاختبار الحي السابق NOT PROVEN لم يتغير.
 
 ## الفحص الفعلي قبل STOP

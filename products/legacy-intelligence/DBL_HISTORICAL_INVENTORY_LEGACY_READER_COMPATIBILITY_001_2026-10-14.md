@@ -1,5 +1,7 @@
 # Historical Inventory Integration #001 — legacy-reader gate BLOCKED
 
+> Historical checkpoint preserved. [Merged state 2026-10-14](MERGED_STATE_2026-10-14.md) and [evidence register](EVIDENCE_REGISTER_2026-10-14.md) supersede earlier implementation/next-step gaps only within the qualified offline case. PR13/14/16/15/17 are merged; one inbound37 is qualified separately from historical balance37. No current stock, outbound, physical count, final GL posting, generalized ledger or live ERP qualification follows. Original failures/results/hashes below remain their original evidence; no raw re-verification or helper execution in this memory update.
+
 **FIRST HISTORICAL INVENTORY OFFLINE INTEGRATION = BLOCKED / NOT PASSED.** المالك وافق على optional observation وadditive JSON storage بعدbe8eff3، واشترط ضمان منع إسقاطها بواسطة قارئ قديم، معSTOP عند تعذر ذلك ضمن النطاق. أُجري اختبار توافق مستقل قبل تعديل العقد: **القارئ القديم والتطبيق أسقطا observation بصمت فعلًا رغم رفعالإصدار**. توقفت قبل implementation/import بدلاً من تقديم ضمان غير مثبت.
 
 لا يُلغى اعتماد الحقل السابق أو يُطلب اعتماد37 مجددًا؛ المطلوب الإضافي فقط هو قرار **حاجز تخزين ملزم للقارئ القديم**. FACT/HISTORICAL EVIDENCE BINDING ما زالا مؤهلين، والاختبار الحي السابق NOT PROVEN محفوظ.

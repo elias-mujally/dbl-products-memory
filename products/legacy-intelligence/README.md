@@ -1,5 +1,15 @@
 # Legacy Intelligence — Product Memory
 
+## الحالة الحالية المزامنة — 2026-10-14
+
+الحالة الحالية: DONE أول رصيد تاريخي وأول وارد 37 UA offline؛ V1 PARTIAL؛ المنصرف/مخزون اليوم/الجرد/الترحيل النهائي NOT QUALIFIED. هذه نقطة الدخول الحالية، وتفاصيل الحالة السابقة محفوظة أدناه.
+
+[الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
+
+## السياق السابق المحفوظ — historical, superseded where inconsistent
+
+الفقرات التالية تعكس زمن تدوينها، حتى حيث تقول «أحدث» أو «التالي» أو STOP. لا تتجاوز الحالة الحالية أعلاه؛ فشل SQL/identity السابق لم يُعَد تصنيفه.
+
 هذا المجلد هو الذاكرة المرجعية لمبادرة **Local-First Legacy ERP Intelligence Layer** داخل DBL.
 
 آخر مراجعة مع مستودع البناء: **2026-10-11 — PR #12 مدموج؛ origin/main=aa234df؛ الرأس المعتمد84eadfd محفوظ ضمن الدمج**
