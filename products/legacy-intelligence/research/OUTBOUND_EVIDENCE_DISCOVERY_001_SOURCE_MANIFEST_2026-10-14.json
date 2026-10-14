@@ -1,0 +1,268 @@
+{
+  "files": [
+    {
+      "path": "outputs/host-historical-inventory-binding-001-20261013/FACT.json",
+      "bytes": 2931,
+      "sha256": "0DE22CE4304839AC2D9807A45F448900C598F55177596A374D5A8E230A6FD670",
+      "recordedPin": "0DE22CE4304839AC2D9807A45F448900C598F55177596A374D5A8E230A6FD670",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-posts2-frozen-20261009/QUALIFICATION_EVIDENCE.json",
+      "bytes": 86628,
+      "sha256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC",
+      "recordedPin": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s2p-save-20261008/SAVE_EVIDENCE.json",
+      "bytes": 162919,
+      "sha256": "938D31CA336A765F231C9E95EE474C170CBC415C5322C769809754C64D006A61",
+      "recordedPin": "938D31CA336A765F231C9E95EE474C170CBC415C5322C769809754C64D006A61",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s2p-save-20261008/GATE_A_EVIDENCE.json",
+      "bytes": 35906,
+      "sha256": "8D15D6B0BB5B22A62FAD15A04E6EF4F4F6DA1CC4269132AAD6CA504B235EDF87",
+      "recordedPin": "8D15D6B0BB5B22A62FAD15A04E6EF4F4F6DA1CC4269132AAD6CA504B235EDF87",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s2-targeted-reconciliation-20261009/READ_ONLY_EVIDENCE.json",
+      "bytes": 91608,
+      "sha256": "32E187E8AC71F0895EC2E93BBF78FACC46AA8CB17088776E1F4DB208E222BCA4",
+      "recordedPin": "32E187E8AC71F0895EC2E93BBF78FACC46AA8CB17088776E1F4DB208E222BCA4",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s3-issue-discovery-20261008/READ_ONLY_EVIDENCE.json",
+      "bytes": 110035,
+      "sha256": "83C73240BFAE62755D429D0DA6FA00B54C9A74E8AD5ED45FEDF7F8565869000C",
+      "recordedPin": "83C73240BFAE62755D429D0DA6FA00B54C9A74E8AD5ED45FEDF7F8565869000C",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s3-expense-route-discovery-20261009/READ_ONLY_EVIDENCE.json",
+      "bytes": 110646,
+      "sha256": "B66BFA787897A6E800D8E27B261EAE68284E2FA80E73709C8C2D141E0C03112E",
+      "recordedPin": "B66BFA787897A6E800D8E27B261EAE68284E2FA80E73709C8C2D141E0C03112E",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s3-debit-account-qualification-20261009/READ_ONLY_EVIDENCE.json",
+      "bytes": 77818,
+      "sha256": "9D3BD5E23B2DF1BB1CDE029A1B4DA88D3032E04FB473162E2E867C8AD8AC1C93",
+      "recordedPin": "9D3BD5E23B2DF1BB1CDE029A1B4DA88D3032E04FB473162E2E867C8AD8AC1C93",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-zero-row-review-20261007/READ_ONLY_EVIDENCE.json",
+      "bytes": 17878,
+      "sha256": "B281E870DF3ADA47841E3CABE47461BE2E43DACB142CA5444F80B1BAD6BA2F23",
+      "recordedPin": "B281E870DF3ADA47841E3CABE47461BE2E43DACB142CA5444F80B1BAD6BA2F23",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/motakamel-v1-golden-01/B0-host-before.json",
+      "bytes": 555,
+      "sha256": "552336A952C73592307133B5AF1336961EACC4930296B10511446D423FBE2D48",
+      "recordedPin": "552336A952C73592307133B5AF1336961EACC4930296B10511446D423FBE2D48",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/motakamel-v1-golden-01/B0-status.json",
+      "bytes": 483,
+      "sha256": "5DD491217DC0F4CE36AC10E00FA78CD867F1C7A792EE737FF7DC8CCCD3F5F3C9",
+      "recordedPin": "5DD491217DC0F4CE36AC10E00FA78CD867F1C7A792EE737FF7DC8CCCD3F5F3C9",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-first-live-data-001-20261010/FIRST_LIVE_DATA_001_RESULT.json",
+      "bytes": 4974,
+      "sha256": "DEFA4ECA67EE7798C8837A7E80DD560E3E33254C2D85ADEE71F0F6A06B1A30FC",
+      "recordedPin": "DEFA4ECA67EE7798C8837A7E80DD560E3E33254C2D85ADEE71F0F6A06B1A30FC",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-first-live-data-001-20261010/FIRST_LIVE_DATA_001_CANONICAL.json",
+      "bytes": 562,
+      "sha256": "E41349ED3B8869D3045BD32746DD696E3CF1C1B53C5465A9DF124E3E11B71F26",
+      "recordedPin": "E41349ED3B8869D3045BD32746DD696E3CF1C1B53C5465A9DF124E3E11B71F26",
+      "pinMatched": true,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-baseline-20261006/backup-operation-result.json",
+      "bytes": 3670,
+      "sha256": "EFD8CA897A75C4BFF9FD090479D17EADD84CB4CFBC7A9FDF1B95782B41C0D5E9",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-cash-account-trial-20261008/EXPERIMENT_EVIDENCE.json",
+      "bytes": 115624,
+      "sha256": "E7CB49B00513B1C4C4279806AF34C3D8C707F7AD21A7905187B56261B892AD63",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-cashbox-currency-gate-20261008/PHASE_A_EVIDENCE.json",
+      "bytes": 130715,
+      "sha256": "71D6FFCC913DA049373CD2ADF6598172102C88DF2533E8D424C5948A13122560",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-cashbox-discovery-20261007/READ_ONLY_EVIDENCE.json",
+      "bytes": 32750,
+      "sha256": "33C3E9CD64E41FAE66C1A94A3F1B2705FB15280FC44001CBCE137FAB016865F0",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-cashbox-eligibility-20261008/READ_ONLY_EVIDENCE.json",
+      "bytes": 35456,
+      "sha256": "D8C11AE9D6A010C79E2366AB4B63227BEADEDA1500175829C09FBADB7372BC0D",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-cashbox-save-20261008/RELOAD_EVIDENCE.json",
+      "bytes": 27892,
+      "sha256": "D049B7DF3804FDD7A28B25B698A1BDAF6D38BB110070BEDA57F2B89264832AA6",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-cashbox-save-20261008/SAVE_EVIDENCE.json",
+      "bytes": 72768,
+      "sha256": "DE1635EC0F4DE5FC5B6B42BAF3512FEF1D4AE716029A3164A69A16C4E581428A",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-payment-decision-20261008/READ_ONLY_EVIDENCE.json",
+      "bytes": 37772,
+      "sha256": "87674FC249A758D2D23342CEC8442095986E78CE41C84D16C9DE05D485B85739",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-purchase-draft-qualification-20261008/DRAFT_EVIDENCE.json",
+      "bytes": 127211,
+      "sha256": "E4257E96B7654C783A8338589D193E0B3406D621DE32DB88931AFA2D94FBCFBE",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-s0b-route-comparison-20261007/READ_ONLY_EVIDENCE.json",
+      "bytes": 18166,
+      "sha256": "3C799629787D404A764440779F2F19AB6D6F09742B684EF91E84A2F4E09C7868",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-supplier-bounded-rootcause-20261008/READ_ONLY_EVIDENCE.json",
+      "bytes": 26683,
+      "sha256": "A78EAFB3C8382EA66041D616FEFBBA4E51D969A80020099B9DC634413D292818",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-supplier-continuation-20261008/READ_ONLY_EVIDENCE.json",
+      "bytes": 23541,
+      "sha256": "AAE9296920AB09940D6BEB203CCC666CE34861CE176D4C64977698A4B055E863",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-motakamel-supplier-route-diagnostic-20261008/READ_ONLY_EVIDENCE.json",
+      "bytes": 14031,
+      "sha256": "A4666DE316BCD0C1DA65A9F76EDB0C1003C7983D385A006EC4506B8857FAD6FA",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/motakamel-v1-boundary-inventory-01/19-bounded-reader-results.json",
+      "bytes": 4407,
+      "sha256": "A8A921130DD272C3AC8C493A2C82CA92ED3921B6FF93488BE0CDAA479239E79E",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/motakamel-backup-snapshot-01/stage-09-SNAPSHOT_READ_T0.json",
+      "bytes": 3796,
+      "sha256": "FFDBD5F6D5A19722D0440600D6B14BFFA69D7325B5D7223F7A2C2AE8CE193675",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/motakamel-backup-snapshot-01/stage-11-SNAPSHOT_READ_T1.json",
+      "bytes": 3797,
+      "sha256": "A2C6520EEA21187213CDA1453969E4A0D3F031A2B46B2131EEDCB4CF631E88E9",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/motakamel-backup-snapshot-01/stage-12-SNAPSHOT_READ_T2.json",
+      "bytes": 3797,
+      "sha256": "E07C98E572EC54455085CF6DAF21C57DB171E45ED593F230F1D79EA3BD544D0B",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-historical-inbound-movement-001-20261014/acceptance-o0cpQo/DERIVED_SNAPSHOT.json",
+      "bytes": 5448,
+      "sha256": "81B290B1FDD0CC5D447692C4895DAD40445AA40BDE844CAE20036253A7C8D2BC",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-historical-inbound-movement-001-20261014/acceptance-o0cpQo/RESULT.json",
+      "bytes": 3110,
+      "sha256": "5F9B3F38525AB25B2ED663D0AC2338D8E72F904349B765BDC6CB5C4F6700A7A2",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    },
+    {
+      "path": "outputs/host-historical-inbound-movement-001-20261014/acceptance-o0cpQo/FINAL_ARTIFACT_HASHES.json",
+      "bytes": 951,
+      "sha256": "CC54C910047250D34BD3A28E3A8BCE62A4085BC73DFE41BB1F92211E52138D2A",
+      "recordedPin": null,
+      "pinMatched": null,
+      "available": true
+    }
+  ]
+}
