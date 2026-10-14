@@ -1,5 +1,7 @@
 # Legacy Intelligence — Progress Checkpoint — 2026-09-25
 
+> Historical checkpoint preserved. [Merged state 2026-10-14](MERGED_STATE_2026-10-14.md) and [evidence register](EVIDENCE_REGISTER_2026-10-14.md) supersede earlier implementation/next-step gaps only within the qualified offline case. PR13/14/16/15/17 are merged; one inbound37 is qualified separately from historical balance37. No current stock, outbound, physical count, final GL posting, generalized ledger or live ERP qualification follows. Original failures/results/hashes below remain their original evidence; no raw re-verification or helper execution in this memory update.
+
 **Status:** Stage A Windows 11 Computer Use qualified; Motakamel Stage B blocked by host storage. This is a lab/platform milestone, **not** Motakamel connector, partner, or pilot qualification.
 
 ## Product and pilot direction

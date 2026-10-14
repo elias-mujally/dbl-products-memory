@@ -1,5 +1,15 @@
 # Legacy Intelligence — Current Status
 
+## الحالة الحالية المزامنة — 2026-10-14
+
+DONE: PR13/14/16/15/17 مدمجة؛ main=415ad8acef5f5754487b83408bad6c9b9c58028e. FIRST HISTORICAL INBOUND MOVEMENT 001 PASSED؛ live inventory qualification تبقى NOT PROVEN، ولا يثبت ذلك اكتمال FIRST INVENTORY INSIGHT بصيغته الحية القديمة.
+
+[الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
+
+## السياق السابق المحفوظ — historical, superseded where inconsistent
+
+الفقرات التالية تعكس زمن تدوينها، حتى حيث تقول «أحدث» أو «التالي» أو STOP. لا تتجاوز الحالة الحالية أعلاه؛ فشل SQL/identity السابق لم يُعَد تصنيفه.
+
 آخر تحديث توجيهي: **2026-10-13**. تفاصيل milestones الأساسية أدناه تاريخية؛ الحالة الأحدث في الفقرة التالية.
 
 ## First Business Insights — الحالة الأحدث

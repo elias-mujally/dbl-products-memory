@@ -1,5 +1,15 @@
 # Legacy Intelligence — Vision
 
+## الحالة الحالية المزامنة — 2026-10-14
+
+الرؤية طويلة المدى أدناه محفوظة. تقدم 14 أكتوبر يثبت historical read/understand/explain لحالة واحدة offline؛ لا يثبت Recommend/Execute/Automate أو generalized ledger/live ERP/GUI. الوارد37 والرصيد التاريخي37 حقيقتان مختلفتان.
+
+[الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
+
+## السياق السابق المحفوظ — historical, superseded where inconsistent
+
+الفقرات التالية تعكس زمن تدوينها، حتى حيث تقول «أحدث» أو «التالي» أو STOP. لا تتجاوز الحالة الحالية أعلاه؛ فشل SQL/identity السابق لم يُعَد تصنيفه.
+
 ## North Star
 
 > **Make existing businesses intelligent without forcing them to rebuild their technology.**

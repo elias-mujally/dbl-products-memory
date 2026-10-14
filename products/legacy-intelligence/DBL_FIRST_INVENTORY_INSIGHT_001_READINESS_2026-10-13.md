@@ -1,5 +1,7 @@
 # FIRST INVENTORY INSIGHT #001 — evidence-only readiness review
 
+> Historical checkpoint preserved. [Merged state 2026-10-14](MERGED_STATE_2026-10-14.md) and [evidence register](EVIDENCE_REGISTER_2026-10-14.md) supersede earlier implementation/next-step gaps only within the qualified offline case. PR13/14/16/15/17 are merged; one inbound37 is qualified separately from historical balance37. No current stock, outbound, physical count, final GL posting, generalized ledger or live ERP qualification follows. Original failures/results/hashes below remain their original evidence; no raw re-verification or helper execution in this memory update.
+
 Date: 2026-10-13, Asia/Aden. Owner direction: FIRST INVENTORY INSIGHT first; FIRST SALES & INVENTORY INSIGHT only after the first stage passes.
 
 **INVENTORY READINESS REVIEW = COMPLETED.**

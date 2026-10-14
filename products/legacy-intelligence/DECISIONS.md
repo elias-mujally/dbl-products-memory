@@ -1,5 +1,15 @@
 # Legacy Intelligence — Decisions
 
+## الحالة الحالية المزامنة — 2026-10-14
+
+قرار مزامنة من الواقع المدمج: preserve qualified historical balance separately from one inbound event؛ unknown outbound ليس صفرًا؛ draft5 لا يثبت32. Canonical2.1/Product v4 محفوظان؛ PR17 observation1.1.0 دون migration جديدة. هذه خلاصة القرارات المنفذة في PRs، لا تغيير product vision أو تفويض live execution.
+
+[الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
+
+## السياق السابق المحفوظ — historical, superseded where inconsistent
+
+الفقرات التالية تعكس زمن تدوينها، حتى حيث تقول «أحدث» أو «التالي» أو STOP. لا تتجاوز الحالة الحالية أعلاه؛ فشل SQL/identity السابق لم يُعَد تصنيفه.
+
 ## Bounded laboratory security decision — 2026-10-11
 
 Owner approved [one current YSEDU Leaf acceptance](DBL_LAB_LEAF_ACCEPTANCE_001_2026-10-11.md) on DESKTOP-8QRQT7R with a separately recorded CRL/OCSP UNKNOWN assurance gap. This supersedes the old maintenance helper's positive-revocation retention condition for this experiment only, not product/production TLS policy. Signature, trusted chain, current validity, ServerAuth and hostname validation remain mandatory; no Windows policy change or certreq/TLS validation bypass. One exact public CA addition to LocalMachine Root grants acknowledged machine-wide trust. Actual owner-admin acceptance PASSED at 22:53+03, one certreq call/exit0, exact Root retained, original key linked and matching pending request consumed; the attempt is spent. Independent read-only verification matched local evidence and machine stores, with SQL still running/unbound. SQL binding/restart/live login/import are not authorized by this decision. UNKNOWN is never PASSED/not-revoked; actual errors and unexplained partial state are STOP, and any later action needs separate approval.

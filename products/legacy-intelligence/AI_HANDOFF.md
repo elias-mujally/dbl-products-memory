@@ -1,5 +1,15 @@
 # AI Handoff — Legacy Intelligence
 
+## الحالة الحالية المزامنة — 2026-10-14
+
+ابدأ بالحالة المدمجة وسجل الأدلة ثم خطة NEXT. لا تستأنف STOP أو helpers التاريخية باعتبارها أمرًا حاليًا. PR17 merged؛ المنتج يملك Arabic application preview، وليس GUI. المهمة التالية المقترحة evidence discovery فقط.
+
+[الحالة والقبول والمخاطر](MERGED_STATE_2026-10-14.md) · [PRs/milestones/evidence](EVIDENCE_REGISTER_2026-10-14.md) · [NEXT](OUTBOUND_EVIDENCE_DISCOVERY_001_PLAN.md) · [تدقيق الملفات](MEMORY_AUDIT_2026-10-14.md)
+
+## السياق السابق المحفوظ — historical, superseded where inconsistent
+
+الفقرات التالية تعكس زمن تدوينها، حتى حيث تقول «أحدث» أو «التالي» أو STOP. لا تتجاوز الحالة الحالية أعلاه؛ فشل SQL/identity السابق لم يُعَد تصنيفه.
+
 ## الهدف
 
 هذا الملف يتيح لأي مساعد AI أو مطور استعادة سياق Legacy Intelligence بسرعة دون إعادة اختراع المنتج أو تغيير معماريته من الذاكرة الجزئية.
