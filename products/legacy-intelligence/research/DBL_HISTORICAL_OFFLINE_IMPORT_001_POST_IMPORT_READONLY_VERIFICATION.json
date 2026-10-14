@@ -1,0 +1,37 @@
+{
+  "Decision": "POST_IMPORT_READONLY_VERIFICATION_PASSED",
+  "At": "2026-10-14T03:48:15.159Z",
+  "CodeAndPreviousArtifactsPinsVerified": 424,
+  "SuccessSQLiteUnchangedAfterNegativeCopiesAndReadonlyInspection": true,
+  "CompleteStoredObservationEqualsReadback": true,
+  "ApplicationEqualsSnapshotReader": true,
+  "GenericQuantityOnHand": null,
+  "CommittedSnapshots": 1,
+  "Products": 1,
+  "StagingSessions": 0,
+  "ForeignKeyCheck": "PASSED",
+  "IntegrityCheck": "ok",
+  "AuditActions": [
+    {
+      "action": "connector.health.ok",
+      "count": 1
+    },
+    {
+      "action": "import.completed",
+      "count": 1
+    },
+    {
+      "action": "import.started",
+      "count": 1
+    }
+  ],
+  "ActualImportAttempts": 1,
+  "AuditSQLiteSHA256": "C0D509088327FA227B5C17929230C51514BB3DEE6D019BB7F139367C908B3AC6",
+  "ResultSHA256": "D8182EA292E4773C9247DBA25FA5EFCC33FAB2DC3C4729B996D947640BBE1199",
+  "ReadbackSHA256": "3EE29B0397C37961C67CB1A1F520E522A163C51930F50F7D893C7C5F249B6AF4",
+  "PreviewSHA256": "31A1DE046FDCFA9AD7E165347FF725B2D46CA2871E6756F72C5B0005D1E6E02C",
+  "SQLServerConnections": 0,
+  "NoAutomaticRetry": true
+}
+
+

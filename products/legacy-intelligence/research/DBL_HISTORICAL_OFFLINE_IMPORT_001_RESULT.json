@@ -1,0 +1,72 @@
+{
+  "Decision": "FIRST_HISTORICAL_INVENTORY_OFFLINE_INTEGRATION_PASSED",
+  "At": "2026-10-14T03:47:09.460Z",
+  "liveRead": false,
+  "ImportOrchestratorCalls": 1,
+  "ImportResult": {
+    "operationId": "e4c2b50a-ca94-417f-bf80-6891c5dcd10f",
+    "connectorId": "motakamel-host-w11-historical-inventory-v1",
+    "snapshotId": "historical-inventory-v1-0de22ce4304839ac2d9807a45f448900c598f55177596a374d5a8e230a6fd670",
+    "checkpoint": {
+      "connectorId": "motakamel-host-w11-historical-inventory-v1",
+      "snapshotId": "historical-inventory-v1-0de22ce4304839ac2d9807a45f448900c598f55177596a374d5a8e230a6fd670",
+      "contentFingerprint": "643cc2a5b464c34a06dbaead89eca062445ca64674c551d9095fe0c09e911f58",
+      "importedAt": "2026-10-14T03:47:09.371Z",
+      "schemaVersion": "2.1.0",
+      "recordCounts": {
+        "products": 1,
+        "customers": 0,
+        "sales": 0
+      }
+    },
+    "attempts": 1,
+    "batchesProcessed": 1,
+    "startedAt": "2026-10-14T03:47:09.336Z",
+    "completedAt": "2026-10-14T03:47:09.374Z",
+    "auditComplete": true,
+    "warnings": []
+  },
+  "CodeCommit": "0c325c8a0695bfe21747783548eb1ec7f60bfdeb",
+  "Preflight": "PASSED_PINNED_API_SHAPE_AND_IN_MEMORY_AUDIT",
+  "RoundTrip": "PASSED_AFTER_CLOSE_REOPEN",
+  "SnapshotReader": "PASSED_FULL_OBSERVATION",
+  "Application": "PASSED_FULL_OBSERVATION",
+  "ArabicPreview": "FROM_DBL_APPLICATION_READ_SCOPE",
+  "quantity": "37",
+  "quantityOnHandUsed": false,
+  "FactSHA256": "0DE22CE4304839AC2D9807A45F448900C598F55177596A374D5A8E230A6FD670",
+  "OriginalEvidenceSHA256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC",
+  "SQLiteSHA256": "23D50CD2E1FBEF9AEB6CFDE9E739D42C5CD18295045BD0BD76E2438C9972B91D",
+  "ReadbackSHA256": "3EE29B0397C37961C67CB1A1F520E522A163C51930F50F7D893C7C5F249B6AF4",
+  "PreviewSHA256": "31A1DE046FDCFA9AD7E165347FF725B2D46CA2871E6756F72C5B0005D1E6E02C",
+  "StoredNegativeCases": [
+    {
+      "kind": "missing",
+      "code": "INVALID_HISTORICAL_INVENTORY"
+    },
+    {
+      "kind": "scope",
+      "code": "INVALID_HISTORICAL_INVENTORY"
+    },
+    {
+      "kind": "cochangedQuantity",
+      "code": "SQLITE_HISTORICAL_FINGERPRINT"
+    },
+    {
+      "kind": "futureVersion",
+      "code": "SQLITE_UNSUPPORTED_SNAPSHOT_VERSION"
+    }
+  ],
+  "SQLServerConnections": 0,
+  "ERPStarted": false,
+  "FunctionCalls": 0,
+  "CredentialsRequested": false,
+  "ProductionSQLiteTouched": false,
+  "PreviousFirstLiveDataSnapshotTouched": false,
+  "OldLiveSourceQualification": "NOT_PROVEN_UNCHANGED",
+  "CurrentDefinition": "NOT_TESTED",
+  "NoAutomaticRetry": true,
+  "Pending": "STOP; independent owner review required before merge/live work"
+}
+
+
