@@ -2,6 +2,8 @@
 
 ## الحالة الحالية المزامنة — 2026-10-14
 
+**آخر نتيجة: ONE EXISTING OUTBOUND ACQUISITION 001 = BLOCKED / NO QUALIFYING EVENT عند preflight، وليس نتيجة بحث حي.** [التقرير](ONE_EXISTING_OUTBOUND_ACQUISITION_001_REPORT_2026-10-14.md) و[القرار التالي](ONE_EXISTING_OUTBOUND_ACQUISITION_001_NEXT_DECISION_2026-10-14.md): وافق المالك على read-only live acquisition، لكن prerequisite ربط عائلة مستند الصرف غير مؤهل في الأدلة السابقة؛ SQL/ERP attempts=0. لا تطلب التفويض العام ذاته، ولا تستبدل Reader المجمد بإداري أو تفترض صلاحيات على EFA الأصلية. يلزم mapping/metadata أصلي مؤهل أو قرار اكتشاف metadata-only محدد؛ لا جداول/joins/status بالتخمين، لا grants/transaction أو تنفيذ منتج. STOP.
+
 **آخر نتيجة: OFFLINE OUTBOUND EVIDENCE HANDOFF 001 = BLOCKED / EVIDENCE UNAVAILABLE.** اقرأ [تقرير التوفر والمصفوفة والبصمات](OFFLINE_OUTBOUND_EVIDENCE_HANDOFF_001_REPORT_2026-10-14.md) و[القرار التالي](OFFLINE_OUTBOUND_EVIDENCE_HANDOFF_001_NEXT_DECISION_2026-10-14.md) قبل أي عمل منصرف. لا حزمة إضافية محفوظة في النطاق المحلي؛21 مصدرًا عامًا كلها مفحوصة سابقًا و5pins مطابقة. لا تُعد Discovery أو مسودة5، ولا تحوّل النقص إلى صفر/32 أو تبدأ تنفيذًا. يلزم توفير مسار حزمة أصلية أو تفويض استحواذ مستقل عند الحاجة إلى اتصال جديد. لا SQL/ERP أو كود/استيراد/merge في هذا التسليم؛ STOP.
 
 ابدأ بالحالة المدمجة وسجل الأدلة ثم نتيجة التسليم والقرار التالي أعلاه. لا تستأنف STOP أو helpers التاريخية باعتبارها أمرًا حاليًا. PR17 merged؛ المنتج يملك Arabic application preview، وليس GUI. Discovery اكتملت، وHandoff توقف عند غياب الحزمة؛ الخطوة التالية توفير أدلة أصلية بتفويضها المحدد، وليس تكرار البحث نفسه أو تنفيذ منصرف.
