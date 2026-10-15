@@ -1,0 +1,191 @@
+{
+  "Decision": "PARTIAL / MISSING PREREQUISITES",
+  "Mode": "PLAN_ONLY",
+  "At": "2026-10-15T04:00:53.226Z",
+  "ProductMain": "415ad8acef5f5754487b83408bad6c9b9c58028e",
+  "MemoryMain": "e41e063af054969d126ad58232ecf13b27a460b8",
+  "ReviewedFiles": [
+    {
+      "path": "outputs/host-motakamel-posts2-frozen-20261009/QUALIFICATION_EVIDENCE.json",
+      "sha256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC",
+      "bytes": 86628,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-motakamel-s2p-save-20261008/SAVE_EVIDENCE.json",
+      "sha256": "938D31CA336A765F231C9E95EE474C170CBC415C5322C769809754C64D006A61",
+      "bytes": 162919,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-motakamel-s2p-save-20261008/GATE_A_EVIDENCE.json",
+      "sha256": "8D15D6B0BB5B22A62FAD15A04E6EF4F4F6DA1CC4269132AAD6CA504B235EDF87",
+      "bytes": 35906,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-motakamel-s2-targeted-reconciliation-20261009/READ_ONLY_EVIDENCE.json",
+      "sha256": "32E187E8AC71F0895EC2E93BBF78FACC46AA8CB17088776E1F4DB208E222BCA4",
+      "bytes": 91608,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-historical-inventory-binding-001-20261013/FACT.json",
+      "sha256": "0DE22CE4304839AC2D9807A45F448900C598F55177596A374D5A8E230A6FD670",
+      "bytes": 2931,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-motakamel-s3-issue-discovery-20261008/READ_ONLY_EVIDENCE.json",
+      "sha256": "83C73240BFAE62755D429D0DA6FA00B54C9A74E8AD5ED45FEDF7F8565869000C",
+      "bytes": 110035,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-motakamel-s3-expense-route-discovery-20261009/READ_ONLY_EVIDENCE.json",
+      "sha256": "B66BFA787897A6E800D8E27B261EAE68284E2FA80E73709C8C2D141E0C03112E",
+      "bytes": 110646,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-outbound-schema-linkage-001-20261015/RESULT.json",
+      "sha256": "FCD26900279B3E26D6ADCEABA47E66D91F417D04131D873A9DE80B8D30D21B98",
+      "bytes": 3412,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-outbound-schema-linkage-001-20261015/METADATA_VISIBILITY.json",
+      "sha256": "B145D8C4B8E85A02738A465D200B042BF55A1B4529069643B04238E2BBFDC6DC",
+      "bytes": 3493,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-historical-inbound-movement-001-20261014/acceptance-o0cpQo/RESULT.json",
+      "sha256": "5F9B3F38525AB25B2ED663D0AC2338D8E72F904349B765BDC6CB5C4F6700A7A2",
+      "bytes": 3110,
+      "pinMatched": true
+    },
+    {
+      "path": "outputs/host-historical-inbound-movement-001-20261014/acceptance-o0cpQo/FINAL_ARTIFACT_HASHES.json",
+      "sha256": "CC54C910047250D34BD3A28E3A8BCE62A4085BC73DFE41BB1F92211E52138D2A",
+      "bytes": 951,
+      "pinMatched": true
+    }
+  ],
+  "InspectedProductBlobs": {
+    "packages/connector-historical-inventory/src/inbound.ts": {
+      "revision": "415ad8acef5f5754487b83408bad6c9b9c58028e",
+      "sha256": "E85C9DA10506E34BF44FB7E850644B647570FC83C651F2A6F1C3A3B657B42573"
+    },
+    "docs/HISTORICAL_INBOUND_MOVEMENT_001.md": {
+      "revision": "415ad8acef5f5754487b83408bad6c9b9c58028e",
+      "sha256": "7CFEC7E4503DB1B4324847789A74726F1A7010BC7E84CE11A9FA0D668E8F84C8"
+    }
+  },
+  "RetainedInbound": {
+    "saveCount": 1,
+    "saveStartedAtUtc": "2026-10-08T17:26:23.116Z",
+    "source": {
+      "Server": "DESKTOP-8QRQT7R\\YSEDU",
+      "Database": "EFA12026",
+      "DatabaseId": 7,
+      "Branch": 1,
+      "Warehouse": 1,
+      "Item": "DBL_P001_ITEM_A",
+      "Unit": "UA",
+      "Package": 1
+    },
+    "headerKey": "1-44-1-0-1",
+    "documentNumber": 1,
+    "line": 1,
+    "lineId": "0c02c7b5-2210-46f0-a82c-cea2997e6d3a",
+    "receiptLineId": "9aa94621-dbf5-4702-9a98-4c17a6df3876",
+    "movementSerial": 2,
+    "movementContribution": 37,
+    "historicalAvailableQuantity": 37,
+    "unit": "UA",
+    "oldZeroPreserved": true,
+    "documentCorroborationMatched": true,
+    "state": {
+      "Bill_post": false,
+      "InvPost": true,
+      "gr_post": false
+    },
+    "beforeCounts": {
+      "Bills": 0,
+      "Bill_detail": 0,
+      "RT_BILLS": 0,
+      "rt_Bill_detail": 0,
+      "gr_note": 0,
+      "gr_detail": 0,
+      "rtnincm_note": 0,
+      "rtnincm_det": 0,
+      "Good_Trans_M": 0,
+      "Good_Transfer": 0,
+      "stk_adjustment": 0,
+      "stk_adjustment_det": 0,
+      "journal": 0,
+      "Journal_Master": 0,
+      "IncmRqustMstr": 0,
+      "IncmRqustDtl": 0,
+      "IncomRqustMstr": 0,
+      "IncomRqustDtl": 0,
+      "item_store": 0,
+      "opn_stock": 0,
+      "item_mov": 1
+    },
+    "afterCounts": {
+      "Bills": 1,
+      "Bill_detail": 1,
+      "RT_BILLS": 0,
+      "rt_Bill_detail": 0,
+      "gr_note": 1,
+      "gr_detail": 1,
+      "rtnincm_note": 0,
+      "rtnincm_det": 0,
+      "Good_Trans_M": 0,
+      "Good_Transfer": 0,
+      "stk_adjustment": 0,
+      "stk_adjustment_det": 0,
+      "journal": 2,
+      "Journal_Master": 1,
+      "IncmRqustMstr": 0,
+      "IncmRqustDtl": 0,
+      "IncomRqustMstr": 0,
+      "IncomRqustDtl": 0,
+      "item_store": 1,
+      "opn_stock": 0,
+      "item_mov": 2
+    }
+  },
+  "PlanningBlockers": [
+    "Current original-source scoped stock NOT TESTED",
+    "Authorized bounded before/after evidence route for new writable-source event NOT ESTABLISHED",
+    "Actual outbound family/key/status surface NOT QUALIFIED",
+    "Existing appropriate debit counterpart/currency and current Save requirements NOT QUALIFIED",
+    "Owner-designated ERP operator not named; Save authority not granted"
+  ],
+  "ExperimentParameters": {
+    "item": "DBL_P001_ITEM_A",
+    "branch": 1,
+    "warehouse": 1,
+    "unit": "UA",
+    "package": 1,
+    "proposedQuantity": 5,
+    "planningOnly": true
+  },
+  "SQLConnection": false,
+  "ERPAction": false,
+  "NewTransaction": false,
+  "CurrentStockRead": false,
+  "PermissionsChanged": false,
+  "ProductCodeChanged": false,
+  "SQLiteOpened": false,
+  "Import": false,
+  "OriginalEvidenceChanged": false,
+  "Limits": [
+    "Historical review only, not current stock or outbound qualification",
+    "Purchase-specific keys/flags/type codes/receipt association are not outbound mappings",
+    "No new backup/restore or live evidence acquisition was executed"
+  ]
+}
