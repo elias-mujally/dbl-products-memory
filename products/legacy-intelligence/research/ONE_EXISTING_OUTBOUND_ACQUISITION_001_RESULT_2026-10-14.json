@@ -1,0 +1,321 @@
+{
+  "Decision": "BLOCKED / NO QUALIFYING EVENT",
+  "At": "2026-10-14T20:33:28.883Z",
+  "Phase": "A_PREFLIGHT",
+  "Interpretation": "STOP before live candidate search; NOT a no-event result from a live checked business scope",
+  "ProductMain": "415ad8acef5f5754487b83408bad6c9b9c58028e",
+  "MemoryMain": "64a9b1a8126a00a00d89150238e8885026b17674",
+  "LocalReceiptPreparation": {
+    "initialHelper": "review-preflight.mjs",
+    "initialAttempt": "FAILED_BEFORE_RECEIPT_ARCHIVED_STAGE_ARRAY_TREATED_AS_OBJECT",
+    "correctedHelper": "review-preflight-002.mjs",
+    "sourceFilesChanged": false,
+    "SQLAttemptConsumed": false
+  },
+  "MandatoryStop": "DOCUMENT_LINKAGE_CANNOT_BE_ESTABLISHED_SAFELY_FROM_EXISTING_VERIFIED_EVIDENCE",
+  "ExpectedHost": "DESKTOP-8QRQT7R",
+  "ExpectedInstance": "YSEDU",
+  "ExpectedItem": "DBL_P001_ITEM_A",
+  "ExpectedBranch": 1,
+  "ExpectedWarehouse": 1,
+  "ExpectedUnit": "UA",
+  "ExpectedPackage": 1,
+  "PriorOriginalSource": {
+    "database": "EFA12026",
+    "databaseId": 7,
+    "isReadOnly": false,
+    "scope": "Recorded historical metadata; NOT current verification"
+  },
+  "PriorApprovedReaderTarget": {
+    "reader": "DBL_HOST_W11_S2_Reader_20261009",
+    "database": "DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009",
+    "databaseId": 10,
+    "isReadOnly": true,
+    "allowedTables": [
+      "item_detail",
+      "Item_Detail_Units",
+      "Measure",
+      "W_DETAIL",
+      "Bills",
+      "Bill_detail",
+      "gr_note",
+      "gr_detail",
+      "item_mov"
+    ],
+    "grants": [
+      {
+        "state": "DENY",
+        "permission": "ALTER",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "ALTER ANY ROLE",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "ALTER ANY USER",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "GRANT",
+        "permission": "CONNECT",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "CREATE FUNCTION",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "CREATE PROCEDURE",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "CREATE SYNONYM",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "CREATE TABLE",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "CREATE VIEW",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "DELETE",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "INSERT",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "TAKE OWNERSHIP",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "DENY",
+        "permission": "UPDATE",
+        "scope": "DATABASE",
+        "schema": null,
+        "object": null
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "item_detail"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "W_DETAIL"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "item_mov"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "Item_Detail_Units"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "Bill_detail"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "Bills"
+      },
+      {
+        "state": "GRANT",
+        "permission": "EXECUTE",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "FindAvQty"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "Measure"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "gr_detail"
+      },
+      {
+        "state": "GRANT",
+        "permission": "SELECT",
+        "scope": "OBJECT_OR_COLUMN",
+        "schema": "dbo",
+        "object": "gr_note"
+      }
+    ],
+    "scope": "Previously qualified frozen target only; not proof of access to original writable source"
+  },
+  "PreviousAccessMechanism": "Owner hidden Reader input -> private child stdin -> Node mssql/Tedious strict direct TCP; approved CA and hostname, no Browser, no retries. Reviewed only, not activated.",
+  "AccessOptionsNotUsed": [
+    "Windows Integrated administrative metadata route; not substituted for restricted Reader",
+    "ERP report regeneration; earlier stock-preview side-effect boundary unresolved"
+  ],
+  "RetainedS3": {
+    "saveCalls": 0,
+    "draftEligibility": "PARTIAL",
+    "documentProjectionFields": [
+      "Identity",
+      "Bills",
+      "Bill_detail",
+      "gr_note",
+      "gr_detail",
+      "journal",
+      "Journal_Master",
+      "item_store",
+      "opn_stock",
+      "FunctionDefinition",
+      "FunctionParameters",
+      "ScopedQuantity",
+      "ScopedMovementTotals"
+    ],
+    "stockTableCountsAreNotIssueLinkage": true
+  },
+  "RequiredOutboundMapping": {
+    "family": "UNQUALIFIED",
+    "headerTableAndKey": "UNQUALIFIED",
+    "lineTableAndKey": "UNQUALIFIED",
+    "lineToMovement": "UNQUALIFIED",
+    "lifecycleStateDecoder": "UNQUALIFIED"
+  },
+  "CurrentSourceIdentity": "NOT_TESTED_NO_SQL_OR_ERP_ACCESS",
+  "CurrentCompanyFiscalYear": "NOT_TESTED",
+  "CurrentReaderPermissions": "NOT_TESTED",
+  "CurrentTLS": "NOT_TESTED",
+  "CurrentPidPort": "NOT_TESTED",
+  "SQLConnectionAttempts": 0,
+  "SQLQueries": 0,
+  "BusinessQueries": 0,
+  "StoredProcedureCalls": 0,
+  "FunctionCalls": 0,
+  "ERPActions": 0,
+  "OriginalExportsAcquired": 0,
+  "IndependentLiveReconciliation": "NOT_RUN",
+  "QualificationMatrix": {
+    "savedHeader": "NOT_TESTED",
+    "linkedLine": "NOT_TESTED",
+    "inventoryMovement": "NOT_TESTED",
+    "itemQuantity": "NOT_TESTED",
+    "unitPackageScope": "NOT_TESTED",
+    "businessDate": "NOT_TESTED",
+    "lifecycleInventoryState": "NOT_TESTED",
+    "sameEventReconciliation": "NOT_TESTED",
+    "originalOutboundHashes": "UNAVAILABLE",
+    "eventCardinality": "NOT_TESTED"
+  },
+  "InspectedPins": [
+    {
+      "path": "outputs/host-motakamel-posts2-frozen-20261009/QUALIFICATION_EVIDENCE.json",
+      "sha256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC",
+      "pinMatched": true,
+      "bytes": 86628
+    },
+    {
+      "path": "outputs/host-motakamel-s3-issue-discovery-20261008/READ_ONLY_EVIDENCE.json",
+      "sha256": "83C73240BFAE62755D429D0DA6FA00B54C9A74E8AD5ED45FEDF7F8565869000C",
+      "pinMatched": true,
+      "bytes": 110035
+    },
+    {
+      "path": "outputs/host-motakamel-s2p-save-20261008/GATE_A_EVIDENCE.json",
+      "sha256": "8D15D6B0BB5B22A62FAD15A04E6EF4F4F6DA1CC4269132AAD6CA504B235EDF87",
+      "pinMatched": true,
+      "bytes": 35906
+    },
+    {
+      "path": "outputs/host-historical-inventory-binding-001-20261013/FACT.json",
+      "sha256": "0DE22CE4304839AC2D9807A45F448900C598F55177596A374D5A8E230A6FD670",
+      "pinMatched": true,
+      "bytes": 2931
+    },
+    {
+      "path": "outputs/host-first-live-data-001-20261010/Read-FirstLiveEnvironment001.ps1",
+      "sha256": "A11CBCAB8EF1B189343D8ADCA62AC572F945C9D3EA463B5D4BDC94BCCCF7B78A",
+      "pinMatched": true,
+      "bytes": 3598
+    }
+  ],
+  "OriginalEvidenceUnchanged": true,
+  "ProductCodeChanged": false,
+  "SourceChanged": false,
+  "PermissionsChanged": false,
+  "CredentialsRequested": false,
+  "SQLiteOpened": false,
+  "Import": false,
+  "Retry": false,
+  "HistoricalClaimsUnchanged": [
+    "37 UA qualified historical balance",
+    "+37 UA qualified inbound",
+    "Draft5 SaveCalls=0",
+    "Financial -3700 is not inventory outbound",
+    "Unknown outbound is not zero",
+    "32 UA unsupported"
+  ],
+  "NextDecision": "Identify/pin the authorized source, existing restricted access route, and verified outbound family/header/line/movement metadata or supply an existing qualified custodian export. Any new metadata acquisition/access/image/transaction expansion requires a separate exact decision. No repeated broad authorization request.",
+  "Limits": [
+    "Archived grants do not prove current effective permissions.",
+    "No live business search was performed, so no global or scoped absence is asserted.",
+    "Source names/year labels alone do not prove current company/fiscal context."
+  ]
+}
