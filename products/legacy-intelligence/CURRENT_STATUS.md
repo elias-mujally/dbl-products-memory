@@ -1,6 +1,8 @@
 # Legacy Intelligence — Current Status
 
-## الحالة الحالية المزامنة — 2026-10-14
+## الحالة الحالية المزامنة — 2026-10-15
+
+**OUTBOUND SCHEMA & LINKAGE QUALIFICATION 001 = BLOCKED / METADATA INACCESSIBLE.** [التقرير والبصمات](OUTBOUND_SCHEMA_LINKAGE_001_REPORT_2026-10-15.md) و[القرار التالي](OUTBOUND_SCHEMA_LINKAGE_001_NEXT_DECISION_2026-10-15.md): اتصال Reader فعلي واحد مع TLS صارمة إلى Post-S2/DB10/READ_ONLY نجح، وطابقت الصلاحيات المسجلة.3 batches metadata فقط؛9 جداول معروفة ظاهرة،8 أسماء مرشحة objectId=NULL وSELECT/VIEW DEFINITION=0، فلا تفسرها كعدم وجود أو كجداول صرف مؤكدة. لم تنفذ columns/keys/FKs أو قراءات أعمال أو UDF/SP أو retry. فحص offline مستقل للبصمات والصفوف/query hash نجح؛48 اختبارًا محليًا للأداة قبل الاتصال، لا تأهيل معاملات. الربط/status/date/cardinality ما زال غير مؤهل؛ **لا استئناف اقتناء منصرف**. التوصية حزمة metadata موثوقة من حافظ المصدر/الموفر بتفويضها المحدد، لا grants/admin fallback أو تكرار المسار نفسه.37/+37 باقيتان، و5 غير محفوظة؛ STOP، Draft توثيقي دون merge.
 
 **ONE EXISTING OUTBOUND — BOUNDED READ-ONLY ACQUISITION 001 = BLOCKED / NO QUALIFYING EVENT، في Phase A قبل SQL/ERP.** [التقرير](ONE_EXISTING_OUTBOUND_ACQUISITION_001_REPORT_2026-10-14.md) و[القرار المحدد التالي](ONE_EXISTING_OUTBOUND_ACQUISITION_001_NEXT_DECISION_2026-10-14.md): التفويض الحي مقبول، لكن شرط ربط مستند الصرف من schema مؤهلة سابقة غير متحقق. Reader المثبت تاريخيًا يخص Post-S2/DB10/READ_ONLY وتسعة SELECT objects؛ لا دليل أنه يغطي المصدر الأصلي/جداول الصرف. S3 counts لا تثبت header/line/movement أو حالة التأثير. SQLAttempts=0، businessQueries=0، exports=0؛ لا نتيجة بحث حي ولا ادعاء بفشل الوصول أو خلو ERP. تحتاج metadata أصلية مؤهلة من حافظ الأدلة أو قرار metadata-only linkage qualification محدود، دون grants/admin fallback/إنشاء حدث.37/+37 محفوظتان و5 لم تحفظ؛ **STOP، Draft توثيقي فقط دون merge.**
 
