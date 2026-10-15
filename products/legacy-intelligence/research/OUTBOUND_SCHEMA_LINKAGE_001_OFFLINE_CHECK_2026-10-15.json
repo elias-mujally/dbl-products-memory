@@ -1,0 +1,48 @@
+{
+  "At": "2026-10-15T06:07:26.1440785+03:00",
+  "Decision": "OFFLINE_METADATA_RECEIPT_CROSSCHECK_PASSED",
+  "Implementation": "PowerShell SHA256, native JSON arrays and independent name/flag counts; no live connection",
+  "ArtifactPinsMatched": 6,
+  "VisibilityQuerySHA256": "EBA7C4EC312ECE7EAE07B913DD10C43FD4E3C8B5E37EFBB97C503F79DA465539",
+  "VisibilityRows": 17,
+  "VisibleKnownObjects": 9,
+  "UnresolvedCandidateObjects": 8,
+  "KnownNamesMatchPinnedHistoricalAllowlist": true,
+  "AllVisibleObjectsAreTables": true,
+  "SelectKnown": 1,
+  "ViewDefinitionKnown": 0,
+  "UnresolvedObjectIds": "NULL",
+  "SelectCandidates": 0,
+  "ViewDefinitionCandidates": 0,
+  "SQLConnectionFromVerifier": false,
+  "NewBusinessReads": 0,
+  "TestsVerified": 48,
+  "IdentityGrantRawRowsRetained": false,
+  "Limits": "Identity/grants rely on the original live helper checks; no second SQL read. Invisible is hidden-or-absent, not nonexistence; candidate names are not proven outbound family.",
+  "Artifacts": [
+    {
+      "Hash": "FCD26900279B3E26D6ADCEABA47E66D91F417D04131D873A9DE80B8D30D21B98",
+      "File": "RESULT.json"
+    },
+    {
+      "Hash": "B145D8C4B8E85A02738A465D200B042BF55A1B4529069643B04238E2BBFDC6DC",
+      "File": "METADATA_VISIBILITY.json"
+    },
+    {
+      "Hash": "9100E7F492FC67C60A49E7655F49F747E73105D777A98C89BF1801EF65A10480",
+      "File": "SELF_TEST.json"
+    },
+    {
+      "Hash": "68FCD6618F5C2F19162211AD008448E63F9273EEB7DC4EFA5F3A1EC59E8D0E00",
+      "File": "metadata.mjs"
+    },
+    {
+      "Hash": "5E80D1EB25BC058DB7B3DFE897375A3624BEE40EEA8D62F25320F8B346BEAC9B",
+      "File": "Invoke-OutboundMetadata001.ps1"
+    },
+    {
+      "Hash": "1C40F16C51FF061BF7EE6CEF425F296EBBCF24228B593CADA84F9552154C895E",
+      "File": "Start-OutboundMetadata001.ps1"
+    }
+  ]
+}

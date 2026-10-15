@@ -1,0 +1,100 @@
+{
+  "Decision": "BLOCKED / METADATA INACCESSIBLE",
+  "At": "2026-10-15T03:04:10.145Z",
+  "Phase": "CandidateMetadataVisibility",
+  "SQLConnectionAttempts": 1,
+  "SQLConnection": true,
+  "MetadataBatches": 3,
+  "BusinessQueries": 0,
+  "UserFunctionCalls": 0,
+  "StoredProcedureCalls": 0,
+  "Retry": false,
+  "Exports": [
+    {
+      "file": "METADATA_VISIBILITY.json",
+      "sha256": "B145D8C4B8E85A02738A465D200B042BF55A1B4529069643B04238E2BBFDC6DC",
+      "querySHA256": "EBA7C4EC312ECE7EAE07B913DD10C43FD4E3C8B5E37EFBB97C503F79DA465539"
+    }
+  ],
+  "CleanupFailures": [],
+  "SourceMutation": false,
+  "PermissionsChanged": false,
+  "ProductCodeChanged": false,
+  "OriginalEvidenceChanged": false,
+  "ReaderSecretPersisted": false,
+  "Environment": {
+    "Decision": "CURRENT_LIVE_ENVIRONMENT_READONLY_PASSED",
+    "At": "2026-10-15T06:03:57.9307896+03:00",
+    "Host": "DESKTOP-8QRQT7R",
+    "Service": "MSSQL$YSEDU",
+    "ServiceAccount": "LocalSystem",
+    "Pid": 101852,
+    "Address": "192.168.56.1",
+    "Port": 52952,
+    "Dynamic": true,
+    "Browser": "Stopped/Disabled",
+    "CertificateBinding": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+    "ForceEncryption": 0,
+    "HostMutation": false
+  },
+  "TLS": "PASSED_STRICT_DRIVER_CONNECTION",
+  "Transport": {
+    "encrypt": true,
+    "trustServerCertificate": false,
+    "serverName": "DESKTOP-8QRQT7R",
+    "port": 52952,
+    "CA_SHA256": "A3FBC7905425B2E8C10F3A070B8713F876B94FC42B8D1243DEAD5D0F42889472",
+    "minTLS": "TLSv1.2",
+    "instanceDiscovery": false,
+    "transientLoginRetries": 0
+  },
+  "Reader": "PASSED_EXACT_FROZEN_IDENTITY_READONLY_NONADMIN",
+  "Source": {
+    "server": "DESKTOP-8QRQT7R\\YSEDU",
+    "database": "DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009",
+    "databaseId": 10,
+    "readOnly": true,
+    "originalProfile": "EFA12026 / DB7 / year2026, activity1/branch1 from pinned retained evidence",
+    "binding": "Historical test-image context; not a new business-source as-of or current ERP company-master read",
+    "archivedEvidenceSHA256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC"
+  },
+  "Permissions": "PASSED_EXACT_HISTORICAL_OBJECT_ALLOWLIST_NO_DB_ROLE",
+  "Visibility": {
+    "visibleKnownObjects": 9,
+    "visibleCandidateObjects": [],
+    "unresolvedCandidateObjects": [
+      "Good_Trans_M",
+      "Good_Transfer",
+      "stk_adjustment",
+      "stk_adjustment_det",
+      "IncmRqustMstr",
+      "IncmRqustDtl",
+      "IncomRqustMstr",
+      "IncomRqustDtl"
+    ],
+    "invisibleMeans": "Hidden or absent; not proof of nonexistence"
+  },
+  "Failure": {
+    "Phase": "CandidateMetadataVisibility",
+    "Code": "OUTBOUND_CANDIDATE_METADATA_HIDDEN_OR_ABSENT",
+    "SqlErrorNumber": null,
+    "RawErrorPublished": false
+  },
+  "PostEnvironment": {
+    "Decision": "CURRENT_LIVE_ENVIRONMENT_READONLY_PASSED",
+    "At": "2026-10-15T06:04:10.0257665+03:00",
+    "Host": "DESKTOP-8QRQT7R",
+    "Service": "MSSQL$YSEDU",
+    "ServiceAccount": "LocalSystem",
+    "Pid": 101852,
+    "Address": "192.168.56.1",
+    "Port": 52952,
+    "Dynamic": true,
+    "Browser": "Stopped/Disabled",
+    "CertificateBinding": "A51BD253B6083D0114428FCFBAD57D008CD102F5",
+    "ForceEncryption": 0,
+    "HostMutation": false
+  },
+  "Revocation": "UNKNOWN_ACCEPTED_LAB_GAP_NOT_POSITIVE_REVOCATION_PROOF",
+  "Pending": "STOP. No retry, admin/grants, business reads, acquisition/import or product implementation."
+}

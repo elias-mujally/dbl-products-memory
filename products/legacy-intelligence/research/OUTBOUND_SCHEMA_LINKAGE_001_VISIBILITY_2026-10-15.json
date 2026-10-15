@@ -1,0 +1,137 @@
+{
+  "At": "2026-10-15T03:04:09.245Z",
+  "Source": {
+    "server": "DESKTOP-8QRQT7R\\YSEDU",
+    "database": "DBL_HOST_W11_EFA12026_PostS2_Frozen_20261009",
+    "databaseId": 10,
+    "readOnly": true,
+    "originalProfile": "EFA12026 / DB7 / year2026, activity1/branch1 from pinned retained evidence",
+    "binding": "Historical test-image context; not a new business-source as-of or current ERP company-master read",
+    "archivedEvidenceSHA256": "7D742175B6652860C7974115F8A1CBB789F49D86ACAD4FC5DD40CFCE310E7BAC"
+  },
+  "QueryName": "visibility",
+  "QuerySHA256": "EBA7C4EC312ECE7EAE07B913DD10C43FD4E3C8B5E37EFBB97C503F79DA465539",
+  "Recordsets": [
+    [
+      {
+        "objectName": "Bill_detail",
+        "objectId": 821577965,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "Bills",
+        "objectId": 1333579789,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "Good_Trans_M",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "Good_Transfer",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "gr_detail",
+        "objectId": 1570104634,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "gr_note",
+        "objectId": 1794105432,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "IncmRqustDtl",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "IncmRqustMstr",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "IncomRqustDtl",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "IncomRqustMstr",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "item_detail",
+        "objectId": 206623779,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "Item_Detail_Units",
+        "objectId": 579533148,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "item_mov",
+        "objectId": 478624748,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "Measure",
+        "objectId": 1406628054,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "stk_adjustment",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "stk_adjustment_det",
+        "objectId": null,
+        "objectType": null,
+        "canSelect": 0,
+        "canViewDefinition": 0
+      },
+      {
+        "objectName": "W_DETAIL",
+        "objectId": 208719796,
+        "objectType": "U ",
+        "canSelect": 1,
+        "canViewDefinition": 0
+      }
+    ]
+  ]
+}
