@@ -25,6 +25,8 @@ npm run v1:refresh -- SOURCE_JSON SOURCE_SHA256 PRIVATE_STATE_DIRECTORY
 
 Run the command in a normal host session against files only. Reuse one new dedicated state directory for all repeated imports. The initial successful run-02 is preserved separately. No old reference balances are required by this entry point.
 
+Advisory-review requirements: use owner-private local storage, outside shared/network/cloud-synchronized locations. New POSIX state uses0700/0600 and refuses broad/non-owned directories without chmod; Windows privacy requires owner-provisioned ACLs, not a mode-bit assumption. A permanent empty bootstrap reservation permits resuming recognized incomplete initialization; do not delete it as a stale lock. Atomic final-name publication requires local hard-link support. Process interruption is tested; power-loss guarantees are not implied. At16 interrupted pending files the app stops for owner review without automatic cleanup. Unknown/corrupt final metadata remains blocked. See [the measured advisory review](ADVISORY_REVIEW.md).
+
 `applied` means a supported later/new observation committed; `replayed` means an existing acquisition was verified without a new checkpoint; neither alone means a fresh ERP read occurred. Inspect source/current capturedAt, snapshot/hash, current products/value and checkpoint count. Exit2 / committed-needs-attention means a committed snapshot requires follow-up, not a proven rollback.
 
 ## Failure handling

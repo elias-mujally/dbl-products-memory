@@ -230,6 +230,90 @@
       "kind": "sanitized product engineering self-review and exact limits",
       "bytes": 5214,
       "sha256": "76A1CDA97DA20E7C62C36AD4B26CB42C23DFE5210C1479F14B6B4910ACDEEA39"
+    },
+    {
+      "id": "advisory-source",
+      "kind": "advisory source snapshot; not executed proof",
+      "bytes": 16673,
+      "sha256": "930FC5BF653DB7F72F2C1D1ECD8B2D67CB776288DEBCA5DE0C30EFF47D371C2A"
+    },
+    {
+      "id": "advisory-prefixed-reproduction",
+      "kind": "pre-fix synthetic fault reproduction; four failures",
+      "bytes": 5693,
+      "sha256": "065B9DD8FA7DEB30C9F1154D08F1C8E2FB8DB500E45F664AB6338686EBBE1E5E"
+    },
+    {
+      "id": "advisory-bootstrap-correction",
+      "kind": "same four fault cases passed after correction",
+      "bytes": 401,
+      "sha256": "095F4CB7D7A8D1CB49DC70D87CD24464D0D06F4C6D6FEF436E7BAF2B1756A93A"
+    },
+    {
+      "id": "advisory-first-full-verification",
+      "kind": "initial corrected runtime; 412 passed and41skipped",
+      "bytes": 7025,
+      "sha256": "8DFDEE5434858FD8D8C862B7B7AE7832C2527413BBAC84C2D4A2B3AE12010653"
+    },
+    {
+      "id": "advisory-existing-state-compatibility",
+      "kind": "verified prior state copy import and replay; no ERP restore",
+      "bytes": 1397,
+      "sha256": "14F0FA71F08BBC907C3BAE6E3581399E7F54246661F275262D70078F27A57166"
+    },
+    {
+      "id": "advisory-ci216-diagnosis",
+      "kind": "failed Windows repeat cycle; competing worker lifetime",
+      "bytes": 966,
+      "sha256": "4DDB4734CD2715A259B926AC7BFAA7FC364BEC4D547052CB3DEFDF82F84B4DA1"
+    },
+    {
+      "id": "advisory-ci216-excerpt",
+      "kind": "preserved failed CI WAL excerpt; private runner details",
+      "bytes": 3218,
+      "sha256": "E4EFD5F9DC00CBDE4D485E78E67089EB684B4459B3B15DCEE1E3E57081F80955"
+    },
+    {
+      "id": "advisory-wal-prefixed-regression",
+      "kind": "pre-fix synthetic worker clock-jump failure",
+      "bytes": 1968,
+      "sha256": "38603A6BB2EE3D98FE6A59F6DEBC0B08B098C9504B883E85F0F13A105181D6AE"
+    },
+    {
+      "id": "advisory-wal-lifecycle-correction",
+      "kind": "21 passing helper lifecycle tests",
+      "bytes": 428,
+      "sha256": "F34FAE577BE117630AA17A53A8731E44EEB63789BF784B1F835F3EDE955EA9C3"
+    },
+    {
+      "id": "advisory-app-timeout-iteration",
+      "kind": "preserved failed local full run; app test timeout",
+      "bytes": 8553,
+      "sha256": "8047A5719A5FC23929A6C1EA08897D6A10EEF50ED6DD7A93389EED3F7EFDEE1A"
+    },
+    {
+      "id": "advisory-app-serialized",
+      "kind": "app files serialized; 29 passed and3POSIX skips",
+      "bytes": 395,
+      "sha256": "9BA3BF4CA1755DDB3D2F0954CD73CC9E1E2DB640D36EFF8E7A096EFD2B904DB8"
+    },
+    {
+      "id": "advisory-final-verification",
+      "kind": "final build/typecheck; 413 passed and41skipped; two actual artifacts",
+      "bytes": 7050,
+      "sha256": "2AB9007B540499FC0C360A3C6DEEB5B07ACCCD4022EA3C0F13732B0598CB0934"
+    },
+    {
+      "id": "advisory-final-runtime-boundary",
+      "kind": "diagnostic only; migration guards unchanged",
+      "bytes": 1431,
+      "sha256": "0182D84CE80CE9C7FFA37B3F1B467B1EBD73E7B880DB240D1BB6BA93C50DFBD4"
+    },
+    {
+      "id": "advisory-ci217",
+      "kind": "final cross-platform CI and ten-cycle WAL results",
+      "bytes": 3634,
+      "sha256": "97A75EF747F724DBA4917C4DA050BC878CE093F37A7FF4DAECE28B85D47F5F99"
     }
   ],
   "reference": {

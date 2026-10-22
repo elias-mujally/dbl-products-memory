@@ -4,6 +4,8 @@ Date: 2026-10-22. **PUBLISHED FOR REVIEW / NOT MERGED.** See [publication receip
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 
+**Latest — advisory review:** four synthetic pre-fix failures were reproduced and corrected in bootstrap/control/file publication. Fresh local build/typecheck and412passed/41skipped tests, including actual-source regressions, passed. A separate copy of saved valid DBL state preserved5products/1470SAR through import/replays. The original retained state and ERP are unchanged. Updated CI and merge recommendations are tracked in [the advisory record](ADVISORY_REVIEW.md); earlier counts below remain historical evidence.
+
 ## Preserved baseline
 
 Actual V1 acquisition/import/persistence/analysis passed at local code checkpoint e82e5d003f7c546f170698ef2a107773d0837488. Five quantities30/3/50/2/12, total1470SAR. Original source hash6487315E…B4547E; exact pins are in the public registry; private artifact locators are held separately by the owner. This does not update GitHub main by itself.
@@ -41,3 +43,11 @@ Unknowns remain: automatic capture/transfer; DB-enforced least-privilege SQL ide
 ## Publication engineering review — owner authorized; no merge
 
 The owner's later instruction authorizes branch publication and two PRs. Fresh review verification passed build/typecheck and397tests/38skips; application tests18, including a new actual two-artifact compiled-process regression. A separate second-source connector run passed28tests. These are new test invocations in temporary state, not more ERP captures or additional invocations into the retained operational state: source acquisitions remain2 and retained-state invocations7. See [publication review](PUBLICATION_REVIEW.md) for test-only fixes, failed-log preservation, scoped privacy inspection, transport/history decisions and publication receipts. The proposed [third acquisition](THIRD_CAPTURE_PLAN.md) remains unexecuted and requires separate ERP approval.
+
+## Graphify advisory engineering review — no new source acquisition
+
+Reproduced interrupted control/marker/source initialization and concurrent cold-start failures before correcting them. Bootstrap/admission and no-replace publication now cover those process faults. Final local build/typecheck: **413passed/41skipped**, including both actual owner artifacts; the retained actual business result remains five products,30/3/50/2/12 and1470SAR. A verified old-format DBL-state copy also passed later import, replay and historical replay. These are additional temporary-state tests, not new ERP captures or changes to the original seven retained-state invocations.
+
+Use owner-private local storage, outside shared/network/cloud-synchronized locations. New POSIX state uses0700/0600 and refuses broad/non-owned directories without chmod; Windows privacy requires owner-provisioned ACLs, not a mode-bit assumption. A permanent empty bootstrap reservation identifies resumable incomplete initialization. Atomic final-name publication requires local hard-link support. Process interruption is tested; power-loss guarantees are not implied. At16 interrupted pending files the app stops for owner review without automatic cleanup. Unknown/corrupt final metadata remains blocked. See [the measured advisory review](ADVISORY_REVIEW.md) for advisory dispositions, preserved CI216/test-timeout failures, test-harness correction and latest CI gate.
+
+**FACT — CI217 passed** on product head `f5471792a63c08039ebbbc4b96f40f94fd33325d`: Windows and Ubuntu build/typecheck/tests plus10 Worker/native-WAL cycles each. Public CI omits private actual-source fixtures; the local413/41 check includes them. [CI217](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/39843313410). No main merge or ERP change followed; actual changed-business-row refresh remains the next separately approved gate.

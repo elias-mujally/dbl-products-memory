@@ -9,7 +9,7 @@ Date:2026-10-22. **PRS OPEN / NOT MERGED.**
 | DBL Legacy Intelligence | [PR19](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/19) | Open for review; no merge |
 | DBL Product Memory | [PR8](https://github.com/elias-mujally/dbl-products-memory/pull/8) | Open for review; sanitized public documentation; no merge |
 
-Product reviewed head is `a3a023627345c7cc26d761ef79dc11a10095d14c`. Main base remains `415ad8acef5f5754487b83408bad6c9b9c58028e`. The four published commits preserve reviewed file trees and original local commit lineage:
+Initial publication reviewed head was `a3a023627345c7cc26d761ef79dc11a10095d14c`; the latest advisory-review head is recorded below. Main base remains `415ad8acef5f5754487b83408bad6c9b9c58028e`. The initial four published commits preserve reviewed file trees and original local commit lineage:
 
 | Original local checkpoint | Published equivalent | Identical Git tree |
 |---|---|---|
@@ -25,6 +25,17 @@ The initial sanitized memory content commit is `1fb6f78efea1d11b5eeda424b6568179
 - Fresh local Windows/Node22.23.2 build/typecheck and397passed/38skipped tests, with the two actual owner artifacts included. Second-source connector tests28passed. These are local actual-source/control checks, not new ERP captures.
 - Product [CI run215](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/39824166424) succeeded on Windows and Ubuntu. Both completed locked dependency installation, build, typecheck, tests and10 Worker/native-WAL cycles. The critical-threshold audit passed on Ubuntu; lower-severity vulnerability absence is not implied. CI does not receive the private owner artifacts and skips their gated tests.
 - Public memory's initial sanitized seal checked37evidence hashes and38relative V1 links. The publication receipt adds navigation links; validation is repeated before its branch update. Exact private evidence locators are retained in an owner-held nonpublished register keyed by evidence ID/hash. Endpoint/VM/database selectors, process IDs, raw exports and database/recovery files are excluded from new public memory.
+
+## Advisory-review follow-up — latest product head
+
+| Original local checkpoint | Published equivalent | Identical Git tree |
+|---|---|---|
+| 3b29431a39d3257279909b7cdf21405662b33c22 | db709081e15039507d50c4320a98f7b44b7cffd9 | 05ee9218edc1a7b53e69816aaf8b5ec9aabba010 |
+| e81cbb3da19ee66ded798c2dabf18376d620f1df | f5471792a63c08039ebbbc4b96f40f94fd33325d | a1c5fe0d0011c95f944ffd80b5a18aa0a80099f8 |
+
+The first follow-up reproduces and corrects interrupted bootstrap/publication and cold-start faults. The second corrects a competing test-worker lifetime exposed by failed CI216 and serializes app test files while preserving explicit process/thread concurrency. Both advance the existing branch without force or main changes. [Detailed advisory dispositions](ADVISORY_REVIEW.md) distinguish real faults, constrained platform privacy and metric-only warnings.
+
+Final local verification: build/typecheck,413passed/41skipped with both retained actual source artifacts. [CI217](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/39843313410) passed Windows and Ubuntu, including10 Worker/native-WAL cycles each. Ubuntu also exercised the new POSIX controls and critical-threshold dependency audit. Private actual artifacts are absent from CI. CI216 and the failed local timeout iteration remain preserved. Public evidence metadata now pins51artifacts; exact source locators remain in the extended owner-private register. The old37entries/hashes and historical reports are unchanged. No raw exports, databases, recovery binaries, private paths or endpoint selectors are added to public memory.
 
 ## Boundaries and next approval
 
