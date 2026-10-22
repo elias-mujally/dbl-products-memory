@@ -22,7 +22,7 @@
 
 المجلد: `products/legacy-intelligence/`
 
-الحالة: مبادرة منتج قيد التحقق والتخطيط ولم يبدأ مستودع كود مستقل لها بعد.
+الحالة: منتج قيد التطوير له مستودع كود مستقل elias-mujally/dbl-legacy-intelligence. أحدث تحديث V1 الهندسي نُشر في [PR الذاكرة8](https://github.com/elias-mujally/dbl-products-memory/pull/8) للمراجعة ولم يُدمج؛ راجع [نقطة الدخول](products/legacy-intelligence/engineering/v1/README.md) وحالة الكود قبل اعتماد أي ادعاء تنفيذ.
 
 ## قاعدة مهمة
 
