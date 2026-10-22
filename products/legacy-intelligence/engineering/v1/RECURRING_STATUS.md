@@ -1,6 +1,6 @@
 # Repeated integration — local execution status
 
-Date: 2026-10-22. **LOCAL DEVELOPMENT / NOT PUBLISHED.**
+Date: 2026-10-22. **PUBLISHED FOR REVIEW / NOT MERGED.** See [publication receipt](PUBLICATION_RECEIPT.md).
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 
@@ -20,7 +20,7 @@ Actual V1 acquisition/import/persistence/analysis passed at local code checkpoin
 - **Actual retained artifact:** four separate CLI processes produced applied/replayed/replayed/replayed, one checkpoint, five current products and value1470SAR. The source was copied once by hash into the private state archive; replay never added quantity or rolled back latest. SQLite integrity and foreign-key checks passed; audit contains four successful imports. These all replay the one real acquisition, not four source reads.
 - **DBL-state recovery:** a quiescent complete state ZIP (50,060 bytes) was expanded to a different directory. All15 constituent file hashes matched before replay; the restored compiled process returned replayed, checkpoint1, five products and1470SAR. This is not an ERP .bak or VM restore test.
 
-Code: local `471d104f8e5965229bf420f259fb7d47a94d391c`, tag `codex/v1-recurring-local-20261022`, branch `codex/v1-inventory-import`. The preserved pre-recurring tag/bundle remains available. No code or memory commit has been pushed, no PR opened and no main merged.
+At the original local seal, code was `471d104f8e5965229bf420f259fb7d47a94d391c`, tag `codex/v1-recurring-local-20261022`, branch `codex/v1-inventory-import`; no PR had yet been opened. The preserved pre-recurring tag/bundle remains available. Publication now has separate open PRs recorded in the linked receipt; no main merge occurred.
 
 The runtime app uses no fixed ERP balance-reference file. It records exact source bytes/hash, source/snapshot scope and acquisition time; applies strict supported-data checks and reopens the committed DB for verification. State files have an automatic `*` .gitignore guard, but this is not encryption or a substitute for owner file access control.
 

@@ -1,6 +1,6 @@
 # V1 publication review and subsequent approvals
 
-Status: **OWNER AUTHORIZED BRANCH/PR PUBLICATION; PREPARATION COMPLETE; MERGE NOT AUTHORIZED**. Date:2026-10-22.
+Status: **PUBLISHED FOR REVIEW; MERGE NOT AUTHORIZED**. Date:2026-10-22. [Final publication receipt](PUBLICATION_RECEIPT.md).
 
 [Index](README.md) · [Measured status](RECURRING_STATUS.md) · [Evidence](EVIDENCE.json) · [Third-capture proposal](THIRD_CAPTURE_PLAN.md)
 
