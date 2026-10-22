@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "LOCAL_DRAFT_NOT_PUBLISHED",
+  "status": "PUBLISHED_FOR_REVIEW_NOT_MERGED",
   "updated": "2026-10-22",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
