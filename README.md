@@ -49,7 +49,7 @@
 
 المجلد: [`products/legacy-intelligence/`](products/legacy-intelligence/)
 
-الحالة: مبادرة منتج قيد التحقق والتخطيط ولم يبدأ مستودع كود مستقل لها بعد.
+الحالة: منتج قيد التطوير له مستودع كود مستقل elias-mujally/dbl-legacy-intelligence. أحدث تحديث V1 الهندسي مُجهز محليًا ولم يُنشر بعد؛ راجع [نقطة الدخول](products/legacy-intelligence/engineering/v1/README.md) وحالة الكود قبل اعتماد أي ادعاء تنفيذ.
 
 الرؤية: Local-First Vendor-Neutral Intelligence & Action Layer فوق الأنظمة القديمة والمحلية، مع تطور مستقبلي نحو Universal Legacy Intelligence Runtime وIndustry Packs.
 

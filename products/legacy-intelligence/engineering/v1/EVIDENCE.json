@@ -1,0 +1,309 @@
+{
+  "format": "dbl.memory.evidence-register.1",
+  "status": "LOCAL_DRAFT_NOT_PUBLISHED",
+  "updated": "2026-10-22",
+  "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
+  "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
+  "productBaseCommit": "415ad8acef5f5754487b83408bad6c9b9c58028e",
+  "baselineCodeCommit": "e82e5d003f7c546f170698ef2a107773d0837488",
+  "baselineCodeTag": "codex/v1-inventory-pass-20261022",
+  "artifactCustodian": "Lab owner; exact locators retained in a separate nonpublished evidence register keyed by artifact ID and SHA-256.",
+  "artifacts": [
+    {
+      "id": "context",
+      "kind": "read-only context and feasibility",
+      "bytes": 31740,
+      "sha256": "309D81592A6497422796DBE7ABFF4E5628B073BE51926E4CF014E932FB9DC82F"
+    },
+    {
+      "id": "vmconnect",
+      "kind": "measured window and GUI input recovery",
+      "bytes": 3195,
+      "sha256": "B6E16AB31CBFE96575094EE90237E6A89F48C5CFF3848CC51342EED435AC3EC4"
+    },
+    {
+      "id": "fmma",
+      "kind": "owner SQL prerequisite probe; historical",
+      "bytes": 2429,
+      "sha256": "6713631636189EF59FDA56DCF4F6A7BAAEE57698AFD44FF9B290167561553875"
+    },
+    {
+      "id": "startup",
+      "kind": "bounded GUI verification after owner update",
+      "bytes": 2720,
+      "sha256": "87C09F6DE1E4DF146F66CEF77AA612CAE430330E5D857CD919E3E1BEFBD8EEEF"
+    },
+    {
+      "id": "first-item",
+      "kind": "ERP first saved item persistence",
+      "bytes": 1892,
+      "sha256": "63AE3940DBDAA76652A3F97406D8DC15CD8D8827888358EDBCE6B771D671D307"
+    },
+    {
+      "id": "warehouse-gate",
+      "kind": "warehouse CHECK read-only diagnosis; historical",
+      "bytes": 12841,
+      "sha256": "EA6570E47A8E04C2D15B697B780DD0B55285320F02573C0ED5D7E40761BE50BC"
+    },
+    {
+      "id": "account-role",
+      "kind": "local help and account inspection; historical stage",
+      "bytes": 5261,
+      "sha256": "86501F7D242DA08BCA6A37A322CD124764AD83F05FCFDFDE8DA4556D29E42DBE"
+    },
+    {
+      "id": "execution",
+      "kind": "GUI fixture execution sequence",
+      "bytes": 12526,
+      "sha256": "E742CC035292192BD64008AA3DA9F98DBEB3D414E29662E7E7DB45F89BE871CB"
+    },
+    {
+      "id": "erp-reference",
+      "kind": "actual ERP GUI/report reconciliation reference",
+      "bytes": 7853,
+      "sha256": "F173C5489CC01300D46B75385171A3719C84B0EBABBA290879DCDDE325DD66DC"
+    },
+    {
+      "id": "collector",
+      "kind": "owner reviewed SELECT-only acquisition block",
+      "bytes": 8554,
+      "sha256": "F56DCCA1F9E96DCA2228E33AE8121446A4B9DBC6B8A44B265ADA3122D08CBD26"
+    },
+    {
+      "id": "raw-baseline",
+      "kind": "actual owner SQL acquisition; PRIVATE NOT COPIED",
+      "bytes": 1063450,
+      "sha256": "6487315E276173BD123F4EB3CAA4A10FC800BCEB5745562ED7DD897929B4547E"
+    },
+    {
+      "id": "qualification",
+      "kind": "actual source row reconciliation",
+      "bytes": 7047,
+      "sha256": "151B8E29ECC3EBE96296FAF2AFBF6752C7CFFE22D929AAE1F16EBBC81F2CB2BE"
+    },
+    {
+      "id": "import",
+      "kind": "actual ImportOrchestrator, persistent SQLite and audit",
+      "bytes": 5838,
+      "sha256": "512F5E0C8AF9AAC5F804BD693CFD6BFD7BE96DC3B8E2D5F7F570B2B564CD71C8"
+    },
+    {
+      "id": "readback",
+      "kind": "actual independent-process application readback",
+      "bytes": 6081,
+      "sha256": "C71AAC12D1A486E036A8CA1E7BDF468AB28D115951054EC38203CB49EBDA0309"
+    },
+    {
+      "id": "manifest",
+      "kind": "baseline code/artifact checksum register",
+      "bytes": 4956,
+      "sha256": "AC0E5DE4F14B41D9007C5A8F18D1D1C88B64066E6D993DDB2467A091207F9168"
+    },
+    {
+      "id": "code-recovery",
+      "kind": "local code Git bundle; no raw source or databases",
+      "bytes": 306271,
+      "sha256": "45DBA6EAB048074469EAB1AB7F7072CC1E6AB1053B4C7E5E228251EC5DBF789C"
+    },
+    {
+      "id": "repeated-actual",
+      "kind": "four actual artifact invocations / independent processes",
+      "bytes": 1828,
+      "sha256": "F2E3A7FC50A6326604596593217D3139DA74C926BF37C88CCAD8848B0636ACFD"
+    },
+    {
+      "id": "state-integrity",
+      "kind": "readonly SQLite integrity/FK/count checks",
+      "bytes": 411,
+      "sha256": "BBCC73E08C80C85EA772B090CF02A308D0DB5CA30077A8254AA7863FC4FDEB37"
+    },
+    {
+      "id": "state-backup-restore",
+      "kind": "quiescent DBL-state zip and restored replay; not ERP recovery",
+      "bytes": 2826,
+      "sha256": "D013E8538A34ED8F404CC5876091ACACF89F00A3B042628D62E5B2C367021F70"
+    },
+    {
+      "id": "state-backup",
+      "kind": "PRIVATE operational recovery artifact; NOT COPIED",
+      "bytes": 50060,
+      "sha256": "C6C630F4E668413657B9B939AC11231158D7BA38C0CE7FD170C770768BADA47A"
+    },
+    {
+      "id": "final-test-log",
+      "kind": "full build/typecheck/396 pass/38 skip",
+      "bytes": 7013,
+      "sha256": "DAAEA57F5CA17A30A72180E4D0F83BBCCC640DDCF9F69C83C83BC4A0A93B98C3"
+    },
+    {
+      "id": "runtime-boundary",
+      "kind": "corrected migration checksum diagnostic; version1 matches, version2 differs",
+      "bytes": 1373,
+      "sha256": "48FDC814B2BFF7123F699D11C57CE06B98A5FB7D538869F2C56DC03C251064A8"
+    },
+    {
+      "id": "second-source",
+      "kind": "owner-provided later V1 artifact; exact received bytes retained privately",
+      "bytes": 1063450,
+      "sha256": "E10B8A753C02CD27BB71026D7CAF20E86315707F38EA7824001E4469959E9DC7"
+    },
+    {
+      "id": "second-source-comparison",
+      "kind": "independent hash, profile qualification and full structural source comparison",
+      "bytes": 2027,
+      "sha256": "AA5F29464E82CF549D312FF9A16AD8F3243A0FAE94C95C1FB8491859C5AF6F1E"
+    },
+    {
+      "id": "second-refresh-result",
+      "kind": "same-state new capture, replay, historical replay and read-only integrity checks",
+      "bytes": 4228,
+      "sha256": "3D124521E2F09F287699370167BE083C96F661C8AF84AA9742CDD7B0286F3C14"
+    },
+    {
+      "id": "second-fresh-import",
+      "kind": "actual compiled CLI stdout; applied later observation",
+      "bytes": 3585,
+      "sha256": "FFA0CD009B6F0E18B8157AA3C0634ECAE5FF5934FB7A85F30C8CF74795987EBE"
+    },
+    {
+      "id": "second-fresh-replay",
+      "kind": "actual compiled CLI stdout; same observation replay",
+      "bytes": 3586,
+      "sha256": "043582E1CE07D0424E906EE1F1CE94AB2BD321DB95BC97810EDBEAAAD43735AB"
+    },
+    {
+      "id": "second-historical-replay",
+      "kind": "actual compiled CLI stdout; first source replay leaves later state current",
+      "bytes": 3586,
+      "sha256": "55B019D419356880A7B1AF797D096ED38B935111CC648AFC2D432955C74913D8"
+    },
+    {
+      "id": "second-actual-source-test",
+      "kind": "existing actual-owner test against second artifact; one passed",
+      "bytes": 387,
+      "sha256": "24E16FE738E8EB43A68F40D999344ED3136740194DB83142DC17DE8C7DA2441E"
+    },
+    {
+      "id": "second-refresh-report",
+      "kind": "qualification addendum; prior report and manifest retained unchanged",
+      "bytes": 5706,
+      "sha256": "F01FD428D10A030522CE97EDD2E96ADC64CC9F7E192E008D6EFB1E7E82117FEB"
+    },
+    {
+      "id": "second-sanitized-product-summary",
+      "kind": "tracked sanitized product evidence; no raw rows",
+      "bytes": 1722,
+      "sha256": "8773C488D0275B0D4C8C5FE2C4E4B7EDA46DD607F706DEAF14CC3920071DDB85"
+    },
+    {
+      "id": "publication-review-failed-typecheck",
+      "kind": "preserved preliminary nullable-test compilation failure; not acceptance",
+      "bytes": 3322,
+      "sha256": "5F132B24282FCE3E3976FE08E219DB926EE3786F4B6D5E92A0299892DB7E98D9"
+    },
+    {
+      "id": "publication-review-verify",
+      "kind": "fresh Windows Node22 full build/typecheck/test acceptance:397pass38skip",
+      "bytes": 7014,
+      "sha256": "D8B8F065810EABF050580F90E6EF0C3CA0DA8100E3F810F894C36068924FC17F"
+    },
+    {
+      "id": "publication-review-second-source",
+      "kind": "connector tests on second actual owner artifact:28pass",
+      "bytes": 417,
+      "sha256": "6C8ECA547B83F0B1A5A160CDBF781158D7DA6E8449EE2450ED847649FDA26910"
+    },
+    {
+      "id": "publication-review-runtime-boundary",
+      "kind": "measured mismatched migration versions; diagnostic, not required failure",
+      "bytes": 1431,
+      "sha256": "0182D84CE80CE9C7FFA37B3F1B467B1EBD73E7B880DB240D1BB6BA93C50DFBD4"
+    },
+    {
+      "id": "publication-review-content-initial",
+      "kind": "initial scoped commit-history/current-edit content inspection; later publication seals final scope separately",
+      "bytes": 1382,
+      "sha256": "D90DD5A4DEE10DD48A00C6C9AAFE54176AD36FC8EE06F9B85371341C844D1073"
+    },
+    {
+      "id": "publication-product-review",
+      "kind": "sanitized product engineering self-review and exact limits",
+      "bytes": 5214,
+      "sha256": "76A1CDA97DA20E7C62C36AD4B26CB42C23DFE5210C1479F14B6B4910ACDEEA39"
+    }
+  ],
+  "reference": {
+    "acquiredAt": "2026-10-22T07:00:55.5284517+03:00",
+    "quantities": {
+      "DBL-T01": "30",
+      "DBL-T02": "3",
+      "DBL-T03": "50",
+      "DBL-T04": "2",
+      "DBL-T05": "12"
+    },
+    "value": "1470",
+    "currency": "SAR",
+    "scope": "branch1 / warehouse1 / unit1 / pack1",
+    "rowCounts": {
+      "item_detail": 5,
+      "item_mov": 10,
+      "item_store": 5,
+      "W_DETAIL": 1,
+      "gr_note": 3,
+      "gr_detail": 6,
+      "journal": 10,
+      "Journal_Master": 5,
+      "opn_stock": 0,
+      "rtnincm_note": 0,
+      "rtnincm_det": 0
+    }
+  },
+  "backupLimits": "Guest native .bak files visually verified; not externally copied, hash-verified or restore-tested here. Raw JSON is not an ERP restore backup.",
+  "privacy": "Metadata, hashes and synthetic-lab results only. No raw SQL artifacts or SQLite databases copied into this memory repository.",
+  "recurringCodeCommit": "471d104f8e5965229bf420f259fb7d47a94d391c",
+  "recurringCodeTag": "codex/v1-recurring-local-20261022",
+  "recurringQualification": {
+    "actualSourceAcquisitions": 2,
+    "actualIndependentInvocations": 7,
+    "statuses": [
+      "applied",
+      "replayed",
+      "replayed",
+      "replayed",
+      "applied",
+      "replayed",
+      "replayed"
+    ],
+    "checkpointCount": 2,
+    "currentProducts": 5,
+    "inventoryValue": "1470",
+    "fullSuitePassed": 397,
+    "fullSuiteSkipped": 38,
+    "applicationTests": 18,
+    "secondFreshOwnerAcquisition": "PASS; exact received bytes/hash verified; same-state import/replay/historical replay passed",
+    "automaticTransfer": false,
+    "liveSql": false,
+    "dboSourceWrites": false,
+    "dbLocalStateBackupRestore": "PASS; not an ERP backup restore",
+    "latestAcquisitionFinishedAt": "2026-10-22T11:59:46.8205388+00:00",
+    "latestSourceSha256": "E10B8A753C02CD27BB71026D7CAF20E86315707F38EA7824001E4469959E9DC7",
+    "businessRowsChangedBetweenActualCaptures": false,
+    "actualChangedBusinessDataRefreshQualified": false,
+    "targetedSecondActualSourceTestsPassed": 1,
+    "fullSuiteScope": "Fresh publication review Windows Node22.23.2 run,397passed/38skipped; actual first/second files included",
+    "pairedActualArtifactsTest": "PASS; new temporary state, not extra retained-state invocations",
+    "targetedSecondSourceConnectorTestsPassed": 28,
+    "thirdActualAcquisition": "PROPOSED; owner ERP approval required; not executed"
+  },
+  "secondAcquisitionProductEvidenceCommit": "2b3d25d2994a844d420f1e74286eb39b9015ff75",
+  "publication": {
+    "ownerAuthorization": "Explicit branch publication and one PR per repository; no merge",
+    "state": "SANITIZED_PREPARATION; PR creation not yet confirmed",
+    "transport": "Sanitized final memory tree in a new commit rooted at unchanged main; original remote history and private local commits retained.",
+    "review": "Engineering self-review; no independent reviewer claimed",
+    "forcePush": false,
+    "mainMerge": false,
+    "privacy": "No endpoint/database/VM selectors, absolute private paths, process IDs, raw source files or databases in this new public documentation."
+  },
+  "sourceAccessLimit": "Reviewed SELECT-only owner collector; database-enforced least privilege is not qualified."
+}

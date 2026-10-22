@@ -1,0 +1,15 @@
+# Engineering memory stores sanitized facts, locators and hashes, not source databases.
+.env
+.env.*
+!.env.example
+DBL-V1-RAW-*.json
+V1_RAW.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
+*.bak
+*.mdf
+*.ldf
