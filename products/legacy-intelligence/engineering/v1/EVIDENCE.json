@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "PUBLISHED_FOR_REVIEW_NOT_MERGED",
+  "status": "MERGED_BASELINE_WITH_POST_MERGE_RECORD_FOR_REVIEW",
   "updated": "2026-10-22",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -314,6 +314,18 @@
       "kind": "final cross-platform CI and ten-cycle WAL results",
       "bytes": 3634,
       "sha256": "97A75EF747F724DBA4917C4DA050BC878CE093F37A7FF4DAECE28B85D47F5F99"
+    },
+    {
+      "id": "owner-approved-merges-and-recovery-gate",
+      "kind": "verified merge results and observed recovery stop; no ERP change",
+      "bytes": 2984,
+      "sha256": "2064EA85355061517F11C8B056DDF81C1EB7286E71A55A504FBD46BECD70F3F0"
+    },
+    {
+      "id": "pre-third-dbl-baseline-copy",
+      "kind": "27-file two-snapshot DBL copy verification; not ERP recovery",
+      "bytes": 6878,
+      "sha256": "84F6C119C409CBB852F33D16A5D83868F60BF47C45CFA89522F9640F9F2F1EC9"
     }
   ],
   "reference": {
@@ -397,5 +409,7 @@
     "merge": false,
     "thirdERPAction": false
   },
-  "sourceAccessLimit": "Reviewed SELECT-only owner collector; database-enforced least privilege is not qualified."
+  "sourceAccessLimit": "Reviewed SELECT-only owner collector; database-enforced least privilege is not qualified.",
+  "mergedProductCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
+  "mergedMemoryCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46"
 }

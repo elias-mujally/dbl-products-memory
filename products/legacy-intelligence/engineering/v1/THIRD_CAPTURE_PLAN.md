@@ -1,6 +1,6 @@
 # V1 third acquisition — one real stock change
 
-Status: **PROPOSED / OWNER ERP APPROVAL REQUIRED / NOT EXECUTED**. Date:2026-10-22.
+Status: **OWNER ERP APPROVAL GRANTED / BLOCKED_RECOVERY_GATE / NOT EXECUTED**. Date:2026-10-22. The original proposal below remains the execution contract; [the later merge/recovery check](MERGE_AND_RECOVERY_GATE.md) records why execution stopped.
 
 [Index](README.md) · [Current proof](RECURRING_STATUS.md) · [Source semantics](DATA_SEMANTICS.md) · [Runbook](RUNBOOK.md)
 
@@ -10,11 +10,11 @@ Status: **PROPOSED / OWNER ERP APPROVAL REQUIRED / NOT EXECUTED**. Date:2026-10-
 
 **DECISION / PROPOSED:** use the already exercised **consumption issue** route for one unit of DBL-T01, branch1/warehouse1/unit1, at the existing constant20SAR cost, with the established301 consumption counterpart. It changes one item and requires no new accounts, warehouse, supplier, receipt, price, opening stock or commercial sale. It does not use the stock-transfer clearing account102 or reinterpret consumption as sales. Existing account classifications remain the scoped lab decisions documented in TIMELINE, not a general accounting prescription.
 
-## Separate owner approval scope
+## Separately approved owner scope
 
 One new GUI consumption issue of **DBL-T01, quantity1**, inside V1 only, using account301 and the existing warehouse/branch. Save once using the ordinary inventory-effective path observed previously; do not manually finalize GL posting or change flags to satisfy the connector. Document number/key must be discovered from the UI and persisted record; do not assume the next number or reuse an existing document. A distinct description should identify this as the third-capture test.
 
-This document authorizes no ERP action. Publication approval does not authorize this transaction. Owner acceptance must include retaining its stock/financial effects in the test database; no automatic deletion, reversal, compensating entry, SQL update or restore is part of the proposal.
+The owner's later explicit instruction separately authorized this one-unit transaction, conditional on reliable recovery and a fresh baseline. The recovery prerequisite has not qualified, so no ERP change is executed. The approval includes retaining the authorized test effects; no automatic deletion, reversal, compensating entry, SQL update or restore is part of the scope. The missing gate is recovery evidence, not a request to repeat transaction approval.
 
 ## Preparation and evidence gates
 
