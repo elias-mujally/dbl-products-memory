@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "PASS_INDEPENDENT_AGENT_HANDOVER_WITH_EXPLICIT_LIMITS",
+  "status": "PASS_PREPARED_HOST_CMD_REHEARSAL_CLEAN_ENVIRONMENT_BLOCKED",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -848,6 +848,186 @@
       "kind": "Parent patch/commit-identity/ancestor-Git refusal notes and bounded corrections; no permission/config bypass",
       "bytes": 973,
       "sha256": "778CFA6D73147D899FC29A4FB291BD327E101DAD1FCF5C50111B456272C91689"
+    },
+    {
+      "id": "windows-final-pr-review",
+      "kind": "Exact PR20/PR9 head/CI/review readback and scoped merge recommendation; no merge",
+      "bytes": 20564,
+      "sha256": "8DE683A469BDC3DCB6BBEDFD4F49B3B1E22C2BD2951638F629FB0E80B93B14D6"
+    },
+    {
+      "id": "windows-workspace-regression",
+      "kind": "New file-only subpath build/typecheck and430passed42skipped with3actual artifacts",
+      "bytes": 7041,
+      "sha256": "6F647E37FE12B172D069959C878613E01DE3FDF093A5817F3C72F8FA475D2169"
+    },
+    {
+      "id": "windows-build-a",
+      "kind": "First fresh JavaScript compilation and bounded portable assembly receipt",
+      "bytes": 2014,
+      "sha256": "8BA2DBC68C30023C34135E36ECDC5504AC7D4E1DC60469D3EF709660936E33B0"
+    },
+    {
+      "id": "windows-build-b",
+      "kind": "Second fresh compilation/assembly produced identical payload and manifest",
+      "bytes": 2005,
+      "sha256": "0952E588A207F4B431C576A18C20CB79305E2E56EC1A30133379EAC5B505C9F3"
+    },
+    {
+      "id": "windows-archive-a",
+      "kind": "First framework ZIP with independently recorded archive/manifest pins",
+      "bytes": 230,
+      "sha256": "72143A9469FF1126FDDF646DBA803F6177624C09E293779348BFF9A1875DE238"
+    },
+    {
+      "id": "windows-archive-b",
+      "kind": "Second same-host sorted fixed-time archive matched first byte hash",
+      "bytes": 230,
+      "sha256": "72143A9469FF1126FDDF646DBA803F6177624C09E293779348BFF9A1875DE238"
+    },
+    {
+      "id": "windows-manifest",
+      "kind": "Private immutable preview83file manifest/component/input identity; no data",
+      "bytes": 18015,
+      "sha256": "7F57E60D97F1ECCC16DEAA9DDFE606BCBA63AED377FC33A42EE823F6D7946626"
+    },
+    {
+      "id": "windows-build-inputs",
+      "kind": "Private exact source/compiler/build-input fingerprints; no owner paths",
+      "bytes": 23741,
+      "sha256": "01F7A265220F54DB89CF8EA4CBF7E0E28C2362D9B963CA30FD8985B22ECD5BF9"
+    },
+    {
+      "id": "windows-private-preview-zip",
+      "kind": "Private runtime/code/notices ZIP, no ERP raw or SQLite; not publicly published",
+      "bytes": 34320900,
+      "sha256": "6729624255A3DA224C49E5BD4DF2E6F322C14A2D73F43B6032A580DC31405CB2"
+    },
+    {
+      "id": "windows-owner-receipt",
+      "kind": "Private owner independent ZIP/manifest pins and handover instructions/input template",
+      "bytes": 3386,
+      "sha256": "9F663BD4B429588A640823AC2D7DEC346CCD4F2DB290A4D4A750352AF4751196"
+    },
+    {
+      "id": "windows-portable-acceptance",
+      "kind": "Twenty-three extracted actual-artifact/current/history/recovery/prior-build compatibility calls",
+      "bytes": 14707,
+      "sha256": "9443E521C344C93C9E65DA6FD3B05F0E08CE8D118E5751FA5299B79E62C29F64"
+    },
+    {
+      "id": "windows-acceptance-harness",
+      "kind": "Engineer-only retained-source/package/no-global-path qualification harness",
+      "bytes": 6455,
+      "sha256": "DC43DAD5D10F43781909DD2B5958DC3FE008BF104E4C8E418FA2C7161700C84F"
+    },
+    {
+      "id": "windows-qualified-summary",
+      "kind": "Sanitized source/test revisions, exact preview identity and unqualified gates",
+      "bytes": 3428,
+      "sha256": "96F3E08159AFFE5648DB7765FE187F0985406FBF7948CD3FFCAF9F42588C13C2"
+    },
+    {
+      "id": "windows-delivery-initial-failure",
+      "kind": "Initial enabled delivery suite aborted child; not relabelled as passing",
+      "bytes": 694,
+      "sha256": "4F23E63B7F3AAAC371FBC4CD9B8E53BA27900C6FAFBBF72B6EF41934E1010CC5"
+    },
+    {
+      "id": "windows-delivery-fixed-controls",
+      "kind": "Same delivery tamper/privacy/native controls passed6with0skips after test-copy change",
+      "bytes": 1518,
+      "sha256": "69D4B7E0461883C22FB430BBDBF3B2DA66386928EB6556B60620E56E63E9443B"
+    },
+    {
+      "id": "windows-copy-probe",
+      "kind": "Standalone recursive-copy operation reproduced exit3221226505; native cause unproved",
+      "bytes": 189,
+      "sha256": "1A49AC152EAB48CC4E090AE42A37D610201C4798A81F3E4806AEA84850BDD9E5"
+    },
+    {
+      "id": "windows-copy-trace",
+      "kind": "Synchronous trace showed abort before recursive copy returned",
+      "bytes": 22,
+      "sha256": "B7E30769771BF83D6CAF8DA1FB04E0C8AEF37AF77CB5F861B6FC89155B1CCA1A"
+    },
+    {
+      "id": "windows-test-context-probe",
+      "kind": "Rejected hypothesis: inherited NODE_TEST_CONTEXT did not reproduce verify failure",
+      "bytes": 217,
+      "sha256": "0B854B6B98D64E090B4350CC03A2871E9FF6FB8E60830B248291939BE6E0E25A"
+    },
+    {
+      "id": "windows-isolated-test-results",
+      "kind": "Verify/native/pin/privacy succeeded; changed-payload setup alone aborted",
+      "bytes": 329,
+      "sha256": "56960C3D7DD7E34E26D0E71F370C6ABFE60238C00258228F329C4EB939FF72BE"
+    },
+    {
+      "id": "windows-cmd-quoted-paths",
+      "kind": "Two additional readonly actual wrapper calls accepted Arabic/spaced paths and preserved current1450SAR/3snapshots",
+      "bytes": 323,
+      "sha256": "1E61F6115B0D2D956AFAFB335FB18C63200C5E20AC0D91DACF1C71A4939CB628"
+    },
+    {
+      "id": "windows-clean-acceptance-receipt",
+      "kind": "18 actual CMD calls; synthetic prepared-host state/recovery",
+      "bytes": 25499,
+      "sha256": "DFDFEAD6DC512DF365585346516122FBDBA73A08B21E66194D7C422F0B4B15A8"
+    },
+    {
+      "id": "windows-clean-qualification",
+      "kind": "Sanitized qualification matrix and blockers",
+      "bytes": 2125,
+      "sha256": "290F9B56F7BC68321877B7CEA8823083F2119C294F232D0C350C109EBC5B0C65"
+    },
+    {
+      "id": "windows-clean-acl-private",
+      "kind": "Read-only new-output ACL observations; not owner-only",
+      "bytes": 5537,
+      "sha256": "22C51224EBB8B14EA8F7FF4F6AFFE2067699EFA2253931AA797C761ACB2153D1"
+    },
+    {
+      "id": "windows-clean-defender-browser-gaps",
+      "kind": "Actual tool refusals and owner environment availability",
+      "bytes": 1190,
+      "sha256": "76BA9907E668034F883AD06B01E86EF86D4FD8CD111D0FC89D3A71C19F9D9B49"
+    },
+    {
+      "id": "windows-clean-fresh-zip",
+      "kind": "Fresh pinned framework extraction; Arabic spaced path",
+      "bytes": 450,
+      "sha256": "A19ADCB312396C41798E25AED4204F3A93E36D08FBA54DA1FB54399C3B5A9882"
+    },
+    {
+      "id": "windows-clean-fresh-native",
+      "kind": "Actual CMD native doctor on fresh extracted folder",
+      "bytes": 235,
+      "sha256": "EAA161832319E301AFB94CEDA527FAC49E0A516BE17F32C8016593075A7BD72C"
+    },
+    {
+      "id": "windows-clean-delivery-controls",
+      "kind": "8 passed 0 skipped package-enabled controls",
+      "bytes": 1878,
+      "sha256": "CF3957AA293D34E3C55AB7F1F684FE98666B0D117DD3B636AAE7148D2F49045D"
+    },
+    {
+      "id": "windows-clean-companion",
+      "kind": "Standalone source used for rehearsal",
+      "bytes": 9441,
+      "sha256": "9C67B08D9A3332BAD75CFC072B89E25E6818E99BAEBF274F52501F797029B3ED"
+    },
+    {
+      "id": "windows-clean-html-static",
+      "kind": "New private HTML; static only, visual blocked",
+      "bytes": 2457,
+      "sha256": "9D5D757C384F5EFB17CDB16A3EFC6776C67DF68AF1FE0D974F0603414499E9DB"
+    },
+    {
+      "id": "windows-clean-owner-visual",
+      "kind": "Owner-reported basic local HTML visual review; not agent observed",
+      "bytes": 696,
+      "sha256": "943393E589A60E550B804CF6ADEEA8B10266DDEA5602E2DA5EB7C9EE1537F6FF"
     }
   ],
   "reference": {
@@ -937,5 +1117,92 @@
   "latestProductMergeCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
   "latestMemoryMergeCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46",
   "latestOperatorProductCommit": "60a4b36e0e34d24e5ef51afaff01798e7473e733",
-  "latestHandoverProductCommit": "a5faaf02eeec588fb93ef9329341adc52685cdaf"
+  "latestHandoverProductCommit": "a5faaf02eeec588fb93ef9329341adc52685cdaf",
+  "localWindowsAssemblyRevision": "2855006575d0cee38ed4e3007379487de622e076",
+  "localWindowsTestRevision": "cd7d445cdcb6815a3b1b124a6b384b4c891d8c3e",
+  "newWindowsReleasePublished": false,
+  "windowsCleanGate": {
+    "format": "dbl.windows.acceptance-gate.1",
+    "date": "2026-10-23",
+    "status": "PASS_PREPARED_HOST_REHEARSAL_CLEAN_ENVIRONMENT_BLOCKED",
+    "previewVersion": "0.2.0-v1-win-x64-preview.1",
+    "zipSha256": "6729624255A3DA224C49E5BD4DF2E6F322C14A2D73F43B6032A580DC31405CB2",
+    "manifestSha256": "7F57E60D97F1ECCC16DEAA9DDFE606BCBA63AED377FC33A42EE823F6D7946626",
+    "companionSha256": "9C67B08D9A3332BAD75CFC072B89E25E6818E99BAEBF274F52501F797029B3ED",
+    "acceptanceReceiptSha256": "DFDFEAD6DC512DF365585346516122FBDBA73A08B21E66194D7C422F0B4B15A8",
+    "actualCmdCalls": 18,
+    "additionalFreshZipCmdCalls": 2,
+    "deliveryControls": {
+      "passed": 8,
+      "skipped": 0
+    },
+    "host": {
+      "osBuild": "10.0.22631",
+      "arch": "AMD64",
+      "adminToken": false,
+      "preparedHost": true
+    },
+    "native": {
+      "node": "22.23.2",
+      "abi": "127",
+      "sqlite": "3.51.3",
+      "otherWindowsImageTested": false
+    },
+    "result": {
+      "products": 5,
+      "valueSAR": "1450",
+      "historyValuesSAR": [
+        "1470",
+        "1470",
+        "1450"
+      ],
+      "restoredAuditEventsBeforeReplay": 15,
+      "restoredAuditEventsAfterReplay": 18
+    },
+    "freshZip": {
+      "entries": 84,
+      "expandedBytes": 89345803,
+      "frameworkExtraction": true,
+      "explorerHumanExtraction": false
+    },
+    "cleanMachineQualified": false,
+    "humanQualified": false,
+    "privacyAclQualified": false,
+    "defenderQualified": false,
+    "browserVisualQualified": false,
+    "productionQualified": false,
+    "blockers": [
+      "Owner has no clean independent environment",
+      "Shared sandbox ACL is not owner-only privacy",
+      "Defender status read denied; no elevation or scan claim",
+      "Browser file URL policy denied; no workaround or visual claim"
+    ],
+    "originalPreviewModified": false,
+    "erpNetworkPermissionChanges": false,
+    "rawOrDatabasePublished": false,
+    "ownerBasicVisualReview": {
+      "status": "PASS_OWNER_REPORTED_BASIC_VISUAL_REVIEW",
+      "source": "Owner direct report",
+      "arabicRtlTablesValuesAndHashes": true,
+      "agentBrowserObserved": false,
+      "fullHumanWorkflowQualified": false,
+      "narrowViewportZoomAccessibilityTested": false
+    }
+  },
+  "windowsPublication": {
+    "productPr": 21,
+    "productHead": "9e47e952fa3f0b2faf98acb6f09c7922466085f7",
+    "productTree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+    "memoryPr": 10,
+    "initialMemoryHead": "a6fe59c93b4cda92d60e81adb8d576fe7ce49e95",
+    "ci223": {
+      "runId": 39960520205,
+      "conclusion": "success",
+      "windowsUbuntu": true,
+      "privatePackageAssetsIncluded": false
+    },
+    "newPrsMerged": false,
+    "publicRelease": false,
+    "forcePush": false
+  }
 }

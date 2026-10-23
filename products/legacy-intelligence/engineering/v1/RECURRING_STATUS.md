@@ -1,6 +1,6 @@
 # Repeated integration — local execution status
 
-Date:2026-10-23. **LATEST: INDEPENDENT SECOND-AGENT HANDOVER PASSED WITH EXPLICIT LIMITS:**16checks/25first-attempt successful CLI calls from published guide and prepared inventory;5products/1450SAR,3snapshots, replay/history/audit and pinned new-directory recovery. [Independent acceptance](OPERATOR_HANDOVER.md). Human/clean-install/owner-private Windows ACL/browser visual gates remain open. PR19/PR8 are merged; PR20/PR9 stay open/unmerged. [Third real changed-data result](THIRD_CAPTURE_RESULT.md). Earlier sections are historical; original operational counts remain3actual acquisitions,11importer invocations,3snapshots/5current products1450SAR. Handover states were separate copies/new directories.
+Date:2026-10-23. **LATEST: PASS_PREPARED_HOST_CMD_REHEARSAL; BLOCKED_CLEAN_ENVIRONMENT_NOT_AVAILABLE.** [Independent Windows gate](WINDOWS_CLEAN_GATE.md):18actual wrapper calls, fresh ZIP extraction/2additional wrapper checks,8delivery controls; unchanged Preview1. Five products1450SAR/history1470/1470/1450 and new-state recovery/replay passed. Clean environment is unavailable per owner; shared sandbox ACL, denied Defender read and blocked local-file browser review prevent those separate qualifications. PR20/PR9 were observed merged; new packaging work is separate and no merge/public release occurred here. Original operational counts remain3actual acquisitions,11imports,3snapshots; all new tests use separate state.
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 

@@ -1,6 +1,6 @@
 # Motakamel Plus V1 — engineering memory
 
-**Updated: 2026-10-23. PR19/PR8 merged. Third changed-data import passed. A fresh second agent completed16handover checks/25first-attempt successful CLI calls from the published guide on a prepared build. Owner-private Windows ACL, human/clean-install/browser qualification remain open. PR9/PR20 stay unmerged.**
+**Updated: 2026-10-23. PR20/PR9 were observed merged in GitHub; this stage did not merge them. Immutable Preview1 remains pinned. New18-call actual DBL.cmd prepared-host rehearsal, fresh Arabic-path ZIP extraction and8delivery controls passed. No independent clean environment is available; human/private ACL/Defender/browser/production qualification remains open.**
 
 هذا الفهرس يربط التاريخ والقرارات والأدلة بدل تكرار التقارير. النطاق هو المختبر الجديد the isolated V1 test VM وقاعدته التجريبية فقط. لا يعيد تأهيل مصادر original host/historical sources التاريخية ولا يلغي قيودها.
 
@@ -22,6 +22,9 @@
 
 14. [حزمة التشغيل للمشغّل](OPERATOR_PACKAGE.md): دليل عربي، فحص المصدر والحالة، تقرير محلي، نسخ حالة DBL واستعادتها إلى مسار جديد، ونتائج قبولها وحدود تسليمها.
 15. [اختبار التسليم المستقل](OPERATOR_HANDOVER.md): وكيل ثانٍ دون سياق سابق، نتائج منفصلة عن اختبارات المهندس، وفجوات التسليم وردود المراجعة والتحسينات وحدود التأهيل.
+16. [حزمة Windows المحلية](WINDOWS_DELIVERY.md): الإصدار والمكونات والبصمات، إعادة البناء والتشغيل خارج التطوير، عطل النسخ في الاختبارات ومعالجته وحدود اختبار الجهاز النظيف والقبول البشري.
+
+17. [بوابة Windows النظيفة](WINDOWS_CLEAN_GATE.md): إجراء تسليم مستقل،18أمرًا فعليًا عبر DBL.cmd وفك ZIP جديد، مع فصل بوابات البيئة والخصوصية والحماية والرؤية والإنسان عن نجاح المضيف.
 
 ## أحدث نتيجة فعلية
 
