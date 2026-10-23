@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "EXACT_OWNER_REPORT_VERIFIED_INSPECTION_PASS_RESTORE_AND_RETENTION_UNQUALIFIED",
+  "status": "VERIFIED_SEPARATE_RESTORE_CHECKDB_FIXTURE_PASS_OUTSIDE_IMAGE_RETENTION_PENDING",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -392,6 +392,60 @@
       "kind": "Exact-report-qualified private new-database and separate-files approval scope; not executed",
       "bytes": 6138,
       "sha256": "DF536686B89BB2E086AEC490DB22EBA0A0C1D5831658F1E595363AA7D9E2A9CD"
+    },
+    {
+      "id": "recovery-approved-restore-script",
+      "kind": "Sealed owner-approved separate-target restore/CHECKDB/bounded-comparison script",
+      "bytes": 24898,
+      "sha256": "78B71E046E7B1E954AD4F76EC16E44548F15BAA9133DE3B23292CE09A50581A7"
+    },
+    {
+      "id": "recovery-approved-restore-static-review",
+      "kind": "PowerShell syntax and scoped SQL/command static review, not runtime proof",
+      "bytes": 1640,
+      "sha256": "82C979AD69A915F56AFBB1ADADFF5590A07CAE1D30BBFB7527DB00A42763D387"
+    },
+    {
+      "id": "recovery-offline-helper-check",
+      "kind": "Actual-source fixture helpers tested with fake connection and synthetic host-memory difference only",
+      "bytes": 1627,
+      "sha256": "87490C093D256BAA2C8245820514491015AE2C0ED8B4CDF86E6F2C327DF19026"
+    },
+    {
+      "id": "recovery-approved-restore-owner-receipt",
+      "kind": "Owner-reported runtime PASS and private report reference, exact report not yet received",
+      "bytes": 1086,
+      "sha256": "E7E29C651320D1E449EBE8D454161329E40EF63308CAC960EE5058CA852E98B3"
+    },
+    {
+      "id": "recovery-actual-restore-report-exact",
+      "kind": "Actual owner restore execution report with original byte hash verified",
+      "bytes": 21656,
+      "sha256": "A82A759562DB254F9E0335DC24B27A9B32D8CCBCF0FE4315934BB25F95571504"
+    },
+    {
+      "id": "recovery-historical-crosscheck-initial",
+      "kind": "Preserved initial historical table-hash cross-check; default encoding caused two false mismatches",
+      "bytes": 4530,
+      "sha256": "2478554E638B0029D59883FDF86303072EA80373B3D4D819BB5487FF43D05063"
+    },
+    {
+      "id": "recovery-historical-crosscheck-utf8",
+      "kind": "Corrected explicit UTF8 historical cross-check; all eleven source table hashes match",
+      "bytes": 4722,
+      "sha256": "55934C6F5357864D74154D3B05EE950A42770415F9F9836906DBCE6B48FCD3B5"
+    },
+    {
+      "id": "recovery-restore-validation-preliminary",
+      "kind": "Exact restore report validation with initial historical cross-check; superseded by UTF8 result",
+      "bytes": 3029,
+      "sha256": "66340CD7E98801383A8E7B02EA4F870C0C02267F5E5D82F28E1636EF7C4FFFFC"
+    },
+    {
+      "id": "recovery-restore-validation-final",
+      "kind": "Verified restore, CHECKDB, eleven-table three-way match and corrected independent historical hash match",
+      "bytes": 3231,
+      "sha256": "582DF342AA51564265531E4666C09A9E509E5EDF6B62BDFFD85C321F023C60DF"
     }
   ],
   "reference": {
