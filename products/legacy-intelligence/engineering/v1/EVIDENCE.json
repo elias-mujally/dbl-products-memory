@@ -1188,5 +1188,21 @@
       "fullHumanWorkflowQualified": false,
       "narrowViewportZoomAccessibilityTested": false
     }
+  },
+  "windowsPublication": {
+    "productPr": 21,
+    "productHead": "9e47e952fa3f0b2faf98acb6f09c7922466085f7",
+    "productTree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+    "memoryPr": 10,
+    "initialMemoryHead": "a6fe59c93b4cda92d60e81adb8d576fe7ce49e95",
+    "ci223": {
+      "runId": 39960520205,
+      "conclusion": "success",
+      "windowsUbuntu": true,
+      "privatePackageAssetsIncluded": false
+    },
+    "newPrsMerged": false,
+    "publicRelease": false,
+    "forcePush": false
   }
 }
