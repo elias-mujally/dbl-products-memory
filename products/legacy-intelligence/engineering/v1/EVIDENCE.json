@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "PASS_OPERATOR_KIT_THREE_ACTUAL_ARTIFACTS_AND_LEGACY_STATE_RECOVERY",
+  "status": "PASS_INDEPENDENT_AGENT_HANDOVER_WITH_EXPLICIT_LIMITS",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -722,6 +722,132 @@
       "kind": "Two pre-fix manifest-order regression failures preserved before correction",
       "bytes": 8850,
       "sha256": "27FBB145A1F150841282D518BB8A49FEEFCC1741BB3CEC9B8B36130492B90537"
+    },
+    {
+      "id": "handover-protocol",
+      "kind": "Fresh-agent isolation, frozen guide/revision and engineering review reply protocol",
+      "bytes": 6197,
+      "sha256": "A85BE87CD44D75CF8E717DAA6E9F21E1B234CDE83A700ACCBED7BFADFA2CB83B"
+    },
+    {
+      "id": "handover-review-readback",
+      "kind": "Seven specific PR20 replies retained visibly; prior exact-head CI220 readback",
+      "bytes": 16293,
+      "sha256": "8FC02A64D27F3DA9E1B7D17C31EA0D7D8EDF20077CBF9D764646216BC7A35BD7"
+    },
+    {
+      "id": "handover-operator-report",
+      "kind": "Independent second-agent first attempt, all steps, gaps, failures and support limits",
+      "bytes": 11287,
+      "sha256": "9DCEFF09851797A204286A75E0B365CC6F53CFB24199FF162738AFCCC64C667B"
+    },
+    {
+      "id": "handover-operator-acceptance",
+      "kind": "Sixteen independent checks and twenty-five first-attempt successful CLI calls",
+      "bytes": 49038,
+      "sha256": "5D98F1E71B0C30F6005584D1EE14AF8B73B2325C7BBED97F71036A98B6624956"
+    },
+    {
+      "id": "handover-operator-command-log",
+      "kind": "Independent operator full command/exit/output-hash evidence",
+      "bytes": 24098,
+      "sha256": "1F0687224AEC4C3EE9637522A1ACA5EE71003047EE9549BA697A73D788ADD232"
+    },
+    {
+      "id": "handover-operator-setup",
+      "kind": "Independent operator runtime/revision/file pins and private ACL evidence; not public",
+      "bytes": 6753,
+      "sha256": "DE996E4AD1E597B3653AD6C6D22CF0CA686028912C66E88581D7E72C2999A16D"
+    },
+    {
+      "id": "handover-operator-logger",
+      "kind": "Independent operator own documented-CLI logger; no reused engineer harness",
+      "bytes": 1574,
+      "sha256": "BD256EB9DC5815598C8ACBD5683AD94C1F1F0477F833DE5D1A7A78EE3DB0CB53"
+    },
+    {
+      "id": "handover-operator-evaluator",
+      "kind": "Independent operator own post-observation acceptance checks",
+      "bytes": 20272,
+      "sha256": "67C1EF64A9C5871A44A28E3FB29DE55B9ADDC281FD5846D191FE7BBE584AB446"
+    },
+    {
+      "id": "handover-operator-manifest",
+      "kind": "Independent final twenty-one-file recovery-content backup and separate pin",
+      "bytes": 4289,
+      "sha256": "24BC6BE763517F3A4386B698E801D4268BB7C458D4C1476D30368412016E99D0"
+    },
+    {
+      "id": "handover-operator-html",
+      "kind": "Independent Arabic HTML generation/static check only; no browser visual review",
+      "bytes": 2457,
+      "sha256": "9D5D757C384F5EFB17CDB16A3EFC6776C67DF68AF1FE0D974F0603414499E9DB"
+    },
+    {
+      "id": "handover-guide-followup",
+      "kind": "Same independent operator later document-only review and eight matching pins; no rerun",
+      "bytes": 4235,
+      "sha256": "E8817EF44A1481576B9EF855404120BD7DADFB72753C1DAC096C1BF268E58320"
+    },
+    {
+      "id": "handover-followup-disposition",
+      "kind": "Parent clarified machine-readable provenance labels per independent reviewer",
+      "bytes": 358,
+      "sha256": "0EB4859D0316293DAB4D4383600940F42EA50F63D49070E588DDC1252BBC30EB"
+    },
+    {
+      "id": "handover-parent-build-provenance",
+      "kind": "Engineer-only prior build/native/lock/runtime fingerprint and source-tree comparison",
+      "bytes": 3387,
+      "sha256": "0DACD2A872619B9E7FF829EC3A34872FCD6CFF14103B50F2DE8D4899BA13C1EF"
+    },
+    {
+      "id": "handover-parent-before",
+      "kind": "Engineer original operational-state and source preservation before handover",
+      "bytes": 8701,
+      "sha256": "33458D5EC543F26E0FD477DC285D6E0B59FB0FDDD20FCDBBB822F1E9CD5E1F80"
+    },
+    {
+      "id": "handover-parent-after",
+      "kind": "Engineer original thirty-seven-file operational state still unchanged after handover",
+      "bytes": 8701,
+      "sha256": "F9A259E7E416DC37E2ECF7D291A6D4623FDAAB45B96EE46EB6381AA0467DD8E4"
+    },
+    {
+      "id": "handover-parent-readback",
+      "kind": "Engineer independently rehashed operator outputs and twenty-one-file backup",
+      "bytes": 1371,
+      "sha256": "9A82040E84824255112BAED1EC97652606D722C37E0EE4B28ACD52661B02AA79"
+    },
+    {
+      "id": "handover-parent-regression-log",
+      "kind": "Parent full build/typecheck and430passed42skipped with three private artifact gates",
+      "bytes": 7040,
+      "sha256": "2676A0CB35D6E287B13CE4909012899D7E08F05B1CC397758A01FC4D96923953"
+    },
+    {
+      "id": "handover-parent-validation",
+      "kind": "Parent regression, unchanged compiled fingerprints, scoped privacy/link validation",
+      "bytes": 695,
+      "sha256": "EC328399559BAFE514841595F4FDC33F9AC7D9E9445AD894AFA59BBA8CE7A3E7"
+    },
+    {
+      "id": "handover-product-publication",
+      "kind": "Exact reviewed four-file documentation tree advanced PR20 without force or merge",
+      "bytes": 905,
+      "sha256": "BB488237C4CF858403F108CAA654168A65B9D81333ED22AB7132A63AF8063759"
+    },
+    {
+      "id": "handover-ci-review",
+      "kind": "Exact new documentation-head CI221 and final review readback; private source tests remain separate",
+      "bytes": 13805,
+      "sha256": "7D031D7449F5390456328BD76AF8FF4ECE0E48598528680F7650C4FA5FC4D175"
+    },
+    {
+      "id": "handover-engineering-tools",
+      "kind": "Parent patch/commit-identity/ancestor-Git refusal notes and bounded corrections; no permission/config bypass",
+      "bytes": 973,
+      "sha256": "778CFA6D73147D899FC29A4FB291BD327E101DAD1FCF5C50111B456272C91689"
     }
   ],
   "reference": {
@@ -810,5 +936,6 @@
   "mergedMemoryCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46",
   "latestProductMergeCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
   "latestMemoryMergeCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46",
-  "latestOperatorProductCommit": "60a4b36e0e34d24e5ef51afaff01798e7473e733"
+  "latestOperatorProductCommit": "60a4b36e0e34d24e5ef51afaff01798e7473e733",
+  "latestHandoverProductCommit": "a5faaf02eeec588fb93ef9329341adc52685cdaf"
 }

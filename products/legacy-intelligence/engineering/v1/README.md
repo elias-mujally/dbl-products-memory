@@ -1,6 +1,6 @@
 # Motakamel Plus V1 — engineering memory
 
-**Updated: 2026-10-23. PR19/PR8 merged. Scoped recovery and outside-VHDX backup retention verified; the authorized one-unit issue and actual third changed-data import passed. Operator package passed19compiled-process acceptance checks; memory PR9 and product PR20 remain open for review.**
+**Updated: 2026-10-23. PR19/PR8 merged. Third changed-data import passed. A fresh second agent completed16handover checks/25first-attempt successful CLI calls from the published guide on a prepared build. Owner-private Windows ACL, human/clean-install/browser qualification remain open. PR9/PR20 stay unmerged.**
 
 هذا الفهرس يربط التاريخ والقرارات والأدلة بدل تكرار التقارير. النطاق هو المختبر الجديد the isolated V1 test VM وقاعدته التجريبية فقط. لا يعيد تأهيل مصادر original host/historical sources التاريخية ولا يلغي قيودها.
 
@@ -21,6 +21,7 @@
 13. [تقييم الاحتفاظ خارج VHDX](EXTERNAL_RETENTION.md): نتيجة النسخ الفعلي وبصمته، والمحاولات السابقة، وحدود استقلال النسخة عن VHDX وعن الجهاز المادي.
 
 14. [حزمة التشغيل للمشغّل](OPERATOR_PACKAGE.md): دليل عربي، فحص المصدر والحالة، تقرير محلي، نسخ حالة DBL واستعادتها إلى مسار جديد، ونتائج قبولها وحدود تسليمها.
+15. [اختبار التسليم المستقل](OPERATOR_HANDOVER.md): وكيل ثانٍ دون سياق سابق، نتائج منفصلة عن اختبارات المهندس، وفجوات التسليم وردود المراجعة والتحسينات وحدود التأهيل.
 
 ## أحدث نتيجة فعلية
 

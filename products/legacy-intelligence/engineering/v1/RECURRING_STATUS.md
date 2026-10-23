@@ -1,6 +1,6 @@
 # Repeated integration — local execution status
 
-Date:2026-10-23. **LATEST: ACTUAL THIRD CHANGED-DATA REFRESH PASSED. Product PR19/memory PR8 merged; follow-up memory PR9 remains open.** [Third result](THIRD_CAPTURE_RESULT.md). Earlier sections below are dated historical evidence; current counts are3actual acquisitions,11retained importer invocations,3snapshots and5current products/1450SAR. The operator package now passed separately on copies/existing artifacts; this does not change those original operational counts.
+Date:2026-10-23. **LATEST: INDEPENDENT SECOND-AGENT HANDOVER PASSED WITH EXPLICIT LIMITS:**16checks/25first-attempt successful CLI calls from published guide and prepared inventory;5products/1450SAR,3snapshots, replay/history/audit and pinned new-directory recovery. [Independent acceptance](OPERATOR_HANDOVER.md). Human/clean-install/owner-private Windows ACL/browser visual gates remain open. PR19/PR8 are merged; PR20/PR9 stay open/unmerged. [Third real changed-data result](THIRD_CAPTURE_RESULT.md). Earlier sections are historical; original operational counts remain3actual acquisitions,11importer invocations,3snapshots/5current products1450SAR. Handover states were separate copies/new directories.
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 
