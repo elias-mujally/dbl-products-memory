@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "MERGED_BASELINE_WITH_RECOVERY_PREPARATION_FOR_REVIEW",
+  "status": "MERGED_BASELINE_INSPECTION_PENDING_OWNER_WITH_RETENTION_EVALUATION",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -350,6 +350,18 @@
       "kind": "scoped inspection and later separate restore-approval plan",
       "bytes": 7297,
       "sha256": "DA30D11F962BB417A419DE6759D6121BFCE42421A18FF17A4F0DFB8ADE2A3650"
+    },
+    {
+      "id": "recovery-sealed-script-rereview",
+      "kind": "exact-hash/static re-review only; guest SQL execution awaits owner",
+      "bytes": 720,
+      "sha256": "1E0B4B5EACB4951E05FEC20A14B69046D9A8834141AA8D2FB078F327061EE89C"
+    },
+    {
+      "id": "recovery-independent-retention-evaluation",
+      "kind": "observed active session/capacity and bounded copy proposal; transfer not tested",
+      "bytes": 4146,
+      "sha256": "8D1B8CEECFB2D7CF0807F6909B9A83F38CA5EBB345D85BDB3624724DD7987918"
     }
   ],
   "reference": {
