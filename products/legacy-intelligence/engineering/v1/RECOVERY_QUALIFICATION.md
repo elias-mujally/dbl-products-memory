@@ -1,6 +1,6 @@
 # V1 recovery qualification — preparation only
 
-Date:2026-10-23. **OWNER CONFIRMS NO QUALIFIED ERP BACKUP / INSPECTION PREPARED, NOT EXECUTED.**
+Date:2026-10-23. **EXACT OWNER REPORT HASH VERIFIED / INSPECTION PASS / RESTORE AND INDEPENDENT RETENTION NOT TESTED.**
 
 [Index](README.md) · [Prior gate](MERGE_AND_RECOVERY_GATE.md) · [Third-test contract](THIRD_CAPTURE_PLAN.md) · [Evidence hashes](EVIDENCE.json)
 
@@ -31,5 +31,21 @@ The owner subsequently authorized completing the inspection with existing ordina
 [Independent retention evaluation](EXTERNAL_RETENTION.md) observed Enhanced Session already checked and adequate host capacity for the small candidate backup, without testing file transfer or changing resources. This does not close backup integrity, independent-copy or restore gates. An executable restore plan still requires actual logical-file/backup-position results and target review; none is generated with guessed mappings.
 
 **PREPARED_NOT_EXECUTED / ERP THIRD TEST STILL BLOCKED.** No source mutation, recovery database, third acquisition or changed-business-row import has occurred. Next input is the owner's actual inspection report/hash, not another approval of the already authorized consumption issue. The independently verified DBL-state copy remains separate from ERP-recovery evidence.
+
+## Subsequent owner execution — 23 October
+
+This section supersedes the pending-execution status above; the earlier paragraphs describe preparation, not the current execution state. The owner supplied the completion message, report locator and SHA-256. Codex opened that report in guest Notepad through standalone ordinary VMConnect and paged through it without editing or running SQL. **GUI-observed:** PASS_INSPECTION_ONLY_RESTORE_NOT_TESTED, VERIFYONLY completed without SQL exception, before/after backup hashes equal, full set at position1, SQL2014, two present data/log members totaling250,281,984bytes. Backup checksums are absent. The source was ONLINE; proposed target database and directory were absent at probe time. Existing SQL identity was sysadmin despite use of an ordinary Windows session; least privilege was not established.
+
+**Not established:** exact received JSON bytes/hash, an independently retained backup, restored database integrity or equivalence of backup business rows to the current fixture. Guest free capacity was approximately58GiB; host capacity was rechecked, but backing-file mapping/growth limits still require a bounded preflight. A private proposal now names one new database, two separate files and their observed logical-member mappings, with collision rechecks, no REPLACE, no source overwrite and no cleanup. It is not executed and remains subject to exact-report validation and owner review. The backup is about24MiB; restored files are about239MiB. These sizes must not be conflated.
+
+The bounded clipboard attempt produced no file at the private host destination, including after a focus/context-menu retry. No permission denial or root cause was established, no resource/security setting changed, and no BAK was copied. Exact JSON attachment or complete pasted contents was requested, without rerunning the probe. The private receipt records the owner-provided hash separately from machine-verified evidence. The third ERP transaction remains blocked by recovery qualification.
+
+## Exact report acquired and validated
+
+The owner then pasted the complete JSON. Preserving all text spacing and values, converting LF to Windows CRLF and removing the terminal newline reconstructed5,966bytes whose SHA-256 exactly matches the separately owner-recorded `335E04B0A039CD0BA8787B81CD781F33C2511714AECB5D6C56EE498B7D8D02AF`. This is byte-verified reconstruction of the report; it is not successful clipboard file transfer or independent retention of the backup. The raw private report remains outside Git. No new guest probe was required.
+
+Machine validation confirmed source identity, the three inspection statements, full set1, two present logical members, matching guest-recorded before/after backup hashes, target absence, false mutation/recovery/copy flags, and consistency of restored sizes with reported current file allocation. Data25,755,648bytes plus log224,526,336bytes totals250,281,984bytes (238.6875MiB); guest free space at probe time was58.13GiB. This establishes metadata consistency and capacity at that observation, not fixture-row equality or restored integrity. The full backup timestamp is22October00:26:20 with no timezone in the header; no chronology claim depends on inventing its timezone.
+
+The explicit new-database/two-new-files scope has been revised privately for owner approval. Future execution must recheck identity, the pinned backup hash/header/members, all destination collisions and capacity; no REPLACE, source overwrite, permission change or automatic cleanup is included. Then ONLINE and non-repair CHECKDB on the separate target, followed by bounded business/journal comparisons, are required. Missing backup checksums remain disclosed. The outside-image backup copy and restore proof are still separate unresolved gates. **No restore or third stock transaction was executed.**
 
 Primary references: [VERIFYONLY semantics/permissions](https://learn.microsoft.com/en-us/sql/t-sql/statements/restore-statements-verifyonly-transact-sql?view=sql-server-ver15), [backup header fields](https://learn.microsoft.com/en-us/sql/t-sql/statements/restore-statements-headeronly-transact-sql?view=sql-server-ver15), [logical file metadata](https://learn.microsoft.com/en-us/sql/t-sql/statements/restore-statements-filelistonly-transact-sql?view=sql-server-ver15), [restore to a new name/location](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server?view=sql-server-ver15). Documentation supports the proposed procedure; it is not executed recovery evidence.

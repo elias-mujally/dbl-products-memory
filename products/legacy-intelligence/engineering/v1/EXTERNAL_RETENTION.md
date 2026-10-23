@@ -1,6 +1,6 @@
 # V1 backup outside its virtual disk — measured feasibility
 
-Date:2026-10-23. **ENHANCED SESSION OBSERVED ACTIVE / FILE TRANSFER AND BACKUP VALIDITY UNQUALIFIED.**
+Date:2026-10-23. **CLIPBOARD FILE TRANSFER ATTEMPTED, NOT QUALIFIED / BACKUP INDEPENDENT RETENTION UNQUALIFIED.**
 
 [Index](README.md) · [Recovery inspection](RECOVERY_QUALIFICATION.md) · [Third-test gate](THIRD_CAPTURE_PLAN.md) · [Evidence metadata](EVIDENCE.json)
 
@@ -27,3 +27,9 @@ The existing inspection script remains pinned to SHA-256 `2E09D358A4115C9E9C665E
 If existing clipboard policy blocks the narrow copy, stop and choose a separately authorized route instead of altering security settings. No VM export, VHD mount, shutdown, restart, network, drive mapping or permission change was performed. Same-instance database recovery and independent byte retention remain separate gates; neither permits the pending stock issue alone.
 
 Primary references: [Enhanced Session clipboard/file sharing](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/enhanced-session-mode), [Copy-VMFile direction](https://learn.microsoft.com/en-us/powershell/module/hyper-v/copy-vmfile?view=windowsserver2025-ps), [PowerShell Direct prerequisites and file copy](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/powershell-direct). Documentation is distinct from measured transfer success.
+
+## Subsequent narrow transfer attempt
+
+After owner execution, the exact inspection report was visible in guest Explorer and readable in Notepad. Codex tried copying that report alone to a newly created empty private host output folder through the existing session. No destination file appeared. A bounded focus retry and explicit guest Copy action also did not establish transfer; the cause is unknown, rather than a proved policy denial. Incidental filename-edit mode was cancelled without changing the filename or content. No BAK transfer was attempted, and no sharing, drive redirection, network or permission settings changed. The narrow clipboard route is **ATTEMPTED_NOT_QUALIFIED**, not successful independent retention. See [inspection result boundaries](RECOVERY_QUALIFICATION.md).
+
+The full owner-pasted report was subsequently reconstructed with an exact match to its independently supplied byte hash. This closes report acquisition through an owner-mediated text route; it does not qualify binary BAK transport. Guest-recorded backup hashes agree and VERIFYONLY passed, without backup checksum coverage. No backup bytes have been independently verified outside the VM image, and no full-system recovery is claimed.

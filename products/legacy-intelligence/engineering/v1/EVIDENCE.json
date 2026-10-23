@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "MERGED_BASELINE_INSPECTION_PENDING_OWNER_WITH_RETENTION_EVALUATION",
+  "status": "EXACT_OWNER_REPORT_VERIFIED_INSPECTION_PASS_RESTORE_AND_RETENTION_UNQUALIFIED",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -362,6 +362,36 @@
       "kind": "observed active session/capacity and bounded copy proposal; transfer not tested",
       "bytes": 4146,
       "sha256": "8D1B8CEECFB2D7CF0807F6909B9A83F38CA5EBB345D85BDB3624724DD7987918"
+    },
+    {
+      "id": "recovery-owner-result-gui-receipt",
+      "kind": "Owner report reference and GUI observations; raw report not acquired",
+      "bytes": 2704,
+      "sha256": "2C6B975670D81574E9C70F989BC3B23CA0ACE1042E475C11C5BE283058C01C74"
+    },
+    {
+      "id": "recovery-separate-restore-scope",
+      "kind": "Private precise restore proposal only; not executable or executed",
+      "bytes": 5591,
+      "sha256": "CF2FC76C02D291893F204D11855B92E2E6968FDF50E9E5C1AF0BCF7787D47D1A"
+    },
+    {
+      "id": "recovery-owner-report-exact",
+      "kind": "Private inspection report reconstructed from owner text with exact original byte hash",
+      "bytes": 5966,
+      "sha256": "335E04B0A039CD0BA8787B81CD781F33C2511714AECB5D6C56EE498B7D8D02AF"
+    },
+    {
+      "id": "recovery-owner-report-validation",
+      "kind": "Machine verification of exact report hash and internal metadata consistency; no restore",
+      "bytes": 2254,
+      "sha256": "9A413B2A057863B8B68F689B52289627A986D7D7E40F769B8A5CC3AD5AE2ABC7"
+    },
+    {
+      "id": "recovery-separate-restore-approval-r2",
+      "kind": "Exact-report-qualified private new-database and separate-files approval scope; not executed",
+      "bytes": 6138,
+      "sha256": "DF536686B89BB2E086AEC490DB22EBA0A0C1D5831658F1E595363AA7D9E2A9CD"
     }
   ],
   "reference": {
