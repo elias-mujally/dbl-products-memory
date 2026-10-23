@@ -1,6 +1,6 @@
 # Repeated integration — local execution status
 
-Date: 2026-10-22. **PUBLISHED FOR REVIEW / NOT MERGED.** See [publication receipt](PUBLICATION_RECEIPT.md).
+Date:2026-10-23. **LATEST: INDEPENDENT SECOND-AGENT HANDOVER PASSED WITH EXPLICIT LIMITS:**16checks/25first-attempt successful CLI calls from published guide and prepared inventory;5products/1450SAR,3snapshots, replay/history/audit and pinned new-directory recovery. [Independent acceptance](OPERATOR_HANDOVER.md). Human/clean-install/owner-private Windows ACL/browser visual gates remain open. PR19/PR8 are merged; PR20/PR9 stay open/unmerged. [Third real changed-data result](THIRD_CAPTURE_RESULT.md). Earlier sections are historical; original operational counts remain3actual acquisitions,11importer invocations,3snapshots/5current products1450SAR. Handover states were separate copies/new directories.
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 
@@ -51,3 +51,29 @@ Reproduced interrupted control/marker/source initialization and concurrent cold-
 Use owner-private local storage, outside shared/network/cloud-synchronized locations. New POSIX state uses0700/0600 and refuses broad/non-owned directories without chmod; Windows privacy requires owner-provisioned ACLs, not a mode-bit assumption. A permanent empty bootstrap reservation identifies resumable incomplete initialization. Atomic final-name publication requires local hard-link support. Process interruption is tested; power-loss guarantees are not implied. At16 interrupted pending files the app stops for owner review without automatic cleanup. Unknown/corrupt final metadata remains blocked. See [the measured advisory review](ADVISORY_REVIEW.md) for advisory dispositions, preserved CI216/test-timeout failures, test-harness correction and latest CI gate.
 
 **FACT — CI217 passed** on product head `f5471792a63c08039ebbbc4b96f40f94fd33325d`: Windows and Ubuntu build/typecheck/tests plus10 Worker/native-WAL cycles each. Public CI omits private actual-source fixtures; the local413/41 check includes them. [CI217](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/39843313410). No main merge or ERP change followed; actual changed-business-row refresh remains the next separately approved gate.
+
+## Owner-approved merges and recovery gate — subsequent state
+
+**FACT:** PR19 and PR8 were subsequently merged with explicit owner approval, preserving reviewed source trees/history. Product main was verified at `f79b3549e04eb8e091ed253eac1f5eb090c8ae5b`; memory main at `475f78cb5e30ce3fd679ae6d5c6e0970917f6d46`. The two remaining coupling threads were answered and resolved with recorded technical reasons. No blocking changes-requested review was dismissed.
+
+The owner also separately authorized the one-unit consumption issue, but reliable ERP recovery remained unproven: a guest-native backup was visually rechecked at25,612,288bytes, with no integrity/restore qualification. Execution stopped before an issue draft or Save. No fresh ERP baseline, third acquisition or changed-row import is claimed. A27-file copy of the retained two-snapshot DBL state passed hash/integrity checks without changing the original; this is not ERP recovery. [Merged commits, observations, limitations and next recovery gate](MERGE_AND_RECOVERY_GATE.md). Actual source acquisitions remain2; retained-state importer invocations remain7.
+
+## Subsequent ERP recovery validation — 23 October
+
+The approved separate restore now has an exact-hash verified owner execution report. New-target restore and non-repair CHECKDB passed; all eleven scoped fixture-table hashes/counts match before/restored/after and independently match the preserved first actual acquisition when decoded explicitly as UTF8. Reference balances/value/accounting nets remain unchanged. [Detailed proof, serialization/encoding corrections and limits](RECOVERY_QUALIFICATION.md). This is recovery evidence, not a third acquisition or changed-business-row refresh: actual source acquisitions remain2 and retained importer invocations7. Independent outside-image backup retention remains the last open recovery gate before the approved stock issue; no product code or retained DBL state changed.
+
+
+## Actual changed-business-data refresh — current result
+
+The scoped combined ERP recovery gate closed after independent host backup bytes matched the restore-tested source. One owner-approved GUI consumption issue3 ofT01quantity1 was saved once and reopened. Fresh ERP report and real third SQL acquisition agree on29/3/50/2/12 and1450SAR. The unchanged compiled connector reconciles11movements,12journal rows and6documents; net101/201/301=1450/−4625/3175, Posted=false preserved. Receipt1 detail c_qty/pc_qty also changed30→29; no old movement/journal changed.
+
+Four processes into the existing retained state returned applied/replayed/replayed/replayed for third/third/second/first. Checkpoints stayed3, current products5/value1450, prior snapshots/products unchanged at1470. Fresh store/Application Service/audit readback and integrity/FK checks passed. Audit now33success events/11completed imports. An initial acceptance-harness expectation of8new audit events was corrected to the actual12 through readback only, without more imports or ERP changes. Product code and original source hashes remained unchanged. [Full proof, failure disposition and reproduction](THIRD_CAPTURE_RESULT.md).
+
+Only the owner-assisted file path and narrow fixture are qualified. R3 does not acquire requisition or issue-header rows; no fresh request-status or live SQL qualification follows from this pass.
+
+
+## Operator package acceptance — no new ERP operation
+
+Final product head60a4b36e0e34d24e5ef51afaff01798e7473e733 passed [CI220 on Windows/Ubuntu](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/39925783325), including10native/Worker WAL cycles each. This is separate from430local passes/42skips with private actual artifacts enabled. Coupling advisories have documented dispositions and remain for human review; neither product PR20 nor memory PR9 was merged.
+
+[Product PR20](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/20) adds check/import/status/report/backup/verify-backup/restore and an Arabic guide without changing the connector, Canonical, migrations or existing refresh CLI. Local final build/typecheck and430passed/42skipped tests passed, with three private artifacts enabled; the app has46passed/4skipped. Nineteen independent compiled operator processes qualified source checks, changed-data/replay/history, a local escaped HTML report, a33-file DBL recovery-content backup pinned by an independently supplied manifest hash, new-directory restore and historical replay. Original source and retained operational-state hashes stayed unchanged. No fourth extraction, ERP transaction, network/permission/host configuration or dependency installation occurred. [Measured decisions, failed iterations, handover and remaining gates](OPERATOR_PACKAGE.md). Public CI and PR review status are recorded separately; private artifacts never become public CI fixtures.

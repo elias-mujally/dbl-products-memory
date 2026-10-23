@@ -54,7 +54,7 @@ For each document, signed stock quantity × cost reconciles to account101's sign
 - Receipt gr_post=false and journal Posted=false remain unchanged. Do not label these documents finally GL-posted.
 - journal j_posted is a populated date/time field in the acquisition, not a boolean equivalent to Posted.
 - item_store.post_or_not=false and cached quantities zero do not erase the signed ledger/report evidence.
-- item_mov.gr_flag=true for all ten rows is an observed profile condition, not a proven universal posting-state predicate.
+- item_mov.gr_flag=true for all ten baseline rows (and eleven after the third test) is an observed profile condition, not a proven universal posting-state predicate.
 
 ERP accounting-report recognition, stock effect, journal-row presence and final GL posting are separate claims.
 
@@ -65,3 +65,10 @@ Business dates are SQL DATETIME wall-time strings with no offset, preserved as s
 Canonical 2.1.0 persists five Products with sku/name/quantityOnHand/costPrice. It does not gain generic warehouse, group, unit, stock document, requisition or journal entities. Those remain source provenance/qualification evidence. Inventory value is exact decimal quantity × qualified constant cost, with currency separation and declared partial coverage. LowStock threshold5 is a DBL test setting, not an ERP reorder point.
 
 **UNQUALIFIED:** actual requisition rows/status mapping (the first collector captured schema but not their business rows), cancellation/delete/reversal variants, final posting, variable costs, multiple currencies/warehouses/units/branches, commercial invoices/customer returns/tax/payments and production-size performance. The GUI unapproved/unreceived requisition did not change the verified balance; no request quantity is ever added by the connector.
+
+
+## Third actual change corroboration — 23 October
+
+[Actual third capture](THIRD_CAPTURE_RESULT.md) adds exactly one consumption movement: document3/key3-23-0-0-1, T01, signed−1, unit cost20, warehouse/branch/unit1. All ten old movements and ten old journal rows stayed unchanged. New journal pair Dr30120/Cr10120 yields net101=1450,201=−4625,301=3175; Posted=false remains unchanged. Products now29/3/50/2/12, total1450SAR.
+
+Receipt1/T01 detail fields c_qty and pc_qty changed30→29 in the same source comparison; all other fields of that row and the other receipt-detail rows stayed unchanged. This is a measured correlated maintenance effect, not a second stock event. General allocation semantics remain unknown. Continue deriving stock only from the qualified signed ledger with journal/cost corroboration. R3 still does not acquire issue headers or requisition business rows, so no current status mapping for those is newly proven.

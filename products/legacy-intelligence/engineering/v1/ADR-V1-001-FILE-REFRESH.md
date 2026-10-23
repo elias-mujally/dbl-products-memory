@@ -35,3 +35,10 @@ This is an **operator-assisted repeated integration**, not a background daemon, 
 - Source clocks are operator evidence; unseen capture order/future-skew guards can block imports after clock drift. Do not silently adjust timestamps to pass.
 - The collector uses existing owner SQL privileges and short SERIALIZABLE reads. It is SELECT-only by reviewed code, not DB-enforced least privilege. Before deployment beyond this lab, qualify a constrained identity and representative workload/locking behavior.
 - Any network, privilege, scheduler/service installation, broad schema/storage migration, external publication or remote repository change requires the owner's separate approval. Local code, fixtures, tests, documentation and new private DBL state are within the current authorized scope.
+
+
+## Subsequent operator-package decision — 23 October
+
+The owner explicitly authorized ordinary code/test/documentation engineering, a new product PR and continued PR9 preparation, without merging either or making further ERP/infrastructure changes. [The operator package](OPERATOR_PACKAGE.md) implements the selected file route; guest/network/SQL alternatives remain deferred. A command surface plus offline HTML and Arabic guide was preferred to a new desktop application, service or installer. Independently pinned manifest verification and new-directory state restoration were selected to make recovery reproducible without overwriting a known success. Runtime/migration/source scope remains unchanged. Public source publication is authorized for this task; production deployment and additional ERP/security/network changes are not.
+
+Recovery manifests use locale-independent ASCII path ordering for new output. Verification treats the independently pinned file list as an order-independent set after strict identity/path/uniqueness/hash validation, preserving valid prior manifest bytes. This was selected after two failing synthetic regressions and actual prior-revision restore acceptance, without changing source/Canonical/storage schema.

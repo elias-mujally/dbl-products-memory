@@ -1,5 +1,7 @@
 # V1 — reproduce, operate, retain and recover
 
+Current operator workflow: [package decision and acceptance](OPERATOR_PACKAGE.md), with the product Arabic guide in [PR20](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/20). Existing detailed steps below remain historical/source-reference context; use the new command guide for ordinary operation.
+
 [Index](README.md) · [Decision](ADR-V1-001-FILE-REFRESH.md) · [Evidence registry](EVIDENCE.json)
 
 ## Source prerequisites
@@ -45,3 +47,15 @@ For consistent backups of DBL state, stop refresh invocations and copy the compl
 Actual ERP rows, GUI report comparisons, synthetic negative cases and actual repeated CLI invocations are separate evidence classes. Current business results are five products and 1470 SAR only for the pinned fixture. New supported rows may produce different quantities/value. No sales/customer return/requisition receipt is inferred. Final GL posting, live SQL, automatic capture/transfer, Windows license/ESU status and broad/production workload remain open unless independently qualified.
 
 When changing code or learning a new source fact, update RECURRING_STATUS/EVIDENCE plus the affected semantics/ADR; keep this runbook concise. Publication of these local drafts is a separate owner decision.
+
+
+## Qualified third-source reproduction
+
+The one-unit issue has already been saved; never repeat it as an import retry. Use [the actual third result](THIRD_CAPTURE_RESULT.md) and evidence hashes to reproduce using a verified private copy of the preserved two-snapshot state. Four independent compiled CLI invocations (third/third/second/first) must return applied/replayed/replayed/replayed, keep three checkpoints and latest29/3/50/2/12/value1450SAR. Old snapshots remain1470SAR; compare all existing snapshot/product/audit rows, reopen store/Application Service/audit and check integrity/FKs. Three audit actions per invocation are expected, not two. Preserve failing receipts; do not reset metadata or fabricate capture times. The fixture after change has11movements,12journal rows and6documents. This workflow remains owner-assisted and offline; no new source account, service, network or automatic schedule is qualified.
+
+
+## Operator recovery contract
+
+Use v1:operator check before import, status for source-verified retained history/audit, report for a new private offline Arabic HTML, and backup before significant DBL imports. Retain the returned manifest SHA-256 independently and supply it to verify-backup/restore. Restore only creates a new separate DBL state; it never restores ERP or replaces current storage. Nonempty WAL/journal, unresolved starts, missing audit completion, pending evidence, corrupt/foreign state, unsafe paths or mismatched hashes stop without cleanup/repair. The original refresh entry point and narrow source profile remain unchanged. [Exact command surface, failure cases and evidence](OPERATOR_PACKAGE.md).
+
+For retained-file handover, require private runtime/build/revision/tree/lock/native fingerprints and source pins/locations; owner-private Windows directory readiness is separate. Use one new state and chronological files; no VMConnect/extraction/ERP action is needed. Windows npm.cmd/current-process runtime selection avoids ExecutionPolicy/persistent PATH changes. Replay current/oldest-known files, retain3snapshots/5products1450SAR, then pinned backup/verify/new-directory restore/separate-process status. Record operator identity, first-attempt errors and any assistance. [Independent second-agent acceptance](OPERATOR_HANDOVER.md) differs from engineer tests and unperformed human/clean-install/browser review.

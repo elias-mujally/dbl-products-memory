@@ -1,6 +1,6 @@
 # V1 publication receipt — review branches, not main
 
-Date:2026-10-22. **PRS OPEN / NOT MERGED.**
+Date:2026-10-22. **Historical publication receipt; PR19/PR8 subsequently merged with owner approval.** See [the subsequent merge/recovery record](MERGE_AND_RECOVERY_GATE.md) for verified main commits and the unexecuted third test. The chronology below retains its original pre-merge evidence.
 
 [Index](README.md) · [Review decisions](PUBLICATION_REVIEW.md) · [Evidence registry](EVIDENCE.json) · [Unexecuted third-capture proposal](THIRD_CAPTURE_PLAN.md)
 

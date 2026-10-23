@@ -1,6 +1,6 @@
 # V1 third acquisition — one real stock change
 
-Status: **PROPOSED / OWNER ERP APPROVAL REQUIRED / NOT EXECUTED**. Date:2026-10-22.
+Status: **EXECUTED_AND_PASSED on2026-10-23**. The contract below records the original gates and expected results. [Actual execution, exact source hash, observed differences and remaining limits](THIRD_CAPTURE_RESULT.md) supersede all historical pending/not-executed wording below.
 
 [Index](README.md) · [Current proof](RECURRING_STATUS.md) · [Source semantics](DATA_SEMANTICS.md) · [Runbook](RUNBOOK.md)
 
@@ -10,11 +10,11 @@ Status: **PROPOSED / OWNER ERP APPROVAL REQUIRED / NOT EXECUTED**. Date:2026-10-
 
 **DECISION / PROPOSED:** use the already exercised **consumption issue** route for one unit of DBL-T01, branch1/warehouse1/unit1, at the existing constant20SAR cost, with the established301 consumption counterpart. It changes one item and requires no new accounts, warehouse, supplier, receipt, price, opening stock or commercial sale. It does not use the stock-transfer clearing account102 or reinterpret consumption as sales. Existing account classifications remain the scoped lab decisions documented in TIMELINE, not a general accounting prescription.
 
-## Separate owner approval scope
+## Separately approved owner scope
 
 One new GUI consumption issue of **DBL-T01, quantity1**, inside V1 only, using account301 and the existing warehouse/branch. Save once using the ordinary inventory-effective path observed previously; do not manually finalize GL posting or change flags to satisfy the connector. Document number/key must be discovered from the UI and persisted record; do not assume the next number or reuse an existing document. A distinct description should identify this as the third-capture test.
 
-This document authorizes no ERP action. Publication approval does not authorize this transaction. Owner acceptance must include retaining its stock/financial effects in the test database; no automatic deletion, reversal, compensating entry, SQL update or restore is part of the proposal.
+The owner's later explicit instruction separately authorized this one-unit transaction, conditional on reliable recovery and a fresh baseline. At approval time the recovery prerequisite had not qualified, so execution waited. On23October restore/CHECKDB/fixture and outside-VHDX byte retention qualified the scoped test; the single issue was then executed. The approval includes retaining the authorized test effects; no automatic deletion, reversal, compensating entry, SQL update or restore is part of the scope. The missing gate is recovery evidence, not a request to repeat transaction approval.
 
 ## Preparation and evidence gates
 
@@ -24,7 +24,7 @@ This document authorizes no ERP action. Publication approval does not authorize 
 4. Use standalone non-elevated VMConnect. Check the actual issue screen, warehouse, unit, counterpart, cost and document date; ensure no duplicate test document or concurrent ERP edits. If it requests an unexpected account, posting mode, permission or wider setup, stop before Save.
 5. On uncertain Save/timeout, inspect persisted state through the established ERP route before any retry. Never assume failure and create another issue.
 
-## Expected results — hypotheses until exercised
+## Expected results — now exercised as recorded in THIRD_CAPTURE_RESULT
 
 | Measure | Verified baseline | Expected after one-unit issue |
 |---|---:|---:|
@@ -51,4 +51,4 @@ These are predictions from the qualified constant-cost profile, not observed thi
 
 PASS requires the approved single real ERP change, independently observed ERP balance/effect, complete third artifact, matching DBL derivation after reopen, same-file idempotence and historical replay protection. Any extra/missing transaction, unsupported cost/posting state, ambiguous Save, failed recovery prerequisite or divergence stays BLOCKED/PARTIAL. Preserve the evidence and ask before corrective ERP changes. Never edit SQL or weaken qualification to make the expected1450 appear.
 
-No third extraction, ERP transaction, import or restore has been executed by this plan. Original Windows11 ERP, historical labs and their databases are outside scope.
+The contract was executed on23October after the separately approved restore/CHECKDB/fixture trial and verified independent host BAK retention closed the scoped recovery gate. The original approval remained valid; no new permission or broader source change was inferred. See [actual results](THIRD_CAPTURE_RESULT.md) and [recovery boundaries](RECOVERY_QUALIFICATION.md). Original host ERP and historical labs remained out of scope.

@@ -55,3 +55,29 @@ Native guest backups before/after were visually verified; exact names, locations
 See [current results](RECURRING_STATUS.md) and [ADR](ADR-V1-001-FILE-REFRESH.md). Any subsequent actual extraction is a separate acquisition with its own hash/time. Synthetic changed balances, process crashes or copied timestamps are never relabelled as a new ERP capture.
 
 - **FACT — second actual owner artifact:** on22October the owner reran R3 and supplied the full later JSON and independently recorded SHA-256 E10B8A75…59E9DC7. Received bytes matched. Capture finished11:59:46.8205388UTC; rows/schema matched the04:00:55 first acquisition. Same-state import applied once, replay added no checkpoint, and historical replay left the newer observation current. Two snapshots/five current products/1470SAR passed readback and SQLite integrity checks; no ERP data or runtime code was changed. Exact hashes and result hashes and evidence IDs are registered in EVIDENCE.json; exact locators remain private.
+
+## 7. Recovery gate before the third transaction — 23 October
+
+The owner executed the sealed inspection-only probe inside the guest. A bounded clipboard file-copy attempt did not establish transfer and did not change settings. Guest GUI reading showed the inspection pass. Complete owner-pasted text then reconstructed the exact report bytes/hash; machine checks confirmed inspection metadata and size consistency. VERIFYONLY passed with no backup checksums. No restored fixture, independently retained BAK, third consumption issue or third acquisition is claimed. See [qualification and precise evidence boundaries](RECOVERY_QUALIFICATION.md) and [retention findings](EXTERNAL_RETENTION.md). A new-name/separate-files restore scope is prepared privately for owner review, not executed.
+
+The owner subsequently approved and executed the sealed new-target restore test. Its exact report hash was verified; restore, CHECKDB and before/restored/after eleven-table fixture equality passed. Recomputed historical source table hashes also all matched after explicitly correcting the host UTF8 decode. The recovered reference remains30/3/50/2/12 and1470SAR with matching journal nets. No source stock change or third capture was performed. Retain the successful recovery target; outside-image BAK retention is still pending, without changing session/security/network settings.
+
+
+## 8. Independent retention, one real stock change and third import — 23 October
+
+The owner-assisted BAK copy was independently verified outside VHDX by size/SHA-256 against the separately restore-tested source. A fresh ERP baseline still showed30/3/50/2/12 and1470SAR. The already authorized consumption issue3 was saved once via standalone ordinary VMConnect, then closed/reopened. ERP stock report showed29/3/50/2/12 and1450SAR; financial entry Dr30120/Cr10120 matched.
+
+The unchanged R3 collector produced a third real1,079,921-byte artifact, exact hash92AD9A1C…092D94. Existing rows were compared, including correlated receipt-detail c_qty/pc_qty30→29. The compiled unchanged product accepted the single new movement/two journal rows/new master. Four same-state CLI processes proved applied/replayed/replayed/replayed, three snapshots, five current products1450SAR, retained old1470SAR history and reopen/audit/integrity success. A private acceptance-harness audit-count assertion failed at12versus8; read-only inspection/correction confirmed three events per invocation without repeating any import or ERP write. [Exact proof, hashes, reproduction and unresolved scope](THIRD_CAPTURE_RESULT.md).
+
+
+## 9. Operator-assisted execution package — 23 October
+
+The owner authorized ordinary product engineering and a new PR, while prohibiting further ERP transactions or infrastructure changes. Seven commands and an Arabic runbook now cover source checks, import/current-history inspection, local HTML results, independently pinned backup verification and new-directory DBL-state recovery. Initial readonly disk inspection unexpectedly created SQLite sidecars; serialized inspection then exposed WAL-header deserialize requirements. Documented RAM-only adaptation plus nonempty-WAL/journal refusal resolved both without changing source files. Additional controls reject incomplete audit evidence, corrupted data/archives/manifests, concurrent writers and unsafe destinations.
+
+Final local430passed/42skipped tests and nineteen compiled operator processes passed against existing actual artifacts and copied successful operational state. The original still has eleven imports/three snapshots/1450SAR; no fourth capture or ERP change was made. [Full decision and qualification](OPERATOR_PACKAGE.md). PR20 and memory PR9 remain for independent review, without automatic merge.
+
+## 10. Independent second-operator handover — 23 October
+
+A fresh agent without inherited investigation context used the published Arabic guide, prepared runtime/build and three source pins/locations, with new states. It read no source/tests/old reports/harnesses and received no parent walkthrough. All25CLI calls succeeded on first attempt;16checks passed:3snapshots,5current products1450SAR, replay/no rollback, Arabic HTML generation/static checks,21-file pinned backup/new-directory restore and separate-process audit/integrity readback. Its own logger emitted a disclosed serialization warning, corrected without product/permission changes.
+
+Gaps: owner-private Windows ACL unconfirmed; guide-only compiled provenance absent; actual npm10.9.8 versus declared10.8.2. Engineer separately matched published/local tree and prior build fingerprints. Guide improvements now cover preflight, offline retained-file entry and explicit handover/replay/recovery checklist. Browser visual/human/clean-install gates remain open. Seven coupling comments received concrete replies without cosmetic refactoring, automatic resolution or merge. [Results, decisions and evidence boundaries](OPERATOR_HANDOVER.md).
