@@ -45,3 +45,8 @@ For consistent backups of DBL state, stop refresh invocations and copy the compl
 Actual ERP rows, GUI report comparisons, synthetic negative cases and actual repeated CLI invocations are separate evidence classes. Current business results are five products and 1470 SAR only for the pinned fixture. New supported rows may produce different quantities/value. No sales/customer return/requisition receipt is inferred. Final GL posting, live SQL, automatic capture/transfer, Windows license/ESU status and broad/production workload remain open unless independently qualified.
 
 When changing code or learning a new source fact, update RECURRING_STATUS/EVIDENCE plus the affected semantics/ADR; keep this runbook concise. Publication of these local drafts is a separate owner decision.
+
+
+## Qualified third-source reproduction
+
+The one-unit issue has already been saved; never repeat it as an import retry. Use [the actual third result](THIRD_CAPTURE_RESULT.md) and evidence hashes to reproduce using a verified private copy of the preserved two-snapshot state. Four independent compiled CLI invocations (third/third/second/first) must return applied/replayed/replayed/replayed, keep three checkpoints and latest29/3/50/2/12/value1450SAR. Old snapshots remain1470SAR; compare all existing snapshot/product/audit rows, reopen store/Application Service/audit and check integrity/FKs. Three audit actions per invocation are expected, not two. Preserve failing receipts; do not reset metadata or fabricate capture times. The fixture after change has11movements,12journal rows and6documents. This workflow remains owner-assisted and offline; no new source account, service, network or automatic schedule is qualified.

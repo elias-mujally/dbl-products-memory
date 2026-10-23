@@ -1,6 +1,6 @@
 # Repeated integration — local execution status
 
-Date: 2026-10-22. **PUBLISHED FOR REVIEW / NOT MERGED.** See [publication receipt](PUBLICATION_RECEIPT.md).
+Date:2026-10-23. **LATEST: ACTUAL THIRD CHANGED-DATA REFRESH PASSED. Product PR19/memory PR8 merged; follow-up memory PR9 remains open.** [Third result](THIRD_CAPTURE_RESULT.md). Earlier sections below are dated historical evidence; current counts are3actual acquisitions,11retained importer invocations,3snapshots and5current products/1450SAR.
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 
@@ -61,3 +61,12 @@ The owner also separately authorized the one-unit consumption issue, but reliabl
 ## Subsequent ERP recovery validation — 23 October
 
 The approved separate restore now has an exact-hash verified owner execution report. New-target restore and non-repair CHECKDB passed; all eleven scoped fixture-table hashes/counts match before/restored/after and independently match the preserved first actual acquisition when decoded explicitly as UTF8. Reference balances/value/accounting nets remain unchanged. [Detailed proof, serialization/encoding corrections and limits](RECOVERY_QUALIFICATION.md). This is recovery evidence, not a third acquisition or changed-business-row refresh: actual source acquisitions remain2 and retained importer invocations7. Independent outside-image backup retention remains the last open recovery gate before the approved stock issue; no product code or retained DBL state changed.
+
+
+## Actual changed-business-data refresh — current result
+
+The scoped combined ERP recovery gate closed after independent host backup bytes matched the restore-tested source. One owner-approved GUI consumption issue3 ofT01quantity1 was saved once and reopened. Fresh ERP report and real third SQL acquisition agree on29/3/50/2/12 and1450SAR. The unchanged compiled connector reconciles11movements,12journal rows and6documents; net101/201/301=1450/−4625/3175, Posted=false preserved. Receipt1 detail c_qty/pc_qty also changed30→29; no old movement/journal changed.
+
+Four processes into the existing retained state returned applied/replayed/replayed/replayed for third/third/second/first. Checkpoints stayed3, current products5/value1450, prior snapshots/products unchanged at1470. Fresh store/Application Service/audit readback and integrity/FK checks passed. Audit now33success events/11completed imports. An initial acceptance-harness expectation of8new audit events was corrected to the actual12 through readback only, without more imports or ERP changes. Product code and original source hashes remained unchanged. [Full proof, failure disposition and reproduction](THIRD_CAPTURE_RESULT.md).
+
+Only the owner-assisted file path and narrow fixture are qualified. R3 does not acquire requisition or issue-header rows; no fresh request-status or live SQL qualification follows from this pass.

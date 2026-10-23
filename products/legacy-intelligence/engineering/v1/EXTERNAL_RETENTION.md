@@ -1,37 +1,21 @@
-# V1 backup outside its virtual disk — measured feasibility
+# V1 backup outside its virtual disk — verified retention
 
-Date:2026-10-23. **CLIPBOARD FILE TRANSFER ATTEMPTED, NOT QUALIFIED / BACKUP INDEPENDENT RETENTION UNQUALIFIED.**
+Date:2026-10-23. **PASS_OUTSIDE_VHDX_EXACT_BACKUP_RETENTION**.
 
-[Index](README.md) · [Recovery inspection](RECOVERY_QUALIFICATION.md) · [Third-test gate](THIRD_CAPTURE_PLAN.md) · [Evidence metadata](EVIDENCE.json)
+[Index](README.md) · [Recovery qualification](RECOVERY_QUALIFICATION.md) · [Third actual result](THIRD_CAPTURE_RESULT.md) · [Evidence metadata](EVIDENCE.json)
 
-## What was measured
+## Measured current result
 
-The intended standalone VMConnect window was rediscovered. An initial screenshot disagreed with the returned VMConnect accessibility identity; no input used that image. Fresh selection/activation yielded the correct guest. A menu element-index action then failed with a cached-element error; after fresh observation, a coordinate action opened the **host View menu**, where Enhanced session had a visible checkmark. The menu was closed without toggling modes/resources or sending guest terminal input. This is a current mode observation, not a clipboard-transfer test or a new explanation of historical approval failures.
+The owner copied only the pinned native BAK through the already active session to an empty private host folder, without moving the source, replacing a file or changing networking/resources/security/permissions. Codex independently read the resulting regular host file: **25,612,288bytes**, SHA-256 **88F028A3C2C562413797639357C775DA74B67EE36FFB197C269C6B5A59C127FC**. This equals the guest before/after hashes and the exact backup used in the approved separate restore/CHECKDB/eleven-table comparison. Exact locators and the receipt remain private; no BAK/raw report enters Git.
 
-The backup Properties view still showed the previously observed25,612,288bytes. The host filesystem inventory showed approximately51GiB available on the system volume and105GiB on the other visible local volume. These are transient capacity observations, not restore-size or physical-disk-independence proof. No additional removable-drive letter was established. No original ERP files or historical-lab directories were scanned.
+**FACT:** there is now a byte-verified host copy outside VHDX. **NOT PROVEN:** a different physical device, full-host recovery, native backup checksums, SQL-logins/Windows/licensing recovery or full-database row equality. The independent copy plus separately exercised fixture restore closed the scoped recovery gate for the approved one-unit stock change. No restore over the source was attempted. The successful recovery database and all source/copy files remain retained.
 
-## Recommended next narrow test
+## Prior attempts and limits
 
-Use the **already active** Enhanced Session clipboard file capability if its present policy permits it. Microsoft documents clipboard/file sharing for this mode. Do not enable host drive redirection, shares or networking. Preserve the owner's clipboard while the inspection script is being pasted. No file has been copied by this evaluation.
+An earlier Codex clipboard attempt to transfer a small report did not produce a host file, including after a bounded focus retry. No permission denial or root cause was established. Enhanced session had been observed checked, but that observation was not treated as transport proof. The exact report was instead reconstructed from owner-pasted text and matched its supplied SHA-256. The later owner-assisted BAK copy succeeded and was byte-verified; this does not retroactively establish why the earlier attempt failed or qualify unattended binary transport.
 
-After the owner completes the sealed probe, copy only the generated private report to an owner-private host output directory and hash/read it. Then scope copying only the selected backup to a new hash-addressed name outside the VM image/lab folder. Refuse collisions/overwrite and compare host bytes/SHA-256 against the guest probe's independently reported source. Record source set/position/hash and destination verification privately. Raw backup/report content remains outside Git; publish only sanitized evidence IDs/hashes. A checkmark or successful text paste alone cannot qualify file-copy policy/functionality.
+Copy-VMFile had only been qualified host-to-guest and was not misused as reverse export. PowerShell Direct, VHD mounting, VM export, shutdown/restart, new shares, drive mapping and networking were not used. Computer Use prohibits guest terminal automation; the owner ran inspection/restore/acquisition commands manually under their scoped approvals.
 
-The existing inspection script remains pinned to SHA-256 `2E09D358A4115C9E9C665E688C7BDC0E345E75AB13491F9B9B9C7EFDEEB1ACE2`. No runtime source hash, HEADERONLY/FILELISTONLY/VERIFYONLY result or checksum coverage is available yet. The current probe execution requires one owner paste: Computer Use prohibits terminal automation even when VMConnect is allowed. This is a tool workflow limit; the owner has authorized inspection. No new application approval, elevation, credential extraction or repeated denied Hyper-V query is used as a workaround.
+The later third raw JSON also arrived via owner-assisted existing-session copy and matched its independently recorded SHA-256. Automated capture/transfer remains unqualified. See the linked third result for the business change and persistent import, rather than interpreting transport alone as an integration pass.
 
-## Alternatives and limits
-
-- **Copy-VMFile:** official FileSource accepted value is Host; the cmdlet is host-to-guest. It is not a reverse-export method.
-- **PowerShell Direct:** Microsoft requires Hyper-V administrator context and guest credentials. It supports guest-to-host Copy-Item, but that is not an established ordinary-user route here. No connection, credential prompt, service change or bypass was attempted.
-- **Separate physical retention:** a verified host file removes dependence on the particular VHDX, while host/disk failure remains a separate risk. The physical relationship of the host volumes and an independent removable device were not qualified. Agree an additional owner-selected separate device before claiming broader disaster recovery; no media path is invented.
-
-If existing clipboard policy blocks the narrow copy, stop and choose a separately authorized route instead of altering security settings. No VM export, VHD mount, shutdown, restart, network, drive mapping or permission change was performed. Same-instance database recovery and independent byte retention remain separate gates; neither permits the pending stock issue alone.
-
-Primary references: [Enhanced Session clipboard/file sharing](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/enhanced-session-mode), [Copy-VMFile direction](https://learn.microsoft.com/en-us/powershell/module/hyper-v/copy-vmfile?view=windowsserver2025-ps), [PowerShell Direct prerequisites and file copy](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/powershell-direct). Documentation is distinct from measured transfer success.
-
-## Subsequent narrow transfer attempt
-
-After owner execution, the exact inspection report was visible in guest Explorer and readable in Notepad. Codex tried copying that report alone to a newly created empty private host output folder through the existing session. No destination file appeared. A bounded focus retry and explicit guest Copy action also did not establish transfer; the cause is unknown, rather than a proved policy denial. Incidental filename-edit mode was cancelled without changing the filename or content. No BAK transfer was attempted, and no sharing, drive redirection, network or permission settings changed. The narrow clipboard route is **ATTEMPTED_NOT_QUALIFIED**, not successful independent retention. See [inspection result boundaries](RECOVERY_QUALIFICATION.md).
-
-The full owner-pasted report was subsequently reconstructed with an exact match to its independently supplied byte hash. This closes report acquisition through an owner-mediated text route; it does not qualify binary BAK transport. Guest-recorded backup hashes agree and VERIFYONLY passed, without backup checksum coverage. No backup bytes have been independently verified outside the VM image, and no full-system recovery is claimed.
-
-The subsequent separately approved restore/CHECKDB/fixture trial also passed with an exact-hash verified execution report. This closes the same-instance fixture restore test, not independent retention. A new empty private host destination has been prepared and one owner-assisted file copy through the already existing session requested for the pinned BAK alone. No settings, drive sharing or network changes are authorized by that request; unavailable paste/refusal stops the attempt. The copied bytes/hash must be checked on the host before calling retention successful. No such destination BAK has yet been verified.
+Primary references retained from the earlier design: [Enhanced Session clipboard/file sharing](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/enhanced-session-mode), [Copy-VMFile](https://learn.microsoft.com/en-us/powershell/module/hyper-v/copy-vmfile?view=windowsserver2025-ps), [PowerShell Direct](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/powershell-direct). Documentation describes mechanisms; the bytes/hash above are the measured retention evidence.

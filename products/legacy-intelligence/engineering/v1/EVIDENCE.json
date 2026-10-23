@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "VERIFIED_SEPARATE_RESTORE_CHECKDB_FIXTURE_PASS_OUTSIDE_IMAGE_RETENTION_PENDING",
+  "status": "PASS_ACTUAL_THIRD_CHANGED_DATA_PERSISTENCE_HISTORY_AND_REPLAY",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -446,6 +446,126 @@
       "kind": "Verified restore, CHECKDB, eleven-table three-way match and corrected independent historical hash match",
       "bytes": 3231,
       "sha256": "582DF342AA51564265531E4666C09A9E509E5EDF6B62BDFFD85C321F023C60DF"
+    },
+    {
+      "id": "recovery-host-independent-bak",
+      "kind": "Byte-verified host-retained copy of the separately restore-tested backup; bytes remain private",
+      "bytes": 25612288,
+      "sha256": "88F028A3C2C562413797639357C775DA74B67EE36FFB197C269C6B5A59C127FC"
+    },
+    {
+      "id": "recovery-host-retention-receipt",
+      "kind": "Independent host file size and hash comparison against the restore-tested source",
+      "bytes": 1181,
+      "sha256": "FDC2283A9A60E85B4C086A990FF726285528E1A919CC163F499F24EE80A33289"
+    },
+    {
+      "id": "third-erp-baseline-report",
+      "kind": "Fresh pre-transaction ERP inventory report showing reference balances and value",
+      "bytes": 126285,
+      "sha256": "E6FEFC800D368886E8E29AAFAB192E4BB0716A96CC0E2D2EB21DB1361B516780"
+    },
+    {
+      "id": "third-erp-issue-draft",
+      "kind": "One-unit consumption issue draft before its single authorized Save",
+      "bytes": 148794,
+      "sha256": "B671AA30B337FFA14DB73AF7CDC5FC834482E658FD143033128A598CA52E1A06"
+    },
+    {
+      "id": "third-erp-pre-save-receipt",
+      "kind": "Historical draft receipt; not relabelled as a saved document",
+      "bytes": 1554,
+      "sha256": "3CFBE23A35042049E3F04474A08D6F35A3F32E50B6B019240B17E4705117BE1C"
+    },
+    {
+      "id": "third-erp-financial-entry",
+      "kind": "ERP financial-entry view showing Dr consumption20 and Cr inventory20",
+      "bytes": 139647,
+      "sha256": "4F83937A9D92D5CE2D5C4CCFE8550A01FDA03B51F5F25D03701196F9F350855F"
+    },
+    {
+      "id": "third-erp-issue-reopened",
+      "kind": "Persisted issue reopened after closing the form, without another Save",
+      "bytes": 175182,
+      "sha256": "B4FF34B30457FDF8FB033ED54221E4C70E4DCB19B4E611B8874114F0CBE7FFD9"
+    },
+    {
+      "id": "third-erp-after-report",
+      "kind": "Fresh post-change ERP report showing quantities29/3/50/2/12 and1450SAR",
+      "bytes": 127163,
+      "sha256": "C047ADB1AED30C2407A48E2D3AD571B84A8BEDDDD77F1E8DEA59C67CDC7B36C9"
+    },
+    {
+      "id": "third-erp-execution-receipt",
+      "kind": "Single Save, reopen, financial-entry and fresh stock report observations",
+      "bytes": 1775,
+      "sha256": "A08E80B4D52180F62E7AF5E2DCBFB993406DFE48EBCD7C42FE68E5F459479A28"
+    },
+    {
+      "id": "third-actual-source",
+      "kind": "Exact owner third acquisition bytes; original raw retained privately",
+      "bytes": 1079921,
+      "sha256": "92AD9A1C1AC75A0697DE081BBC7294AF22E5BD615BFA5509B25FD784AD092D94"
+    },
+    {
+      "id": "third-source-qualification",
+      "kind": "Actual source delta comparison including correlated receipt-detail changes and qualified inventory/journal mapping",
+      "bytes": 10163,
+      "sha256": "4300B3181E95FF83062510BB032D0E0DE8BF2334261A0F64845292C94812C804"
+    },
+    {
+      "id": "third-dbl-preservation",
+      "kind": "All27 files of the pre-import two-snapshot operational state copied and hash verified",
+      "bytes": 5327,
+      "sha256": "A47C28899A03EF04C8DE5B0EADC8A0C680B2C259D58AD852B738C790EFD265D6"
+    },
+    {
+      "id": "third-dbl-import",
+      "kind": "Operational CLI admitted actual changed artifact into existing state",
+      "bytes": 3585,
+      "sha256": "10842F6D326D5FE130DC11471A19AAFA83648A6073F53D918F96636CBE6538FB"
+    },
+    {
+      "id": "third-dbl-replay",
+      "kind": "Same changed source replay retained three checkpoints and current1450SAR",
+      "bytes": 3586,
+      "sha256": "F1D80EC9D063C6590F476FA36E374A75D6A082CCAD32D644C150B6F3DBD80DCA"
+    },
+    {
+      "id": "third-dbl-second-replay",
+      "kind": "Second artifact historical replay did not roll back current changed state",
+      "bytes": 3586,
+      "sha256": "7AFC650B5DE443DA19BCF52B6700C579AEF504A168AEB027634D3CEF66146773"
+    },
+    {
+      "id": "third-dbl-first-replay",
+      "kind": "First artifact historical replay did not roll back current changed state",
+      "bytes": 3586,
+      "sha256": "38425F0B91C54D840F0D964F363466CAE17CEB5B647DB45B1F2B8C31447E1C06"
+    },
+    {
+      "id": "third-harness-initial",
+      "kind": "Preserved private acceptance harness with audit-count assertion that failed after four successful imports",
+      "bytes": 12407,
+      "sha256": "87D096DC9F5D220F81334A216DAB1854080D93B3B49031E5B491628F4D745788"
+    },
+    {
+      "id": "third-harness-readback",
+      "kind": "Separate corrected acceptance readback; no further CLI imports or ERP changes",
+      "bytes": 8534,
+      "sha256": "CB29336F8F2008710B366CC4FEE8746EF31D8AA9C94FC0D7E3581E3C56964E7A"
+    },
+    {
+      "id": "third-harness-correction",
+      "kind": "Three audit actions per process verified; initial two-action assumption corrected without repeating imports",
+      "bytes": 531,
+      "sha256": "A055C5A2F50598A5F7D4DA6C6F81D6828AE46398D41AECD0B08012AD6AA2CEB6"
+    },
+    {
+      "id": "third-actual-refresh-result",
+      "kind": "Actual changed business data, replay/history/reopen/audit/integrity acceptance result",
+      "bytes": 3685,
+      "sha256": "550EC67B7CC25CA660EED3056E954439EBFB95D2B238A8C55377A9AB0BDCB3D9"
     }
   ],
   "reference": {
@@ -531,5 +651,7 @@
   },
   "sourceAccessLimit": "Reviewed SELECT-only owner collector; database-enforced least privilege is not qualified.",
   "mergedProductCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
-  "mergedMemoryCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46"
+  "mergedMemoryCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46",
+  "latestProductMergeCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
+  "latestMemoryMergeCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46"
 }

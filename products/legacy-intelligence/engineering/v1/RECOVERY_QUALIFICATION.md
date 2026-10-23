@@ -1,6 +1,6 @@
-# V1 recovery qualification — preparation only
+# V1 recovery qualification — verified scoped fixture recovery
 
-Date:2026-10-23. **EXACT RESTORE REPORT VERIFIED / SEPARATE RESTORE, CHECKDB AND BOUNDED FIXTURE PASS / INDEPENDENT RETENTION UNQUALIFIED.**
+Date:2026-10-23. **CURRENT: SEPARATE RESTORE/CHECKDB/FIXTURE AND OUTSIDE-VHDX EXACT BACKUP RETENTION VERIFIED.** Historical preparation/result stages below remain evidence of progression. Later independent retention closes the scoped combined gate; it does not rewrite original report flags or prove whole-system recovery.
 
 [Index](README.md) · [Prior gate](MERGE_AND_RECOVERY_GATE.md) · [Third-test contract](THIRD_CAPTURE_PLAN.md) · [Evidence hashes](EVIDENCE.json)
 
@@ -67,3 +67,10 @@ An additional independent recomputation from the preserved first actual ERP acqu
 **Qualification boundary:** same-instance database restore and this eleven-table inventory fixture are now exercised and verified from the exact owner execution report. Backup checksums remain absent. No full-database row-equivalence, Windows/SQL-login/licensing recovery, separate-physical-device recovery or independently retained BAK is claimed. The report's recoveryQualified=false is preserved; it represents the still-open combined recovery gate. Keep the new recovery target; do not repeat or clean up this successful trial. The separately approved stock issue remains pending outside-VHDX retention and a fresh pre-transaction state check.
 
 Primary references: [VERIFYONLY semantics/permissions](https://learn.microsoft.com/en-us/sql/t-sql/statements/restore-statements-verifyonly-transact-sql?view=sql-server-ver15), [backup header fields](https://learn.microsoft.com/en-us/sql/t-sql/statements/restore-statements-headeronly-transact-sql?view=sql-server-ver15), [logical file metadata](https://learn.microsoft.com/en-us/sql/t-sql/statements/restore-statements-filelistonly-transact-sql?view=sql-server-ver15), [restore to a new name/location](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server?view=sql-server-ver15). Documentation supports the proposed procedure; it is not executed recovery evidence.
+
+
+## Final scoped recovery gate and use — 23 October
+
+The owner copied the pinned BAK through the existing session. Independent host filesystem reads found a regular25,612,288-byte file whose SHA-25688F028A3C2C562413797639357C775DA74B67EE36FFB197C269C6B5A59C127FC exactly matches the restore-tested guest source before/after. The copy is outside VHDX and independently retained on the host; no new networking, drive sharing, session/security setting or permission change was used. [Retention proof and physical limits](EXTERNAL_RETENTION.md). Together with the new-target restore, non-repair CHECKDB and eleven-table fixture match, this qualified recovery of the known pre-change inventory fixture for the approved small test. Full-system/physical-device recovery and native backup checksums remain unqualified.
+
+A fresh pre-change GUI report reconfirmed1470SAR and the known quantities; one authorized consumption issue then produced1450SAR. [Transaction and third-import results](THIRD_CAPTURE_RESULT.md). The retained pre-change BAK/recovery target remain reference assets; do not overwrite or clean them up automatically. Their original recoveryQualified=false flags describe their execution stage, not the later combined decision.
