@@ -1,6 +1,6 @@
 # Repeated integration — local execution status
 
-Date:2026-10-23. **LATEST: ACTUAL THIRD CHANGED-DATA REFRESH PASSED. Product PR19/memory PR8 merged; follow-up memory PR9 remains open.** [Third result](THIRD_CAPTURE_RESULT.md). Earlier sections below are dated historical evidence; current counts are3actual acquisitions,11retained importer invocations,3snapshots and5current products/1450SAR.
+Date:2026-10-23. **LATEST: ACTUAL THIRD CHANGED-DATA REFRESH PASSED. Product PR19/memory PR8 merged; follow-up memory PR9 remains open.** [Third result](THIRD_CAPTURE_RESULT.md). Earlier sections below are dated historical evidence; current counts are3actual acquisitions,11retained importer invocations,3snapshots and5current products/1450SAR. The operator package now passed separately on copies/existing artifacts; this does not change those original operational counts.
 
 [Index](README.md) · [ADR](ADR-V1-001-FILE-REFRESH.md) · [Evidence](EVIDENCE.json)
 
@@ -70,3 +70,10 @@ The scoped combined ERP recovery gate closed after independent host backup bytes
 Four processes into the existing retained state returned applied/replayed/replayed/replayed for third/third/second/first. Checkpoints stayed3, current products5/value1450, prior snapshots/products unchanged at1470. Fresh store/Application Service/audit readback and integrity/FK checks passed. Audit now33success events/11completed imports. An initial acceptance-harness expectation of8new audit events was corrected to the actual12 through readback only, without more imports or ERP changes. Product code and original source hashes remained unchanged. [Full proof, failure disposition and reproduction](THIRD_CAPTURE_RESULT.md).
 
 Only the owner-assisted file path and narrow fixture are qualified. R3 does not acquire requisition or issue-header rows; no fresh request-status or live SQL qualification follows from this pass.
+
+
+## Operator package acceptance — no new ERP operation
+
+Final product head60a4b36e0e34d24e5ef51afaff01798e7473e733 passed [CI220 on Windows/Ubuntu](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/39925783325), including10native/Worker WAL cycles each. This is separate from430local passes/42skips with private actual artifacts enabled. Coupling advisories have documented dispositions and remain for human review; neither product PR20 nor memory PR9 was merged.
+
+[Product PR20](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/20) adds check/import/status/report/backup/verify-backup/restore and an Arabic guide without changing the connector, Canonical, migrations or existing refresh CLI. Local final build/typecheck and430passed/42skipped tests passed, with three private artifacts enabled; the app has46passed/4skipped. Nineteen independent compiled operator processes qualified source checks, changed-data/replay/history, a local escaped HTML report, a33-file DBL recovery-content backup pinned by an independently supplied manifest hash, new-directory restore and historical replay. Original source and retained operational-state hashes stayed unchanged. No fourth extraction, ERP transaction, network/permission/host configuration or dependency installation occurred. [Measured decisions, failed iterations, handover and remaining gates](OPERATOR_PACKAGE.md). Public CI and PR review status are recorded separately; private artifacts never become public CI fixtures.

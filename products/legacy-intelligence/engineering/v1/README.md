@@ -1,6 +1,6 @@
 # Motakamel Plus V1 — engineering memory
 
-**Updated: 2026-10-23. PR19/PR8 merged. Scoped recovery and outside-VHDX backup retention verified; the authorized one-unit issue and actual third changed-data import passed. Memory PR9 remains open for review.**
+**Updated: 2026-10-23. PR19/PR8 merged. Scoped recovery and outside-VHDX backup retention verified; the authorized one-unit issue and actual third changed-data import passed. Operator package passed19compiled-process acceptance checks; memory PR9 and product PR20 remain open for review.**
 
 هذا الفهرس يربط التاريخ والقرارات والأدلة بدل تكرار التقارير. النطاق هو المختبر الجديد the isolated V1 test VM وقاعدته التجريبية فقط. لا يعيد تأهيل مصادر original host/historical sources التاريخية ولا يلغي قيودها.
 
@@ -20,9 +20,13 @@
 12. [تأهيل الاستعادة ونتيجتها المتحققة](RECOVERY_QUALIFICATION.md): طابق تقرير التنفيذ بصمته الأصلية، ونجحت الاستعادة المنفصلة وCHECKDB وتطابق الجداول الأحد عشر والأرصدة والقيود. أُعيد حساب بصمات الجداول من الاستخراج الأول فطابقت جميعها. تحقق لاحقًا الاحتفاظ بنسخة مطابقة خارج VHDX ثم نُفذ الصرف الثالث؛ تبقى استعادة المضيف كاملة غير مؤهلة.
 13. [تقييم الاحتفاظ خارج VHDX](EXTERNAL_RETENTION.md): نتيجة النسخ الفعلي وبصمته، والمحاولات السابقة، وحدود استقلال النسخة عن VHDX وعن الجهاز المادي.
 
+14. [حزمة التشغيل للمشغّل](OPERATOR_PACKAGE.md): دليل عربي، فحص المصدر والحالة، تقرير محلي، نسخ حالة DBL واستعادتها إلى مسار جديد، ونتائج قبولها وحدود تسليمها.
+
 ## أحدث نتيجة فعلية
 
 **FACT — PASS_ACTUAL_THIRD_CHANGED_DATA_PERSISTENCE_HISTORY_AND_REPLAY:** ثلاث عمليات استخراج حقيقية؛ صرف استهلاكي واحد أنقصT01 من30 إلى29 وقيمته من600 إلى580SAR. تقرير ERP والاستخراج الثالث وDBL تتفق على29/3/50/2/12 وإجمالي1450SAR. أربع عمليات CLI أضافت لقطة واحدة فقط؛ إعادة الثالث والأقدم لم تكرر الأصناف أو تُرجع الحالة الحالية. بقي التاريخ1470/1470/1450، ونجح إعادة فتح التخزين والتحليلات والتدقيق وفحص سلامة قواعده الثلاث. لا تغيير لكود المنتج ولا ادعاء SQL حي أو ترحيل GL نهائي. [الأدلة وإعادة الإنتاج والحدود](THIRD_CAPTURE_RESULT.md).
+
+**FACT — حزمة التشغيل:** اجتازت430اختبارًا مع42تخطيًا معلنًا، و19تشغيلًا مستقلًا باستخدام الاستخراجات الثلاثة المحفوظة ونسخة من الحالة التشغيلية الناجحة. لم يحدث استخراج رابع أو تعديل ERP؛ بقي الأصل دون تغيير. [النطاق والقرارات والقبول](OPERATOR_PACKAGE.md)؛ [PR20 للمنتج](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/20).
 
 ## نتيجة الأساس المثبتة — تسلسل تاريخي
 

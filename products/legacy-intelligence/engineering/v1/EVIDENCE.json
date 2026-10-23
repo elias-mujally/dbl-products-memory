@@ -1,6 +1,6 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "PASS_ACTUAL_THIRD_CHANGED_DATA_PERSISTENCE_HISTORY_AND_REPLAY",
+  "status": "PASS_OPERATOR_KIT_THREE_ACTUAL_ARTIFACTS_AND_LEGACY_STATE_RECOVERY",
   "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
@@ -566,6 +566,162 @@
       "kind": "Actual changed business data, replay/history/reopen/audit/integrity acceptance result",
       "bytes": 3685,
       "sha256": "550EC67B7CC25CA660EED3056E954439EBFB95D2B238A8C55377A9AB0BDCB3D9"
+    },
+    {
+      "id": "operator-kit-private-handover",
+      "kind": "Private exact runtime/native/build/collector/lockfile hashes and owner handover locators",
+      "bytes": 4285,
+      "sha256": "F1228C7EDC9F078007482732C6E1AB436408EFD887D7A08D1195611D536CA26F"
+    },
+    {
+      "id": "operator-kit-state-preservation",
+      "kind": "Original operational state and pre-package compatibility copy hashes match; no original changes",
+      "bytes": 7281,
+      "sha256": "3BABD1A75FBF0C3A23E7D009F57E1495EB5637C0B9EFADC93CF3FB5BCE0753D1"
+    },
+    {
+      "id": "operator-kit-actual-acceptance",
+      "kind": "Seventeen compiled operator processes on three existing actual artifacts and copied successful state",
+      "bytes": 3148,
+      "sha256": "763844D4145B0428AB6E19466848DA9647616335A92128689E7D627A6CCC1732"
+    },
+    {
+      "id": "operator-kit-development-iterations",
+      "kind": "Failed readonly/deserialize iterations, measured causes and bounded corrections",
+      "bytes": 1746,
+      "sha256": "2D81D4523ACCC4BD8569EE7EBF5686A1FC20813072A8F548240BDD70304491C1"
+    },
+    {
+      "id": "operator-kit-private-acceptance-harness",
+      "kind": "Reproduction harness using existing actual artifacts only; no ERP changes",
+      "bytes": 5506,
+      "sha256": "BC454C9B9AA75A221CA357F1BDAC3DADCDEECC8FE9A7A9F41F8C1ABA16E2E80C"
+    },
+    {
+      "id": "operator-kit-final-workspace-tests",
+      "kind": "Initial revision complete build/typecheck and429passed/42skipped with private source gates enabled; superseded by final order refinement",
+      "bytes": 7040,
+      "sha256": "DD297B29E2CFC6CEEE9C4E5042A0E891AD8685D6A9D4BE7039D8AB19266EF4B1"
+    },
+    {
+      "id": "operator-kit-final-app-tests",
+      "kind": "Initial revision affected workspace build/typecheck and45passed/4skipped",
+      "bytes": 540,
+      "sha256": "449A88E14B0658028B07A53416F829FD29E47029D031763F3F8DD1BCC9781E06"
+    },
+    {
+      "id": "operator-kit-compatible-status",
+      "kind": "Status verification against an unchanged byte copy of successful pre-package operational state",
+      "bytes": 7094,
+      "sha256": "80C7E731885399D08CE2B691F73C778511440DE143991285C09AF7D11F2915EC"
+    },
+    {
+      "id": "operator-kit-backup-receipt",
+      "kind": "Verified33-file DBL recovery-content backup receipt with independent manifest hash",
+      "bytes": 388,
+      "sha256": "6094FA90AB26C23BB2422BEFE11235AA369ED2CC03AF2EA6BA3EACEC5D25E868"
+    },
+    {
+      "id": "operator-kit-backup-manifest",
+      "kind": "Exact independently pinned DBL recovery manifest; content remains private",
+      "bytes": 6545,
+      "sha256": "E670502B172836888A5A8E31E3366A92BBA00327FA22FDD2153CA7B8927A79D8"
+    },
+    {
+      "id": "operator-kit-backup-verification",
+      "kind": "Verification of independently pinned manifest and contained state/data/history",
+      "bytes": 7040,
+      "sha256": "584D373E214D98FB0CD63E38EABA1A7D34A3E8AF067C45EC096C5150138C0CC5"
+    },
+    {
+      "id": "operator-kit-restored-copy",
+      "kind": "New-directory DBL-state restore receipt; no overwrite or ERP restore",
+      "bytes": 1741,
+      "sha256": "D7CC3C07F8012B94B32BBBCDFE49C302DB2FFD04C31B36302A8D54DD6EE26EFE"
+    },
+    {
+      "id": "operator-kit-restored-old-replay",
+      "kind": "Oldest actual source replay into restored copy kept current1450SAR and3checkpoints",
+      "bytes": 3586,
+      "sha256": "285499E32781EC09A8B97B3A6FB3B05BA49B728D12C4410BF32CA15D31ADC7F4"
+    },
+    {
+      "id": "operator-kit-restored-status",
+      "kind": "Reopened copied state after restore/replay with12completed imports; original stayed11",
+      "bytes": 7094,
+      "sha256": "F567D9705BFA06E006D4CA07E4F242FCEB166FACD8DDD347F68DD17FD6BE8C2C"
+    },
+    {
+      "id": "operator-kit-private-html",
+      "kind": "Generated escaped offline Arabic inventory/history/audit report; private bytes not published",
+      "bytes": 2457,
+      "sha256": "2BD538839C7FB5A37A36F54130DEBBE37F685BF0120700F860411A8CCC74C75B"
+    },
+    {
+      "id": "operator-kit-ci-review",
+      "kind": "Initial exact-head CI219 and review readback; superseded by final order refinement",
+      "bytes": 5330,
+      "sha256": "6E734D6FB53E1B6C9F4F6E13D9D20E83C1DE6BE7517230FC8DEA3457C2BA064D"
+    },
+    {
+      "id": "operator-final-private-handover",
+      "kind": "Final runtime/native/build/collector/lockfile fingerprints and private owner handover",
+      "bytes": 4303,
+      "sha256": "65D39F477DC6E50EFADC0E7B27B8A3B0E767B5C2A31A110AD3772FD969597FAF"
+    },
+    {
+      "id": "operator-final-state-preservation",
+      "kind": "Final operational-state and compatibility-copy file hashes match; original unchanged",
+      "bytes": 7287,
+      "sha256": "796F4096D872C7EFD0E743935FABFEC9C18E62DBB064C888E6C7E88816E8241B"
+    },
+    {
+      "id": "operator-final-actual-acceptance",
+      "kind": "Nineteen compiled acceptance processes including real prior-revision backup verification and restore",
+      "bytes": 3439,
+      "sha256": "925E007EA40E2E15FC229AF7A2169B19E1EB10A9590353D117A57906950D8009"
+    },
+    {
+      "id": "operator-final-workspace-tests",
+      "kind": "Final full build/typecheck and430passed/42skipped with all three private artifact gates enabled",
+      "bytes": 7040,
+      "sha256": "C2A060ADAA3F096082B1FBFD3ABBD4924F6DCDEE14E2FACF944E1C248037981F"
+    },
+    {
+      "id": "operator-final-ci-review",
+      "kind": "Final exact-head CI220 and review readback; no automatic merge",
+      "bytes": 5698,
+      "sha256": "2BB40668C71A8D52C7BD10E460D67F3A1D044440749E543C71580C66109AE912"
+    },
+    {
+      "id": "operator-final-harness",
+      "kind": "Final nineteen-process actual-artifact and prior-backup compatibility reproduction harness",
+      "bytes": 6078,
+      "sha256": "72A9D596E064B5B1AD436F9DEBC031D07E0B9D05BD39A912B2660F2C1B3CFC45"
+    },
+    {
+      "id": "operator-final-backup-manifest",
+      "kind": "Final canonical ASCII-order manifest; independently pinned private recovery-content metadata",
+      "bytes": 6545,
+      "sha256": "F304A6FFEF6F75205B974EB12AFB5B6CA284ED9EB9FB5FC30C5BD27533E8E7F4"
+    },
+    {
+      "id": "operator-final-prior-backup-verify",
+      "kind": "Actual prior-revision manifest verified without rewriting its bytes or hash",
+      "bytes": 7040,
+      "sha256": "584D373E214D98FB0CD63E38EABA1A7D34A3E8AF067C45EC096C5150138C0CC5"
+    },
+    {
+      "id": "operator-final-prior-backup-restore",
+      "kind": "Actual prior-revision manifest restored to a new separate DBL-state path",
+      "bytes": 1741,
+      "sha256": "D7CC3C07F8012B94B32BBBCDFE49C302DB2FFD04C31B36302A8D54DD6EE26EFE"
+    },
+    {
+      "id": "operator-manifest-order-prefixtests",
+      "kind": "Two pre-fix manifest-order regression failures preserved before correction",
+      "bytes": 8850,
+      "sha256": "27FBB145A1F150841282D518BB8A49FEEFCC1741BB3CEC9B8B36130492B90537"
     }
   ],
   "reference": {
@@ -653,5 +809,6 @@
   "mergedProductCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
   "mergedMemoryCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46",
   "latestProductMergeCommit": "f79b3549e04eb8e091ed253eac1f5eb090c8ae5b",
-  "latestMemoryMergeCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46"
+  "latestMemoryMergeCommit": "475f78cb5e30ce3fd679ae6d5c6e0970917f6d46",
+  "latestOperatorProductCommit": "60a4b36e0e34d24e5ef51afaff01798e7473e733"
 }
