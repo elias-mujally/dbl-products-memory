@@ -1,7 +1,7 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "MERGED_BASELINE_WITH_POST_MERGE_RECORD_FOR_REVIEW",
-  "updated": "2026-10-22",
+  "status": "MERGED_BASELINE_WITH_RECOVERY_PREPARATION_FOR_REVIEW",
+  "updated": "2026-10-23",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
   "productBaseCommit": "415ad8acef5f5754487b83408bad6c9b9c58028e",
@@ -326,6 +326,30 @@
       "kind": "27-file two-snapshot DBL copy verification; not ERP recovery",
       "bytes": 6878,
       "sha256": "84F6C119C409CBB852F33D16A5D83868F60BF47C45CFA89522F9640F9F2F1EC9"
+    },
+    {
+      "id": "recovery-inspection-prepared-probe",
+      "kind": "pinned inspection-only owner probe; not executed against SQL",
+      "bytes": 12842,
+      "sha256": "2E09D358A4115C9E9C665E688C7BDC0E345E75AB13491F9B9B9C7EFDEEB1ACE2"
+    },
+    {
+      "id": "recovery-preparation-static-checks",
+      "kind": "static SQL/command allowlist and parser checks; no SQL execution",
+      "bytes": 720,
+      "sha256": "6219BA14173A3FED79D4A2FBB468B04942E806C0ED13EB085F284DE32C477A0C"
+    },
+    {
+      "id": "recovery-preparation-powershell51",
+      "kind": "Windows PowerShell5.1 parse only; candidate not executed",
+      "bytes": 273,
+      "sha256": "CA56F1265C9EACCA2460E31EE7598ECF7379C6ABE3EE19C8FBE1B0C1D1981A4E"
+    },
+    {
+      "id": "recovery-preparation-private-plan",
+      "kind": "scoped inspection and later separate restore-approval plan",
+      "bytes": 7297,
+      "sha256": "DA30D11F962BB417A419DE6759D6121BFCE42421A18FF17A4F0DFB8ADE2A3650"
     }
   ],
   "reference": {

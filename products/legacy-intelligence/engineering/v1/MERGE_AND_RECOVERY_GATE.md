@@ -34,3 +34,5 @@ The owner was asked whether a newer independently retained, recovery-qualified b
 After recovery qualifies, recheck actual ERP baseline and document uniqueness, execute the authorized one-unit issue through ERP, verify inventory/journal effects, then acquire/import the third real file and exercise same-file/historical replay plus reopened storage/audit. Expected29units/1450SAR remains a prediction until that sequence completes. Original ERP and historical labs are outside scope.
 
 This follow-up records actual merge results and the stop decision; it is proposed through a new documentation PR because PR8 is already merged. Its publication does not claim that the ERP gate has closed or authorize merging a further PR automatically.
+
+Subsequent owner reply,2026-10-23: no qualified recovery copy exists; prepare the verification step. [The preparation record](RECOVERY_QUALIFICATION.md) describes the pinned inspection-only probe and the later separately scoped restore trial. Static checks ran; no backup inspection, restore or ERP change ran.
