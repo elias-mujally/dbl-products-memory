@@ -1,0 +1,179 @@
+{
+  "format": "dbl.desktop.design-proposal.1",
+  "date": "2026-10-25",
+  "status": "PROPOSAL_FOUNDER_APPROVAL_PENDING_NOT_IMPLEMENTED",
+  "productCommit": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
+  "productTree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+  "memoryBaseCommit": "86beaf03cceac4e39acc1d194a1577f41b749d70",
+  "documentationFiles": [
+    {
+      "path": "products/legacy-intelligence/design/README.md",
+      "bytes": 940,
+      "sha256": "C5B87E9F8E64EEC8BF38065289A187CD836EC91C8FCD408DED55229155AD4137"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/README.md",
+      "bytes": 5621,
+      "sha256": "C581A9E99E6D1862FC191A7870061FD245CA547E99D5E2C2F0797BFBE712457F"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/01_ARCHITECTURE_PROPOSAL.md",
+      "bytes": 9459,
+      "sha256": "B26EEA772E52543058902CC6B565744B9FE3157B10137CE4CF5C202B6D18D311"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/02_UX_REQUIREMENTS.md",
+      "bytes": 9574,
+      "sha256": "71E0087F361B93F007FBCE7B3E9B68F05DE7B8848995788C328236223395D158"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/03_SCREEN_MAP_AND_FLOWS.md",
+      "bytes": 8837,
+      "sha256": "3D23E819EA361C5C3F404529DC3C93C7C94E6D9B7E587BEF1B5D974B556851DC"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/04_DESIGN_SYSTEM.md",
+      "bytes": 10240,
+      "sha256": "9695B29B945D2C2CFE32F893660DEF60DF813A2C03EDD069AD17C757BB04D48B"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/05_ENGINE_AND_SECURITY.md",
+      "bytes": 12852,
+      "sha256": "A72AEA61E20EA51F04E31AB35D333847786602A41B430015B74FE2942363144A"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/06_IMPLEMENTATION_ROADMAP.md",
+      "bytes": 6634,
+      "sha256": "4CE2663BCD8641F8854D7DA3F87DB395E5A5C9618A1C38FA1F92EC7F58D3358F"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/07_RISKS_AND_DECISIONS.md",
+      "bytes": 8619,
+      "sha256": "1AF011A0D2B0DA73255BD3DC0A89334B4E75D6E3AD20065E98F58A2315DC6A5F"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/08_CAPABILITY_MATRIX.md",
+      "bytes": 8955,
+      "sha256": "AC1AB77643BCB922DDA58AEAA97147E2425B0182946CFE7DD75B30CE202F5D69"
+    },
+    {
+      "path": "products/legacy-intelligence/design/windows-desktop/09_SOURCES_AND_VERIFICATION.md",
+      "bytes": 8811,
+      "sha256": "B1AD6D695F94180C3331AFE40BD2C9E52EB23709FD48750798E5C2238FD0EBAF"
+    }
+  ],
+  "manifestExcludedFromOwnInventory": true,
+  "capabilityRows": 34,
+  "uxRequirements": 18,
+  "riskRows": 14,
+  "founderDecisions": 7,
+  "contrastPairsChecked": [
+    {
+      "pair": "light-text",
+      "foreground": "#152536",
+      "background": "#FFFFFF",
+      "ratio": 15.558075,
+      "minimum": 4.5
+    },
+    {
+      "pair": "light-muted",
+      "foreground": "#526579",
+      "background": "#FFFFFF",
+      "ratio": 6.006289,
+      "minimum": 4.5
+    },
+    {
+      "pair": "light-primary",
+      "foreground": "#FFFFFF",
+      "background": "#0B6570",
+      "ratio": 6.753124,
+      "minimum": 4.5
+    },
+    {
+      "pair": "light-border",
+      "foreground": "#6B7C8D",
+      "background": "#FFFFFF",
+      "ratio": 4.291988,
+      "minimum": 3
+    },
+    {
+      "pair": "light-success",
+      "foreground": "#146548",
+      "background": "#FFFFFF",
+      "ratio": 7.035665,
+      "minimum": 4.5
+    },
+    {
+      "pair": "light-warning",
+      "foreground": "#815300",
+      "background": "#FFFFFF",
+      "ratio": 6.623085,
+      "minimum": 4.5
+    },
+    {
+      "pair": "light-danger",
+      "foreground": "#B42332",
+      "background": "#FFFFFF",
+      "ratio": 6.50733,
+      "minimum": 4.5
+    },
+    {
+      "pair": "dark-text",
+      "foreground": "#EDF3F8",
+      "background": "#142332",
+      "ratio": 14.265605,
+      "minimum": 4.5
+    },
+    {
+      "pair": "dark-muted",
+      "foreground": "#B3C4D4",
+      "background": "#142332",
+      "ratio": 8.937297,
+      "minimum": 4.5
+    },
+    {
+      "pair": "dark-primary",
+      "foreground": "#083436",
+      "background": "#6DD4D3",
+      "ratio": 7.723401,
+      "minimum": 4.5
+    },
+    {
+      "pair": "dark-border",
+      "foreground": "#71879C",
+      "background": "#142332",
+      "ratio": 4.290933,
+      "minimum": 3
+    },
+    {
+      "pair": "dark-success",
+      "foreground": "#83DAB0",
+      "background": "#142332",
+      "ratio": 9.588508,
+      "minimum": 4.5
+    },
+    {
+      "pair": "dark-warning",
+      "foreground": "#F5CE7B",
+      "background": "#142332",
+      "ratio": 10.634303,
+      "minimum": 4.5
+    },
+    {
+      "pair": "dark-danger",
+      "foreground": "#FFADB5",
+      "background": "#142332",
+      "ratio": 9.038544,
+      "minimum": 4.5
+    }
+  ],
+  "uiBuilt": false,
+  "uiVisuallyTested": false,
+  "frameworkBenchmarked": false,
+  "engineTestsRerun": false,
+  "previewModified": false,
+  "erpAccessed": false,
+  "privateVaultAccessed": false,
+  "dependenciesInstalled": false,
+  "settingsChanged": false
+}
