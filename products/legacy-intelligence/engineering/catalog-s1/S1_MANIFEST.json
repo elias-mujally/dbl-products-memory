@@ -1,0 +1,185 @@
+{
+  "format": "dbl.catalog.s1.evidence.1",
+  "date": "2026-10-25",
+  "status": "PASS_S1_SCHEMA_ISOLATION_ONLY",
+  "productPR": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23",
+  "productBase": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
+  "productHead": "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a",
+  "productCommits": [
+    "f14992f2aab622477cd51e35d257a3e4da870869",
+    "4866ad0024e59126284f252eed49d428cf5481c4",
+    "b85b83f5369b083a49498107d83ae21bf37d6d7a",
+    "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a"
+  ],
+  "planPR": 16,
+  "planCommit": "25f294d60aa2662a96d3c5e6013e192be726325c",
+  "runtime": {
+    "node": "22.23.2",
+    "betterSqlite3": "12.8.0",
+    "sqlite": "3.51.3"
+  },
+  "schema": {
+    "tables": 13,
+    "triggers": 32,
+    "sqlSHA256": "aa39633fb7d640072aa71540cd50a60e1659273c467ed4be713c9e609e645e90",
+    "referenceDataCounts": {
+      "sources": 0,
+      "registrations": 0,
+      "products": 0,
+      "admissions": 0,
+      "heads": 0,
+      "events": 0
+    },
+    "stage": "S1_SCHEMA_ONLY",
+    "trustedAdmissionAvailable": false
+  },
+  "tests": {
+    "first": {
+      "passed": 45,
+      "failed": 2,
+      "skipped": 0
+    },
+    "second": {
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0
+    },
+    "finalS1": {
+      "passed": 53,
+      "failed": 0,
+      "skipped": 1,
+      "total": 54
+    },
+    "focusedIncludingS1": {
+      "passed": 187,
+      "failed": 0,
+      "skipped": 5,
+      "total": 192
+    },
+    "typechecks": "core/storage/audit/v1 passed",
+    "builds": "core/storage/audit/v1 passed",
+    "privateEvidenceTestsSelected": false,
+    "preHardeningFinalS1": {
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0
+    },
+    "preHardeningFocused": {
+      "passed": 187,
+      "failed": 0,
+      "skipped": 4,
+      "total": 191
+    }
+  },
+  "repairNotes": [
+    "TS2571 pragma result type fixed",
+    "WAL auxiliary-file expectation corrected, main/marker bytes still checked",
+    "Checksum corruption fixture now satisfies length CHECK and restores immutable trigger",
+    "TS2209 literal self-export test import replaced by runtime package-name loading",
+    "Connector EOL publication churn corrected by fast-forward, no force push",
+    "Final S1 review: refuse leaf symbolic-link DB/audit targets; native alias test skipped on Windows, required on Linux"
+  ],
+  "privateReportSHA256": {
+    "firstSuite": "e4953129dc5a9ddf727441b5b4edbe348addbe79776a06d68d0e57ef99867418",
+    "finalS1": "dbdd64ac5602f4db92c5cd83fbd15a64f1e4bccfa2c3fefab36608937b1b7043",
+    "focused": "acdbd8a10bbe3b2f9e932841a80259d3cfa8e0ffc31bbddeb580ece7c8f91bb7",
+    "emptyStateReceipt": "df000186fd69c96a0d21ccae3e8816188c6b1793ebb180ae456950655face914",
+    "preHardeningFinalS1": "93d4f94dbe62b783406917083a8f3726a8c683eb69d18c6324d8e58e52f166ae",
+    "preHardeningFocused": "860412df1545c6b296ded4c86bea072f27ce2795df86b27aff1668844b372edd"
+  },
+  "publicSourceFiles": [
+    {
+      "path": "apps/v1-file-import/src/operator.ts",
+      "sha256": "4b343a698bb84c9dfdee09718d2b6721b15b955f0c7cf10439dd00c1bcd242eb",
+      "bytes": 20001
+    },
+    {
+      "path": "apps/v1-file-import/src/state.ts",
+      "sha256": "6760c1c134bb52331e33359fba51597a725fa89a3bae73c712c92ea54c34c623",
+      "bytes": 6984
+    },
+    {
+      "path": "packages/audit-sqlite/src/sqlite-audit-sink.ts",
+      "sha256": "7974db1680f36208a18aa54fe7513848a482a910d41234d7c0aa0be4fa4de61d",
+      "bytes": 8671
+    },
+    {
+      "path": "packages/core/src/index.ts",
+      "sha256": "149b9dad5a537f620dc665d64e0d67410cb54d72cf4efe9bacf92546ae5aa719",
+      "bytes": 380
+    },
+    {
+      "path": "packages/core/src/state-family.ts",
+      "sha256": "e5b3483c5d8de056cb207e3fb0c9becb9f5e55938aeb0c4c457756deab44aa49",
+      "bytes": 743
+    },
+    {
+      "path": "packages/storage-sqlite/package.json",
+      "sha256": "de44b0059daccacf3adf9dfe66f5dda20036d918dfea437595c993ede1d5719b",
+      "bytes": 747
+    },
+    {
+      "path": "packages/storage-sqlite/src/sqlite-store.ts",
+      "sha256": "d57e5ef2753717412e4c3c41ad2940f458ca49519378ba8fcb3741b9de723435",
+      "bytes": 13728
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/family-probe.ts",
+      "sha256": "5177dfc284301027702a99caefc9dc33305eb868298a19822172dd455308c2f3",
+      "bytes": 1732
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/schema.ts",
+      "sha256": "943ddae9a0c3a7d328a5dcca5d85af716bfbc43e014aaec66930b31d188d178d",
+      "bytes": 18840
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/state.ts",
+      "sha256": "f2dc1b3967c7b6822f84dc9323773c978e88cbd840e3c57875abffbf0c1f036f",
+      "bytes": 7681
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/schema.test.ts",
+      "sha256": "cf4a1bc5dbf67161cea09048aa07e0232b4b56e4f3bcb4322dbdcf8f92230a69",
+      "bytes": 11793
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/family.test.ts",
+      "sha256": "85abd49564d3cc913e45221663b01ab9cf87f6b6e9714239ad1664c0e1fad490",
+      "bytes": 6875
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/bootstrap.test.ts",
+      "sha256": "960acb93effae4d9b84b2917fe0bea8323b310ce6920f3b5b382ad00ff2dc05f",
+      "bytes": 5189
+    }
+  ],
+  "memoryDocuments": [
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s1/README.md",
+      "sha256": "49efd3f2878044add1c0c81eddfe47773404a51ae13547beef945a6ba895565f"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s1/VERIFICATION_AND_LIMITS.md",
+      "sha256": "db177b84224e720ba5bac9e6425f14c9e9d1cab265042a40050a596f93768d07"
+    }
+  ],
+  "notImplemented": [
+    "S2 source registration/signing/qualified evidence",
+    "S3 operational acceptance",
+    "S4 accepted history/diff APIs",
+    "S5 acceptance concurrency/crash qualification"
+  ],
+  "previewAndV1SchemaChanged": false,
+  "erpArchiveVaultAccessed": false,
+  "dependenciesInstalled": false,
+  "systemSettingsChanged": false,
+  "merged": false,
+  "ciVerification": {
+    "head": "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a",
+    "windows": "success",
+    "ubuntu": "success",
+    "url": "https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40171441999",
+    "cleanInstallOrHumanAcceptance": false
+  }
+}
