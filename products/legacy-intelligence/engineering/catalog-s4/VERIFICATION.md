@@ -20,6 +20,12 @@ Existing Windows developer setup: Node 22.23.2, better-sqlite3 12.8.0, SQLite 3.
 
 The five inherited Windows skips cover S1 native file alias and V1 POSIX file privacy, broad directory mode, redirected backup ancestor and dangling symlink. No elevation/permission/link-policy workaround was attempted. The widened selection adds all application-service tests to the previously bounded S3 regression selection; it does not imply previously counted 333 tests included those 24.
 
+## Observed GitHub CI
+
+[Workflow 40225625875](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40225625875), exact product head `6eb2a0f41b71d862d33f64563ec501d930307814`: **Windows and Ubuntu verify jobs both completed successfully**. The unchanged workflow ran workspace builds/typechecks/configured tests, delivery assembly controls and ten repeated Worker/native WAL cycles, retaining its existing skips/private-evidence gates. This is regression evidence, not real ERP, human Desktop acceptance or S5 Catalog qualification.
+
+Annotations concern existing checkout/setup actions' embedded Node runtime and Ubuntu runner-label transition. They did not fail S4 tests; the application runtime is distinct. No workflow/action or host setting was changed to suppress advisories.
+
 ## Exercises and corrections
 
 - Actual API/SQLite exercise of current/historical accepted refs, close/reopen, preserved A/B then revised A/B/C, B absence with exact owner review, B return with accepted prior evidence. No raw SQL manufactures successful admissions; deliberate review-event corruption is solely a negative test in a new disposable state.

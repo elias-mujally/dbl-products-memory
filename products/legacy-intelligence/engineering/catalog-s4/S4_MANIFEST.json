@@ -240,7 +240,7 @@
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s4/READ_API.md",
-      "sha256": "e6008c1f32577ffd06d70369bae25f16171393f7133bdfeb83ee925438d3a418"
+      "sha256": "2fe8fb8fc54c5e2bc54c581b8463d6cc1ed8d6f3730a99e024ca89640afedbfd"
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s4/MISSING_REVIEW.md",
@@ -248,7 +248,7 @@
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s4/VERIFICATION.md",
-      "sha256": "3ad60dd4fc721bbc5693b56ec8f000a1a863f697eebb8b749543b6ff5166e71d"
+      "sha256": "6dbed40e7a1dd601889cad86f9b7802d855e3c307cb14739761eef57e0d9a710"
     }
   ],
   "limits": [
@@ -258,5 +258,12 @@
     "References are validated source-bound selectors, not access-control secrets. Cursors are session authenticated, not encrypted.",
     "Trusted owner-host capability is not OS RBAC against same-owner raw DB/code access; a lying issuer remains an external trust limit.",
     "Local Git ownership refusal was preserved; no ownership, ACL or safe-directory change/retry. GitHub connector creates independent remote review branch."
-  ]
+  ],
+  "githubCI": {
+    "head": "6eb2a0f41b71d862d33f64563ec501d930307814",
+    "run": 40225625875,
+    "windows": "success",
+    "ubuntu": "success",
+    "workflowChanged": false
+  }
 }

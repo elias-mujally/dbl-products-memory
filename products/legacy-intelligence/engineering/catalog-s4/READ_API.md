@@ -4,7 +4,7 @@
 
 ## Public capability boundary
 
-`openSyntheticCatalogReader(directory, {sourceId, epoch, companyId, scopeId})` is assembled in a trusted host. It checks the selected tuple against local enrollment, rather than trusting fields from a candidate/ref. Give the consumer **this read port**, never the whole storage package or an owner/reviewer factory. Its methods are exactly `openCurrent`, `openHistorical`, `listAcceptedCaptures`, `openComparison`, `close`.
+`openSyntheticCatalogReader(directory, {sourceId, epoch, companyId, scopeId})` is assembled in a trusted host. It checks the selected tuple against local enrollment, rather than trusting fields from a candidate/ref. Inject **this read port** into application-service, never the whole storage package or an owner/reviewer factory. Its methods are exactly `openCurrent`, `openHistorical`, `listAcceptedCaptures`, `openComparison`, `close`. The consumer-facing boundary is the projected application API/error envelope below; do not forward raw Node storage exceptions or the storage module to a renderer.
 
 `openCurrent()` returns `{context,page}` for the accepted head at opening. `openHistorical(reference)` opens the selected admitted unit. Context carries the durable reference, synthetic profile/class, `erpQualified:false`, capture/acceptance times, count, `isCurrentAtOpen` and `authorityWarningAtOpen`. The names explicitly describe opening-time metadata, not a live promise that head or revocation status cannot later change. Current suspension/key expiry warns on authentic historical reads; unsupported registration/key rotation fails closed.
 
