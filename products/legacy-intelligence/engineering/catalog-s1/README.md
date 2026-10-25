@@ -8,8 +8,8 @@
 
 - [الاختبارات والأخطاء وإعادة الإنتاج والحدود](VERIFICATION_AND_LIMITS.md).
 - [فهرس البصمات ومراجع المصدر](S1_MANIFEST.json).
-- [مدخل Catalog العام عند commit ثابت](https://github.com/elias-mujally/dbl-legacy-intelligence/blob/b85b83f5369b083a49498107d83ae21bf37d6d7a/packages/storage-sqlite/src/catalog/state.ts).
-- [المخطط المنفذ](https://github.com/elias-mujally/dbl-legacy-intelligence/blob/b85b83f5369b083a49498107d83ae21bf37d6d7a/packages/storage-sqlite/src/catalog/schema.ts) و[اختبارات قيوده](https://github.com/elias-mujally/dbl-legacy-intelligence/blob/b85b83f5369b083a49498107d83ae21bf37d6d7a/packages/storage-sqlite/test/catalog/schema.test.ts).
+- [مدخل Catalog العام عند commit ثابت](https://github.com/elias-mujally/dbl-legacy-intelligence/blob/d76bc71f1cf5320c43edbde4c4d6076436d5bb1a/packages/storage-sqlite/src/catalog/state.ts).
+- [المخطط المنفذ](https://github.com/elias-mujally/dbl-legacy-intelligence/blob/d76bc71f1cf5320c43edbde4c4d6076436d5bb1a/packages/storage-sqlite/src/catalog/schema.ts) و[اختبارات قيوده](https://github.com/elias-mujally/dbl-legacy-intelligence/blob/d76bc71f1cf5320c43edbde4c4d6076436d5bb1a/packages/storage-sqlite/test/catalog/schema.test.ts).
 
 ## ما تحقق فعليًا
 
@@ -19,14 +19,14 @@
 
 | الفحص | النتيجة |
 | --- | --- |
-| اختبارات S1 النهائية | **53 نجاحًا، صفر إخفاقات، صفر تجاوز** |
-| S1 والانحدار المحدد | **187 نجاحًا، صفر إخفاقات، 4 حالات متجاوزة**؛ تشمل الحالات الجديدة الـ53 |
+| اختبارات S1 النهائية | **53 نجاحًا، صفر إخفاقات، حالة واحدة متجاوزة** من أصل 54؛ روابط الملفات الرمزية على Windows |
+| S1 والانحدار المحدد | **187 نجاحًا، صفر إخفاقات، 5 حالات متجاوزة**؛ تشمل الحالات الجديدة الـ53 |
 | البناء وفحص الأنواع | نجاح core/storage/audit/V1 بالاعتماديات الموجودة |
 | انقطاع bootstrap | أربع نقاط قطع داخل عمليات Node فرعية فعلية؛ الناقص يُرفض والكامل يعاد فتحه دون reset |
 | العزل | Catalog يرفض V1 والحالات المختلطة؛ store/audit ومسارات V1 ترفض Catalog قبل التهيئة الكاتبة، بما فيه DB منسوخة دون marker |
 | V1 الاصطناعي | استيراد 5 أصناف وقيمة 1470، وفحص الاستمرار والتاريخ والتكرار والنسخ والاستعادة ضمن الاختبارات المحددة؛ لا نسخ أو استعادة داخل Catalog |
 
-الأربع المتجاوزة مشروطة أصلًا بغير Windows: حالتا خصوصية/أذونات POSIX وحالتا روابط رمزية. لم تُعدّ نجاحات، ولم تُشغّل ملفات actual/private-evidence. لا نخلط اختبارات WAL/تعافي V1 الموجودة مع تنفيذ S5 للـCatalog؛ الأخير لم يبدأ.
+أربع من الحالات المتجاوزة مشروطة أصلًا بغير Windows: حالتا خصوصية/أذونات POSIX وحالتا روابط رمزية. أضيف اختبار S1 لرابط ملف إلى Catalog بعد مراجعة كشفت أن lstat قد يتخطى فحص الترويسة؛ أصبح store/audit يرفضان الهدف المعاد توجيهه قبل فتحه. الاختبار الحقيقي لهذا الرابط متجاوز على Windows لتجنب طلب صلاحيات، ومطلوب على Linux. لم تُعدّ الحالات المتجاوزة نجاحات، ولم تُشغّل ملفات actual/private-evidence. لا نخلط اختبارات WAL/تعافي V1 الموجودة مع تنفيذ S5 للـCatalog؛ الأخير لم يبدأ.
 
 ## أثر التغيير وحدوده
 

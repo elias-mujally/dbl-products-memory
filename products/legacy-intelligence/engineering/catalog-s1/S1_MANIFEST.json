@@ -4,11 +4,12 @@
   "status": "PASS_S1_SCHEMA_ISOLATION_ONLY",
   "productPR": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23",
   "productBase": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
-  "productHead": "b85b83f5369b083a49498107d83ae21bf37d6d7a",
+  "productHead": "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a",
   "productCommits": [
     "f14992f2aab622477cd51e35d257a3e4da870869",
     "4866ad0024e59126284f252eed49d428cf5481c4",
-    "b85b83f5369b083a49498107d83ae21bf37d6d7a"
+    "b85b83f5369b083a49498107d83ae21bf37d6d7a",
+    "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a"
   ],
   "planPR": 16,
   "planCommit": "25f294d60aa2662a96d3c5e6013e192be726325c",
@@ -46,30 +47,45 @@
     "finalS1": {
       "passed": 53,
       "failed": 0,
-      "skipped": 0
+      "skipped": 1,
+      "total": 54
     },
     "focusedIncludingS1": {
       "passed": 187,
       "failed": 0,
-      "skipped": 4,
-      "total": 191
+      "skipped": 5,
+      "total": 192
     },
     "typechecks": "core/storage/audit/v1 passed",
     "builds": "core/storage/audit/v1 passed",
-    "privateEvidenceTestsSelected": false
+    "privateEvidenceTestsSelected": false,
+    "preHardeningFinalS1": {
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0
+    },
+    "preHardeningFocused": {
+      "passed": 187,
+      "failed": 0,
+      "skipped": 4,
+      "total": 191
+    }
   },
   "repairNotes": [
     "TS2571 pragma result type fixed",
     "WAL auxiliary-file expectation corrected, main/marker bytes still checked",
     "Checksum corruption fixture now satisfies length CHECK and restores immutable trigger",
     "TS2209 literal self-export test import replaced by runtime package-name loading",
-    "Connector EOL publication churn corrected by fast-forward, no force push"
+    "Connector EOL publication churn corrected by fast-forward, no force push",
+    "Final S1 review: refuse leaf symbolic-link DB/audit targets; native alias test skipped on Windows, required on Linux"
   ],
   "privateReportSHA256": {
     "firstSuite": "e4953129dc5a9ddf727441b5b4edbe348addbe79776a06d68d0e57ef99867418",
-    "finalS1": "93d4f94dbe62b783406917083a8f3726a8c683eb69d18c6324d8e58e52f166ae",
-    "focused": "860412df1545c6b296ded4c86bea072f27ce2795df86b27aff1668844b372edd",
-    "emptyStateReceipt": "df000186fd69c96a0d21ccae3e8816188c6b1793ebb180ae456950655face914"
+    "finalS1": "dbdd64ac5602f4db92c5cd83fbd15a64f1e4bccfa2c3fefab36608937b1b7043",
+    "focused": "acdbd8a10bbe3b2f9e932841a80259d3cfa8e0ffc31bbddeb580ece7c8f91bb7",
+    "emptyStateReceipt": "df000186fd69c96a0d21ccae3e8816188c6b1793ebb180ae456950655face914",
+    "preHardeningFinalS1": "93d4f94dbe62b783406917083a8f3726a8c683eb69d18c6324d8e58e52f166ae",
+    "preHardeningFocused": "860412df1545c6b296ded4c86bea072f27ce2795df86b27aff1668844b372edd"
   },
   "publicSourceFiles": [
     {
@@ -84,8 +100,8 @@
     },
     {
       "path": "packages/audit-sqlite/src/sqlite-audit-sink.ts",
-      "sha256": "ee1e0ccb9e136d4823fffab9092cfce4baa2ea763e2220849c9d4f264bac6ebe",
-      "bytes": 8336
+      "sha256": "7974db1680f36208a18aa54fe7513848a482a910d41234d7c0aa0be4fa4de61d",
+      "bytes": 8671
     },
     {
       "path": "packages/core/src/index.ts",
@@ -109,8 +125,8 @@
     },
     {
       "path": "packages/storage-sqlite/src/catalog/family-probe.ts",
-      "sha256": "65190317b2b46e39012e4526d98b63b2e5ed3e6acc868b39937ad8cc0b1f702f",
-      "bytes": 1394
+      "sha256": "5177dfc284301027702a99caefc9dc33305eb868298a19822172dd455308c2f3",
+      "bytes": 1732
     },
     {
       "path": "packages/storage-sqlite/src/catalog/schema.ts",
@@ -129,8 +145,8 @@
     },
     {
       "path": "packages/storage-sqlite/test/catalog/family.test.ts",
-      "sha256": "78e0ab2952e15846bc070798b8188deab166a92eedc733623a7b8d903dbd5c3a",
-      "bytes": 6300
+      "sha256": "85abd49564d3cc913e45221663b01ab9cf87f6b6e9714239ad1664c0e1fad490",
+      "bytes": 6875
     },
     {
       "path": "packages/storage-sqlite/test/catalog/bootstrap.test.ts",
@@ -141,11 +157,11 @@
   "memoryDocuments": [
     {
       "path": "products/legacy-intelligence/engineering/catalog-s1/README.md",
-      "sha256": "846a6af4622b05fd8d767d13a5b76288290160554e47a189565b7e5856e481a6"
+      "sha256": "c05897c0eafc5566153bf371f12d04607427444809af10b7f271a78d82f34e2a"
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s1/VERIFICATION_AND_LIMITS.md",
-      "sha256": "e8de1807aa617cdc6f92fe9e482cf34d61186b712d38585d582a0e39675fc048"
+      "sha256": "1c0b3fb819f1a319a4a57f58d2ebd8624fc54b4eda9ae16c7c96f584a862c8f4"
     }
   ],
   "notImplemented": [

@@ -1,6 +1,6 @@
 # S1 verification, repairs and reproduction
 
-2026-10-25 · [Index](README.md). Product baseline tree `f1988518b45b94ef303ae79eb0eabb761fd12aa6`; remote main parent `bccc89ecb077b11ec5476b82a222ed9c4a3487b9`. Final product head `b85b83f5369b083a49498107d83ae21bf37d6d7a` in Draft PR23. Local work used independent branch `codex/catalog-s1-20261025`; unrelated Stage B drafts/local files were preserved and excluded from publication.
+2026-10-25 · [Index](README.md). Product baseline tree `f1988518b45b94ef303ae79eb0eabb761fd12aa6`; remote main parent `bccc89ecb077b11ec5476b82a222ed9c4a3487b9`. Final product head `d76bc71f1cf5320c43edbde4c4d6076436d5bb1a` in Draft PR23. Local work used independent branch `codex/catalog-s1-20261025`; unrelated Stage B drafts/local files were preserved and excluded from publication.
 
 ## Actual execution sequence
 
@@ -12,9 +12,9 @@
 | Test repairs | Permit only legitimate sidecars and still verify main DB/marker bytes; inject a wrong 64-character checksum in a disposable fixture and restore the original immutable trigger before inspection |
 | Second S1 suite | 51 passed, zero failed/skipped; added exact review/request linkage, synthetic-only class and positive V1 backup/restore boundary coverage |
 | Public export test/typecheck | Test's literal self-package import caused TS2209 root inference. Load the compiled package name dynamically at runtime in the test instead; production types stay strict and no tsconfig/dependency change |
-| Focused final regression | 191 cases: 187 passed, zero failed, four Windows-conditional skips. Includes 53 S1 cases and 134 existing passes |
-| Final S1-only rerun | 53 passed, zero failed/skipped, including the test-loader correction |
-| Final build/typecheck | core, storage-sqlite, audit-sqlite and v1-file-import passed with the existing toolchain |
+| Pre-hardening focused regression | 191 cases: 187 passed, zero failed, four Windows-conditional skips. Includes 53 S1 cases and 134 existing passes |
+| Pre-hardening S1-only rerun | 53 passed, zero failed/skipped, including the test-loader correction |
+| Final S1 hardening | Review found a leaf-file symlink could evade header classification in legacy store/audit. Both now refuse redirected targets before open, including dangling aliases. Added a real POSIX file-alias regression; Windows skips creation instead of requesting elevated privileges. No changes outside the approved S1 files |\n| Hardened final runs | S1: 54 cases, 53 passed / zero failed / 1 Windows-conditional skip. Focused regression: 192 cases, 187 passed / zero failed / 5 platform skips, including S1 |\n| Final build/typecheck | core, storage-sqlite, audit-sqlite and v1-file-import passed with the existing toolchain |
 | Publication verification | Restored existing files' baseline LF endings after connector publication initially caused formatting churn. Follow-up fast-forward commit preserved history, no force push; final base diff is the bounded code/guard changes plus new files |
 
 No proposed SQL table/FK needed weakening to pass. The reviewed schema blocks ran successfully; 28 required seal/metadata/request/control guards complement the four reviewed central triggers. Schema fingerprint/checksum detects structural drift without migrations on open. This is a schema result, not validation of a source attestation algorithm.
@@ -31,7 +31,7 @@ No proposed SQL table/FK needed weakening to pass. The reviewed schema blocks ra
 - Four real child-process bootstrap exits: before transaction, after schema DDL inside transaction, before COMMIT, and immediately after COMMIT. Only interrupted bootstrap is qualified; S3/S5 admission crash/concurrency is not.
 - Existing V1 synthetic import/history/replay/audit/backup/restore tests, ordinary storage/migrations, WAL lifecycle and audit tests selected explicitly. No owner-evidence file was provided or read.
 
-The four skipped existing cases are two POSIX mode/umask tests, a redirected-backup-ancestor symlink case and a dangling-symlink publication case, all already skipIf(win32). Windows ACL/reparse/privacy qualification is **not** inferred from a POSIX mode argument or these skips.
+The four skipped existing cases are two POSIX mode/umask tests, a redirected-backup-ancestor symlink case and a dangling-symlink publication case, all already skipIf(win32). The additional S1 native file-symlink case is also Windows-conditional; rejection is implemented, but native Windows symlink creation was not exercised. Windows ACL/reparse/privacy qualification is **not** inferred from a POSIX mode argument or these skips.
 
 ## Reproduce within approved development setup
 
@@ -56,6 +56,8 @@ Never substitute `npm test` plus owner evidence and call it the same bounded run
 ## Qualification and remaining gates
 
 PASS is limited to an isolated synthetic schema and supported-API family boundaries on the current Windows developer host. Read-only SQLite inspection may create auxiliary WAL/SHM files in the new state; no read-only logical database-content mutation or automatic journal deletion is claimed. Creation at a new directory is exclusive; partial output stays blocked/preserved. Marker is a family hint, not source authentication; arbitrary file-owner/code tampering is outside the API assurance.
+
+The final negative guard deliberately refuses leaf symbolic-link DB/audit targets generally, including aliases to an ordinary DB, rather than following the link to guess its family. Normal nonredirected V1 fixtures pass; aliased legacy target support is not promised. No links, roles or permissions on the owner's actual machine data were changed.
 
 The public package has only create/inspect. It does not return a DB connection, SQL executor or admission capability. Metadata explicitly says S1_SCHEMA_ONLY/trustedAdmissionAvailable=false. Six data-table counts in the retained reference state are zero (sources, registrations, products, admissions, heads, events). Only schema metadata is populated.
 
