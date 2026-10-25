@@ -1,0 +1,262 @@
+{
+  "format": "dbl.catalog.s4.evidence.1",
+  "date": "2026-10-25",
+  "status": "PASS_S4_SYNTHETIC_ACCEPTED_READS_DIFF_AND_MISSING_REVIEW",
+  "productPR": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/26",
+  "productHead": "6eb2a0f41b71d862d33f64563ec501d930307814",
+  "productBase": "49d2f0c1a7c2fa61f410f0050c05348c994f033b",
+  "s3EvidencePR": 19,
+  "planPR": 16,
+  "memoryBase": "86beaf03cceac4e39acc1d194a1577f41b749d70",
+  "runtime": {
+    "node": "22.23.2",
+    "betterSqlite3": "12.8.0",
+    "sqlite": "3.51.3"
+  },
+  "tests": {
+    "newS4": {
+      "readerReview": 52,
+      "differences": 11,
+      "application": 5,
+      "totalPassed": 68,
+      "failed": 0,
+      "skipped": 0
+    },
+    "combined": {
+      "passed": 425,
+      "failed": 0,
+      "skipped": 5,
+      "total": 430
+    },
+    "reports": [
+      {
+        "name": "s4-first.json",
+        "sha256": "5e9b01cbb019d4e65893a8740a4a38288eb1dfb52a3d5d0c3565a7a42bd41d47",
+        "total": 59,
+        "passed": 59,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "name": "regression-first.json",
+        "sha256": "4546aa32aff411b1c07ad855c804e63f00fa183175660f5f778e0588f11326de",
+        "total": 430,
+        "passed": 425,
+        "failed": 0,
+        "skipped": 5
+      }
+    ],
+    "rawReportsPublished": false
+  },
+  "schemaChanged": false,
+  "v1OrPreviewChanged": false,
+  "dependenciesInstalled": false,
+  "erpAccessed": false,
+  "systemSecurityNetworkChanged": false,
+  "reference": {
+    "format": "dbl.catalog.accepted-ref.1",
+    "durable": true,
+    "selectorNotCredential": true,
+    "sourceBound": true
+  },
+  "cursor": {
+    "hmac": "SHA-256",
+    "keyLifetime": "reader-port memory only",
+    "maxCharacters": 8192,
+    "limit": 100,
+    "reopenReuse": false
+  },
+  "productsBound": 1000,
+  "differenceBound": 2000,
+  "classifications": [
+    "added",
+    "changed",
+    "unchanged",
+    "notObserved"
+  ],
+  "priorObservation": "actual accepted earlier stable-key evidence only",
+  "review": "exact request/parent/proof/payload/missing-set binding, no independent publication",
+  "sourceFiles": [
+    {
+      "path": "packages/core/src/catalog.ts",
+      "sha256": "0c7424de5c3e41778f43044aceb4a09402c689f9279c43e4de83f6293eff0ae2",
+      "gitSha": "5686d6d93c0f829953a37949ac19dd5b58f69be9"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/admission.ts",
+      "sha256": "e8468dfc1c38e67b8e340266d1dd759c0f2015ab699f4014a62313adefbbf889",
+      "gitSha": "72a1eac1749e43cb723853da1077fa8c1748072e"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/index.ts",
+      "sha256": "f2493275f77cebe6f2c28a31e156f1a6650cde9c4f3a4c7237dfab5780463d74",
+      "gitSha": "ed40404d99fc178de12ad20eafed313f45e03960"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/reader.ts",
+      "sha256": "b309002865c48668ae4f8d11b4d8e69b73a6ae4c991bc4063a9ba7629de442f8",
+      "gitSha": "3dcbf59b22cc2f6e371bace9449a409321a11d5e"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/diff.ts",
+      "sha256": "dd183b19779c32f094810e5c7c4d35cda81a5e588fc7d5fd54d01de29e5d9540",
+      "gitSha": "28cb12cba2518485fd671e27d601caa52053b656"
+    },
+    {
+      "path": "packages/application-service/src/catalog.ts",
+      "sha256": "2b20a71a36bd19980c5c7ccddf7a72eca264e3792e67f5ebc32fc2887491af00",
+      "gitSha": "15b7c88233009c38ecd4c31b4962f6903d6c8e91"
+    },
+    {
+      "path": "packages/application-service/src/index.ts",
+      "sha256": "e4040e816e7377671db214b0024d1d281af96efb04f4ebd75a14f62a6d970400",
+      "gitSha": "7344f61c1107322408aed68f0d90f4f6269e5fb8"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/bootstrap.test.ts",
+      "sha256": "52196d5eeab968c6eb1e96788fa959aa3443c9ea51cdac2b8d212819c1f2e0d4",
+      "gitSha": "7fcf5712c2fbf08f6b2366390c7a21415b8f24cf"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/admission.test.ts",
+      "sha256": "83d74ce83fef44b80f241552baeb98ddf34146ea55ffd7067940326b0716dcb0",
+      "gitSha": "efa18495102429438a15da525b8d494d35faca1d"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/reader-fixture.ts",
+      "sha256": "5f44134703ff68505b12baf213c9dd0389aac1179019280e3e7c8bf8093e3863",
+      "gitSha": "85e8a989b29314337c986e1784db074ab7a8914f"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/reader.test.ts",
+      "sha256": "568ffd86717a511178ec3e7ff5875a427de32c969bf557dadc332ea6e026d64d",
+      "gitSha": "eb64e59afdbbe0a9caaf9fccbb3279964b323ac7"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/diff.test.ts",
+      "sha256": "3dbe1f4b40d79e1bb7c3b4d8c1ced7c26604a34dfaba610aba28233e9ce08c62",
+      "gitSha": "1ac629cace7e0bea7cc70cab9b0b6973ea6db4bd"
+    },
+    {
+      "path": "packages/application-service/test/catalog.test.ts",
+      "sha256": "37f9f8c67fedd4ab40e0a0bb595a4b82fc703ae4a2e5b7a58a3b06cf2b78bdc6",
+      "gitSha": "bec010eb9c15beb0abdd6bd4dfa98293839036d5"
+    }
+  ],
+  "unchangedProtectedFiles": [
+    {
+      "path": "packages/core/src/state-family.ts",
+      "normalizedGitSha": "29b920503cc9124cf77b2a737e128c26ba14f531"
+    },
+    {
+      "path": "packages/core/src/index.ts",
+      "normalizedGitSha": "d27412db00bc93addba6c32c6d939a821eb4bf5d"
+    },
+    {
+      "path": "packages/storage-sqlite/package.json",
+      "normalizedGitSha": "5103392d043e44a0461c5a4dc6e9099955aa25b1"
+    },
+    {
+      "path": "packages/storage-sqlite/src/sqlite-store.ts",
+      "normalizedGitSha": "960bd17de0539f8b8177ca9251f74e8bab96e651"
+    },
+    {
+      "path": "packages/audit-sqlite/src/sqlite-audit-sink.ts",
+      "normalizedGitSha": "e7f266766ee30381686f1ab50d5d7370356c55eb"
+    },
+    {
+      "path": "apps/v1-file-import/src/state.ts",
+      "normalizedGitSha": "e60931c6d1a652353fcebabac29868efdbcb62cc"
+    },
+    {
+      "path": "apps/v1-file-import/src/operator.ts",
+      "normalizedGitSha": "e6e70329b5fc26a2e952641c3ceafc2a45d07551"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/schema.ts",
+      "normalizedGitSha": "94cd9a6053dbed9747d89be6392389da7af26873"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/family-probe.ts",
+      "normalizedGitSha": "e6969ae9fcfd3c3f31da7f7ceba7dbbf13c31f72"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/state.ts",
+      "normalizedGitSha": "bee76e05c55d08532899a18a45dff70a3e6be49f"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/registry.ts",
+      "normalizedGitSha": "cac59c6b6d9d98952279b34a5fa770ffec59cd7c"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/proof.ts",
+      "normalizedGitSha": "e6b02f7cae0a4a806444d4ab4cc8c2914d15f551"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/encoding.ts",
+      "normalizedGitSha": "bd031b351a3a9aedc2911c97f99519dfc5f8caa9"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/contracts.ts",
+      "normalizedGitSha": "f649ea630fe1443624b2f99aec51006b69cff95a"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/events.ts",
+      "normalizedGitSha": "1cf2f0cc54f42b6abcbe7a4c71fd37f1e384bb3f"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/schema.test.ts",
+      "normalizedGitSha": "af3e0f78a13f5c0e4536945c3bcbb846e5537ae1"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/family.test.ts",
+      "normalizedGitSha": "abc36cdd5a71b8c7621664c6ccb423d87451b3d1"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/registry.test.ts",
+      "normalizedGitSha": "bfdb761435fd093673e95a6218d7afe5e1fcacd7"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/proof.test.ts",
+      "normalizedGitSha": "7ad2af0a53905cb42e08c00dac5005cbf3e0bdb8"
+    },
+    {
+      "path": "packages/application-service/src/service.ts",
+      "normalizedGitSha": "ecb4f374ffc970e82fb633f03180ea8fab7490ca"
+    },
+    {
+      "path": "packages/application-service/src/types.ts",
+      "normalizedGitSha": "128da7fcdeb63a4d71c7f5981aa160c5da79f8f1"
+    },
+    {
+      "path": "packages/application-service/src/historical-inventory.ts",
+      "normalizedGitSha": "1445fe54c100cac74de5754372bda62a16ded74e"
+    }
+  ],
+  "documents": [
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s4/README.md",
+      "sha256": "121e4c27726aadc1a5fc24c28a18a3f9b0c194afd0852624d9f98b0c27086e9b"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s4/READ_API.md",
+      "sha256": "e6008c1f32577ffd06d70369bae25f16171393f7133bdfeb83ee925438d3a418"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s4/MISSING_REVIEW.md",
+      "sha256": "84b11c4bc5cdd186dbffe6b4c180f93680b5c7ec0638d9e969787c34416a7489"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s4/VERIFICATION.md",
+      "sha256": "3ad60dd4fc721bbc5693b56ec8f000a1a863f697eebb8b749543b6ff5166e71d"
+    }
+  ],
+  "limits": [
+    "No S5 qualification, real ERP/extractor, scheduler, networking or financial/inventory model.",
+    "No Desktop/IPC or independent human owner-review implementation/acceptance.",
+    "No operational key/mapping upgrades, whole-state restore anti-rollback or production latency qualification.",
+    "References are validated source-bound selectors, not access-control secrets. Cursors are session authenticated, not encrypted.",
+    "Trusted owner-host capability is not OS RBAC against same-owner raw DB/code access; a lying issuer remains an external trust limit.",
+    "Local Git ownership refusal was preserved; no ownership, ACL or safe-directory change/retry. GitHub connector creates independent remote review branch."
+  ]
+}
