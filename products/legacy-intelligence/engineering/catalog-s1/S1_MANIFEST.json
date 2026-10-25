@@ -1,0 +1,162 @@
+{
+  "format": "dbl.catalog.s1.evidence.1",
+  "date": "2026-10-25",
+  "status": "PASS_S1_SCHEMA_ISOLATION_ONLY",
+  "productPR": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23",
+  "productBase": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
+  "productHead": "b85b83f5369b083a49498107d83ae21bf37d6d7a",
+  "productCommits": [
+    "f14992f2aab622477cd51e35d257a3e4da870869",
+    "4866ad0024e59126284f252eed49d428cf5481c4",
+    "b85b83f5369b083a49498107d83ae21bf37d6d7a"
+  ],
+  "planPR": 16,
+  "planCommit": "25f294d60aa2662a96d3c5e6013e192be726325c",
+  "runtime": {
+    "node": "22.23.2",
+    "betterSqlite3": "12.8.0",
+    "sqlite": "3.51.3"
+  },
+  "schema": {
+    "tables": 13,
+    "triggers": 32,
+    "sqlSHA256": "aa39633fb7d640072aa71540cd50a60e1659273c467ed4be713c9e609e645e90",
+    "referenceDataCounts": {
+      "sources": 0,
+      "registrations": 0,
+      "products": 0,
+      "admissions": 0,
+      "heads": 0,
+      "events": 0
+    },
+    "stage": "S1_SCHEMA_ONLY",
+    "trustedAdmissionAvailable": false
+  },
+  "tests": {
+    "first": {
+      "passed": 45,
+      "failed": 2,
+      "skipped": 0
+    },
+    "second": {
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0
+    },
+    "finalS1": {
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0
+    },
+    "focusedIncludingS1": {
+      "passed": 187,
+      "failed": 0,
+      "skipped": 4,
+      "total": 191
+    },
+    "typechecks": "core/storage/audit/v1 passed",
+    "builds": "core/storage/audit/v1 passed",
+    "privateEvidenceTestsSelected": false
+  },
+  "repairNotes": [
+    "TS2571 pragma result type fixed",
+    "WAL auxiliary-file expectation corrected, main/marker bytes still checked",
+    "Checksum corruption fixture now satisfies length CHECK and restores immutable trigger",
+    "TS2209 literal self-export test import replaced by runtime package-name loading",
+    "Connector EOL publication churn corrected by fast-forward, no force push"
+  ],
+  "privateReportSHA256": {
+    "firstSuite": "e4953129dc5a9ddf727441b5b4edbe348addbe79776a06d68d0e57ef99867418",
+    "finalS1": "93d4f94dbe62b783406917083a8f3726a8c683eb69d18c6324d8e58e52f166ae",
+    "focused": "860412df1545c6b296ded4c86bea072f27ce2795df86b27aff1668844b372edd",
+    "emptyStateReceipt": "df000186fd69c96a0d21ccae3e8816188c6b1793ebb180ae456950655face914"
+  },
+  "publicSourceFiles": [
+    {
+      "path": "apps/v1-file-import/src/operator.ts",
+      "sha256": "4b343a698bb84c9dfdee09718d2b6721b15b955f0c7cf10439dd00c1bcd242eb",
+      "bytes": 20001
+    },
+    {
+      "path": "apps/v1-file-import/src/state.ts",
+      "sha256": "6760c1c134bb52331e33359fba51597a725fa89a3bae73c712c92ea54c34c623",
+      "bytes": 6984
+    },
+    {
+      "path": "packages/audit-sqlite/src/sqlite-audit-sink.ts",
+      "sha256": "ee1e0ccb9e136d4823fffab9092cfce4baa2ea763e2220849c9d4f264bac6ebe",
+      "bytes": 8336
+    },
+    {
+      "path": "packages/core/src/index.ts",
+      "sha256": "149b9dad5a537f620dc665d64e0d67410cb54d72cf4efe9bacf92546ae5aa719",
+      "bytes": 380
+    },
+    {
+      "path": "packages/core/src/state-family.ts",
+      "sha256": "e5b3483c5d8de056cb207e3fb0c9becb9f5e55938aeb0c4c457756deab44aa49",
+      "bytes": 743
+    },
+    {
+      "path": "packages/storage-sqlite/package.json",
+      "sha256": "de44b0059daccacf3adf9dfe66f5dda20036d918dfea437595c993ede1d5719b",
+      "bytes": 747
+    },
+    {
+      "path": "packages/storage-sqlite/src/sqlite-store.ts",
+      "sha256": "d57e5ef2753717412e4c3c41ad2940f458ca49519378ba8fcb3741b9de723435",
+      "bytes": 13728
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/family-probe.ts",
+      "sha256": "65190317b2b46e39012e4526d98b63b2e5ed3e6acc868b39937ad8cc0b1f702f",
+      "bytes": 1394
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/schema.ts",
+      "sha256": "943ddae9a0c3a7d328a5dcca5d85af716bfbc43e014aaec66930b31d188d178d",
+      "bytes": 18840
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/state.ts",
+      "sha256": "f2dc1b3967c7b6822f84dc9323773c978e88cbd840e3c57875abffbf0c1f036f",
+      "bytes": 7681
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/schema.test.ts",
+      "sha256": "cf4a1bc5dbf67161cea09048aa07e0232b4b56e4f3bcb4322dbdcf8f92230a69",
+      "bytes": 11793
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/family.test.ts",
+      "sha256": "78e0ab2952e15846bc070798b8188deab166a92eedc733623a7b8d903dbd5c3a",
+      "bytes": 6300
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/bootstrap.test.ts",
+      "sha256": "960acb93effae4d9b84b2917fe0bea8323b310ce6920f3b5b382ad00ff2dc05f",
+      "bytes": 5189
+    }
+  ],
+  "memoryDocuments": [
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s1/README.md",
+      "sha256": "846a6af4622b05fd8d767d13a5b76288290160554e47a189565b7e5856e481a6"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s1/VERIFICATION_AND_LIMITS.md",
+      "sha256": "e8de1807aa617cdc6f92fe9e482cf34d61186b712d38585d582a0e39675fc048"
+    }
+  ],
+  "notImplemented": [
+    "S2 source registration/signing/qualified evidence",
+    "S3 operational acceptance",
+    "S4 accepted history/diff APIs",
+    "S5 acceptance concurrency/crash qualification"
+  ],
+  "previewAndV1SchemaChanged": false,
+  "erpArchiveVaultAccessed": false,
+  "dependenciesInstalled": false,
+  "systemSettingsChanged": false,
+  "merged": false
+}
