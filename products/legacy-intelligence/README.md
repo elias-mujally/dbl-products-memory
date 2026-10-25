@@ -1,5 +1,9 @@
 # Legacy Intelligence — Product Memory
 
+## Catalog S3 — 2026-10-25، قبول اصطناعي ذري
+
+[فهرس S3: المعاملة وإعادة الالتقاط والاختبارات وحدود التأهيل](engineering/catalog-s3/README.md) · [Product Draft PR25](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/25)، متراكب على [S2 PR24](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/24) ثم [S1 PR23](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23)، دون دمج. ثبت قبول A/B ثم A/B/C مع تعديل A وحفظ التاريخ ومنع التكرار وتراجع head ضمن حالة Catalog مستقلة. 49 اختبارًا جديدًا ناجحًا؛ الانحدار المحلي 333 ناجحًا و5 متجاوزة على Windows. لا مصدر ERP مؤهل ولا S4 قراءة تاريخية عامة أو تأهيل S5؛ الأصناف الغائبة توقف القبول للمراجعة. تبقى الأدلة الأصلية خاصة والفقرات الأقدم أدناه تاريخية ضمن نطاقها.
+
 ## الحالة الحالية المزامنة — 2026-10-14
 
 الحالة الحالية: DONE أول رصيد تاريخي وأول وارد 37 UA offline؛ V1 PARTIAL؛ المنصرف/مخزون اليوم/الجرد/الترحيل النهائي NOT QUALIFIED. هذه نقطة الدخول الحالية، وتفاصيل الحالة السابقة محفوظة أدناه.
