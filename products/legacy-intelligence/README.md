@@ -1,5 +1,9 @@
 # Legacy Intelligence — Product Memory
 
+## Catalog S4 — 2026-10-25، قراءة التاريخ والفروق ومراجعة الغياب
+
+[فهرس S4 والعقد والاختبارات وحدود التأهيل](engineering/catalog-s4/README.md) · [Product Draft PR26](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/26)، فوق [S3 PR25](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/25) دون دمج. ثبتت قراءة اللقطات المقبولة الحالية والتاريخية، وصفحات ثابتة، وفروق added/changed/unchanged/notObserved، ومراجعة غياب مرتبطة بالإثبات والطلب والأب دون تجاوز بوابة S3. 68 اختبارًا جديدًا ناجحًا؛ الانحدار المحلي 425 ناجحًا و5 متجاوزة على Windows. لا حذف أو تصفير أو دلالات مالية، ولا تأهيل ERP أو S5 أو تنفيذ Desktop/IPC. الفقرات السابقة أدناه تاريخية ضمن نطاقها.
+
 ## الحالة الحالية المزامنة — 2026-10-14
 
 الحالة الحالية: DONE أول رصيد تاريخي وأول وارد 37 UA offline؛ V1 PARTIAL؛ المنصرف/مخزون اليوم/الجرد/الترحيل النهائي NOT QUALIFIED. هذه نقطة الدخول الحالية، وتفاصيل الحالة السابقة محفوظة أدناه.
