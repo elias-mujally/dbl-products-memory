@@ -1,5 +1,9 @@
 # Legacy Intelligence — Product Memory
 
+## Catalog S2 — 2026-10-25، اصطناعي فقط
+
+[فهرس S2 والعقد والاختبارات وحدود الثقة](engineering/catalog-s2/README.md) · [Product Draft PR24](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/24) · [أساس S1 غير المدموج PR23](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23). نُفذ تسجيل مصدر اصطناعي محلي وطلب موثق والتحقق من إثبات Ed25519 لاستخراج كامل من fixture؛ 97 اختبارًا جديدًا ناجحًا، والانحدار المحلي 284 ناجحًا و5 متجاوزة على Windows. لا قبول لقطة أو current أو موصل ERP؛ S3–S5 تنتظر تفويضًا مستقلًا. التفاصيل السابقة أدناه تحفظ نطاقها التاريخي.
+
 ## الحالة الحالية المزامنة — 2026-10-14
 
 الحالة الحالية: DONE أول رصيد تاريخي وأول وارد 37 UA offline؛ V1 PARTIAL؛ المنصرف/مخزون اليوم/الجرد/الترحيل النهائي NOT QUALIFIED. هذه نقطة الدخول الحالية، وتفاصيل الحالة السابقة محفوظة أدناه.
