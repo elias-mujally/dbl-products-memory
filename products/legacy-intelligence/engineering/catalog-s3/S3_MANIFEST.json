@@ -225,7 +225,7 @@
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s3/VERIFICATION.md",
-      "sha256": "a6cb6217d72abbb32f81fb66f5dc622cade581ee27a154c68eea8e9fe729aaf1"
+      "sha256": "c40c56f09ab164dd4ae42623ce25d385d70d28042d384370a5c4fcbd4fa29908"
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s3/REPRODUCTION.md",
@@ -238,5 +238,12 @@
     "No operational key rotation, ERP source/extractor or production signing keys.",
     "A lying locally trusted issuer and arbitrary same-owner raw DB/code mutation remain external trust limits.",
     "Original reports, temporary states and key/proof artifacts are private and not published."
-  ]
+  ],
+  "githubCI": {
+    "head": "49d2f0c1a7c2fa61f410f0050c05348c994f033b",
+    "run": 40223026066,
+    "windows": "success",
+    "ubuntu": "success",
+    "workflowChanged": false
+  }
 }

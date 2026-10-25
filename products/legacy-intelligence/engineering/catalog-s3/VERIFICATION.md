@@ -46,6 +46,12 @@ An intermediate regression run passed 333 with five Windows skips but included t
 
 The five Windows skips are inherited and explicit: S1 native file-link alias, V1 POSIX state-file privacy, broad POSIX directory mode, redirected backup ancestor and dangling symlink checks. No elevation, ACL change or link-policy workaround is used. CI Windows/Ubuntu observations, when completed, are recorded separately from local counts.
 
+## Observed GitHub CI
+
+[Workflow 40223026066](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40223026066) at exact product head `49d2f0c1a7c2fa61f410f0050c05348c994f033b`: **both Windows and Ubuntu verify jobs completed successfully**. Configured workspace builds/typechecks/tests, delivery assembly controls and ten repeated Worker/native WAL cycles completed; their existing skips/private-evidence gates remain explicit. No Preview1 package was rebuilt or run locally by S3, and CI delivery-control tests are not clean-machine/customer acceptance of Catalog.
+
+Workflow annotations concerned the existing checkout/setup actions' embedded Node runtime and the Ubuntu image-label transition, not a failed Catalog test. The tested application runtime is distinct from those embedded action runtimes. No workflow/action, dependency or host-setting change was made to suppress these advisories.
+
 ## Still open
 
 S4 public historical product pages/differences and missing-set owner review; S5 multi-process contention, full acceptance crash matrix and final public-bypass matrix; physical power loss, real disk/media faults, whole-state restore anti-rollback with independent anchor; real ERP identity/stable-key/consistent-complete-extraction and production key custody. Windows ACL/Defender/customer operator qualification is not supplied by these unit tests.
