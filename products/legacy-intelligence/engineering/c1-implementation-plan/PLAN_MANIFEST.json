@@ -1,0 +1,88 @@
+{
+  "format": "dbl.c1.implementation-plan.1",
+  "date": "2026-10-25",
+  "status": "PLAN_ONLY_AWAITING_IMPLEMENTATION_APPROVAL",
+  "architectureProvisionallyAccepted": true,
+  "implementationAuthorized": false,
+  "proposalPR": "https://github.com/elias-mujally/dbl-products-memory/pull/16",
+  "priorProposalCommit": "e3a098d5f1d957b66dda94c853e2c79e8c7886c6",
+  "productMain": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
+  "productTree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+  "stageBProductCommit": "ecba3c2129488fa98bf88355df560bd2f5becf8f",
+  "preferredImplementationRefinement": "Isolated Catalog module in existing storage-sqlite package, one catalog DB/transaction, no refactor of legacy V1 snapshot writer",
+  "existingFilesProposedToChange": [
+    "packages/core/src/index.ts",
+    "packages/storage-sqlite/package.json",
+    "packages/storage-sqlite/src/sqlite-store.ts",
+    "packages/audit-sqlite/src/sqlite-audit-sink.ts",
+    "apps/v1-file-import/src/state.ts",
+    "apps/v1-file-import/src/operator.ts",
+    "packages/application-service/src/index.ts"
+  ],
+  "plannedSlices": [
+    "S1 family/bootstrap/schema",
+    "S2 trusted synthetic registration and proof",
+    "S3 atomic acceptance",
+    "S4 accepted history and diff",
+    "S5 fault/concurrency/public-bypass qualification"
+  ],
+  "plannedFamilies": 44,
+  "partialDeferredFamilies": {
+    "C29": "External audit delivery; local event and output failure recovery mandatory",
+    "C30": "External sink idempotence; local event uniqueness/conflict mandatory",
+    "C44": "Whole-state backup anti-rollback needs an independent current source/anchor"
+  },
+  "schema": {
+    "candidateTables": 13,
+    "centralTriggerBodies": 4,
+    "executed": false,
+    "sqliteSyntaxValidated": false,
+    "newDatabaseCreated": false
+  },
+  "runtimeTestsExecuted": 0,
+  "productFilesChanged": 0,
+  "files": [
+    {
+      "path": "products/legacy-intelligence/engineering/c1-implementation-plan/README.md",
+      "bytes": 8385,
+      "sha256": "66da91a9dffe5b8e2e07cacdd43158bfa3c56ac1c4f75bb2f6ebd27fa9e8d953"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/c1-implementation-plan/SLICES_AND_FILE_MAP.md",
+      "bytes": 11291,
+      "sha256": "1b8fddd368a38b029756ad66e32e06e245a782ef3392498f61a7f9f646b68c1a"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/c1-implementation-plan/SCHEMA_CONTRACT.md",
+      "bytes": 22282,
+      "sha256": "8ce0782cc3ce82c0ee7cdbc59f60f2bfdee19237ad69609a079da278b0844a13"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/c1-implementation-plan/TRANSACTION_AND_PUBLIC_APIS.md",
+      "bytes": 16714,
+      "sha256": "9c734cb1741cd8a869485f63883f5cbf1290325f967aa8c916131d8d0dd033bf"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/c1-implementation-plan/TEST_ORDER_AND_REAL_SOURCE_PATH.md",
+      "bytes": 11792,
+      "sha256": "a9ac19b44e5e11aad03e8d1ce9ebadf1f5ebfa24d194a2d87541c4f74c3346f4"
+    }
+  ],
+  "editorialChecks": [
+    "relative links",
+    "44 unique family IDs mapped",
+    "privacy/publication allowlist",
+    "source file existence and unchanged tracked product",
+    "document hashes"
+  ],
+  "officialReferences": [
+    "https://www.sqlite.org/foreignkeys.html",
+    "https://www.sqlite.org/partialindex.html",
+    "https://www.sqlite.org/lang_createtrigger.html",
+    "https://www.sqlite.org/stricttables.html",
+    "https://www.sqlite.org/wal.html"
+  ],
+  "realSourceStage": "Separate authorized discovery and qualification of one vendor/version and test company; not included in C1",
+  "privateEvidenceAccessed": false,
+  "merged": false
+}

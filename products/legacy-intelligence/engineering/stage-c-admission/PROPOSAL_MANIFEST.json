@@ -1,0 +1,75 @@
+{
+  "format": "dbl.stage-c.admission-architecture-proposal.1",
+  "date": "2026-10-25",
+  "status": "DESIGN_ONLY_IMPLEMENTATION_NOT_AUTHORIZED",
+  "ownerAcceptedStageB": "bounded synthetic results only; not ERP or operational sync",
+  "productBaseline": {
+    "main": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
+    "tree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+    "stageBHead": "ecba3c2129488fa98bf88355df560bd2f5becf8f",
+    "stageBPR": 22
+  },
+  "memoryBaseline": {
+    "main": "86beaf03cceac4e39acc1d194a1577f41b749d70",
+    "stageBHead": "4091f0d231a30e47bea49d6cbb1905dba8831b11",
+    "stageBPR": 15
+  },
+  "preferredDecision": "Trusted local registration + qualified producer signed capture evidence + same-database atomic admission/head + pinned accepted reads",
+  "futureChangesRequiringApproval": [
+    "opt-in catalog-state migration and version routing",
+    "admission envelope and source registration/request protocol",
+    "storage-level generic-path refusal and transaction-bound publication",
+    "durable authoritative events/outbox and idempotent delivery API",
+    "accepted historical snapshot and product-diff read APIs"
+  ],
+  "newRuntimeTestsExecuted": 0,
+  "newMigrationTrials": 0,
+  "plannedAcceptanceFamilies": 44,
+  "editorialChecks": [
+    "source-code and Stage B evidence review",
+    "document relative-link existence",
+    "public privacy-pattern and explicit publication allowlist",
+    "unchanged tracked product source",
+    "document SHA-256"
+  ],
+  "files": [
+    {
+      "path": "products/legacy-intelligence/engineering/stage-c-admission/README.md",
+      "sha256": "0f8a0196e8b30cbfbc8854e863d1041892f79e2686ab7334f86ca8e6bafca829",
+      "bytes": 8802
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/stage-c-admission/EVIDENCE_AND_BOUNDARIES.md",
+      "sha256": "ebda179aaea2e77280ced008c489165be222b9724afd9e673a4a049ecdfb3633",
+      "bytes": 7694
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/stage-c-admission/TRUSTED_SOURCE_AND_COMPLETENESS.md",
+      "sha256": "e119b6f083e860ff31bb1106ad77f15273dc27d1e4b40db7fbb38f25421cd8ea",
+      "bytes": 11225
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/stage-c-admission/ADMISSION_STATE_AND_READS.md",
+      "sha256": "827ad219ef30c6ffb811dc13d0d17402a64d8f5bcb60f39e0783f0a48528c983",
+      "bytes": 17293
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/stage-c-admission/ACCEPTANCE_AND_IMPLEMENTATION_PLAN.md",
+      "sha256": "e3a2cf5cfd5d4f0ef52f8ff657ef8fb486bee687fc18755e04f2e360485c7a36",
+      "bytes": 13852
+    }
+  ],
+  "officialReferences": [
+    "https://www.sqlite.org/atomiccommit.html",
+    "https://www.sqlite.org/wal.html",
+    "https://www.sqlite.org/isolation.html",
+    "https://nodejs.org/docs/latest-v22.x/api/crypto.html#cryptoverifyalgorithm-data-key-signature-callback"
+  ],
+  "excluded": [
+    "ERP and customer/archive/vault access",
+    "Preview1 and V1 changes",
+    "engine/protocol/schema implementation",
+    "new dependencies or system/security/network changes",
+    "automatic merges"
+  ]
+}
