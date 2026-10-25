@@ -157,11 +157,11 @@
   "memoryDocuments": [
     {
       "path": "products/legacy-intelligence/engineering/catalog-s1/README.md",
-      "sha256": "c05897c0eafc5566153bf371f12d04607427444809af10b7f271a78d82f34e2a"
+      "sha256": "49efd3f2878044add1c0c81eddfe47773404a51ae13547beef945a6ba895565f"
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s1/VERIFICATION_AND_LIMITS.md",
-      "sha256": "1c0b3fb819f1a319a4a57f58d2ebd8624fc54b4eda9ae16c7c96f584a862c8f4"
+      "sha256": "db177b84224e720ba5bac9e6425f14c9e9d1cab265042a40050a596f93768d07"
     }
   ],
   "notImplemented": [
@@ -174,5 +174,12 @@
   "erpArchiveVaultAccessed": false,
   "dependenciesInstalled": false,
   "systemSettingsChanged": false,
-  "merged": false
+  "merged": false,
+  "ciVerification": {
+    "head": "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a",
+    "windows": "success",
+    "ubuntu": "success",
+    "url": "https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40171441999",
+    "cleanInstallOrHumanAcceptance": false
+  }
 }
