@@ -32,6 +32,12 @@
       "skipped": 1
     },
     "rawReportsPublished": false,
+    "githubCI": {
+      "head": "b0e012d88743f6ad56db884713bd2ac607c27fdd",
+      "run": 40201218359,
+      "ubuntu": "success",
+      "windows": "success"
+    },
     "localRegressionReportSha256": "44129ca53f1f2f839c7c2571d9c9a8d61411510a490ce600d3ae05da6a5a051a"
   },
   "schemaChanged": false,
@@ -152,7 +158,7 @@
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s2/VERIFICATION.md",
-      "sha256": "b422785aa8131973941d180496306847122477483bb3da0f3688c8b178bace56"
+      "sha256": "69f5047da8eba873ec97c9f0c0dac2af2bb1e3960f6fff9767de082ea0f2994b"
     },
     {
       "path": "products/legacy-intelligence/engineering/catalog-s2/REPRODUCTION.md",

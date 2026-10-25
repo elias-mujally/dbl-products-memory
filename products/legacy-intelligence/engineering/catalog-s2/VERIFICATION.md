@@ -20,6 +20,12 @@ Final regression selections: `packages/storage-sqlite/test`, `packages/audit-sql
 
 Windows skips: S1 native file alias; V1 POSIX state-file permissions, broad POSIX directory permissions, redirected backup ancestors, dangling symlink. No privilege elevation or machine security change was attempted to turn them green. Cross-platform CI results are a separate observation recorded in the PR; do not count an unobserved run as passed.
 
+## Observed GitHub CI
+
+[Workflow 40201218359](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40201218359), exact product head `b0e012d88743f6ad56db884713bd2ac607c27fdd`: both `verify (ubuntu-latest)` and `verify (windows-latest)` completed **successfully**. The existing workflow exercised workspace builds/typechecks and configured test suites (their own skips/private-evidence gates retained), delivery assembly controls and ten repeat cycles of Worker/native WAL checks. This broadens regression evidence, not ERP/clean-Windows/operator qualification of Catalog S2. S1's native link case runs on Ubuntu while the documented Windows skips remain intentional.
+
+Existing workflow advisories concerned the Node runtime of checkout/setup actions and the Ubuntu runner-label transition; they did not fail the jobs or diagnose a Catalog defect. The application's tested Node runtime is distinct from the actions' embedded runtime. No workflow/action/system change was made within S2.
+
 ## Assertions exercised
 
 - Owner-chosen company/scope/origin/build/mapping and locally generated namespace/epoch persist across reopen, with only synthetic trust. Extra authority fields, malformed keys/DER, wrong key algorithm, getters/inherited fields and invalid validity windows fail without enrolling a second source.
