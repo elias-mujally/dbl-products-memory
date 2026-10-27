@@ -1,7 +1,7 @@
 {
   "format": "dbl.desktop-d0.visual-manifest.1",
   "date": "2026-10-27",
-  "status": "VISUAL_CONCEPTS_ONLY_OWNER_SELECTION_PENDING",
+  "status": "OWNER_SELECTED_DIRECTION_1_D0_ONLY",
   "sourceQualified": false,
   "d1Started": false,
   "previewTouched": false,
@@ -49,15 +49,15 @@
   "files": [
     {
       "file": "README.md",
-      "bytes": 2616,
-      "sha256": "8C6BC657BB4FFDDC9139A7306222F53E0FE5485D5A3139BCFFAC856F31A111F0",
-      "gitBlobSha1": "2356272d27d9a4b8549d3f3a90104dfd0aa4f8e1"
+      "bytes": 2796,
+      "sha256": "9922322A7119F8991D54135A686C629778376D08146DA13B5A59D80FD97C019D",
+      "gitBlobSha1": "b26e7d794ab742f782d2408a50d6108e511b70e3"
     },
     {
       "file": "DESIGN_REVIEW_AR.md",
-      "bytes": 6538,
-      "sha256": "1248C307FCB2FE55E25A9A7F127747ADA7E6FAC4FB884C9416DC6231B7D259C4",
-      "gitBlobSha1": "e90a94a368002ed361610eb2eae9b0c3b2cc296d"
+      "bytes": 7064,
+      "sha256": "840E9451B141B5039549D81DB9883D0AD5E8CF00DE09B6BDF7676BAE97661BC8",
+      "gitBlobSha1": "d0af7a9d7be761ed77cb45e8098bdc679b10b42b"
     },
     {
       "file": "SYNTHETIC_FIXTURE.json",
@@ -70,6 +70,12 @@
       "bytes": 6605703,
       "sha256": "C8860D99A75B1401AD5143E59AD8DCF71362E20FA95F917330213A84EA9A645C",
       "gitBlobSha1": "b3f8daa35ba6de85953eae4a4bdd75c8f169fdd6"
+    },
+    {
+      "file": "OWNER_SELECTION_AR.md",
+      "bytes": 1615,
+      "sha256": "E172D8D0C23BB4CA842D92EF00A55A89DC05543BDD13E344777C0943544DEB3C",
+      "gitBlobSha1": "3c0ebe3aadec561844855274fd468d70e5f818ed"
     }
   ],
   "limits": [
@@ -77,5 +83,13 @@
     "No pixel-perfect, OCR, WCAG or user-research qualification",
     "Actual outputs have different dimensions; no comparative performance or density measurement",
     "Synthetic catalog only; displayed success is simulation without writes"
-  ]
+  ],
+  "ownerSelection": {
+    "date": "2026-10-27",
+    "directionId": "balanced",
+    "displayOrder": 1,
+    "sourceImageSha256": "F5E0ED3ECD642AFB68AB66090773BD3595D691720230C01E8D9C0F57BB326150",
+    "record": "OWNER_SELECTION_AR.md",
+    "d1Authorized": false
+  }
 }
