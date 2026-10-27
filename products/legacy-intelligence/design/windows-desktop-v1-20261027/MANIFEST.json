@@ -1,0 +1,110 @@
+{
+  "format": "dbl.desktop-design-document-manifest.1",
+  "date": "2026-10-27",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "scope": "Documentation integrity, not executable build or source attestation",
+  "files": [
+    {
+      "path": "01_CAPABILITIES_AND_SCOPE.md",
+      "bytes": 7519,
+      "sha256": "47501FE68373DEA068006D328E83C90829BB5345DCDC51A94B15E9C96514F010"
+    },
+    {
+      "path": "02_UX_AND_JOURNEYS_AR.md",
+      "bytes": 8272,
+      "sha256": "8F8CC9AF6F70DA5958DB61BA43AD2EBFA7021A6A7A1EA05A85F45C92D2282173"
+    },
+    {
+      "path": "03_ARCHITECTURE_DECISION.md",
+      "bytes": 9067,
+      "sha256": "E5030C555D64F9489BC12878EF9A96EE7394D57A7DCBE60796C6A642990974DC"
+    },
+    {
+      "path": "04_DELIVERY_PLAN_AND_GATES.md",
+      "bytes": 9013,
+      "sha256": "6E4B993382FC55DDB24824144455C565F12C8E79A87B66B941CFC14C9A977DD4"
+    },
+    {
+      "path": "05_EVIDENCE_AND_VERIFICATION.md",
+      "bytes": 6937,
+      "sha256": "1B874ABBF833F74240BAE0164EBD1270FE2DBD2CD63918CB49D35851DE6F6298"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3177,
+      "sha256": "B5254616E51AB1B9A4E00FC1F239F7023711890D99FE29489C06D10023F275CC"
+    }
+  ],
+  "reviewedLocalProductFiles": [
+    {
+      "file": "package.json",
+      "bytes": 1461,
+      "sha256": "A44FF40C22F77A4FC9DE2206B1180CB310462732744D099201BBE26C26E29B43"
+    },
+    {
+      "file": "packages/core/src/catalog.ts",
+      "bytes": 5703,
+      "sha256": "0C7424DE5C3E41778F43044ACEB4A09402C689F9279C43E4DE83F6293EFF0AE2"
+    },
+    {
+      "file": "packages/application-service/src/types.ts",
+      "bytes": 1206,
+      "sha256": "97BDE868F82B1815FCD6B8020BEA939D28DDD53B5730FFDC11C4D7266CDCB07C"
+    },
+    {
+      "file": "packages/application-service/src/service.ts",
+      "bytes": 5125,
+      "sha256": "DA7C64C15381C79D389E3EA87F8DC9CF7FCF019B448F587FE7C459824F97080A"
+    },
+    {
+      "file": "packages/application-service/src/catalog.ts",
+      "bytes": 5595,
+      "sha256": "2B20A71A36BD19980C5C7CCDDF7A72ECA264E3792E67F5EBC32FC2887491AF00"
+    },
+    {
+      "file": "packages/application-service/src/historical-inventory.ts",
+      "bytes": 8389,
+      "sha256": "DC8B777745DD5898FDFF84C681B418A59D4538F118C0C9570CE97212C37ABE19"
+    },
+    {
+      "file": "packages/query-engine/src/types.ts",
+      "bytes": 2463,
+      "sha256": "2CBA67A563BF18776D828043DDA4FA227365148DF12087972A014335BB66D01E"
+    },
+    {
+      "file": "packages/connectors-motakamel-plus/src/v1-inventory.ts",
+      "bytes": 16945,
+      "sha256": "2BDE4F291E80C08845FE358C5B011D7A49A8A3AECBFC60DB8A89CD186468AC66"
+    },
+    {
+      "file": "packages/storage-sqlite/src/catalog/contracts.ts",
+      "bytes": 3611,
+      "sha256": "7F2F84B8396727D7D82D9C6F3B1AEC79976D536914308C52BF2CA3F331B7D930"
+    },
+    {
+      "file": "packages/storage-sqlite/src/catalog/index.ts",
+      "bytes": 376,
+      "sha256": "F2493275F77CEBE6F2C28A31E156F1A6650CDE9C4F3A4C7237DFAB5780463D74"
+    },
+    {
+      "file": "apps/v1-file-import/src/index.ts",
+      "bytes": 8066,
+      "sha256": "F69B68C8AFAA16984015F26E7BE651F4F51EA22609F6EA622E4EF2DFC61F8CB7"
+    },
+    {
+      "file": "apps/v1-file-import/src/operator.ts",
+      "bytes": 20001,
+      "sha256": "4B343A698BB84C9DFDEE09718D2B6721B15B955F0C7CF10439DD00C1BCD242EB"
+    },
+    {
+      "file": "apps/v1-file-import/src/state.ts",
+      "bytes": 6984,
+      "sha256": "6760C1C134BB52331E33359FBA51597A725FA89A3BAE73C712C92EA54C34C623"
+    },
+    {
+      "file": "tools/windows-delivery/launcher.cjs",
+      "bytes": 6127,
+      "sha256": "987391D99D75A48D67444857A570E6016244D37D7C4D1BF01FED7797F50E6164"
+    }
+  ]
+}
