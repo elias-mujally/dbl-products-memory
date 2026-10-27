@@ -1,0 +1,54 @@
+{
+  "format": "dbl.desktop.d2.source-artifacts.1",
+  "sourceFiles": [
+    {
+      "file": "boundary.cjs",
+      "sha256": "069FBABA4EFC1B2569FF88CABFC739B47DD59419560F8E111C430AED726BE15C"
+    },
+    {
+      "file": "engine-client.cjs",
+      "sha256": "1F765051AABD29589616EAC03D17952C804F11EDE73885382759EB7B898C53A1"
+    },
+    {
+      "file": "engine.cjs",
+      "sha256": "D1011ED333D170E775E9CBC12D313B5D1843034BF4C77226E2F1FB10D583DC26"
+    },
+    {
+      "file": "engine.test.cjs",
+      "sha256": "A6DE1B858AD1ACD8FAE8D2898648DADCB0AD26E5B34E34E4A233AF13439416AE"
+    },
+    {
+      "file": "index.html",
+      "sha256": "837EB80E9E075B707D8B8D428C5304B676D2CEE1608FDAB28615F533583EBE7B"
+    },
+    {
+      "file": "main.cjs",
+      "sha256": "D60950F47F27E2CE61D40AE95A63A70ABCE5E989D261D6CF0CFC0CF894B66B1C"
+    },
+    {
+      "file": "preload.cjs",
+      "sha256": "B40ED8ECAD9EBDC1AF7D32D9A6C931C5DB4FA1D55DFCD776E24E862C12207FEF"
+    },
+    {
+      "file": "qualification.cjs",
+      "sha256": "E05EB9ECD2AC33A9C142CD66D38642730233ED713342957E8FE8587CD6742C56"
+    },
+    {
+      "file": "renderer.js",
+      "sha256": "7099B572B6F41FA220A608F3BBE3D495CBDBEDBC8134F58ADA815C740877AA2B"
+    },
+    {
+      "file": "run-electron.cjs",
+      "sha256": "464F213F2142288CB9B312383A8E6C297E6DD38FD1B11A7AD07794961BEED3EE"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "D1576025F548B8569BC0CE69407CD603FEEC06AC45BD6B6613B76B621880D821"
+    }
+  ],
+  "engineRuntimeManifestSha256": "cab3d8fa7ade9176e3ca81c94ea33f462cca4846ac4203cd708e805171e870a4",
+  "electronExeSha256": "8e84549b05d27d444da2957653200d1e0ac287eff0fc5722b92835b9e0821a59",
+  "sourceImageD0Sha256": "F5E0ED3ECD642AFB68AB66090773BD3595D691720230C01E8D9C0F57BB326150",
+  "runtime": "Existing approved D1 build, not clean-main qualified",
+  "a16Qualified": false
+}
