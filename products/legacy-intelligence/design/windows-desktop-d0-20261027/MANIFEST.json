@@ -1,0 +1,81 @@
+{
+  "format": "dbl.desktop-d0.visual-manifest.1",
+  "date": "2026-10-27",
+  "status": "VISUAL_CONCEPTS_ONLY_OWNER_SELECTION_PENDING",
+  "sourceQualified": false,
+  "d1Started": false,
+  "previewTouched": false,
+  "images": [
+    {
+      "displayOrder": 1,
+      "id": "balanced",
+      "name": "اتزان مؤسسي",
+      "originalDeliveryFile": "direction-1-balanced.png",
+      "bytes": 1584958,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "F5E0ED3ECD642AFB68AB66090773BD3595D691720230C01E8D9C0F57BB326150",
+      "encoding": "png",
+      "embedding": "Verbatim original bytes in gallery.html data URI",
+      "panels": 6
+    },
+    {
+      "displayOrder": 2,
+      "id": "accounting",
+      "name": "وضوح محاسبي",
+      "originalDeliveryFile": "direction-2-accounting.png",
+      "bytes": 1700486,
+      "width": 1295,
+      "height": 1214,
+      "sha256": "4F57FF03311D4C342524969FFD0164C7423A75A43A9F5049827349C43AE56C0F",
+      "encoding": "png",
+      "embedding": "Verbatim original bytes in gallery.html data URI",
+      "panels": 6
+    },
+    {
+      "displayOrder": 3,
+      "id": "guided",
+      "name": "مسار واضح",
+      "originalDeliveryFile": "direction-3-guided.png",
+      "bytes": 1664198,
+      "width": 1295,
+      "height": 1214,
+      "sha256": "A00F4E621AAED2E96B9672C47D085DF7C6B68D282570FC307C763BA959496DBF",
+      "encoding": "png",
+      "embedding": "Verbatim original bytes in gallery.html data URI",
+      "panels": 6
+    }
+  ],
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2616,
+      "sha256": "8C6BC657BB4FFDDC9139A7306222F53E0FE5485D5A3139BCFFAC856F31A111F0",
+      "gitBlobSha1": "2356272d27d9a4b8549d3f3a90104dfd0aa4f8e1"
+    },
+    {
+      "file": "DESIGN_REVIEW_AR.md",
+      "bytes": 6538,
+      "sha256": "1248C307FCB2FE55E25A9A7F127747ADA7E6FAC4FB884C9416DC6231B7D259C4",
+      "gitBlobSha1": "e90a94a368002ed361610eb2eae9b0c3b2cc296d"
+    },
+    {
+      "file": "SYNTHETIC_FIXTURE.json",
+      "bytes": 1034,
+      "sha256": "07B5DB69F166552D8D1E401117EDFC8EFBB0195947AC67CA661C5486A5258C33",
+      "gitBlobSha1": "eb81721050f4f2cc2ca57df84a757aec133c96d7"
+    },
+    {
+      "file": "gallery.html",
+      "bytes": 6605703,
+      "sha256": "C8860D99A75B1401AD5143E59AD8DCF71362E20FA95F917330213A84EA9A645C",
+      "gitBlobSha1": "b3f8daa35ba6de85953eae4a4bdd75c8f169fdd6"
+    }
+  ],
+  "limits": [
+    "Generative raster designs, not an executable UI or acceptance test",
+    "No pixel-perfect, OCR, WCAG or user-research qualification",
+    "Actual outputs have different dimensions; no comparative performance or density measurement",
+    "Synthetic catalog only; displayed success is simulation without writes"
+  ]
+}
