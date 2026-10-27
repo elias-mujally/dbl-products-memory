@@ -16,14 +16,27 @@
     "supportedWindowsProRelease": false
   },
   "target": {
-    "identityConfirmed": false,
+    "identityConfirmed": true,
     "supportedWindowsConfirmed": false,
     "fixedRamMiB": 4096,
     "vCpu": 2,
     "ordinaryAccountConfirmed": false,
     "currentHyperVInventoryAvailable": false,
     "absenceOfOtherVmProven": false,
-    "ownerAvailabilityQuestionPendingAtReport": true
+    "ownerAvailabilityQuestionPendingAtReport": false,
+    "vm": "DBL-W10-Clean-Compatibility-V1",
+    "observedWindows": "Windows 10 Pro 22H2",
+    "observedBuildFamily": "19045",
+    "observedArch": "x64",
+    "resourcesConfirmedThroughTargetSettings": true,
+    "dynamicMemoryEnabled": false,
+    "currentAccountTypeObserved": "local administrator",
+    "currentTokenElevationTested": false,
+    "activationPromptObserved": true,
+    "windowsUsageRightsConfirmed": false,
+    "esuCoverageExamined": false,
+    "networkSwitchObserved": "Not connected",
+    "targetSpecificHyperVSettingsRead": true
   },
   "a16": {
     "runsRequired": 10,
@@ -65,5 +78,16 @@
   "erpOrPreviewAccessed": false,
   "d2Started": false,
   "mergeOrReleasePerformed": false,
-  "newBenchmarkHarnessImplemented": false
+  "newBenchmarkHarnessImplemented": false,
+  "followup": {
+    "kind": "CURRENT_READONLY_GUI_OBSERVATION",
+    "date": "2026-10-27",
+    "vmWasAlreadyRunning": true,
+    "ownerHandledGuestLogin": true,
+    "settingsClosedWithCancel": true,
+    "applyRemainedDisabled": true,
+    "guestOrHostSettingChanged": false,
+    "packageTransferredOrRun": false,
+    "globalHyperVInventoryClaim": false
+  }
 }
