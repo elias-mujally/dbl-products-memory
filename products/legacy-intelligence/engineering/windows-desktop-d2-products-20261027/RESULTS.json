@@ -1,7 +1,7 @@
 {
   "format": "dbl.desktop.d2.products-evidence.1",
   "date": "2026-10-27",
-  "status": "IN_PROGRESS_NATIVE_VISUAL_REVIEW_PENDING",
+  "status": "PASS_BOUNDED_SYNTHETIC_D2_PRODUCTS_NATIVE_AND_COMPUTER_USE",
   "productPr": 29,
   "productBasePr": 28,
   "ownerApprovedBoundedD2DespiteOpenA16": true,
@@ -9,14 +9,102 @@
   "erpQualified": false,
   "trustedCatalogAdmission": false,
   "coreApplicationServiceUsed": true,
-  "backendTests": {"passed": 31, "failed": 0, "skipped": 0},
-  "d1RegressionTests": {"passed": 18, "failed": 0, "skipped": 0},
+  "backendTests": {
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0
+  },
+  "d1RegressionTests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0
+  },
   "referenceCoreHashesUnchanged": 14,
-  "nativeAttempt1": {"completed": false, "recordedPassedChecks": 3, "failedCheck": "keyboard activation opens actual selected product details", "exactCauseProven": false},
-  "nativeAttempt2": {"completed": false, "error": "Current display surface not available for capture", "screenshotsProduced": 0, "unreportedChecksCountedAsPass": false, "exactCauseProven": false},
-  "nativeAttempt3": {"status": "PENDING", "completed": false},
-  "foregroundComputerUseKeyboard": "NOT_TESTED",
-  "visualReview": "NOT_COMPLETE",
+  "nativeAttempt1": {
+    "completed": false,
+    "recordedPassedChecks": 3,
+    "failedCheck": "keyboard activation opens actual selected product details",
+    "exactCauseProven": false
+  },
+  "nativeAttempt2": {
+    "completed": false,
+    "error": "Current display surface not available for capture",
+    "screenshotsProduced": 0,
+    "unreportedChecksCountedAsPass": false,
+    "exactCauseProven": false
+  },
+  "nativeAttempt3": {
+    "status": "PASS_SYNTHETIC_D2_PRODUCTS_NATIVE_RUNTIME",
+    "completed": true,
+    "uniqueChecksPassed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "observedSuccessfulRepeats": 2,
+    "repeatsAddedToUniqueTestCount": false,
+    "referenceReceiptSha256": "C6F6C7DE7E12D0F9F1F861A0BB642E111CE66C120C75E72E2F9CE40A92F9A4C6",
+    "repeatReceiptSha256": "5F9BB6667C91D34D114F017D1C511C6411392F8BF81EB414F0C41F6CD066625D",
+    "captureFailures": 0,
+    "screenshots": [
+      {
+        "file": "D2-light-products-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "2A8AAB725F80DE4AFC7AB69A108AA98DECBC0CF723EC028CF0C20CFF5DB8BEC4",
+        "title": "الأصناف والتفاصيل — فاتح",
+        "width": 1683,
+        "height": 974,
+        "bytes": 84739
+      },
+      {
+        "file": "D2-dark-products-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "0729D205B5B59B49EE0C4F910CA388C69463E805BC2ED5FE43FF52ABF94167C9",
+        "title": "الأصناف والتفاصيل — داكن",
+        "width": 1683,
+        "height": 974,
+        "bytes": 83238
+      },
+      {
+        "file": "D2-search-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "D960405CF08DE91D28FDA4AF6DD589C1E192B30579DFA84A3ADA195284A38555",
+        "title": "بحث عربي فعلي عبر الخدمة",
+        "width": 1683,
+        "height": 974,
+        "bytes": 69605
+      },
+      {
+        "file": "D2-empty-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "296F41B9483B4BAAA663DE4196CBD4C582CF7DD14283B7780FC1911293DB27B6",
+        "title": "لا نتائج — لا استنتاج حذف",
+        "width": 1683,
+        "height": 974,
+        "bytes": 69943
+      },
+      {
+        "file": "D2-loading-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "25C35474E80AD44D65CAEA8D51089BBC71A13563303CE1148E4F44A8ACC8E049",
+        "title": "تحميل — تأخير اختبار معلن",
+        "width": 1683,
+        "height": 974,
+        "bytes": 70338
+      },
+      {
+        "file": "D2-narrow-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "D91DBFB420C03345333322791B42428F2AB539BEF49D22572BDD16D8C101CCCD",
+        "title": "نافذة أضيق — تمرير رأسي طبيعي",
+        "width": 1108,
+        "height": 1017,
+        "bytes": 119329
+      },
+      {
+        "file": "D2-error-690a01a2-fbf1-4602-94de-81ef4e949da5.png",
+        "sha256": "B8ED8CE692FCF8033574078DA65AD2315B88144E8AB728EC5258E3414633D5DD",
+        "title": "تعذر القراءة — إيقاف عامل الاختبار عمدًا",
+        "width": 1683,
+        "height": 1079,
+        "bytes": 79365
+      }
+    ]
+  },
+  "foregroundComputerUseKeyboard": "PASS_ARABIC_TYPE_ENTER_SEARCH_TAB_ENTER_DETAIL",
+  "visualReview": "PASS_BOUNDED_SEVEN_NATIVE_SCREENSHOTS_AND_LIVE_WINDOW",
   "humanAcceptance": false,
   "a16Status": "BLOCKED_ENVIRONMENT_NOT_QUALIFIED",
   "a16Runs": 0,
@@ -28,5 +116,68 @@
   "dependenciesAdded": false,
   "securityNetworkResourcesOrPermissionsChanged": false,
   "d2ExpandedBeyondProducts": false,
-  "mergedOrReleased": false
+  "mergedOrReleased": false,
+  "computerUse": {
+    "reviewAppOpenedViaDirectVerifiedShortcut": true,
+    "terminalAutomated": false,
+    "sourceAndRuntimeHashesVerifiedBeforeLaunch": true,
+    "reviewLaunchRequestedElevation": false,
+    "checks": [
+      {
+        "name": "Arabic literal typing into visually focused search",
+        "passed": true
+      },
+      {
+        "name": "Enter submits search and yields only SYN-102",
+        "passed": true
+      },
+      {
+        "name": "Four Tab presses visibly focus detail button",
+        "passed": true
+      },
+      {
+        "name": "Enter opens SYN-102 DEMO-102 service-backed detail",
+        "passed": true
+      },
+      {
+        "name": "Mouse theme toggle preserves current result and detail",
+        "passed": true
+      },
+      {
+        "name": "Clear restores all five rows and clears old detail",
+        "passed": true
+      },
+      {
+        "name": "Return to light mode works",
+        "passed": true
+      },
+      {
+        "name": "First product mouse selection shows SYN-101 DEMO-101",
+        "passed": true
+      }
+    ],
+    "focusedElementTreeOftenRootOnly": true,
+    "focusOutlineVisuallyVerified": true,
+    "independentHumanAcceptance": false
+  },
+  "ci": {
+    "run": 40528797354,
+    "number": 234,
+    "sourceHead": "cac6c2165b67d9b06ae93f3eddb220f62db08715",
+    "windows": "success",
+    "ubuntu": "success",
+    "experimentExecutedByRootCi": false
+  },
+  "evidenceHashes": {
+    "backendTap": "FADB959646DA1CF90F295EA0AA6836DFF5CCAAA3CFD87ADF75F6D0E627E371D3",
+    "d1RegressionTap": "D3A8FB8F1C637E79D8BEBD28797F6A9BE875C8098537B305DD5493975275D903"
+  },
+  "gallery": {
+    "file": "gallery.html",
+    "bytes": 772285,
+    "sha256": "3EEA89F9ED965E7EB0279B0F34024DEAF37955C3FB23DAD4AD581E01D84DF194",
+    "gitBlobSha1": "6cfc8791cadf0f343c4f3c042323029e04c8530a",
+    "originalPngCount": 7,
+    "imagesReencoded": false
+  }
 }
