@@ -1,0 +1,95 @@
+{
+  "format": "dbl.desktop-d0.visual-manifest.1",
+  "date": "2026-10-27",
+  "status": "OWNER_SELECTED_DIRECTION_1_D0_ONLY",
+  "sourceQualified": false,
+  "d1Started": false,
+  "previewTouched": false,
+  "images": [
+    {
+      "displayOrder": 1,
+      "id": "balanced",
+      "name": "اتزان مؤسسي",
+      "originalDeliveryFile": "direction-1-balanced.png",
+      "bytes": 1584958,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "F5E0ED3ECD642AFB68AB66090773BD3595D691720230C01E8D9C0F57BB326150",
+      "encoding": "png",
+      "embedding": "Verbatim original bytes in gallery.html data URI",
+      "panels": 6
+    },
+    {
+      "displayOrder": 2,
+      "id": "accounting",
+      "name": "وضوح محاسبي",
+      "originalDeliveryFile": "direction-2-accounting.png",
+      "bytes": 1700486,
+      "width": 1295,
+      "height": 1214,
+      "sha256": "4F57FF03311D4C342524969FFD0164C7423A75A43A9F5049827349C43AE56C0F",
+      "encoding": "png",
+      "embedding": "Verbatim original bytes in gallery.html data URI",
+      "panels": 6
+    },
+    {
+      "displayOrder": 3,
+      "id": "guided",
+      "name": "مسار واضح",
+      "originalDeliveryFile": "direction-3-guided.png",
+      "bytes": 1664198,
+      "width": 1295,
+      "height": 1214,
+      "sha256": "A00F4E621AAED2E96B9672C47D085DF7C6B68D282570FC307C763BA959496DBF",
+      "encoding": "png",
+      "embedding": "Verbatim original bytes in gallery.html data URI",
+      "panels": 6
+    }
+  ],
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2796,
+      "sha256": "9922322A7119F8991D54135A686C629778376D08146DA13B5A59D80FD97C019D",
+      "gitBlobSha1": "b26e7d794ab742f782d2408a50d6108e511b70e3"
+    },
+    {
+      "file": "DESIGN_REVIEW_AR.md",
+      "bytes": 7064,
+      "sha256": "840E9451B141B5039549D81DB9883D0AD5E8CF00DE09B6BDF7676BAE97661BC8",
+      "gitBlobSha1": "d0af7a9d7be761ed77cb45e8098bdc679b10b42b"
+    },
+    {
+      "file": "SYNTHETIC_FIXTURE.json",
+      "bytes": 1034,
+      "sha256": "07B5DB69F166552D8D1E401117EDFC8EFBB0195947AC67CA661C5486A5258C33",
+      "gitBlobSha1": "eb81721050f4f2cc2ca57df84a757aec133c96d7"
+    },
+    {
+      "file": "gallery.html",
+      "bytes": 6605703,
+      "sha256": "C8860D99A75B1401AD5143E59AD8DCF71362E20FA95F917330213A84EA9A645C",
+      "gitBlobSha1": "b3f8daa35ba6de85953eae4a4bdd75c8f169fdd6"
+    },
+    {
+      "file": "OWNER_SELECTION_AR.md",
+      "bytes": 1615,
+      "sha256": "E172D8D0C23BB4CA842D92EF00A55A89DC05543BDD13E344777C0943544DEB3C",
+      "gitBlobSha1": "3c0ebe3aadec561844855274fd468d70e5f818ed"
+    }
+  ],
+  "limits": [
+    "Generative raster designs, not an executable UI or acceptance test",
+    "No pixel-perfect, OCR, WCAG or user-research qualification",
+    "Actual outputs have different dimensions; no comparative performance or density measurement",
+    "Synthetic catalog only; displayed success is simulation without writes"
+  ],
+  "ownerSelection": {
+    "date": "2026-10-27",
+    "directionId": "balanced",
+    "displayOrder": 1,
+    "sourceImageSha256": "F5E0ED3ECD642AFB68AB66090773BD3595D691720230C01E8D9C0F57BB326150",
+    "record": "OWNER_SELECTION_AR.md",
+    "d1Authorized": false
+  }
+}

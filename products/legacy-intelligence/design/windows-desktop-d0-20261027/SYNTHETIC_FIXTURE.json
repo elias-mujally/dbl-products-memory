@@ -1,0 +1,39 @@
+{
+  "format": "dbl.d0.synthetic-visual-fixture.1",
+  "dataKind": "synthetic-design-only",
+  "company": "شركة عرض DBL",
+  "source": "مصدر عرض اصطناعي",
+  "qualification": "غير مؤهل لـ ERP",
+  "snapshot": "DEMO-20261027-A",
+  "capturedAt": "2026-10-27T09:00:00+03:00",
+  "sourceQualified": false,
+  "admissionPerformed": false,
+  "products": [
+    {
+      "sku": "SYN-101",
+      "name": "ورق طباعة",
+      "sampleKey": "DEMO-101"
+    },
+    {
+      "sku": "SYN-102",
+      "name": "حبر أسود",
+      "sampleKey": "DEMO-102"
+    },
+    {
+      "sku": "SYN-103",
+      "name": "ملف أرشفة",
+      "sampleKey": "DEMO-103"
+    },
+    {
+      "sku": "SYN-104",
+      "name": "لوحة مفاتيح",
+      "sampleKey": "DEMO-104"
+    },
+    {
+      "sku": "SYN-105",
+      "name": "فأرة حاسوب",
+      "sampleKey": "DEMO-105"
+    }
+  ],
+  "limits": "Sample identifiers describe this synthetic design fixture only, not immutable ERP keys. No quantities/prices/sales/permissions."
+}
