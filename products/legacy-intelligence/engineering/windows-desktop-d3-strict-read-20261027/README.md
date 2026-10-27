@@ -6,7 +6,7 @@
 
 - [دراسة D3 والعقد والقبول I01–I20 — PR31](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/31).
 - [تنفيذ الشريحة — PR32](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/32)، فوق فرع PR31؛ لا تغيير main/D2.
-- [المصدر المثبت e0cb434](https://github.com/elias-mujally/dbl-legacy-intelligence/tree/e0cb43489e473d81cf1b30faefac52f13e3c9ae4/experiments/desktop-d3-inventory-read): README لإعادة الإنتاج، IMPLEMENTATION_AR للقرار والحدود، EVIDENCE للأعداد والبصمات.
+- [المصدر المثبت 59aaa0c](https://github.com/elias-mujally/dbl-legacy-intelligence/tree/59aaa0c7ca90ce7e6ae9ce9068ebd7de785bc18e/experiments/desktop-d3-inventory-read): README لإعادة الإنتاج، IMPLEMENTATION_AR للقرار والحدود، EVIDENCE للأعداد والبصمات.
 - [D2 في الذاكرة — PR26](https://github.com/elias-mujally/dbl-products-memory/pull/26): مسار منفصل؛ كتالوج D2 الاصطناعي لا يحتوي مخزون V1.
 
 ## القرار وأسبابه
@@ -21,7 +21,7 @@
 
 | المجموعة | ناجح | فاشل | متجاوز |
 |---|---:|---:|---:|
-| قراءة D3 الجديدة | 46 | 0 | 0 |
+| قراءة D3 الجديدة | 47 | 0 | 0 |
 | D1/D2 عبر Node pipe وتجارب خدمة D3 السابقة | 63 | 0 | 0 |
 | V1 operator/refresh/bootstrap/publication/migration boundary | 43 | 0 | 4 |
 
@@ -38,6 +38,12 @@
 1. قائمة ملفات القارئ الأولى رفضت .gitignore الجذرية المشروعة في صيغة النسخ القائمة. الحل تحقق محتواها وإضافة بصمتها للمقارنة، دون تعديل النسخة أو حراسها.
 2. أول مصفوفة اختبارات: 42 نجحت وواحد فشل أثناء إعداد تاريخ مستقبلي، لأن مشغّل V1 رفضه بـV1_CAPTURE_CLOCK_AHEAD. أُبقي الحارس؛ أصبح اختبار رفض الاستيراد منفصلًا عن اختبار الساعة في القارئ.
 3. أُضيف رفض هوية migration المتغيرة مع ثبات أرقام النسخ، وإعادة فحص سياق القراءة بعد اكتمال query لمنع نتيجة بعد الإغلاق.
+
+4. أول CI: Windows نجح، وUbuntu سجل 29 نجاحًا/17 إخفاقًا بسبب بصمات migration المعتمدة على النص المترجم ونهايات أسطر قوالب SQL. ثُبّتت بصمتا البناء المعروفتان مع تحقق مستقل من هوية الدالة المعيارية؛ لا تغيير metadata أو قبول بصمة عشوائية. أضيف اختبار مستقل لهذا الحد.
+
+## بناء PR والتحقق المستقل من dist المحلية
+
+[تشغيل CI المتخصص 40578971521](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40578971521) على الالتزام59aaa0c: **بناء checkout جديد ثم 47 ناجحًا، صفر فشل/تجاوز، على كل من Windows وUbuntu**. هذا يثبت توافق مصدر فرع D3 مع البناء، وليس قبول main نظيفًا لـD1 أو إصدار Windows أو A16. تصحيح تسمية better-sqlite3 في سجل الاختبار وتحديث الأدلة تلاه دون تغيير provider/service؛ راجع CI الرأس الأخير قبل الاعتماد.
 
 ## حدود لم تُغلق
 
