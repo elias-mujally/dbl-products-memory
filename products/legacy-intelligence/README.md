@@ -1,5 +1,15 @@
 # Legacy Intelligence — Product Memory
 
+## D3 — تكامل Electron اصطناعي قيد المراجعة (2026-10-28)
+
+[المرشح4ef2131 وإعادة الاختبار مع PR35](engineering/windows-desktop-d3-electron-integration-20261028/PR34_R3_ACCEPTANCE_AR.md):18 حالة مستقلة و132 انحدارًا ناجحًا، وCI ناجح على النظامين؛ جولة Electron الجديدة والدمج معلقان حتى وصول الأدلة. لا تُعد نتائج19db532 قبولًا لهذا الرأس.
+
+[إعادة مراجعة PR34 وHost المشترك PR35](engineering/windows-desktop-d3-electron-integration-20261028/PR34_R2_SHARED_HOST_AR.md): الثمانية الأصلية8/8؛ بقيت أربع عيوب إضافية. Electron فعلي12/15 ولا اعتماد مشترك بعد. Native CI ناجح132/132 على Windows وUbuntu. الحكم REQUEST CHANGES؛ لا دمج.
+
+[مراجعة واجهة Antigravity PR34](engineering/windows-desktop-d3-electron-integration-20261028/PR34_REVIEW_AR.md): REQUEST CHANGES علىe5c820e؛ ثماني تجارب أعادت إنتاج عيوب، و120 اختبار انحدار خلفي ناجح. التكامل المشترك واختباراتElectron لهذه الواجهة لم يجتازا القبول بعد.
+
+[العقد والتنفيذ والأدلة وحدود التأهيل](engineering/windows-desktop-d3-electron-integration-20261028/README.md): PR33 فوق32 دون دمج؛ Runtime وعامل مستقل و5 عمليات IPC. R1 وR2 داخل Electron نجحت كل منهما16 فحصًا؛ R2 موثقة مع11 صورة متحقق من بصماتها. لا V1 فعلية أو Preview1 أو إنتاج، والتصميم النهائي لـAntigravity لم يُربط.
+
 ## D3 — شريحة قراءة المخزون المحفوظ قيد المراجعة (2026-10-27)
 
 [القرار والأدلة وحدود الاختبار](engineering/windows-desktop-d3-strict-read-20261027/README.md): غلاف قراءة تجريبي عبر Application Service لنسخة V1 محفوظة وخاملة؛ 47 اختبارًا جديدًا نجح محليًا. التنفيذ في Draft PR32 وغير مدموج؛ لا فتح لبيانات V1 الفعلية أو ربط Desktop أو تأهيل إنتاج. الحالات القديمة أدناه لا تخلط بين هذا المسار والمختبر التاريخي أو كتالوج D2 الاصطناعي.
