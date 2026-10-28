@@ -2,6 +2,8 @@
 
 ## D3 — تكامل Electron اصطناعي قيد المراجعة (2026-10-28)
 
+[المرشح4ef2131 وإعادة الاختبار مع PR35](engineering/windows-desktop-d3-electron-integration-20261028/PR34_R3_ACCEPTANCE_AR.md):18 حالة مستقلة و132 انحدارًا ناجحًا، وCI ناجح على النظامين؛ جولة Electron الجديدة والدمج معلقان حتى وصول الأدلة. لا تُعد نتائج19db532 قبولًا لهذا الرأس.
+
 [إعادة مراجعة PR34 وHost المشترك PR35](engineering/windows-desktop-d3-electron-integration-20261028/PR34_R2_SHARED_HOST_AR.md): الثمانية الأصلية8/8؛ بقيت أربع عيوب إضافية. Electron فعلي12/15 ولا اعتماد مشترك بعد. Native CI ناجح132/132 على Windows وUbuntu. الحكم REQUEST CHANGES؛ لا دمج.
 
 [مراجعة واجهة Antigravity PR34](engineering/windows-desktop-d3-electron-integration-20261028/PR34_REVIEW_AR.md): REQUEST CHANGES علىe5c820e؛ ثماني تجارب أعادت إنتاج عيوب، و120 اختبار انحدار خلفي ناجح. التكامل المشترك واختباراتElectron لهذه الواجهة لم يجتازا القبول بعد.
