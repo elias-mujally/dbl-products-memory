@@ -64,7 +64,7 @@ Electron45 من جلسة المالك العادية، مع18 بصمة شيفر�
 - إعادة مجموعات الاختبار بالتتابع:132/132، دون إخفاق أو تجاوز، خلال68.4 ثانية لهذه الجولة. لم تتغير مهلة الإنتاج أو اختبارات التنافس داخل المجموعة. المقارنة ليست إثباتًا لسبب مضيف محدد أو قياس A16.
 - [CI لـPR #34 عند19db532](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40627627687): ناجح.
 - [CI المتخصص عندefc3ac38](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40631068210): السجلات تؤكد132 اختبارًا ناجحًا دون إخفاق/تجاوز على كل من Windows وUbuntu. [CI العام](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40631068181) ناجح. هذه بناءات checkout جديدة وفحوص Native، وليست Electron.
-- CI للالتزام923a2a9 يُسجل منفصلًا؛ لا يُفترض نجاحه قبل ظهور النتيجة.
+- آخر تحقق للالتزام923a2a9: [CI المتخصص40631782443](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40631782443) ناجح132/132 دون إخفاق/تجاوز على Windows وUbuntu، وفق سجلات الوظائف122629586505 و122629586273. [CI العام40631782525](https://github.com/elias-mujally/dbl-legacy-intelligence/actions/runs/40631782525) ناجح أيضًا على النظامين. هذا لا يغلق إعادة القياس داخل Electron.
 
 ## الاستئناف
 
