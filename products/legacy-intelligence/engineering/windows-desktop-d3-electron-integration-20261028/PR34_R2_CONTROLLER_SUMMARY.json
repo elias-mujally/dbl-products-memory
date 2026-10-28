@@ -1,0 +1,79 @@
+{
+  "format": "dbl.pr34.r2.independent-controller-review.1",
+  "head": "19db532f4834ebf38ac80cda2bdae03e7f7d09ba",
+  "rendererSha256": "EC1D871AC279138F8DC5DE18ACE2C21659F1CA869C8ADEB0424B56BAF217526F",
+  "originalEight": {
+    "passed": 8,
+    "total": 8
+  },
+  "checks": [
+    {
+      "id": "original-1",
+      "name": "missing service fails closed without design rows or invented value",
+      "passed": true
+    },
+    {
+      "id": "original-2",
+      "name": "canonical nested bridge is actually called, never design fallback",
+      "passed": true
+    },
+    {
+      "id": "original-3",
+      "name": "sources is called before explicit source-bound openLatest",
+      "passed": true
+    },
+    {
+      "id": "original-4",
+      "name": "matching lifecycle invalidation wipes quantities and context",
+      "passed": true
+    },
+    {
+      "id": "original-5",
+      "name": "context-invalid detail reply clears all numbers",
+      "passed": true
+    },
+    {
+      "id": "original-6",
+      "name": "mismatched read/snapshot page never renders foreign row",
+      "passed": true
+    },
+    {
+      "id": "original-7",
+      "name": "older open completion cannot replace newer context and is closed",
+      "passed": true
+    },
+    {
+      "id": "original-8",
+      "name": "tab switch restores error/retry and D2 starts only on entry",
+      "passed": true
+    },
+    {
+      "id": "edge-1",
+      "name": "D2 renders products without reference errors",
+      "passed": false
+    },
+    {
+      "id": "edge-2",
+      "name": "back from third page requests second-page cursor",
+      "passed": false
+    },
+    {
+      "id": "edge-3",
+      "name": "thrown detail failure clears formerly ready numbers",
+      "passed": false
+    },
+    {
+      "id": "edge-4",
+      "name": "one canonical namespace without legacy fallback",
+      "passed": false
+    },
+    {
+      "id": "edge-5",
+      "name": "old and null invalidations cannot clear a ready new context",
+      "passed": true
+    }
+  ],
+  "passed": 9,
+  "failed": 4,
+  "scope": "Node22 VM and minimal synthetic DOM; no real Electron, ERP or filesystem source write; edge paging probe tests controller cursor contract separately from the current five-row/3-or-5 UI profile"
+}
