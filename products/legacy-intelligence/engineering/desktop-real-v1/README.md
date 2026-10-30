@@ -14,10 +14,17 @@ The V2 layout, tabs, inspector, Arabic RTL and themes are retained. Fields absen
 
 Code/architecture and public synthetic CI may be published. Private captures, database/backup files, credentials, local configuration/locators and full receipts remain local. The detailed owner-artifact execution summary is held locally pending specific disclosure approval; it is not reproduced here.
 
-The development implementation and native checks exist. The owner-session actual Electron acceptance and visual review are still PENDING at this checkpoint. Do not mark the task complete or infer human/Windows acceptance from Node/CI results. Preserve any failed rounds and update this record after verified execution.
+The owner-session actual Electron R2 acceptance passed17/17, and a separate normal visible review window was opened and inspected via Computer Use. R1 remains retained as a failure: its host compared internal worker IDs with renderer IDs. The fix validates the worker response, re-envelopes the UI correlation ID, and validates again without weakening source or schema checks. Failure invalidation also clears capture navigation. Public synthetic tests18/18 passed; the private suite remains local and overlaps them, so the groups are not added as unique cases. Screenshots and actual-data evidence remain local. These results are bounded developer acceptance, not the owner's final product acceptance, A16, Narrator or production qualification.
 
 A16, Narrator, supported clean Windows, clean-main build, data-directory security and production gates remain open. No ERP transaction, new extraction, network/security/permissions change, main merge or public release is introduced.
 
 ## Reproduction boundary
 
 Use the source revision recorded in PR40 and an existing approved pinned development runtime. Supply private configuration outside Git, use a newly retained data copy, verify before and after footprints, and execute the owner launcher from the normal session. Do not retry security denials or change sandbox/ACL to bypass them. Private actual-data tests require explicit local opt-in; public CI must skip them when assets are absent.
+
+
+## Delivery and publication — 30 October 2026
+
+Product R2 source is on PR40 at28d4e65e862f78d4dfc2ca99f131a6642caa1b1d, stacked without main merge. The owner explicitly reauthorized the sanitized source/test upload and this architecture update after automatic review had referred to an older planning-only scope. No rejected private evidence payload was republished. Existing exact-head CI is tracked in the product PR rather than inferred from its parent.
+
+The visible application uses the approved existing Node/Electron runtime and frozen local data copy. A repeatable local launcher verifies pins, requires a normal session and creates a fresh application profile; it does not import data at startup. A nonblocking Windows GPU-cache path-length warning occurred in the long evidence directory. Future-launch config now uses a new shorter application-owned output directory without changing Windows long-path policy or security; that alternate profile launch is prepared, not independently exercised yet. The inspected current window remains open. Source-copy footprints matched after the actual qualification run; no claim about kernel-level write-proofing or final after-owner-close audit follows while the owner session remains open.
