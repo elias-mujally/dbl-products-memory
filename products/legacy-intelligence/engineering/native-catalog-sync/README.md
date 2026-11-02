@@ -179,3 +179,73 @@ ExecutionPolicy أو CA/ثقة/ACL/Defender/شبكة/خدمات؛ لا إعاد�
 - [Microsoft: Restricted وسياسات PowerShell5.1](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-5.1).
 - [Microsoft: تحديد إصدار .NET Framework](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed).
 
+
+
+### السجل المحفوظ قبل وصول نتيجة R2
+
+## جرد الشهادة R1 وحدود الأداة — 2026-11-02
+
+وافق المالك على جرد ضيق بلا SQL أو تغيير حماية، ثم نفّذ R1 وأرسل ملخصها
+ومرجع الأصل. النتيجة STOPPED_CERT_INVENTORY_PRESERVE_OUTPUT عند mapping؛
+العلامة INSTANCE_MAPPING_KEY_NOT_FOUND صادرة من حارس الأداة بعد null من
+OpenSubKey في Registry64. لم ترد رسالة AccessDenied.
+
+لم تصل الأداة إلى قيمة المثيل أو إعداد الشهادة أو مخزنها أو Schannel؛ كل
+هذه القيم بقيت مجهولة، وعدد الأحداث ليس صفرًا. لم يحدث SQL أو تغيير، ولم
+يفتح الوكيل الأصل أو يطابق بصمته مستقلًا. الأصل والإيصال والبصمة الخاصة
+والمسارات والأسماء الداخلية خارج GitHub.
+
+حصر Registry64 قيد تغطية في أداة التشخيص، وليس إثباتًا لغياب SQL أو الشهادة
+أو فساد تثبيت. لم نفحص Registry32 ولم نثبت معمارية محرك SQL؛ معمارية Windows
+أو PowerShell لا تكفي لاستنتاجها. Windows يوفر عرضين منفصلين لبعض المفاتيح:
+[Microsoft RegistryView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.win32.registryview)،
+[Registry Redirector](https://learn.microsoft.com/en-us/windows/win32/winprog64/registry-redirector).
+
+حفظت R1. أعدت R2 للتنفيذ اليدوي المعلن باستخدام Registry32 فقط للمفتاح
+المنطقي نفسه وقيمة المثيل نفسها، ثم Certificate/ForceEncryption في العرض
+نفسه عند وجود mapping مقيد. لا مسارات مادية مخمنة أو عرض إضافي تلقائي أو
+تخمين instanceId أو بحث في مثيلات/شهادات أخرى. هذا ليس تجاوز رفض صلاحيات.
+
+الغياب يسجل كحالة غير متاحة، ويتيح استكمال قراءة Schannel المستقلة في نافذة
+الدقيقتين المعتمدة السابقة؛ أي رفض وصول أو هوية غير متوقعة أو خطأ آخر يوقف
+كل المراحل. لا اتصال يولد أحداثًا جديدة، ولا توسيع نافذة أو فحص مفاتيح خاصة
+أو export أو chain-build أو شبكة أو تغيير سياسة أو ثقة أو إعدادات.
+
+نجح تحليل الصياغة ومراجعة النطاق الساكنة لـR2 فقط؛ لم تنفذ من سياق الوكيل
+ونتيجتها الميدانية معلقة. مساعد المزامنة وشيفرة المنتج لم يتغيرا، وحجب
+ثقة الشهادة وRestricted وعدم تأهيل حساب المصدر مستمران. لا Source/ERP أو
+A16 أو Narrator أو Windows مدعوم نظيف أو إنتاج أُهل بهذه الخطوة.
+
+
+## نتيجة جرد الشهادة R2 الميدانية — 2026-11-02
+
+أرسل المالك تقرير R2 جديدًا وملخصه؛ يختلف عن R1 المعاد إرسالها سابقًا، ولا
+تحتسب الرسالة المكررة تنفيذًا آخر. حفظ مرجع الأصل وإيصاله محليًا فقط، ولم
+يفتح الوكيل الأصل أو يعِد حساب بصمته مستقلًا.
+
+الحالة COMPLETED_READONLY_INVENTORY_FINDINGS_ONLY. وجد mapping YSEDU ومفتاح
+إعداد النقل في Registry32. Certificate موجودة دون بصمة صريحة بعد التطبيع،
+وForceEncryption المقروءة0. هذه قيم إعداد، لا قياس النقل أو TLS في جلسة فعلية
+ولا إثبات معمارية محرك SQL. لم يُقرأ مخزن الشهادات لأن شرط البصمة لم يتحقق.
+
+اكتملت قراءة أحداث System/Schannel36882 في نافذة UTC المحددة ذات الدقيقتين
+وكان matchingEventCount=0. يثبت ذلك عدم العثور على مطابقات ضمن الفلتر فقط؛
+لا ينفي خطأ TLS السابق ولا يثبت تعطيل logging أو غياب شهادة. خواص الشهادة
+ومصدرها وسلسلة ثقتها وهويتها المقدمة فعليًا ما زالت مجهولة.
+
+لم يحدث SQL أو تشغيل مصدر أو تعديل ERP أو إعداد أو export أو chain-build
+أو شبكة. حجب TLS المثبت وRestricted وتأهيل حساب القارئ وهوية المصدر واكتماله
+وبطاقة الصنف السادس ما زال مفتوحًا. لا runtime أو شيفرة منتج تغيرت.
+
+غياب البصمة الصريحة متوافق مع شهادة يكتشفها SQL تلقائيًا أو fallback مولدة؛
+لا يثبت أي اختيار في V1. توثق Microsoft رسائل سجل بدء SQL عن تحميل شهادة
+معينة أو توليدها، لذلك الخطوة التالية المقترحة قراءة ضيقة لسجل البدء وحساب
+خدمة المثيل للمساعدة في إعداد خطة ثقة قابلة للمراجعة. لم تنفذ هذه القراءة،
+وتحتاج موافقة منفصلة؛ لا اتصال جديد أو توليد أحداث أو تخفيف TLS أو صلاحيات.
+[Microsoft: الشهادة وسجل SQL](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/configure-sql-server-encryption)،
+[Microsoft: العثور على أثر تحميل الشهادة](https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/ssl-errors-after-tls-1-2).
+
+جرد البدء المقترح لا يتضمن تثبيت أو إنشاء أو استيراد شهادة، أو قراءة private
+key، أو تغيير الثقة/السياسة/ACL أو إعادة تشغيل خدمة، أو بناء قارئ .NET أو
+إنشاء حساب SQL. رفض الوصول يوقف العمل ولا يعالج بإصلاح الأذونات أو elevation.
+نجاح الجرد الميداني المحدود ليس تأهيل المصدر أو Windows أو الإنتاج.
