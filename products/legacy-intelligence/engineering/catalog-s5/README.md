@@ -37,3 +37,11 @@ No runtime fix or schema expansion was required by the executed S5 tests. Stop a
 - [S4 product PR26](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/26) / [memory PR20](https://github.com/elias-mujally/dbl-products-memory/pull/20).
 
 These links intentionally refer to Draft dependencies rather than assuming their documents are present in memory main. Older S4 statements that S5 was unimplemented remain accurate for their recorded stage and are superseded only by the bounded results here.
+
+## ملخص الفهرس التاريخي المحفوظ
+
+نُقل النص التالي من فهرس المنتج لتجنب تعارض تحديثات المراحل المستقلة. يصف تاريخ تدوينه، ولا يغيّر النتائج اللاحقة أو بوابات التأهيل. حُفظت العبارات والأرقام مع تكييف الروابط النسبية فقط.
+
+## Catalog S5 —2026-10-26، للمراجعة فقط
+
+[فهرس S5 ومصفوفة C01–C44](../catalog-s5/README.md): اختبارات عمليات مستقلة للتنافس والانقطاع وبوابة القبول والقراءة الاصطناعية. محليًا 495 نجاحًا، بلا إخفاقات، و6 اختبارات متجاوزة موثقة؛ C29/C30 جزئيتان وC44 مؤجلة. تفاصيل CI وحدود commit والعزل في الفهرس. لا دمج أو تأهيل ERP/عملاء أو بدء Desktop. طلب المنتج Draft PR27 متراكم فوق S4؛ الاعتماد على الفروع لا يعني وجودها في main. لا أدلة خام أو أسرار أو مسارات شخصية منشورة.
