@@ -1,7 +1,7 @@
 {
   "format": "dbl.memory.evidence-register.1",
-  "status": "PASS_PREPARED_HOST_CMD_REHEARSAL_CLEAN_ENVIRONMENT_BLOCKED",
-  "updated": "2026-10-23",
+  "status": "BOUNDED_W10_COMPATIBILITY_PASS_CUSTOMER_DATA_PILOT_NOT_QUALIFIED",
+  "updated": "2026-10-25",
   "scope": "Isolated V1 educational ERP fixture only; synthetic lab data",
   "memoryBaseCommit": "d02593c6faff785b1f500a5a887d8e331083abb1",
   "productBaseCommit": "415ad8acef5f5754487b83408bad6c9b9c58028e",
@@ -1028,6 +1028,54 @@
       "kind": "Owner-reported basic local HTML visual review; not agent observed",
       "bytes": 696,
       "sha256": "943393E589A60E550B804CF6ADEEA8B10266DDEA5602E2DA5EB7C9EE1537F6FF"
+    },
+    {
+      "id": "w10-clean-full-acceptance-observation",
+      "kind": "Actual guest terminal and Notepad receipt reads transcribed; original receipt bytes not retained",
+      "bytes": 3619,
+      "sha256": "77CFEA31B9DC5C1D872387E137F2A14F2C573F8A935521E72D9AF06FAD5EE920"
+    },
+    {
+      "id": "w10-clean-full-acceptance-comparison",
+      "kind": "Observed18 call statuses and summary compared with pinned companion; no original-file cryptographic qualification",
+      "bytes": 528,
+      "sha256": "7CC2357DE550774532C068F635D06889261048B21F3FD8293D497422E152C463"
+    },
+    {
+      "id": "w10-clean-owner-visual-retention-attestation",
+      "kind": "Direct owner guest-browser visual PASS and unavailable copy route; no agent browser inspection or retained original report",
+      "bytes": 2081,
+      "sha256": "E23537FFDBCA91B838C656FCEC46E1D4EFE29868781CF050418D7C06A789A6E0"
+    },
+    {
+      "id": "w10-owner-private-r3-limited-result",
+      "kind": "Owner-shared limited result; agent recomputed chat-pinned digest; private originals not opened",
+      "bytes": 2491,
+      "sha256": "1E6CF8E4A7405754100B03A1F0CA428240BB90B24F5242DF5F972A917C57D15D"
+    },
+    {
+      "id": "w10-owner-private-r3-result-assessment",
+      "kind": "Agent check of limited receipt pin/schema/flags only; owner verification distinguished",
+      "bytes": 1144,
+      "sha256": "90BF992CE9F9960AF9FD13784978B68BC93424023F5D77CAE266CC4CF4F7C22A"
+    },
+    {
+      "id": "v1-gates-20261024-windows10_clean_acceptance_20261024",
+      "kind": "Sanitized engineering review/proposal; no original evidence contents or private locators",
+      "bytes": 7852,
+      "sha256": "9171E29025CB521D9137C0F2FDB3EA0E37ED75882DB4258B4DE933120BD3CEAF"
+    },
+    {
+      "id": "v1-gates-20261024-v1_remaining_gates_20261024",
+      "kind": "Sanitized engineering review/proposal; no original evidence contents or private locators",
+      "bytes": 13097,
+      "sha256": "4C9602EB17CAB4B5D2042A0DE5C41D88D5235DB0D78A132044BD44B948920680"
+    },
+    {
+      "id": "v1-gates-20261024-offhost_encrypted_backup_plan",
+      "kind": "Sanitized engineering review/proposal; no original evidence contents or private locators",
+      "bytes": 6776,
+      "sha256": "0A67284D5B0981DA0689C4E0ACD46B17E1E09F49330A913469DEEC1B4EC34B03"
     }
   ],
   "reference": {
@@ -1204,5 +1252,37 @@
     "newPrsMerged": false,
     "publicRelease": false,
     "forcePush": false
+  },
+  "v1AcceptanceReview20261024": {
+    "date": "2026-10-24",
+    "status": "BOUNDED_W10_COMPATIBILITY_PASS_CUSTOMER_DATA_PILOT_NOT_QUALIFIED",
+    "cleanGuestWorkflow": {
+      "actualCmdCalls": 18,
+      "standardToken": true,
+      "products": 5,
+      "valueSAR": "1450",
+      "historyValuesSAR": [
+        "1470",
+        "1470",
+        "1450"
+      ],
+      "classification": "owner-executed pinned synthetic workflow; agent observed receipt"
+    },
+    "ownerBrowserReview": "PASS_ATTRIBUTED_OWNER_REPORT_ONLY",
+    "selectedEvidenceOutsideVhdx": "CLOSED_OWNER_VERIFIED_FOUR_FILES_LIMITED_RECEIPT_PINNED_BY_AGENT",
+    "privateOriginalsOpenedByAgent": false,
+    "operationalAclQualified": false,
+    "defenderQualified": false,
+    "supportedCleanWindowsQualified": false,
+    "independentHumanQualified": false,
+    "offHostEncryptedRecoveryQualified": false,
+    "productionQualified": false,
+    "newRuntimeTestsPerformed": false,
+    "erpOrPreviewChanged": false,
+    "securityNetworkPermissionChanges": false,
+    "privateEvidencePublished": false,
+    "reviewCompleted": "2026-10-25",
+    "firstProspectVendorDifferentFromQualifiedProfile": true,
+    "firstProspectAdapterAndScaleQualified": false
   }
 }

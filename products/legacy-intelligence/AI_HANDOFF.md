@@ -1,5 +1,9 @@
 # AI Handoff — Legacy Intelligence
 
+## تحديث V1 المحدود —2026-10-24
+
+[سجل القبول الحالي](engineering/v1/WINDOWS10_CLEAN_ACCEPTANCE_20261024.md) · [البوابات المتبقية وترتيب المخاطر](engineering/v1/V1_REMAINING_GATES_20261024.md) · [خطة النسخ المشفر خارج المضيف](engineering/v1/OFFHOST_ENCRYPTED_BACKUP_PLAN.md). ثبتت دورة الحزمة في Windows10 مستقل بحساب عادي والعينة التجريبية خمسة أصناف بقيمة1450SAR، مع حفظ أربعة أدلة خارج VHDX وفق تحقق المالك. لم يتأهل إدخال بيانات عميل أو ACL التشغيل أو Defender أو قبول إنسان مستقل أو استعادة خارج المضيف. لا يغيّر هذا نطاق الأدلة التاريخية أو يؤهل SQL حيًا أو الإنتاج. الفقرات الأقدم أدناه لزمنها؛ ابدأ من هذا التحديث عند استكمال مسار V1 الحالي.
+
 ## الحالة الحالية المزامنة — 2026-10-15
 
 **آخر نتيجة: CONTROLLED OUTBOUND EXPERIMENT 001 — PLAN ONLY = PARTIAL / MISSING PREREQUISITES.** [الخطة](CONTROLLED_OUTBOUND_EXPERIMENT_001_PLAN.md) و[الموافقة المطلوبة](CONTROLLED_OUTBOUND_EXPERIMENT_001_APPROVAL_GATE.md): لا تجربة أو SQL/ERP الآن. قبل أي Add يلزم تأهيل route أدلة قبل/بعد على المصدر الأصلي وstock حالي وعائلة/حالات/حساب مقابل ومشغل بشري مسمى.5 UA مجرد parameter؛37 ليست stock حاليًا ولا32 مثبتة. موافقة إعداد محدودة ثم موافقة تنفيذ وتأكيد قيم فعلي قبل Save بشرية واحدة، دون retry أو إنشاء حساب/منح/استرجاع أو implementation تلقائي.11 pins أصلية روجعت مع منهج PR17؛ لا import أو تعديل منتج. STOP عند قرار المالك، Draft توثيقي فقط.

@@ -1,5 +1,7 @@
 # Motakamel Plus V1 — engineering memory
 
+**Current V1 review —2026-10-24:** [Windows10 clean compatibility](WINDOWS10_CLEAN_ACCEPTANCE_20261024.md) passed within its synthetic/owner-assisted scope:18actual wrapper calls,5products1450SAR, history/replay/recovery, attributed owner browser review and four-file retention outside VHDX. Private originals remain owner-only. [Risk-prioritized remaining gates](V1_REMAINING_GATES_20261024.md) block customer-data onboarding pending supported/licensed endpoint, operational ACL/protection/component and source-scope qualification; human handover and [encrypted off-host recovery](OFFHOST_ENCRYPTED_BACKUP_PLAN.md) remain unqualified. PR21/product and PR10/memory were verified merged; no merge or release here. Earlier unavailable-environment/open-PR statements below are historical.
+
 **Updated: 2026-10-23. PR20/PR9 were observed merged in GitHub; this stage did not merge them. Immutable Preview1 remains pinned. New18-call actual DBL.cmd prepared-host rehearsal, fresh Arabic-path ZIP extraction and8delivery controls passed. No independent clean environment is available; human/private ACL/Defender/browser/production qualification remains open.**
 
 هذا الفهرس يربط التاريخ والقرارات والأدلة بدل تكرار التقارير. النطاق هو المختبر الجديد the isolated V1 test VM وقاعدته التجريبية فقط. لا يعيد تأهيل مصادر original host/historical sources التاريخية ولا يلغي قيودها.
