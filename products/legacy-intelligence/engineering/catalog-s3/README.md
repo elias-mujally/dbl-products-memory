@@ -31,3 +31,11 @@ There is no S4 public product-history/difference reader. S3's private bounded st
 S2 commit `b0e012d88743f6ad56db884713bd2ac607c27fdd` is the exact parent. S2 remains based on unmerged S1 `d76bc71f1cf5320c43edbde4c4d6076436d5bb1a`; product main remains separate. S3's PR is stacked on S2 and contains S3 changes only. Review in dependency order; no PR is merged automatically.
 
 A locally trusted issuer can lie about an unseen full source. Signature verification does not eliminate that S2 trust limit; no real issuer/extractor/company is qualified here. Same-owner raw database/code modification is outside API access isolation. Whole-state rollback to an earlier backup, physical power loss, multi-process admission contention, real key lifecycle and customer/production operation remain open gates.
+
+## ملخص الفهرس التاريخي المحفوظ
+
+نُقل النص التالي من فهرس المنتج لتجنب تعارض تحديثات المراحل المستقلة. يصف تاريخ تدوينه، ولا يغيّر النتائج اللاحقة أو بوابات التأهيل. حُفظت العبارات والأرقام مع تكييف الروابط النسبية فقط.
+
+## Catalog S3 — 2026-10-25، قبول اصطناعي ذري
+
+[فهرس S3: المعاملة وإعادة الالتقاط والاختبارات وحدود التأهيل](../catalog-s3/README.md) · [Product Draft PR25](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/25)، متراكب على [S2 PR24](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/24) ثم [S1 PR23](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23)، دون دمج. ثبت قبول A/B ثم A/B/C مع تعديل A وحفظ التاريخ ومنع التكرار وتراجع head ضمن حالة Catalog مستقلة. 49 اختبارًا جديدًا ناجحًا؛ الانحدار المحلي 333 ناجحًا و5 متجاوزة على Windows. لا مصدر ERP مؤهل ولا S4 قراءة تاريخية عامة أو تأهيل S5؛ الأصناف الغائبة توقف القبول للمراجعة. تبقى الأدلة الأصلية خاصة والفقرات الأقدم أدناه تاريخية ضمن نطاقها.
