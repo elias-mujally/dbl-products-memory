@@ -28,3 +28,11 @@ An injected application facade projects approved DTO fields and returns sanitize
 S5 contention/full crash/public-bypass qualification, operational key rotation, independent restore anti-rollback, actual ERP origin/completeness, supported Desktop operation, performance/service limits and production/customer readiness remain open. No new S5 harness, ERP connector, scheduler/network connection, stock/price/cost/value model, dependency installation or system/security setting is added. Same-owner arbitrary raw DB/code access and a lying locally trusted producer remain external trust limits.
 
 S4's product PR is stacked directly on S3 `49d2f0c1a7c2fa61f410f0050c05348c994f033b`; no PR is merged automatically. Older S3 statements that missing keys always hold or that public history reads do not exist describe S3 at its pinned commit; S4 supersedes those boundaries only with the exact checks documented here.
+
+## ملخص الفهرس التاريخي المحفوظ
+
+نُقل النص التالي من فهرس المنتج لتجنب تعارض تحديثات المراحل المستقلة. يصف تاريخ تدوينه، ولا يغيّر النتائج اللاحقة أو بوابات التأهيل. حُفظت العبارات والأرقام مع تكييف الروابط النسبية فقط.
+
+## Catalog S4 — 2026-10-25، قراءة التاريخ والفروق ومراجعة الغياب
+
+[فهرس S4 والعقد والاختبارات وحدود التأهيل](../catalog-s4/README.md) · [Product Draft PR26](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/26)، فوق [S3 PR25](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/25) دون دمج. ثبتت قراءة اللقطات المقبولة الحالية والتاريخية، وصفحات ثابتة، وفروق added/changed/unchanged/notObserved، ومراجعة غياب مرتبطة بالإثبات والطلب والأب دون تجاوز بوابة S3. 68 اختبارًا جديدًا ناجحًا؛ الانحدار المحلي 425 ناجحًا و5 متجاوزة على Windows. لا حذف أو تصفير أو دلالات مالية، ولا تأهيل ERP أو S5 أو تنفيذ Desktop/IPC. الفقرات السابقة أدناه تاريخية ضمن نطاقها.
