@@ -33,3 +33,11 @@ Sequence/capture IDs have strict grammar, but there is no accepted replay ledger
 ## Preserved boundaries
 
 No V1 identity/cardinality guard, ERP data, Preview1 artifact, historical laboratory, private evidence vault, system setting, dependency or schema migration is changed by S2. New tests use disposable synthetic Catalog roots and temporary in-memory signing keys. Raw test reports, state databases, proof files and machine-local paths are excluded from this repository. Main branches and all existing PRs remain unmerged.
+
+## ملخص الفهرس التاريخي المحفوظ
+
+نُقل النص التالي من فهرس المنتج لتجنب تعارض تحديثات المراحل المستقلة. يصف تاريخ تدوينه، ولا يغيّر النتائج اللاحقة أو بوابات التأهيل. حُفظت العبارات والأرقام مع تكييف الروابط النسبية فقط.
+
+## Catalog S2 — 2026-10-25، اصطناعي فقط
+
+[فهرس S2 والعقد والاختبارات وحدود الثقة](../catalog-s2/README.md) · [Product Draft PR24](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/24) · [أساس S1 غير المدموج PR23](https://github.com/elias-mujally/dbl-legacy-intelligence/pull/23). نُفذ تسجيل مصدر اصطناعي محلي وطلب موثق والتحقق من إثبات Ed25519 لاستخراج كامل من fixture؛ 97 اختبارًا جديدًا ناجحًا، والانحدار المحلي 284 ناجحًا و5 متجاوزة على Windows. لا قبول لقطة أو current أو موصل ERP؛ S3–S5 تنتظر تفويضًا مستقلًا. التفاصيل السابقة أدناه تحفظ نطاقها التاريخي.
