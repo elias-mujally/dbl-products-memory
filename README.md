@@ -55,6 +55,14 @@
 
 ---
 
+### 3. DBL Square Manager
+
+المجلد: [`products/dbl-square-manager/`](products/dbl-square-manager/)
+
+الحالة: مبادرة قيد التطوير؛ مستودع التنفيذ خاص، والرؤية النهائية لم تُحسم بعد.
+
+---
+
 ## الهيكل القياسي لكل منتج
 
 كل منتج داخل `products/<product-slug>/` يجب أن يملك على الأقل:
