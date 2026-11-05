@@ -24,6 +24,12 @@
 
 الحالة: منتج قيد التطوير له مستودع كود مستقل elias-mujally/dbl-legacy-intelligence. أحدث تحديث V1 الهندسي نُشر في [PR الذاكرة8](https://github.com/elias-mujally/dbl-products-memory/pull/8) للمراجعة ولم يُدمج؛ راجع [نقطة الدخول](products/legacy-intelligence/engineering/v1/README.md) وحالة الكود قبل اعتماد أي ادعاء تنفيذ.
 
+### DBL Square Manager
+
+المجلد: [`products/dbl-square-manager/`](products/dbl-square-manager/)
+
+الحالة: مبادرة قيد التطوير؛ التنفيذ خاص، والرؤية النهائية غير محسومة.
+
 ## قاعدة مهمة
 
 هذا المستودع هو **ذاكرة Portfolio للمنتجات** وليس مستودع كود ولا مصدر حقيقة وحيد لحالة الإنتاج.
