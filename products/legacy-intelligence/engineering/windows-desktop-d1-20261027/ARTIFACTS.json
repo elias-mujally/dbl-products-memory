@@ -1,0 +1,69 @@
+{
+  "format": "dbl.desktop.d1.artifacts.1",
+  "date": "2026-10-27",
+  "scope": "Development-only synthetic experiment; no binary distributed",
+  "electron": {
+    "version": "45.0.0",
+    "platform": "win32",
+    "arch": "x64",
+    "url": "https://github.com/electron/electron/releases/download/v45.0.0/electron-v45.0.0-win32-x64.zip",
+    "checksumUrl": "https://github.com/electron/electron/releases/download/v45.0.0/SHASUMS256.txt",
+    "zipSha256": "AE53887A23BB640369C93DBD38C408A2AF5C0DEB86F2FA76C6C244CB444B7F47",
+    "bytes": 158223852,
+    "exeSha256": "8E84549B05D27D444DA2957653200D1E0AC287EFF0FC5722B92835B9E0821A59",
+    "authenticodeObserved": "NotSigned"
+  },
+  "existingEngine": {
+    "node": "22.23.2",
+    "abi": "127",
+    "sqlite": "3.51.3",
+    "packagesCopied": 5,
+    "newInstall": false
+  },
+  "sourceFiles": [
+    {
+      "file": "boundary.cjs",
+      "sha256": "E50142A926A3A997C58BC482C888C8673A496588AC4F66F47E053545170F24DE"
+    },
+    {
+      "file": "engine-client.cjs",
+      "sha256": "2E04A7969C458F9D2F17716ACA2774DA9DF29696C93758204D275755B608477B"
+    },
+    {
+      "file": "engine.cjs",
+      "sha256": "E07A104EC351D28C044E70B5EEC35D2C7406FC58C67B89DEB0C33B079B94F622"
+    },
+    {
+      "file": "engine.test.cjs",
+      "sha256": "1235A2E37523D005E160E4C1426AE148011F1A96109D1D6DCDB0F400EC5A6610"
+    },
+    {
+      "file": "index.html",
+      "sha256": "799049E9BB290A0D54CD720BF3DD126D4CBA908D10091DC923C1E3CF8DF1109E"
+    },
+    {
+      "file": "main.cjs",
+      "sha256": "1056C9A1271CC09B08F5D00EF4FB933E8D71752CBE80356269CC2AA03F3783AD"
+    },
+    {
+      "file": "preload.cjs",
+      "sha256": "763427597089698DCF83FB604161B7F5655A1F568C593C296E88BE80F70274AC"
+    },
+    {
+      "file": "renderer.js",
+      "sha256": "91018B6B51BE535D7C61EA0DD2547984922CC5E5385BCD169BED50E13243C611"
+    },
+    {
+      "file": "run-electron.cjs",
+      "sha256": "BA7AB1F600100AB84C37733BDCED30B6C3288B4447C0D48EB4BADA2EDC018168"
+    },
+    {
+      "file": "stage-engine.cjs",
+      "sha256": "3D3634FAB939E870CFEB5DDB11E6AC88B77901E22707B9602927D0ECBBC1D09A"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "4BA56C7A93768E9029ED655C6056493C3EC03F11A10380E207E03472C3D6EEC1"
+    }
+  ]
+}

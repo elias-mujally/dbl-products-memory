@@ -1,0 +1,68 @@
+{
+  "format": "dbl.desktop.d1.result.1",
+  "date": "2026-10-27",
+  "status": "PARTIAL_D1_NATIVE_IPC_PASS_TARGET_RESOURCE_BUDGET_OPEN",
+  "engineTests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "actualExternalProcess": true,
+    "nativeSqliteLoaded": true,
+    "publicApplicationServiceQueried": true,
+    "syntheticFixtureOnly": true
+  },
+  "nativeElectron": {
+    "attempts": 2,
+    "agentContext": "BLOCKED_BEFORE_RENDERER",
+    "ownerOrdinarySession": "PASS_BOUNDED_NATIVE_ELECTRON_IPC",
+    "checksPassed": 17,
+    "checksFailed": 0,
+    "plannedNativeIpcNegativeCases": 14,
+    "executedNativeIpcNegativeCases": 14,
+    "screenshotProduced": true,
+    "rendererSandbox": true,
+    "contextIsolation": true,
+    "ownerWrapperRejectsElevation": true,
+    "visibleHumanAcceptance": false,
+    "resourceBudgetQualified": false,
+    "exactInitialTokenOrAceCauseProven": false,
+    "observation": {
+      "reportSha256": "9A3F1DBC32BAAA70BA985EC9D4B6FBE3E779232DEFB1F9780FCC91BFB4FDF71C",
+      "screenshotSha256": "DAC98EA9C0CC98E5F19D07E7E673A1098F28273958E5E68B329D7DD8681E481D",
+      "loadedAtMs": 900.9001,
+      "finishedAtMs": 15099.4344,
+      "electronWorkingSetKiB": 387588,
+      "electronPeakWorkingSetKiB": 392556,
+      "engineRssBytes": 42090496,
+      "measurementLimit": "One development-host run, aggregate Electron working sets plus separate engine RSS; not comparable to target idle/peak budget and not p95."
+    }
+  },
+  "directoryAndFileAclMetadata": {
+    "allApplicationPackagesEntries": 0,
+    "packageSidEntries": 0,
+    "capabilitySidEntries": 0,
+    "sourceOfFatalSuggestedAceConditionProven": false,
+    "aclChanged": false
+  },
+  "hostObservation": {
+    "arch": "x64",
+    "release": "10.0.22631",
+    "totalRamGiB": 31.81,
+    "availableRamGiBApprox": 16.15,
+    "agentTokenElevated": false,
+    "cimReadAvailable": false,
+    "target4GiB2vCpuQualified": false
+  },
+  "coreBaselineFilesUnchanged": 14,
+  "previewTouched": false,
+  "erpAccessed": false,
+  "catalogAdmissionAttempted": false,
+  "d2Started": false,
+  "limits": [
+    "Target 4GiB/2vCPU ten-run p95, interaction latency and idle/peak budget remain unqualified",
+    "No clean-Windows or visible human acceptance; qualification used an automated hidden window",
+    "No real ERP, Catalog admission, enforced ERP least-privilege or production-source qualification",
+    "Existing build copied; clean-main build/CI for the new experiment not run here",
+    "Initial agent-context restricted-token read failure not repaired or fully explained"
+  ]
+}
