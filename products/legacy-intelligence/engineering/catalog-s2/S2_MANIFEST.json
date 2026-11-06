@@ -1,0 +1,174 @@
+{
+  "format": "dbl.catalog.s2.evidence.1",
+  "date": "2026-10-25",
+  "status": "PASS_S2_SYNTHETIC_SOURCE_REQUEST_AND_PROOF_ONLY",
+  "productPR": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/24",
+  "productHead": "b0e012d88743f6ad56db884713bd2ac607c27fdd",
+  "productBase": "d76bc71f1cf5320c43edbde4c4d6076436d5bb1a",
+  "memoryBase": "86beaf03cceac4e39acc1d194a1577f41b749d70",
+  "planPR": 16,
+  "s1ProductPR": 23,
+  "s1EvidencePR": 17,
+  "runtime": {
+    "node": "22.23.2",
+    "betterSqlite3": "12.8.0",
+    "sqlite": "3.51.3"
+  },
+  "tests": {
+    "newS2": {
+      "passed": 97,
+      "failed": 0,
+      "skipped": 0
+    },
+    "combined": {
+      "passed": 284,
+      "failed": 0,
+      "skipped": 5,
+      "total": 289
+    },
+    "firstCatalog": {
+      "passed": 140,
+      "failed": 0,
+      "skipped": 1
+    },
+    "rawReportsPublished": false,
+    "githubCI": {
+      "head": "b0e012d88743f6ad56db884713bd2ac607c27fdd",
+      "run": 40201218359,
+      "ubuntu": "success",
+      "windows": "success"
+    },
+    "localRegressionReportSha256": "44129ca53f1f2f839c7c2571d9c9a8d61411510a490ce600d3ae05da6a5a051a"
+  },
+  "schemaChanged": false,
+  "v1OrPreviewChanged": false,
+  "dependenciesInstalled": false,
+  "erpAccessed": false,
+  "trustedAdmissionAvailable": false,
+  "publishedSnapshots": 0,
+  "realSourceQualified": false,
+  "s3Started": false,
+  "sourceFiles": [
+    {
+      "path": "packages/core/src/index.ts",
+      "sha256": "dccf6a9ccab210d89022277e0f4b80365f62a9bb0be84da2b5abda50b704fd2d",
+      "gitSha": "d27412db00bc93addba6c32c6d939a821eb4bf5d"
+    },
+    {
+      "path": "packages/core/src/catalog.ts",
+      "sha256": "552217b1a03990f3e002e815526c4ab13ba9e287ef57e0764c2fdf3c759defed",
+      "gitSha": "fd65188551db4587eaf091b7a58493a84b87648e"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/contracts.ts",
+      "sha256": "9757f0fd70ab5f5c4c0d8422443a636a71446bd33526b819ab2f2415c50c3c01",
+      "gitSha": "058e3c7b85cbc3ad87368528a0a6fcd433de52b2"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/encoding.ts",
+      "sha256": "35f912f82f6df01aff3441871d67228953b7e6004e98e28fca066829485d6961",
+      "gitSha": "dd3f0647eb995cc937c701bd85b88fc58f8279d0"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/proof.ts",
+      "sha256": "1769edb3a72c819350ba6f516f18f955bd3e1be755d29e71d6e4a383994475eb",
+      "gitSha": "adac5ed6133eb69e43d645661d3f48fb4d5cd64d"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/registry.ts",
+      "sha256": "8ba493aa776af45a630e5a093b311374d998f653cd106adc139f8484d43a1b12",
+      "gitSha": "257bcf73d233b96478bc2d7ad325b7afaef2229c"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/state.ts",
+      "sha256": "03796f44a98a3dd9853e783002202e0b53d43ce1b8a0e460b4355cc0cdb1cf98",
+      "gitSha": "bee76e05c55d08532899a18a45dff70a3e6be49f"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/bootstrap.test.ts",
+      "sha256": "e54fd937b29b3c3a6a2ec6e6ddb7622973a826a01a022c98aa214e8ab15a9ed7",
+      "gitSha": "26867801f81e53bd1c1ab888d4a5020ac7de8cba"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/fixture-issuer.ts",
+      "sha256": "f35b5262713fab739f27b6e6f2d65375ef551b3537979857bb67d5c044f7a14e",
+      "gitSha": "849518bd9ba4b98eb085cde53d1c6f3c51cd6f57"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/proof.test.ts",
+      "sha256": "9b469ebf7621fbdfcd1b80f56b84a8d8d81e90af248f3cb2e9a985f035ac6307",
+      "gitSha": "535aa46883d33e701822e94c5223dfa677054f58"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/registry.test.ts",
+      "sha256": "c3805ac3442c5056ca07e76a48e0aef4518631791c6aaaddfcd5ffeaabfd1c47",
+      "gitSha": "bfdb761435fd093673e95a6218d7afe5e1fcacd7"
+    }
+  ],
+  "unchangedS1Files": [
+    {
+      "path": "packages/core/src/state-family.ts",
+      "normalizedGitSha": "29b920503cc9124cf77b2a737e128c26ba14f531"
+    },
+    {
+      "path": "packages/storage-sqlite/package.json",
+      "normalizedGitSha": "da8e4b241456b1d18fe4a758ae4328530e94103f"
+    },
+    {
+      "path": "packages/storage-sqlite/src/sqlite-store.ts",
+      "normalizedGitSha": "960bd17de0539f8b8177ca9251f74e8bab96e651"
+    },
+    {
+      "path": "packages/audit-sqlite/src/sqlite-audit-sink.ts",
+      "normalizedGitSha": "e7f266766ee30381686f1ab50d5d7370356c55eb"
+    },
+    {
+      "path": "apps/v1-file-import/src/state.ts",
+      "normalizedGitSha": "e60931c6d1a652353fcebabac29868efdbcb62cc"
+    },
+    {
+      "path": "apps/v1-file-import/src/operator.ts",
+      "normalizedGitSha": "e6e70329b5fc26a2e952641c3ceafc2a45d07551"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/schema.ts",
+      "normalizedGitSha": "94cd9a6053dbed9747d89be6392389da7af26873"
+    },
+    {
+      "path": "packages/storage-sqlite/src/catalog/family-probe.ts",
+      "normalizedGitSha": "e6969ae9fcfd3c3f31da7f7ceba7dbbf13c31f72"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/family.test.ts",
+      "normalizedGitSha": "abc36cdd5a71b8c7621664c6ccb423d87451b3d1"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/schema.test.ts",
+      "normalizedGitSha": "af3e0f78a13f5c0e4536945c3bcbb846e5537ae1"
+    }
+  ],
+  "documents": [
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s2/README.md",
+      "sha256": "a9c7156edb66e0546ea6983fd23af9d0fd0afc1b5fde23150ce96dd50c58b392"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s2/CANONICAL_PROOF_CONTRACT.md",
+      "sha256": "92c34ab363b1a7d5232e9ba68ec6b88314ef0cd54999e1bbda65f7f81c2fa4b9"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s2/VERIFICATION.md",
+      "sha256": "69f5047da8eba873ec97c9f0c0dac2af2bb1e3960f6fff9767de082ea0f2994b"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-s2/REPRODUCTION.md",
+      "sha256": "f6e4e3f29313f2a4bce8971886057ab16fba07031fdeabe409f207db59f8a636"
+    }
+  ],
+  "limits": [
+    "Synthetic trusted producer only; lying approved signer cannot be disproved from supplied bytes.",
+    "No accepted replay/order/head/current ledger, missing-set review or product history reader.",
+    "No acceptance process-crash/concurrency qualification or real ERP extraction.",
+    "Private keys generated in memory only; no raw reports, DBs, private receipts or personal paths published."
+  ]
+}
