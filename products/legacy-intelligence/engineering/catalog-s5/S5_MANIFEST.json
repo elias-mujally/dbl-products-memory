@@ -1,0 +1,221 @@
+{
+  "format": "dbl.catalog.s5.evidence.1",
+  "date": "2026-10-26",
+  "status": "PASS_S5_BOUNDED_SYNTHETIC_PROCESS_AND_API_GATES",
+  "productPR": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/27",
+  "productHead": "fdafd4c6b84384ca9e9eb093c9eee8beac153fa1",
+  "productBase": "6eb2a0f41b71d862d33f64563ec501d930307814",
+  "memoryBase": "86beaf03cceac4e39acc1d194a1577f41b749d70",
+  "planPR": 16,
+  "runtime": {
+    "node": "22.23.2",
+    "betterSqlite3": "12.8.0",
+    "sqlite": "3.51.3"
+  },
+  "changes": {
+    "testFilesOnly": 5,
+    "baselineBlobsMatched": 57,
+    "runtimeChanged": false,
+    "schemaChanged": false,
+    "dependenciesOrVersionChanged": false
+  },
+  "tests": {
+    "newS5": {
+      "passed": 70,
+      "failed": 0,
+      "skipped": 1,
+      "total": 71
+    },
+    "combined": {
+      "passed": 495,
+      "failed": 0,
+      "skipped": 6,
+      "total": 501
+    },
+    "buildExit": 0,
+    "typecheckExit": 0,
+    "reports": [
+      {
+        "name": "s5-first.json",
+        "sha256": "4ec7362e236183fddbba46b1e294a42dcd7b7e28b906fb28d1a99aee0a0e6100",
+        "total": 46,
+        "passed": 46,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "name": "s5-boundary-first.json",
+        "sha256": "8fb4cf2f520fd51d5885bd4382628ef9eb155b3c304438ab24956a71a0ddef6a",
+        "total": 25,
+        "passed": 12,
+        "failed": 12,
+        "skipped": 1
+      },
+      {
+        "name": "s5-boundary-corrected.json",
+        "sha256": "f2592936402626f8fa6d67af1efecbffe7257d7baabe08dcc1522a2b8708fd3c",
+        "total": 25,
+        "passed": 24,
+        "failed": 0,
+        "skipped": 1
+      },
+      {
+        "name": "s1-s5-v1-final.json",
+        "sha256": "cf5f4b2178065fd1fff85241d8e4808f051f5afbc9a159bf23eaf9bf147d4bfc",
+        "total": 501,
+        "passed": 495,
+        "failed": 0,
+        "skipped": 6
+      }
+    ],
+    "skipped": [
+      {
+        "test": "synthetic interrupted/concurrent first-run recovery; no ERP or retained owner state keeps new state directories/files private even with umask zero (POSIX only)",
+        "status": "skipped"
+      },
+      {
+        "test": "synthetic interrupted/concurrent first-run recovery; no ERP or retained owner state rejects broad POSIX directory permissions without changing them",
+        "status": "skipped"
+      },
+      {
+        "test": "operator package; synthetic source controls only, no ERP access rejects redirected backup ancestors without traversing them",
+        "status": "skipped"
+      },
+      {
+        "test": "rejects a dangling symlink rather than following it as a nonexistent file",
+        "status": "skipped"
+      },
+      {
+        "test": "S1 family isolation before legacy mutation file alias cannot hide Catalog from legacy store or audit (no elevated Windows link creation)",
+        "status": "skipped"
+      },
+      {
+        "test": "S5 public capability inventory and no trusted-current bypass normal native symbolic-link creation, when permitted, cannot redirect public family boundaries",
+        "status": "skipped"
+      }
+    ]
+  },
+  "matrix": {
+    "boundedSyntheticPass": 41,
+    "partial": [
+      "C29",
+      "C30"
+    ],
+    "deferred": [
+      "C44"
+    ],
+    "blockedRequiredFamilies": 0
+  },
+  "ci": {
+    "run": 40314347256,
+    "head": "fdafd4c6b84384ca9e9eb093c9eee8beac153fa1",
+    "windows": "success",
+    "ubuntu": "success",
+    "privateGatesAndPlatformSkipsRemain": true,
+    "jobs": [
+      {
+        "platform": "windows",
+        "job": 121543064929,
+        "workspaceVitest": {
+          "passed": 737,
+          "skipped": 74,
+          "workspaceSummaries": 11
+        },
+        "storage": {
+          "passed": 378,
+          "skipped": 1
+        },
+        "newS5": {
+          "passed": 71,
+          "failed": 0,
+          "skipped": 0
+        },
+        "walRepeat": {
+          "cycles": 10,
+          "passed": 230
+        },
+        "delivery": [
+          "# tests 8\r",
+          "# pass 4\r",
+          "# fail 0\r",
+          "# skipped 4\r"
+        ]
+      },
+      {
+        "platform": "ubuntu",
+        "job": 121543065393,
+        "workspaceVitest": {
+          "passed": 742,
+          "skipped": 69,
+          "workspaceSummaries": 11
+        },
+        "storage": {
+          "passed": 379,
+          "skipped": 0
+        },
+        "newS5": {
+          "passed": 71,
+          "failed": 0,
+          "skipped": 0
+        },
+        "walRepeat": {
+          "cycles": 10,
+          "passed": 230
+        },
+        "delivery": [
+          "# tests 8",
+          "# pass 4",
+          "# fail 0",
+          "# skipped 4"
+        ]
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "packages/storage-sqlite/test/catalog/concurrency.test.ts",
+      "bytes": 14095,
+      "sha256": "af97b993c7d3a5ac4c0410184f52c56a4c15c4dbd2bdeb82d1d68d6259d738a1",
+      "gitBlob": "f2d92b911cd83a4407a440135ae31e0bdd3fb4e5"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/crash.test.ts",
+      "bytes": 6990,
+      "sha256": "79bf8b37163fa318a148784e1b9157efe27e35573ae47b2a40b76c609c5099a7",
+      "gitBlob": "07da368ff3a890fd97d009dd36b9b3f287bb201b"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/public-bypass.test.ts",
+      "bytes": 12061,
+      "sha256": "91b2f18de0592b75b3e8c0e65690c89b4784a73a20f0ac2596dcc1bb145929b3",
+      "gitBlob": "88c04654d2bcebf179c7eedf377afce31fad8dbc"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/s5-process.ts",
+      "bytes": 2662,
+      "sha256": "043ecb2f18bed89701b3e357901fc7a3ddf74700dbdaac69ae58b997aef7e323",
+      "gitBlob": "e1c3af76fec32078978b8596baab59295541d254"
+    },
+    {
+      "path": "packages/storage-sqlite/test/catalog/s5-worker.mjs",
+      "bytes": 6888,
+      "sha256": "5940b38ee24efe3ced0a8b18eca89caf80cadd12b669b50440044a0d3cfe2b7d",
+      "gitBlob": "68d56b8bf73c7c877c9dd7004ce4560ab6c10574"
+    }
+  ],
+  "limits": [
+    "Synthetic source only; real ERP not qualified",
+    "C29/C30 external delivery deferred",
+    "C44 older-whole-state backup anti-rollback deferred",
+    "No physical power loss or exact internal WAL commit cut",
+    "Native COMMIT wait interruption supplement uses a fresh DELETE-mode fixture",
+    "IOERR_WRITE is simulated, not physical device failure",
+    "Same-owner arbitrary SQL/code access is not an API security boundary",
+    "Six local Windows subcases skipped, not passed",
+    "No Desktop/IPC, customer, operational key or production qualification"
+  ],
+  "privateArtifactsPublished": false,
+  "rawReportsPublished": false,
+  "privateKeysPublished": false,
+  "merged": false
+}
