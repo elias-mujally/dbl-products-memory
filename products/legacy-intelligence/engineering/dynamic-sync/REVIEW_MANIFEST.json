@@ -1,0 +1,79 @@
+{
+  "format": "dbl.dynamic-sync.engineering-review.1",
+  "date": "2026-10-25",
+  "status": "REVIEW_ONLY_EXISTING_TESTS_PASS_NEW_IMPLEMENTATION_NOT_APPROVED",
+  "productCommit": "bccc89ecb077b11ec5476b82a222ed9c4a3487b9",
+  "productTree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+  "memoryBaseCommit": "86beaf03cceac4e39acc1d194a1577f41b749d70",
+  "existingTestResults": [
+    {
+      "id": "generic_existing_tests",
+      "passed": 51,
+      "failed": 0,
+      "deselectedByPattern": 0,
+      "bytes": 18911,
+      "sha256": "53D9D03E47A5E0753357FB2A8F17B2BB21457AB71ABC11E1027532FAE8F09754"
+    },
+    {
+      "id": "v1_existing_synthetic_tests",
+      "passed": 5,
+      "failed": 0,
+      "deselectedByPattern": 10,
+      "bytes": 6658,
+      "sha256": "5AD42675646BF676D223756E05BDC949222F1BDAD2227425F40683477BC9EE1B"
+    },
+    {
+      "id": "replay_existing_synthetic_tests",
+      "passed": 2,
+      "failed": 0,
+      "deselectedByPattern": 13,
+      "bytes": 6581,
+      "sha256": "D32E8605A06C7543B4FF33924588BCFDCC3CDD85906CAE169EDCCF1B9515612E"
+    }
+  ],
+  "totalPassed": 58,
+  "totalFailed": 0,
+  "refreshCasesExecuted": 7,
+  "refreshCasesNotSelected": 8,
+  "deselectionCountsArePerInvocation": true,
+  "newTestsOrHarnessAdded": false,
+  "v1ItemCount4Or6RuntimeTested": false,
+  "newNameSkuUpdateSequenceTested": false,
+  "genericTwoToOneNewIdentityTestPassed": true,
+  "ordinaryEmptySnapshotAccepted": true,
+  "erpOrPrivateDataAccess": false,
+  "previewAccessOrChange": false,
+  "dependenciesInstalled": false,
+  "newEnvironmentCreated": false,
+  "settingsChanged": false,
+  "productCodeOrSchemaChanged": false,
+  "newConnectorImplemented": false,
+  "documents": [
+    {
+      "path": "products/legacy-intelligence/engineering/dynamic-sync/README.md",
+      "bytes": 3544,
+      "sha256": "54C0CFFBF3D45EBF7DA43B5EEBC5911F51347AAE444CB05085BBBA851DB80DD8"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/dynamic-sync/ENGINE_FINDINGS.md",
+      "bytes": 11039,
+      "sha256": "593993DEF67AAB90242B285BB2A4AE9B66C340FDF0982CA3BB30A5A56A4E5C04"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/dynamic-sync/EXISTING_TEST_RESULTS.md",
+      "bytes": 7053,
+      "sha256": "4825D96F3B25835EDC87F3D3F6C75688231480588DA8E80F6E4BF4544EFA8EC2"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/dynamic-sync/ONE_WAY_SYNC_PROPOSAL.md",
+      "bytes": 14329,
+      "sha256": "0CAA6A3EADE8D78D1AB3F8891D06473BA8333D7FD5DBC54EF73D5FFD3790AC2F"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/dynamic-sync/NEXT_STEP_AND_TEST_PLAN.md",
+      "bytes": 8663,
+      "sha256": "854B6F3A1E35ECA2DBE6BA3EA32AE2A97CECC8163EF2ED62A23ADC9CB6226FA9"
+    }
+  ],
+  "manifestExcludedFromOwnHashes": true
+}
