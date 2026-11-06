@@ -1,0 +1,65 @@
+{
+  "format": "dbl.memory.catalog-stage-b.1",
+  "date": "2026-10-25",
+  "status": "PASS_SYNTHETIC_STAGE_B_RUNTIME_ADMISSION_NOT_IMPLEMENTED",
+  "architectureReview": "https://github.com/elias-mujally/dbl-products-memory/pull/14",
+  "productPullRequest": "https://github.com/elias-mujally/dbl-legacy-intelligence/pull/22",
+  "productCommit": "ecba3c2129488fa98bf88355df560bd2f5becf8f",
+  "testedProductionSourceTree": "f1988518b45b94ef303ae79eb0eabb761fd12aa6",
+  "newTests": {
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "referenceContract": 23,
+    "existingAPIs": 12
+  },
+  "focusedRegressionIncludingNewTests": {
+    "passed": 153,
+    "failed": 0,
+    "skipped": 38
+  },
+  "typecheckExitCode": 0,
+  "publicProductFiles": [
+    {
+      "path": "docs/contracts/FULL_PRODUCT_CATALOG_CAPTURE_DRAFT.md",
+      "sha256": "32a2d14fa917f494ebbbbb26e2752132acb74c94942adf9164fdf215fd4f9736",
+      "bytes": 10001
+    },
+    {
+      "path": "docs/contracts/CATALOG_STAGE_B_RESULTS.md",
+      "sha256": "a6a715e6bb1819fc186d8ebfdf0b05d21ed7acd34f5f0a65ae1a8d47bf12d116",
+      "bytes": 7465
+    },
+    {
+      "path": "packages/import-orchestrator/test/catalog-stage-b/reference-contract.ts",
+      "sha256": "52e00f7a87f13393c6eb5f2acd1c1c53ae5b88b7d30f78d64c85eab4b669681b",
+      "bytes": 6318
+    },
+    {
+      "path": "packages/import-orchestrator/test/catalog-stage-b/full-catalog-capture.test.ts",
+      "sha256": "e2510d6db955599d5f6392e1714cd95b59deabbac7f0a159db24d8965cf21967",
+      "bytes": 14609
+    }
+  ],
+  "memoryFiles": [
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-stage-b/README.md",
+      "sha256": "d9469f6d28ee919447b9f1af3db80a17b3b73c678a5b5ed3d3f0f79390b9f572"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-stage-b/RESULTS_AND_REPRODUCTION.md",
+      "sha256": "9d55c197a86bf585f7d3b8e538882fca3c0a9f837d50859303411c6e54299262"
+    },
+    {
+      "path": "products/legacy-intelligence/engineering/catalog-stage-b/DECISIONS_AND_OPEN_GATES.md",
+      "sha256": "e612a3eb4afa46cf0cbc441685cfdf5a27a1946b65974a58f0376d303f382c2d"
+    }
+  ],
+  "privateEvidence": {
+    "published": false,
+    "firstRunSHA256": "BE19A9A7C00C1117A6838A40700DB503CD3E4D1093E603FCF9C37A2C9BA6C789",
+    "finalRunSHA256": "A010327E06CAECD43665150F6AA04D93684D0D60DE017B1AABADE1FEBAF0562F",
+    "focusedRegressionSHA256": "4433FD6EDE881004F5B652A29D0F0D7262F5AF988CDAAF3E8CAD3B5EED2AF921"
+  },
+  "nextStageApproved": false
+}
