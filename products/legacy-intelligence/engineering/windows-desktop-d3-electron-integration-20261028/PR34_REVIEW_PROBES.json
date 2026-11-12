@@ -1,0 +1,46 @@
+{
+  "format": "dbl.pr34.renderer.review-probes.1",
+  "commit": "e5c820e365b4c3c323848997fe44c9799eb3af3a",
+  "sha256": "3C87AF9A1DFA966ADA4F30625F270B68B12044E6A0C12DA4B3F0D7CEFE32BD4E",
+  "status": "REQUEST_CHANGES_DEFECTS_REPRODUCED",
+  "checks": [
+    {
+      "name": "missing inventory bridge silently renders design stock and connected status",
+      "defectReproduced": true
+    },
+    {
+      "name": "actual approved dblInventory bridge is ignored; no service operation called",
+      "defectReproduced": true
+    },
+    {
+      "name": "expected nested API is called without required sourceSelectionRef and without sources",
+      "defectReproduced": true
+    },
+    {
+      "name": "no lifecycle invalidation handler is registered while ready numbers remain",
+      "defectReproduced": true
+    },
+    {
+      "name": "context-invalid detail error with clearsNumericData leaves table and total visible",
+      "defectReproduced": true
+    },
+    {
+      "name": "a page with mismatched read/snapshot refs is rendered under another company",
+      "defectReproduced": true
+    },
+    {
+      "name": "older retry-open completion replaces a newer opened context",
+      "defectReproduced": true
+    },
+    {
+      "name": "switching tabs hides an inventory error permanently without restoring retry UI",
+      "defectReproduced": true
+    }
+  ],
+  "limits": [
+    "Node vm with minimal synthetic DOM only; not Electron/browser/visual/keyboard acceptance",
+    "Mismatched-reply probe demonstrates missing controller binding; no claim of a bypass through the independently validated backend",
+    "No ERP, actual V1, Preview1, dependency install or production code mutation"
+  ]
+}
+
