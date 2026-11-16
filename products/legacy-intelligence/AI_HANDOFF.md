@@ -1,5 +1,27 @@
 # AI Handoff — Legacy Intelligence
 
+## استئناف موثق — 2026-11-16
+
+1. اقرأ [الحالة الحالية](CURRENT_STATUS.md)، [تسلسل التقدم](PROGRESS_HISTORY.md)، [فهرس الأدلة والتعارضات](engineering/memory-consolidation-20261116/README.md)، ثم سجل المختبر المتصل بالمهمة. لا تعِد التجارب المكتملة لمجرد أن ملخصًا قديمًا يقول pending.
+2. **VERIFIED — baselines:** product main=`2f24efa50b71c4d91667dc12049c7a6ecc9e70b8`؛ memory main=`99bb8dc7054244a245feedb64fc1280fa6f9f44e`، تحققا عبر GitHub في جولة التوحيد. تطوير الاتصال في `codex/direct-erp-workspace-20261114` غير ملتزم به؛ لا تنسبه إلى main. حُفظت التغييرات السابقة، وأُعدت هذه المراجعة في worktree منفصلة.
+3. **VERIFIED — host، لا VM:** أدلة 15 نوفمبر تثبت 3 التقاطات Catalog identity-only من قاعدة READ_WRITE على DESKTOP-8QRQT7R، بحساب عمودين محدود، ثم Canonical/SQLite/Audit/Workspace وإعادة الفتح. لا تعممها إلى inventory أو جميع ERP أو الضيف؛ [E05/E06](engineering/memory-consolidation-20261116/README.md).
+4. **DECIDED:** [ADR-001](DECISIONS/ADR-001-SQL-SERVER-DUAL-TRANSPORT.md) يقبل Shared Memory و TCP مع pipeline واحد؛ لا fallback بعد فشل أمني، ولا تخفيف TLS أو هوية أو صلاحيات، ولا framework موصلات جديد. قاعدة التشغيل يمكن أن تبقى READ_WRITE؛ ملف القراءة المجمد READ_ONLY محفوظ بنطاقه.
+5. **VERIFIED — آخر حالة ضيف محفوظة، لا فحص حي الآن:** YSEDU متوقفة؛ الشهادتان القديمة والجديدة في LM\My فقط؛ Root لم يتغير. [قبول CA:13:49:49UTC/16:49:49 عدن](engineering/self-contained-lab/PKI_PHASE1_20261116.md). لا leaf أو Root install أو binding/start أو TLS أو قراءة ERP مؤهلة داخل VM.
+6. CA المقبولة: RunId=`9b3506e967e64a07aa75a3944af4fce1`، thumb=`10A236F194DB6513EAD577B372939100853FF0C4`؛ استخدم بقية الهوية والـ hashes من سجل PKI. القديمة `7C6FF5931387E9C8F5B1ACF79B2BD244CCD1760D` محفوظة. لا اختيار Subject/الأحدث، ولا حذف أو إعادة استخدام مفتاح.
+7. **VERIFIED:** محاولة`7a56ae…` توقفت قبل الإنشاء عند PRESERVATION_zone؛ v2 صححت المقارنة typed، واجتازت 78/78 في كل من PS7 و PS5.1 و 30/30 regression، ثم إصدار واحد ناجح. المعرفات مستهلكة؛ لا retry أو إعادة استعمال. فحوص C#/SQL الاصطناعية السابقة لا تثبت live SQL.
+8. **DECIDED:** checkpoint`58077658-e4b2-47c0-b685-347cbbd89c26` بقيت كما هي، وتسبق الشهادتين؛ restore يفقدهما وإيصالاتهما داخل الضيف. قبول المالك لهذا الحد لا يجيز restore أو checkpoint جديدة.
+9. **PLANNED لا AUTHORIZED:** مراجعة نتيجة CA ثم تحديد تفويض ضيق للمرحلة التالية من الخطة القائمة. لا تتجاوز إلى leaf/Root/SQL/TLS/قارئ/نشر جانبي/اقتناء بسبب هذه الذاكرة. [الخطوات المقترحة](ROADMAP.md).
+
+كل دليل محلي مرتبط بمساره و SHA256؛ إن غاب الأصل، سجل UNVERIFIED ولا تنشئ fixture لتصنيفه نجاحًا. لا بيانات اعتماد أو مفاتيح أو سجلات أعمال خام في الذاكرة. الأقسام القديمة أدناه محفوظة بتاريخها؛ لا تعيد تصنيف نجاحها أو فشلها التاريخي.
+
+## C# helper parity development — 2026-11-15
+
+See [native helper parity record](engineering/native-helper-parity/README.md) for the new explicit executable candidate and offline evidence. Owner approval covers development/testing only. PowerShell, TCP, existing installations and history remain; no live SQL/VM qualification or replacement is claimed. Native helper selection and EXE/config/credential changes remain bound by full source registration pins. Review the recorded signing, runtime/TLS/source/reader and side-by-side approval gates before any live work.
+
+## Owner decision and current scope — 2026-11-15
+
+Start transport work from [ADR-001: Shared Memory + TCP/IP](DECISIONS/ADR-001-SQL-SERVER-DUAL-TRANSPORT.md). Architecture and limited local development are approved product work, not a laboratory-only exception. Preserve TCP and the existing installation/history. Shared Memory development does not establish live ERP acquisition or deployed capability. SQL source/reader/TLS/helper execution, deployment and all infrastructure changes retain separate approval gates; older STOP records below are historical and do not revoke this explicit development authorization.
+
 ## تحديث V1 المحدود —2026-10-24
 
 [سجل القبول الحالي](engineering/v1/WINDOWS10_CLEAN_ACCEPTANCE_20261024.md) · [البوابات المتبقية وترتيب المخاطر](engineering/v1/V1_REMAINING_GATES_20261024.md) · [خطة النسخ المشفر خارج المضيف](engineering/v1/OFFHOST_ENCRYPTED_BACKUP_PLAN.md). ثبتت دورة الحزمة في Windows10 مستقل بحساب عادي والعينة التجريبية خمسة أصناف بقيمة1450SAR، مع حفظ أربعة أدلة خارج VHDX وفق تحقق المالك. لم يتأهل إدخال بيانات عميل أو ACL التشغيل أو Defender أو قبول إنسان مستقل أو استعادة خارج المضيف. لا يغيّر هذا نطاق الأدلة التاريخية أو يؤهل SQL حيًا أو الإنتاج. الفقرات الأقدم أدناه لزمنها؛ ابدأ من هذا التحديث عند استكمال مسار V1 الحالي.
