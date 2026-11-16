@@ -1,5 +1,26 @@
 # Legacy Intelligence — Decisions
 
+## سجل نطاق القرارات — 2026-11-16
+
+التصنيفات وأصل الأدلة في [سجل التدقيق](engineering/memory-consolidation-20261116/README.md)، والتسلسل في [PROGRESS_HISTORY](PROGRESS_HISTORY.md). هذا توحيد لقرارات المالك السابقة، ولا يمنح صلاحيات جديدة:
+
+| القرار | الحالة والنطاق |
+|---|---|
+| Shared Memory + TCP/IP | **DECIDED:** [ADR-001](DECISIONS/ADR-001-SQL-SERVER-DUAL-TRANSPORT.md)، 15 نوفمبر. تشغيل على الجهاز نفسه أو عبر endpoint TCP معتمد، مع pipeline واحد. لا fallback بعد فشل أمني، ولا إطار موصلات عام دون حاجة مثبتة. التنفيذ المحلي لا يثبت النشر أو التأهيل الإنتاجي. |
+| READ_WRITE مع حساب محدود | **VERIFIED، كود وتنفيذ على المضيف:** شرط READ_ONLY في frozen ItemA profile خاص بتأهيل ذلك المصدر، وليس متطلبًا عامًا للمحرك أو SQL Server. تجربة Catalog المحدودة قرأت من READ_WRITE بصلاحيات عمودين. يبقى ملف المصدر المجمد مقيدًا، مع حفظ حراس الهوية و TLS والصلاحيات والاتساق. كل مصدر إضافي يحتاج تأهيلًا مستقلًا. |
+| VM-only PKI | **DECIDED:** المادة التشغيلية داخل V1، دون VM أو CA خارجية أو AD CS؛ CA لمدة 180 يومًا، و leaf مخططة لمدة 90 يومًا. **SUPERSEDED للمقترحات فقط:** مدة CA لسنة و leaf لثلاثين يومًا، ومقترح ثقة CurrentUser حيث يختلف عن الخطة الأحدث. لم تُصدر leaf ولم تُثبت CA في Root داخل V1. |
+| إصدار CA واحدة ثم التوقف | **DECIDED + VERIFIED:** تفويض v2 محدد بالبصمات و baseline و RunId جديد؛ نجح استدعاء واحد واجتازت CA معايير القبول. انتهى التفويض عند قبول CA؛ لا إذن ضمني لمرحلة leaf أو Root أو SQL أو TLS أو إعادة الإصدار. [السجل](engineering/self-contained-lab/PKI_PHASE1_20261116.md). |
+| حفظ CA القديمة والنقطة القائمة | **DECIDED + VERIFIED:** لا حذف أو تعديل أو إعادة استخدام للمفتاح القديم، ولا إجراء على checkpoint. أقر المالك أن نقطة ما قبل PKI لا تحفظ الشهادتين عند الاستعادة. لم يُختبر restore ولا يوجد إذن بتنفيذه. |
+| مقارنة zone | **VERIFIED، تصحيح v2 المعتمد:** مقارنة id نصيًا بترتيب ordinal، و baseMinutes عدديًا، و dst بوصفها Boolean، مع رفض المفقود وغير الصالح. **SUPERSEDED:** مقارنة JSON النصية التي أغفلت تكافؤ 180 و 180.0؛ لم يتغير الوقت ولم تُقبل فروق حقيقية. |
+| تسجيل هوية CA العامة في الذاكرة | **DECIDED في مهمة التوحيد الحالية:** تسجيل thumbprint و serial و DER-SHA256 كما طلب المالك صراحة. يتجاوز هذا منع البصمات التشغيلية في خطة 2 نوفمبر لهذه البيانات العامة وحدها. لا شهادات أو PFX أو مفاتيح أو أسرار أو سجلات أعمال خام، ولا commit أو push ضمن المهمة. |
+
+تبقى رؤية المنتج وقرارات SQL القديمة على المضيف محفوظة في نطاقها التاريخي. قبول CA داخل V1 لا ينقل ثقة المضيف أو تفويضاته إلى الضيف. الفقرات الأقدم التالية سجل تاريخي؛ النتيجة اللاحقة لا تمحو الفشل الأصلي.
+
+
+## Approved dual SQL Server transport architecture — 2026-11-15
+
+Owner-approved product decision: [ADR-001 — Shared Memory and TCP/IP](DECISIONS/ADR-001-SQL-SERVER-DUAL-TRANSPORT.md). Local Windows and authorized TCP deployments share Canonical/SQLite/Audit/Application Service/Workspace; preserve TCP, provenance and history, with no security-failure fallback or new generalized framework. Limited Shared Memory development is separate from live qualification, deployment and infrastructure approvals. Earlier laboratory-only decisions below retain their historical scope.
+
 ## الحالة الحالية المزامنة — 2026-10-14
 
 قرار مزامنة من الواقع المدمج: preserve qualified historical balance separately from one inbound event؛ unknown outbound ليس صفرًا؛ draft5 لا يثبت32. Canonical2.1/Product v4 محفوظان؛ PR17 observation1.1.0 دون migration جديدة. هذه خلاصة القرارات المنفذة في PRs، لا تغيير product vision أو تفويض live execution.

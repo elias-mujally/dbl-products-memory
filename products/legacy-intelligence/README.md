@@ -1,5 +1,17 @@
 # Legacy Intelligence — Product Memory
 
+## نقطة البدء الحالية — توحيد الأدلة 2026-11-16
+
+**ابدأ من [CURRENT_STATUS](CURRENT_STATUS.md) ثم [AI_HANDOFF](AI_HANDOFF.md).** [السجل الزمني الموحد](PROGRESS_HISTORY.md) · [القرارات ونطاقها](DECISIONS.md) · [PKI داخل V1](engineering/self-contained-lab/PKI_PHASE1_20261116.md) · [فهرس الأدلة والتعارضات](engineering/memory-consolidation-20261116/README.md).
+
+**VERIFIED:** main عند `2f24efa` يضم Workspace/C0 بحدوده المعلنة؛ الاتصال التشغيلي TCP/الحفظ/العرض على المضيف مثبتان بدليل محلي منفصل، وتطوير Shared Memory/C# غير ملتزم به. داخل VM قُبلت CA واحدة عند 2026-11-16 13:49:49UTC؛ لا leaf أو Root أو SQL binding/start/TLS أو اقتناء ERP ناجح هناك. لا تساوِ تلك المسارات أو تعتبر قبول CA قبولًا للاتصال. تفاصيل حدود الإثبات في الحالة الحالية.
+
+الفقرات أدناه **سجل تاريخي محفوظ**؛ عبارات «الحالي/التالي/Draft/STOP» تُقرأ في تاريخها ومختبرها. يحدّث هذا القسم أسبقية القراءة دون حذف النتائج أو تغيير الرؤية أو تفويض عمل تشغيلي جديد. هذه تغييرات ذاكرة معدة للمراجعة فقط، دون commit/push/merge.
+
+## Architecture update — 2026-11-15
+
+[ADR-001: owner-approved Shared Memory + TCP/IP](DECISIONS/ADR-001-SQL-SERVER-DUAL-TRANSPORT.md). Both are product deployment options using the existing processing pipeline. Limited Shared Memory work is local development; actual ERP qualification/deployment/production remain open. This update does not reclassify historical results or authorize SQL/Windows/VM changes.
+
 ## تحديث V1 المحدود —2026-10-24
 
 [سجل القبول الحالي](engineering/v1/WINDOWS10_CLEAN_ACCEPTANCE_20261024.md) · [البوابات المتبقية وترتيب المخاطر](engineering/v1/V1_REMAINING_GATES_20261024.md) · [خطة النسخ المشفر خارج المضيف](engineering/v1/OFFHOST_ENCRYPTED_BACKUP_PLAN.md). ثبتت دورة الحزمة في Windows10 مستقل بحساب عادي والعينة التجريبية خمسة أصناف بقيمة1450SAR، مع حفظ أربعة أدلة خارج VHDX وفق تحقق المالك. لم يتأهل إدخال بيانات عميل أو ACL التشغيل أو Defender أو قبول إنسان مستقل أو استعادة خارج المضيف. لا يغيّر هذا نطاق الأدلة التاريخية أو يؤهل SQL حيًا أو الإنتاج. الفقرات الأقدم أدناه لزمنها؛ ابدأ من هذا التحديث عند استكمال مسار V1 الحالي.

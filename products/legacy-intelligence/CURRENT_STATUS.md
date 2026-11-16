@@ -1,5 +1,30 @@
 # Legacy Intelligence — Current Status
 
+## الحالة المرجعية — 2026-11-16
+
+هذه الحالة مبنية على الكود والسجل والإيصالات المحفوظة؛ **لم تُشغّل اختبارات المنتج أو SQL أو VM في جولة التوثيق**. آخر قياس تشغيلي للضيف هنا 13:49:48UTC، وقبول CA13:49:49UTC/16:49:49 عدن. [التسلسل](PROGRESS_HISTORY.md) · [تعريف التصنيفات وفهرس الأدلة والتعارضات](engineering/memory-consolidation-20261116/README.md) · [PKI المفصل](engineering/self-contained-lab/PKI_PHASE1_20261116.md).
+
+| المسار | الحالة وحد الإثبات |
+|---|---|
+| الرؤية | **DOCUMENTED:** Local-first intelligence بجانب ERP، مفيد دون AI/إنترنت؛ read-only أولًا. Read→Understand→Explain ثم طبقات مستقبلية، وليست أفعالًا منفذة. [VISION](VISION.md) محفوظة دون تغيير. |
+| main المنتج | **VERIFIED، كود:** `2f24efa…`/PR48؛ Workspace عربي و Main/Preload/عامل Node و ContractC0، no-source افتراضي و Catalog fixture في RAM. لا workflow ERP/import/persistence متصل في **هذه الشريحة المدمجة**؛ لا تنسب إليها التطوير المحلي اللاحق. |
+| المحرك المشترك | **VERIFIED، كود وتاريخ اختبارات:** Canonical مغلق الحقول، ImportOrchestrator، SQLite snapshots، Audit، SnapshotReader و Query/Insights و ApplicationService؛ exact decimals/currency وقراءات pinned. وجود واجهة لا يعني اكتمال كل خدماتها. |
+| اقتناءات تاريخية | **DOCUMENTED، نتائج محفوظة:** AlMuhaseb1 صادرات 5 مجالات قابلة للتكرار مع gaps لسطور البيع/المرتجع؛ Motakamel frozen ItemA عبر SQL في 13 أكتوبر؛ رصيد 37 وحدث وارد+37 حقيقتان مختلفتان؛ V1 manual-file acquisitions/refresh/history. لا مخزون حالي أو ترحيل مالي عام أو بيانات عميل إنتاجية مؤهلة. |
+| Host TCP READ_WRITE | **VERIFIED، إيصالات محلية E05/E06:**15 نوفمبر، قارئ محدود لعمودي Catalog، 3 التقاطات accepted لصنف مختبري واحد، حفظ/تدقيق/عرض/refresh وإعادة فتح دون السر. لا source business writes، ولا توسيع لمخزون أو sales؛ هذا تطوير محلي غير مدموج ولا نجاح داخل VM. |
+| Shared Memory/C# | **DECIDED + VERIFIED، تطوير محلي:** Dual-transport ADR مقبول؛ PS helper و C#net48 candidate يتشاركان pipeline، مصدر/صلاحيات قبل وبعد، DPAPI، pins و nonce. **UNVERIFIED:** تشغيل C#ERP candidate و SQL/TLS/acquisition داخل VM؛ لا إزالة PS أو TCP ولا استبدال التثبيت القديم. |
+| اتصال SQL داخل V1 | **VERIFIED، فشل سابق E10/E11:** Open صارم عبر LPC فشل 0x80090325 قبل queries؛ لا تثبت منه مصادقة Reader أو قاعدة جلسة ERP. لم يُختبر اتصال ناجح بعد معالجة الثقة. |
+| PKI داخل V1 | **VERIFIED، E25–E29:** CA بديلة واحدة accepted في 16 نوفمبر؛ RSA3072/SHA256/CSP24/KeySpec2، KU حرجة و UTC مطابقة، مفتاح جديد NonExportable و Admin-only، association/selfsig=true. القديمة محفوظة؛ LM\My=2، RootLM/CU=15 لكل منهما unchanged. |
+| حالة SQL/VM المحفوظة | **VERIFIED:** YSEDU Stopped، binding فارغ، ForceEncryption0، SM1/TCP0/NP0؛ لا leaf/Root/binding/start/TLS بعد قبول CA. checkpoint قبلالشهادتين unchanged. لا إعادة فحص للبيئة في التوثيق. |
+| الإنتاج والتوزيع | **UNVERIFIED:** ERP داخل VM end-to-end، current inventory/outbound/generalized posting، helper signing/distribution، نشر Workspace جانبي مؤهل، clean supported Windows/A16/accessibility/pilot. main أو نجاح CA أو fixtures لا يغلق هذه البوابات. |
+
+### اختبارات وقيود لا تختزل إلى «كل شيء أخضر»
+
+**VERIFIED، إيصالات مختلفة النطاق:** سجل التشغيل على المضيف يصرح بأن full parallel verify فشل 19 اختبار تخزين بمهلة 5 ثوان؛ نجحت إعادة اختبارات storage بالتشغيل المتسلسل: 394 PASS / 2 SKIP / 0 FAIL دون تغيير المهلة، والملخص التجميعي latest-by-suite1008pass/75skip ليس إعادة نجاح للأمر الموازي. سجلات مرحلة parity:269pass/29skip للموصل، 178/178Desktop، 94/94C#fake sessions؛ الـ skips والـ fakes ليست SQL حية. CA v2 قبول تنفيذي حقيقي مستقل. [E05/E07/E09/قسم التعارضات](engineering/memory-consolidation-20261116/README.md).
+
+### حدود الخطوة التالية
+
+**PLANNED:** مراجعة المالك للأدلة، ثم موافقات منفصلة للمرحلة المطلوبة من leaf90/الثقة/SQL binding-start/TLS، وتأهيل المصدر والقارئ، ثم نشر جانبي واكتساب/حفظ/إعادة فتح/refresh. لا تفويض متبقٍ للتنفيذ في هذه الوثيقة. راجع[ROADMAP](ROADMAP.md). الفقرات أدناه **historical / superseded as current navigation**؛ تبقى نتائجها المحددة صحيحة ضمن زمنها ومصدرها، ولا تُمحى حالات STOP.
+
 ## الحالة الحالية المزامنة — 2026-10-15
 
 **CONTROLLED OUTBOUND EXPERIMENT 001 — PLAN ONLY = PARTIAL / MISSING PREREQUISITES.** [الخطة ومصفوفة التأهيل](CONTROLLED_OUTBOUND_EXPERIMENT_001_PLAN.md) و[بوابة الموافقة](CONTROLLED_OUTBOUND_EXPERIMENT_001_APPROVAL_GATE.md): اقتُرحت تجربة صرف داخلي واحدة5 UA/ItemA/B1/W1/package1، لكن التنفيذ محجوب قبل Add/Save. راجعت الخطة أصل S2 وكود PR17 و11 بصمة؛ أعادت إثبات Save1 وربط السطر/+37 دون اتصال أو import. النواقص: طريقة أدلة قبل/بعد على المصدر القابل للكتابة، stock حالي، العائلة/الحالات والحساب المقابل، وتسمية المشغل. المشغل البشري المسمى من المالك وحده ينفذ Save لاحقًا بعد موافقة إعداد منفصلة ثم تنفيذ/تأكيد فعلي؛ لا grants/admin/account creation أو report side effects بالتخمين.37 تاريخية وليست رصيد اليوم، ولا32 كشرط نجاح. لا SQL/ERP/UI/مصدر/منتج/SQLite في مهمة التخطيط؛ Draft توثيقي فقط، STOP دون merge.

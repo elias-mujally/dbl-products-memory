@@ -1,5 +1,19 @@
 # Legacy Intelligence — Roadmap
 
+## خطوات الاستئناف بعد قبول CA — 2026-11-16
+
+**لا خطوة تشغيلية مفوضة بهذه الذاكرة.** [الحالة](CURRENT_STATUS.md) و[نتيجة PKI](engineering/self-contained-lab/PKI_PHASE1_20261116.md) تحددان المنجز. المسار الأقدم أدناه تاريخي؛ لا يعني أسبقية اقتناء outbound على قرار المالك الأخير بتركيز مختبر V1.
+
+1. **PLANNED:** مراجعة هوية CA المقبولة وإيصالاتها وحدود الاستعادة المتفق عليها، مع حفظ القديمة والنقطة القائمة. لا إعادة إصدار أو cleanup.
+2. **PLANNED، موافقات مستقلة:** اختيار الخطوة المحدودة التالية من خطة PKI الموجودة: leaf لمدة 90 يومًا بملفها المعتمد، ثم الثقة والربط وبدء SQL واختبار TLS بحسب نطاق التفويض القادم. هذه خطوات مختلفة؛ قبول CA لا يغلقها.
+3. **PLANNED:** بعد تأهيل TLS، تحديد قاعدة ERP الفعلية وهوية المصدر والقارئ وربط SID والصلاحيات والمصادقة بقراءة metadata محدودة. لا حساب admin للاقتناء ولا إنشاء reader أو grants ضمن فحص تشخيصي من تلقاء نفسه.
+4. **PLANNED:** مراجعة توقيع وتغليف وتنفيذ C# helper، ثم نشر Desktop جانبي بحالة مستقلة وموافقة صريحة، مع حفظ DBL القديم. تغيير helper أو credential أو source pin لتسجيل قائم يحتاج قرارًا مستقلًا؛ لا إعادة ربط صامتة.
+5. **PLANNED:** اقتناء Catalog محدود فعليًا داخل VM عبر Canonical و SQLite و Audit و Workspace، ثم الإغلاق وإعادة الفتح و refresh وفحص فشل يحفظ التاريخ. قراءة الهوية وحدها لا تثبت current inventory أو TrustedCatalog.
+6. **PLANNED، بوابات المنتج الباقية:** تأهيل دلالات inventory و outbound وحالات المستندات والتكلفة، وبيانات ميدانية مأذونة، و Windows و accessibility و human/pilot والتوزيع. يعاد استعمال آليات الملفات والقراءة المباشرة القائمة دون تغيير الرؤية أو إضافة إطار جديد.
+
+هذا ترتيب للاعتماديات، ولا يمنح تفويضًا أو موعد تسليم. [الفجوات والتعارضات](engineering/memory-consolidation-20261116/README.md).
+
+
 ## الحالة الحالية المزامنة — 2026-10-14
 
 DONE: historical balance/offline integration وSQLite safety/stabilization وone-event inbound. NEXT المقترحة Outbound Evidence Discovery 001؛ fallback expand inbound إذا لا دليل منصرف مؤهل. Sales/current inventory/generalized ledger/pilot gates باقية NOT QUALIFIED أو PARTIAL؛ ترتيب First Business Insights القديم محفوظ للتاريخ.
