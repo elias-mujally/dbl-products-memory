@@ -1,0 +1,453 @@
+{
+  "format": "dbl.memory.native-catalog-acquisition.evidence.1",
+  "record_date": "2026-11-22",
+  "time_zone": "Asia/Aden (UTC+03:00)",
+  "scope": "Sanitized observations extracted from original saved receipts; documentation only, no new SQL/VM/ERP execution",
+  "memory_main_baseline": "bd09d568986c1cb588fc2e8df624c4ad80f0667b",
+  "product_main_baseline": "2f24efa50b71c4d91667dc12049c7a6ecc9e70b8",
+  "workspace_root_hint": "%USERPROFILE%/Documents/Codex/2026-11-14/dbl-legacy-intelligence-direct-erp-connection",
+  "originals_availability": "Local workspace artifacts outside this repository; references are not GitHub publication links",
+  "privacy": "No ERP item names/codes, reader or Windows usernames, SIDs, credential paths/contents, raw query outputs or helper stdout copied",
+  "sources": [
+    {
+      "id": "C01",
+      "workspace_relative": "review/first-real-catalog-20261121/8e2856c19b65431390415164fff4411f/11-product-execution-result.json",
+      "sha256": "EEBC312A12C077B297C1E62545AF3CF86CFB7CD27315E37699B8CC58A5FFB445",
+      "bytes": 130601,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Actual v3 preflight failure; no product acquisition",
+      "observations": {
+        "run_id": "8e2856c19b65431390415164fff4411f",
+        "started_utc": "2026-11-21T21:05:09.7782446Z",
+        "finished_utc": "2026-11-21T21:05:21.5908593Z",
+        "sql_starts": 1,
+        "sql_stops": 1,
+        "runner_invocations": 0,
+        "error_code": "READER_SECURITY_BASELINE_DEVIATION",
+        "final_service_state": "Stopped"
+      }
+    },
+    {
+      "id": "C02",
+      "workspace_relative": "review/first-real-catalog-20261121/serialization-root-cause.json",
+      "sha256": "46B3E02EE1F0E4A8BFBAE74DA141AE67354BEFC61B7556E1159CC5224EE82596",
+      "bytes": 1503,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline replay of original saved metadata; no SQL",
+      "observations": {
+        "raw_seven_groups_identical": true,
+        "default_serialization_equal": false,
+        "prior_modify_date": "2026-11-21T21:38:18.250",
+        "current_modify_date": "2026-11-21T21:38:18.250",
+        "host_json_excerpt_omitted": true,
+        "correction_applied": false
+      }
+    },
+    {
+      "id": "C03",
+      "workspace_relative": "review/reader-security-baseline-fix-20261122/ps7-results.json",
+      "sha256": "B27106F5D5A576DAFC12D10D890D45F633108B240C8922F5B60D8572962DD8A8",
+      "bytes": 15638,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline v4 comparison regression only",
+      "observations": {
+        "power_shell": "7.6.9",
+        "passed": 85,
+        "failed": 0,
+        "guest_executed": false
+      }
+    },
+    {
+      "id": "C04",
+      "workspace_relative": "review/reader-security-baseline-fix-20261122/ps51-results.json",
+      "sha256": "10D33F814ACC1B315D4D925AFBA2FDF978E508396D6C637EA381A96DD07B5CDF",
+      "bytes": 15648,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline v4 comparison regression only",
+      "observations": {
+        "power_shell": "5.1.22621.6133",
+        "passed": 85,
+        "failed": 0,
+        "guest_executed": false
+      }
+    },
+    {
+      "id": "C05",
+      "workspace_relative": "review/reader-security-baseline-fix-20261122/cross-engine-handoff.json",
+      "sha256": "11641EB5422C59C4AB0C65A50F421765EE75C4CF73365F50DA1DB826B351D820",
+      "bytes": 1018,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline v4 comparison regression only",
+      "observations": {
+        "producer": "7.6.9",
+        "consumer": "5.1.22621.6133",
+        "passed": 6,
+        "failed": 0,
+        "guest_executed": false
+      }
+    },
+    {
+      "id": "C06",
+      "workspace_relative": "review/reader-security-baseline-fix-20261122/d40492827ec94ae9bec626d8a8b7ddea/11-product-execution-result.json",
+      "sha256": "9E6541FD1410E97AE6BBEC3ACA8D04205B0448E2ABC925D356D52A45FE912455",
+      "bytes": 131168,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Actual v4 live attempt; generic identity failure",
+      "observations": {
+        "run_id": "d40492827ec94ae9bec626d8a8b7ddea",
+        "started_utc": "2026-11-22T03:34:04.7381507Z",
+        "finished_utc": "2026-11-22T03:34:36.0824523Z",
+        "sql_starts": 1,
+        "sql_stops": 1,
+        "runner_invocations": 1,
+        "exit_code": 2,
+        "error_code": "CATALOG_SOURCE_IDENTITY",
+        "phase": "NOT VERIFIED: not recorded",
+        "rows": "NOT VERIFIED",
+        "rollback": "NOT VERIFIED",
+        "security_preflight": true,
+        "final_service_state": "Stopped"
+      }
+    },
+    {
+      "id": "C07",
+      "workspace_relative": "review/reader-security-baseline-fix-20261122/d40492827ec94ae9bec626d8a8b7ddea/type-compatibility-evidence.json",
+      "sha256": "FB11B463DDCE81037FD53CC1521CD596A233D61F2EF21DB6598FFA47D1FCEC15",
+      "bytes": 1780,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline boxed-number modeling; not live failing-field proof",
+      "observations": {
+        "mismatch_reproduced": true,
+        "live_failing_field": "NOT VERIFIED"
+      }
+    },
+    {
+      "id": "C08",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/old-production-reproduction.json",
+      "sha256": "52C0F3C9AC7E6261148B271EB1680FE6335DF47D114EDEE17A340046512E4818",
+      "bytes": 196,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Original production C# with synthetic ISession; no SQL",
+      "observations": {
+        "original_production": true,
+        "synthetic_session": true,
+        "sql_connected": false,
+        "reproduced": true,
+        "error_code": "CATALOG_SOURCE_IDENTITY",
+        "synthetic_business_queries": 0,
+        "disposed": true
+      }
+    },
+    {
+      "id": "C09",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/csharp-tests.json",
+      "sha256": "8CC960AD22F8107ED4691ED7103B57B4789E2710A82372CDAC8D2DD7AACAB7B9",
+      "bytes": 10986,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline or synthetic tests only, not live acceptance",
+      "observations": {
+        "tests": 113,
+        "passed": 113,
+        "failed": 0,
+        "scope": "OFFLINE_ONLY"
+      }
+    },
+    {
+      "id": "C10",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/node-tests.json",
+      "sha256": "E846586CDA715475BE1DEE4B753FA0BC61772C8DCF330CB5A402B4146D2ED92D",
+      "bytes": 43776,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline or synthetic tests only, not live acceptance",
+      "observations": {
+        "passed": 124,
+        "failed": 0,
+        "scope": "OFFLINE_ONLY"
+      }
+    },
+    {
+      "id": "C11",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/package-tests.json",
+      "sha256": "B82A1C7CB5202CD06F6A09D084BFD57DDCB3FC49D0B748E9F265F3CEAED12DE9",
+      "bytes": 3594,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline or synthetic tests only, not live acceptance",
+      "observations": {
+        "passed": 31,
+        "failed": 0,
+        "host_node": "v24.18.0",
+        "scope": "OFFLINE_ONLY"
+      }
+    },
+    {
+      "id": "C12",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/controller-ps7-tests.json",
+      "sha256": "9DC0C7B36C782AE766D0372474B7A64B6D76A88A790CAA9F9E04130F81708206",
+      "bytes": 2076,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline or synthetic tests only, not live acceptance",
+      "observations": {
+        "passed": 21,
+        "failed": 0,
+        "power_shell": "7.6.9",
+        "scope": "OFFLINE_ONLY"
+      }
+    },
+    {
+      "id": "C13",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/controller-ps51-tests.json",
+      "sha256": "91FAC442F4C980F1EA5DFA264E40C72677BA7EFC57531E8A45C76D5934CBA532",
+      "bytes": 2085,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline or synthetic tests only, not live acceptance",
+      "observations": {
+        "passed": 21,
+        "failed": 0,
+        "power_shell": "5.1.22621.6133",
+        "scope": "OFFLINE_ONLY"
+      }
+    },
+    {
+      "id": "C14",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/node-tests.initial-includes-excluded.json",
+      "sha256": "F9420A3607018BE7F212DDF679CB2F76EA54A8CA91370ECFE9AE0ED912968031",
+      "bytes": 68006,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Preserved initial test-selection failure; two SQLite memory initializations failed",
+      "observations": {
+        "passed": 171,
+        "failed": 2,
+        "scope": "Initial local tests; final focused suite excludes SQLite; no ERP or guest evidence"
+      }
+    },
+    {
+      "id": "C15",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/BUILD_RECEIPT.json",
+      "sha256": "3B7F409872A3878EB3A3CEA5447C26BED2121EA113CD1FBECB8F7017C2CC3FF7",
+      "bytes": 5433,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline build; frozen candidate bytes",
+      "observations": {
+        "host_node": "v24.18.0",
+        "file_count": 8274,
+        "generated_sql_unchanged": true,
+        "generated_sql_sha256": "ff5b9854a471cac9a150f062eb2b487e262401bdacb8480a37709dea71435ba9",
+        "helper_sha256": "eb5ddbb08ca9a49a272664544d1125b817cb91f90fac2359765ebfae31f56530",
+        "manifest_sha256": "91c74c5e34b9cdc70e0408041bd2435a760f7c4cc7cd6938b60f44fa418a52b5",
+        "zip_sha256": "9f8120e539179dd9e5424b04584213aeb8e5c6f27934a39b9e695241061a10fb",
+        "zip_bytes": 15039346,
+        "profile_id": "guest-efa12026-five-native-identity-20261122",
+        "live_tested_in_build": false
+      }
+    },
+    {
+      "id": "C16",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/FINAL_VERIFICATION.json",
+      "sha256": "A318807AA6769D4FFD59AF696978614A1522ADE24E34D5A33CC512C9D7F7FB6F",
+      "bytes": 8669,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline scope/archive/code preservation verification",
+      "observations": {
+        "passed": 48,
+        "failed": 0,
+        "original_evidence_files": 140,
+        "source_changed_count": 9,
+        "live_tested": false
+      }
+    },
+    {
+      "id": "C17",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/08-package-verified.json",
+      "sha256": "D43F12974966E5E4521F1240013982051200BF978C86550DDF2D2D754C0D564A",
+      "bytes": 841,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Actual guest offline loader gate before SQL Start",
+      "observations": {
+        "at_utc": "2026-11-22T04:37:33.0816302Z",
+        "sql_state": "Stopped",
+        "sql_starts": 0,
+        "reader_authentication_attempts": 0,
+        "checked_files": 8274,
+        "node_sha256": "0D0F5E39F9F3D9587BC19F73EAB3C2C9C4903FD02D6DBF9C853DD81B3D95FAD4",
+        "zip_sha256": "9F8120E539179DD9E5424B04584213AEB8E5C6F27934A39B9E695241061A10FB",
+        "manifest_sha256": "91C74C5E34B9CDC70E0408041BD2435A760F7C4CC7CD6938B60F44FA418A52B5",
+        "helper_sha256": "EB5DDBB08CA9A49A272664544D1125B817CB91F90FAC2359765EBFAE31F56530",
+        "effective_policy": "Restricted"
+      }
+    },
+    {
+      "id": "C18",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/09-guest-offline-passed.json",
+      "sha256": "B6ABC3E1479DA9815529A54A1D39371D885B05C56AD5C602B853D500A72F14F9",
+      "bytes": 453,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Actual guest offline loader gate before SQL Start",
+      "observations": {
+        "at_utc": "2026-11-22T04:37:39.0504261Z",
+        "sql_state": "Stopped",
+        "sql_starts": 0,
+        "reader_authentication_attempts": 0,
+        "offline_import": true,
+        "helper_started": true,
+        "effective_policy": "Restricted"
+      }
+    },
+    {
+      "id": "C19",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/11-product-execution-result.json",
+      "sha256": "D4D4378333267510B838C6ECCF45F591C768D52E03DB00510DC19E56DA6407EA",
+      "bytes": 132097,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Actual genuine product acquisition; count-only summary and preservation booleans",
+      "observations": {
+        "run_id": "7a25380bc21d4cb5b0bb6e76fe8ede08",
+        "started_utc": "2026-11-22T04:37:39.2379817Z",
+        "start_requested_utc": "2026-11-22T04:37:39.3003753Z",
+        "running_utc": "2026-11-22T04:37:40.3004252Z",
+        "runner_requested_utc": "2026-11-22T04:37:41.2380108Z",
+        "stop_requested_utc": "2026-11-22T04:37:58.0196438Z",
+        "finished_utc": "2026-11-22T04:38:08.0980244Z",
+        "sql_starts": 1,
+        "sql_stops": 1,
+        "runner_invocations": 1,
+        "exit_code": 0,
+        "status": "VERIFIED",
+        "source_id": "guest-efa12026-five-native-identity-20261122",
+        "capture_id": "998c0a19-4728-4782-9889-1ab72453e801",
+        "captured_at": "2026-11-22T04:37:57.613Z",
+        "mapped_product_count": 5,
+        "row_limit": 5,
+        "partial_preview": true,
+        "complete_catalog": false,
+        "persistence_performed": false,
+        "workspace_published": false,
+        "business_values_included": false,
+        "final_service_state": "Stopped",
+        "security_preflight": true,
+        "security_preserved": true,
+        "credential_integrity_preserved": true,
+        "raw_queries_and_credentials_omitted": true
+      }
+    },
+    {
+      "id": "C20",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/12-independent-guest-final.json",
+      "sha256": "1CB7324D598BCA99BBC98CAB31103E6CC10ABEB525AA58F5114639DF4E3C766F",
+      "bytes": 158786,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Separate actual guest observation after clean stop; only counts/status extracted",
+      "observations": {
+        "at_utc": "2026-11-22T04:38:13.1910622Z",
+        "service_state": "Stopped",
+        "application_file_count": 366,
+        "existing_state_file_count": 254,
+        "existing_state_preserved": true,
+        "target_process_count": 0,
+        "effective_policy": "Restricted"
+      }
+    },
+    {
+      "id": "C21",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/14-preservation-comparison.json",
+      "sha256": "DF2CA257CFBE868DF6DAC21D4D1D64193573F820350419C290D17D064725CFB4",
+      "bytes": 555,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Actual before/after preservation comparison",
+      "observations": {
+        "configuration_preserved": true,
+        "application_files_preserved": true,
+        "host_vm_checkpoints_root_preserved": true,
+        "existing_state_preserved": true,
+        "final_sql_state": "Stopped"
+      }
+    },
+    {
+      "id": "C22",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/final-verification.json",
+      "sha256": "D31349BDA5A224082FB2AB744FDAAA42BE2CBFAAFE653F64129699A15C346AF3",
+      "bytes": 10925,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Independent receipt/hash reconciliation, not a new acquisition",
+      "observations": {
+        "passed": 28,
+        "failed": 0,
+        "repository_files": 61,
+        "changed_repository_files": [],
+        "final_sql_state": "Stopped",
+        "sql_stopped_utc": "2026-11-22T04:38:08.0980244Z",
+        "guest_final_utc": "2026-11-22T04:38:13.1910622Z",
+        "additional_sql_connections": 0,
+        "additional_guest_commands": 0,
+        "retry_performed": false
+      }
+    },
+    {
+      "id": "C23",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/7a25380bc21d4cb5b0bb6e76fe8ede08/EVIDENCE_INDEX.json",
+      "sha256": "4B1B9DDE14990AC3FE33D1863B6442615120FF3621E35542D1AC334B5977F65A",
+      "bytes": 5117,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Original actual v5 run evidence index",
+      "observations": {
+        "self_hash_verified_against_prior_report": true
+      }
+    },
+    {
+      "id": "C24",
+      "workspace_relative": "review/native-catalog-identity-fix-20261122/SOURCE_CHANGES.patch",
+      "sha256": "6A00D74741E7C286E9A36F324A3A0488C71CDC95B148E6CA1978270EC0FB6C97",
+      "bytes": 50167,
+      "availability": "LOCAL_ORIGINAL_NOT_COPIED_OR_PUBLISHED",
+      "scope": "Offline production-source diff, not committed main functionality",
+      "observations": {
+        "scope": "Local development; no merge or deployment claim"
+      }
+    }
+  ],
+  "implementation_sources": [
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/helpers/native/Input.cs",
+      "sha256": "FB78B6DA4618D91E111B1B99CD28F15D2EADAE3EA2D3D55FF493185DBB89A534",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    },
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/helpers/native/Credentials.cs",
+      "sha256": "131AECF416D55193620EBC2F45214F5B9A3A192D7C1B6FE5911C5A4539D7E57A",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    },
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/helpers/native/Acquisition.cs",
+      "sha256": "DE3505C4805E590F561B888B9E698E14489F4C82C97CEDB4CE920ABB81EE2A28",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    },
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/helpers/native/Program.cs",
+      "sha256": "2194A9D7BE4961F99903373572B46423A515991589F8723FE0ECB16B4EA7BB71",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    },
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/src/catalog.ts",
+      "sha256": "F778096689BF8CABFAA9389AEAB86E0BB3D8EDFAC49E2FCC11B0F2DF352415C8",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    },
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/src/shared-memory.ts",
+      "sha256": "4E0A1D33034B54F041D3DD72266A027628A3192C6B8F0A45A2181D8CFAE6C306",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    },
+    {
+      "workspace_relative": "work/product/packages/connectors-motakamel-plus/src/native-shared-memory.ts",
+      "sha256": "F8861283C38EA8C14374D951C28FC4FA3CAB68E265B70D91426C9B3CFB5D4B9C",
+      "status": "LOCAL_UNCOMMITTED_DEVELOPMENT"
+    }
+  ],
+  "historical_boundaries": {
+    "v3_no_product_invocation": true,
+    "v4_live_failing_field": "NOT VERIFIED",
+    "v4_live_row_count": "NOT VERIFIED",
+    "v4_live_rollback": "NOT VERIFIED",
+    "v5_is_first_bounded_native_catalog_acquisition_in_vm": true,
+    "v5_complete_catalog": false,
+    "desktop_live_catalog_preview": "PROPOSED; NOT IMPLEMENTED"
+  }
+}

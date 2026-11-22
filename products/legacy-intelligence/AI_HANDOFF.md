@@ -1,5 +1,11 @@
 # AI Handoff — Legacy Intelligence
 
+## استئناف موثق — 2026-11-22
+
+اقرأ [CURRENT_STATUS](CURRENT_STATUS.md) ثم [سجل Native Catalog وإيصالاته](engineering/native-catalog-acquisition-20261122/README.md) قبل أي عمل اتصال. الاقتناء الحي المحدود في VM صار VERIFIED لهذه الحزمة؛ ربط Desktop Live Catalog Preview وpersistence ما زالا غير منفذين في هذا المسار. لا تعِد التجربة أو تعدّل المختبر بموجب هذا handoff.
+
+حالة 16 نوفمبر أدناه تاريخية؛ لا تنقل فشل الهوية القديم إلى سبب يقيني أو تعد اختبارات C#/Node الاصطناعية تشغيلًا حيًا. يحدد السجل المركزي نتائج المحاولات والقيود والتفويض المطلوب للخطوة التالية.
+
 ## استئناف موثق — 2026-11-16
 
 1. اقرأ [الحالة الحالية](CURRENT_STATUS.md)، [تسلسل التقدم](PROGRESS_HISTORY.md)، [فهرس الأدلة والتعارضات](engineering/memory-consolidation-20261116/README.md)، ثم سجل المختبر المتصل بالمهمة. لا تعِد التجارب المكتملة لمجرد أن ملخصًا قديمًا يقول pending.
