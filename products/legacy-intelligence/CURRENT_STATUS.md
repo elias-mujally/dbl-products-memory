@@ -1,5 +1,13 @@
 # Legacy Intelligence — Current Status
 
+## الحالة المرجعية — 2026-11-22
+
+**VERIFIED — تنفيذ محفوظ:** أول Native Catalog محدود داخل VM: TOP(5) → خمسة منتجات Canonical في RAM، دون Workspace/SQLite/Audit persistence أو head؛ SQL عادت Stopped عند آخر قياس 07:38:13 عدن. [التسلسل والضمانات والبصمات وحدود الإثبات](engineering/native-catalog-acquisition-20261122/README.md) هي المرجع الوحيد للتفصيل.
+
+**FAILED تاريخيًا:** v3 توقفت قبل استدعاء المنتج بسبب JSON datetime، وv4 الحية فشلت برمز هوية عام. سببها الحي المحدد وصفوفها وrollback فيها تبقى **NOT VERIFIED**؛ عيب Int16/Int32 أُعيد إنتاجه وتصحيحه Offline ثم نجحت v5. لم تُحذف تلك الإخفاقات أو يعاد تصنيفها.
+
+**NOT VERIFIED / التالي المقترح:** Desktop Live Catalog Preview غير منفذ؛ لا Catalog كاملة أو قبول إنتاجي أو تدفق Workspace داخل VM من هذه التجربة. تنفيذ الحزمة تطوير محلي غير مدمج في main. لم تُشغّل SQL أو VM أو اختبارات المنتج في مهمة تحديث هذه الذاكرة؛ حالة 16 نوفمبر أدناه مرجع تاريخي، لا حالة تشغيلية حالية.
+
 ## الحالة المرجعية — 2026-11-16
 
 هذه الحالة مبنية على الكود والسجل والإيصالات المحفوظة؛ **لم تُشغّل اختبارات المنتج أو SQL أو VM في جولة التوثيق**. آخر قياس تشغيلي للضيف هنا 13:49:48UTC، وقبول CA13:49:49UTC/16:49:49 عدن. [التسلسل](PROGRESS_HISTORY.md) · [تعريف التصنيفات وفهرس الأدلة والتعارضات](engineering/memory-consolidation-20261116/README.md) · [PKI المفصل](engineering/self-contained-lab/PKI_PHASE1_20261116.md).

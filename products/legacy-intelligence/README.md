@@ -1,5 +1,11 @@
 # Legacy Intelligence — Product Memory
 
+## نقطة البدء الحالية — 2026-11-22
+
+ابدأ من [CURRENT_STATUS](CURRENT_STATUS.md) ثم [سجل أول اقتناء Native Catalog حقيقي محدود داخل VM](engineering/native-catalog-acquisition-20261122/README.md). ثبت TOP(5) → Canonical في RAM فقط؛ Desktop Live Catalog Preview مقترح ولم يُنفذ. التفاصيل والتسلسل والبصمات في السجل المركزي، دون تكرارها هنا.
+
+قسم 16 نوفمبر وما يليه محفوظ بتاريخ كل منهما؛ يقدّم هذا التحديث أسبقية القراءة للحالة الجديدة دون تغيير ADR أو حدود النتائج القديمة. لا تفويض تشغيل أو نشر جديد.
+
 ## نقطة البدء الحالية — توحيد الأدلة 2026-11-16
 
 **ابدأ من [CURRENT_STATUS](CURRENT_STATUS.md) ثم [AI_HANDOFF](AI_HANDOFF.md).** [السجل الزمني الموحد](PROGRESS_HISTORY.md) · [القرارات ونطاقها](DECISIONS.md) · [PKI داخل V1](engineering/self-contained-lab/PKI_PHASE1_20261116.md) · [فهرس الأدلة والتعارضات](engineering/memory-consolidation-20261116/README.md).
