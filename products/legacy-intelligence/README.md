@@ -1,6 +1,10 @@
 # Legacy Intelligence — Product Memory
 
-## نقطة البدء الحالية — 2026-11-22
+## نقطة البدء الحالية — 2026-11-28
+
+ابدأ من [CURRENT_STATUS](CURRENT_STATUS.md) ثم [سجل Desktop Live Catalog Preview](engineering/desktop-live-catalog-preview-20261128/README.md). ثبت عرض خمسة أصناف في المعاينة الجانبية بإيصال `DISPLAYED`، وتطابقت بصمة 254 ملف حالة بعد الإغلاق. يبقى تحقق تشفير جلسة قارئ المنتج ومصدر إيصال `FAILED` غير محسومين.
+
+## نقطة البدء التاريخية — 2026-11-22
 
 ابدأ من [CURRENT_STATUS](CURRENT_STATUS.md) ثم [سجل أول اقتناء Native Catalog حقيقي محدود داخل VM](engineering/native-catalog-acquisition-20261122/README.md). ثبت TOP(5) → Canonical في RAM فقط؛ Desktop Live Catalog Preview مقترح ولم يُنفذ. التفاصيل والتسلسل والبصمات في السجل المركزي، دون تكرارها هنا.
 

@@ -1,6 +1,12 @@
 # Legacy Intelligence — Current Status
 
-## الحالة المرجعية — 2026-11-22
+## الحالة المرجعية — 2026-11-28
+
+**VERIFIED:** عرض Desktop Live Catalog Preview خمسة أصناف حقيقية عبر الحزمة الجانبية المحدودة بـ`TOP (5)` في 23 نوفمبر، وثبته إيصال `DISPLAYED`. في الفحص القرائي يوم 28 نوفمبر، انتهت عمليات النسخة الجانبية، وكانت SQL في حالة `Stopped`، وتطابقت البصمة المجمعة لـ254 ملف حالة. [سجل العرض والفحص والأدلة](engineering/desktop-live-catalog-preview-20261128/README.md)
+
+**NOT VERIFIED:** التشفير بقياس مستقل لجلسة قارئ المنتج، ومصدر إيصال `FAILED` الإضافي. يقتصر الإنجاز على المعاينة الجانبية الجزئية داخل المختبر. تأهيل Catalog كاملة وتدفق Workspace المحفوظ والقبول الإنتاجي مراحل مستقلة.
+
+## الحالة التاريخية — 2026-11-22
 
 **VERIFIED — تنفيذ محفوظ:** أول Native Catalog محدود داخل VM: TOP(5) → خمسة منتجات Canonical في RAM، دون Workspace/SQLite/Audit persistence أو head؛ SQL عادت Stopped عند آخر قياس 07:38:13 عدن. [التسلسل والضمانات والبصمات وحدود الإثبات](engineering/native-catalog-acquisition-20261122/README.md) هي المرجع الوحيد للتفصيل.
 

@@ -1,6 +1,10 @@
 # Legacy Intelligence — Roadmap
 
-## الخطوة المقترحة بعد تأهيل Native Catalog — 2026-11-22
+## حالة معاينة Desktop بعد التأهيل المختبري — 2026-11-28
+
+اكتمل [إثبات المعاينة الجانبية لخمسة أصناف وإيصال العرض وتطابق بصمة الحالة](engineering/desktop-live-catalog-preview-20261128/README.md). التشفير المستقل لجلسة القارئ ومصدر إيصال `FAILED` مسألتان غير محسومتين. تبقى Catalog كاملة والحفظ والنشر وإعادة الفتح وrefresh والتأهيل الإنتاجي بوابات منفصلة.
+
+## الخطوة التاريخية المقترحة بعد تأهيل Native Catalog — 2026-11-22
 
 ثبت [اقتناء TOP(5) الحقيقي إلى Canonical في RAM](engineering/native-catalog-acquisition-20261122/README.md). **PLANNED فقط:** Desktop Live Catalog Preview محدود وواضح التغطية، عبر backend/Worker موثوق، قبل أي حفظ أو نشر snapshot كاملة. الربط والنسخة الجانبية لم يُنفذا، وأي قراءة حقيقية لاحقة تحتاج تفويضًا جديدًا؛ بيانات الجولة السابقة لم تُحفظ.
 
