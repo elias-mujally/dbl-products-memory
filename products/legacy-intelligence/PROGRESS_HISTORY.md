@@ -1,5 +1,11 @@
 # Legacy Intelligence — سجل التقدم الموحد
 
+## إضافة التقدم — 2026-11-28
+
+- **23 نوفمبر — VERIFIED:** عرض خمسة أصناف من ERP في Desktop Live Catalog Preview الجانبي، مع إيصال `DISPLAYED`.
+- **28 نوفمبر — VERIFIED:** انتهاء عمليات النسخة الجانبية، وSQL في حالة `Stopped` عند الالتقاط النهائي، ومقارنة بصمة 254 ملف حالة بنتيجة `MATCH`.
+- **NOT VERIFIED:** التشفير المستقل لجلسة قارئ المنتج ومصدر إيصال `FAILED` المنفصل. [سجل الأدلة وحدود الإثبات](engineering/desktop-live-catalog-preview-20261128/README.md)
+
 ## إضافة التقدم — 2026-11-22
 
 **VERIFIED — تنفيذ حقيقي محدود:** سلسلة v3/serialization → v4/identity failure → typed Native correction/diagnostic stages → v5، وانتهت بخمسة أصناف Canonical في RAM داخل VM. [السجل المركزي](engineering/native-catalog-acquisition-20261122/README.md) يحفظ RunIds والإخفاقات والاختبارات والبصمات، ويفصلها عن اقتناءات المضيف والملفات الأقدم. لا حفظ Workspace أو Catalog كاملة أو ربط Desktop جديد.

@@ -1,6 +1,10 @@
 # AI Handoff — Legacy Intelligence
 
-## استئناف موثق — 2026-11-22
+## استئناف موثق — 2026-11-28
+
+اقرأ [CURRENT_STATUS](CURRENT_STATUS.md) و[سجل Desktop Live Catalog Preview](engineering/desktop-live-catalog-preview-20261128/README.md). ثبت عرض خمسة أصناف بإيصال `DISPLAYED` وتطابقت بصمة ملفات الحالة بعد إغلاق النسخة الجانبية. افصل نتيجة العرض عن تحقق تشفير جلسة القارئ ومصدر إيصال `FAILED`، فكلاهما بقي غير متحقق. وصف المعاينة كمقترح في استئناف 22 نوفمبر يسبق هذه التجربة. أي تشغيل جديد يحتاج تفويضًا مستقلاً.
+
+## استئناف تاريخي — 2026-11-22
 
 اقرأ [CURRENT_STATUS](CURRENT_STATUS.md) ثم [سجل Native Catalog وإيصالاته](engineering/native-catalog-acquisition-20261122/README.md) قبل أي عمل اتصال. الاقتناء الحي المحدود في VM صار VERIFIED لهذه الحزمة؛ ربط Desktop Live Catalog Preview وpersistence ما زالا غير منفذين في هذا المسار. لا تعِد التجربة أو تعدّل المختبر بموجب هذا handoff.
 
